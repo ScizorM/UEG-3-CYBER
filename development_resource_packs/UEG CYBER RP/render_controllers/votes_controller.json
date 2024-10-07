@@ -1,0 +1,35 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.votes_controller": {
+			"textures": [
+				"Array.votecount[query.variant]"
+			],
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"ignore_lighting": true,
+			"geometry": "Geometry.default",
+			"arrays": {
+				"textures": {
+					"Array.votecount": [
+						"Texture.default",
+						"Texture.votes_1",
+						"Texture.votes_2",
+						"Texture.votes_3",
+						"Texture.votes_4",
+						"Texture.votes_5",
+						"Texture.votes_6",
+						"Texture.votes_7",
+						"Texture.votes_8",
+						"Texture.votes_9",
+						"Texture.votes_9plus"
+					]
+				}
+			}
+		}
+	}
+}

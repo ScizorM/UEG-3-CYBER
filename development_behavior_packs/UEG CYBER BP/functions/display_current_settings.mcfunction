@@ -1,0 +1,2 @@
+#bridge-file-version: #7
+tellraw @s {"rawtext": [{"text": "§e[Current Settings]§e\nMax Lives: "},{"score":{"name":"max_lives","objective":"max_lives"}},{"text": "§e\nMax Dashes: "},{"score":{"name":"max_dashes","objective":"max_dashes"}},{"text": "§e\nMax Rounds: "},{"score":{"name":"max_wins","objective":"max_wins"}}]}

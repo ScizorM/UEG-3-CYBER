@@ -1,0 +1,40 @@
+//bridge-file-version: #6
+{
+	"format_version": "1.21.10",
+	"minecraft:block": {
+		"description": {
+			"identifier": "sm:fabricated_block_3"
+		},
+		"components": {
+			"minecraft:custom_components": [
+				"sm:blockfab3"
+			],
+			"minecraft:material_instances": {
+				"*": {
+					"face_dimming": false,
+					"render_method": "blend",
+					"ambient_occlusion": true
+				}
+			},
+			"minecraft:selection_box": {
+				"origin": [
+					0,
+					0,
+					0
+				],
+				"size": [
+					0,
+					0,
+					0
+				]
+			},
+			"minecraft:tick": {
+				"looping": false,
+				"interval_range": [
+					12,
+					12
+				]
+			}
+		}
+	}
+}

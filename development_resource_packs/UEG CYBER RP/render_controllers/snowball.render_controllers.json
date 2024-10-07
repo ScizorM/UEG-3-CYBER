@@ -1,0 +1,27 @@
+//bridge-file-version: #7
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.snowball": {
+			"geometry": "geometry.default",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"textures": [
+				"Array.types[query.variant]"
+			],
+			"filter_lighting": true,
+			"arrays": {
+				"textures": {
+					"Array.types": [
+						"Texture.goop",
+						"Texture.fire",
+						"Texture.ice"
+					]
+				}
+			}
+		}
+	}
+}

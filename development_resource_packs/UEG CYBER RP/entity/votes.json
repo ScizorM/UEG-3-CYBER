@@ -1,0 +1,31 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "sm:votes",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/signs/votes/votes_0",
+				"votes_1": "textures/signs/votes/votes_1",
+				"votes_2": "textures/signs/votes/votes_2",
+				"votes_3": "textures/signs/votes/votes_3",
+				"votes_4": "textures/signs/votes/votes_4",
+				"votes_5": "textures/signs/votes/votes_5",
+				"votes_6": "textures/signs/votes/votes_6",
+				"votes_7": "textures/signs/votes/votes_7",
+				"votes_8": "textures/signs/votes/votes_8",
+				"votes_9": "textures/signs/votes/votes_9",
+				"votes_9plus": "textures/signs/votes/votes_9plus"
+			},
+			"geometry": {
+				"default": "geometry.votes"
+			},
+			"render_controllers": [
+				"controller.render.votes_controller"
+			]
+		}
+	}
+}

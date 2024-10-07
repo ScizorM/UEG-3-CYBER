@@ -1,0 +1,23 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.dashmeter.static": {
+			"loop": true,
+			"bones": {
+				"bone": {
+					"rotation": [-214.64889, -33.34167, 70.33768],
+					"position": [-8, 5, -9],
+					"scale": 0.8
+				}
+			}
+		},
+		"animation.dashmeter.vanish": {
+			"loop": true,
+			"bones": {
+				"bone": {
+					"scale": [0, 1, 1]
+				}
+			}
+		}
+	}
+}

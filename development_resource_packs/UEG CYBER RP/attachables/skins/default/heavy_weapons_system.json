@@ -1,0 +1,21 @@
+//bridge-file-version: #20
+{
+	"format_version": "1.16.100",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "sm:heavy_weapons_system",
+			"materials": {
+				"default": "entity_emissive_alpha"
+			},
+			"textures": {
+				"default": "textures/entity/skins/recruit_hws"
+			},
+			"geometry": {
+				"default": "geometry.heavy_weapons_system"
+			},
+			"render_controllers": [
+				"controller.render.darkless"
+			]
+		}
+	}
+}

@@ -1,0 +1,819 @@
+//bridge-file-version: #129
+{
+	"sm:warning_block": {
+		"textures": "sm:warning_block"
+	},
+	"sm:pendual_trail": {
+		"textures": "sm:pendual_trail",
+		"sound": "amethyst",
+		"brightness_gamma": 1
+	},
+	"sm:polishedbasaltside": {
+		"textures": "sm:polishedbasaltside"
+	},
+	"sm:settings_block":{
+		"textures": "sm:settings_block"
+	},
+		"sm:settings_block_2":{
+		"textures": "sm:settings_block_2"
+	},
+	"sm:candy_rope":{
+		"textures":{
+			"side":"sm:candy_rope",
+			"up":"sm:candy_rope_top",
+			"down":"sm:candy_rope_top"
+		}
+	},
+	"sm:cyberspace_0":{
+		"textures":{
+			"side":"sm:cyberspace_8",
+			"down":"sm:cyberspace_8",
+			"up":"sm:cyberspace_0"
+		}	
+	},
+	"sm:cyberspace_1":{
+		"textures":{
+			"side":"sm:cyberspace_8",
+			"down":"sm:cyberspace_8",
+			"up":"sm:cyberspace_1"
+		}	
+	},
+	"sm:cyberspace_2":{
+		"textures":{
+			"side":"sm:cyberspace_8",
+			"down":"sm:cyberspace_8",
+			"up":"sm:cyberspace_2"
+		}	
+	},
+	"sm:cyberspace_3":{
+		"textures":{
+			"side":"sm:cyberspace_8",
+			"down":"sm:cyberspace_8",
+			"up":"sm:cyberspace_3"
+		}	
+	},
+	"sm:cyberspace_4":{
+		"textures":{
+			"side":"sm:cyberspace_8",
+			"down":"sm:cyberspace_8",
+			"up":"sm:cyberspace_4"
+		}	
+	},
+	"sm:cyberspace_5":{
+		"textures":{
+			"side":"sm:cyberspace_8",
+			"down":"sm:cyberspace_8",
+			"up":"sm:cyberspace_5"
+		}	
+	},
+	"sm:cyberspace_6":{
+		"textures":{
+			"side":"sm:cyberspace_8",
+			"down":"sm:cyberspace_8",
+			"up":"sm:cyberspace_6"
+		}	
+	},
+	"sm:cyberspace_7":{
+		"textures":{
+			"side":"sm:cyberspace_8",
+			"down":"sm:cyberspace_8",
+			"up":"sm:cyberspace_7"
+		}	
+	},
+	"sm:cyberspace_8":{
+		"textures":{
+			"side":"sm:cyberspace_8",
+			"down":"sm:cyberspace_8",
+			"up":"sm:cyberspace_8"
+		}	
+	},
+	"sm:vaportile_1":{
+		"textures":"sm:vaportile_1"
+	},
+	"sm:vaportile_2":{
+		"textures":"sm:vaportile_2"
+	},
+	"sm:vaporglitch":{
+		"textures":"sm:vaporglitch"
+	},
+	"sm:vaporframe":{
+		"textures":"sm:vaporframe"
+	},
+	"sm:cyber_piglin_head": {
+		"textures": "sm:cyber_piglin_head"
+	},
+	"sm:reinforced_block":{
+		"textures":"sm:reinforced_block"
+	},
+	"sm:purchase_block": {
+		"textures": "sm:purchase_block"
+	},
+	"sm:candy_rope_1":{
+		"textures":"sm:candy_rope_1"
+	},
+	"sm:candy_rope_2":{
+		"textures":"sm:candy_rope_1"
+	},
+	"sm:purchase_block_disabled": {
+		"textures": "sm:purchase_block_disabled"
+	},
+	"sm:purchase_block_2": {
+		"textures": "sm:purchase_2"
+	},
+	"sm:purchase_block_3": {
+		"textures": "sm:purchase_3"
+	},
+	"sm:purchase_block_disabled_2": {
+		"textures": "sm:purchase_d_2"
+	},
+	"sm:purchase_block_disabled_3": {
+		"textures": "sm:purchase_d_3"
+	},
+	"sm:treecolor_00": {
+		"textures": "sm:treecolor_00"
+	},
+	"sm:treecolor_01": {
+		"textures": "sm:treecolor_01"
+	},
+	"sm:treecolor_02": {
+		"textures": "sm:treecolor_02"
+	},
+	"sm:treecolor_03": {
+		"textures": "sm:treecolor_03"
+	},
+	"sm:treecolor_04": {
+		"textures": "sm:treecolor_04"
+	},
+	"sm:treecolor_05": {
+		"textures": "sm:treecolor_05"
+	},
+	"sm:treecolor_06": {
+		"textures": "sm:treecolor_06"
+	},
+	"sm:treecolor_07": {
+		"textures": "sm:treecolor_07"
+	},
+	"sm:treecolor_08": {
+		"textures": "sm:treecolor_08"
+	},
+	"sm:treecolor_09": {
+		"textures": "sm:treecolor_09"
+	},
+	"sm:gob_goo_block": {
+		"textures": "sm:gob_goo_block"
+	},
+	"sm:gob_goo_block_2": {
+		"textures": "sm:gob_goo_block_2"
+	},
+	"sm:gob_goo_block_3": {
+		"textures": "sm:gob_goo_block_3"
+	},
+	"sm:godray": {
+		"textures": "sm:godray"
+	},
+	"sm:pendual_magic": {
+		"textures": "sm:pendual_magic"
+	},
+	"sm:red_wall": {
+		"textures": "sm:red_wall"
+	},
+	"sm:type_cyan": {
+		"textures": "sm:type_cyan"
+	},
+	"sm:slabtest": {
+		"textures": "sm:slabtest"
+	},
+	"sm:type_nu": {
+		"textures": "sm:type_nu"
+	},
+	"sm:type_lambda": {
+		"textures": "sm:type_lambda"
+	},
+	"sm:pendual_generator": {
+		"textures": "sm:pendual_generator"
+	},
+	"sm:spawner_green": {
+		"textures": "sm:spawner_green"
+	},
+	"sm:spawner_red": {
+		"textures": "sm:spawner_red"
+	},
+	"sm:spawner_blue": {
+		"textures": "sm:spawner_blue"
+	},
+	"sm:spawner_white": {
+		"textures": "sm:spawner_white"
+	},
+	"sm:spawner_yellow": {
+		"textures": "sm:spawner_yellow"
+	},
+	"sm:crystal": {
+		"sound": "amethyst",
+		"textures": "sm:crystal"
+	},
+	"sm:red_sky": {
+		"textures": "sm:red_sky"
+	},
+	"sm:blue_sky": {
+		"textures": "sm:blue_sky"
+	},
+	"sm:crystal_top": {
+		"textures": "sm:crystals_top"
+	},
+	"sm:crystal_block": {
+		"sound": "amethyst",
+		"textures": {
+			"up": "sm:crystal_top",
+			"down": "sm:crystal_bottom",
+			"side": "sm:crystal_block"
+		}
+	},
+	"sm:crystal_block_orange": {
+		"textures": {
+			"up": "sm:crystal_top_orange",
+			"down": "sm:crystal_bottom_orange",
+			"side": "sm:crystal_orange"
+		}
+	},
+	"sm:crystal_block_pink": {
+		"textures": {
+			"up": "sm:crystal_top_pink",
+			"down": "sm:crystal_bottom_pink",
+			"side": "sm:crystal_pink"
+		}
+	},
+	"sm:crystals_pink": {
+		"textures": "sm:crystals_pink"
+	},
+	"sm:crystals_orange": {
+		"textures": "sm:crystals_orange"
+	},
+	"sm:vote_arena_slab_2": {
+		"textures": "sm:vote_arena_slab"
+	},
+	"sm:vote_arena_slab_3": {
+		"textures": "sm:vote_arena_slab"
+	},
+	"sm:vote_arena_slab_1": {
+		"textures": "sm:vote_arena_slab"
+	},
+	"sm:vote_arena_slab_disabled_1": {
+		"textures": "sm:vote_arena_slab_disabled"
+	},
+	"sm:vote_arena_slab_disabled_2": {
+		"textures": "sm:vote_arena_slab_disabled"
+	},
+	"sm:vote_arena_slab_disabled_3": {
+		"textures": "sm:vote_arena_slab_disabled"
+	},
+	"sm:banana_peel": {
+		"textures": "sm:banana_peel"
+	},
+	"sm:frozen_brick": {
+		"textures": "sm:frozen_brick"
+	},
+	"sm:sky_block": {
+		"textures": "sm:sky_block"
+	},
+	"sm:speedline_block_r": {
+		"textures": "sm:speedline_block_r"
+	},
+	"sm:speedline_block_l": {
+		"textures": "sm:speedline_block_l"
+	},
+	"sm:laptopstand": {
+		"textures": "sm:laptopstand"
+	},
+	"sm:netherite_reactor": {
+		"textures": {
+			"side": "sm:netherite_reactor_side",
+			"up": "sm:netherite_reactor_top_b",
+			"down": "sm:netherite_reactor_top_b"
+		},
+		"sound": "netherite"
+	},
+	"sm:pillar": {
+		"textures": "sm:pillar"
+	},
+	"sm:arenaborder": {
+		"textures": {
+			"side": "sm:arenaborder",
+			"up": "sm:empty",
+			"down": "sm:empty"
+		}
+	},
+	"sm:arenaborder_2": {
+		"textures": "sm:arenaborder_2"
+	},
+	"sm:arenaborder_3": {
+		"textures": "sm:arenaborder_3"
+	},
+	"sm:arenaborder_4": {
+		"textures": {
+			"side": "sm:arenaborder_4",
+			"up": "sm:empty",
+			"down": "sm:empty"
+		}
+	},
+	"sm:arenaborder_5": {
+		"textures": {
+			"side": "sm:empty",
+			"up": "sm:empty",
+			"down": "sm:arenaborder_4"
+		}
+	},
+	"sm:eye": {
+		"sound": "slime",
+		"textures": {
+			"side": "sm:eye_front",
+			"up": "sm:eye_top",
+			"down": "sm:eye_bottom"
+		}
+	},
+	"sm:data_generator": {
+		"sound": "glass",
+		"textures": "sm:data_generator"
+	},
+	"sm:digimesh_type2": {
+		"sound": "netherite",
+		"textures": {
+			"up": "sm:digimesh_type2_tb",
+			"down": "sm:digimesh_type2_tb",
+			"side": "sm:digimesh_type2_side"
+		}
+	},
+	"sm:dataunit_blue": {
+		"textures": "sm:dataunit_blue"
+	},
+	"sm:dataunit_white": {
+		"textures": "sm:dataunit_white"
+	},
+	"sm:digimesh": {
+		"sound": "netherite",
+		"textures": {
+			"up": "sm:digimesh_tb",
+			"down": "sm:digimesh_tb",
+			"side": "sm:digimesh_side"
+		}
+	},
+	"sm:digimesh_white_type2": {
+		"sound": "netherite",
+		"textures": {
+			"up": "sm:digimesh_white_type2_tb",
+			"down": "sm:digimesh_white_type2_tb",
+			"side": "sm:digimesh_white_type2_side"
+		}
+	},
+	"sm:digimesh_white": {
+		"sound": "netherite",
+		"textures": {
+			"up": "sm:digimesh_white_tb",
+			"down": "sm:digimesh_white_tb",
+			"side": "sm:digimesh_white_side"
+		}
+	},
+	"sm:meteor_block": {
+		"textures": "sm:meteor"
+	},
+	"sm:locked": {
+		"textures": "sm:locked"
+	},
+	"sm:moon_block": {
+		"textures": "sm:moon_block"
+	},
+	"sm:fall_generator": {
+		"textures": "sm:fall_generator"
+	},
+	"sm:blind_generator": {
+	"textures": "sm:fall_generator"
+	},
+	"sm:mall_fence": {
+		"textures": "sm:mall_fence"
+	},
+	"sm:cloud": {
+		"sound": "cloth",
+		"textures": "sm:cloud"
+	},
+	"sm:select": {
+		"textures": "sm:select"
+	},
+	"sm:shaparium_tile": {
+		"textures": "sm:shaparium_tile"
+	},
+	"sm:shaparium_tile_glow": {
+		"textures": "sm:shaparium_tile_glow"
+	},
+	"sm:shaparium_tile_red": {
+		"textures": "sm:shaparium_tile_red"
+	},
+	"sm:shaparium_tile_red_glow": {
+		"textures": "sm:shaparium_tile_red_glow"
+	},
+	"sm:shaparium_gate": {
+		"textures": {
+			"side": "sm:shaparium_gate",
+			"up": "sm:shaparium_tile_light",
+			"down": "sm:shaparium_tile_light"
+		}
+	},
+	"sm:shaparium_gate_red": {
+		"textures": {
+			"side": "sm:shaparium_gate_red",
+			"up": "sm:shaparium_tile_light_red",
+			"down": "sm:shaparium_tile_light_red"
+		}
+	},
+	"sm:shaparium_light_block": {
+		"textures": "sm:shaparium_light_block"
+	},
+	"sm:shaparium_light_block_red": {
+		"textures": "sm:shaparium_light_block_red"
+	},
+	"sm:shaparium_tile_light": {
+		"textures": "sm:shaparium_tile_light"
+	},
+	"sm:shaparium_tile_light_red": {
+		"textures": "sm:shaparium_tile_light_red"
+	},
+	"sm:glowing_block_neo_tokyo": {
+		"textures": "sm:glowing_block_neo_tokyo"
+	},
+	"sm:crying_blackstone": {
+		"textures": {
+			"up": "sm:crying_blackstone_top",
+			"side": "sm:crying_blackstone",
+			"down": "sm:crying_blackstone_top"
+		}
+	},
+	"sm:coming_soon": {
+		"textures": "sm:coming_soon"
+	},
+	"sm:chaos_block": {
+		"textures": "sm:chaos_block"
+	},
+	"sm:glowing_bedrock_goal": {
+		"textures": "sm:glowing_bedrock_goal"
+	},
+	"sm:glowing_bedrock": {
+		"textures": "sm:glowing_bedrock"
+	},
+	"sm:fake_sand": {
+		"textures": "sand"
+	},
+	"sm:escalator_start_3": {
+		"textures": "sm:escalator_1"
+	},
+	"sm:escalator_start_4": {
+		"textures": "sm:escalator_2"
+	},
+	"sm:escalator_start_2": {
+		"textures": "sm:escalator_2"
+	},
+	"sm:escalator_start_1": {
+		"textures": "sm:escalator_1"
+	},
+	"sm:escalator_end_3": {
+		"textures": "sm:escalator_1"
+	},
+	"sm:escalator_end_4": {
+		"textures": "sm:escalator_2"
+	},
+	"sm:escalator_end_2": {
+		"textures": "sm:escalator_2"
+	},
+	"sm:escalator_end_1": {
+		"textures": "sm:escalator_1"
+	},
+	"sm:escalator_3": {
+		"textures": "sm:escalator_1"
+	},
+	"sm:escalator_4": {
+		"textures": "sm:escalator_2"
+	},
+	"sm:escalator_2": {
+		"textures": "sm:escalator_2"
+	},
+	"sm:escalator_1": {
+		"textures": "sm:escalator_1"
+	},
+	"sm:murkopolis_ground": {
+		"textures": "sm:murkopolis_ground"
+	},
+	"sm:big_joe": {
+		"textures": "sm:big_joe"
+	},
+	"sm:darkness_block": {
+		"textures": "sm:darkness_block"
+	},
+	"sm:wire_block": {
+		"textures": "sm:wire_block"
+	},
+	"sm:rocket_emitter": {
+		"textures": "sm:rocket_emitter"
+	},
+	"sm:fabricated_block_2": {
+		"textures": "sm:fabricated_block_2"
+	},
+	"sm:fabricated_block_3": {
+		"textures": "sm:fabricated_block_3"
+	},
+	"sm:fabricated_block": {
+		"textures": "sm:fabricated_block"
+	},
+	"sm:pitfall_2": {
+		"textures": {
+			"side": "sm:pitfall_2_side",
+			"up": "sm:pitfall_2_top",
+			"down": "sm:pitfall_2_bottom"
+		}
+	},
+	"sm:pitfall_3": {
+		"textures": {
+			"side": "sm:pitfall_3_side",
+			"up": "sm:pitfall_3_top",
+			"down": "sm:pitfall_3_bottom"
+		}
+	},
+	"sm:pitfall_1": {
+		"textures": {
+			"side": "sm:pitfall_1_side",
+			"up": "sm:pitfall_1_top",
+			"down": "sm:pitfall_1_bottom"
+		}
+	},
+	"sm:teleporter_p_b": {
+		"textures": {
+			"side": "sm:teleporter_p_side",
+			"up": "sm:teleporter_p_b_top",
+			"down": "sm:teleporter_p_bottom"
+		}
+	},
+	"sm:teleporter_p_a": {
+		"textures": {
+			"side": "sm:teleporter_p_side",
+			"up": "sm:teleporter_p_a_top",
+			"down": "sm:teleporter_p_bottom"
+		}
+	},
+	"sm:teleporter_y_b": {
+		"textures": {
+			"side": "sm:teleporter_y_side",
+			"up": "sm:teleporter_y_b_top",
+			"down": "sm:teleporter_y_bottom"
+		}
+	},
+	"sm:teleporter_y_a": {
+		"textures": {
+			"side": "sm:teleporter_y_side",
+			"up": "sm:teleporter_y_a_top",
+			"down": "sm:teleporter_y_bottom"
+		}
+	},
+	"sm:booster_3": {
+		"textures": {
+			"up": "sm:booster3_top",
+			"side": "sm:booster3_side",
+			"down": "sm:booster3_bottom"
+		}
+	},
+	"sm:booster_2": {
+		"textures": {
+			"up": "sm:booster2_top",
+			"side": "sm:booster2_side",
+			"down": "sm:booster2_bottom"
+		}
+	},
+	"sm:booster_1": {
+		"textures": {
+			"side": "sm:spring_side",
+			"up": "sm:spring_top",
+			"down": "sm:spring_bottom"
+		}
+	},
+	"sm:death_block": {
+		"textures": "sm:death_block"
+	},
+	"sm:anti_platform": {
+		"textures": "sm:anti_platform"
+	},
+	"sm:death_warning": {
+		"textures": "sm:death_warning"
+	},
+	"sm:type_secret": {
+		"textures": "sm:type_secret"
+	},
+	"sm:type_utils": {
+		"textures": "sm:type_utils"
+	},
+	"sm:type_trap": {
+		"textures": "sm:type_trap"
+	},
+	"sm:type_ranged": {
+		"textures": "sm:type_ranged"
+	},
+	"sm:type_melee": {
+		"textures": "sm:type_melee"
+	},
+	"sm:glowing_white": {
+		"textures": "sm:glowing_white"
+	},
+	"sm:boom_block": {
+		"textures": {
+			"side": "sm:boom_block_side",
+			"up": "sm:boom_block_top",
+			"down": "sm:boom_block_bottom"
+		}
+	},
+	"sm:space": {
+		"textures": "sm:space "
+	},
+	"sm:sakura_leaves": {
+		"textures": "sm:sakura_leaves"
+	},
+	"sm:updraft_block": {
+		"textures": {
+			"up": "sm:updraft_block",
+			"down": "sm:sakura_planks",
+			"side": "sm:sakura_planks"
+		},
+		"sound": "wood"
+	},
+	"sm:selfium_tallgrass": {
+		"sound": "grass",
+		"textures": "sm:selfium_tallgrass"
+	},
+	"sm:selfium_grass": {
+		"sound": "grass",
+		"textures": {
+			"up": "sm:selfium_moss",
+			"down": "sm:selfium_dirt",
+			"side": "sm:selfium_side"
+		}
+	},
+	"sm:self_cobble": {
+		"sound": "stone",
+		"textures": "sm:self_cobble"
+	},
+	"sm:self_leaves": {
+		"sound": "grass",
+		"textures": "sm:self_leaves"
+	},
+	"sm:self_brick": {
+		"sound": "stone",
+		"textures": "sm:self_brick"
+	},
+	"frame": {
+		"textures": "sm:none",
+		"blockshape": "invisible"
+	},
+	"glow_frame": {
+		"textures": "sm:none",
+		"blockshape": "invisible"
+	},
+	"sm:selfium_moss": {
+		"sound": "grass",
+		"textures": "sm:selfium_moss"
+	},
+	"sm:indicator_bobby": {
+		"textures": "sm:indicator_bobby"
+	},
+	"sm:selfium_ore_block": {
+		"textures": "sm:selfium_ore_block"
+	},
+	"sm:forest_flower": {
+		"textures": "sm:forest_flower",
+		"sound": "grass"
+	},
+	"sm:mushroom_blue": {
+		"textures": "sm:mushroom_blue"
+	},
+	"sm:mushroom_plant_blue": {
+		"textures": "sm:mushroom_plant_blue",
+		"sound": "grass"
+	},
+	"sm:mushroom_red": {
+		"textures": "sm:mushroom_red"
+	},
+	"sm:mushroom_plant_red": {
+		"textures": "sm:mushroom_plant_red",
+		"sound": "grass"
+	},
+	"sm:blue_shroomium_ore_block": {
+		"textures": "sm:blue_shroomium_ore_block",
+		"sound": "stone"
+	},
+	"sm:red_shroomium_ore_block": {
+		"textures": "sm:red_shroomium_ore_block",
+		"sound": "stone"
+	},
+	"sm:indicator_blue_mushroom": {
+		"textures": "sm:indicator_blue_mushroom",
+		"sound": "stone"
+	},
+	"sm:indicator_red_mushroom": {
+		"textures": "sm:indicator_red_mushroom",
+		"sound": "stone"
+	},
+	"sm:indicator_mushroom_houses": {
+		"textures": "sm:indicator_mushroom_houses",
+		"sound": "stone"
+	},
+	"sm:indicator_forest": {
+		"textures": "sm:indicator_forest",
+		"sound": "stone"
+	},
+	"sm:indicator_delta": {
+		"textures": "sm:indicator_delta",
+		"sound": "stone"
+	},
+	"sm:indicator_magic_forest": {
+		"textures": "sm:indicator_magic_forest",
+		"sound": "stone"
+	},
+	"sm:indicator_none": {
+		"textures": "sm:indicator_none",
+		"sound": "stone"
+	},
+	"sm:indicator_shadow": {
+		"textures": "sm:indicator_shadow",
+		"sound": "stone"
+	},
+	"sm:indicator_selfium": {
+		"textures": "sm:indicator_selfium",
+		"sound": "stone"
+	},
+	"sm:forestite_ore_block": {
+		"textures": "sm:forestite_ore_block",
+		"sound": "stone"
+	},
+	"sm:toadglove_fruit_plant": {
+		"textures": "sm:toadglove_fruit_plant",
+		"sound": "grass"
+	},
+	"sm:shadow_leaves": {
+		"textures": "sm:shadow_leaves",
+		"sound": "grass"
+	},
+	"sm:mushroom_blue_normal": {
+		"textures": "sm:mushroom_blue_normal",
+		"sound": "grass"
+	},
+	"sm:training_block": {
+		"sound": "stone",
+		"textures": "sm:training_block"
+	},
+	"format_version": [
+		1,
+		1,
+		0
+	],
+	"sm:cloud_booster": {
+		"textures": {
+			"up": "sm:cloud_booster_top",
+			"down": "sm:cloud_booster_bottom",
+			"side": "sm:cloud_booster_side"
+		}
+	},
+	"sm:icing_block": {
+		"sound": "slime",
+		"textures": "sm:icing_block"
+	},
+	"sm:cotton_candy_block": {
+		"sound": "cloth",
+		"textures": "sm:cotton_candy_block"
+	},
+	"sm:cotton_candy_block_pink": {
+		"sound": "cloth",
+		"textures": "sm:cotton_candy_block_pink"
+	},
+	"sm:gummy_block": {
+		"textures": "sm:gummy_block",
+		"sound": "slime"
+	},
+	"sm:editor_bay_block_indest": {
+		"textures": "sm:editor_bay_block_indest"
+	},
+	"sm:ceiling_bedrock": {
+		"textures": "sm:bedrock_side"
+	},
+	"sm:burning_ash": {
+		"textures": [
+			"textures/blocks/burnt_ash"
+		]
+	},
+	"sm:sky_0": {
+		"textures": "sm:sky_0"
+	},
+	"sm:sky_1": {
+		"textures": "sm:sky_1"
+	},
+	"sm:sky_2": {
+		"textures": "sm:sky_2"
+	},
+	"sm:sky_3": {
+		"textures": "sm:sky_3"
+	},
+	"sm:sky_4": {
+		"textures": "sm:sky_4"
+	}
+}

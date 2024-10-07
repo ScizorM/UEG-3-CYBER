@@ -1,0 +1,77 @@
+//bridge-file-version: #9
+{
+	"boatride": {
+		"event_name": "music.boatride",
+		"min_delay": 0,
+		"max_delay": 0
+	},
+	"kaizoslumber.urti": {
+		"event_name": "music.urti"
+	},
+	"kaizoslumber.tagrst": {
+		"event_name": "music.tagrst"
+	},
+	"kaizoslumber.marionette": {
+		"event_name": "music.marionette"
+	},
+	"kaizoslumber.galaxy_torimoti": {
+		"event_name": "music.galaxy_torimoti"
+	},
+	"kaizoslumber.tv_makes_you_dumber": {
+		"event_name": "music.tv_makes_you_dumber"
+	},
+	"kaizoslumber.comic_mischief": {
+		"event_name": "music.comic_mischief"
+	},
+	"kaizoslumber.glassy_twins": {
+		"event_name": "music.glassy_twins"
+	},
+	"kaizoslumber-fax-gang.anything_to_gain_nothing_to_lose": {
+		"event_name": "music.anything_to_gain_nothing_to_lose"
+	},
+	"kaizoslumber.eject_plus_channel": {
+		"event_name": "music.eject_plus_channel"
+	},
+	"kaizoslumber.my_turbo_xeona": {
+		"event_name": "music.my_turbo_xeona"
+	},
+	"kaizoslumber-murrumur.tinydeath_kaizo_slumber_mix": {
+		"event_name": "music.tinydeath_kaizo_slumber_mix"
+	},
+	"kaizoslumber.green_comet_in_the_key_of_something": {
+		"event_name": "music.green_comet_in_the_key_of_something"
+	},
+	"kaizoslumber.aquas_door_heaven_mix": {
+		"event_name": "music.aquas_door_heaven_mix"
+	},
+	"kaizoslumber.a_conflict_between_earth_mother_and_the_technogaia": {
+		"event_name": "music.a_conflict_between_earth_mother_and_the_technogaia"
+	},
+	"kaizoslumber.you_wouldnt_download": {
+		"event_name": "music.you_wouldnt_download"
+	},
+	"kaizoslumber.purple_is_the_new_green": {
+		"event_name": "music.purple_is_the_new_green"
+	},
+	"kaizoslumber.schlierberg": {
+		"event_name": "music.schlierberg"
+	},
+	"kaizoslumber.a_nu_earth": {
+		"event_name": "music.a_nu_earth"
+	},
+	"kaizoslumber.gengar_ecstasy": {
+		"event_name": "music.gengar_ecstasy"
+	},
+	"kaizoslumber.space_angels_from_cyrene": {
+		"event_name": "music.space_angels_from_cyrene"
+	},
+	"daddyd.kjshuffle": {
+		"event_name": "music.kjshuffle"
+	},
+	"daddyd.mountaindew": {
+		"event_name": "music.mountaindew"
+	},
+	"daddyd.pineapple": {
+		"event_name": "music.pineapple"
+	}
+}

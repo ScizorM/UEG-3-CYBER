@@ -1,0 +1,68 @@
+//bridge-file-version: #57
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.vulcan_cannon": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"firing": "context.is_first_person == 1.0 && query.cooldown_time_remaining('slot.weapon.mainhand') > 0"
+						},
+						{
+							"idle_fp": "context.is_first_person == 1.0 && query.cooldown_time_remaining('slot.weapon.mainhand') == 0"
+						},
+						{
+							"idle_tp": "context.is_first_person != 1.0"
+						}
+					]
+				},
+				"firing": {
+					"animations": [
+						"cannon_recoil"
+					],
+					"transitions": [
+						{
+							"idle_fp": "context.is_first_person == 1.0 && query.cooldown_time_remaining('slot.weapon.mainhand') == 0"
+						},
+						{
+							"idle_tp": "context.is_first_person != 1.0"
+						}
+					]
+				},
+				"idle_fp": {
+					"animations": [
+						"cannon_fp"
+					],
+					"transitions": [
+						{
+							"firing": "context.is_first_person == 1.0 && query.cooldown_time_remaining('slot.weapon.mainhand') > 0"
+						},
+						{
+							"idle_fp": "context.is_first_person == 1.0 && query.cooldown_time_remaining('slot.weapon.mainhand') == 0"
+						},
+						{
+							"idle_tp": "context.is_first_person != 1.0"
+						}
+					]
+				},
+				"idle_tp": {
+					"animations": [
+						"cannon_tp"
+					],
+					"transitions": [
+						{
+							"firing": "context.is_first_person == 1.0 && query.cooldown_time_remaining('slot.weapon.mainhand') > 0"
+						},
+						{
+							"idle_fp": "context.is_first_person == 1.0 && query.cooldown_time_remaining('slot.weapon.mainhand') == 0"
+						},
+						{
+							"idle_tp": "context.is_first_person != 1.0"
+						}
+					]
+				}
+			}
+		}
+	}
+}

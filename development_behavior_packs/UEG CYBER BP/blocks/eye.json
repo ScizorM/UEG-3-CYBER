@@ -1,0 +1,15 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.21.10",
+	"minecraft:block": {
+		"description": {
+			"identifier": "sm:eye"
+		},
+		"components": {
+			"minecraft:display_name": "Eye Block",
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 2
+			}
+		}
+	}
+}

@@ -1,0 +1,34 @@
+//bridge-file-version: #17
+{
+	"format_version": "1.21.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "sm:shield_idle"
+		},
+		"components": {
+			"minecraft:allow_off_hand": true,
+			"minecraft:display_name": {
+				"value": "Shield (Idle)"
+			},
+			"minecraft:icon": "sm:shield_idle",
+			"minecraft:max_stack_size": 1,
+			"minecraft:hand_equipped": true,
+			"minecraft:render_offsets": {
+				"off_hand": {
+					"third_person": {
+						"position": [
+							-0.2,
+							0.2,
+							-0.7
+						],
+						"scale": [
+							0.12,
+							0.12,
+							0.12
+						]
+					}
+				}
+			}
+		}
+	}
+}

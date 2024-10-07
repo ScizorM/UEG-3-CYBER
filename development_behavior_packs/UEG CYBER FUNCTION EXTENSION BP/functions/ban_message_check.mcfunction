@@ -1,0 +1,3 @@
+#bridge-file-version: #1
+execute if score bans_enabled bans_enabled matches 0 run execute if score game_active game_active matches 1 run tellraw @p {"rawtext":[{"text":"§e[Warning] §cSorry! Weapon banning and unbanning are not enabled when a match is active."}]}
+execute if score bans_enabled bans_enabled matches 1 run tellraw @p {"rawtext":[{"text":"§e[Warning] §cSorry! Weapon banning and unbanning are not enabled. Contact the operator and ask them to enable them."}]}

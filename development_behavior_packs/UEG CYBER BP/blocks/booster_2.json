@@ -1,0 +1,16 @@
+//bridge-file-version: #11
+{
+	"format_version": "1.21.10",
+	"minecraft:block": {
+		"description": {
+			"identifier": "sm:booster_2"
+		},
+		"components": {
+			"minecraft:custom_components": [
+				"sm:booster_2"
+			],
+			"minecraft:display_name": "Booster Block 2",
+			"minecraft:destructible_by_explosion": false
+		}
+	}
+}

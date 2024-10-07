@@ -1,0 +1,37 @@
+//bridge-file-version: #11
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "sm:vinylrecord",
+			"materials": {
+				"default": "guardian"
+			},
+			"textures": {
+				"default": "textures/signs/albumart/howarewefeelingtoday",
+				"frame_one": "textures/signs/albumart/kaizodemosvol1",
+				"frame_two": "textures/signs/albumart/kaizodemosvol3",
+				"frame_three": "textures/signs/albumart/kaizodemosvol4",
+				"frame_four": "textures/signs/albumart/locked",
+				"frame_five": "textures/signs/albumart/spaceangelsfromcyrene",
+				"frame_six": "textures/signs/albumart/thekaizomanifesto",
+				"frame_seven": "textures/signs/albumart/therevolution",
+				"frame_eight": "textures/signs/albumart/howarewefeelingtoday",
+				"frame_nine": "textures/signs/albumart/howarewefeelingtoday",
+				"frame_zero": "textures/signs/albumart/howarewefeelingtoday",
+				"frame_enabled": "textures/signs/albumart/howarewefeelingtoday",
+				"frame_disabled": "textures/signs/albumart/howarewefeelingtoday",
+				"frame_preset": "textures/signs/albumart/howarewefeelingtoday",
+				"frame_ten": "textures/signs/albumart/howarewefeelingtoday",
+				"frame_dialogue": "textures/signs/albumart/howarewefeelingtoday",
+				"locked": "textures/signs/albumart/howarewefeelingtoday"
+			},
+			"geometry": {
+				"default": "geometry.vinylrecordCover"
+			},
+			"render_controllers": [
+				"controller.render.laptop_1through9"
+			]
+		}
+	}
+}

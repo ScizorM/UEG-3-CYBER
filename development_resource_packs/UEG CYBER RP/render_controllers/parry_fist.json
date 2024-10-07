@@ -1,0 +1,31 @@
+//bridge-file-version: #99
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.parry_fist": {
+			"geometry": "Geometry.default",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"textures": [
+				"Array.skins[(math.ceil(query.cooldown_time_remaining('slot.weapon.mainhand') + query.is_ignited ))]"
+			],
+			"arrays": {
+				"textures": {
+					"Array.skins": [
+						"Texture.inactive",
+						"Texture.default",
+						"Texture.default",
+						"Texture.frame_4",
+						"Texture.frame_5",
+						"Texture.frame_6",
+						"Texture.frame_7",
+						"Texture.frame_8"
+					]
+				}
+			}
+		}
+	}
+}

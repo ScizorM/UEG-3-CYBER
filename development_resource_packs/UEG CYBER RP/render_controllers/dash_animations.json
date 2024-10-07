@@ -1,0 +1,44 @@
+//bridge-file-version: #31
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.dash_animations": {
+			"geometry": "Geometry.default",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"textures": [
+				"Array.skins[query.variant]"
+			],
+			"arrays": {
+				"textures": {
+					"Array.skins": [
+						"Texture.none",
+						"Texture.none",
+						"Texture.none",
+						"Texture.none",
+						"Texture.none",
+						"Texture.none",
+						"Texture.none",
+						"Texture.none",
+						"Texture.none",
+						"Texture.none",
+						"Texture.none",
+						"Texture.none",
+						"Texture.none",
+						"Texture.none",
+						"Texture.none",
+						"Texture.none",
+						"Texture.none",
+						"Texture.default",
+						"Texture.frame_2",
+						"Texture.frame_3",
+						"Texture.frame_4"
+					]
+				}
+			}
+		}
+	}
+}

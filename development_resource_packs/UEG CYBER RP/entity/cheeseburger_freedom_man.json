@@ -1,0 +1,39 @@
+//bridge-file-version: #5
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "sm:cheeseburger_freedom_man",
+			"materials": {
+				"default": "guardian"
+			},
+			"textures": {
+				"default": "textures/entity/skins/cheeseburger_freedom_man"
+			},
+			"geometry": {
+				"default": "geometry.cheeseburger_freedom_man"
+			},
+			"render_controllers": [
+				"controller.render.guardian"
+			],
+			"animations": {
+				"general": "animation.npc.general",
+				"look_at_target": "animation.common.look_at_target",
+				"move": "animation.npc.move",
+				"baby_transform": "animation.npc.baby_transform"
+			},
+			"scripts": {
+				"animate": [
+					"general",
+					{
+						"move": "query.modified_move_speed"
+					},
+					"look_at_target",
+					{
+						"baby_transform": "query.is_baby"
+					}
+				]
+			}
+		}
+	}
+}

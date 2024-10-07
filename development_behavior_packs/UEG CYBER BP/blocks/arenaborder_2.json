@@ -1,0 +1,23 @@
+//bridge-file-version: #7
+{
+	"format_version": "1.21.10",
+	"minecraft:block": {
+		"description": {
+			"identifier": "sm:arenaborder_2"
+		},
+		"components": {
+			"minecraft:display_name": "Arena Border 2",
+			"minecraft:material_instances": {
+				"*": {
+					"face_dimming": false,
+					"render_method": "blend",
+					"ambient_occlusion": true
+				}
+			},
+			"minecraft:light_emission": 0.5,
+			"minecraft:light_dampening": 0.0,
+			"minecraft:destructible_by_mining": false,
+			"minecraft:destructible_by_explosion": false
+		}
+	}
+}

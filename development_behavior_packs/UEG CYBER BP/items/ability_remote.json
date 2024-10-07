@@ -1,0 +1,18 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.21.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "sm:ability_remote"
+		},
+		"components": {
+			"minecraft:display_name": {
+				"value": "Selected Ability: Remote Trigger"
+			},
+			"minecraft:icon": "sm:ability_remote",
+			"minecraft:wearable": {
+				"slot": "slot.armor.legs"
+			}
+		}
+	}
+}

@@ -1,0 +1,43 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.smorgler",
+				"texture_width": 32,
+				"texture_height": 32,
+				"visible_bounds_width": 5,
+				"visible_bounds_height": 4,
+				"visible_bounds_offset": [0, 1, 0]
+			},
+			"bones": [
+				{
+					"name": "rightItem",
+					"pivot": [0, -2.26655, -1.62038],
+					"binding": "q.item_slot_to_bone_name(c.item_slot)"
+				},
+				{
+					"name": "gun2",
+					"parent": "rightItem",
+					"pivot": [-6, 15, 0]
+				},
+				{
+					"name": "gun",
+					"parent": "gun2",
+					"pivot": [-6, 15, -1],
+					"rotation": [90, 0, -90],
+					"cubes": [
+						{"origin": [-7.5, 12, -2], "size": [2, 5, 2], "inflate": 0.03, "pivot": [-6, 12, 0], "rotation": [0, 0, -15], "uv": [0, 16]},
+						{"origin": [-14.5, 16, -3], "size": [8, 4, 4], "inflate": 0.02, "uv": [0, 0]},
+						{"origin": [-6.5, 17, -2], "size": [2, 2, 2], "uv": [8, 18]},
+						{"origin": [-4.5, 16, -3], "size": [5, 4, 4], "inflate": 0.2, "uv": [0, 23]},
+						{"origin": [-4.5, 16, -3], "size": [5, 4, 4], "inflate": -0.5, "uv": [0, 8]},
+						{"origin": [-15.5, 16, -3], "size": [1, 4, 4], "inflate": 0.1, "uv": [14, 12]},
+						{"origin": [-10.5, 12, -2], "size": [3, 1, 2], "inflate": 0.02, "uv": [20, 0]},
+						{"origin": [-18.23215, 14.71892, -2], "size": [6, 1, 2], "inflate": 0.02, "pivot": [-14, 12, 0], "rotation": [0, 0, 65], "uv": [14, 8]}
+					]
+				}
+			]
+		}
+	]
+}

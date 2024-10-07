@@ -1,0 +1,24 @@
+//bridge-file-version: #23
+{
+	"format_version": "1.16.100",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "sm:demon_skin",
+			"materials": {
+				"default": "guardian"
+			},
+			"textures": {
+				"default": "textures/entity/skins/rpg/demon_cyberized",
+				"frame_2": "textures/entity/skins/rpg/demon_cyberized_frame2",
+				"frame_3": "textures/entity/skins/rpg/demon_cyberized_frame3",
+				"frame_4": "textures/entity/skins/rpg/demon_cyberized_frame4"
+			},
+			"geometry": {
+				"default": "geometry.demon_cyberized_full"
+			},
+			"render_controllers": [
+				"controller.render.skin_animations"
+			]
+		}
+	}
+}

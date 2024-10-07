@@ -1,0 +1,41 @@
+//bridge-file-version: #7
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "sm:settings_robot",
+			"materials": {
+				"default": "entity_emissive"
+			},
+			"textures": {
+				"default": "textures/entity/settings_robot",
+				"default_blink": "textures/entity/settings_robot_blink",
+				"jumping": "textures/entity/settings_robot_jumping",
+				"jumping_blink": "textures/entity/settings_robot_jumping_blink",
+				"thinking": "textures/entity/settings_robot_thinking",
+				"thinking_blink": "textures/entity/settings_robot_thinking_blink",
+				"tinkering": "textures/entity/settings_robot_tinkering",
+				"tinkering_blink": "textures/entity/settings_robot_tinkering_blink"
+			},
+			"geometry": {
+				"default": "geometry.settings_robot_new"
+			},
+			"render_controllers": [
+				"controller.render.robot_frames"
+			],
+			"animations": {
+				"idle": "animation.settings_robot_new.idle",
+				"sitting": "animation.settings_robot.idle_sitting",
+				"jumping": "animation.settings_robot.jumping",
+				"thinking": "animation.settings_robot_new.thinking",
+				"tinkering": "animation.settings_robot_new.tinkering",
+				"controller": "controller.animation.settings_robot_animations"
+			},
+			"scripts": {
+				"animate": [
+					"controller"
+				]
+			}
+		}
+	}
+}

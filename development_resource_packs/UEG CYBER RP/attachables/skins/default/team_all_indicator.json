@@ -1,0 +1,21 @@
+//bridge-file-version: #21
+{
+	"format_version": "1.16.100",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "sm:team_indicator_all",
+			"materials": {
+				"default": "guardian"
+			},
+			"textures": {
+				"default": "textures/entity/team_all"
+			},
+			"geometry": {
+				"default": "geometry.team_indicator"
+			},
+			"render_controllers": [
+				"controller.render.glowing"
+			]
+		}
+	}
+}

@@ -1,0 +1,30 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.metro_sign": {
+			"ignore_lighting": true,
+			"geometry": "Geometry.default",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"textures": [
+				"Array.metro_sign[query.variant]"
+			],
+			"arrays": {
+				"textures": {
+					"Array.metro_sign": [
+						"Texture.default",
+						"Texture.startgame",
+						"Texture.spectate",
+						"Texture.nu",
+						"Texture.lambda",
+						"Texture.information"
+					]
+				}
+			}
+		}
+	}
+}

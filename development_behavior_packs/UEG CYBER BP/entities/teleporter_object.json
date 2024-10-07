@@ -1,0 +1,63 @@
+//bridge-file-version: #9
+{
+	"format_version": "1.13.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "sm:teleporter_object",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"components": {
+			"minecraft:damage_sensor": {
+				"triggers": {
+					"cause": "all",
+					"deals_damage": false
+				}
+			},
+			"minecraft:type_family": {
+				"family": [
+					"npc",
+					"mob"
+				]
+			},
+			"minecraft:fire_immune": true,
+			"minecraft:collision_box": {
+				"width": 0.5,
+				"height": 0.5
+			},
+			"minecraft:persistent": {},
+			"minecraft:nameable": {
+				"always_show": false,
+				"allow_name_tag_renaming": true
+			},
+			"minecraft:conditional_bandwidth_optimization": {},
+			"minecraft:knockback_resistance": {
+				"value": 1000000,
+				"max": 10000000
+			},
+			"minecraft:physics": {
+				"has_collision": true,
+				"has_gravity": false
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			}
+		},
+		"events": {
+			"sm:despawn": {
+				"add": {
+					"component_groups": [
+						"despawn"
+					]
+				}
+			}
+		},
+		"component_groups": {
+			"despawn": {
+				"minecraft:instant_despawn": {}
+			}
+		}
+	}
+}

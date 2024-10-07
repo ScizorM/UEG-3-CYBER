@@ -1,0 +1,15 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.21.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "sm:settings"
+		},
+		"components": {
+			"minecraft:icon": "sm:settings",
+			"minecraft:display_name": {
+				"value": "Arena Settings"
+			}
+		}
+	}
+}

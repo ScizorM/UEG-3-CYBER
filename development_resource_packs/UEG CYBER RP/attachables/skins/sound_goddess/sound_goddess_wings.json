@@ -1,0 +1,21 @@
+//bridge-file-version: #24
+{
+	"format_version": "1.16.100",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "sm:sound_goddess_wings",
+			"materials": {
+				"default": "guardian"
+			},
+			"textures": {
+				"default": "textures/entity/skins/lambda_goddess"
+			},
+			"geometry": {
+				"default": "geometry.lambda_goddess_wings"
+			},
+			"render_controllers": [
+				"controller.render.darkless"
+			]
+		}
+	}
+}

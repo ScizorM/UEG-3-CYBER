@@ -1,0 +1,28 @@
+//bridge-file-version: #19
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.firing_weapon_thirdperson": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"firing": "query.cooldown_time_remaining('slot.weapon.mainhand') > 0"
+						}
+					]
+				},
+				"firing": {
+					"transitions": [
+						{
+							"default": "query.all_animations_finished"
+						}
+					],
+					"animations": [
+						"fire_vulcan_cannon"
+					],
+					"blend_transition": 0.2
+				}
+			}
+		}
+	}
+}

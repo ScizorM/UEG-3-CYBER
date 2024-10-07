@@ -1,0 +1,58 @@
+//bridge-file-version: #11
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "sm:loadout_1_default"
+		},
+		"components": {
+			"minecraft:on_use": {
+				"on_use": {
+					"event": "sm:use"
+				}
+			},
+			"minecraft:cooldown": {
+				"category": "select_lo",
+				"duration": 1
+			},
+			"minecraft:icon": {
+				"texture": "sm:loadout_default"
+			},
+			"minecraft:display_name": {
+				"value": "Loadout 1: Default"
+			},
+			"minecraft:render_offsets": {
+				"main_hand": {
+					"first_person": {
+						"scale": [
+							0,
+							0,
+							0
+						]
+					},
+					"third_person": {
+						"scale": [
+							0,
+							0,
+							0
+						],
+						"position": [
+							0,
+							0,
+							0
+						]
+					}
+				}
+			}
+		},
+		"events": {
+			"sm:use": {
+				"run_command": {
+					"command": [
+						"function select_loadout_1"
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,31 @@
+//bridge-file-version: #96
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.vulcan_cannon": {
+			"geometry": "Geometry.default",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"textures": [
+				"Array.skins[(math.ceil(query.cooldown_time_remaining('slot.weapon.mainhand') * 7 ))]"
+			],
+			"arrays": {
+				"textures": {
+					"Array.skins": [
+						"Texture.default",
+						"Texture.frame_2",
+						"Texture.frame_3",
+						"Texture.frame_4",
+						"Texture.frame_5",
+						"Texture.frame_6",
+						"Texture.frame_7",
+						"Texture.frame_8"
+					]
+				}
+			}
+		}
+	}
+}

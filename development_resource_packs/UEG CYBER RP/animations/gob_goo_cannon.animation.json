@@ -1,0 +1,41 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.gob_goo_cannon.firstperson": {
+			"loop": true,
+			"bones": {
+				"gun2": {
+					"rotation": [-11.85069, -23.77165, -31.69805],
+					"position": [3.41421, 6.59117, 1.87674]
+				}
+			}
+		},
+		"animation.gob_goo_cannon.fire": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.5,
+			"bones": {
+				"gun2": {
+					"rotation": {
+						"0.0": [-11.85069, -23.77165, -31.69805],
+						"0.0417": [-22.72327, -13.82665, 1.09046],
+						"0.5": [-11.85069, -23.77165, -31.69805]
+					},
+					"position": {
+						"0.0": [3.41421, 6.59117, 1.87674],
+						"0.0417": [2.70289, 7.29442, 1.94163],
+						"0.5": [3.41421, 6.59117, 1.87674]
+					}
+				}
+			}
+		},
+		"animation.gob_goo_cannon.thirdperson": {
+			"loop": true,
+			"bones": {
+				"gun": {
+					"rotation": [90, 0, 0],
+					"position": [7, 8.95215, -1.36345]
+				}
+			}
+		}
+	}
+}

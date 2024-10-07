@@ -1,0 +1,21 @@
+//bridge-file-version: #31
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "sm:team_nu_dialogue",
+			"textures": {
+				"default": "textures/particle/nu_indicator"
+			},
+			"geometry": {
+				"default": "geometry.model_s_model"
+			},
+			"render_controllers": [
+				"controller.render.glowing"
+			],
+			"materials": {
+				"default": "guardian"
+			}
+		}
+	}
+}

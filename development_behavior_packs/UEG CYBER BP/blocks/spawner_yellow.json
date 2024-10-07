@@ -1,0 +1,17 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.21.10",
+	"minecraft:block": {
+		"description": {
+			"identifier": "sm:spawner_yellow"
+		},
+		"components": {
+			"minecraft:destructible_by_explosion": false,
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 3
+			},
+			"minecraft:light_emission": 0.1,
+			"minecraft:display_name": "Spawner (Blue)"
+		}
+	}
+}

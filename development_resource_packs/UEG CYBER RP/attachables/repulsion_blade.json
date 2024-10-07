@@ -1,0 +1,41 @@
+//bridge-file-version: #51
+{
+	"format_version": "1.10.0",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "sm:repulsion_blade_disabled",
+			"materials": {
+				"default": "entity_alphatest",
+				"enchanted": "entity_alphatest_glint"
+			},
+			"textures": {
+				"default": "textures/entity/weapons/repulsion_blade",
+				"inactive": "textures/entity/weapons/vulcan_cannon_frame2",
+				"preparing_1": "textures/entity/weapons/vulcan_cannon_frame3",
+				"preparing_2": "textures/entity/weapons/vulcan_cannon_frame4",
+				"frame_5": "textures/entity/weapons/vulcan_cannon_frame5",
+				"frame_6": "textures/entity/weapons/vulcan_cannon_frame6",
+				"frame_7": "textures/entity/weapons/vulcan_cannon_frame7",
+				"frame_8": "textures/entity/weapons/vulcan_cannon_frame8"
+			},
+			"geometry": {
+				"default": "geometry.repulsion_blade"
+			},
+			"render_controllers": [
+				"controller.render.guardian"
+			],
+			"animations": {
+				"controller": "controller.animation.repulsion_blade",
+				"cannon_tp": "animation.repulsion_blade.third_person",
+				"cannon_fp": "animation.repulsion_blade.first_person",
+				"parry": "animation.vulcan_cannon.first_person_recoil",
+				"swing": "animation.repulsion_blade.swing"
+			},
+			"scripts": {
+				"animate": [
+					"controller"
+				]
+			}
+		}
+	}
+}

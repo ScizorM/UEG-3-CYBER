@@ -1,0 +1,22 @@
+- make block particles only show if there is someone in a 51 block radius
+- - Boom Block: particle sm:boom_block ~ ~1 ~
+- - Teleporter (Yellow, B): particle sm:teleporter_y_b ~ ~1 ~
+- - Teleporter (Yellow, A): particle sm:teleporter_y_a ~ ~1 ~
+- - Teleporter (Purple, B): particle sm:teleporter_p_b ~ ~1 ~
+- - Teleporter (Purple, A): particle sm:teleporter_p_a ~ ~1 ~
+- - Rocket Emitter: particle sm:blue_rocket ~ ~-1 ~
+- - Pitfall 3: particle sm:pitfall_1 ~ ~1 ~
+- - Pitfall 2: particle sm:pitfall_2 ~ ~1 ~
+- - Pitfall 1: particle sm:pitfall_3 ~ ~1 ~
+- - Cloud Booster Block: particle sm:cloud_booster ~ ~1 ~
+- - Booster Block 3: particle sm:booster_3 ~ ~1 ~
+- - Booster Block 2: particle sm:booster_2 ~ ~1 ~
+- - Booster Block 1: particle sm:booster_1 ~ ~1 ~
+
+- make signs display on a 10 second timer
+- make deathzone particles vanish when a match is not active
+- make custom menu particles vanish when someone is not in the menu
+- remove all excess particles
+- make arena select areas use entity models instead of particles
+- make ban particles only appear if players are nearby?
+- optimize pregame effects

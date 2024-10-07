@@ -1,0 +1,8170 @@
+{
+	"feature": {},
+	"feature_rule": {
+		"BP/feature_rules/big_mushroom_rule.json": {
+			"identifiers": [
+				"sd:big_mushroom_rule"
+			]
+		}
+	},
+	"biome": {
+		"BP/biomes/test.json": {
+			"tags": [
+				"bee_habitat"
+			]
+		}
+	},
+	"function": {
+		"BP/functions/tick.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/check_for_race.mcfunction": {
+			"custom_commands": [],
+			"tags": [
+				"race_selected"
+			]
+		},
+		"5e08a9a1_3e95_4711_90c9_be9aab536136": {},
+		"310f8fe8_1354_4901_aef6_4f1549e1568d": {},
+		"BP/functions/double_jump_cmds.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/add_scoreboards.mcfunction": {
+			"custom_commands": [],
+			"scoreboards": [
+				"dash_ready_timer",
+				"mana"
+			]
+		},
+		"a167f737_0a7d_4d39_ac4b_adccf62075dd": {},
+		"a739cd03_ade0_4867_a27d_d57481ef31f2": {},
+		"6f0b0f5c_3f3a_4491_b9ba_dce032e4b96b": {},
+		"42abf446_5c83_4859_9841_f99ddafeba23": {
+			"tags": [
+				"teleport_cooldown"
+			]
+		},
+		"1d676c98_f01c_47b5_8f16_d160ddacb9e5": {
+			"tags": [
+				"teleport_cooldown"
+			]
+		},
+		"43e87282_56da_48e3_ad7c_e327cbc6d886": {
+			"tags": [
+				"teleport_cooldown"
+			]
+		},
+		"42fc5493_55fe_4c66_af0d_df0d5f0e9d9b": {
+			"tags": [
+				"teleport_cooldown"
+			]
+		},
+		"BP/functions/y_b_to_y_a.mcfunction": {
+			"custom_commands": [],
+			"tags": [
+				"y_b",
+				"teleport_cooldown"
+			]
+		},
+		"BP/functions/y_a_to_y_b.mcfunction": {
+			"custom_commands": [],
+			"tags": [
+				"y_a",
+				"teleport_cooldown"
+			]
+		},
+		"BP/functions/tp_cooldown.mcfunction": {
+			"custom_commands": [],
+			"tags": [
+				"teleport_cooldown"
+			]
+		},
+		"BP/functions/check_under_test.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/spawn_test_teleporters.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/p_a_to_p_b.mcfunction": {
+			"custom_commands": [],
+			"tags": [
+				"p_a",
+				"teleport_cooldown"
+			]
+		},
+		"BP/functions/p_b_to_p_a.mcfunction": {
+			"custom_commands": [],
+			"tags": [
+				"p_b",
+				"teleport_cooldown"
+			]
+		},
+		"6d89f5a7_ad0f_462c_bf8e_89992ae308b6": {
+			"tags": [
+				"teleport_cooldown"
+			]
+		},
+		"19790d5f_c5ae_4076_8b55_62e0371797e9": {},
+		"0cc447d4_c649_45c3_a1ba_2babb44cc0dd": {},
+		"b43638c9_c6e0_429e_9c0d_82dd36b97687": {},
+		"0d2d02b7_7551_4c31_8c3d_bd62f71aff04": {},
+		"857c7e6e_29b7_4528_a6b2_9aa3df500602": {
+			"tags": [
+				"parrying"
+			]
+		},
+		"BP/functions/enable_movement_controls.mcfunction": {
+			"custom_commands": [],
+			"tags": [
+				"dash_enabled",
+				"ingame"
+			]
+		},
+		"BP/functions/disable_movement_controls.mcfunction": {
+			"custom_commands": [],
+			"tags": [
+				"dash_enabled",
+				"ingame"
+			]
+		},
+		"d031e9a3_3543_4c3c_bd57_287a69a4484d": {},
+		"4af7ce92_f8d6_44fa_9175_5a9ab42c3fdd": {},
+		"9358cfd4_dfcb_4ea8_b2bf_72e50b29a961": {},
+		"BP/functions/give_block.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/spawn_platform.mcfunction": {
+			"custom_commands": []
+		},
+		"c83b8b72_2bc2_4485_b6ed_45e15b8a30f9": {},
+		"BP/functions/potion_effects.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/teleport_players.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/explode_nu_landmines.mcfunction": {
+			"custom_commands": []
+		},
+		"4b677f4d_4bd9_4824_a328_339a661847ed": {},
+		"BP/functions/win_game_gain_credits.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/win_round_gain_credits.mcfunction": {
+			"custom_commands": []
+		},
+		"221d8b8d_6a9a_4d87_9ff9_7f4c2e5f7be2": {},
+		"02052f3d_7fc0_4d2d_847f_a3056ab59a1d": {},
+		"BP/functions/loadout_select_title.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/pre_game/loadout_select_title.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/enable_loadouts.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/disable_loadouts.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/toggles/enable_arena_vote.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/toggles/disable_arena_vote.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/explode_lambda_landmines.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/load_slot_1.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/load_loadouts/load_slot_1.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/load_loadouts/load_slot_2.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/load_loadouts/load_slot_3.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/load_loadouts/load_slot_4.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/load_loadouts/load_slot_5.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/load_loadouts/load_slot_6.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/load_loadouts/load_slot_7.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/load_loadouts/load_slot_8.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/load_loadouts/load_slot_9.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/load_loadouts/give_items.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/save_loadout_1.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/save_loadout_2.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/reset_loadouts.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/save_loadout_3.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/select_loadout_1.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/select_loadout_2.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/select_loadout_3.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/start_pregame_timer.mcfunction": {
+			"custom_commands": [],
+			"tags": [
+				"timer_actives"
+			]
+		},
+		"cf6a07ec_eb23_4693_94a9_d9ac4b54c2c6": {},
+		"BP/functions/load_map_preview_1_titles.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/vote_for_arena_1.mcfunction": {
+			"custom_commands": [],
+			"tags": [
+				"voted_1",
+				"voted_2",
+				"voted_3"
+			]
+		},
+		"BP/functions/vote_for_arena_2.mcfunction": {
+			"custom_commands": [],
+			"tags": [
+				"voted_2",
+				"voted_1",
+				"voted_3"
+			]
+		},
+		"BP/functions/vote_for_arena_3.mcfunction": {
+			"custom_commands": [],
+			"tags": [
+				"voted_3",
+				"voted_1",
+				"voted_2"
+			]
+		},
+		"BP/functions/01_start_pregame.mcfunction": {
+			"custom_commands": [],
+			"tags": [
+				"arenaMusic",
+				"musicPlaying"
+			]
+		},
+		"BP/functions/randomize_arenas.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/teleport_players_pregame.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/pregame_setup_ui_nu.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/pregame_setup_ui_lambda.mcfunction": {
+			"custom_commands": []
+		},
+		"9956c3b5_4b47_4337_b48d_4e6125814186": {},
+		"BP/functions/load_arena_1.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/load_arena_2.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/load_arena_3.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/02_start_game.mcfunction": {
+			"custom_commands": [],
+			"tags": [
+				"timer_actives"
+			]
+		},
+		"BP/functions/redstone_block_arena.mcfunction": {
+			"custom_commands": []
+		},
+		"ccb82df6_f788_4563_8097_9ba6d376f217": {},
+		"420b920d_2e44_4e18_83da_75afbab82d04": {},
+		"44486162_681a_47d5_90b0_c6f0b0c544c2": {},
+		"3efdcb91_59cb_40ef_96a8_63f5c2d50d29": {},
+		"b3702511_a245_47c5_ba68_bfaf7dbe25f5": {},
+		"b372068c_7921_40d9_9db7_c60f592de3b2": {},
+		"BP/functions/pregame-clear.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/items_pregame.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/prestart_player_cutscene.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/cut1_resetline.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/enable_gamerules.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/reset_gamerules.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/03_start_round.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/camera_intro_1.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/camera_intro_2.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/camera_intro_3_reset.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/nu_death.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/death.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/lambda_death.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/round_active.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/round_inactive.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/neutron_bomb.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/postround_cmds.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/team_nu_alive.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/team_nu_dead.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/team_lambda_dead.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/team_lambda_alive.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/reset_scores.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/end_cmds.mcfunction": {
+			"custom_commands": [],
+			"tags": [
+				"ingameMusic",
+				"1f",
+				"exit_stores",
+				"team_nu",
+				"team_lambda",
+				"number_1",
+				"number_2",
+				"number_3",
+				"number_4",
+				"teamed",
+				"ingame"
+			]
+		},
+		"e9ec9dc3_8568_48cb_8a9a_3b3941edcbca": {},
+		"BP/functions/load_arenas/load_0000_lostcity.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/load_arenas/load_0001_blackwhite.mcfunction": {
+			"custom_commands": []
+		},
+		"64566f2a_8649_4253_9dac_0c0ca6ab2f51": {},
+		"df158142_39a0_40d6_bb86_18ae9716bcda": {},
+		"BP/functions/loadout_default.mcfunction": {
+			"custom_commands": []
+		},
+		"86eb9661_0d61_4de6_9dfd_f5550703919d": {},
+		"382f9e78_a352_4e4c_9134_7f8a49818d3e": {},
+		"882c3f9d_8be1_43c8_a82c_0722b28452e2": {},
+		"50a763dc_d68d_44a4_9bba_7cd6b037a7f2": {},
+		"BP/functions/antigrav_prism.mcfunction": {
+			"custom_commands": []
+		},
+		"339abb63_3272_4fe2_bc9d_6f8f6f36bbc2": {},
+		"BP/functions/explode_self.mcfunction": {
+			"custom_commands": []
+		},
+		"9c33a36e_be11_4601_bde2_7c18b1f88807": {
+			"tags": [
+				"tped"
+			]
+		},
+		"BP/functions/sound_blade_fns.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/start_soundb_tp.mcfunction": {
+			"custom_commands": [],
+			"tags": [
+				"tped"
+			]
+		},
+		"38c79be4_274a_413e_b5b4_e914805733a7": {},
+		"BP/functions/overloaded_text.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/command_id_4.mcfunction": {
+			"custom_commands": []
+		},
+		"631f52c1_1323_4cf3_be5a_c25f3088ea9e": {},
+		"BP/functions/tp_end.mcfunction": {
+			"custom_commands": [],
+			"tags": [
+				"tped"
+			]
+		},
+		"b63134af_802d_4391_8c26_c9bbdd24646d": {},
+		"BP/functions/sneak_functions.mcfunction": {
+			"custom_commands": []
+		},
+		"7b14ba23_dc3b_42bb_a32f_c5a00d327e83": {},
+		"BP/functions/remove_abilities.mcfunction": {
+			"custom_commands": [],
+			"tags": [
+				"remote",
+				"prism",
+				"rocketjump",
+				"baby",
+				"removed_abilities"
+			]
+		},
+		"BP/functions/select_ability_baby.mcfunction": {
+			"custom_commands": [],
+			"tags": [
+				"baby"
+			]
+		},
+		"BP/functions/select_ability_prism.mcfunction": {
+			"custom_commands": [],
+			"tags": [
+				"prism"
+			]
+		},
+		"BP/functions/select_ability_remote.mcfunction": {
+			"custom_commands": [],
+			"tags": [
+				"remote"
+			]
+		},
+		"BP/functions/select_ability_rocket.mcfunction": {
+			"custom_commands": [],
+			"tags": [
+				"rocketjump"
+			]
+		},
+		"BP/functions/emp.mcfunction": {
+			"custom_commands": []
+		},
+		"e0811f2e_09da_476f_82b5_01cd25c8b347": {},
+		"BP/functions/baby_storm.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/vulcan.mcfunction": {
+			"custom_commands": []
+		},
+		"072729a7_1957_4fa4_a83f_03330fc0f9e9": {},
+		"BP/functions/big_joe_cmds.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/summon_joe.mcfunction": {
+			"custom_commands": []
+		},
+		"ab72c8af_8df3_4b3f_8cea_59fc96e252f8": {},
+		"BP/functions/pregame_camera_anim1.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/pregame_camera_anim2.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/pregame_camera_anim3.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/respawn.mcfunction": {
+			"custom_commands": [],
+			"tags": [
+				"in_air_heavenpiercer"
+			]
+		},
+		"BP/functions/sound_test.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/gob_sounds.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/charged_bolt.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/arena_cam_1.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/arena_cam_2.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/arena_cam_3.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/arena_cam_4.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/arena_cam_5.mcfunction": {
+			"custom_commands": []
+		},
+		"84dbe7b0_2c33_4072_bd0c_e03c5cbbb25f": {},
+		"7d64e3ca_10ee_4225_8504_1db12cf1e511": {},
+		"7a8252d5_8ecb_431e_916f_3da9e4e85d84": {},
+		"62a8f890_329c_4767_a93b_5533f85fca4e": {},
+		"BP/functions/render_skins.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/render_rockets.mcfunction": {
+			"custom_commands": []
+		},
+		"cf24b08e_58c9_4391_9b78_c676f599fa20": {},
+		"a49cd060_27bf_4dbc_8477_554c4e1bf575": {},
+		"3ff87e23_7534_4943_b791_d2f721d296af": {},
+		"BP/functions/load_arenas/load_0002_nether.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/load_arenas/load_0003_space.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/load_arenas/load_0004_western.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/load_arenas/load_0005_stronghold.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/load_arenas/load_0006_aquatic.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/load_arenas/load_0007_synthesis.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/load_arenas/load_0008_neonether.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/load_arenas/load_0009_redstone.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/load_arenas/load_0010_ss_ueg.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/load_arenas/load_0011_bastion.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/load_arenas/load_0012_retro_maze.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/load_arenas/load_0013_chaos_void.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/load_arenas/load_0040_murkopolis.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/enable_movement_controls_mission.mcfunction": {
+			"custom_commands": [],
+			"tags": [
+				"dash_enabled",
+				"mission"
+			]
+		},
+		"BP/functions/disable_movement_controls_mission.mcfunction": {
+			"custom_commands": [],
+			"tags": [
+				"dash_enabled"
+			]
+		},
+		"235951ff_be0f_4125_afa1_96484927f52f": {},
+		"6dd0f2c4_a8b2_436b_9349_c2d8a28c3eac": {},
+		"d7e357f1_8e0c_442d_a590_4a4e80af1756": {},
+		"BP/functions/select_recruit_thrusters.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/select_sound_goddess_thrusters.mcfunction": {
+			"custom_commands": []
+		},
+		"7855d3da_4037_4961_ab65_2767cd540f03": {},
+		"709bc300_ee16_4236_848b_fe1630cb5274": {},
+		"BP/functions/disable_lobby_terminals.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/enable_lobby_terminals.mcfunction": {
+			"custom_commands": []
+		},
+		"2357a159_a86a_49cd_ab03_8681ce0cac27": {},
+		"bc8295a0_633e_4da0_a55a_b2971b496e09": {},
+		"BP/functions/gob_goo_anim_in.mcfunction": {
+			"custom_commands": [],
+			"tags": [
+				"gob_gooed"
+			]
+		},
+		"BP/functions/gob_goo_timer.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/gob_goo_anim_out.mcfunction": {
+			"custom_commands": [],
+			"tags": [
+				"gob_gooed"
+			]
+		},
+		"BP/functions/_general_timers.mcfunction": {
+			"custom_commands": [],
+			"tags": [
+				"large_boost",
+				"gob_food",
+				"small_boost"
+			]
+		},
+		"1402a772_cd72_4db3_a0f1_ece014537520": {
+			"tags": [
+				"gob_food"
+			]
+		},
+		"39f89c73_f2fc_44d2_8f7b_f621801a819b": {
+			"tags": [
+				"gob_food"
+			]
+		},
+		"BP/functions/add_small_boost.mcfunction": {
+			"custom_commands": [],
+			"tags": [
+				"small_boost",
+				"large_boost"
+			]
+		},
+		"BP/functions/add_large_boost.mcfunction": {
+			"custom_commands": [],
+			"tags": [
+				"small_boost",
+				"large_boost"
+			]
+		},
+		"b986f089_efc1_4e7a_8ba4_19fa31a4dbab": {},
+		"BP/functions/test_dialogue.mcfunction": {
+			"custom_commands": []
+		},
+		"c5b8f814_5a37_4d0c_a961_f042de711dce": {},
+		"BP/functions/dialogue_gob_shop.mcfunction": {
+			"custom_commands": [],
+			"tags": [
+				"dialogue_gob_shop"
+			]
+		},
+		"BP/functions/not_enough_money_gob_shop.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/buy_gob_dog.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/buy_gob_fries.mcfunction": {
+			"custom_commands": []
+		},
+		"60547267_d304_4724_9516_c7fa99bc36da": {},
+		"BP/functions/dialogue_cheeseburger.mcfunction": {
+			"custom_commands": [],
+			"tags": [
+				"dialogue_cheeseburger"
+			]
+		},
+		"BP/functions/_general_ticks.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/00_startgame.mcfunction": {
+			"custom_commands": [],
+			"tags": [
+				"musicPlaying"
+			]
+		},
+		"BP/functions/velocity_cancel.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/remove_abilities_clean.mcfunction": {
+			"custom_commands": [],
+			"tags": [
+				"remote",
+				"prism",
+				"rocketjump",
+				"baby",
+				"removed_abilities",
+				"vel_cancel"
+			]
+		},
+		"BP/functions/select_ability_vel_cancel.mcfunction": {
+			"custom_commands": [],
+			"tags": [
+				"vel_cancel"
+			]
+		},
+		"23086ace_41e1_4473_a115_06ea6a57a3f9": {},
+		"041464d0_e018_466f_b408_01b35ac9966a": {},
+		"036d11d5_843f_42cb_988a_391f17d48a80": {},
+		"3e692ee6_41d0_4b5f_8c26_c832f610c512": {},
+		"2651ece6_d8c7_43f0_acbc_ada171aace92": {},
+		"94330f81_d8c4_4092_afca_bd0165ce4da9": {},
+		"d28b59db_bb9d_416e_b972_d56dcef8033b": {},
+		"f35c42b1_ac0d_4e49_957d_9a956c9a72aa": {},
+		"51cad6ce_e33f_4a58_9d00_2617f5e33e05": {},
+		"4f7a884f_f6ac_40ee_bb4e_a0f64702ac44": {},
+		"558188c4_ae61_47a8_a504_d91b8f23a8e5": {},
+		"BP/functions/preset_default_1.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/preset_default_2.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/preset_default_3.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/save_loadout_1_custom.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/save_loadout_2_custom.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/save_loadout_3_custom.mcfunction": {
+			"custom_commands": []
+		},
+		"ac2cf3c9_ee77_4978_a256_7388ca322a9d": {},
+		"2188c4b9_b4a1_49a2_998f_ca37c084f298": {},
+		"e2130d74_ce4a_4a9e_8f7f_44f5e2dd95a6": {},
+		"f4f7c4f0_b647_4f5d_b2a9_f05147f8abc3": {},
+		"d06f98a7_797e_40f3_83bb_2419a1c4368a": {},
+		"18290b02_aafb_44e0_85af_5440ef891fff": {},
+		"428ef757_0de8_43dd_84de_1b957106287d": {},
+		"fb90436b_b76c_478a_8e70_313764a27b52": {},
+		"e326eef8_6fc3_41fc_ba07_0fa0740c3d88": {},
+		"4d2748d4_be96_4807_8050_139bfd4e8fcc": {},
+		"0263077d_8abc_472a_a3ab_66a64d284b48": {},
+		"8ceade16_70c8_4698_a3ba_3dd9d00cd8c6": {},
+		"f719cf7f_e372_4783_8452_ee0437d87f78": {},
+		"8fdbd3b7_bcb8_4811_a8ce_81a05828347b": {},
+		"655d9271_3a79_439f_b7d8_188eb9a72c30": {},
+		"f60eb601_e249_4c42_a357_adc3213f6f58": {},
+		"0c148c3e_3261_4fca_90b3_39c0de95697e": {},
+		"d529ca5b_f514_4de4_ba4c_6225a57bf280": {},
+		"79cc07ca_282d_4dd4_b7eb_c712450bc9da": {},
+		"81558992_4fc0_4dc5_a227_5cca5a93d8ec": {},
+		"33abbaf5_357d_414b_accf_4f2f71cee254": {},
+		"a22f441b_7ea9_4a5e_910f_8fad2c4a8a06": {},
+		"BP/functions/preset_ranged_1.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/preset_ranged_2.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/preset_ranged_3.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/preset_melee_1.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/preset_melee_2.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/preset_melee_3.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/preset_spleef_1.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/preset_spleef_2.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/preset_spleef_3.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/preset_legacy_pre_uegone_1.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/preset_legacy_pre_uegone_2.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/preset_legacy_pre_uegone_3.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/preset_legacy_uegone_1.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/preset_legacy_uegone_2.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/preset_legacy_uegone_3.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/preset_legacy_pre_uegplus_1.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/preset_legacy_pre_uegplus_2.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/preset_legacy_pre_uegplus_3.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/preset_legacy_pre_purchasables_1.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/preset_legacy_pre_purchasables_2.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/preset_legacy_pre_purchasables_3.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/preset_secret_1.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/preset_secret_2.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/preset_secret_3.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/settings_maxlives_add.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/settings_maxlives_remove.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/display_current_settings.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/enable_movement_controls_tutorial.mcfunction": {
+			"custom_commands": [],
+			"tags": [
+				"dash_enabled",
+				"tutorial"
+			]
+		},
+		"a97d3efb_3eef_47b3_bd75_87b7d44012a2": {},
+		"BP/functions/tutorial_act1.mcfunction": {
+			"custom_commands": [],
+			"tags": [
+				"tutorial",
+				"tutorial_pt0",
+				"tutorial_pt1"
+			]
+		},
+		"BP/functions/tutorial_act2.mcfunction": {
+			"custom_commands": [],
+			"tags": [
+				"tutorial_pt1",
+				"tutorial_pt2"
+			]
+		},
+		"BP/functions/tutorial_act3.mcfunction": {
+			"custom_commands": [],
+			"tags": [
+				"tutorial_pt2",
+				"tutorial_pt3"
+			]
+		},
+		"BP/functions/tutorial_act4.mcfunction": {
+			"custom_commands": [],
+			"tags": [
+				"tutorial_pt3",
+				"tutorial_pt4",
+				"lives_tutorial"
+			]
+		},
+		"BP/functions/tutorial_act0.mcfunction": {
+			"custom_commands": [],
+			"tags": [
+				"tutorial",
+				"tutorial_pt0",
+				"tutorial_pt1",
+				"tutorial_pt2",
+				"tutorial_pt3",
+				"tutorial_pt4",
+				"tutorial_pt5",
+				"lives_tutorial"
+			]
+		},
+		"BP/functions/respawn_tutorial.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/tutorial_act5.mcfunction": {
+			"custom_commands": [],
+			"tags": [
+				"tutorial_pt4",
+				"tutorial_pt5",
+				"lives_tutorial"
+			]
+		},
+		"BP/functions/tutorial_act6.mcfunction": {
+			"custom_commands": [],
+			"tags": [
+				"tutorial_pt5",
+				"tutorial_pt6",
+				"lives_tutorial"
+			]
+		},
+		"BP/functions/tutorial_end.mcfunction": {
+			"custom_commands": [],
+			"tags": [
+				"tutorial_pt5",
+				"tutorial_pt6",
+				"lives_tutorial",
+				"tutorial",
+				"tutorial_completed"
+			]
+		},
+		"4c8ff39a_ad87_49c9_a181_57b5293caf0b": {},
+		"BP/functions/tutorialCutCameraIn.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/tutorialCutCameraOut.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/startGame.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/blind_weapon.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/render_team_indicators.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/trigger_weaponChange.mcfunction": {
+			"custom_commands": []
+		},
+		"45a71bef_5846_46b8_84e7_75c7dd440a3e": {},
+		"52b5e6de_22a1_40c1_8f55_03ab4cbf25f4": {},
+		"c63a1643_9fdd_435c_a80e_457931dab763": {},
+		"bf5c906e_76d8_4b04_9581_980c40621d5d": {},
+		"c5c8600a_ba8a_4288_b9ae_8bd0a4198437": {},
+		"c2befecd_cb09_4fb9_b084_0227dbb6acb8": {},
+		"BP/functions/bans_locked.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/unlock_bans.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/un_unlock_bans.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/weapon_locked.mcfunction": {
+			"custom_commands": []
+		},
+		"227b6105_f5d4_4027_8e53_0e264ac9e651": {},
+		"BP/functions/nu_win_round.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/lambda_win_round.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/lambda_win_game.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/nu_win_game.mcfunction": {
+			"custom_commands": []
+		},
+		"b03d4429_558c_4452_9d08_b651d2882d58": {},
+		"6df135f8_da01_45d9_98e4_d4ce26d2ec21": {},
+		"596bd266_3f3e_4c9f_a8ed_cfa2ab040df2": {},
+		"df0bc4fc_ca9a_467e_8e34_6a4d227a55f2": {},
+		"BP/functions/blinded.mcfunction": {
+			"custom_commands": []
+		},
+		"da44f99c_f5cf_4729_b0de_5847d255ab6a": {},
+		"366eb763_9447_4254_8faa_84c2db88297f": {},
+		"6d92a376_c068_425e_b3f5_cf7f609ec7fe": {},
+		"7517aeb5_5e25_4c11_adae_d38dd94ea9f3": {},
+		"1d2ad72b_03ef_455d_bf18_4206641eb2a3": {},
+		"12a27bff_bfc6_4106_b4df_1ff005478f61": {},
+		"f77f822f_d21b_4e6e_b358_0214b902060d": {},
+		"f80b2828_f8b3_479a_803b_0f7c270ea3ab": {},
+		"54bc841a_f250_4d44_9e0d_ee94e3c01758": {},
+		"BP/functions/repulsion_cmds.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/arena_select_loading_effect.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/arena_select_cycleR.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/arena_select_cycleL.mcfunction": {
+			"custom_commands": []
+		},
+		"a898f57a_457a_4faf_96f7_1b6a4079a718": {},
+		"2a69a981_b75a_4aad_b780_7c0fd49d9a28": {},
+		"e1c22f8f_8dfb_44d8_8ede_45d73bba4f29": {},
+		"40a6263e_10ff_426c_aeb1_c28e1fb7e123": {},
+		"BP/functions/reset_world_unlocks.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/arena_select_loading_effect_new.mcfunction": {
+			"custom_commands": []
+		},
+		"0b7d0a0c_d900_4434_8916_f3a3b581142b": {},
+		"10e010dd_8764_423f_becb_3676aba2f3ce": {},
+		"02aa7405_7cfa_4ac1_afdc_673d8e8e5fd1": {},
+		"ef7a9c97_4eff_43c3_9354_8d2569ea9b2a": {},
+		"b77c5c7a_2e8a_48ec_b334_196f13b24647": {},
+		"49592ea4_6e02_42ce_be6c_adffe6a27421": {},
+		"BP/functions/spawn_emp_trap.mcfunction": {
+			"custom_commands": []
+		},
+		"7b17b129_1b40_43a6_a046_64ec81b590b9": {},
+		"18e4a1ca_cfac_448c_bb89_1d4e5e4127c0": {},
+		"BP/functions/training_room_pre_tp.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/training_room_tp_loadout3.mcfunction": {
+			"custom_commands": [],
+			"tags": [
+				"tutorial",
+				"tutorialwall"
+			]
+		},
+		"BP/functions/training_room_tp_loadout2.mcfunction": {
+			"custom_commands": [],
+			"tags": [
+				"tutorial",
+				"tutorialwall"
+			]
+		},
+		"BP/functions/training_room_tp_loadout1.mcfunction": {
+			"custom_commands": [],
+			"tags": [
+				"tutorial",
+				"tutorialwall"
+			]
+		},
+		"BP/functions/respawn_training.mcfunction": {
+			"custom_commands": []
+		},
+		"d86d7e07_563f_4091_9047_a49041ccdbc0": {},
+		"fc9623cf_2697_430e_96c9_c4588d1e18cf": {},
+		"2584edba_a6e4_41ed_a05e_694dfac94cb0": {},
+		"e37e9cf3_6396_42df_8d1a_8351112830f5": {},
+		"e6913f2e_96d3_45c6_b771_3e3a5b730e66": {},
+		"4c774565_c1ec_487b_bc09_c29a3887680a": {},
+		"ab19aa4c_b0d0_421e_a6ad_71250cee36b6": {},
+		"96411236_9794_4a67_a9f3_3a6063143ce6": {},
+		"6078482e_bae9_4144_af07_d51738df9e6a": {},
+		"adc817e6_e7dc_4ce6_b09f_c398bf8bb9df": {},
+		"4cfa44c9_1a24_4688_bf6a_77789e54bef3": {},
+		"9594c8c3_5175_4dd0_8841_50f877be1d02": {},
+		"ebd9bc98_eeda_4575_965a_218248ab5bab": {},
+		"b88da977_dc47_4925_b2aa_34e9cc47becb": {},
+		"4b78fd4e_1597_4afd_9839_9e9020ce4589": {},
+		"BP/functions/parry_fist.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/explosion_hicharge_parry.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/explosion_hicharge_normal.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/explosion_normal.mcfunction": {
+			"custom_commands": []
+		},
+		"1fd36e4c_6ca7_4f04_9828_6aa512bbfcc1": {},
+		"660825ba_54d1_4795_8777_80d448a72ab2": {},
+		"5182704d_69fd_4bd2_a333_df72396eacc5": {},
+		"adcfab81_b070_42be_a2ac_7892e27987b4": {},
+		"f4d53f89_42dc_4321_88a7_316fdcc66dd1": {},
+		"3c6d0d16_de55_4bf7_a895_cd2183f45893": {},
+		"1198edb0_bbbb_4b8d_967c_200440e1628e": {},
+		"0c6ff0db_3cd5_48d7_a55b_b1cd6ef09a30": {},
+		"ee321a95_8c90_4dd1_8247_dd0a49bd6af1": {},
+		"6e9dc1db_8487_48e4_a97b_a4d95f31edda": {},
+		"ea68369c_5dd3_43d9_9464_c78060e393ba": {},
+		"3c908607_c436_4cf5_8f34_27fec3c87320": {},
+		"74763fc4_dd50_4a36_8940_8919fe532b13": {},
+		"4e9c54d0_bb0d_476f_860d_39ffda7e0f7e": {},
+		"4b0c6652_3b66_425f_8b22_0a3a78782fa2": {},
+		"e0b5a87d_c79b_4153_87ba_e0fd01c26d17": {},
+		"6fb1a7f2_19de_45d6_b509_144948b46046": {},
+		"8487f72c_69f3_476b_af1c_1268159325aa": {},
+		"5bb3236f_0725_43c1_9ee5_7bcebf3ae1cf": {},
+		"BP/functions/summon_laser.mcfunction": {
+			"custom_commands": []
+		},
+		"7574c9aa_8384_488a_9f95_066b035b6fff": {},
+		"2863e2ae_3a6d_4743_a854_f043ed1c5c4b": {},
+		"f461656e_cdda_4b6e_a03d_6a062fbe05de": {},
+		"a24f9494_bfb7_466c_99c9_587f5deead8d": {},
+		"8256896f_0528_4e9f_9d09_d0cc3f76dc08": {},
+		"BP/functions/banan_slip.mcfunction": {
+			"custom_commands": []
+		},
+		"504a10c8_1b16_4b49_a945_110a6e6b67ac": {},
+		"7dbc3fa6_deeb_4dc3_8a31_32653a292b11": {},
+		"536038a8_2632_4b28_bb40_ab5e34cab113": {},
+		"a6ee1170_aab7_435f_8f7b_8d112c3ecb78": {},
+		"a86f9333_253b_41c2_9b3b_21bd5a947c82": {},
+		"c235d429_88b4_4a6f_be44_68b3688616fd": {},
+		"4a9c5c5b_19c3_44f1_866b_1362551eaae3": {},
+		"061a94dc_d737_49b1_95f1_dec4f0762932": {},
+		"de0805e8_1838_40c4_84e0_519e55ea23f0": {},
+		"c1d47853_c076_4a18_a363_8e58d4a2719d": {},
+		"BP/functions/explosion_green.mcfunction": {
+			"custom_commands": []
+		},
+		"5d3487c5_261f_4746_90ba_ade35aa230b3": {},
+		"6f942964_3b0e_450e_a7f6_e20a89a52990": {},
+		"BP/functions/explosion_fire.mcfunction": {
+			"custom_commands": []
+		},
+		"d04c337d_f71b_4db4_a22c_fcc663a5e1f9": {},
+		"94894207_803d_458a_9ded_4f292e9448a3": {},
+		"cef9afb7_9a26_4867_a097_6ff2cbd5cec9": {},
+		"ee42a967_bf36_42cf_9aef_42c27f491931": {},
+		"77e71df5_7247_48c3_89e2_f1f2de38e4d4": {},
+		"BP/functions/explosion_chargedbolt.mcfunction": {
+			"custom_commands": []
+		},
+		"8740f40d_5c5c_47ae_8842_380bb0b30041": {},
+		"230799ff_3a22_4967_b60b_733c86c345d6": {},
+		"b509ba70_da3a_4764_9fff_ac6fcab007d3": {},
+		"6e863431_16fd_45b5_9162_5574cb4baf15": {},
+		"ba3b0b0f_667f_40db_a409_1ae7e36efa4b": {},
+		"8fd30b66_6bb3_4fc9_82f7_8f5b597ee07c": {},
+		"2f864b80_5855_4fce_be11_048c7b53beb3": {},
+		"0f5a62e1_32c8_4b59_b324_c923330dcb64": {},
+		"96a23a4d_72ae_4c54_8ec2_fb41c797b728": {},
+		"0e254d12_3275_475d_babe_60c92a2c403b": {},
+		"f868d056_a5a7_433f_866b_8af9fd4b679f": {},
+		"BP/functions/actionbar_cmds_old.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/actionbar_cmds.mcfunction": {
+			"custom_commands": []
+		},
+		"0b686763_d73a_4bdf_bf30_e8fd88b7dafe": {},
+		"BP/functions/title_message_organization_tests.mcfunction": {
+			"custom_commands": []
+		},
+		"84ffbb12_c428_4e50_bfd4_fdc7274269f5": {},
+		"62aa146e_0db6_4e5f_9f08_c21b9c51d47e": {},
+		"df66821b_952e_427b_8927_aee9ef022937": {},
+		"af348c4a_ebd4_4133_8603_8e3572609392": {},
+		"BP/functions/postround_clear_entities.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/tutorial_ticks.mcfunction": {
+			"custom_commands": []
+		},
+		"b164d369_2afe_4d88_b4ff_2b25c5d1598d": {},
+		"BP/functions/explosion_rocketjump.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/stone_ability.mcfunction": {
+			"custom_commands": [],
+			"tags": [
+				"stoned"
+			]
+		},
+		"BP/functions/stoned_ability_explode.mcfunction": {
+			"custom_commands": [],
+			"tags": [
+				"stoned"
+			]
+		},
+		"BP/functions/explosion_parry.mcfunction": {
+			"custom_commands": []
+		},
+		"070370bc_42c9_43b9_b721_db2cc3f18569": {},
+		"4bca0263_6b0b_44ee_8433_6c6043cfa629": {},
+		"69657cef_a93c_44f1_aed2_14a1f2a89f86": {},
+		"BP/functions/stoned_ability_clear.mcfunction": {
+			"custom_commands": [],
+			"tags": [
+				"stoned"
+			]
+		},
+		"BP/functions/gob_explosion.mcfunction": {
+			"custom_commands": []
+		},
+		"8d15e7f4_8664_49b9_860c_a1c5e77bb4c7": {},
+		"BP/functions/remove_teamed.mcfunction": {
+			"custom_commands": [],
+			"tags": [
+				"teamed",
+				"ingame",
+				"music_playing",
+				"arenaMusic"
+			]
+		},
+		"BP/functions/spawn_arena_banner.mcfunction": {
+			"custom_commands": []
+		},
+		"BP/functions/find_piglin_head.mcfunction": {
+			"custom_commands": []
+		},
+		"ba49e01b_b7e5_487c_8861_c4d43b9e7b80": {}
+	},
+	"entity": {
+		"BP/entities/teleporter_object.json": {
+			"events": [
+				"sm:despawn"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:teleporter_object"
+			],
+			"animation_references": [],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/explosion.json": {
+			"events": [
+				"minecraft:entity_spawned",
+				"bridge:remove_command_id_1"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:explosion"
+			],
+			"animation_references": [
+				"bridge_execute_commands"
+			],
+			"families": [
+				"creeper",
+				"monster",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/charged_bolt.json": {
+			"events": [
+				"sm:explode"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"minecraft:arrow"
+			],
+			"animation_references": [],
+			"families": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/non_destructive_explosion.json": {
+			"events": [
+				"minecraft:entity_spawned"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:non_destructive_explosion"
+			],
+			"animation_references": [],
+			"families": [
+				"creeper",
+				"monster",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/arrow.json": {
+			"events": [
+				"minecraft:explode",
+				"minecraft:entity_spawned",
+				"sm:phasetwo",
+				"sm:despawn",
+				"bridge:remove_command_id_1"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"minecraft:arrow"
+			],
+			"animation_references": [
+				"bridge_execute_commands"
+			],
+			"families": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/landmine_ver_nu.json": {
+			"events": [
+				"sm:explode",
+				"sm:pre_explode",
+				"sm:despawn",
+				"sm:spawned"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:landmine_ver_nu"
+			],
+			"animation_references": [
+				"explode"
+			],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/landmine_explosion.json": {
+			"events": [
+				"minecraft:entity_spawned"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:landmine_explosion"
+			],
+			"animation_references": [],
+			"families": [
+				"creeper",
+				"monster",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/landmine_ver_lambda.json": {
+			"events": [
+				"sm:explode",
+				"sm:pre_explode",
+				"sm:despawn",
+				"sm:spawned"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:landmine_ver_lambda"
+			],
+			"animation_references": [
+				"explode"
+			],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/map_preview_1.json": {
+			"events": [
+				"sm:remove_all",
+				"sm:random",
+				"sm:add_3",
+				"sm:add_4",
+				"sm:add_5",
+				"sm:add_6",
+				"sm:add_7",
+				"sm:add_8",
+				"sm:add_9",
+				"sm:add_10",
+				"sm:add_11",
+				"sm:add_12",
+				"sm:add_13",
+				"sm:add_2",
+				"sm:add_1",
+				"sm:add_0"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:map_preview_1"
+			],
+			"animation_references": [],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/pregame_timer.json": {
+			"events": [
+				"sm:start_timer",
+				"bridge:remove_command_id_1",
+				"sm:tick"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:pregame_timer_1s_tick"
+			],
+			"animation_references": [
+				"bridge_execute_commands"
+			],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_components": [],
+			"custom_commands": []
+		},
+		"BP/entities/neutron_explosion.json": {
+			"events": [
+				"minecraft:entity_spawned"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:neutron_explosion"
+			],
+			"animation_references": [],
+			"families": [
+				"creeper",
+				"monster",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/thrown_trident.json": {
+			"events": [
+				"minecraft:explode"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"minecraft:egg"
+			],
+			"animation_references": [],
+			"families": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/fishing_hook.json": {
+			"events": [],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"minecraft:fishing_hook"
+			],
+			"animation_references": [],
+			"families": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/egg.json": {
+			"events": [
+				"sm:despawn",
+				"sm:add_icarus",
+				"sm:add_normal",
+				"sm:icarus_variant",
+				"sm:add_archerfish",
+				"sm:explode",
+				"minecraft:entity_spawned"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"minecraft:egg"
+			],
+			"animation_references": [],
+			"families": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/salmon.json": {
+			"events": [],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"minecraft:salmon"
+			],
+			"animation_references": [],
+			"families": [
+				"salmon",
+				"fish"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/big_joe.json": {
+			"events": [
+				"minecraft:explode",
+				"sm:despawn"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:big_joe"
+			],
+			"animation_references": [],
+			"families": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/arena_camera_timer.json": {
+			"events": [
+				"sm:start_timer",
+				"sm:cam2",
+				"sm:cam3",
+				"sm:cam4",
+				"sm:cam5",
+				"sm:end"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:arena_camera_timer"
+			],
+			"animation_references": [
+				"bridge_execute_commands"
+			],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_components": [],
+			"custom_commands": []
+		},
+		"BP/entities/terminal_test.json": {
+			"events": [
+				"sm:command"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:terminal_save"
+			],
+			"animation_references": [],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/terminal_testR.json": {
+			"events": [
+				"sm:command"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:terminal_testr"
+			],
+			"animation_references": [],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/terminal_testL.json": {
+			"events": [
+				"sm:command"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:terminal_testl"
+			],
+			"animation_references": [],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/terminal_ability_center.json": {
+			"events": [
+				"sm:command"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:terminal_test"
+			],
+			"animation_references": [],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/terminal_nu.json": {
+			"events": [
+				"sm:command",
+				"sm:game_not_active",
+				"sm:game_active",
+				"bridge:remove_command_id_1"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:terminal_nu"
+			],
+			"animation_references": [
+				"bridge_execute_commands"
+			],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/terminal_lambda.json": {
+			"events": [
+				"sm:command",
+				"sm:game_not_active",
+				"sm:game_active",
+				"bridge:remove_command_id_1"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:terminal_lambda"
+			],
+			"animation_references": [
+				"bridge_execute_commands"
+			],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/terminal_leave_teams.json": {
+			"events": [
+				"sm:command",
+				"sm:game_not_active",
+				"sm:game_active"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:terminal_leave_teams"
+			],
+			"animation_references": [],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/gob_dog_goblin.json": {
+			"events": [],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:cheeseburger_freedom_man"
+			],
+			"animation_references": [],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/dialogue_npcs/dialogue_template.json": {
+			"events": [
+				"sm:despawn",
+				"sm:spawn_command"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:gob_dog_goblin_dialogue"
+			],
+			"animation_references": [],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/dialogue_npcs/gob_dog_goblin_dialogue.json": {
+			"events": [
+				"sm:despawn",
+				"sm:spawn_command"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:cheeseburger_freedom_man_dialogue"
+			],
+			"animation_references": [],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/cheeseburger_freedom_man.json": {
+			"events": [],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:cheeseburger_freedom_man"
+			],
+			"animation_references": [],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/dialogue_npcs/cheeseburger_freedom_man_dialogue.json": {
+			"events": [
+				"sm:despawn",
+				"sm:spawn_command"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:team_lambda_dialogue"
+			],
+			"animation_references": [],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/movement_explosion.json": {
+			"events": [
+				"minecraft:entity_spawned"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:movement_explosion"
+			],
+			"animation_references": [],
+			"families": [
+				"creeper",
+				"monster",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/arena_randomizer.json": {
+			"events": [],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:arena_randomizer"
+			],
+			"animation_references": [],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/display_case.json": {
+			"events": [
+				"sm:despawn"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:display_case_gold"
+			],
+			"animation_references": [],
+			"families": [
+				"armor_stand",
+				"inanimate",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/terminal_info.json": {
+			"events": [],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:terminal_info"
+			],
+			"animation_references": [
+				"bridge_execute_commands"
+			],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/terminal_save.json": {
+			"events": [
+				"sm:command"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:terminal_save"
+			],
+			"animation_references": [],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/skin_preview_npc_rocket.json": {
+			"events": [],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:skin_preview_npc_rocket"
+			],
+			"animation_references": [],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/skin_preview_npc.json": {
+			"events": [],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:skin_preview_npc"
+			],
+			"animation_references": [],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/gob_goo_blast.json": {
+			"events": [
+				"sm:goop",
+				"sm:testweapontype",
+				"gob_goo",
+				"solis",
+				"frigidus",
+				"sm:solis_blast",
+				"sm:frigidus_blast",
+				"bridge:remove_command_id_1",
+				"bridge:remove_command_id_2",
+				"bridge:remove_command_id_3",
+				"bridge:remove_command_id_4",
+				"sm:despawn"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"minecraft:snowball"
+			],
+			"animation_references": [
+				"bridge_execute_commands"
+			],
+			"families": [],
+			"custom_components": [],
+			"custom_commands": []
+		},
+		"BP/entities/emp_trap.json": {
+			"events": [
+				"minecraft:entity_spawned",
+				"sm:emp",
+				"sm:despawn",
+				"bridge:remove_command_id_1",
+				"bridge:remove_command_id_2"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:emp_trap_nu"
+			],
+			"animation_references": [
+				"bridge_execute_commands"
+			],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/slate_displaymodel.json": {
+			"events": [],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:slate_displaymodel"
+			],
+			"animation_references": [],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/terminal_cycleL.json": {
+			"events": [
+				"sm:interact"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:terminal_buy_arena"
+			],
+			"animation_references": [
+				"bridge_execute_commands"
+			],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/terminal_cycleR.json": {
+			"events": [
+				"sm:interact"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:terminal_buy_arena"
+			],
+			"animation_references": [
+				"bridge_execute_commands"
+			],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/terminal_buy_arena.json": {
+			"events": [
+				"sm:interact",
+				"sm:error",
+				"sm:already_purchased",
+				"sm:purchased",
+				"sm:error_renderer",
+				"sm:default_renderer",
+				"sm:unpurchasable"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:terminal_buy_arena"
+			],
+			"animation_references": [],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/emp_trap_lambda.json": {
+			"events": [
+				"minecraft:entity_spawned",
+				"sm:emp",
+				"sm:despawn",
+				"bridge:remove_command_id_1",
+				"bridge:remove_command_id_2"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:emp_trap_lambda"
+			],
+			"animation_references": [
+				"bridge_execute_commands"
+			],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/display_case_gold.json": {
+			"events": [
+				"sm:despawn"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:display_case_gold"
+			],
+			"animation_references": [],
+			"families": [
+				"armor_stand",
+				"inanimate",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/marque.json": {
+			"events": [],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:marque"
+			],
+			"animation_references": [],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/explosion_display.json": {
+			"events": [
+				"sm:despawn"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:chargedbolt_fx"
+			],
+			"animation_references": [],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/explosion_display_parry.json": {
+			"events": [
+				"sm:despawn"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:explosion_display_rocketjump"
+			],
+			"animation_references": [],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/timer_scoreboard_ticker.json": {
+			"events": [
+				"sm:timedown",
+				"sm:add_timer",
+				"sm:remove_timer"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:timer_scoreboard_ticker"
+			],
+			"animation_references": [],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/explosion_display_rocketjump.json": {
+			"events": [
+				"sm:despawn"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:explosion_display_rocketjump"
+			],
+			"animation_references": [],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/pregame_timer_1s_tick.json": {
+			"events": [
+				"sm:start_timer",
+				"bridge:remove_command_id_1",
+				"sm:tick",
+				"sm:stop_timer"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:pregame_timer_1s_tick"
+			],
+			"animation_references": [
+				"bridge_execute_commands"
+			],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_components": [],
+			"custom_commands": []
+		},
+		"BP/entities/music_randomizer.json": {
+			"events": [
+				"sm:randomize_music_p2",
+				"sm:randomize_music",
+				"sm:stop_music"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:music_randomizer"
+			],
+			"animation_references": [],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_components": [],
+			"custom_commands": []
+		},
+		"BP/entities/small_explosion.json": {
+			"events": [
+				"minecraft:entity_spawned"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:chargedbolt_boom"
+			],
+			"animation_references": [],
+			"families": [
+				"creeper",
+				"monster",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/dialogue_npcs/team_nu_dialogue.json": {
+			"events": [
+				"sm:despawn",
+				"sm:spawn_command"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:team_nu_dialogue"
+			],
+			"animation_references": [],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/dialogue_npcs/team_lambda_dialogue.json": {
+			"events": [
+				"sm:despawn",
+				"sm:spawn_command"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:team_lambda_dialogue"
+			],
+			"animation_references": [],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/zone_timer.json": {
+			"events": [
+				"sm:timer",
+				"sm:stop_timer",
+				"sm:timer_2",
+				"end_phase3",
+				"bridge:remove_command_id_1",
+				"bridge:remove_command_id_2"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:zone_timer"
+			],
+			"animation_references": [
+				"bridge_execute_commands"
+			],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/interact_test.json": {
+			"events": [],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:interact_test"
+			],
+			"animation_references": [],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/laptop_1through9.json": {
+			"events": [
+				"sm:remove_all",
+				"sm:add_all",
+				"sm:add_1",
+				"sm:add_2",
+				"sm:add_3",
+				"sm:add_4",
+				"sm:add_5",
+				"sm:add_6",
+				"sm:add_7",
+				"sm:add_8",
+				"sm:add_9",
+				"sm:add_0",
+				"sm:add_enabled",
+				"sm:add_preset",
+				"sm:add_10",
+				"sm:add_locked",
+				"sm:add_disabled"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:laptop"
+			],
+			"animation_references": [],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/vinylrecord.json": {
+			"events": [
+				"sm:add_all",
+				"sm:remove_all",
+				"sm:howarewefeeling",
+				"sm:vol1",
+				"sm:vol3",
+				"sm:vol4",
+				"sm:locked",
+				"sm:spaceangels",
+				"sm:kaizomanifesto",
+				"sm:revolution"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:vinylrecord"
+			],
+			"animation_references": [],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/explosion_440.json": {
+			"events": [
+				"minecraft:entity_spawned",
+				"bridge:remove_command_id_1"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:explosion_440"
+			],
+			"animation_references": [
+				"bridge_execute_commands"
+			],
+			"families": [
+				"creeper",
+				"monster",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/explosion_440_2.json": {
+			"events": [
+				"minecraft:entity_spawned",
+				"bridge:remove_command_id_1"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:explosion_440_2"
+			],
+			"animation_references": [
+				"bridge_execute_commands"
+			],
+			"families": [
+				"creeper",
+				"monster",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/explosion_440_3.json": {
+			"events": [
+				"minecraft:entity_spawned",
+				"bridge:remove_command_id_1"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:explosion_440_3"
+			],
+			"animation_references": [
+				"bridge_execute_commands"
+			],
+			"families": [
+				"creeper",
+				"monster",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/pointingtest.json": {
+			"events": [],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:pointingtest"
+			],
+			"animation_references": [],
+			"families": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/explosion_green.json": {
+			"events": [
+				"sm:despawn"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:explosion_green"
+			],
+			"animation_references": [],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/smorgler_blast.json": {
+			"events": [
+				"sm:smorg"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:smorgler_blast"
+			],
+			"animation_references": [],
+			"families": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/explosion_icarus.json": {
+			"events": [
+				"minecraft:entity_spawned"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:explosion_icarus"
+			],
+			"animation_references": [],
+			"families": [
+				"creeper",
+				"monster",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/explosion_display_fire.json": {
+			"events": [
+				"sm:despawn"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:explosion_display_fire"
+			],
+			"animation_references": [],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/icarus_blast_old.json": {
+			"events": [
+				"sm:explode",
+				"minecraft:entity_spawned",
+				"sm:add_collider"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"minecraft:small_fireball"
+			],
+			"animation_references": [],
+			"families": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/smog_blinder.json": {
+			"events": [
+				"sm:despawn"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:smog_blinder"
+			],
+			"animation_references": [],
+			"families": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/explosion_display_fish.json": {
+			"events": [
+				"sm:despawn"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:explosion_display_fish"
+			],
+			"animation_references": [],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/explosion_chargedbolt_old_parry.json": {
+			"events": [
+				"minecraft:entity_spawned",
+				"bridge:remove_command_id_1"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:explosion_parry"
+			],
+			"animation_references": [],
+			"families": [
+				"creeper",
+				"monster",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/chargedbolt_boom.json": {
+			"events": [
+				"minecraft:entity_spawned",
+				"bridge:remove_command_id_1"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:chargedbolt_boom"
+			],
+			"animation_references": [
+				"bridge_execute_commands"
+			],
+			"families": [
+				"creeper",
+				"monster",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/chargedbolt_fx.json": {
+			"events": [
+				"sm:despawn"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:chargedbolt_fx"
+			],
+			"animation_references": [],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/arenainfo.json": {
+			"events": [
+				"sm:remove_all",
+				"sm:locked",
+				"sm:0000_lostcity",
+				"sm:0001_blackwhite",
+				"sm:0002_nether",
+				"sm:0003_space",
+				"sm:0004_western",
+				"sm:0005_stronghold",
+				"sm:0010_ss_ueg",
+				"sm:0012_retro_maze",
+				"sm:0013_chaos_void",
+				"sm:0014_abstract",
+				"sm:0018_synthwave",
+				"sm:0023_the_tower",
+				"sm:0025_tundra",
+				"sm:0026_aether",
+				"sm:0028_plus",
+				"sm:0030_end",
+				"sm:0031_circus",
+				"sm:0032_beehive",
+				"sm:0033_dark_forest",
+				"sm:0034_digiglobe",
+				"sm:0037_crystal_cave",
+				"sm:0038_pendual",
+				"sm:0040_murkopolis",
+				"sm:0041_aquatica",
+				"sm:0042_neo_tokyo",
+				"sm:0043_shaparium",
+				"sm:0044_kyoto",
+				"sm:0045_overlord",
+				"sm:0050_shadow_forest",
+				"sm:0051_magic_forest",
+				"sm:0059_highway",
+				"sm:0060_cheeseburger_warzone",
+				"sm:0061_amethyst_domain",
+				"sm:0062_race_track",
+				"sm:0063_gob_dimension",
+				"sm:0064_playground",
+				"sm:0065_jurassic",
+				"sm:0066_egypt",
+				"sm:0067_cyberspace",
+				"sm:0068_fire_and_ice",
+				"sm:0070_vaporwave",
+				"sm:0071_chess",
+				"sm:0073_deep_dark",
+				"sm:0074_demolition_derby",
+				"sm:0076_obstacle_course",
+				"sm:0078_mcryes",
+				"sm:0079_slot_machine",
+				"sm:0080_pondwater",
+				"sm:0081_mole_life",
+				"sm:0082_big_warehouse",
+				"sm:0083_clash_royale",
+				"sm:0084_fruitiger_aero",
+				"sm:0085_amusement_park",
+				"sm:0086_arcade",
+				"sm:0087_cargo_deck",
+				"sm:0088_spleef",
+				"sm:0089_doomspire",
+				"sm:0090_",
+				"sm:0091_",
+				"sm:0092_",
+				"sm:0093_",
+				"sm:0094_",
+				"sm:0095_",
+				"sm:0096_",
+				"sm:0057_abstract_cyber",
+				"sm:0058_mikes_way",
+				"sm:0069_shrek_on_crack",
+				"sm:0075_bananaland_bouncehouse",
+				"sm:0077_flesh_prison",
+				"sm:0097_",
+				"sm:0098_",
+				"sm:0105_",
+				"sm:0099_custom_1",
+				"sm:0100_custom_2",
+				"sm:0101_custom_3",
+				"sm:0102_custom_4",
+				"sm:0103_custom_5",
+				"sm:0104_custom_6",
+				"sm:unknown"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:arenainfo"
+			],
+			"animation_references": [],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/metro_sign.json": {
+			"events": [
+				"remove_all",
+				"waiting",
+				"start",
+				"spectate",
+				"nu",
+				"lambda",
+				"information"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:sign_reactor"
+			],
+			"animation_references": [],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/metro_sign_tv.json": {
+			"events": [],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:arenavote_tv_title"
+			],
+			"animation_references": [],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/arenaselect_tv.json": {
+			"events": [],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:arenaselect_tv"
+			],
+			"animation_references": [],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/votes.json": {
+			"events": [],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:reroll_arenas"
+			],
+			"animation_references": [],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/settings_robot.json": {
+			"events": [
+				"sm:default",
+				"sm:default_blink",
+				"sm:jumping",
+				"sm:jumping_blink",
+				"sm:thinking",
+				"sm:thinking_blink",
+				"sm:tinkering",
+				"sm:tinkering_blink",
+				"sm:remove_all",
+				"sm:robot_sitting",
+				"sm:robot_sitting_blink"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:settings_robot"
+			],
+			"animation_references": [],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/player.json": {
+			"events": [
+				"minecraft:gain_bad_omen",
+				"minecraft:clear_add_bad_omen",
+				"minecraft:trigger_raid",
+				"minecraft:remove_raid_trigger",
+				"sm:icarus_alternate_1",
+				"sm:icarus_alternate_2",
+				"sm:fist_trigger",
+				"sm:no_fist_trigger",
+				"sm:dash_frame1",
+				"sm:dash_frame2",
+				"sm:dash_frame3",
+				"sm:dash_frame4",
+				"sm:clear_variants",
+				"sm:variant_1",
+				"sm:enable_judgement",
+				"sm:disable_judgement"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"minecraft:player"
+			],
+			"animation_references": [],
+			"families": [
+				"player"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/testSkyBox.json": {
+			"events": [],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:testskybox"
+			],
+			"animation_references": [],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/shrek_on_crack.json": {
+			"events": [],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:shrek_on_crack"
+			],
+			"animation_references": [],
+			"families": [
+				"zombie",
+				"undead",
+				"monster",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/arena_vote_sign.json": {
+			"events": [],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:arena_vote_sign"
+			],
+			"animation_references": [],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/reroll_arenas.json": {
+			"events": [],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:reroll_arenas"
+			],
+			"animation_references": [],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/arenavote_tv.json": {
+			"events": [],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:arenavote_tv_title"
+			],
+			"animation_references": [],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/arenavote_tv_title.json": {
+			"events": [],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:arenavote_tv_title"
+			],
+			"animation_references": [],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/sign_reactor.json": {
+			"events": [
+				"remove_all",
+				"waiting",
+				"start",
+				"spectate",
+				"nu",
+				"lambda",
+				"information"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:sign_torimoti"
+			],
+			"animation_references": [],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/explosion_gob.json": {
+			"events": [
+				"minecraft:entity_spawned",
+				"bridge:remove_command_id_1"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:explosion"
+			],
+			"animation_references": [
+				"bridge_execute_commands"
+			],
+			"families": [
+				"creeper",
+				"monster",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/torimoti.json": {
+			"events": [],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:torimoti"
+			],
+			"animation_references": [],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/sign_torimoti.json": {
+			"events": [
+				"remove_all",
+				"waiting",
+				"start",
+				"spectate",
+				"nu",
+				"lambda",
+				"information"
+			],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:sign_torimoti"
+			],
+			"animation_references": [],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/arenabanner.json": {
+			"events": [],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:arenabanner"
+			],
+			"animation_references": [],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/entities/arenabanner_bg.json": {
+			"events": [],
+			"bridge_core_tags": [],
+			"identifiers": [
+				"sm:arenabanner_bg"
+			],
+			"animation_references": [],
+			"families": [
+				"npc",
+				"mob"
+			],
+			"custom_commands": [],
+			"custom_components": []
+		}
+	},
+	"item": {
+		"BP/items/race_not_selected.json": {
+			"identifiers": [
+				"sm:race_not_selected"
+			],
+			"custom_commands": []
+		},
+		"BP/items/test_item.json": {
+			"identifiers": [
+				"sm:race_info_template"
+			],
+			"custom_commands": []
+		},
+		"BP/items/race_info_template.json": {
+			"identifiers": [
+				"sm:race_info_robot"
+			],
+			"custom_commands": []
+		},
+		"BP/items/race_info_robot.json": {
+			"identifiers": [
+				"sm:race_info_robot"
+			],
+			"custom_commands": []
+		},
+		"BP/items/race_info_demon.json": {
+			"identifiers": [
+				"sm:race_info_robot"
+			],
+			"custom_commands": []
+		},
+		"BP/items/race_info_fairy.json": {
+			"identifiers": [
+				"sm:race_info_robot"
+			],
+			"custom_commands": []
+		},
+		"BP/items/race_info_spectral.json": {
+			"identifiers": [
+				"sm:race_info_robot"
+			],
+			"custom_commands": []
+		},
+		"BP/items/race_info_orc.json": {
+			"identifiers": [
+				"sm:race_info_robot"
+			],
+			"custom_commands": []
+		},
+		"BP/items/race_info_shadow.json": {
+			"identifiers": [
+				"sm:race_info_robot"
+			],
+			"custom_commands": []
+		},
+		"BP/items/select_a_race.json": {
+			"identifiers": [
+				"sm:select_a_race"
+			],
+			"custom_commands": []
+		},
+		"BP/items/placeholder_shield.json": {
+			"identifiers": [
+				"sm:placeholder_shield"
+			],
+			"custom_commands": []
+		},
+		"BP/items/thruster_status_none.json": {
+			"identifiers": [
+				"sm:thruster_status_10"
+			],
+			"custom_commands": []
+		},
+		"BP/items/thruster_status_1.json": {
+			"identifiers": [
+				"sm:thruster_status_10"
+			],
+			"custom_commands": []
+		},
+		"BP/items/thruster_status_2.json": {
+			"identifiers": [
+				"sm:thruster_status_10"
+			],
+			"custom_commands": []
+		},
+		"BP/items/thruster_status_3.json": {
+			"identifiers": [
+				"sm:thruster_status_10"
+			],
+			"custom_commands": []
+		},
+		"BP/items/thruster_status_4.json": {
+			"identifiers": [
+				"sm:thruster_status_10"
+			],
+			"custom_commands": []
+		},
+		"BP/items/thruster_status_5.json": {
+			"identifiers": [
+				"sm:thruster_status_10"
+			],
+			"custom_commands": []
+		},
+		"BP/items/thruster_status_6.json": {
+			"identifiers": [
+				"sm:thruster_status_10"
+			],
+			"custom_commands": []
+		},
+		"BP/items/thruster_status_7.json": {
+			"identifiers": [
+				"sm:thruster_status_10"
+			],
+			"custom_commands": []
+		},
+		"BP/items/thruster_status_8.json": {
+			"identifiers": [
+				"sm:thruster_status_10"
+			],
+			"custom_commands": []
+		},
+		"BP/items/thruster_status_9.json": {
+			"identifiers": [
+				"sm:thruster_status_10"
+			],
+			"custom_commands": []
+		},
+		"BP/items/thruster_status_10.json": {
+			"identifiers": [
+				"sm:thruster_status_10"
+			],
+			"custom_commands": []
+		},
+		"BP/items/charged_bolt_rifle.json": {
+			"identifiers": [
+				"sm:charged_bolt_rifle"
+			],
+			"custom_commands": []
+		},
+		"BP/items/vulcan_cannon.json": {
+			"identifiers": [
+				"sm:charged_bolt_rifle"
+			],
+			"custom_commands": []
+		},
+		"BP/items/block_fabricator.json": {
+			"identifiers": [
+				"sm:block_fabricator"
+			],
+			"custom_commands": []
+		},
+		"BP/items/test_weapon.json": {
+			"identifiers": [
+				"sm:hammer"
+			],
+			"custom_commands": []
+		},
+		"BP/items/repulsion_blade.json": {
+			"identifiers": [
+				"sm:repulsion_blade"
+			],
+			"custom_commands": []
+		},
+		"BP/items/platform_fabricator.json": {
+			"identifiers": [
+				"sm:platform_fabricator"
+			],
+			"custom_commands": []
+		},
+		"BP/items/energy_pickaxe.json": {
+			"identifiers": [
+				"sm:energy_pickaxe"
+			],
+			"custom_commands": []
+		},
+		"BP/items/landmine_ver_nu.json": {
+			"identifiers": [
+				"sm:landmine_ver_nu"
+			],
+			"custom_commands": []
+		},
+		"BP/items/remote_activator_ver_nu.json": {
+			"identifiers": [
+				"sm:remote_activator_ver_nu"
+			],
+			"custom_commands": []
+		},
+		"BP/items/default_skin.json": {
+			"identifiers": [
+				"sm:default_skin"
+			],
+			"custom_commands": []
+		},
+		"BP/items/arena_1.json": {
+			"identifiers": [
+				"sm:loadout_3"
+			],
+			"custom_commands": []
+		},
+		"BP/items/arena_2.json": {
+			"identifiers": [
+				"sm:arena_2"
+			],
+			"custom_commands": []
+		},
+		"BP/items/arena_3.json": {
+			"identifiers": [
+				"sm:arena_3"
+			],
+			"custom_commands": []
+		},
+		"BP/items/loadout_1.json": {
+			"identifiers": [
+				"sm:loadout_1_spleef"
+			],
+			"custom_commands": []
+		},
+		"BP/items/loadout_2.json": {
+			"identifiers": [
+				"sm:loadout_3"
+			],
+			"custom_commands": []
+		},
+		"BP/items/loadout_3.json": {
+			"identifiers": [
+				"sm:loadout_3"
+			],
+			"custom_commands": []
+		},
+		"BP/items/loadout_editor/loadout_g_gun.json": {
+			"identifiers": [
+				"sm:loadout_v_cannonv+"
+			],
+			"custom_commands": []
+		},
+		"BP/items/loadout_editor/loadout_v_cannon_v+.json": {
+			"identifiers": [
+				"sm:loadout_v_cannonv+"
+			],
+			"custom_commands": []
+		},
+		"BP/items/default_skin_nu.json": {
+			"identifiers": [
+				"sm:default_skin_lambda"
+			],
+			"custom_commands": []
+		},
+		"BP/items/default_skin_lambda.json": {
+			"identifiers": [
+				"sm:default_skin_lambda"
+			],
+			"custom_commands": []
+		},
+		"BP/items/gob_goo_cannon.json": {
+			"identifiers": [
+				"sm:gob_goo_cannon"
+			],
+			"custom_commands": []
+		},
+		"BP/items/sc_quant-e.json": {
+			"identifiers": [
+				"sm:sc_quant-e"
+			],
+			"custom_commands": []
+		},
+		"BP/items/baby_stick.json": {
+			"identifiers": [
+				"sm:baby_stick"
+			],
+			"custom_commands": []
+		},
+		"BP/items/antigravity_prism.json": {
+			"identifiers": [
+				"sm:antigravity_prism"
+			],
+			"custom_commands": []
+		},
+		"BP/items/lambda_goddess.json": {
+			"identifiers": [
+				"sm:nu_goddess"
+			],
+			"custom_commands": []
+		},
+		"BP/items/nu_goddess.json": {
+			"identifiers": [
+				"sm:nu_goddess"
+			],
+			"custom_commands": []
+		},
+		"BP/items/skins/sound_goddess/sound_goddess.json": {
+			"identifiers": [
+				"sm:sound_goddess"
+			],
+			"custom_commands": []
+		},
+		"BP/items/skins/default/default_skin_lambda.json": {
+			"identifiers": [
+				"sm:default_skin_lambda"
+			],
+			"custom_commands": []
+		},
+		"BP/items/skins/default/default_skin_nu.json": {
+			"identifiers": [
+				"sm:default_skin_nu"
+			],
+			"custom_commands": []
+		},
+		"BP/items/crossbow.json": {
+			"identifiers": [
+				"minecraft:crossbow"
+			],
+			"custom_commands": []
+		},
+		"BP/items/bow.json": {
+			"identifiers": [
+				"minecraft:bow"
+			],
+			"custom_commands": []
+		},
+		"BP/items/sound_blade_1.json": {
+			"identifiers": [
+				"sm:sound_blade_1"
+			],
+			"custom_commands": []
+		},
+		"BP/items/sound_blade_2.json": {
+			"identifiers": [
+				"sm:sound_blade_2"
+			],
+			"custom_commands": []
+		},
+		"BP/items/skins/sound_goddess/lambda_goddess.json": {
+			"identifiers": [
+				"sm:lambda_goddess"
+			],
+			"custom_commands": []
+		},
+		"BP/items/skins/sound_goddess/nu_goddess.json": {
+			"identifiers": [
+				"sm:nu_goddess"
+			],
+			"custom_commands": []
+		},
+		"BP/items/skins/default/default_skin.json": {
+			"identifiers": [
+				"sm:stone_skin"
+			],
+			"custom_commands": []
+		},
+		"BP/items/sound_blade_1_2.json": {
+			"identifiers": [
+				"sm:sound_blade_1"
+			],
+			"custom_commands": []
+		},
+		"BP/items/ability_none.json": {
+			"identifiers": [
+				"sm:ability_none"
+			],
+			"custom_commands": []
+		},
+		"BP/items/ability_remote.json": {
+			"identifiers": [
+				"sm:ability_none"
+			],
+			"custom_commands": []
+		},
+		"BP/items/ability_rocket.json": {
+			"identifiers": [
+				"sm:ability_vel_cancel"
+			],
+			"custom_commands": []
+		},
+		"BP/items/ability_baby.json": {
+			"identifiers": [
+				"sm:ability_none"
+			],
+			"custom_commands": []
+		},
+		"BP/items/ability_prism.json": {
+			"identifiers": [
+				"sm:ability_none"
+			],
+			"custom_commands": []
+		},
+		"BP/items/emp_drive.json": {
+			"identifiers": [
+				"sm:emp_drive"
+			],
+			"custom_commands": []
+		},
+		"BP/items/salmon_bomb.json": {
+			"identifiers": [
+				"sm:salmon_bomb"
+			],
+			"custom_commands": []
+		},
+		"BP/items/big_joe.json": {
+			"identifiers": [
+				"sm:big_joe_weapon"
+			],
+			"custom_commands": []
+		},
+		"BP/items/utilities/platform_fabricator.json": {
+			"identifiers": [
+				"sm:platform_fabricator"
+			],
+			"custom_commands": []
+		},
+		"BP/items/utilities/antigravity_prism.json": {
+			"identifiers": [
+				"sm:antigravity_prism"
+			],
+			"custom_commands": []
+		},
+		"BP/items/secrets/sc_quant-e.json": {
+			"identifiers": [
+				"sm:sc_quant-e"
+			],
+			"custom_commands": []
+		},
+		"BP/items/sound_goddess_wings.json": {
+			"identifiers": [
+				"sm:freedom_rockets"
+			],
+			"custom_commands": []
+		},
+		"BP/items/recruit_wings.json": {
+			"identifiers": [
+				"sm:heavy_weapons_system"
+			],
+			"custom_commands": []
+		},
+		"BP/items/escalator_up.json": {
+			"identifiers": [
+				"sm:escalator_up"
+			],
+			"custom_commands": []
+		},
+		"BP/items/escalator_down.json": {
+			"identifiers": [
+				"sm:escalator_down"
+			],
+			"custom_commands": []
+		},
+		"BP/items/gob_fries.json": {
+			"identifiers": [
+				"sm:gob_fries"
+			],
+			"custom_commands": []
+		},
+		"BP/items/gob_dog.json": {
+			"identifiers": [
+				"sm:gob_dog"
+			],
+			"custom_commands": []
+		},
+		"BP/items/freedom_rockets.json": {
+			"identifiers": [
+				"sm:freedom_rockets"
+			],
+			"custom_commands": []
+		},
+		"BP/items/ability_vel_cancel.json": {
+			"identifiers": [
+				"sm:ability_vel_cancel"
+			],
+			"custom_commands": []
+		},
+		"BP/items/loadout_1_custom.json": {
+			"identifiers": [
+				"sm:loadout_display_custom"
+			],
+			"custom_commands": []
+		},
+		"BP/items/loadout_1_default.json": {
+			"identifiers": [
+				"sm:loadout_1_default_display"
+			],
+			"custom_commands": []
+		},
+		"BP/items/loadout_1_legacy_pre_uegone.json": {
+			"identifiers": [
+				"sm:loadout_3_legacy_pre_uegone"
+			],
+			"custom_commands": []
+		},
+		"BP/items/loadout_1_legacy_uegone.json": {
+			"identifiers": [
+				"sm:loadout_3_legacy_uegone"
+			],
+			"custom_commands": []
+		},
+		"BP/items/loadout_1_legacy_uegplus.json": {
+			"identifiers": [
+				"sm:loadout_3_legacy_uegplus"
+			],
+			"custom_commands": []
+		},
+		"BP/items/loadout_1_melee.json": {
+			"identifiers": [
+				"sm:loadout_1_melee_display"
+			],
+			"custom_commands": []
+		},
+		"BP/items/loadout_1_mission.json": {
+			"identifiers": [
+				"sm:loadout_3_mission"
+			],
+			"custom_commands": []
+		},
+		"BP/items/loadout_1_purchasables.json": {
+			"identifiers": [
+				"sm:loadout_3_purchasables"
+			],
+			"custom_commands": []
+		},
+		"BP/items/loadout_1_ranged.json": {
+			"identifiers": [
+				"sm:loadout_1_ranged_display"
+			],
+			"custom_commands": []
+		},
+		"BP/items/loadout_1_secrets.json": {
+			"identifiers": [
+				"sm:loadout_1_secrets_display"
+			],
+			"custom_commands": []
+		},
+		"BP/items/loadout_1_spleef.json": {
+			"identifiers": [
+				"sm:loadout_1_spleef_display"
+			],
+			"custom_commands": []
+		},
+		"BP/items/loadout_2_custom.json": {
+			"identifiers": [
+				"sm:loadout_2_custom"
+			],
+			"custom_commands": []
+		},
+		"BP/items/loadout_2_default.json": {
+			"identifiers": [
+				"sm:loadout_3_default"
+			],
+			"custom_commands": []
+		},
+		"BP/items/loadout_2_legacy_pre_uegone.json": {
+			"identifiers": [
+				"sm:loadout_3_legacy_pre_uegone"
+			],
+			"custom_commands": []
+		},
+		"BP/items/loadout_2_legacy_uegone.json": {
+			"identifiers": [
+				"sm:loadout_3_legacy_uegone"
+			],
+			"custom_commands": []
+		},
+		"BP/items/loadout_2_legacy_uegplus.json": {
+			"identifiers": [
+				"sm:loadout_3_legacy_uegplus"
+			],
+			"custom_commands": []
+		},
+		"BP/items/loadout_2_melee.json": {
+			"identifiers": [
+				"sm:loadout_3_melee"
+			],
+			"custom_commands": []
+		},
+		"BP/items/loadout_2_mission.json": {
+			"identifiers": [
+				"sm:loadout_3_mission"
+			],
+			"custom_commands": []
+		},
+		"BP/items/loadout_2_purchasables.json": {
+			"identifiers": [
+				"sm:loadout_3_purchasables"
+			],
+			"custom_commands": []
+		},
+		"BP/items/loadout_2_ranged.json": {
+			"identifiers": [
+				"sm:loadout_3_ranged"
+			],
+			"custom_commands": []
+		},
+		"BP/items/loadout_2_secrets.json": {
+			"identifiers": [
+				"sm:loadout_3_secrets"
+			],
+			"custom_commands": []
+		},
+		"BP/items/loadout_2_spleef.json": {
+			"identifiers": [
+				"sm:loadout_3_spleef"
+			],
+			"custom_commands": []
+		},
+		"BP/items/loadout_3_custom.json": {
+			"identifiers": [
+				"sm:loadout_3_custom"
+			],
+			"custom_commands": []
+		},
+		"BP/items/loadout_3_default.json": {
+			"identifiers": [
+				"sm:loadout_display_default"
+			],
+			"custom_commands": []
+		},
+		"BP/items/loadout_3_legacy_pre_uegone.json": {
+			"identifiers": [
+				"sm:loadout_display_legacy_pre_uegone"
+			],
+			"custom_commands": []
+		},
+		"BP/items/loadout_3_legacy_uegone.json": {
+			"identifiers": [
+				"sm:loadout_display_legacy_uegone"
+			],
+			"custom_commands": []
+		},
+		"BP/items/loadout_3_legacy_uegplus.json": {
+			"identifiers": [
+				"sm:loadout_display_legacy_uegplus"
+			],
+			"custom_commands": []
+		},
+		"BP/items/loadout_3_melee.json": {
+			"identifiers": [
+				"sm:loadout_display_melee"
+			],
+			"custom_commands": []
+		},
+		"BP/items/loadout_3_mission.json": {
+			"identifiers": [
+				"sm:loadout_display_mission"
+			],
+			"custom_commands": []
+		},
+		"BP/items/loadout_3_purchasables.json": {
+			"identifiers": [
+				"sm:loadout_3_purchasables"
+			],
+			"custom_commands": []
+		},
+		"BP/items/loadout_3_ranged.json": {
+			"identifiers": [
+				"sm:loadout_display_ranged"
+			],
+			"custom_commands": []
+		},
+		"BP/items/loadout_3_secrets.json": {
+			"identifiers": [
+				"sm:loadout_3_secrets"
+			],
+			"custom_commands": []
+		},
+		"BP/items/loadout_3_spleef.json": {
+			"identifiers": [
+				"sm:loadout_display_spleef"
+			],
+			"custom_commands": []
+		},
+		"BP/items/skins/rpg/robot_thrusters.json": {
+			"identifiers": [
+				"sm:demon_wings"
+			],
+			"custom_commands": []
+		},
+		"BP/items/skins/rpg/demon.json": {
+			"identifiers": [
+				"sm:spectral_skin"
+			],
+			"custom_commands": []
+		},
+		"BP/items/skins/rpg/demon_wings.json": {
+			"identifiers": [
+				"sm:spectral_rockets"
+			],
+			"custom_commands": []
+		},
+		"BP/items/skip_tutorial.json": {
+			"identifiers": [
+				"sm:skip_tutorial"
+			],
+			"custom_commands": []
+		},
+		"BP/items/team_indicator_nu.json": {
+			"identifiers": [
+				"sm:team_indicator_nu"
+			],
+			"custom_commands": []
+		},
+		"BP/items/team_indicator_none.json": {
+			"identifiers": [
+				"sm:team_indicator_none"
+			],
+			"custom_commands": []
+		},
+		"BP/items/team_indicator_lambda.json": {
+			"identifiers": [
+				"sm:team_indicator_lambda"
+			],
+			"custom_commands": []
+		},
+		"BP/items/heavy_weapons_system.json": {
+			"identifiers": [
+				"sm:heavy_weapons_system"
+			],
+			"custom_commands": []
+		},
+		"BP/items/loadout_1_default_display.json": {
+			"identifiers": [
+				"sm:loadout_1_default_display"
+			],
+			"custom_commands": []
+		},
+		"BP/items/loadout_1_ranged_display.json": {
+			"identifiers": [
+				"sm:loadout_1_ranged_display"
+			],
+			"custom_commands": []
+		},
+		"BP/items/loadout_1_melee_display.json": {
+			"identifiers": [
+				"sm:loadout_1_melee_display"
+			],
+			"custom_commands": []
+		},
+		"BP/items/loadout_1_secrets_display.json": {
+			"identifiers": [
+				"sm:loadout_1_secrets_display"
+			],
+			"custom_commands": []
+		},
+		"BP/items/loadout_1_spleef_display.json": {
+			"identifiers": [
+				"sm:loadout_1_spleef_display"
+			],
+			"custom_commands": []
+		},
+		"BP/items/skins/rpg/spectral.json": {
+			"identifiers": [
+				"sm:spectral_skin"
+			],
+			"custom_commands": []
+		},
+		"BP/items/skins/rpg/spectral_rockets.json": {
+			"identifiers": [
+				"sm:spectral_rockets"
+			],
+			"custom_commands": []
+		},
+		"BP/items/skins/missions/sight_goddess.json": {
+			"identifiers": [
+				"sm:sight_goddess"
+			],
+			"custom_commands": []
+		},
+		"BP/items/skins/missions/sight_goddess_wins.json": {
+			"identifiers": [
+				"sm:sight_goddess_wings"
+			],
+			"custom_commands": []
+		},
+		"BP/items/skins/missions/lambda_goddess.json": {
+			"identifiers": [
+				"sm:lambda_goddess"
+			],
+			"custom_commands": []
+		},
+		"BP/items/sight_blade.json": {
+			"identifiers": [
+				"sm:sight_blade"
+			],
+			"custom_commands": []
+		},
+		"BP/items/test_shotgun.json": {
+			"identifiers": [
+				"sm:test_shotgun"
+			],
+			"custom_commands": []
+		},
+		"BP/items/skins/default/scizorm.json": {
+			"identifiers": [
+				"sm:scizorm"
+			],
+			"custom_commands": []
+		},
+		"BP/items/category_left.json": {
+			"identifiers": [
+				"sm:category_left"
+			],
+			"custom_commands": []
+		},
+		"BP/items/category_right.json": {
+			"identifiers": [
+				"sm:category_right"
+			],
+			"custom_commands": []
+		},
+		"BP/items/left.json": {
+			"identifiers": [
+				"sm:left"
+			],
+			"custom_commands": []
+		},
+		"BP/items/right.json": {
+			"identifiers": [
+				"sm:right"
+			],
+			"custom_commands": []
+		},
+		"BP/items/menu_left.json": {
+			"identifiers": [
+				"sm:select_skin"
+			],
+			"custom_commands": []
+		},
+		"BP/items/menu_right.json": {
+			"identifiers": [
+				"sm:menu_right"
+			],
+			"custom_commands": []
+		},
+		"BP/items/shield_frame2.json": {
+			"identifiers": [
+				"sm:shield_frame2"
+			],
+			"custom_commands": []
+		},
+		"BP/items/shield_idle.json": {
+			"identifiers": [
+				"sm:shield_idle"
+			],
+			"custom_commands": []
+		},
+		"BP/items/shield_frame1.json": {
+			"identifiers": [
+				"sm:shield_frame1"
+			],
+			"custom_commands": []
+		},
+		"BP/items/locked_item.json": {
+			"identifiers": [
+				"sm:locked_item"
+			],
+			"custom_commands": []
+		},
+		"BP/items/select_skin.json": {
+			"identifiers": [
+				"sm:exit_menu"
+			],
+			"custom_commands": []
+		},
+		"BP/items/exit_menu.json": {
+			"identifiers": [
+				"sm:exit_menu"
+			],
+			"custom_commands": []
+		},
+		"BP/items/rotate.json": {
+			"identifiers": [
+				"sm:rotate"
+			],
+			"custom_commands": []
+		},
+		"BP/items/parry_fist.json": {
+			"identifiers": [
+				"sm:parry_fist"
+			],
+			"custom_commands": []
+		},
+		"BP/items/loadout_parry_fist.json": {
+			"identifiers": [
+				"sm:parry_fist"
+			],
+			"custom_commands": []
+		},
+		"BP/items/skins/default/acid_specialist.json": {
+			"identifiers": [
+				"sm:golden_striker"
+			],
+			"custom_commands": []
+		},
+		"BP/items/skins/default/black_jackal_skin.json": {
+			"identifiers": [
+				"sm:black_jackal_skin"
+			],
+			"custom_commands": []
+		},
+		"BP/items/emp_trap.json": {
+			"identifiers": [
+				"sm:emp_trap"
+			],
+			"custom_commands": []
+		},
+		"BP/items/traps/emp_trap.json": {
+			"identifiers": [
+				"sm:emp_trap"
+			],
+			"custom_commands": []
+		},
+		"BP/items/display_boat.json": {
+			"identifiers": [
+				"sm:display_boat"
+			],
+			"custom_commands": []
+		},
+		"BP/items/loadout_display_custom.json": {
+			"identifiers": [
+				"sm:loadout_display_custom"
+			],
+			"custom_commands": []
+		},
+		"BP/items/loadout_display_default.json": {
+			"identifiers": [
+				"sm:loadout_display_default"
+			],
+			"custom_commands": []
+		},
+		"BP/items/loadout_display_legacy_pre_uegone.json": {
+			"identifiers": [
+				"sm:loadout_display_legacy_pre_uegone"
+			],
+			"custom_commands": []
+		},
+		"BP/items/loadout_display_legacy_uegone.json": {
+			"identifiers": [
+				"sm:loadout_display_legacy_uegone"
+			],
+			"custom_commands": []
+		},
+		"BP/items/loadout_display_legacy_uegplus.json": {
+			"identifiers": [
+				"sm:loadout_display_legacy_uegplus"
+			],
+			"custom_commands": []
+		},
+		"BP/items/loadout_display_melee.json": {
+			"identifiers": [
+				"sm:loadout_display_melee"
+			],
+			"custom_commands": []
+		},
+		"BP/items/loadout_display_mission.json": {
+			"identifiers": [
+				"sm:loadout_display_mission"
+			],
+			"custom_commands": []
+		},
+		"BP/items/loadout_display_ranged.json": {
+			"identifiers": [
+				"sm:loadout_display_ranged"
+			],
+			"custom_commands": []
+		},
+		"BP/items/loadout_display_spleef.json": {
+			"identifiers": [
+				"sm:loadout_display_spleef"
+			],
+			"custom_commands": []
+		},
+		"BP/items/skins/default/baby.json": {
+			"identifiers": [
+				"sm:baby"
+			],
+			"custom_commands": []
+		},
+		"BP/items/skins/default/golden_striker.json": {
+			"identifiers": [
+				"sm:golden_striker"
+			],
+			"custom_commands": []
+		},
+		"BP/items/ranged/gob_goo_cannon.json": {
+			"identifiers": [
+				"sm:gob_goo_cannon"
+			],
+			"custom_commands": []
+		},
+		"BP/items/ranged/charged_bolt_rifle.json": {
+			"identifiers": [
+				"sm:charged_bolt_rifle"
+			],
+			"custom_commands": []
+		},
+		"BP/items/heavenpiercer.json": {
+			"identifiers": [
+				"sm:heavenpiercer"
+			],
+			"custom_commands": []
+		},
+		"BP/items/melee/heavenpiercer.json": {
+			"identifiers": [
+				"sm:heavenpiercer"
+			],
+			"custom_commands": []
+		},
+		"BP/items/loadout_editor/loadout_440.json": {
+			"identifiers": [
+				"sm:loadout_sound_blade_1"
+			],
+			"custom_commands": []
+		},
+		"BP/items/true_holic.json": {
+			"identifiers": [
+				"sm:true_holic"
+			],
+			"custom_commands": []
+		},
+		"BP/items/smorgler.json": {
+			"identifiers": [
+				"sm:smorgler"
+			],
+			"custom_commands": []
+		},
+		"BP/items/icarus.json": {
+			"identifiers": [
+				"sm:icarus"
+			],
+			"custom_commands": []
+		},
+		"BP/items/icarus_temp1.json": {
+			"identifiers": [
+				"sm:icarus_temp1"
+			],
+			"custom_commands": []
+		},
+		"BP/items/icarus_temp2.json": {
+			"identifiers": [
+				"sm:icarus_temp2"
+			],
+			"custom_commands": []
+		},
+		"BP/items/icarus_temp3.json": {
+			"identifiers": [
+				"sm:icarus_temp3"
+			],
+			"custom_commands": []
+		},
+		"BP/items/icarus_temp4.json": {
+			"identifiers": [
+				"sm:icarus_temp4"
+			],
+			"custom_commands": []
+		},
+		"BP/items/icarus_temp5.json": {
+			"identifiers": [
+				"sm:icarus_temp5"
+			],
+			"custom_commands": []
+		},
+		"BP/items/icarus_temp6.json": {
+			"identifiers": [
+				"sm:icarus_temp6"
+			],
+			"custom_commands": []
+		},
+		"BP/items/icarus_temp7.json": {
+			"identifiers": [
+				"sm:icarus_temp7"
+			],
+			"custom_commands": []
+		},
+		"BP/items/icarus_temp8.json": {
+			"identifiers": [
+				"sm:icarus_temp8"
+			],
+			"custom_commands": []
+		},
+		"BP/items/icarus_temp9.json": {
+			"identifiers": [
+				"sm:icarus_temp9"
+			],
+			"custom_commands": []
+		},
+		"BP/items/icarus_temp10.json": {
+			"identifiers": [
+				"sm:icarus_temp10"
+			],
+			"custom_commands": []
+		},
+		"BP/items/archerfish.json": {
+			"identifiers": [
+				"sm:archerfish"
+			],
+			"custom_commands": []
+		},
+		"BP/items/melee/true_holic.json": {
+			"identifiers": [
+				"sm:true_holic"
+			],
+			"custom_commands": []
+		},
+		"BP/items/misc/thruster_status_none.json": {
+			"identifiers": [
+				"sm:thruster_status_none"
+			],
+			"custom_commands": []
+		},
+		"BP/items/ranged/vulcan_cannon.json": {
+			"identifiers": [
+				"sm:vulcan_cannon"
+			],
+			"custom_commands": []
+		},
+		"BP/items/skins/default/stone.json": {
+			"identifiers": [
+				"sm:stone_skin"
+			],
+			"custom_commands": []
+		},
+		"BP/items/dash_effect.json": {
+			"identifiers": [
+				"sm:dash_effect"
+			],
+			"custom_commands": []
+		},
+		"BP/items/traps/landmine_ver_lambda.json": {
+			"identifiers": [
+				"sm:landmine_ver_lambda"
+			],
+			"custom_commands": []
+		},
+		"BP/items/traps/remote_activator_ver_nu.json": {
+			"identifiers": [
+				"sm:remote_activator_ver_nu"
+			],
+			"custom_commands": []
+		},
+		"BP/items/traps/landmine_ver_nu.json": {
+			"identifiers": [
+				"sm:landmine_ver_nu"
+			],
+			"custom_commands": []
+		},
+		"BP/items/purchase.json": {
+			"identifiers": [
+				"sm:purchase"
+			],
+			"custom_commands": []
+		}
+	},
+	"attachable": {
+		"RP/attachables/race_not_selected.json": {
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			]
+		},
+		"RP/attachables/race_info_template.json": {
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			]
+		},
+		"RP/attachables/race_info_demon.json": {
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			]
+		},
+		"RP/attachables/race_info_fairy.json": {
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			]
+		},
+		"RP/attachables/race_info_robot.json": {
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			]
+		},
+		"RP/attachables/race_info_orc.json": {
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			]
+		},
+		"RP/attachables/race_info_spectral.json": {
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			]
+		},
+		"RP/attachables/race_info_shadow.json": {
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			]
+		},
+		"RP/attachables/select_a_race.json": {
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			]
+		},
+		"RP/attachables/default_skin.json": {
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			]
+		},
+		"RP/attachables/default_skin_nu.json": {
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			]
+		},
+		"RP/attachables/default_skin_lambda.json": {
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			]
+		},
+		"RP/attachables/lambda_goddess.json": {
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			]
+		},
+		"RP/attachables/skins/sound_goddess/nu_goddess.json": {
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			]
+		},
+		"RP/attachables/skins/sound_goddess/sound_goddess.json": {
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			]
+		},
+		"RP/attachables/skins/sound_goddess/sound_goddess_wings.json": {
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			]
+		},
+		"RP/attachables/skins/default/default_skin_rockets.json": {
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			]
+		},
+		"RP/attachables/skins/robot/robot.json": {
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			]
+		},
+		"RP/attachables/skins/rpg/robot_thrusters.json": {
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			]
+		},
+		"RP/attachables/skins/rpg/robot.json": {
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			]
+		},
+		"RP/attachables/skins/rpg/demon.json": {
+			"texture_references": [
+				"default",
+				"frame_2",
+				"frame_3",
+				"frame_4"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			]
+		},
+		"RP/attachables/skins/rpg/demon_wings.json": {
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			]
+		},
+		"RP/attachables/skins/default/team_nu_indicator.json": {
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			]
+		},
+		"RP/attachables/skins/default/team_none_indicator.json": {
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			]
+		},
+		"RP/attachables/skins/default/team_lambda_indicator.json": {
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			]
+		},
+		"RP/attachables/skins/default/team_all_indicator.json": {
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			]
+		},
+		"RP/attachables/skins/default/heavy_weapons_system.json": {
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			]
+		},
+		"RP/attachables/skins/sound_goddess/sight_goddess.json": {
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			]
+		},
+		"RP/attachables/skins/sound_goddess/sight_goddess_wings.json": {
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			]
+		},
+		"RP/attachables/skins/rpg/spectral.json": {
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			]
+		},
+		"RP/attachables/skins/rpg/spectral_wings.json": {
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			]
+		},
+		"RP/attachables/skins/default/scizorm.json": {
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			]
+		},
+		"RP/attachables/skins/default/default_skin.json": {
+			"texture_references": [
+				"default",
+				"frame_2",
+				"frame_3",
+				"frame_4",
+				"none"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			]
+		},
+		"RP/attachables/skins/sound_goddess/lambda_goddess.json": {
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			]
+		},
+		"RP/attachables/skins/default/acid_specialist_skin.json": {
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			]
+		},
+		"RP/attachables/skins/default/black_jackal_skin.json": {
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			]
+		},
+		"RP/attachables/skins/default/baby.json": {
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			]
+		},
+		"RP/attachables/skins/default/golden_striker.json": {
+			"texture_references": [
+				"default",
+				"frame_2",
+				"frame_3",
+				"frame_4"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			]
+		},
+		"RP/attachables/vulcan_cannon.json": {
+			"texture_references": [
+				"default",
+				"heatmeter_1",
+				"heatmeter_2",
+				"heatmeter_3",
+				"heatmeter_4",
+				"heatmeter_5",
+				"heatmeter_6",
+				"heatmeter_7",
+				"heatmeter_8",
+				"heatmeter_9",
+				"heatmeter_10",
+				"heatmeter_flash"
+			],
+			"material_references": [
+				"default",
+				"enchanted"
+			],
+			"geometry_references": [
+				"default"
+			]
+		},
+		"RP/attachables/parry_fist.json": {
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default",
+				"enchanted"
+			],
+			"geometry_references": [
+				"default"
+			]
+		},
+		"RP/attachables/repulsion_blade.json": {
+			"texture_references": [
+				"default",
+				"inactive",
+				"preparing_1",
+				"preparing_2",
+				"frame_5",
+				"frame_6",
+				"frame_7",
+				"frame_8"
+			],
+			"material_references": [
+				"default",
+				"enchanted"
+			],
+			"geometry_references": [
+				"default"
+			]
+		},
+		"RP/attachables/baby_staff.json": {
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default",
+				"enchanted"
+			],
+			"geometry_references": [
+				"default"
+			]
+		},
+		"RP/attachables/icarus.json": {
+			"texture_references": [
+				"default",
+				"heatmeter_1",
+				"heatmeter_2",
+				"heatmeter_3",
+				"heatmeter_4",
+				"heatmeter_5",
+				"heatmeter_6",
+				"heatmeter_7",
+				"heatmeter_8",
+				"heatmeter_9",
+				"heatmeter_10",
+				"heatmeter_flash"
+			],
+			"material_references": [
+				"default",
+				"enchanted"
+			],
+			"geometry_references": [
+				"default"
+			]
+		},
+		"RP/attachables/smorgler.json": {
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default",
+				"enchanted"
+			],
+			"geometry_references": [
+				"default"
+			]
+		},
+		"RP/attachables/gob_goo_cannon.json": {
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default",
+				"enchanted"
+			],
+			"geometry_references": [
+				"default"
+			]
+		},
+		"RP/attachables/archerfish.json": {
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default",
+				"enchanted"
+			],
+			"geometry_references": [
+				"default"
+			]
+		},
+		"RP/attachables/charged_bolt_rifle.json": {
+			"texture_references": [
+				"default",
+				"inactive",
+				"frame_3",
+				"frame_4",
+				"frame_5",
+				"frame_6",
+				"frame_7",
+				"frame_8"
+			],
+			"material_references": [
+				"default",
+				"enchanted"
+			],
+			"geometry_references": [
+				"default"
+			]
+		},
+		"RP/attachables/skins/default/stone_skin.json": {
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			]
+		},
+		"RP/attachables/skins/default/dash_effect.json": {
+			"texture_references": [
+				"default",
+				"frame_2",
+				"frame_3",
+				"frame_4",
+				"none"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			]
+		}
+	},
+	"render_controller": {
+		"RP/render_controllers/darkless.json": {
+			"ids": [
+				"controller.render.skin_animations"
+			]
+		},
+		"RP/render_controllers/map_preview_slot_1.json": {
+			"ids": [
+				"controller.render.terminal_buy_arena"
+			]
+		},
+		"RP/render_controllers/terminals.json": {
+			"ids": [
+				"controller.render.terminals"
+			]
+		},
+		"RP/render_controllers/snowball.render_controllers.json": {
+			"ids": [
+				"controller.render.charged_orb"
+			]
+		},
+		"RP/render_controllers/terminal_buy_arena.json": {
+			"ids": [
+				"controller.render.terminal_buy_arena"
+			]
+		},
+		"RP/render_controllers/nolighting.json": {
+			"ids": [
+				"controller.render.nolighting"
+			]
+		},
+		"RP/render_controllers/player.render_controllers.json": {
+			"ids": [
+				"controller.render.player.first_person",
+				"controller.render.player.third_person",
+				"controller.render.player.map"
+			]
+		},
+		"RP/render_controllers/skin_animations.json": {
+			"ids": [
+				"controller.render.robot_frames"
+			]
+		},
+		"RP/render_controllers/vulcan_cannon.json": {
+			"ids": [
+				"controller.render.icarus"
+			]
+		},
+		"RP/render_controllers/parry_fist.json": {
+			"ids": [
+				"controller.render.laptop_1through9"
+			]
+		},
+		"RP/render_controllers/interact_test.json": {
+			"ids": [
+				"controller.render.interact_test"
+			]
+		},
+		"RP/render_controllers/laptop_1through9.json": {
+			"ids": [
+				"controller.render.laptop_1through9"
+			]
+		},
+		"RP/render_controllers/landmine.json": {
+			"ids": [
+				"controller.render.landmine"
+			]
+		},
+		"RP/render_controllers/charged_orb.render_controllers.json": {
+			"ids": [
+				"controller.render.charged_orb"
+			]
+		},
+		"RP/render_controllers/icarus.json": {
+			"ids": [
+				"controller.render.arenainfo"
+			]
+		},
+		"RP/render_controllers/arenainfo.json": {
+			"ids": [
+				"controller.render.arenainfo"
+			]
+		},
+		"RP/render_controllers/metro_sign.json": {
+			"ids": [
+				"controller.render.metro_sign"
+			]
+		},
+		"RP/render_controllers/votes_controller.json": {
+			"ids": [
+				"controller.render.votes_controller"
+			]
+		},
+		"RP/render_controllers/scizorm_skin.json": {
+			"ids": [
+				"controller.render.scizorm_skin",
+				"controller.render.example.outline"
+			]
+		},
+		"RP/render_controllers/team_indicator.json": {
+			"ids": [
+				"controller.render.team_indicator"
+			]
+		},
+		"RP/render_controllers/guardian.render_controllers.json": {
+			"ids": [
+				"controller.render.guardian"
+			]
+		},
+		"RP/render_controllers/armor.render_controllers.json": {
+			"ids": [
+				"controller.render.armor"
+			]
+		},
+		"RP/render_controllers/glowing.json": {
+			"ids": [
+				"controller.render.glowing"
+			]
+		},
+		"RP/render_controllers/guardian_old.json": {
+			"ids": [
+				"controller.render.guardian_old"
+			]
+		},
+		"RP/render_controllers/dash_animations.json": {
+			"ids": [
+				"controller.render.skin_animations"
+			]
+		},
+		"RP/render_controllers/robot_frames.json": {
+			"ids": [
+				"controller.render.robot_frames"
+			]
+		}
+	},
+	"animation_controller": {
+		"BP/animation_controllers/ueg_cyber_anims_player.json": {
+			"ids": [
+				"controller.animation.crouchdetect",
+				"controller.animation.xpdetect",
+				"controller.animation.parrying",
+				"controller.animation.blindEffect",
+				"controller.animation.boat_detect",
+				"controller.animation.fall_triggers",
+				"controller.animation.meleeDetect"
+			],
+			"custom_commands": []
+		},
+		"BP/animation_controllers/bridge/commands_player.json": {
+			"ids": [
+				"controller.animation.bridge_player.execute_commands"
+			],
+			"custom_commands": []
+		},
+		"BP/animation_controllers/player_variants.json": {
+			"ids": [
+				"controller.animation.player_variants"
+			],
+			"custom_commands": []
+		},
+		"BP/animation_controllers/bridge/commands_pregame_timer.json": {
+			"ids": [
+				"controller.animation.bridge_pregame_timer.execute_commands"
+			],
+			"custom_commands": []
+		},
+		"BP/animation_controllers/gob_goo_blast_test.json": {
+			"ids": [
+				"controller.animation.gob_test"
+			],
+			"custom_commands": []
+		},
+		"BP/animation_controllers/landmine.json": {
+			"ids": [
+				"controller.animation.landmine"
+			],
+			"custom_commands": []
+		},
+		"BP/animation_controllers/bridge/commands_explosion.json": {
+			"ids": [
+				"controller.animation.bridge_explosion.execute_commands"
+			],
+			"custom_commands": []
+		}
+	},
+	"client_entity": {
+		"RP/entity/teleporter_object.json": {
+			"identifiers": [
+				"sm:teleporter_object"
+			],
+			"particle_references": [],
+			"animation_references": [],
+			"sound_references": [],
+			"texture_references": [],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/charged_bolt.json": {
+			"identifiers": [
+				"sm:charged_bolt"
+			],
+			"particle_references": [],
+			"animation_references": [
+				"move"
+			],
+			"sound_references": [],
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/arrow.entity.json": {
+			"identifiers": [
+				"minecraft:arrow"
+			],
+			"particle_references": [],
+			"animation_references": [
+				"move"
+			],
+			"sound_references": [],
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/thrown_trident.entity.json": {
+			"identifiers": [
+				"minecraft:thrown_trident"
+			],
+			"particle_references": [],
+			"animation_references": [],
+			"sound_references": [],
+			"texture_references": [
+				"default",
+				"loyalty_rope"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/landmine_ver_nu.json": {
+			"identifiers": [
+				"sm:landmine_ver_nu"
+			],
+			"particle_references": [],
+			"animation_references": [
+				"explode",
+				"fling"
+			],
+			"sound_references": [],
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default",
+				"emissive"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/landmine_ver_lambda.json": {
+			"identifiers": [
+				"sm:landmine_ver_lambda"
+			],
+			"particle_references": [],
+			"animation_references": [
+				"explode",
+				"fling"
+			],
+			"sound_references": [],
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default",
+				"emissive"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/map_preview_1.json": {
+			"identifiers": [
+				"sm:map_preview_1"
+			],
+			"particle_references": [],
+			"animation_references": [],
+			"sound_references": [],
+			"texture_references": [
+				"default",
+				"blackwhite_1",
+				"nether_2",
+				"space_3",
+				"western_4",
+				"stronghold_5",
+				"aquatic_6",
+				"synthesis_7",
+				"neonether_8",
+				"redstone_9",
+				"ssueg_10",
+				"bastion_11",
+				"maze_12",
+				"void_13"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default",
+				"blackwhite_1",
+				"nether_2",
+				"space_3",
+				"western_4",
+				"stronghold_5",
+				"aquatic_6",
+				"synthesis_7",
+				"neonether_8",
+				"redstone_9",
+				"ssueg_10",
+				"bastion_11",
+				"maze_12",
+				"void_13"
+			],
+			"geometry_identifiers": [
+				"default",
+				"blackwhite_1",
+				"nether_2",
+				"space_3",
+				"western_4",
+				"stronghold_5",
+				"aquatic_6",
+				"synthesis_7",
+				"neonether_8",
+				"redstone_9",
+				"ssueg_10",
+				"bastion_11",
+				"maze_12",
+				"void_13"
+			]
+		},
+		"RP/entity/salmon.json": {
+			"identifiers": [
+				"minecraft:salmon"
+			],
+			"particle_references": [],
+			"animation_references": [
+				"flop",
+				"swim"
+			],
+			"sound_references": [],
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/big_joe.json": {
+			"identifiers": [
+				"sm:big_joe"
+			],
+			"particle_references": [],
+			"animation_references": [],
+			"sound_references": [],
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/terminal_test.json": {
+			"identifiers": [
+				"sm:terminal_save"
+			],
+			"particle_references": [],
+			"animation_references": [],
+			"sound_references": [],
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/terminal_testR.json": {
+			"identifiers": [
+				"sm:terminal_testl"
+			],
+			"particle_references": [],
+			"animation_references": [],
+			"sound_references": [],
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/terminal_testL.json": {
+			"identifiers": [
+				"sm:terminal_cyclel"
+			],
+			"particle_references": [],
+			"animation_references": [],
+			"sound_references": [],
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/terminal_nu.json": {
+			"identifiers": [
+				"sm:terminal_nu"
+			],
+			"particle_references": [],
+			"animation_references": [],
+			"sound_references": [],
+			"texture_references": [
+				"default",
+				"effect2",
+				"effect3",
+				"effect4"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/terminal_lambda.json": {
+			"identifiers": [
+				"sm:terminal_lambda"
+			],
+			"particle_references": [],
+			"animation_references": [],
+			"sound_references": [],
+			"texture_references": [
+				"default",
+				"effect2"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/terminal_leave_teams.json": {
+			"identifiers": [
+				"sm:terminal_leave_teams"
+			],
+			"particle_references": [],
+			"animation_references": [],
+			"sound_references": [],
+			"texture_references": [
+				"default",
+				"effect2"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/gob_dog_goblin.json": {
+			"identifiers": [
+				"sm:cheeseburger_freedom_man"
+			],
+			"particle_references": [],
+			"animation_references": [],
+			"sound_references": [],
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/dialogue_npcs/dialogue_template.json": {
+			"identifiers": [
+				"sm:gob_dog_goblin_dialogue"
+			],
+			"particle_references": [],
+			"animation_references": [],
+			"sound_references": [],
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/dialogue_npcs/gob_dog_goblin_dialogue.json": {
+			"identifiers": [
+				"sm:cheeseburger_freedom_man_dialogue"
+			],
+			"particle_references": [],
+			"animation_references": [],
+			"sound_references": [],
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/cheeseburger_freedom_man.json": {
+			"identifiers": [
+				"sm:cheeseburger_freedom_man"
+			],
+			"particle_references": [],
+			"animation_references": [
+				"general",
+				"look_at_target",
+				"move",
+				"baby_transform"
+			],
+			"sound_references": [],
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/dialogue_npcs/cheeseburger_freedom_man_dialogue.json": {
+			"identifiers": [
+				"sm:team_lambda_dialogue"
+			],
+			"particle_references": [],
+			"animation_references": [],
+			"sound_references": [],
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/terminal_info.json": {
+			"identifiers": [
+				"sm:terminal_info"
+			],
+			"particle_references": [],
+			"animation_references": [],
+			"sound_references": [],
+			"texture_references": [
+				"default",
+				"effect2"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/player.entity.json": {
+			"identifiers": [
+				"minecraft:player"
+			],
+			"particle_references": [],
+			"animation_references": [
+				"root",
+				"base_controller",
+				"hudplayer",
+				"humanoid_base_pose",
+				"look_at_target",
+				"look_at_target_ui",
+				"look_at_target_default",
+				"look_at_target_gliding",
+				"look_at_target_swimming",
+				"look_at_target_inverted",
+				"cape",
+				"move.arms",
+				"move.legs",
+				"swimming",
+				"swimming.legs",
+				"riding.arms",
+				"riding.legs",
+				"holding",
+				"brandish_spear",
+				"holding_spyglass",
+				"charging",
+				"attack.positions",
+				"attack.rotations",
+				"sneaking",
+				"bob",
+				"damage_nearby_mobs",
+				"bow_and_arrow",
+				"use_item_progress",
+				"skeleton_attack",
+				"sleeping",
+				"first_person_base_pose",
+				"first_person_empty_hand",
+				"first_person_swap_item",
+				"first_person_shield_block",
+				"first_person_attack_controller",
+				"first_person_attack_rotation",
+				"first_person_vr_attack_rotation",
+				"first_person_walk",
+				"first_person_map_controller",
+				"first_person_map_hold",
+				"first_person_map_hold_attack",
+				"first_person_map_hold_off_hand",
+				"first_person_map_hold_main_hand",
+				"first_person_crossbow_equipped",
+				"third_person_crossbow_equipped",
+				"third_person_bow_equipped",
+				"crossbow_hold",
+				"crossbow_controller",
+				"shield_block_main_hand",
+				"shield_block_off_hand",
+				"blink",
+				"hold_vulcan_cannon",
+				"weapon_anims",
+				"fire_vulcan_cannon",
+				"fire_weapon_controller"
+			],
+			"sound_references": [],
+			"texture_references": [
+				"default",
+				"cape",
+				"none"
+			],
+			"material_references": [
+				"default",
+				"cape",
+				"animated"
+			],
+			"geometry_references": [
+				"default",
+				"cape"
+			],
+			"geometry_identifiers": [
+				"default",
+				"cape"
+			]
+		},
+		"RP/entity/terminal_save.json": {
+			"identifiers": [
+				"sm:terminal_save"
+			],
+			"particle_references": [],
+			"animation_references": [],
+			"sound_references": [],
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/skin_preview_npc_rocket.json": {
+			"identifiers": [
+				"sm:skin_preview_npc_rocket"
+			],
+			"particle_references": [],
+			"animation_references": [],
+			"sound_references": [],
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/skin_preview_npc.json": {
+			"identifiers": [
+				"sm:skin_preview_npc"
+			],
+			"particle_references": [],
+			"animation_references": [],
+			"sound_references": [],
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/gob_goo_blast.json": {
+			"identifiers": [
+				"sm:icarus_blast"
+			],
+			"particle_references": [],
+			"animation_references": [
+				"flying"
+			],
+			"sound_references": [],
+			"texture_references": [
+				"goop",
+				"ice",
+				"fire"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/emp_nu.json": {
+			"identifiers": [
+				"sm:emp_trap_lambda"
+			],
+			"particle_references": [],
+			"animation_references": [
+				"emp"
+			],
+			"sound_references": [],
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/slate_displaymodel.json": {
+			"identifiers": [
+				"sm:slate_displaymodel"
+			],
+			"particle_references": [],
+			"animation_references": [],
+			"sound_references": [],
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/terminal_cycleL.json": {
+			"identifiers": [
+				"sm:terminal_cyclel"
+			],
+			"particle_references": [],
+			"animation_references": [],
+			"sound_references": [],
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/terminal_cycleR.json": {
+			"identifiers": [
+				"sm:terminal_cyclel"
+			],
+			"particle_references": [],
+			"animation_references": [],
+			"sound_references": [],
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/terminal_buy_arena.json": {
+			"identifiers": [
+				"sm:terminal_buy_arena"
+			],
+			"particle_references": [],
+			"animation_references": [],
+			"sound_references": [],
+			"texture_references": [
+				"default",
+				"purchased",
+				"error",
+				"unpurchasable"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/floating_text.json": {
+			"identifiers": [
+				"sm:floating_text"
+			],
+			"particle_references": [],
+			"animation_references": [],
+			"sound_references": [],
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/display_case_gold.json": {
+			"identifiers": [
+				"sm:display_case_gold"
+			],
+			"particle_references": [],
+			"animation_references": [],
+			"sound_references": [],
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/marque.json": {
+			"identifiers": [
+				"sm:marque"
+			],
+			"particle_references": [],
+			"animation_references": [
+				"look_at_target"
+			],
+			"sound_references": [],
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/explosion_display.json": {
+			"identifiers": [
+				"sm:chargedbolt_fx"
+			],
+			"particle_references": [],
+			"animation_references": [
+				"scale"
+			],
+			"sound_references": [],
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/explosion_display_parry.json": {
+			"identifiers": [
+				"sm:explosion_display_rocketjump"
+			],
+			"particle_references": [],
+			"animation_references": [
+				"scale"
+			],
+			"sound_references": [],
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/explosion_display_rocketjump.json": {
+			"identifiers": [
+				"sm:explosion_display_rocketjump"
+			],
+			"particle_references": [],
+			"animation_references": [
+				"scale"
+			],
+			"sound_references": [],
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/emp_lambda.json": {
+			"identifiers": [
+				"sm:emp_trap_lambda"
+			],
+			"particle_references": [],
+			"animation_references": [
+				"emp"
+			],
+			"sound_references": [],
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/dialogue_npcs/team_nu_dialogue.json": {
+			"identifiers": [
+				"sm:team_lambda_dialogue"
+			],
+			"particle_references": [],
+			"animation_references": [],
+			"sound_references": [],
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/dialogue_npcs/team_lambda_dialogue.json": {
+			"identifiers": [
+				"sm:team_lambda_dialogue"
+			],
+			"particle_references": [],
+			"animation_references": [],
+			"sound_references": [],
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/interact_test.json": {
+			"identifiers": [
+				"sm:interact_test"
+			],
+			"particle_references": [],
+			"animation_references": [],
+			"sound_references": [],
+			"texture_references": [
+				"default",
+				"layer2"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/laptop_1through9.json": {
+			"identifiers": [
+				"sm:laptop"
+			],
+			"particle_references": [],
+			"animation_references": [],
+			"sound_references": [],
+			"texture_references": [
+				"default",
+				"frame_one",
+				"frame_two",
+				"frame_three",
+				"frame_four",
+				"frame_five",
+				"frame_six",
+				"frame_seven",
+				"frame_eight",
+				"frame_nine",
+				"frame_zero",
+				"frame_enabled",
+				"frame_disabled",
+				"frame_preset",
+				"frame_ten",
+				"locked",
+				"frame_dialogue"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/vinylrecord.json": {
+			"identifiers": [
+				"sm:vinylrecord"
+			],
+			"particle_references": [],
+			"animation_references": [],
+			"sound_references": [],
+			"texture_references": [
+				"default",
+				"frame_one",
+				"frame_two",
+				"frame_three",
+				"frame_four",
+				"frame_five",
+				"frame_six",
+				"frame_seven",
+				"frame_eight",
+				"frame_nine",
+				"frame_zero",
+				"frame_enabled",
+				"frame_disabled",
+				"frame_preset",
+				"frame_ten",
+				"frame_dialogue",
+				"locked"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/pointingtest.json": {
+			"identifiers": [
+				"sm:pointingtest"
+			],
+			"particle_references": [],
+			"animation_references": [],
+			"sound_references": [],
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/explosion_display_landmine.json": {
+			"identifiers": [
+				"sm:explosion_green"
+			],
+			"particle_references": [],
+			"animation_references": [
+				"scale"
+			],
+			"sound_references": [],
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/explosion_display_fire.json": {
+			"identifiers": [
+				"sm:explosion_display_fish"
+			],
+			"particle_references": [],
+			"animation_references": [
+				"scale"
+			],
+			"sound_references": [],
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/icarus_blast.json": {
+			"identifiers": [
+				"minecraft:small_fireball"
+			],
+			"particle_references": [],
+			"animation_references": [],
+			"sound_references": [],
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/charged_orb.json": {
+			"identifiers": [
+				"minecraft:egg"
+			],
+			"particle_references": [],
+			"animation_references": [],
+			"sound_references": [],
+			"texture_references": [
+				"default",
+				"icarus"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/explosion_display_fish.json": {
+			"identifiers": [
+				"sm:explosion_display_fish"
+			],
+			"particle_references": [],
+			"animation_references": [
+				"scale"
+			],
+			"sound_references": [],
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/chargedbolt_fx.json": {
+			"identifiers": [
+				"sm:chargedbolt_fx"
+			],
+			"particle_references": [],
+			"animation_references": [
+				"scale"
+			],
+			"sound_references": [],
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/arenainfo.json": {
+			"identifiers": [
+				"sm:arenainfo"
+			],
+			"particle_references": [],
+			"animation_references": [],
+			"sound_references": [],
+			"texture_references": [
+				"default",
+				"locked",
+				"unknown",
+				"arena_0000_lostcity",
+				"arena_0001_blackwhite",
+				"arena_0002_nether",
+				"arena_0003_space",
+				"arena_0004_western",
+				"arena_0005_stronghold",
+				"arena_0010_ss_ueg",
+				"arena_0012_retro_maze",
+				"arena_0013_chaos_void",
+				"arena_0014_abstract",
+				"arena_0018_synthwave",
+				"arena_0023_the_tower",
+				"uegplus",
+				"arena_0025_tundra",
+				"arena_0026_aether",
+				"arena_0028_plus",
+				"arena_0030_end",
+				"arena_0031_circus",
+				"arena_0032_beehive",
+				"arena_0033_dark_forest",
+				"arena_0034_digiglobe",
+				"arena_0037_crystal_cave",
+				"arena_0038_pendual",
+				"rpg",
+				"arena_0040_murkopolis",
+				"arena_0041_aquatica",
+				"arena_0042_neo_tokyo",
+				"arena_0043_shaparium",
+				"arena_0044_kyoto",
+				"arena_0045_overlord",
+				"arena_0050_shadow_forest",
+				"arena_0051_magic_forest",
+				"uegcyber",
+				"arena_0059_highway",
+				"arena_0060_cheeseburger_warzone",
+				"arena_0061_amethyst_domain",
+				"arena_0062_race_track",
+				"arena_0063_gob_dimension",
+				"arena_0064_playground",
+				"arena_0065_jurassic",
+				"arena_0066_egypt",
+				"arena_0067_cyberspace",
+				"arena_0068_fire_and_ice",
+				"arena_0070_vaporwave",
+				"arena_0071_chess",
+				"arena_0073_deep_dark",
+				"arena_0074_demolition_derby",
+				"arena_0076_obstacle_course",
+				"arena_0078_mcryes",
+				"arena_0079_slot_machine",
+				"arena_0080_pondwater",
+				"arena_0081_mole_life",
+				"arena_0082_big_warehouse",
+				"arena_0083_clash_royale",
+				"arena_0084_fruitiger_aero",
+				"arena_0085_amusement_park",
+				"arena_0086_arcade",
+				"arena_0087_cargo_deck",
+				"arena_0088_spleef",
+				"arena_0089_doomspire",
+				"arena_0090_",
+				"arena_0091_",
+				"arena_0092_",
+				"arena_0093_",
+				"arena_0094_",
+				"arena_0095_",
+				"arena_0096_",
+				"arena_0057_abstract_cyber",
+				"arena_0058_mikes_way",
+				"arena_0069_shrek_on_crack",
+				"arena_0075_bananaland_bouncehouse",
+				"arena_0077_flesh_prison",
+				"arena_0097_",
+				"arena_0098_",
+				"arena_0105_",
+				"arena_0099_custom_1",
+				"arena_0100_custom_2",
+				"arena_0101_custom_3",
+				"arena_0102_custom_4",
+				"arena_0103_custom_5",
+				"arena_0104_custom_6"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/metro_sign.json": {
+			"identifiers": [
+				"sm:sign_reactor"
+			],
+			"particle_references": [],
+			"animation_references": [],
+			"sound_references": [],
+			"texture_references": [
+				"default",
+				"startgame",
+				"spectate",
+				"nu",
+				"lambda",
+				"information"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/metro_sign_tv.json": {
+			"identifiers": [
+				"sm:arenavote_tv_title"
+			],
+			"particle_references": [],
+			"animation_references": [],
+			"sound_references": [],
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/arenaselect_tv.json": {
+			"identifiers": [
+				"sm:arenaselect_tv"
+			],
+			"particle_references": [],
+			"animation_references": [],
+			"sound_references": [],
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/votes.json": {
+			"identifiers": [
+				"sm:reroll_arenas"
+			],
+			"particle_references": [],
+			"animation_references": [],
+			"sound_references": [],
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/settings_robot.json": {
+			"identifiers": [
+				"sm:settings_robot"
+			],
+			"particle_references": [],
+			"animation_references": [
+				"idle",
+				"sitting",
+				"jumping",
+				"thinking",
+				"tinkering",
+				"controller"
+			],
+			"sound_references": [],
+			"texture_references": [
+				"default",
+				"default_blink",
+				"jumping",
+				"jumping_blink",
+				"thinking",
+				"thinking_blink",
+				"tinkering",
+				"tinkering_blink"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/testSkyBox.json": {
+			"identifiers": [
+				"sm:testskybox"
+			],
+			"particle_references": [],
+			"animation_references": [],
+			"sound_references": [],
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/shrek_on_crack.json": {
+			"identifiers": [
+				"sm:shrek_on_crack"
+			],
+			"particle_references": [],
+			"animation_references": [],
+			"sound_references": [],
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/arena_vote_sign.json": {
+			"identifiers": [
+				"sm:arena_vote_sign"
+			],
+			"particle_references": [],
+			"animation_references": [],
+			"sound_references": [],
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/reroll_arenas.json": {
+			"identifiers": [
+				"sm:reroll_arenas"
+			],
+			"particle_references": [],
+			"animation_references": [],
+			"sound_references": [],
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/arenavote_tv.json": {
+			"identifiers": [
+				"sm:arenavote_tv_title"
+			],
+			"particle_references": [],
+			"animation_references": [],
+			"sound_references": [],
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/arenavote_tv_title.json": {
+			"identifiers": [
+				"sm:arenavote_tv_title"
+			],
+			"particle_references": [],
+			"animation_references": [],
+			"sound_references": [],
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/sign_reactor.json": {
+			"identifiers": [
+				"sm:sign_reactor"
+			],
+			"particle_references": [],
+			"animation_references": [],
+			"sound_references": [],
+			"texture_references": [
+				"default",
+				"startgame",
+				"spectate",
+				"nu",
+				"lambda",
+				"information"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/torimoti.json": {
+			"identifiers": [
+				"sm:torimoti"
+			],
+			"particle_references": [],
+			"animation_references": [
+				"spin"
+			],
+			"sound_references": [],
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/sign_torimoti.json": {
+			"identifiers": [
+				"sm:sign_reactor"
+			],
+			"particle_references": [],
+			"animation_references": [],
+			"sound_references": [],
+			"texture_references": [
+				"default",
+				"startgame",
+				"spectate",
+				"nu",
+				"lambda",
+				"information"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/arenabanner.json": {
+			"identifiers": [
+				"sm:arenabanner_bg"
+			],
+			"particle_references": [],
+			"animation_references": [],
+			"sound_references": [],
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		},
+		"RP/entity/arenabanner_bg.json": {
+			"identifiers": [
+				"sm:arenabanner_bg"
+			],
+			"particle_references": [],
+			"animation_references": [],
+			"sound_references": [],
+			"texture_references": [
+				"default"
+			],
+			"material_references": [
+				"default"
+			],
+			"geometry_references": [
+				"default"
+			],
+			"geometry_identifiers": [
+				"default"
+			]
+		}
+	},
+	"block": {
+		"BP/blocks/booster_1.json": {
+			"identifiers": [
+				"sm:booster_1"
+			],
+			"events": [
+				"sm:step_on",
+				"sm:particle"
+			],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/booster_2.json": {
+			"identifiers": [
+				"sm:booster_2"
+			],
+			"events": [
+				"sm:step_on",
+				"sm:particle"
+			],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/booster_3.json": {
+			"identifiers": [
+				"sm:booster_3"
+			],
+			"events": [
+				"sm:step_on",
+				"sm:particle"
+			],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/teleporter_p_a.json": {
+			"identifiers": [
+				"sm:teleporter_p_a"
+			],
+			"events": [
+				"sm:step_on",
+				"sm:step_off",
+				"sm:particle",
+				"sm:placed"
+			],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/teleporter_p_b.json": {
+			"identifiers": [
+				"sm:teleporter_p_b"
+			],
+			"events": [
+				"sm:step_on",
+				"sm:step_off",
+				"sm:particle",
+				"sm:placed"
+			],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/teleporter_y_a.json": {
+			"identifiers": [
+				"sm:teleporter_y_a"
+			],
+			"events": [
+				"sm:step_on",
+				"sm:step_off",
+				"sm:particle",
+				"sm:placed"
+			],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/teleporter_y_b.json": {
+			"identifiers": [
+				"sm:teleporter_y_b"
+			],
+			"events": [
+				"sm:step_on",
+				"sm:step_off",
+				"sm:particle",
+				"sm:placed"
+			],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/boom_block.json": {
+			"identifiers": [
+				"sm:boom_block"
+			],
+			"events": [
+				"sm:step_on",
+				"sm:particle"
+			],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/pitfall_1.json": {
+			"identifiers": [
+				"sm:pitfall_1"
+			],
+			"events": [
+				"sm:block",
+				"sm:particle"
+			],
+			"recipe_tags": [],
+			"custom_components": [],
+			"custom_commands": []
+		},
+		"BP/blocks/pitfall_2.json": {
+			"identifiers": [
+				"sm:pitfall_2"
+			],
+			"events": [
+				"sm:block",
+				"sm:particle"
+			],
+			"recipe_tags": [],
+			"custom_components": [],
+			"custom_commands": []
+		},
+		"BP/blocks/pitfall_3.json": {
+			"identifiers": [
+				"sm:pitfall_3"
+			],
+			"events": [
+				"sm:block",
+				"sm:particle"
+			],
+			"recipe_tags": [],
+			"custom_components": [],
+			"custom_commands": []
+		},
+		"BP/blocks/fabricated_block.json": {
+			"identifiers": [
+				"sm:gob_goo_block"
+			],
+			"events": [
+				"sm:change"
+			],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/death_block.json": {
+			"identifiers": [
+				"sm:death_block"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/anti_platform.json": {
+			"identifiers": [
+				"sm:anti_platform"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/death_warning.json": {
+			"identifiers": [
+				"sm:death_warning"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/rocket_emitter.json": {
+			"identifiers": [
+				"sm:rocket_emitter"
+			],
+			"events": [
+				"sm:emit"
+			],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/wire_block.json": {
+			"identifiers": [
+				"sm:glowing_white"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/big_joe.json": {
+			"identifiers": [
+				"sm:big_joe"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/murkopolis_ground.json": {
+			"identifiers": [
+				"sm:murkopolis_ground"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/darkness_block.json": {
+			"identifiers": [
+				"sm:darkness_block"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/warning_block.json": {
+			"identifiers": [
+				"sm:warning_block"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/fabricated_block_2.json": {
+			"identifiers": [
+				"sm:gob_goo_block_2"
+			],
+			"events": [
+				"sm:change"
+			],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/fabricated_block_3.json": {
+			"identifiers": [
+				"sm:gob_goo_block_3"
+			],
+			"events": [
+				"sm:change"
+			],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/escalator_1.json": {
+			"identifiers": [
+				"sm:escalator_4"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/escalator_end_1.json": {
+			"identifiers": [
+				"sm:escalator_end_4"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/escalator_start_1.json": {
+			"identifiers": [
+				"sm:escalator_start_4"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/escalator_2.json": {
+			"identifiers": [
+				"sm:escalator_4"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/escalator_3.json": {
+			"identifiers": [
+				"sm:escalator_4"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/escalator_4.json": {
+			"identifiers": [
+				"sm:escalator_4"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/escalator_end_2.json": {
+			"identifiers": [
+				"sm:escalator_end_4"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/escalator_start_2.json": {
+			"identifiers": [
+				"sm:escalator_start_4"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/escalator_start_3.json": {
+			"identifiers": [
+				"sm:escalator_start_4"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/escalator_start_4.json": {
+			"identifiers": [
+				"sm:escalator_start_4"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/escalator_end_3.json": {
+			"identifiers": [
+				"sm:escalator_end_4"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/escalator_end_4.json": {
+			"identifiers": [
+				"sm:escalator_end_4"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/terminal_test.json": {
+			"identifiers": [
+				"sm:terminal_test"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/fake_sand.json": {
+			"identifiers": [
+				"sm:fake_sand"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/glowing_bedrock.json": {
+			"identifiers": [
+				"sm:glowing_bedrock_goal"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/glowing_bedrock_goal.json": {
+			"identifiers": [
+				"sm:glowing_bedrock_goal"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/chaos_block.json": {
+			"identifiers": [
+				"sm:chaos_block"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/type_melee.json": {
+			"identifiers": [
+				"sm:select"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/type_ranged.json": {
+			"identifiers": [
+				"sm:glowing_white"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/type_utils.json": {
+			"identifiers": [
+				"sm:type_cyan"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/type_trap.json": {
+			"identifiers": [
+				"sm:glowing_white"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/type_secret.json": {
+			"identifiers": [
+				"sm:glowing_white"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/glowing_white.json": {
+			"identifiers": [
+				"sm:glowing_white"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/coming_soon.json": {
+			"identifiers": [
+				"sm:coming_soon"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/crying_blackstone.json": {
+			"identifiers": [
+				"sm:crying_blackstone"
+			],
+			"events": [
+				"sm:damage"
+			],
+			"recipe_tags": [],
+			"custom_components": [],
+			"custom_commands": []
+		},
+		"BP/blocks/glowing_block_neo_tokyo.json": {
+			"identifiers": [
+				"sm:glowing_block_neo_tokyo"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/shaparium_tile.json": {
+			"identifiers": [
+				"sm:shaparium_tile_glow"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/shaparium_tile_light.json": {
+			"identifiers": [
+				"sm:shaparium_gate_red"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/shaparium_light_block.json": {
+			"identifiers": [
+				"sm:shaparium_gate_red"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/shaparium_gate.json": {
+			"identifiers": [
+				"sm:shaparium_gate_red"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/shaparium_tile_light_red.json": {
+			"identifiers": [
+				"sm:shaparium_gate_red"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/shaparium_tile_red.json": {
+			"identifiers": [
+				"sm:shaparium_tile_red_glow"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/shaparium_light_block_red.json": {
+			"identifiers": [
+				"sm:shaparium_gate_red"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/shaparium_gate_red.json": {
+			"identifiers": [
+				"sm:shaparium_gate_red"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/shaparium_tile_glow.json": {
+			"identifiers": [
+				"sm:shaparium_tile_glow"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/shaparium_tile_red_glow.json": {
+			"identifiers": [
+				"sm:shaparium_tile_red_glow"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/select.json": {
+			"identifiers": [
+				"sm:locked"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/locked.json": {
+			"identifiers": [
+				"sm:locked"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/mall_fence.json": {
+			"identifiers": [
+				"sm:mall_fence"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/lobbycontrols_weaponshop.json": {
+			"identifiers": [
+				"sm:lobbycontrols_enter_spada"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/lobbycontrols_exit.json": {
+			"identifiers": [
+				"sm:lobbycontrols_exit"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/lobbycontrols_spada.json": {
+			"identifiers": [
+				"sm:lobbycontrols_race"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/lobbycontrols_reactor.json": {
+			"identifiers": [
+				"sm:lobbycontrols_arenas"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/lobbycontrols_splendid.json": {
+			"identifiers": [
+				"sm:lobbycontrols_music"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/lobbycontrols_credits.json": {
+			"identifiers": [
+				"sm:lobbycontrols_race"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/lobbycontrols_race.json": {
+			"identifiers": [
+				"sm:lobbycontrols_race"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/lobbycontrols_arenas.json": {
+			"identifiers": [
+				"sm:lobbycontrols_arenas"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/cloud.json": {
+			"identifiers": [
+				"sm:cloud"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/cloud_booster.json": {
+			"identifiers": [
+				"sm:cloud_booster"
+			],
+			"events": [
+				"sm:step_on",
+				"sm:particle"
+			],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/gummy_block.json": {
+			"identifiers": [
+				"sm:icing_block"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/cotton_candy_block.json": {
+			"identifiers": [
+				"sm:icing_block"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/cotton_candy_block_pink.json": {
+			"identifiers": [
+				"sm:icing_block"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/icing_block.json": {
+			"identifiers": [
+				"sm:icing_block"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/fabricated_block_emp.json": {
+			"identifiers": [
+				"sm:fabricated_block_emp"
+			],
+			"events": [
+				"sm:change"
+			],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/fall_generator.json": {
+			"identifiers": [
+				"sm:data_generator"
+			],
+			"events": [
+				"sm:tick"
+			],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/moon_block.json": {
+			"identifiers": [
+				"sm:meteor_block"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/meteor_block.json": {
+			"identifiers": [
+				"sm:meteor_block"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/netherite_reactor.json": {
+			"identifiers": [
+				"sm:netherite_reactor"
+			],
+			"events": [
+				"sm:tick"
+			],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/digimesh.json": {
+			"identifiers": [
+				"sm:digimesh"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/digimesh_white.json": {
+			"identifiers": [
+				"sm:digimesh_white"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/digimesh_type2.json": {
+			"identifiers": [
+				"sm:digimesh_type2"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/digimesh_white_type2.json": {
+			"identifiers": [
+				"sm:digimesh_white_type2"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/dataunit_white.json": {
+			"identifiers": [
+				"sm:dataunit_blue"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/dataunit_blue.json": {
+			"identifiers": [
+				"sm:pendual_trail"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/rpg_game_2_blocks/updraft_block.json": {
+			"identifiers": [
+				"sm:updraft_block"
+			],
+			"events": [
+				"sm:step_on",
+				"sm:particle"
+			],
+			"recipe_tags": [],
+			"custom_components": [],
+			"custom_commands": []
+		},
+		"BP/blocks/data_generator.json": {
+			"identifiers": [
+				"sm:pendual_generator"
+			],
+			"events": [
+				"sm:tick"
+			],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/frozen_brick.json": {
+			"identifiers": [
+				"sm:frozen_brick"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/banana_peel.json": {
+			"identifiers": [
+				"sm:crystals"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/eye.json": {
+			"identifiers": [
+				"sm:eye"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/editor_bay_block_indest.json": {
+			"identifiers": [
+				"sm:editor_bay_block_indest"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/ceiling_bedrock.json": {
+			"identifiers": [
+				"sm:ceiling_bedrock"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/arenaborder.json": {
+			"identifiers": [
+				"sm:arenaborder_4"
+			],
+			"events": [
+				"sm:clear"
+			],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/sky_block.json": {
+			"identifiers": [
+				"sm:sky_block"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/slabTest.json": {
+			"identifiers": [
+				"sm:vote_arena_slab_3"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/fire.json": {
+			"identifiers": [
+				"minecraft:fire"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/burning_ash.json": {
+			"identifiers": [
+				"sm:burning_ash"
+			],
+			"events": [
+				"sm:hurt"
+			],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/pillar.json": {
+			"identifiers": [
+				"sm:pillar"
+			],
+			"events": [
+				"sm:slipped_on_banan"
+			],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/laptopstand.json": {
+			"identifiers": [
+				"sm:laptopstand"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/exit_train_ready_trigger.json": {
+			"identifiers": [
+				"sm:exit_train_ready_trigger"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/enter_train_ready_trigger.json": {
+			"identifiers": [
+				"sm:enter_train_ready_trigger"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/speedline_block_l.json": {
+			"identifiers": [
+				"sm:speedline_block_l"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/speedline_block_r.json": {
+			"identifiers": [
+				"sm:speedline_block_r"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/vote_arena_slab.json": {
+			"identifiers": [
+				"sm:vote_arena_slab_disabled_3"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/vote_arena_slab_2.json": {
+			"identifiers": [
+				"sm:vote_arena_slab_3"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/vote_arena_slab_3.json": {
+			"identifiers": [
+				"sm:vote_arena_slab_3"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/vote_arena_slab_disabled_1.json": {
+			"identifiers": [
+				"sm:vote_arena_slab_disabled_3"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/vote_arena_slab_disabled_2.json": {
+			"identifiers": [
+				"sm:vote_arena_slab_disabled_3"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/vote_arena_slab_disabled_3.json": {
+			"identifiers": [
+				"sm:vote_arena_slab_disabled_3"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/pendual_trail.json": {
+			"identifiers": [
+				"sm:pendual_trail"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/pendual_magic.json": {
+			"identifiers": [
+				"sm:pendual_magic"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/pendual_generator.json": {
+			"identifiers": [
+				"sm:pendual_generator"
+			],
+			"events": [
+				"sm:tick"
+			],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/crystal.json": {
+			"identifiers": [
+				"sm:crystals_pink"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/crystal_block.json": {
+			"identifiers": [
+				"sm:crystal_block_pink"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/crystal_top.json": {
+			"identifiers": [
+				"sm:crystals_pink"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/crystal_block_orange.json": {
+			"identifiers": [
+				"sm:crystal_block_pink"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/crystal_block_pink.json": {
+			"identifiers": [
+				"sm:crystal_block_pink"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/crystal_orange.json": {
+			"identifiers": [
+				"sm:crystals_pink"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/crystal_pink.json": {
+			"identifiers": [
+				"sm:crystals_pink"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/red_sky.json": {
+			"identifiers": [
+				"sm:red_wall"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/blue_sky.json": {
+			"identifiers": [
+				"sm:godray"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/spawner_white.json": {
+			"identifiers": [
+				"sm:spawner_green"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/spawner_red.json": {
+			"identifiers": [
+				"sm:spawner_green"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/spawner_yellow.json": {
+			"identifiers": [
+				"sm:spawner_green"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/spawner_blue.json": {
+			"identifiers": [
+				"sm:spawner_green"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/spawner_green.json": {
+			"identifiers": [
+				"sm:spawner_green"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/arenaborder_2.json": {
+			"identifiers": [
+				"sm:arenaborder_4"
+			],
+			"events": [
+				"sm:clear"
+			],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/arenaborder_3.json": {
+			"identifiers": [
+				"sm:arenaborder_4"
+			],
+			"events": [
+				"sm:clear"
+			],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/arenaborder_4.json": {
+			"identifiers": [
+				"sm:arenaborder_5"
+			],
+			"events": [
+				"sm:clear"
+			],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/type_nu.json": {
+			"identifiers": [
+				"sm:type_nu"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/type_lambda.json": {
+			"identifiers": [
+				"sm:type_nu"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/type_cyan.json": {
+			"identifiers": [
+				"sm:type_cyan"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/red_wall.json": {
+			"identifiers": [
+				"sm:red_wall"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/sky_0.json": {
+			"identifiers": [
+				"sm:sky_4"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/sky_1.json": {
+			"identifiers": [
+				"sm:sky_4"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/sky_2.json": {
+			"identifiers": [
+				"sm:sky_4"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/sky_3.json": {
+			"identifiers": [
+				"sm:sky_4"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/sky_4.json": {
+			"identifiers": [
+				"sm:sky_4"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/godray.json": {
+			"identifiers": [
+				"sm:godray"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/arenaborder_5.json": {
+			"identifiers": [
+				"sm:arenaborder_5"
+			],
+			"events": [
+				"sm:clear"
+			],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/gob_goo_block.json": {
+			"identifiers": [
+				"sm:gob_goo_block"
+			],
+			"events": [
+				"sm:change"
+			],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/gob_goo_block_2.json": {
+			"identifiers": [
+				"sm:gob_goo_block_2"
+			],
+			"events": [
+				"sm:change"
+			],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/gob_goo_block_3.json": {
+			"identifiers": [
+				"sm:gob_goo_block_3"
+			],
+			"events": [
+				"sm:change"
+			],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/tree_blocks/treecolor_00.json": {
+			"identifiers": [
+				"sm:treecolor_00"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/tree_blocks/treecolor_09.json": {
+			"identifiers": [
+				"sm:treecolor_09"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/tree_blocks/treecolor_08.json": {
+			"identifiers": [
+				"sm:treecolor_08"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/tree_blocks/treecolor_07.json": {
+			"identifiers": [
+				"sm:treecolor_07"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/tree_blocks/treecolor_06.json": {
+			"identifiers": [
+				"sm:treecolor_06"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/tree_blocks/treecolor_05.json": {
+			"identifiers": [
+				"sm:treecolor_05"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/tree_blocks/treecolor_04.json": {
+			"identifiers": [
+				"sm:treecolor_04"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/tree_blocks/treecolor_03.json": {
+			"identifiers": [
+				"sm:treecolor_03"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/tree_blocks/treecolor_02.json": {
+			"identifiers": [
+				"sm:treecolor_02"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/tree_blocks/treecolor_01.json": {
+			"identifiers": [
+				"sm:treecolor_01"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/lobbycontrols_music.json": {
+			"identifiers": [
+				"sm:lobbycontrols_music"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/purchase_block.json": {
+			"identifiers": [
+				"sm:purchase_block_2"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/purchase_block_disabled.json": {
+			"identifiers": [
+				"sm:purchase_block_disabled_3"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/purchase_block_2.json": {
+			"identifiers": [
+				"sm:purchase_block_2"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/purchase_block_3.json": {
+			"identifiers": [
+				"sm:purchase_block_2"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/purchase_block_disabled_2.json": {
+			"identifiers": [
+				"sm:purchase_block_disabled_3"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/purchase_block_disabled_3.json": {
+			"identifiers": [
+				"sm:purchase_block_disabled_3"
+			],
+			"events": [],
+			"recipe_tags": [],
+			"custom_commands": [],
+			"custom_components": []
+		},
+		"BP/blocks/cyber_piglin_head.json": {
+			"identifiers": [
+				"sm:cyber_piglin_head"
+			],
+			"events": [
+				"found"
+			],
+			"recipe_tags": [],
+			"custom_components": [],
+			"custom_commands": []
+		}
+	},
+	"rp_animation": {
+		"RP/animations/arrow.animation.json": {
+			"ids": [
+				"animation.arrow.move"
+			]
+		}
+	},
+	"sound_definition": {
+		"RP/sounds/sound_definitions.json": {
+			"ids": [
+				"blackhole_bomb",
+				"baby_staff",
+				"vulcan_cannon",
+				"emp",
+				"big_joe",
+				"armor.equip_generic",
+				"death",
+				"charged_bolt",
+				"gob_goo",
+				"grav_prism",
+				"respawn",
+				"music.boatride",
+				"parry",
+				"stun",
+				"music.marionette",
+				"music.galaxy_torimoti",
+				"music.tv_makes_you_dumber",
+				"music.comic_mischief",
+				"music.glassy_twins",
+				"music.anything_to_gain_nothing_to_lose",
+				"music.eject_plus_channel",
+				"music.my_turbo_xeona",
+				"music.tinydeath_kaizo_slumber_mix",
+				"music.green_comet_in_the_key_of_something",
+				"music.aquas_door_heaven_mix",
+				"music.a_conflict_between_earth_mother_and_the_technogaia",
+				"music.you_wouldnt_download",
+				"music.purple_is_the_new_green",
+				"music.schlierberg",
+				"music.a_nu_earth",
+				"music.gengar_ecstasy",
+				"music.space_angels_from_cyrene",
+				"music.kjshuffle",
+				"music.mountaindew",
+				"music.pineapple",
+				"banan_slip",
+				"zone_warning",
+				"preview_a_nu_earth",
+				"preview_anythingtogain",
+				"preview_aquasdoor",
+				"preview_comic_mischief",
+				"preview_conflict_earthmother",
+				"preview_ejectplus",
+				"preview_galaxy_torimoti",
+				"preview_gengar_ecstasy",
+				"preview_glassy_twins",
+				"preview_greencomet",
+				"preview_marionette",
+				"preview_purple_green",
+				"preview_schlierberg",
+				"preview_spaceangels",
+				"preview_tinydeath",
+				"preview_turbo_xeona",
+				"preview_tv_makes_you_dumber",
+				"preview_you_wouldnt_download"
+			]
+		}
+	},
+	"rp_animation_controller": {
+		"RP/animation_controllers/vulcan_cannon.json": {
+			"ids": [
+				"controller.animation.icarus"
+			]
+		},
+		"RP/animation_controllers/player_weapon_anims.json": {
+			"ids": [
+				"controller.animation.player_weapon_anims"
+			]
+		},
+		"RP/animation_controllers/firing_weapon_thirdperson.json": {
+			"ids": [
+				"controller.animation.firing_weapon_thirdperson"
+			]
+		},
+		"RP/animation_controllers/parry_fist.json": {
+			"ids": [
+				"controller.animation.baby_staff"
+			]
+		},
+		"RP/animation_controllers/repulsion_blade.json": {
+			"ids": [
+				"controller.animation.repulsion_blade"
+			]
+		},
+		"RP/animation_controllers/baby_staff.json": {
+			"ids": [
+				"controller.animation.baby_staff"
+			]
+		},
+		"RP/animation_controllers/landmine_anims.json": {
+			"ids": [
+				"controller.animation.landmine_anims"
+			]
+		},
+		"RP/animation_controllers/icarus.json": {
+			"ids": [
+				"controller.animation.icarus"
+			]
+		},
+		"RP/animation_controllers/thruster_status_none.json": {
+			"ids": [
+				"controller.animation.thruster_status_none"
+			]
+		},
+		"RP/animation_controllers/settings_robot_animations.json": {
+			"ids": [
+				"controller.animation.settings_robot_animations"
+			]
+		}
+	},
+	"particle": {
+		"RP/particles/cannot_be_optimized/explosion_burst_green.json": {
+			"ids": [
+				"sm:explosion_burst_green"
+			]
+		}
+	}
+}

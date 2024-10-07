@@ -1,0 +1,23 @@
+//bridge-file-version: #10
+{
+	"format_version": "1.21.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "sm:platform_fabricator"
+		},
+		"components": {
+			"minecraft:display_name": {
+				"value": "Platform Fabricator\n"
+			},
+			"minecraft:max_stack_size": 1,
+			"minecraft:icon": "sm:platform_fabricator",
+			"minecraft:custom_components": [
+				"sm:platform_fabricator"
+			],
+			"minecraft:cooldown": {
+				"category": "platform",
+				"duration": 15
+			}
+		}
+	}
+}

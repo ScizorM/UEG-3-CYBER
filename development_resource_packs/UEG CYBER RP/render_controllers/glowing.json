@@ -1,0 +1,18 @@
+//bridge-file-version: #2
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.glowing": {
+			"geometry": "Geometry.default",
+			"ignore_lighting": true,
+			"textures": [
+				"Texture.default"
+			],
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			]
+		}
+	}
+}

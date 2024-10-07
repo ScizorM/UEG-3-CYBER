@@ -1,0 +1,18 @@
+//bridge-file-version: #7
+{
+	"format_version": "1.21.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "sm:ability_baby"
+		},
+		"components": {
+			"minecraft:display_name": {
+				"value": "Selected Ability: Baby Storm"
+			},
+			"minecraft:icon": "sm:ability_baby",
+			"minecraft:wearable": {
+				"slot": "slot.armor.legs"
+			}
+		}
+	}
+}

@@ -1,0 +1,21 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "sm:testskybox",
+			"materials": {
+				"default": "entity_emissive"
+			},
+			"textures": {
+				"default": "textures/entity/DefaultSky"
+			},
+			"geometry": {
+				"default": "geometry.testSkyBox"
+			},
+			"render_controllers": [
+				"controller.render.guardian"
+			]
+		}
+	}
+}

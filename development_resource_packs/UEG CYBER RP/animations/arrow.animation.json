@@ -1,0 +1,23 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.arrow.move": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"rotation": {
+						"0": "query.target_x_rotation",
+						"1": "-query.target_y_rotation",
+						"2": 0
+					},
+					"scale": {
+						"0": 0.7,
+						"1": 0.7,
+						"2": 0.9
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,41 @@
+//bridge-file-version: #19
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.player_variants": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"animation_1": "query.variant == 1"
+						},
+						{
+							"animation_2": "query.variant == 2"
+						}
+					]
+				},
+				"animation_1": {
+					"transitions": [
+						{
+							"animation_2": "query.variant == 2"
+						},
+						{
+							"default": "query.variant == 0"
+						}
+					]
+				},
+				"animation_2": {
+					"transitions": [
+						{
+							"animation_1": "query.variant == 1"
+						},
+						{
+							"default": "query.variant == 0"
+						}
+					]
+				}
+			}
+		}
+	}
+}

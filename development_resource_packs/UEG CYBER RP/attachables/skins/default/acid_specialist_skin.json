@@ -1,0 +1,21 @@
+//bridge-file-version: #18
+{
+	"format_version": "1.16.100",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "sm:acid_specialist_skin",
+			"materials": {
+				"default": "guardian"
+			},
+			"textures": {
+				"default": "textures/entity/skins/acid_specialist"
+			},
+			"geometry": {
+				"default": "geometry.acid_specialist_new"
+			},
+			"render_controllers": [
+				"controller.render.darkless"
+			]
+		}
+	}
+}

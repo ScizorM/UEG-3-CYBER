@@ -1,0 +1,21 @@
+//bridge-file-version: #28
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "sm:gob_dog_goblin_dialogue",
+			"textures": {
+				"default": "textures/dialogue_art/npcs/gob_shop_goblin"
+			},
+			"geometry": {
+				"default": "geometry.model_s_model"
+			},
+			"render_controllers": [
+				"controller.render.glowing"
+			],
+			"materials": {
+				"default": "guardian"
+			}
+		}
+	}
+}

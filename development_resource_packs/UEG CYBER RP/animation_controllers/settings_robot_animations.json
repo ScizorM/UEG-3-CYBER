@@ -1,0 +1,111 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.settings_robot_animations": {
+			"states": {
+				"default": {
+					"animations": [
+						"idle"
+					],
+					"blend_transition": 0.2,
+					"transitions": [
+						{
+							"sitting": "query.variant > 7"
+						},
+						{
+							"jumping": "query.variant == 2 || query.variant == 3"
+						},
+						{
+							"thinking": "query.variant == 4 || query.variant == 5"
+						},
+						{
+							"tinkering": "query.variant == 6 || query.variant == 7"
+						}
+					]
+				},
+				"sitting": {
+					"animations": [
+						"sitting"
+					],
+					"blend_transition": 0.2,
+					"transitions": [
+						{
+							"jumping": "query.variant == 2 || query.variant == 3"
+						},
+						{
+							"thinking": "query.variant == 4 || query.variant == 5"
+						},
+						{
+							"tinkering": "query.variant == 6 || query.variant == 7"
+						},
+						{
+							"default": "query.variant == 0 || query.variant == 1"
+						}
+					]
+				},
+				"jumping": {
+					"animations": [
+						"jumping"
+					],
+					"blend_transition": 0.2,
+					"transitions": [
+						{
+							"sitting": "query.variant > 7"
+						},
+						{
+							"thinking": "query.variant == 4 || query.variant == 5"
+						},
+						{
+							"tinkering": "query.variant == 6 || query.variant == 7"
+						},
+						{
+							"default": "query.variant == 0 || query.variant == 1"
+						}
+					]
+				},
+				"thinking": {
+					"animations": [
+						"thinking"
+					],
+					"blend_transition": 0.2,
+					"transitions": [
+						{
+							"sitting": "query.variant > 7"
+						},
+						{
+							"jumping": "query.variant == 2 || query.variant == 3"
+						},
+						{
+							"tinkering": "query.variant == 6 || query.variant == 7"
+						},
+						{
+							"default": "query.variant == 0 || query.variant == 1"
+						}
+					]
+				},
+				"tinkering": {
+					"animations": [
+						"tinkering"
+					],
+					"blend_transition": 0.2,
+					"transitions": [
+						{
+							"sitting": "query.variant > 7"
+						},
+						{
+							"jumping": "query.variant == 2 || query.variant == 3"
+						},
+						{
+							"thinking": "query.variant == 4 || query.variant == 5"
+						},
+						{
+							"default": "query.variant == 0 || query.variant == 1"
+						}
+					]
+				}
+			},
+			"initial_state": "default"
+		}
+	}
+}

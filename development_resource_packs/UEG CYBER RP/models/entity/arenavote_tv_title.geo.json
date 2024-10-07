@@ -1,0 +1,26 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.arenavote_tv_title",
+				"texture_width": 512,
+				"texture_height": 512,
+				"visible_bounds_width": 13,
+				"visible_bounds_height": 26,
+				"visible_bounds_offset": [0, 12, 0]
+			},
+			"bones": [
+				{
+					"name": "bb_main",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-92, -9, -1], "size": [184, 79, 7], "uv": [0, 0]},
+						{"origin": [45, 70, 1], "size": [10, 318, 5], "uv": [482, 0]},
+						{"origin": [-60, 70, 1], "size": [10, 318, 5], "uv": [482, 0]}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,29 @@
+//bridge-file-version: #11
+{
+	"format_version": "1.21.10",
+	"minecraft:block": {
+		"description": {
+			"identifier": "sm:banana_peel"
+		},
+		"components": {
+			"minecraft:material_instances": {
+				"*": {
+					"face_dimming": false,
+					"render_method": "blend",
+					"ambient_occlusion": true
+				}
+			},
+			"minecraft:light_emission": 0.5,
+			"minecraft:light_dampening": 0.0,
+			"minecraft:destructible_by_mining": false,
+			"minecraft:collision_box": {
+				"size": [
+					0,
+					0,
+					0
+				]
+			},
+			"minecraft:destructible_by_explosion": false
+		}
+	}
+}

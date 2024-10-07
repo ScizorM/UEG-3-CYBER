@@ -1,0 +1,17 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.arena_info_display.animate": {
+			"animation_length": 1,
+			"override_previous_animation": true,
+			"bones": {
+				"bb_main": {
+					"scale": {
+						"0.0": [0, 1, 1],
+						"0.375": [1, 1, 1]
+					}
+				}
+			}
+		}
+	}
+}

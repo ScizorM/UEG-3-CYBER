@@ -1,0 +1,274 @@
+//bridge-file-version: #12
+{
+	"format_version": "1.13.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "sm:settings_robot",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"components": {
+			"minecraft:damage_sensor": {
+				"triggers": {
+					"cause": "all",
+					"deals_damage": false
+				}
+			},
+			"minecraft:type_family": {
+				"family": [
+					"npc",
+					"mob"
+				]
+			},
+			"minecraft:fire_immune": true,
+			"minecraft:movement": {
+				"value": 0.5
+			},
+			"minecraft:loot": {
+				"table": "loot_tables/empty.json"
+			},
+			"minecraft:collision_box": {
+				"width": 0.7,
+				"height": 1
+			},
+			"minecraft:persistent": {},
+			"minecraft:npc": {
+				"npc_data": {
+					"portrait_offsets": {
+						"translate": [
+							-7,
+							0,
+							0
+						],
+						"scale": [
+							1.75,
+							1.75,
+							1.75
+						]
+					},
+					"picker_offsets": {
+						"translate": [
+							0,
+							20,
+							0
+						],
+						"scale": [
+							1.7,
+							1.7,
+							1.7
+						]
+					},
+					"skin_list": [
+						{
+							"variant": 0
+						},
+						{
+							"variant": 1
+						},
+						{
+							"variant": 2
+						},
+						{
+							"variant": 3
+						},
+						{
+							"variant": 4
+						},
+						{
+							"variant": 5
+						},
+						{
+							"variant": 6
+						},
+						{
+							"variant": 7
+						},
+						{
+							"variant": 8
+						},
+						{
+							"variant": 9
+						},
+						{
+							"variant": 10
+						},
+						{
+							"variant": 11
+						},
+						{
+							"variant": 12
+						},
+						{
+							"variant": 13
+						},
+						{
+							"variant": 14
+						},
+						{
+							"variant": 15
+						},
+						{
+							"variant": 16
+						},
+						{
+							"variant": 17
+						},
+						{
+							"variant": 18
+						},
+						{
+							"variant": 19
+						}
+					]
+				}
+			},
+			"minecraft:nameable": {
+				"always_show": false,
+				"allow_name_tag_renaming": false
+			},
+			"minecraft:physics": {},
+			"minecraft:conditional_bandwidth_optimization": {}
+		},
+		"component_groups": {
+			"robot_default": {
+				"minecraft:variant": {
+					"value": 0
+				}
+			},
+			"robot_default_blink": {
+				"minecraft:variant": {
+					"value": 1
+				}
+			},
+			"robot_jumping": {
+				"minecraft:variant": {
+					"value": 2
+				}
+			},
+			"robot_jumping_blink": {
+				"minecraft:variant": {
+					"value": 3
+				}
+			},
+			"robot_thinking": {
+				"minecraft:variant": {
+					"value": 4
+				}
+			},
+			"robot_thinking_blink": {
+				"minecraft:variant": {
+					"value": 5
+				}
+			},
+			"robot_tinkering": {
+				"minecraft:variant": {
+					"value": 6
+				}
+			},
+			"robot_tinkering_blink": {
+				"minecraft:variant": {
+					"value": 7
+				}
+			},
+			"robot_sitting": {
+				"minecraft:variant": {
+					"value": 8
+				}
+			},
+			"robot_sitting_blink": {
+				"minecraft:variant": {
+					"value": 9
+				}
+			}
+		},
+		"events": {
+			"sm:default": {
+				"add": {
+					"component_groups": [
+						"robot_default"
+					]
+				}
+			},
+			"sm:default_blink": {
+				"add": {
+					"component_groups": [
+						"robot_default_blink"
+					]
+				}
+			},
+			"sm:jumping": {
+				"add": {
+					"component_groups": [
+						"robot_jumping"
+					]
+				}
+			},
+			"sm:jumping_blink": {
+				"add": {
+					"component_groups": [
+						"robot_jumping_blink"
+					]
+				}
+			},
+			"sm:thinking": {
+				"add": {
+					"component_groups": [
+						"robot_thinking"
+					]
+				}
+			},
+			"sm:thinking_blink": {
+				"add": {
+					"component_groups": [
+						"robot_thinking_blink"
+					]
+				}
+			},
+			"sm:tinkering": {
+				"add": {
+					"component_groups": [
+						"robot_tinkering"
+					]
+				}
+			},
+			"sm:tinkering_blink": {
+				"add": {
+					"component_groups": [
+						"robot_tinkering_blink"
+					]
+				}
+			},
+			"sm:remove_all": {
+				"remove": {
+					"component_groups": [
+						"robot_default",
+						"robot_default_blink",
+						"robot_jumping",
+						"robot_jumping_blink",
+						"robot_thinking",
+						"robot_thinking_blink",
+						"robot_tinkering",
+						"robot_tinkering_blink",
+						"robot_sitting",
+						"robot_sitting_blink"
+					]
+				}
+			},
+			"sm:robot_sitting": {
+				"add": {
+					"component_groups": [
+						"robot_sitting"
+					]
+				}
+			},
+			"sm:robot_sitting_blink": {
+				"add": {
+					"component_groups": [
+						"robot_sitting_blink"
+					]
+				}
+			}
+		}
+	}
+}

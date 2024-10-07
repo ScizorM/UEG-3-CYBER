@@ -1,0 +1,18 @@
+//bridge-file-version: #2
+{
+	"format_version": "1.21.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "sm:ability_none"
+		},
+		"components": {
+			"minecraft:display_name": {
+				"value": "Selected Ability: None"
+			},
+			"minecraft:icon": "sm:ability_none",
+			"minecraft:wearable": {
+				"slot": "slot.armor.legs"
+			}
+		}
+	}
+}

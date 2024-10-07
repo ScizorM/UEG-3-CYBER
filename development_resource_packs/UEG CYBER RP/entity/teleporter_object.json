@@ -1,0 +1,18 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "sm:teleporter_object",
+			"materials": {
+				"default": "guardian"
+			},
+			"geometry": {
+				"default": "geometry.none"
+			},
+			"render_controllers": [
+				"controller.render.guardian"
+			]
+		}
+	}
+}

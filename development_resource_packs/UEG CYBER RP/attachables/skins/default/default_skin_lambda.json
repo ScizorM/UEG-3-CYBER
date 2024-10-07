@@ -1,0 +1,21 @@
+//bridge-file-version: #17
+{
+	"format_version": "1.16.100",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "sm:default_skin_lambda",
+			"materials": {
+				"default": "guardian"
+			},
+			"textures": {
+				"default": "textures/entity/skins/recruit_lambda"
+			},
+			"geometry": {
+				"default": "geometry.default_skin"
+			},
+			"render_controllers": [
+				"controller.render.darkless"
+			]
+		}
+	}
+}

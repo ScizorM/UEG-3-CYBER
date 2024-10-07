@@ -1,0 +1,21 @@
+//bridge-file-version: #7
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "minecraft:small_fireball",
+			"materials": {
+				"default": "snowball"
+			},
+			"textures": {
+				"default": "textures/entity/charged_orb_fire"
+			},
+			"geometry": {
+				"default": "geometry.charged_orb"
+			},
+			"render_controllers": [
+				"controller.render.arrow"
+			]
+		}
+	}
+}

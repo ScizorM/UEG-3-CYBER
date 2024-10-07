@@ -1,0 +1,39 @@
+//bridge-file-version: #107
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.laptop_1through9": {
+			"geometry": "Geometry.default",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"textures": [
+				"Array.skins[(query.variant)]"
+			],
+			"arrays": {
+				"textures": {
+					"Array.skins": [
+						"Texture.frame_one",
+						"Texture.frame_two",
+						"Texture.frame_three",
+						"Texture.frame_four",
+						"Texture.frame_five",
+						"Texture.frame_six",
+						"Texture.frame_seven",
+						"Texture.frame_eight",
+						"Texture.frame_nine",
+						"Texture.frame_zero",
+						"Texture.frame_enabled",
+						"Texture.frame_disabled",
+						"Texture.frame_preset",
+						"Texture.frame_ten",
+						"Texture.locked",
+						"Texture.frame_dialogue"
+					]
+				}
+			}
+		}
+	}
+}

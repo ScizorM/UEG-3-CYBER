@@ -1,0 +1,21 @@
+//bridge-file-version: #7
+{
+	"format_version": "1.16.100",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "sm:race_info_fairy",
+			"materials": {
+				"default": "guardian"
+			},
+			"textures": {
+				"default": "textures/entity/race_info_fairy"
+			},
+			"geometry": {
+				"default": "geometry.race_info"
+			},
+			"render_controllers": [
+				"controller.render.darkless"
+			]
+		}
+	}
+}

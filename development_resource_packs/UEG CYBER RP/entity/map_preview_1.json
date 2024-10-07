@@ -1,0 +1,51 @@
+//bridge-file-version: #28
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "sm:map_preview_1",
+			"geometry": {
+				"default": "geometry.0_lostcity",
+				"blackwhite_1": "geometry.1_blackwhite",
+				"nether_2": "geometry.2_nether",
+				"space_3": "geometry.3_space",
+				"western_4": "geometry.4_western",
+				"stronghold_5": "geometry.5_stronghold",
+				"aquatic_6": "geometry.6_aquatic",
+				"synthesis_7": "geometry.7_synthesis",
+				"neonether_8": "geometry.8_neonether",
+				"redstone_9": "geometry.9_redstone",
+				"ssueg_10": "geometry.10_ssueg",
+				"bastion_11": "geometry.11_bastion",
+				"maze_12": "geometry.12_maze",
+				"void_13": "geometry.13_void"
+			},
+			"render_controllers": [
+				"controller.render.map_preview"
+			],
+			"spawn_egg": {
+				"base_color": "#1778D2",
+				"overlay_color": "#1778D2"
+			},
+			"textures": {
+				"default": "textures/entity/arenas/placeholder_arena",
+				"blackwhite_1": "textures/entity/arenas/placeholder_arena",
+				"nether_2": "textures/entity/arenas/placeholder_arena",
+				"space_3": "textures/entity/arenas/placeholder_arena",
+				"western_4": "textures/entity/arenas/placeholder_arena",
+				"stronghold_5": "textures/entity/arenas/placeholder_arena",
+				"aquatic_6": "textures/entity/arenas/placeholder_arena",
+				"synthesis_7": "textures/entity/arenas/placeholder_arena",
+				"neonether_8": "textures/entity/arenas/placeholder_arena",
+				"redstone_9": "textures/entity/arenas/placeholder_arena",
+				"ssueg_10": "textures/entity/arenas/placeholder_arena",
+				"bastion_11": "textures/entity/arenas/placeholder_arena",
+				"maze_12": "textures/entity/arenas/placeholder_arena",
+				"void_13": "textures/entity/arenas/placeholder_arena"
+			},
+			"materials": {
+				"default": "guardian"
+			}
+		}
+	}
+}

@@ -1,0 +1,150 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.default_skin_intro",
+				"texture_width": 128,
+				"texture_height": 64,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 5.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "waist",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "body",
+					"parent": "waist",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "head",
+					"parent": "body",
+					"pivot": [0, 24, 0],
+					"cubes": [
+						{"origin": [4, 24, -4], "size": [2, 12, 0], "uv": [108, 16]},
+						{"origin": [-4, 32, -4], "size": [8, 4, 0], "uv": [92, 21]},
+						{"origin": [-4, 24, -4], "size": [8, 8, 8], "uv": [0, 0]},
+						{"origin": [-5, 24, -4], "size": [1, 8, 0], "uv": [108, 8]},
+						{"origin": [-6, 28, -3], "size": [2, 2, 3], "inflate": 0.1, "uv": [71, 22]},
+						{"origin": [-7, 29, -3], "size": [1, 1, 3], "inflate": 0.09, "uv": [67, 13]},
+						{"origin": [6, 29, -3], "size": [1, 1, 3], "inflate": 0.09, "uv": [67, 13]},
+						{"origin": [-5, 26, -2.5], "size": [1, 2, 3], "uv": [57, 22]},
+						{"origin": [4, 26, -2.5], "size": [1, 2, 3], "uv": [57, 22]},
+						{"origin": [3.5, 24.5, 0.5], "size": [4, 4, 0], "uv": [100, 17]},
+						{"origin": [-7.5, 23.5, 0.5], "size": [4, 5, 0], "uv": [96, 17]},
+						{"origin": [4, 28, -3], "size": [2, 2, 3], "inflate": 0.1, "uv": [71, 22]}
+					]
+				},
+				{
+					"name": "hat",
+					"parent": "head",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "leftArm",
+					"parent": "body",
+					"pivot": [5, 23, 0],
+					"cubes": [
+						{"origin": [4, 12, -2], "size": [3, 12, 4], "uv": [32, 48]},
+						{"origin": [4, 14.1, -2], "size": [3, 2, 4], "inflate": 0.1, "uv": [90, 51]},
+						{"origin": [6.2, 15.3, -2], "size": [1, 1, 4], "inflate": 0.12, "uv": [90, 42]}
+					]
+				},
+				{
+					"name": "bone",
+					"parent": "leftArm",
+					"pivot": [4, 22, 0],
+					"rotation": [0, 0, -15],
+					"cubes": [
+						{"origin": [4, 21, -3], "size": [5, 3, 6], "uv": [106, 55]},
+						{"origin": [3.2, 16, -2], "size": [3, 3, 4], "inflate": 0.01, "uv": [74, 57]},
+						{"origin": [5, 20, -3], "size": [5, 1, 6], "uv": [106, 46]}
+					]
+				},
+				{
+					"name": "bone2",
+					"parent": "bone",
+					"pivot": [0, 0, 0],
+					"rotation": [0, 0, 35],
+					"cubes": [
+						{"origin": [-8.8, 17, -2], "size": [3, 2, 4], "inflate": 0.05, "uv": [89, 57]}
+					]
+				},
+				{
+					"name": "rightItem",
+					"parent": "leftArm",
+					"pivot": [5, 14, 1]
+				},
+				{
+					"name": "rotOut",
+					"parent": "leftArm",
+					"pivot": [0, 22, 2]
+				},
+				{
+					"name": "rightArm",
+					"parent": "body",
+					"pivot": [-5, 22, 0],
+					"cubes": [
+						{"origin": [-6.98858, 11.73853, -2], "size": [3, 12, 4], "uv": [40, 16]}
+					]
+				},
+				{
+					"name": "bone3",
+					"parent": "rightArm",
+					"pivot": [-8.98858, 23.73853, 0],
+					"rotation": [0, 0, 10],
+					"cubes": [
+						{"origin": [-6.8, 12.73853, -2], "size": [5, 12, 4], "inflate": 0.25, "uv": [80, 0]}
+					]
+				},
+				{
+					"name": "leftLeg",
+					"parent": "body",
+					"pivot": [2, 12, 0],
+					"cubes": [
+						{"origin": [0, 0, -2], "size": [4, 12, 4], "uv": [16, 48]}
+					]
+				},
+				{
+					"name": "rightLeg",
+					"parent": "body",
+					"pivot": [-2, 12, 0],
+					"cubes": [
+						{"origin": [-4, 0, -2], "size": [4, 12, 4], "uv": [0, 16]}
+					]
+				},
+				{
+					"name": "actual_body",
+					"parent": "body",
+					"pivot": [0, 12, 0],
+					"cubes": [
+						{"origin": [-4, 12, -2], "size": [8, 12, 4], "uv": [16, 16]},
+						{"origin": [-4, 12, -2], "size": [8, 12, 4], "inflate": 0.2, "uv": [16, 32]},
+						{"origin": [-0.5, 17.5, -2.3], "size": [1, 3, 0], "uv": [56, 21]}
+					]
+				},
+				{
+					"name": "rockets",
+					"parent": "actual_body",
+					"pivot": [0, 22, 2]
+				},
+				{
+					"name": "thruster_pack",
+					"parent": "rockets",
+					"pivot": [0, 22, 2],
+					"rotation": [45, 0, 0]
+				},
+				{
+					"name": "upper",
+					"parent": "thruster_pack",
+					"pivot": [0, 22, 2],
+					"rotation": [-27.5, 0, 0]
+				}
+			]
+		}
+	]
+}

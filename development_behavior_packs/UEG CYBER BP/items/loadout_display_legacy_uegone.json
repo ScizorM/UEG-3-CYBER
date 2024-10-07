@@ -1,0 +1,20 @@
+//bridge-file-version: #16
+{
+	"format_version": "1.21.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "sm:loadout_display_legacy_uegone"
+		},
+		"components": {
+			"minecraft:cooldown": {
+				"category": "select_lo",
+				"duration": 1
+			},
+			"minecraft:icon": "sm:loadout_legacy_uegone",
+			"minecraft:display_name": {
+				"value": "Loadout 3: Legacy - UEG 1"
+			},
+			"minecraft:hand_equipped": true
+		}
+	}
+}

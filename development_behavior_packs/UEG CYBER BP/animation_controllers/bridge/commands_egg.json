@@ -1,0 +1,45 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.bridge_egg.execute_commands": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"execute_command_id_2": "query.skin_id == 2"
+						},
+						{
+							"execute_command_id_1": "query.skin_id == 1"
+						}
+					]
+				},
+				"execute_command_id_1": {
+					"transitions": [
+						{
+							"default": "query.skin_id != 1"
+						}
+					],
+					"on_entry": [
+						"/function explosion_hicharge_normal",
+						"/function explosion_hicharge_parry",
+						"/execute @s[tag=icarus] ~ ~ ~ /summon sm:explosion_icarus",
+						"/execute @s[tag=icarus] ~ ~ ~ /function explosion_fire",
+						"/execute @s[tag=fish] ~ ~ ~ /function fish_explode",
+						"@s bridge:remove_command_id_1"
+					]
+				},
+				"execute_command_id_2": {
+					"transitions": [
+						{
+							"default": "query.skin_id != 2"
+						}
+					],
+					"on_entry": [
+						"/function explosion_effect_test",
+						"@s bridge:remove_command_id_2"
+					]
+				}
+			}
+		}
+	}
+}

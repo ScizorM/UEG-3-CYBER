@@ -1,0 +1,29 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "sm:torimoti",
+			"materials": {
+				"default": "guardian"
+			},
+			"textures": {
+				"default": "textures/entity/torimoti"
+			},
+			"geometry": {
+				"default": "geometry.torimoti"
+			},
+			"animations": {
+				"spin": "animation.torimoti.spin"
+			},
+			"scripts": {
+				"animate": [
+					"spin"
+				]
+			},
+			"render_controllers": [
+				"controller.render.guardian"
+			]
+		}
+	}
+}

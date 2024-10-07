@@ -1,0 +1,126 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.vulcan_cannon.first_person": {
+			"loop": true,
+			"bones": {
+				"rightItem": {
+					"rotation": [-27.5, 57.5, -72.5],
+					"position": [-6, -10, -3]
+				},
+				"gun": {
+					"position": [0, 0, 10]
+				},
+				"gun2": {
+					"rotation": [-7.5, 0, 0],
+					"position": [24, 6, 12]
+				},
+				"fire": {
+					"position": [24, 7, 19]
+				}
+			}
+		},
+		"animation.vulcan_cannon.first_person_recoil": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 1,
+			"bones": {
+				"rightItem": {
+					"rotation": [-27.5, 57.5, -72.5],
+					"position": [-6, -10, -3]
+				},
+				"gun": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.0417": [0, -26.25, 0],
+						"0.0833": [0, -27.5, 0],
+						"0.1667": [0, -3.75, 0],
+						"0.25": [0, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 10],
+						"0.0417": [0, 2, 10],
+						"0.25": [0, 0, 10]
+					}
+				},
+				"gun2": {
+					"rotation": [-7.5, 0, 0],
+					"position": [24, 6, 12]
+				},
+				"fire": {
+					"position": [24, 7, 19]
+				},
+				"upperholder": {
+					"rotation": {
+						"0.0": [0, 0, 2.5],
+						"0.125": [0, 0, 0]
+					}
+				},
+				"barrel2": {
+					"rotation": {
+						"0.0": [0, 0, -17.5],
+						"0.25": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.vulcan_cannon.third_person": {
+			"loop": true,
+			"bones": {
+				"gun2": {
+					"position": [6, -17, -1]
+				},
+				"rightItem": {
+					"position": [0, 24, 0]
+				}
+			}
+		},
+		"animation.vulcan_cannon.third_person_player": {
+			"loop": "hold_on_last_frame",
+			"override_previous_animation": true,
+			"bones": {
+				"gun2": {
+					"position": [6, -17, -1]
+				},
+				"leftArm": {
+					"rotation": [-67.47825, 30.78125, 37.42416]
+				},
+				"rightArm": {
+					"rotation": [-94.91798, -7.19524, -1.82691]
+				}
+			}
+		},
+		"animation.vulcan_cannon.third_person_recoil": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 1,
+			"override_previous_animation": true,
+			"bones": {
+				"gun2": {
+					"position": [6, -17, -1]
+				},
+				"leftArm": {
+					"rotation": {
+						"0.0": [-87.02434, 43.26708, 38.1735],
+						"0.125": [-91.7265, 63.85611, 31.45946],
+						"0.5": [-67.47825, 30.78125, 37.42416],
+						"0.75": [-67.47825, 30.78125, 37.42416],
+						"1.0": [-58.7901, -4.6121, 40.69769]
+					}
+				},
+				"rightArm": {
+					"rotation": {
+						"0.0": [-117.41798, -7.19524, -1.82691],
+						"0.125": [-141.16798, -7.19524, -1.82691],
+						"0.5": [-94.91798, -7.19524, -1.82691],
+						"0.75": [-94.91798, -7.19524, -1.82691],
+						"1.0": [-67.41798, -7.19524, -1.82691]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.0417": [0, -1, 2],
+						"0.2083": [0, 0, 0]
+					}
+				}
+			}
+		}
+	}
+}

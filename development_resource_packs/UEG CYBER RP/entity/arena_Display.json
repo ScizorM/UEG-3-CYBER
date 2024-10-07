@@ -1,0 +1,21 @@
+//bridge-file-version: #5
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "sm:arena_display",
+			"materials": {
+				"default": "guardian"
+			},
+			"textures": {
+				"default": "textures/entity/arena_terminal"
+			},
+			"geometry": {
+				"default": "geometry.arenaTerminal"
+			},
+			"render_controllers": [
+				"controller.render.guardian"
+			]
+		}
+	}
+}

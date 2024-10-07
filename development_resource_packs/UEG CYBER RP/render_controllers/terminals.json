@@ -1,0 +1,27 @@
+//bridge-file-version: #8
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.terminals": {
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"textures": [
+				"Array.top[query.variant]"
+			],
+			"arrays": {
+				"textures": {
+					"Array.top": [
+						"Texture.default",
+						"Texture.effect2",
+						"Texture.effect3",
+						"Texture.effect4"
+					]
+				}
+			},
+			"geometry": "Geometry.default"
+		}
+	}
+}

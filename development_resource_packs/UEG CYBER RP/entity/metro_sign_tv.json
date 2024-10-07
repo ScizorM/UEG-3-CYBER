@@ -1,0 +1,21 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "sm:metro_sign_tv",
+			"materials": {
+				"default": "entity"
+			},
+			"textures": {
+				"default": "textures/entity/metro_tv"
+			},
+			"geometry": {
+				"default": "geometry.metro_sign_tv"
+			},
+			"render_controllers": [
+				"controller.render.guardian"
+			]
+		}
+	}
+}

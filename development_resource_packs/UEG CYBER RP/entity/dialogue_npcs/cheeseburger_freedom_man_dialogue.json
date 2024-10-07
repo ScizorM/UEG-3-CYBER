@@ -1,0 +1,21 @@
+//bridge-file-version: #30
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "sm:cheeseburger_freedom_man_dialogue",
+			"textures": {
+				"default": "textures/dialogue_art/npcs/cheeseburger_freedom_man"
+			},
+			"geometry": {
+				"default": "geometry.model_s_model"
+			},
+			"render_controllers": [
+				"controller.render.glowing"
+			],
+			"materials": {
+				"default": "guardian"
+			}
+		}
+	}
+}

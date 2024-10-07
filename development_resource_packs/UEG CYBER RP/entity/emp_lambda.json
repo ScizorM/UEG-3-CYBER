@@ -1,0 +1,29 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "sm:emp_trap_lambda",
+			"materials": {
+				"default": "guardian"
+			},
+			"textures": {
+				"default": "textures/entity/emp_trap_lambda"
+			},
+			"geometry": {
+				"default": "geometry.emp_trap"
+			},
+			"render_controllers": [
+				"controller.render.darkless"
+			],
+			"animations": {
+				"emp": "animation.emp_trap.move"
+			},
+			"scripts": {
+				"animate": [
+					"emp"
+				]
+			}
+		}
+	}
+}

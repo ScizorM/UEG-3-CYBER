@@ -1,0 +1,17 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.10.0",
+	"render_controllers": {
+		"controller.render.guardian_old": {
+			"geometry": "Geometry.default",
+			"materials": [
+				{
+					"*": "query.is_ghost ? Material.ghost : Material.default"
+				}
+			],
+			"textures": [
+				"query.is_elder ? Texture.elder : Texture.default"
+			]
+		}
+	}
+}

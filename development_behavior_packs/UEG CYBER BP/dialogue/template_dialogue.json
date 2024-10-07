@@ -1,0 +1,68 @@
+//bridge-file-version: #17
+{
+	"format_version": "1.17.40",
+	"minecraft:npc_dialogue": {
+		"scenes": [
+			{
+				"scene_tag": "template_dialogue",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "Template Name"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"translate": "Template Text"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "Template Button 1"
+								}
+							]
+						},
+						"commands": [
+							"/say Template Message 1",
+							"/event entity @s sm:despawn"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "Template Button 2"
+								}
+							]
+						},
+						"commands": [
+							"/say Template Message 2",
+							"/event entity @s sm:despawn"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "Exit"
+								}
+							]
+						},
+						"commands": [
+							"/event entity @s sm:despawn"
+						]
+					}
+				],
+				"on_close_commands": [
+					"/event entity @s sm:despawn"
+				]
+			}
+		]
+	}
+}

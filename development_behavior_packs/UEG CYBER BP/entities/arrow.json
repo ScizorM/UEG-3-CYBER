@@ -1,0 +1,164 @@
+//bridge-file-version: #56
+{
+	"format_version": "1.12.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "minecraft:arrow",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false,
+			"scripts": {
+				"animate": [
+					"bridge_execute_commands"
+				]
+			},
+			"animations": {
+				"bridge_execute_commands": "controller.animation.bridge_arrow.execute_commands"
+			}
+		},
+		"component_groups": {
+			"minecraft:exploding": {
+				"minecraft:explode": {
+					"fuse_length": 0,
+					"fuse_lit": true,
+					"power": 6,
+					"destroy_affected_by_griefing": true
+				}
+			},
+			"sm:projectile_phaseone": {
+				"minecraft:projectile": {
+					"on_hit": {
+						"definition_event": {
+							"affect_projectile": true,
+							"event_trigger": {
+								"event": "minecraft:explode",
+								"target": "self"
+							}
+						}
+					},
+					"power": 3,
+					"gravity": 0,
+					"inertia": 1,
+					"liquid_inertia": 1,
+					"uncertainty_base": 0,
+					"uncertainty_multiplier": 0,
+					"anchor": 1,
+					"offset": [
+						0,
+						-0.1,
+						0
+					],
+					"reflect_on_hurt": false
+				}
+			},
+			"sm:projectile_phasetwo": {
+				"minecraft:projectile": {
+					"on_hit": {
+						"definition_event": {
+							"affect_projectile": true,
+							"event_trigger": {
+								"event": "minecraft:explode",
+								"target": "self"
+							}
+						}
+					},
+					"power": 3,
+					"gravity": 0,
+					"inertia": 1,
+					"liquid_inertia": 1,
+					"uncertainty_base": 0,
+					"uncertainty_multiplier": 0,
+					"anchor": 1,
+					"offset": [
+						0,
+						-0.1,
+						0
+					],
+					"reflect_on_hurt": false
+				}
+			},
+			"despawn": {
+				"minecraft:instant_despawn": {}
+			},
+			"bridge:execute_command_id_1": {
+				"minecraft:skin_id": {
+					"value": 1
+				}
+			},
+			"bridge:execute_no_command": {
+				"minecraft:skin_id": {
+					"value": 0
+				}
+			}
+		},
+		"components": {
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": true,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:collision_box": {
+				"width": 0.1,
+				"height": 0.1
+			},
+			"minecraft:timer": {
+				"looping": false,
+				"time": [
+					1,
+					1
+				],
+				"time_down_event": {
+					"event": "sm:phasetwo"
+				}
+			}
+		},
+		"events": {
+			"minecraft:explode": {
+				"add": {
+					"component_groups": [
+						"bridge:execute_command_id_1",
+						"minecraft:exploding"
+					]
+				}
+			},
+			"minecraft:entity_spawned": {
+				"add": {
+					"component_groups": [
+						"sm:projectile_phaseone"
+					]
+				}
+			},
+			"sm:phasetwo": {
+				"add": {
+					"component_groups": [
+						"sm:projectile_phasetwo"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"sm:projectile_phaseone"
+					]
+				}
+			},
+			"sm:despawn": {
+				"add": {
+					"component_groups": [
+						"despawn"
+					]
+				}
+			},
+			"bridge:remove_command_id_1": {
+				"add": {
+					"component_groups": [
+						"bridge:execute_no_command"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"bridge:execute_command_id_1"
+					]
+				}
+			}
+		}
+	}
+}

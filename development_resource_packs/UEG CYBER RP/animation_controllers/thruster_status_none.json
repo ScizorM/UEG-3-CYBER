@@ -1,0 +1,38 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.thruster_status_none": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"firstperson": "context.is_first_person",
+							"thirdperson": "context.is_first_person == false"
+						}
+					]
+				},
+				"firstperson": {
+					"transitions": [
+						{
+							"thirdperson": "context.is_first_person == false"
+						}
+					],
+					"animations": [
+						"fist_fp"
+					]
+				},
+				"thirdperson": {
+					"transitions": [
+						{
+							"firstperson": "context.is_first_person"
+						}
+					],
+					"animations": [
+						"fist_tp"
+					]
+				}
+			}
+		}
+	}
+}

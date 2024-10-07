@@ -1,0 +1,31 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "sm:gob_goo_blast",
+			"materials": {
+				"default": "snowball"
+			},
+			"textures": {
+				"goop": "textures/items/snowball",
+				"ice": "textures/items/frigidball",
+				"fire": "textures/items/flareball"
+			},
+			"geometry": {
+				"default": "geometry.item_sprite"
+			},
+			"render_controllers": [
+				"controller.render.snowball"
+			],
+			"animations": {
+				"flying": "animation.actor.billboard"
+			},
+			"scripts": {
+				"animate": [
+					"flying"
+				]
+			}
+		}
+	}
+}

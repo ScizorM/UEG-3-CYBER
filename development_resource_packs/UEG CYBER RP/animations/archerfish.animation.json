@@ -1,0 +1,56 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.archerfish.firstperson": {
+			"loop": true,
+			"bones": {
+				"gun2": {
+					"rotation": [194.58394, 11.01401, 140.67718],
+					"position": [4.48599, 4.21109, 3.33805]
+				},
+				"archerfish_sideways": {
+					"position": [0.739, 1.05673, -0.51867]
+				}
+			}
+		},
+		"animation.archerfish.fire": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.75,
+			"bones": {
+				"gun2": {
+					"rotation": [194.58394, 11.01401, 140.67718],
+					"position": [4.48599, 4.21109, 3.33805]
+				},
+				"archerfish_sideways": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.0417": [0, 0, -40],
+						"0.5": [0, 0, 0]
+					},
+					"position": {
+						"0.0": [0.739, 1.05673, -0.51867],
+						"0.0417": [0.74, 6.06, -0.52],
+						"0.5": [0.739, 1.05673, -0.51867]
+					}
+				},
+				"bone": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.0417": [0, 0, 77.5],
+						"0.5": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.archerfish.thirdperson": {
+			"loop": true,
+			"bones": {
+				"archerfish_sideways": {
+					"rotation": [97.5, 0, 0],
+					"position": [7, 8.50386, 0.82723],
+					"scale": 0.7
+				}
+			}
+		}
+	}
+}

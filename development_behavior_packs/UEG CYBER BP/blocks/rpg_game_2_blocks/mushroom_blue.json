@@ -1,0 +1,20 @@
+//bridge-file-version: #7
+{
+	"format_version": "1.21.10",
+	"minecraft:block": {
+		"description": {
+			"identifier": "sm:mushroom_blue"
+		},
+		"components": {
+			"minecraft:light_emission": 0.5,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "sm:mushroom_blue",
+					"face_dimming": false,
+					"ambient_occlusion": true,
+					"render_method": "blend"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,29 @@
+//bridge-file-version: #23
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "sm:explosion_display_parry",
+			"textures": {
+				"default": "textures/entity/explosion_parry"
+			},
+			"geometry": {
+				"default": "geometry.explosion"
+			},
+			"render_controllers": [
+				"controller.render.nolighting"
+			],
+			"materials": {
+				"default": "entity_emissive_alpha"
+			},
+			"animations": {
+				"scale": "animation.explosion.scale"
+			},
+			"scripts": {
+				"animate": [
+					"scale"
+				]
+			}
+		}
+	}
+}

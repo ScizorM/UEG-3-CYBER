@@ -1,0 +1,21 @@
+//bridge-file-version: #17
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.team_indicator": {
+			"ignore_lighting": true,
+			"geometry": "Geometry.default",
+			"textures": [
+				"Texture.default"
+			],
+			"materials": [
+				{
+					"Body": "Material.outline"
+				},
+				{
+					"*": "Material.base"
+				}
+			]
+		}
+	}
+}

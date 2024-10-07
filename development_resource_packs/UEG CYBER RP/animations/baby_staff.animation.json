@@ -1,0 +1,23 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.baby_staff.first_person": {
+			"loop": true,
+			"bones": {
+				"donotchangerightitempivot": {
+					"rotation": [238.5506, 60.9164, -84.38088],
+					"position": [4, 9, -1]
+				}
+			}
+		},
+		"animation.baby_staff.third_person": {
+			"loop": true,
+			"bones": {
+				"donotchangerightitempivot": {
+					"rotation": [-90, 0, -7.5],
+					"position": [5, 7, 0]
+				}
+			}
+		}
+	}
+}

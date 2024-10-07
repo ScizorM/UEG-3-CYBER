@@ -1,0 +1,22 @@
+//bridge-file-version: #10
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "sm:terminal_leave_teams",
+			"materials": {
+				"default": "guardian"
+			},
+			"textures": {
+				"default": "textures/entity/terminal_leave_teams",
+				"effect2": "textures/entity/terminal_round_active"
+			},
+			"geometry": {
+				"default": "geometry.terminal_all"
+			},
+			"render_controllers": [
+				"controller.render.terminals"
+			]
+		}
+	}
+}

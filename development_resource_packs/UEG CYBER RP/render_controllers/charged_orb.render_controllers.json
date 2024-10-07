@@ -1,0 +1,26 @@
+//bridge-file-version: #10
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.charged_orb": {
+			"geometry": "geometry.default",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"textures": [
+				"Array.types[query.variant]"
+			],
+			"filter_lighting": true,
+			"arrays": {
+				"textures": {
+					"Array.types": [
+						"Texture.default",
+						"Texture.icarus"
+					]
+				}
+			}
+		}
+	}
+}

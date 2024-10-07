@@ -1,0 +1,32 @@
+//bridge-file-version: #62
+{
+	"format_version": "1.10.0",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "sm:baby_stick",
+			"materials": {
+				"default": "entity_alphatest",
+				"enchanted": "entity_alphatest_glint"
+			},
+			"geometry": {
+				"default": "geometry.baby_staff"
+			},
+			"render_controllers": [
+				"controller.render.guardian"
+			],
+			"animations": {
+				"controller": "controller.animation.baby_staff",
+				"fist_tp": "animation.baby_staff.third_person",
+				"fist_fp": "animation.baby_staff.first_person"
+			},
+			"scripts": {
+				"animate": [
+					"controller"
+				]
+			},
+			"textures": {
+				"default": "textures/entity/weapons/baby_staff"
+			}
+		}
+	}
+}

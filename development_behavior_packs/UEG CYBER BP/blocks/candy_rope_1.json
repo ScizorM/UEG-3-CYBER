@@ -1,0 +1,51 @@
+//bridge-file-version: #7
+{
+	"format_version": "1.21.10",
+	"minecraft:block": {
+		"description": {
+			"identifier": "sm:candy_rope_1"
+		},
+		"components": {
+			"minecraft:display_name": "Candy Rope 1",
+			"minecraft:geometry": "geometry.candy_rope_1",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "sm:candy_rope_1",
+					"face_dimming": false,
+					"ambient_occlusion": true,
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 1
+			},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 3
+			},
+			"minecraft:collision_box": {
+				"origin": [
+					-1,
+					8,
+					-8
+				],
+				"size": [
+					2,
+					2,
+					16
+				]
+			},
+			"minecraft:selection_box": {
+				"origin": [
+					-1,
+					8,
+					-8
+				],
+				"size": [
+					2,
+					2,
+					16
+				]
+			}
+		}
+	}
+}

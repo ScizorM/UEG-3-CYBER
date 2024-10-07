@@ -1,0 +1,455 @@
+//bridge-file-version: #47
+{
+	"resource_pack_name": "bridgeRP",
+	"texture_name": "atlas.items",
+	"texture_data": {
+		"sm:unused_item": {
+			"textures": [
+				"textures/items/new_icons/unused_item"
+			]
+		},
+		"sm:dash_component": {
+			"textures": [
+				"textures/items/new_icons/dash_component"
+			]
+		},
+		"sm:settings":{
+			"textures":[
+				"textures/items/settings"
+			]
+		},
+		"sm:dev_item": {
+			"textures": [
+				"textures/items/new_icons/dev_item"
+			]
+		},
+		"sm:cosmetic_component": {
+			"textures": [
+				"textures/items/new_icons/cosmetic_component"
+			]
+		},
+		"sm:effect_component": {
+			"textures": [
+				"textures/items/new_icons/effect_component"
+			]
+		},
+		"sm:race_info_shadow": {
+			"textures": [
+				"textures/items/race_items/placeholder_shadow"
+			]
+		},
+		"sm:race_info_orc": {
+			"textures": [
+				"textures/items/race_items/placeholder_orc"
+			]
+		},
+		"sm:race_info_spectral": {
+			"textures": [
+				"textures/items/race_items/placeholder_spectral"
+			]
+		},
+		"sm:race_info_fairy": {
+			"textures": [
+				"textures/items/race_items/placeholder_fairy"
+			]
+		},
+		"sm:race_info_robot": {
+			"textures": [
+				"textures/items/race_items/placeholder_robot"
+			]
+		},
+		"sm:race_info_demon": {
+			"textures": [
+				"textures/items/race_items/placeholder_demon"
+			]
+		},
+		"sm:charged_bolt_rifle": {
+			"textures": [
+				"textures/items/bolt_rifle_2d"
+			]
+		},
+		"sm:vulcan_cannon": {
+			"textures": [
+				"textures/items/vulcan_cannon"
+			]
+		},
+		"sm:block_fabricator": {
+			"textures": [
+				"textures/items/block_fabricator"
+			]
+		},
+		"sm:repulsion_blade": {
+			"textures": [
+				"textures/items/repulsion_blade"
+			]
+		},
+		"sm:platform_fabricator": {
+			"textures": [
+				"textures/items/instant_platform"
+			]
+		},
+		"sm:landmine": {
+			"textures": [
+				"textures/items/landmine"
+			]
+		},
+		"sm:landmine_ver_nu": {
+			"textures": [
+				"textures/items/landmine_ver_nu"
+			]
+		},
+		"sm:landmine_ver_psi": {
+			"textures": [
+				"textures/items/landmine_ver_psi"
+			]
+		},
+		"sm:remote_explosive": {
+			"textures": [
+				"textures/items/remote_explosive"
+			]
+		},
+		"sm:energy_pickaxe": {
+			"textures": [
+				"textures/items/energy_pickaxe"
+			]
+		},
+		"sm:arena_1": {
+			"textures": [
+				"textures/items/pregame_menu/arena_1"
+			]
+		},
+		"sm:arena_2": {
+			"textures": [
+				"textures/items/pregame_menu/arena_2"
+			]
+		},
+		"sm:arena_3": {
+			"textures": [
+				"textures/items/pregame_menu/arena_3"
+			]
+		},
+		"sm:loadout_1": {
+			"textures": [
+				"textures/items/pregame_menu/loadout_1"
+			]
+		},
+		"sm:loadout_2": {
+			"textures": [
+				"textures/items/pregame_menu/loadout_2"
+			]
+		},
+		"sm:loadout_3": {
+			"textures": [
+				"textures/items/pregame_menu/loadout_3"
+			]
+		},
+		"sm:bow": {
+			"textures": [
+				"textures/items/bow_pulling_2"
+			]
+		},
+		"sm:crossbow": {
+			"textures": [
+				"textures/items/crossbow_arrow"
+			]
+		},
+		"sm:gob_goo_cannon": {
+			"textures": [
+				"textures/items/gob_goo_cannon"
+			]
+		},
+		"sm:sc_quant-e": {
+			"textures": [
+				"textures/items/SC_QUANT-E"
+			]
+		},
+		"sm:baby_stick": {
+			"textures": [
+				"textures/items/secret/baby_wand"
+			]
+		},
+		"sm:antigrav_prism": {
+			"textures": [
+				"textures/items/antigravity_prism"
+			]
+		},
+		"sm:team_nu": {
+			"textures": [
+				"textures/items/team_nu"
+			]
+		},
+		"sm:team_lambda": {
+			"textures": [
+				"textures/items/team_lambda"
+			]
+		},
+		"sm:lobby_team": {
+			"textures": [
+				"textures/items/lobby"
+			]
+		},
+		"sm:sound_blade_1": {
+			"textures": [
+				"textures/items/sound_blade_1"
+			]
+		},
+		"sm:sound_blade_2": {
+			"textures": [
+				"textures/items/sound_blade_2"
+			]
+		},
+		"sm:ability_none": {
+			"textures": [
+				"textures/items/ability_none"
+			]
+		},
+		"sm:ability_baby": {
+			"textures": [
+				"textures/items/ability_baby"
+			]
+		},
+		"sm:ability_prism": {
+			"textures": [
+				"textures/items/ability_prism"
+			]
+		},
+		"sm:ability_remote": {
+			"textures": [
+				"textures/items/ability_remote"
+			]
+		},
+		"sm:ability_rocket": {
+			"textures": [
+				"textures/items/ability_rocket"
+			]
+		},
+		"sm:emp_drive": {
+			"textures": [
+				"textures/items/emp_drive"
+			]
+		},
+		"sm:salmon_bomb": {
+			"textures": [
+				"textures/items/modified_salmon"
+			]
+		},
+		"sm:big_joe": {
+			"textures": [
+				"textures/items/big_joe"
+			]
+		},
+		"sm:thruster_cosmetic": {
+			"textures": [
+				"textures/items/cosmetic"
+			]
+		},
+		"sm:escalator_up": {
+			"textures": [
+				"textures/items/escalator_up"
+			]
+		},
+		"sm:escalator_down": {
+			"textures": [
+				"textures/items/escalator_down"
+			]
+		},
+		"sm:gob_dog": {
+			"textures": [
+				"textures/items/foods/gob_dog"
+			]
+		},
+		"sm:gob_fries": {
+			"textures": [
+				"textures/items/foods/gob_fries"
+			]
+		},
+		"sm:ability_vel_cancel": {
+			"textures": [
+				"textures/items/ability_vel_cancel"
+			]
+		},
+		"sm:loadout_custom": {
+			"textures": [
+				"textures/items/pregame_menu/loadout_custom"
+			]
+		},
+		"sm:loadout_default": {
+			"textures": [
+				"textures/items/pregame_menu/loadout_default"
+			]
+		},
+		"sm:loadout_legacy_pre_uegone": {
+			"textures": [
+				"textures/items/pregame_menu/loadout_legacy_pre_uegone"
+			]
+		},
+		"sm:loadout_legacy_uegone": {
+			"textures": [
+				"textures/items/pregame_menu/loadout_legacy_uegone"
+			]
+		},
+		"sm:loadout_legacy_uegplus": {
+			"textures": [
+				"textures/items/pregame_menu/loadout_legacy_uegplus"
+			]
+		},
+		"sm:loadout_melee": {
+			"textures": [
+				"textures/items/pregame_menu/loadout_melee"
+			]
+		},
+		"sm:loadout_mission": {
+			"textures": [
+				"textures/items/pregame_menu/loadout_mission"
+			]
+		},
+		"sm:loadout_purchasables": {
+			"textures": [
+				"textures/items/pregame_menu/loadout_purchasables"
+			]
+		},
+		"sm:loadout_ranged": {
+			"textures": [
+				"textures/items/pregame_menu/loadout_ranged"
+			]
+		},
+		"sm:loadout_secrets": {
+			"textures": [
+				"textures/items/pregame_menu/loadout_secrets"
+			]
+		},
+		"sm:loadout_spleef": {
+			"textures": [
+				"textures/items/pregame_menu/loadout_spleef"
+			]
+		},
+		"sm:frigidus_cannon": {
+			"textures": [
+				"textures/items/frigid_cannon"
+			]
+		},
+		"sm:solis_cannon": {
+			"textures": [
+				"textures/items/flare_cannon"
+			]
+		},
+		"sm:sight_blade": {
+			"textures": [
+				"textures/items/sight_blade"
+			]
+		},
+		"sm:category_left": {
+			"textures": [
+				"textures/items/custom_menu/category_left"
+			]
+		},
+		"sm:category_right": {
+			"textures": [
+				"textures/items/custom_menu/category_right"
+			]
+		},
+		"sm:menu_left": {
+			"textures": [
+				"textures/items/custom_menu/menu_left"
+			]
+		},
+		"sm:menu_right": {
+			"textures": [
+				"textures/items/custom_menu/menu_right"
+			]
+		},
+		"sm:left": {
+			"textures": [
+				"textures/items/custom_menu/left"
+			]
+		},
+		"sm:right": {
+			"textures": [
+				"textures/items/custom_menu/right"
+			]
+		},
+		"sm:select": {
+			"textures": [
+				"textures/items/custom_menu/select"
+			]
+		},
+		"sm:shield_idle": {
+			"textures": [
+				"textures/items/shield_idle"
+			]
+		},
+		"sm:shield_frame1": {
+			"textures": [
+				"textures/items/shield_frame1"
+			]
+		},
+		"sm:shield_frame2": {
+			"textures": [
+				"textures/items/shield_frame2"
+			]
+		},
+		"sm:locked": {
+			"textures": [
+				"textures/items/locked"
+			]
+		},
+		"sm:exit_menu": {
+			"textures": [
+				"textures/items/custom_menu/exit"
+			]
+		},
+		"sm:rotate": {
+			"textures": [
+				"textures/items/custom_menu/rotate"
+			]
+		},
+		"sm:parry_fist": {
+			"textures": [
+				"textures/items/parry_fist"
+			]
+		},
+		"sm:emp_trap": {
+			"textures": [
+				"textures/items/emp_trap"
+			]
+		},
+		"sm:sc_quant_e_new": {
+			"textures": [
+				"textures/items/sc_quant_e_new_frame1",
+				"textures/items/sc_quant_e_new_frame2",
+				"textures/items/sc_quant_e_new_frame3",
+				"textures/items/sc_quant_e_new_frame4"
+			]
+		},
+		"sm:heavenpiercer": {
+			"textures": [
+				"textures/items/heavenpiercer"
+			]
+		},
+		"sm:true_holic": {
+			"textures": [
+				"textures/items/holic"
+			]
+		},
+		"sm:smorgler": {
+			"textures": [
+				"textures/items/smorgler"
+			]
+		},
+		"sm:archerfish": {
+			"textures": [
+				"textures/items/archerfish"
+			]
+		},
+		"sm:icarus_temp": {
+			"textures": [
+				"textures/items/flareball"
+			]
+		},
+		"sm:purchase": {
+			"textures": [
+				"textures/items/purchase"
+			]
+		}
+	}
+}

@@ -1,0 +1,25 @@
+{
+	"format_version": "1.10.0",
+	"geometry.race_info": {
+		"texturewidth": 64,
+		"textureheight": 64,
+		"visible_bounds_width": 8,
+		"visible_bounds_height": 5.5,
+		"visible_bounds_offset": [0, 1.25, 0],
+		"bones": [
+			{
+				"name": "head",
+				"pivot": [0, 24, 0]
+			},
+			{
+				"name": "bone3",
+				"parent": "head",
+				"pivot": [0, 24, -20],
+				"rotation": [0, 180, 0],
+				"cubes": [
+					{"origin": [-4, 25, -28.3], "size": [8, 8, 9], "uv": [0, 0], "inflate": 1}
+				]
+			}
+		]
+	}
+}

@@ -1,0 +1,31 @@
+//bridge-file-version: #32
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.robot_frames": {
+			"geometry": "Geometry.default",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"textures": [
+				"Array.skins[query.variant]"
+			],
+			"arrays": {
+				"textures": {
+					"Array.skins": [
+						"Texture.default",
+						"Texture.default_blink",
+						"Texture.jumping",
+						"Texture.jumping_blink",
+						"Texture.thinking",
+						"Texture.thinking_blink",
+						"Texture.tinkering",
+						"Texture.tinkering_blink"
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,44 @@
+//bridge-file-version: #13
+{
+	"format_version": "1.21.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "sm:exit_menu"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "sm:exit_menu"
+			},
+			"minecraft:display_name": {
+				"value": "[Unused Item] Exit"
+			},
+			"minecraft:cooldown": {
+				"category": "menuChanger",
+				"duration": 0.3
+			},
+			"minecraft:render_offsets": {
+				"main_hand": {
+					"first_person": {
+						"scale": [
+							0,
+							0,
+							0
+						]
+					},
+					"third_person": {
+						"scale": [
+							0,
+							0,
+							0
+						],
+						"position": [
+							0,
+							0,
+							0
+						]
+					}
+				}
+			}
+		}
+	}
+}

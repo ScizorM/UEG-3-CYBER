@@ -1,0 +1,496 @@
+//bridge-file-version: #103
+{
+	"format_version": "1.14.0",
+	"sound_definitions": {
+		"blackhole_bomb": {
+			"min_distance": 0,
+			"sounds": [
+				{
+					"name": "sounds/weapons/black_hole_bomb",
+					"load_on_low_memory": true,
+					"stream": false,
+					"volume": 2.5
+				}
+			],
+			"category": "music"
+		},
+		"baby_staff": {
+			"category": "music",
+			"min_distance": 0,
+			"sounds": [
+				"sounds/weapons/baby_staff",
+				"sounds/weapons/baby_staff_2",
+				"sounds/weapons/baby_staff_3"
+			]
+		},
+		"vulcan_cannon": {
+			"sounds": [
+				{
+					"name": "sounds/weapons/vulcan_cannon",
+					"volume": 0.75
+				}
+			],
+			"category": "music"
+		},
+		"emp": {
+			"sounds": [
+				"sounds/weapons/emp"
+			],
+			"category": "music"
+		},
+		"big_joe": {
+			"category": "music",
+			"sounds": [
+				"sounds/weapons/big_joe"
+			]
+		},
+		"armor.equip_generic": {
+			"sounds": [
+				{
+					"volume": 0,
+					"name": "sounds/weapons/baby_staff_3"
+				}
+			]
+		},
+		"death": {
+			"sounds": [
+				{
+					"name": "sounds/weapons/death_new",
+					"volume": 2
+				}
+			],
+			"category": "music"
+		},
+		"charged_bolt": {
+			"sounds": [
+				{
+					"name": "sounds/weapons/charged_bolt_rifle",
+					"volume": 1
+				}
+			],
+			"category": "music"
+		},
+		"gob_goo": {
+			"sounds": [
+				{
+					"name": "sounds/weapons/gob_goo",
+					"volume": 1.5
+				}
+			],
+			"category": "music"
+		},
+		"grav_prism": {
+			"sounds": [
+				{
+					"name": "sounds/weapons/grav_prism",
+					"volume": 1.2
+				}
+			],
+			"category": "music"
+		},
+		"respawn": {
+			"category": "music",
+			"sounds": [
+				{
+					"name": "sounds/weapons/respawn",
+					"volume": 1.25
+				}
+			]
+		},
+		"music.boatride": {
+			"sounds": [
+				{
+					"name": "sounds/music/kaizoslumber_schlierberg_edit",
+					"stream": true,
+					"volume": 1
+				}
+			],
+			"category": "music"
+		},
+		"parry": {
+			"sounds": [
+				{
+					"name": "sounds/weapons/parry_new",
+					"volume": 1
+				}
+			],
+			"category": "music"
+		},
+		"stun": {
+			"category": "music",
+			"sounds": [
+				{
+					"name": "sounds/weapons/stun",
+					"volume": 3
+				}
+			]
+		},
+		"music.marionette": {
+			"category": "music",
+			"sounds": [
+				{
+					"name": "sounds/music/ingame_music/kaizoslumber_marionette",
+					"volume": 0.5
+				}
+			]
+		},
+		"music.galaxy_torimoti": {
+			"category": "music",
+			"sounds": [
+				{
+					"volume": 0.5,
+					"name": "sounds/music/ingame_music/kaizoslumber_galaxy_torimoti"
+				}
+			]
+		},
+		"music.tv_makes_you_dumber": {
+			"category": "music",
+			"sounds": [
+				{
+					"volume": 0.5,
+					"name": "sounds/music/ingame_music/kaizoslumber_tv_makes_you_dumber"
+				}
+			]
+		},
+		"music.comic_mischief": {
+			"category": "music",
+			"sounds": [
+				{
+					"volume": 0.5,
+					"name": "sounds/music/ingame_music/kaizoslumber_comic_mischief"
+				}
+			]
+		},
+		"music.glassy_twins": {
+			"category": "music",
+			"sounds": [
+				{
+					"volume": 0.5,
+					"name": "sounds/music/ingame_music/kaizoslumber_glassy_twins"
+				}
+			]
+		},
+		"music.anything_to_gain_nothing_to_lose": {
+			"category": "music",
+			"sounds": [
+				{
+					"volume": 0.5,
+					"name": "sounds/music/ingame_music/kaizoslumber-fax-gang_anythingtogain"
+				}
+			]
+		},
+		"music.eject_plus_channel": {
+			"category": "music",
+			"sounds": [
+				{
+					"volume": 0.5,
+					"name": "sounds/music/ingame_music/kaizoslumber_eject_plus"
+				}
+			]
+		},
+		"music.my_turbo_xeona": {
+			"category": "music",
+			"sounds": [
+				{
+					"volume": 0.5,
+					"name": "sounds/music/ingame_music/kaizoslumber_turbo_xeona"
+				}
+			]
+		},
+		"music.tinydeath_kaizo_slumber_mix": {
+			"category": "music",
+			"sounds": [
+				{
+					"volume": 0.5,
+					"name": "sounds/music/ingame_music/kaizoslumber-murrumur_tinydeath_kaizomix"
+				}
+			]
+		},
+		"music.green_comet_in_the_key_of_something": {
+			"category": "music",
+			"sounds": [
+				{
+					"volume": 0.5,
+					"name": "sounds/music/ingame_music/kaizoslumber_greencomet"
+				}
+			]
+		},
+		"music.aquas_door_heaven_mix": {
+			"category": "music",
+			"sounds": [
+				{
+					"volume": 0.5,
+					"name": "sounds/music/ingame_music/kaizoslumber_aqua-door"
+				}
+			]
+		},
+		"music.a_conflict_between_earth_mother_and_the_technogaia": {
+			"category": "music",
+			"sounds": [
+				{
+					"volume": 0.5,
+					"name": "sounds/music/ingame_music/kaizoslumber_conflict"
+				}
+			]
+		},
+		"music.you_wouldnt_download": {
+			"category": "music",
+			"sounds": [
+				{
+					"volume": 0.5,
+					"name": "sounds/music/ingame_music/kaizoslumber_you_wouldnt_download"
+				}
+			]
+		},
+		"music.purple_is_the_new_green": {
+			"category": "music",
+			"sounds": [
+				{
+					"volume": 0.5,
+					"name": "sounds/music/ingame_music/kaizoslumber_purple_is_the_new_green"
+				}
+			]
+		},
+		"music.schlierberg": {
+			"category": "music",
+			"sounds": [
+				{
+					"volume": 0.5,
+					"name": "sounds/music/ingame_music/kaizoslumber_schlierberg"
+				}
+			]
+		},
+		"music.a_nu_earth": {
+			"category": "music",
+			"sounds": [
+				{
+					"volume": 0.5,
+					"name": "sounds/music/ingame_music/kaizoslumber_nu_earth"
+				}
+			]
+		},
+		"music.tagrst": {
+			"category": "music",
+			"sounds": [
+				{
+					"volume": 0.5,
+					"name": "sounds/music/lobby_music/kaizoslumber_tagrst"
+				}
+			]
+		},
+		"music.urti": {
+			"category": "music",
+			"sounds": [
+				{
+					"volume": 0.5,
+					"name": "sounds/music/lobby_music/kaizoslumber_urti"
+				}
+			]
+		},
+		"music.gengar_ecstasy": {
+			"category": "music",
+			"sounds": [
+				{
+					"volume": 0.5,
+					"name": "sounds/music/ingame_music/kaizoslumber_gengar"
+				}
+			]
+		},
+		"music.space_angels_from_cyrene": {
+			"category": "music",
+			"sounds": [
+				{
+					"volume": 0.5,
+					"name": "sounds/music/ingame_music/kaizoslumber_spaceangels"
+				}
+			]
+		},
+		"music.kjshuffle": {
+			"category": "music",
+			"sounds": [
+				{
+					"name": "sounds/music/ingame_music/joke_songs/daddyd_kjshuffle",
+					"volume": 0.6
+				}
+			]
+		},
+		"music.mountaindew": {
+			"category": "music",
+			"sounds": [
+				{
+					"name": "sounds/music/ingame_music/joke_songs/daddyd_mountaindew",
+					"volume": 0.6
+				}
+			]
+		},
+		"music.pineapple": {
+			"category": "music",
+			"sounds": [
+				{
+					"name": "sounds/music/ingame_music/joke_songs/daddyd_pineapple",
+					"volume": 0.6
+				}
+			]
+		},
+		"banan_slip": {
+			"sounds": [
+				{
+					"name": "sounds/effects/banan_slip"
+				}
+			],
+			"category": "music"
+		},
+		"zone_warning": {
+			"sounds": [
+				{
+					"name": "sounds/zonewarning"
+				}
+			],
+			"category": "music"
+		},
+		"preview_a_nu_earth": {
+			"category": "music",
+			"sounds": [
+				{
+					"name": "sounds/music/previews/preview_a_nu_earth"
+				}
+			]
+		},
+		"preview_anythingtogain": {
+			"category": "music",
+			"sounds": [
+				{
+					"name": "sounds/music/previews/preview_anythingtogain"
+				}
+			]
+		},
+		"preview_aquasdoor": {
+			"category": "music",
+			"sounds": [
+				{
+					"name": "sounds/music/previews/preview_aquasdoor"
+				}
+			]
+		},
+		"preview_comic_mischief": {
+			"category": "music",
+			"sounds": [
+				{
+					"name": "sounds/music/previews/preview_comic_mischief"
+				}
+			]
+		},
+		"preview_conflict_earthmother": {
+			"category": "music",
+			"sounds": [
+				{
+					"name": "sounds/music/previews/preview_conflict_earthmother"
+				}
+			]
+		},
+		"preview_ejectplus": {
+			"category": "music",
+			"sounds": [
+				{
+					"name": "sounds/music/previews/preview_ejectplus"
+				}
+			]
+		},
+		"preview_galaxy_torimoti": {
+			"category": "music",
+			"sounds": [
+				{
+					"name": "sounds/music/previews/preview_galaxy_torimoti"
+				}
+			]
+		},
+		"preview_gengar_ecstasy": {
+			"category": "music",
+			"sounds": [
+				{
+					"name": "sounds/music/previews/preview_gengar_ecstasy"
+				}
+			]
+		},
+		"preview_glassy_twins": {
+			"category": "music",
+			"sounds": [
+				{
+					"name": "sounds/music/previews/preview_glassy_twins"
+				}
+			]
+		},
+		"preview_greencomet": {
+			"category": "music",
+			"sounds": [
+				{
+					"name": "sounds/music/previews/preview_greencomet"
+				}
+			]
+		},
+		"preview_marionette": {
+			"category": "music",
+			"sounds": [
+				{
+					"name": "sounds/music/previews/preview_marionette"
+				}
+			]
+		},
+		"preview_purple_green": {
+			"category": "music",
+			"sounds": [
+				{
+					"name": "sounds/music/previews/preview_purple_green"
+				}
+			]
+		},
+		"preview_schlierberg": {
+			"category": "music",
+			"sounds": [
+				{
+					"name": "sounds/music/previews/preview_schlierberg"
+				}
+			]
+		},
+		"preview_spaceangels": {
+			"category": "music",
+			"sounds": [
+				{
+					"name": "sounds/music/previews/preview_spaceangels"
+				}
+			]
+		},
+		"preview_tinydeath": {
+			"category": "music",
+			"sounds": [
+				{
+					"name": "sounds/music/previews/preview_tinydeath"
+				}
+			]
+		},
+		"preview_turbo_xeona": {
+			"category": "music",
+			"sounds": [
+				{
+					"name": "sounds/music/previews/preview_turbo_xeona"
+				}
+			]
+		},
+		"preview_tv_makes_you_dumber": {
+			"category": "music",
+			"sounds": [
+				{
+					"name": "sounds/music/previews/preview_tv_makes_you_dumber"
+				}
+			]
+		},
+		"preview_you_wouldnt_download": {
+			"category": "music",
+			"sounds": [
+				{
+					"name": "sounds/music/previews/preview_you_wouldnt_download"
+				}
+			]
+		}
+	}
+}

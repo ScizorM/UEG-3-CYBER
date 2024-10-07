@@ -1,0 +1,197 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.lambda_goddess_wings",
+				"texture_width": 128,
+				"texture_height": 64,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 4.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "waist",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "body",
+					"parent": "waist",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "head",
+					"parent": "body",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "bone6",
+					"parent": "head",
+					"pivot": [-1, -1, 0]
+				},
+				{
+					"name": "bone7",
+					"parent": "head",
+					"pivot": [-9, -1, 0]
+				},
+				{
+					"name": "hat",
+					"parent": "head",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "leftArm",
+					"parent": "body",
+					"pivot": [5, 22, 0]
+				},
+				{
+					"name": "bone",
+					"parent": "leftArm",
+					"pivot": [4, 22, 0],
+					"rotation": [0, 0, -15]
+				},
+				{
+					"name": "bone2",
+					"parent": "bone",
+					"pivot": [0, 0, 0],
+					"rotation": [0, 0, 35]
+				},
+				{
+					"name": "rightItem",
+					"parent": "leftArm",
+					"pivot": [5, 14, 1]
+				},
+				{
+					"name": "rotOut",
+					"parent": "leftArm",
+					"pivot": [0, 22, 2]
+				},
+				{
+					"name": "bone12",
+					"parent": "leftArm",
+					"pivot": [4, 24, 0],
+					"rotation": [0, 0, -10]
+				},
+				{
+					"name": "rightArm",
+					"parent": "body",
+					"pivot": [-5, 22, 0]
+				},
+				{
+					"name": "bone11",
+					"parent": "rightArm",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "bone8",
+					"parent": "rightArm",
+					"pivot": [-7, 22, -1],
+					"rotation": [0, 0, 25]
+				},
+				{
+					"name": "bone9",
+					"parent": "rightArm",
+					"pivot": [-7, 22, 1],
+					"rotation": [0, 0, 25]
+				},
+				{
+					"name": "bone3",
+					"parent": "rightArm",
+					"pivot": [-8.98858, 23.73853, 0],
+					"rotation": [0, 0, 10]
+				},
+				{
+					"name": "bone10",
+					"parent": "rightArm",
+					"pivot": [-4, 0, 2],
+					"rotation": [0, 0, 17.5]
+				},
+				{
+					"name": "leftLeg",
+					"parent": "body",
+					"pivot": [2, 12, 0]
+				},
+				{
+					"name": "rightLeg",
+					"parent": "body",
+					"pivot": [-2, 12, 0]
+				},
+				{
+					"name": "actual_body",
+					"parent": "body",
+					"pivot": [0, 12, 0],
+					"cubes": [
+						{"origin": [4, 15, -2], "size": [0, 7, 19], "uv": [44, 11]},
+						{"origin": [-4, 15, -2], "size": [0, 7, 19], "uv": [44, 11]}
+					]
+				},
+				{
+					"name": "bone15",
+					"parent": "actual_body",
+					"pivot": [-3, 14, 2],
+					"rotation": [0, -25, 0],
+					"cubes": [
+						{"origin": [-3.1, 13, -3], "size": [0, 5, 15], "pivot": [0, 1, -1], "rotation": [-15, 0, 0], "uv": [38, 35]}
+					]
+				},
+				{
+					"name": "bone16",
+					"parent": "actual_body",
+					"pivot": [3, 14, 2],
+					"rotation": [0, 25, 0],
+					"cubes": [
+						{"origin": [3.1, 13, -3], "size": [0, 5, 15], "pivot": [7, 1, -1], "rotation": [-15, 0, 0], "uv": [38, 35]}
+					]
+				},
+				{
+					"name": "bone14",
+					"parent": "actual_body",
+					"pivot": [3, 18, 0],
+					"rotation": [22.5, -20, 0],
+					"cubes": [
+						{"origin": [-3, 17, 2], "size": [0, 8, 19], "uv": [34, 37]}
+					]
+				},
+				{
+					"name": "bone13",
+					"parent": "actual_body",
+					"pivot": [3, 18, 0],
+					"rotation": [22.5, 20, 0],
+					"cubes": [
+						{"origin": [3, 17, 2], "size": [0, 8, 19], "uv": [34, 37]}
+					]
+				},
+				{
+					"name": "bone4",
+					"parent": "actual_body",
+					"pivot": [4, 13, 0],
+					"rotation": [0, 0, 20]
+				},
+				{
+					"name": "bone5",
+					"parent": "actual_body",
+					"pivot": [-4, 13, 0],
+					"rotation": [0, 0, -20]
+				},
+				{
+					"name": "rockets",
+					"parent": "actual_body",
+					"pivot": [0, 22, 2]
+				},
+				{
+					"name": "thruster_pack",
+					"parent": "rockets",
+					"pivot": [0, 22, 2],
+					"rotation": [45, 0, 0]
+				},
+				{
+					"name": "upper",
+					"parent": "rockets",
+					"pivot": [0, 22, 2],
+					"rotation": [-27.5, 0, 0]
+				}
+			]
+		}
+	]
+}

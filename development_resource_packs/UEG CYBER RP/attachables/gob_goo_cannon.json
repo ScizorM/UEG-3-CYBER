@@ -1,0 +1,33 @@
+//bridge-file-version: #60
+{
+	"format_version": "1.10.0",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "sm:gob_goo_cannon",
+			"materials": {
+				"default": "entity_alphatest",
+				"enchanted": "entity_alphatest_glint"
+			},
+			"textures": {
+				"default": "textures/entity/weapons/gob_goo_cannon"
+			},
+			"geometry": {
+				"default": "geometry.gob_goo_cannon"
+			},
+			"render_controllers": [
+				"controller.render.guardian"
+			],
+			"animations": {
+				"controller": "controller.animation.parry_fist",
+				"fist_tp": "animation.gob_goo_cannon.thirdperson",
+				"fist_fp": "animation.gob_goo_cannon.firstperson",
+				"parry": "animation.gob_goo_cannon.fire"
+			},
+			"scripts": {
+				"animate": [
+					"controller"
+				]
+			}
+		}
+	}
+}

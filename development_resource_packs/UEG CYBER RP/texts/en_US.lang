@@ -1,0 +1,44 @@
+##bridge-file-version: #40
+####pack.name=UEG CYBER
+pack.description=Textures/designs by Dragon Void Map Development.
+item.itemLock.cantDrop= 
+item.itemLock.cantMove= 
+item.itemLock.hoverText.cantBe.moved= 
+item.itemLock.hoverText.cantBe.dropped= 
+item.itemLock.hoverText.cantBe.removed= 
+item.itemLock.hoverText.cantBe.craftedWith= 
+item.itemLock.keepOnDeath= 
+item.itemLock.popupNotice.cantDrop= 
+item.itemLock.popupNotice.cantMove= 
+tile.sm:editor_bay_block_indest.name = Indestructible Editor Bay Block (DO NOT USE IN ARENAS!)
+
+item.crossbow.name=[Legacy] TNT Crossbow (UEG 1 Pre-Release)
+item.bow.name=[Legacy] Gauge Gun (UEG 1)
+
+effect.badOmen=Teleport Weakness
+
+tile.sm:booster_1.name = Booster Block (Tier 1)
+tile.sm:booster_2.name = Booster Block (Tier 2)
+tile.sm:booster_3.name = Booster Block (Tier 3)
+
+tile.sm:teleporter_p_a.name = Teleporter A (Purple)
+tile.sm:teleporter_p_b.name = Teleporter B (Purple)
+
+tile.sm:teleporter_y_a.name = Teleporter A (Yellow)
+tile.sm:teleporter_y_b.name = Teleporter B (Yellow)
+
+tile.sm:pitfall_1.name = Pitfall (Tier 3)
+tile.sm:pitfall_2.name = Pitfall (Tier 2)
+tile.sm:pitfall_3.name = Pitfall (Tier 1: Critical)
+
+tile.sm:boom_block.name = Boom Block
+
+multiplayer.player.joined=§e[Player Join] §a%s has connected to the filesystem.
+multiplayer.player.joined.renamed=[Player Join] §a%s has connected to the filesystem.
+multiplayer.player.left=[Player Leave] §c%s§c disconnected from the filesystem.
+
+accessibility.chat.howtoopen=§e[Welcome Message] §aWelcome to the Cyber Filesystem. Enjoy your stay.
+accessibility.chat.howtoemote=§fMusic provided by Kaizo Slumber §d(kaizoslumber.xyz) 
+
+##accessibility.chat.howtoopen=Press %s to open chat
+##accessibility.chat.howtoemote=Press or Hold %s to Emote

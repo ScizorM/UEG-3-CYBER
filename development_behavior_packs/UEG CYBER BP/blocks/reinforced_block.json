@@ -1,0 +1,14 @@
+//bridge-file-version: #7
+{
+	"format_version": "1.21.10",
+	"minecraft:block": {
+		"description": {
+			"identifier": "sm:reinforced_block"
+		},
+		"components": {
+			"minecraft:display_name": "Reinforced Block",
+			"minecraft:destructible_by_mining": false,
+			"minecraft:destructible_by_explosion": false
+		}
+	}
+}

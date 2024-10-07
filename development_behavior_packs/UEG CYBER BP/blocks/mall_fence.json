@@ -1,0 +1,17 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.21.10",
+	"minecraft:block": {
+		"description": {
+			"identifier": "sm:mall_fence"
+		},
+		"components": {
+			"minecraft:material_instances": {
+				"*": {
+					"render_method": "blend",
+					"texture": "sm:mall_fence"
+				}
+			}
+		}
+	}
+}

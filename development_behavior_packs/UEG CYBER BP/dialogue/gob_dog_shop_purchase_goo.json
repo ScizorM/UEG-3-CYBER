@@ -1,0 +1,66 @@
+//bridge-file-version: #44
+{
+	"format_version": "1.17.40",
+	"minecraft:npc_dialogue": {
+		"scenes": [
+			{
+				"scene_tag": "gob_dog_shop_purchase_goo",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "Gob Dog Salesman"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"translate": "Gob Goo - ???"
+						},
+						{
+							"translate": "\n\nWould you like to buy this item?"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "§0Purchase 0"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ execute @s ~ ~ ~ /function gob_goo_anim_in"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "§3Go Back"
+								}
+							]
+						},
+						"commands": [
+							"/dialogue open @s @initiator gob_dog_shop_intro"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "§4Exit"
+								}
+							]
+						},
+						"commands": [
+							"/event entity @s sm:despawn"
+						]
+					}
+				]
+			}
+		]
+	}
+}

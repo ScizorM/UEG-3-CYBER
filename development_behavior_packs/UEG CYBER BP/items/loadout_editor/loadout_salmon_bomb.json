@@ -1,0 +1,21 @@
+//bridge-file-version: #6
+{
+	"format_version": "1.21.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "sm:loadout_salmon_bomb"
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:hand_equipped": true,
+			"minecraft:icon": "sm:salmon_bomb",
+			"minecraft:display_name": {
+				"value": "§cPlaceholder§f Salmon Bomb\n\n§9 Summons a salmon that flops around and then explodes"
+			},
+			"minecraft:cooldown": {
+				"category": "salmon",
+				"duration": 1
+			}
+		}
+	}
+}

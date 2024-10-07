@@ -1,0 +1,45 @@
+//bridge-file-version: #55
+{
+	"format_version": "1.10.0",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "sm:icarus",
+			"materials": {
+				"default": "entity_alphatest",
+				"enchanted": "entity_alphatest_glint"
+			},
+			"textures": {
+				"default": "textures/entity/weapons/icarus",
+				"heatmeter_1": "textures/entity/weapons/icarus_temp1",
+				"heatmeter_2": "textures/entity/weapons/icarus_temp2",
+				"heatmeter_3": "textures/entity/weapons/icarus_temp3",
+				"heatmeter_4": "textures/entity/weapons/icarus_temp4",
+				"heatmeter_5": "textures/entity/weapons/icarus_temp5",
+				"heatmeter_6": "textures/entity/weapons/icarus_temp6",
+				"heatmeter_7": "textures/entity/weapons/icarus_temp7",
+				"heatmeter_8": "textures/entity/weapons/icarus_temp8",
+				"heatmeter_9": "textures/entity/weapons/icarus_temp9",
+				"heatmeter_10": "textures/entity/weapons/icarus_temp10",
+				"heatmeter_flash": "textures/entity/weapons/icarus"
+			},
+			"geometry": {
+				"default": "geometry.icarus"
+			},
+			"render_controllers": [
+				"controller.render.icarus"
+			],
+			"animations": {
+				"controller": "controller.animation.icarus",
+				"cannon_tp": "animation.icarus.thirdperson",
+				"cannon_fp": "animation.icarus.hold",
+				"cannon_recoil": "animation.icarus.fire",
+				"cannon_recoil_2": "animation.icarus.fireL"
+			},
+			"scripts": {
+				"animate": [
+					"controller"
+				]
+			}
+		}
+	}
+}

@@ -1,0 +1,38 @@
+//bridge-file-version: #9
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "sm:archerfish"
+		},
+		"components": {
+			"minecraft:on_use": {
+				"on_use": {
+					"event": "sm:fire"
+				}
+			},
+			"minecraft:icon": {
+				"texture": "sm:archerfish"
+			},
+			"minecraft:cooldown": {
+				"category": "archerfish",
+				"duration": 3
+			},
+			"minecraft:display_name": {
+				"value": "Archerfish\n"
+			}
+		},
+		"events": {
+			"sm:fire": {
+				"sequence": [
+					{
+						"shoot": {
+							"projectile": "minecraft:egg",
+							"launch_power": 2
+						}
+					}
+				]
+			}
+		}
+	}
+}

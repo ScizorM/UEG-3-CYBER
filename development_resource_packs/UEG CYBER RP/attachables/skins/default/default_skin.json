@@ -1,0 +1,24 @@
+//bridge-file-version: #18
+{
+	"format_version": "1.16.100",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "sm:default_skin",
+			"materials": {
+				"default": "guardian"
+			},
+			"textures": {
+				"default": "textures/entity/skins/recruit",
+				"frame_2": "textures/entity/skins/recruit_frame2",
+				"frame_3": "textures/entity/skins/recruit_frame3",
+				"frame_4": "textures/entity/skins/recruit_frame2"
+			},
+			"geometry": {
+				"default": "geometry.default_skin_full"
+			},
+			"render_controllers": [
+				"controller.render.skin_animations"
+			]
+		}
+	}
+}

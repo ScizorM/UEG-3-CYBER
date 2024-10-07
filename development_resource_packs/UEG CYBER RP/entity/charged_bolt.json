@@ -1,0 +1,29 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "sm:charged_bolt",
+			"materials": {
+				"default": "arrow"
+			},
+			"textures": {
+				"default": "textures/entity/arrows"
+			},
+			"geometry": {
+				"default": "geometry.arrow"
+			},
+			"animations": {
+				"move": "animation.arrow.move"
+			},
+			"scripts": {
+				"animate": [
+					"move"
+				]
+			},
+			"render_controllers": [
+				"controller.render.arrow"
+			]
+		}
+	}
+}

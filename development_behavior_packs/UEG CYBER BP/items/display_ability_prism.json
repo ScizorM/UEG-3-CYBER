@@ -1,0 +1,19 @@
+//bridge-file-version: #10
+{
+	"format_version": "1.21.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "sm:display_ability_prism"
+		},
+		"components": {
+			"minecraft:hand_equipped": true,
+			"minecraft:display_name": {
+				"value": "display ability prism"
+			},
+			"minecraft:icon": "sm:ability_prism",
+			"minecraft:wearable": {
+				"slot": "slot.armor.legs"
+			}
+		}
+	}
+}

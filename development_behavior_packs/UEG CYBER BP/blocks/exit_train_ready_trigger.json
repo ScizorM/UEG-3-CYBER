@@ -1,0 +1,10 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.21.10",
+	"minecraft:block": {
+		"description": {
+			"identifier": "sm:exit_train_ready_trigger"
+		},
+		"components": {}
+	}
+}

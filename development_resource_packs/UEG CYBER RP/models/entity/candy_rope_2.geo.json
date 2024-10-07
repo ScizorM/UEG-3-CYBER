@@ -1,0 +1,35 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.candy_rope_2",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "bb_main",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-8, 8, -1],
+							"size": [16, 2, 2],
+							"uv": {
+								"north": {"uv": [0, 2.5], "uv_size": [8, 1]},
+								"east": {"uv": [8.5, 8], "uv_size": [1, 1]},
+								"south": {"uv": [0, 4.5], "uv_size": [8, 1]},
+								"west": {"uv": [14.5, 15], "uv_size": [1, 1]},
+								"up": {"uv": [8, 1.5], "uv_size": [-8, -1]},
+								"down": {"uv": [8, 10], "uv_size": [-8, -1]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

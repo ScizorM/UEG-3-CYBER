@@ -1,0 +1,33 @@
+//bridge-file-version: #64
+{
+	"format_version": "1.10.0",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "sm:archerfish",
+			"materials": {
+				"default": "entity_alphatest",
+				"enchanted": "entity_alphatest_glint"
+			},
+			"textures": {
+				"default": "textures/items/archerfish_sideways"
+			},
+			"geometry": {
+				"default": "geometry.archerfish"
+			},
+			"render_controllers": [
+				"controller.render.guardian"
+			],
+			"animations": {
+				"controller": "controller.animation.parry_fist",
+				"fist_tp": "animation.archerfish.thirdperson",
+				"fist_fp": "animation.archerfish.firstperson",
+				"parry": "animation.archerfish.fire"
+			},
+			"scripts": {
+				"animate": [
+					"controller"
+				]
+			}
+		}
+	}
+}

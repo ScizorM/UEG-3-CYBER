@@ -1,0 +1,22 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "minecraft:egg",
+			"materials": {
+				"default": "egg"
+			},
+			"textures": {
+				"default": "textures/entity/charged_orb",
+				"icarus": "textures/entity/charged_orb_fire"
+			},
+			"geometry": {
+				"default": "geometry.charged_orb"
+			},
+			"render_controllers": [
+				"controller.render.charged_orb"
+			]
+		}
+	}
+}

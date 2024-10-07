@@ -1,0 +1,38 @@
+{
+	"format_version": "1.10.0",
+	"particle_effect": {
+		"description": {
+			"identifier": "sm:gob_ad",
+			"basic_render_parameters": {
+				"material": "particles_alpha",
+				"texture": "textures/particle/gob_ad"
+			}
+		},
+		"components": {
+			"minecraft:emitter_rate_instant": {
+				"num_particles": 1
+			},
+			"minecraft:emitter_lifetime_looping": {
+				"active_time": 1
+			},
+			"minecraft:emitter_shape_point": {},
+			"minecraft:particle_lifetime_expression": {
+				"max_lifetime": 1
+			},
+			"minecraft:particle_appearance_billboard": {
+				"size": [7.25, 3.25],
+				"facing_camera_mode": "direction_z",
+				"direction": {
+					"mode": "custom",
+					"custom_direction": [180, 0, 360]
+				},
+				"uv": {
+					"texture_width": 280,
+					"texture_height": 140,
+					"uv": [0, 0],
+					"uv_size": [280, 140]
+				}
+			}
+		}
+	}
+}

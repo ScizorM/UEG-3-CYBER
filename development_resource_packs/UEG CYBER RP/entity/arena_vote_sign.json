@@ -1,0 +1,21 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "sm:arena_vote_sign",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/signs/arenavote"
+			},
+			"geometry": {
+				"default": "geometry.metro_sign_game"
+			},
+			"render_controllers": [
+				"controller.render.cow"
+			]
+		}
+	}
+}

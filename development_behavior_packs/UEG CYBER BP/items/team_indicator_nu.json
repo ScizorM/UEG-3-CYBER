@@ -1,0 +1,18 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.21.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "sm:team_indicator_nu"
+		},
+		"components": {
+			"minecraft:display_name": {
+				"value": "Team Nu"
+			},
+			"minecraft:icon": "sm:team_nu",
+			"minecraft:wearable": {
+				"slot": "slot.armor.legs"
+			}
+		}
+	}
+}

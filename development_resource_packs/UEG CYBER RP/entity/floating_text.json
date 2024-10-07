@@ -1,0 +1,23 @@
+//bridge-file-version: #5
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "sm:floating_text",
+			"min_engine_version": "1.8.0",
+			"materials": {
+				"default": "guardian"
+			},
+			"textures": {
+				"default": "textures/entity/invisible"
+			},
+			"geometry": {
+				"default": "geometry.floating_text"
+			},
+			"render_controllers": [
+				"controller.render.guardian"
+			],
+			"enable_attachables": true
+		}
+	}
+}

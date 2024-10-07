@@ -1,0 +1,37 @@
+//bridge-file-version: #7
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "sm:laptop",
+			"materials": {
+				"default": "entity_static"
+			},
+			"textures": {
+				"default": "textures/entity/settings_laptop/baseLaptop",
+				"frame_one": "textures/entity/settings_laptop/baseLaptopNumber1",
+				"frame_two": "textures/entity/settings_laptop/baseLaptopNumber2",
+				"frame_three": "textures/entity/settings_laptop/baseLaptopNumber3",
+				"frame_four": "textures/entity/settings_laptop/baseLaptopNumber4",
+				"frame_five": "textures/entity/settings_laptop/baseLaptopNumber5",
+				"frame_six": "textures/entity/settings_laptop/baseLaptopNumber6",
+				"frame_seven": "textures/entity/settings_laptop/baseLaptopNumber7",
+				"frame_eight": "textures/entity/settings_laptop/baseLaptopNumber8",
+				"frame_nine": "textures/entity/settings_laptop/baseLaptopNumber9",
+				"frame_zero": "textures/entity/settings_laptop/baseLaptopNumber0",
+				"frame_enabled": "textures/entity/settings_laptop/baseLaptopEnabled",
+				"frame_disabled": "textures/entity/settings_laptop/baseLaptopDisabled",
+				"frame_preset": "textures/entity/settings_laptop/baseLaptopPreset",
+				"frame_ten": "textures/entity/settings_laptop/baseLaptopNumber10",
+				"locked": "textures/entity/settings_laptop/baseLaptopLocked",
+				"frame_dialogue": "textures/entity/settings_laptop/laptop_dialogue"
+			},
+			"geometry": {
+				"default": "geometry.settingsLaptop"
+			},
+			"render_controllers": [
+				"controller.render.laptop_1through9"
+			]
+		}
+	}
+}

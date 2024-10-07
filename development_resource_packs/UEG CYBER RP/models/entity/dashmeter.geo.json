@@ -1,0 +1,35 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.dashmeter",
+				"texture_width": 291,
+				"texture_height": 121,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "bone",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-11, 0, 0],
+							"size": [22, 11, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [291, 121]},
+								"east": {"uv": [0, 5], "uv_size": [0, -5]},
+								"south": {"uv": [0, 0], "uv_size": [0, 0]},
+								"west": {"uv": [0, 5], "uv_size": [0, -5]},
+								"up": {"uv": [0, 0], "uv_size": [0, 5]},
+								"down": {"uv": [0, 0], "uv_size": [0, 0]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

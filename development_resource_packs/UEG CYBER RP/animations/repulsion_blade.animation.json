@@ -1,0 +1,37 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.repulsion_blade.first_person": {
+			"loop": true,
+			"bones": {
+				"donotchangerightitempivot": {
+					"rotation": [-41.32759, -65.38619, 88.07521],
+					"position": [5, 12, -2]
+				}
+			}
+		},
+		"animation.repulsion_blade.swing": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 2,
+			"override_previous_animation": true,
+			"bones": {
+				"donotchangerightitempivot": {
+					"rotation": {
+						"0.0": [57.15411, -54.7841, -18.16264],
+						"0.0833": [-115.67312, -58.31813, 17.24997]
+					},
+					"position": [-0.12685, 7.18733, -5.81492]
+				}
+			}
+		},
+		"animation.repulsion_blade.third_person": {
+			"loop": true,
+			"bones": {
+				"donotchangerightitempivot": {
+					"rotation": [-90, 0, -180],
+					"position": [6, 9, 1]
+				}
+			}
+		}
+	}
+}

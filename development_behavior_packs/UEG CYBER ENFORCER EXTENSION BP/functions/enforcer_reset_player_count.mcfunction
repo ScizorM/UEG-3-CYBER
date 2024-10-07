@@ -1,0 +1,2 @@
+scoreboard players reset count enforcer_player_count_current
+scoreboard players reset count enforcer_player_count_saved

@@ -1,0 +1,33 @@
+//bridge-file-version: #57
+{
+	"format_version": "1.10.0",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "sm:smorgler",
+			"materials": {
+				"default": "entity_alphatest",
+				"enchanted": "entity_alphatest_glint"
+			},
+			"textures": {
+				"default": "textures/entity/weapons/smorgler"
+			},
+			"geometry": {
+				"default": "geometry.smorgler"
+			},
+			"render_controllers": [
+				"controller.render.guardian"
+			],
+			"animations": {
+				"controller": "controller.animation.parry_fist",
+				"fist_tp": "animation.smorgler.thirdperson",
+				"fist_fp": "animation.smorgler.firstperson",
+				"parry": "animation.smorgler.fire"
+			},
+			"scripts": {
+				"animate": [
+					"controller"
+				]
+			}
+		}
+	}
+}

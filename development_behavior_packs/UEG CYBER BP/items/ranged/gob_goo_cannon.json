@@ -1,0 +1,24 @@
+//bridge-file-version: #16
+{
+	"format_version": "1.21.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "sm:gob_goo_cannon"
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:display_name": {
+				"value": "Gob Goo Cannon\n"
+			},
+			"minecraft:custom_components": [
+				"sm:gob_goo_cannon"
+			],
+			"minecraft:icon": "sm:gob_goo_cannon",
+			"minecraft:hand_equipped": true,
+			"minecraft:cooldown": {
+				"category": "gob",
+				"duration": 0.75
+			}
+		}
+	}
+}

@@ -1,0 +1,31 @@
+//bridge-file-version: #7
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "sm:landmine_ver_nu",
+			"materials": {
+				"default": "entity",
+				"emissive": "entity_emissive_alpha"
+			},
+			"textures": {
+				"default": "textures/entity/landmine_nu"
+			},
+			"geometry": {
+				"default": "geometry.landmine"
+			},
+			"render_controllers": [
+				"controller.render.landmine"
+			],
+			"animations": {
+				"explode": "controller.animation.landmine_anims",
+				"fling": "animation.landmine.charged"
+			},
+			"scripts": {
+				"animate": [
+					"explode"
+				]
+			}
+		}
+	}
+}

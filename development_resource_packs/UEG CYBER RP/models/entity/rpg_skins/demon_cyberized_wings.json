@@ -1,0 +1,114 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.demon_cyberized_wings",
+				"texture_width": 100,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 5.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "waist",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "body",
+					"parent": "waist",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "head",
+					"parent": "body",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "hat",
+					"parent": "head",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "leftArm",
+					"parent": "body",
+					"pivot": [5, 22, 0]
+				},
+				{
+					"name": "bone",
+					"parent": "leftArm",
+					"pivot": [6, 27, 0],
+					"rotation": [-67.06341, 6.73717, 7.40702],
+					"cubes": [
+						{"origin": [7.8, 26, 3], "size": [0, 7, 3], "uv": [94, 54]}
+					]
+				},
+				{
+					"name": "rightItem",
+					"parent": "leftArm",
+					"pivot": [5, 14, 1]
+				},
+				{
+					"name": "rightLeg",
+					"parent": "body",
+					"pivot": [2, 12, 0]
+				},
+				{
+					"name": "bone2",
+					"parent": "rightLeg",
+					"pivot": [4, 12, 0]
+				},
+				{
+					"name": "leftLeg",
+					"parent": "body",
+					"pivot": [-2, 12, 0]
+				},
+				{
+					"name": "bone4",
+					"parent": "leftLeg",
+					"pivot": [-4, 12, 0]
+				},
+				{
+					"name": "wingR",
+					"parent": "body",
+					"pivot": [-1, 19, 1],
+					"rotation": [45.90086, -36.43129, -17.80232],
+					"cubes": [
+						{"origin": [-1.15081, 9.69971, 3.06086], "size": [0, 12, 3], "uv": [77, 12]},
+						{"origin": [-1.15581, 7.69971, 4.06086], "size": [0, 12, 3], "pivot": [1.85919, 20.69971, 6.06086], "rotation": [20, 0, 0], "uv": [77, 12]},
+						{"origin": [-1.16081, 4.69971, 3.06086], "size": [0, 15, 3], "pivot": [1.85919, 21.69971, 2.06086], "rotation": [42.5, 0, 0], "uv": [94, 24]},
+						{"origin": [-1.17081, 4.69971, 2.06086], "size": [0, 15, 3], "pivot": [1.85919, 21.69971, 2.06086], "rotation": [65, 0, 0], "uv": [94, 24]},
+						{"origin": [-1.14081, 16.69971, 0.06086], "size": [0, 3, 4], "uv": [75, 7]}
+					]
+				},
+				{
+					"name": "actual_body",
+					"parent": "body",
+					"pivot": [0, 12, 0]
+				},
+				{
+					"name": "hair",
+					"parent": "actual_body",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "bone3",
+					"parent": "hair",
+					"pivot": [0, 24, -3]
+				},
+				{
+					"name": "wings",
+					"parent": "actual_body",
+					"pivot": [0, 21, 3]
+				},
+				{
+					"name": "hair2",
+					"parent": "actual_body",
+					"pivot": [0, 22, 0],
+					"rotation": [20, 0, 0]
+				}
+			]
+		}
+	]
+}

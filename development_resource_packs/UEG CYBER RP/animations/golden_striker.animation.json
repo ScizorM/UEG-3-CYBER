@@ -1,0 +1,30 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.golden_striker.move": {
+			"loop": true,
+			"animation_length": 2,
+			"override_previous_animation": true,
+			"bones": {
+				"bone8": {
+					"position": {
+						"0.0": [0, 0, 0],
+						"1.0": [0.55222, -1.21862, 3.34814],
+						"2.0": [0, 0, 0]
+					}
+				},
+				"bone9": {
+					"position": {
+						"0.0": [0, 0, 0],
+						"1.0": {
+							"pre": [-0.55222, -1.21862, 3.34814],
+							"post": [-0.55222, -1.21862, 3.34814],
+							"lerp_mode": "catmullrom"
+						},
+						"2.0": [0, 0, 0]
+					}
+				}
+			}
+		}
+	}
+}

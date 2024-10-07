@@ -1,0 +1,22 @@
+//bridge-file-version: #11
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "sm:terminal_lambda",
+			"materials": {
+				"default": "guardian"
+			},
+			"textures": {
+				"default": "textures/entity/infographic_team_lambda",
+				"effect2": "textures/entity/infographic_active"
+			},
+			"geometry": {
+				"default": "geometry.small_infographic_display"
+			},
+			"render_controllers": [
+				"controller.render.terminals"
+			]
+		}
+	}
+}

@@ -1,0 +1,27 @@
+//bridge-file-version: #6
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.terminal_buy_arena": {
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"textures": [
+				"Array.top[query.variant]"
+			],
+			"arrays": {
+				"textures": {
+					"Array.top": [
+						"Texture.default",
+						"Texture.purchased",
+						"Texture.error",
+						"Texture.unpurchasable"
+					]
+				}
+			},
+			"geometry": "geometry.default"
+		}
+	}
+}

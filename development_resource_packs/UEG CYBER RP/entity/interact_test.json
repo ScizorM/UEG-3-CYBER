@@ -1,0 +1,22 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "sm:interact_test",
+			"materials": {
+				"default": "guardian"
+			},
+			"textures": {
+				"default": "textures/entity/touchscreen/touchscreen_base",
+				"layer2": "textures/entity/touchscreen/touchscreen_boxexample"
+			},
+			"geometry": {
+				"default": "geometry.touchscreen"
+			},
+			"render_controllers": [
+				"controller.render.interact_test"
+			]
+		}
+	}
+}

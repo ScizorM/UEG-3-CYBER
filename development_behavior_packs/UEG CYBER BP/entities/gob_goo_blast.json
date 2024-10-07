@@ -1,0 +1,283 @@
+//bridge-file-version: #25
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "minecraft:snowball",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"scripts": {
+				"animate": [
+					"bridge_execute_commands"
+				]
+			},
+			"animations": {
+				"bridge_execute_commands": "controller.animation.bridge_gob_goo_blast.execute_commands"
+			}
+		},
+		"components": {
+			"minecraft:collision_box": {
+				"width": 0.25,
+				"height": 0.25
+			},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": true,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:conditional_bandwidth_optimization": {
+				"default_values": {
+					"max_optimized_distance": 100,
+					"max_dropped_ticks": 5,
+					"use_motion_prediction_hints": true
+				}
+			},
+			"minecraft:timer": {
+				"looping": false,
+				"time": [
+					0,
+					0
+				],
+				"time_down_event": {
+					"target": "self",
+					"event": "sm:testweapontype"
+				}
+			},
+			"minecraft:variant": {
+				"value": 0
+			},
+			"minecraft:projectile": {
+				"on_hit": {
+					"definition_event": {
+						"affect_projectile": true,
+						"event_trigger": {
+							"event": "sm:goop"
+						}
+					},
+					"particle_on_hit": {
+						"particle_type": "sm:gob_goo_hit",
+						"num_particles": 1,
+						"on_entity_hit": true,
+						"on_other_hit": true
+					},
+					"mob_effect": {
+						"effect": "slowness",
+						"duration": 3,
+						"amplifier": 0
+					}
+				},
+				"anchor": 1,
+				"power": 1.5,
+				"gravity": 0.03,
+				"angle_offset": 0,
+				"offset": [
+					0,
+					-0.1,
+					0
+				]
+			}
+		},
+		"events": {
+			"sm:goop": {
+				"add": {
+					"component_groups": [
+						"bridge:execute_command_id_1"
+					]
+				}
+			},
+			"sm:testweapontype": {
+				"add": {
+					"component_groups": [
+						"bridge:execute_command_id_2"
+					]
+				}
+			},
+			"gob_goo": {
+				"add": {
+					"component_groups": [
+						"gob_goo"
+					]
+				}
+			},
+			"solis": {
+				"add": {
+					"component_groups": [
+						"solis"
+					]
+				}
+			},
+			"frigidus": {
+				"add": {
+					"component_groups": [
+						"frigidus"
+					]
+				}
+			},
+			"sm:solis_blast": {
+				"add": {
+					"component_groups": [
+						"bridge:execute_command_id_3"
+					]
+				}
+			},
+			"sm:frigidus_blast": {
+				"add": {
+					"component_groups": [
+						"bridge:execute_command_id_4"
+					]
+				}
+			},
+			"bridge:remove_command_id_1": {
+				"add": {
+					"component_groups": [
+						"bridge:execute_no_command"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"bridge:execute_command_id_1"
+					]
+				}
+			},
+			"bridge:remove_command_id_2": {
+				"add": {
+					"component_groups": [
+						"bridge:execute_no_command"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"bridge:execute_command_id_2"
+					]
+				}
+			},
+			"bridge:remove_command_id_3": {
+				"add": {
+					"component_groups": [
+						"bridge:execute_no_command"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"bridge:execute_command_id_3"
+					]
+				}
+			},
+			"bridge:remove_command_id_4": {
+				"add": {
+					"component_groups": [
+						"bridge:execute_no_command"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"bridge:execute_command_id_4"
+					]
+				}
+			},
+			"sm:despawn": {
+				"add": {
+					"component_groups": [
+						"despawn"
+					]
+				}
+			}
+		},
+		"component_groups": {
+			"gob_goo": {
+				"minecraft:variant": {
+					"value": 0
+				}
+			},
+			"solis": {
+				"minecraft:projectile": {
+					"on_hit": {
+						"definition_event": {
+							"affect_projectile": true,
+							"event_trigger": {
+								"event": "sm:solis_blast"
+							}
+						},
+						"particle_on_hit": {
+							"particle_type": "snowballpoof",
+							"num_particles": 6,
+							"on_entity_hit": true,
+							"on_other_hit": true
+						}
+					},
+					"anchor": 1,
+					"power": 1.5,
+					"gravity": 0.03,
+					"angle_offset": 0,
+					"offset": [
+						0,
+						-0.1,
+						0
+					]
+				},
+				"minecraft:variant": {
+					"value": 1
+				}
+			},
+			"frigidus": {
+				"minecraft:projectile": {
+					"on_hit": {
+						"definition_event": {
+							"affect_projectile": true,
+							"event_trigger": {
+								"event": "sm:frigidus_blast"
+							}
+						},
+						"particle_on_hit": {
+							"particle_type": "snowballpoof",
+							"num_particles": 6,
+							"on_entity_hit": true,
+							"on_other_hit": true
+						}
+					},
+					"anchor": 1,
+					"power": 1.5,
+					"gravity": 0.03,
+					"angle_offset": 0,
+					"offset": [
+						0,
+						-0.1,
+						0
+					]
+				},
+				"minecraft:variant": {
+					"value": 2
+				}
+			},
+			"bridge:execute_command_id_1": {
+				"minecraft:skin_id": {
+					"value": 1
+				}
+			},
+			"bridge:execute_no_command": {
+				"minecraft:skin_id": {
+					"value": 0
+				}
+			},
+			"bridge:execute_command_id_2": {
+				"minecraft:skin_id": {
+					"value": 2
+				}
+			},
+			"bridge:execute_command_id_3": {
+				"minecraft:skin_id": {
+					"value": 3
+				}
+			},
+			"bridge:execute_command_id_4": {
+				"minecraft:skin_id": {
+					"value": 4
+				}
+			},
+			"despawn": {
+				"minecraft:instant_despawn": {}
+			}
+		}
+	}
+}

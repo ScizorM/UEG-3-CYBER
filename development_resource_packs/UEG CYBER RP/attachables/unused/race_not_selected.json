@@ -1,0 +1,21 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.16.100",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "sm:race_not_selected",
+			"materials": {
+				"default": "guardian"
+			},
+			"textures": {
+				"default": "textures/entity/race_not_selected"
+			},
+			"geometry": {
+				"default": "geometry.race_not_selected"
+			},
+			"render_controllers": [
+				"controller.render.guardian"
+			]
+		}
+	}
+}

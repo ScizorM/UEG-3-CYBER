@@ -1,0 +1,21 @@
+//bridge-file-version: #9
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "sm:terminal_cyclel",
+			"materials": {
+				"default": "guardian"
+			},
+			"textures": {
+				"default": "textures/entity/terminal_left"
+			},
+			"geometry": {
+				"default": "geometry.terminal_all"
+			},
+			"render_controllers": [
+				"controller.render.guardian"
+			]
+		}
+	}
+}

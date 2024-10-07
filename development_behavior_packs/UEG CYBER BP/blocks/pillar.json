@@ -1,0 +1,20 @@
+//bridge-file-version: #17
+{
+	"format_version": "1.21.10",
+	"minecraft:block": {
+		"description": {
+			"identifier": "sm:pillar"
+		},
+		"components": {
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "sm:pillar",
+					"face_dimming": true,
+					"ambient_occlusion": true,
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:geometry": "geometry.pillar"
+		}
+	}
+}

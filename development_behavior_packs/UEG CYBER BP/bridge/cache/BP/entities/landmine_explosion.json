@@ -1,0 +1,404 @@
+{
+	"file_path": "C:\\Users\\scizo\\AppData\\Local\\Packages\\Microsoft.MinecraftUWP_8wekyb3d8bbwe\\LocalState\\games\\com.mojang\\development_behavior_packs\\UEG CYBER BP\\entities\\landmine_explosion.json",
+	"file_type": "entity",
+	"format_version": 1,
+	"file_uuid": "556249f9_cbd8_400e_9dd1_98ed656e3d6e",
+	"file_version": 16,
+	"cache_content": {
+		"children": [
+			{
+				"open": {
+					"format_version": "1.16.0",
+					"minecraft:entity": {
+						"description": {
+							"identifier": "sm:landmine_explosion",
+							"is_spawnable": true,
+							"is_summonable": true,
+							"is_experimental": false
+						},
+						"component_groups": {
+							"minecraft:exploding": {
+								"minecraft:explode": {
+									"fuse_length": 0,
+									"fuse_lit": true,
+									"power": 8,
+									"causes_fire": false,
+									"destroy_affected_by_griefing": true,
+									"breaks_blocks": true
+								}
+							}
+						},
+						"components": {
+							"minecraft:type_family": {
+								"family": [
+									"creeper",
+									"monster",
+									"mob"
+								]
+							},
+							"minecraft:collision_box": {
+								"width": 0.6,
+								"height": 1.8
+							},
+							"minecraft:damage_sensor": {
+								"triggers": {
+									"cause": "all",
+									"deals_damage": false
+								}
+							}
+						},
+						"events": {
+							"minecraft:entity_spawned": {
+								"add": {
+									"component_groups": [
+										"minecraft:exploding"
+									]
+								}
+							}
+						}
+					}
+				},
+				"data": "1.16.0",
+				"key": "format_version"
+			},
+			{
+				"open": {
+					"format_version": "1.16.0",
+					"minecraft:entity": {
+						"description": {
+							"identifier": "sm:landmine_explosion",
+							"is_spawnable": true,
+							"is_summonable": true,
+							"is_experimental": false
+						},
+						"component_groups": {
+							"minecraft:exploding": {
+								"minecraft:explode": {
+									"fuse_length": 0,
+									"fuse_lit": true,
+									"power": 8,
+									"causes_fire": false,
+									"destroy_affected_by_griefing": true,
+									"breaks_blocks": true
+								}
+							}
+						},
+						"components": {
+							"minecraft:type_family": {
+								"family": [
+									"creeper",
+									"monster",
+									"mob"
+								]
+							},
+							"minecraft:collision_box": {
+								"width": 0.6,
+								"height": 1.8
+							},
+							"minecraft:damage_sensor": {
+								"triggers": {
+									"cause": "all",
+									"deals_damage": false
+								}
+							}
+						},
+						"events": {
+							"minecraft:entity_spawned": {
+								"add": {
+									"component_groups": [
+										"minecraft:exploding"
+									]
+								}
+							}
+						}
+					}
+				},
+				"key": "minecraft:entity",
+				"children": [
+					{
+						"open": {
+							"description": {
+								"identifier": "sm:landmine_explosion",
+								"is_spawnable": true,
+								"is_summonable": true,
+								"is_experimental": false
+							},
+							"component_groups": {
+								"minecraft:exploding": {
+									"minecraft:explode": {
+										"fuse_length": 0,
+										"fuse_lit": true,
+										"power": 8,
+										"causes_fire": false,
+										"destroy_affected_by_griefing": true,
+										"breaks_blocks": true
+									}
+								}
+							},
+							"components": {
+								"minecraft:type_family": {
+									"family": [
+										"creeper",
+										"monster",
+										"mob"
+									]
+								},
+								"minecraft:collision_box": {
+									"width": 0.6,
+									"height": 1.8
+								},
+								"minecraft:damage_sensor": {
+									"triggers": {
+										"cause": "all",
+										"deals_damage": false
+									}
+								}
+							},
+							"events": {
+								"minecraft:entity_spawned": {
+									"add": {
+										"component_groups": [
+											"minecraft:exploding"
+										]
+									}
+								}
+							}
+						},
+						"key": "description",
+						"is_minified": true,
+						"children": {
+							"identifier": "sm:landmine_explosion",
+							"is_spawnable": true,
+							"is_summonable": true,
+							"is_experimental": false
+						}
+					},
+					{
+						"open": {
+							"description": {
+								"identifier": "sm:landmine_explosion",
+								"is_spawnable": true,
+								"is_summonable": true,
+								"is_experimental": false
+							},
+							"component_groups": {
+								"minecraft:exploding": {
+									"minecraft:explode": {
+										"fuse_length": 0,
+										"fuse_lit": true,
+										"power": 8,
+										"causes_fire": false,
+										"destroy_affected_by_griefing": true,
+										"breaks_blocks": true
+									}
+								}
+							},
+							"components": {
+								"minecraft:type_family": {
+									"family": [
+										"creeper",
+										"monster",
+										"mob"
+									]
+								},
+								"minecraft:collision_box": {
+									"width": 0.6,
+									"height": 1.8
+								},
+								"minecraft:damage_sensor": {
+									"triggers": {
+										"cause": "all",
+										"deals_damage": false
+									}
+								}
+							},
+							"events": {
+								"minecraft:entity_spawned": {
+									"add": {
+										"component_groups": [
+											"minecraft:exploding"
+										]
+									}
+								}
+							}
+						},
+						"key": "component_groups",
+						"children": [
+							{
+								"open": {
+									"minecraft:exploding": {
+										"minecraft:explode": {
+											"fuse_length": 0,
+											"fuse_lit": true,
+											"power": 8,
+											"causes_fire": false,
+											"destroy_affected_by_griefing": true,
+											"breaks_blocks": true
+										}
+									}
+								},
+								"key": "minecraft:exploding",
+								"children": [
+									{
+										"open": {
+											"minecraft:explode": {
+												"fuse_length": 0,
+												"fuse_lit": true,
+												"power": 8,
+												"causes_fire": false,
+												"destroy_affected_by_griefing": true,
+												"breaks_blocks": true
+											}
+										},
+										"key": "minecraft:explode",
+										"is_minified": true,
+										"children": {
+											"fuse_length": 0,
+											"fuse_lit": true,
+											"power": 8,
+											"causes_fire": false,
+											"destroy_affected_by_griefing": true,
+											"breaks_blocks": true
+										}
+									}
+								]
+							}
+						]
+					},
+					{
+						"open": {
+							"description": {
+								"identifier": "sm:landmine_explosion",
+								"is_spawnable": true,
+								"is_summonable": true,
+								"is_experimental": false
+							},
+							"component_groups": {
+								"minecraft:exploding": {
+									"minecraft:explode": {
+										"fuse_length": 0,
+										"fuse_lit": true,
+										"power": 8,
+										"causes_fire": false,
+										"destroy_affected_by_griefing": true,
+										"breaks_blocks": true
+									}
+								}
+							},
+							"components": {
+								"minecraft:type_family": {
+									"family": [
+										"creeper",
+										"monster",
+										"mob"
+									]
+								},
+								"minecraft:collision_box": {
+									"width": 0.6,
+									"height": 1.8
+								},
+								"minecraft:damage_sensor": {
+									"triggers": {
+										"cause": "all",
+										"deals_damage": false
+									}
+								}
+							},
+							"events": {
+								"minecraft:entity_spawned": {
+									"add": {
+										"component_groups": [
+											"minecraft:exploding"
+										]
+									}
+								}
+							}
+						},
+						"key": "components",
+						"is_minified": true,
+						"children": {
+							"minecraft:type_family": {
+								"family": [
+									"creeper",
+									"monster",
+									"mob"
+								]
+							},
+							"minecraft:collision_box": {
+								"width": 0.6,
+								"height": 1.8
+							},
+							"minecraft:damage_sensor": {
+								"triggers": {
+									"cause": "all",
+									"deals_damage": false
+								}
+							}
+						}
+					},
+					{
+						"open": {
+							"description": {
+								"identifier": "sm:landmine_explosion",
+								"is_spawnable": true,
+								"is_summonable": true,
+								"is_experimental": false
+							},
+							"component_groups": {
+								"minecraft:exploding": {
+									"minecraft:explode": {
+										"fuse_length": 0,
+										"fuse_lit": true,
+										"power": 8,
+										"causes_fire": false,
+										"destroy_affected_by_griefing": true,
+										"breaks_blocks": true
+									}
+								}
+							},
+							"components": {
+								"minecraft:type_family": {
+									"family": [
+										"creeper",
+										"monster",
+										"mob"
+									]
+								},
+								"minecraft:collision_box": {
+									"width": 0.6,
+									"height": 1.8
+								},
+								"minecraft:damage_sensor": {
+									"triggers": {
+										"cause": "all",
+										"deals_damage": false
+									}
+								}
+							},
+							"events": {
+								"minecraft:entity_spawned": {
+									"add": {
+										"component_groups": [
+											"minecraft:exploding"
+										]
+									}
+								}
+							}
+						},
+						"key": "events",
+						"is_minified": true,
+						"children": {
+							"minecraft:entity_spawned": {
+								"add": {
+									"component_groups": [
+										"minecraft:exploding"
+									]
+								}
+							}
+						}
+					}
+				]
+			}
+		]
+	}
+}

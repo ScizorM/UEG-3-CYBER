@@ -1,0 +1,18 @@
+//bridge-file-version: #10
+{
+	"format_version": "1.21.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "sm:ability_prism"
+		},
+		"components": {
+			"minecraft:display_name": {
+				"value": "Selected Ability: Prism Recovery"
+			},
+			"minecraft:icon": "sm:ability_prism",
+			"minecraft:wearable": {
+				"slot": "slot.armor.legs"
+			}
+		}
+	}
+}

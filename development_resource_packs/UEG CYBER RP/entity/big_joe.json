@@ -1,0 +1,21 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "sm:big_joe",
+			"materials": {
+				"default": "guardian"
+			},
+			"textures": {
+				"default": "textures/entity/big_joe"
+			},
+			"geometry": {
+				"default": "geometry.big_joe"
+			},
+			"render_controllers": [
+				"controller.render.guardian"
+			]
+		}
+	}
+}

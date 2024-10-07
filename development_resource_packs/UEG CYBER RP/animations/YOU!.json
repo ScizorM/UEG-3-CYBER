@@ -1,0 +1,25 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.scizorm.new": {
+			"loop": true,
+			"bones": {
+				"LeftLeg": {
+					"rotation": [0, 0, -7.5]
+				},
+				"RightLeg": {
+					"rotation": [5, 0, 10]
+				},
+				"LeftArm": {
+					"rotation": [20, 0, -25]
+				},
+				"RightArm": {
+					"rotation": [-44.83757, 35.39626, 45.28089]
+				},
+				"Head": {
+					"rotation": [11.55158, 32.15603, 4.02274]
+				}
+			}
+		}
+	}
+}

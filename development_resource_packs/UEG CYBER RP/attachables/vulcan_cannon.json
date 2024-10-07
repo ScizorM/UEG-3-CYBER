@@ -1,0 +1,40 @@
+//bridge-file-version: #44
+{
+	"format_version": "1.10.0",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "sm:vulcan_cannon",
+			"materials": {
+				"default": "entity_alphatest",
+				"enchanted": "entity_alphatest_glint"
+			},
+			"textures": {
+				"default": "textures/entity/weapons/vulcan_cannon",
+				"frame_2": "textures/entity/weapons/vulcan_cannon_frame2",
+				"frame_3": "textures/entity/weapons/vulcan_cannon_frame3",
+				"frame_4": "textures/entity/weapons/vulcan_cannon_frame4",
+				"frame_5": "textures/entity/weapons/vulcan_cannon_frame5",
+				"frame_6": "textures/entity/weapons/vulcan_cannon_frame6",
+				"frame_7": "textures/entity/weapons/vulcan_cannon_frame7",
+				"frame_8": "textures/entity/weapons/vulcan_cannon_frame8"
+			},
+			"geometry": {
+				"default": "geometry.vulcan_cannon"
+			},
+			"render_controllers": [
+				"controller.render.vulcan_cannon"
+			],
+			"animations": {
+				"controller": "controller.animation.vulcan_cannon",
+				"cannon_tp": "animation.vulcan_cannon.third_person",
+				"cannon_fp": "animation.vulcan_cannon.first_person",
+				"cannon_recoil": "animation.vulcan_cannon.first_person_recoil"
+			},
+			"scripts": {
+				"animate": [
+					"controller"
+				]
+			}
+		}
+	}
+}

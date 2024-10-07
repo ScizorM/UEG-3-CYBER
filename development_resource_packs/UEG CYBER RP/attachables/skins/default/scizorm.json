@@ -1,0 +1,22 @@
+//bridge-file-version: #31
+{
+	"format_version": "1.17.0",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "sm:scizorm",
+			"materials": {
+				"default": "entity_emissive_alpha"
+			},
+			"textures": {
+				"default": "textures/entity/skins/scizorm"
+			},
+			"geometry": {
+				"default": "geometry.scizorm"
+			},
+			"render_controllers": [
+				"controller.render.example.base",
+				"controller.render.example.outline"
+			]
+		}
+	}
+}

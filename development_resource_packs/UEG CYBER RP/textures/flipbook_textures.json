@@ -1,0 +1,146 @@
+//bridge-file-version: #43
+[
+	{
+		"flipbook_texture": "textures/blocks/warning_block",
+		"atlas_tile": "sm:warning_block",
+		"frames": [
+			0,
+			1,
+			2,
+			3
+		],
+		"ticks_per_frame": 3,
+		"blend_frames": false,
+		"atlas_tile_variant": 2
+	},
+	{
+		"flipbook_texture": "textures/blocks/netherite_generator_side",
+		"atlas_tile": "sm:netherite_reactor_side",
+		"frames": [
+			0,
+			1
+		],
+		"blend_frames": true,
+		"ticks_per_frame": 5,
+		"atlas_tile_variant": 2
+	},
+	{
+		"flipbook_texture": "textures/blocks/vaporglitch",
+		"atlas_tile": "sm:vaporglitch",
+		"frames": [
+			0,
+			1,
+			2,
+			3
+		],
+		"ticks_per_frame": 4,
+		"atlas_tile_variant": 1,
+		"blend_frames": false
+	},
+	{
+		"flipbook_texture": "textures/blocks/eye_front",
+		"ticks_per_frame": 1,
+		"blend_frames": true,
+		"atlas_tile": "sm:eye_front",
+		"atlas_tile_variant": 2,
+		"frames": [
+			0,
+			1,
+			2,
+			3,
+			4,
+			5
+		]
+	},
+	{
+		"flipbook_texture": "textures/blocks/burnt_ash",
+		"atlas_tile": "sm:burning_ash",
+		"frames": [
+			0,
+			1,
+			2,
+			3,
+			4,
+			5,
+			6
+		],
+		"ticks_per_frame": 5,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/speedlines",
+		"atlas_tile": "sm:speedline_block_l",
+		"frames": [
+			0,
+			1,
+			2,
+			3
+		],
+		"ticks_per_frame": 0.01,
+		"blend_frames": false
+	},
+	{
+		"flipbook_texture": "textures/blocks/speedlines_r",
+		"atlas_tile": "sm:speedline_block_r",
+		"ticks_per_frame": 0.01,
+		"blend_frames": false,
+		"frames": [
+			0,
+			1,
+			2,
+			3
+		]
+	},
+	{
+		"flipbook_texture": "textures/blocks/pendual_magic",
+		"atlas_tile": "sm:pendual_magic",
+		"frames": [
+			0,
+			1,
+			2
+		],
+		"ticks_per_frame": 50,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/arenaborder",
+		"atlas_tile": "sm:arenaborder",
+		"frames": [
+			0,
+			1
+		],
+		"ticks_per_frame": 25,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/arenaborder_2",
+		"atlas_tile": "sm:arenaborder_2",
+		"frames": [
+			0,
+			1
+		],
+		"ticks_per_frame": 25,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/arenaborder_4",
+		"atlas_tile": "sm:arenaborder_4",
+		"frames": [
+			0,
+			1
+		],
+		"ticks_per_frame": 25,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/arenaborder_3",
+		"atlas_tile": "sm:arenaborder_3",
+		"frames": [
+			0,
+			1
+		],
+		"ticks_per_frame": 25,
+		"blend_frames": true
+	},
+	{}
+]

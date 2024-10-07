@@ -1,0 +1,42 @@
+//bridge-file-version: #7
+{
+	"format_version": "1.21.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "sm:loadout_1"
+		},
+		"components": {
+			"minecraft:cooldown": {
+				"category": "select_lo",
+				"duration": 1
+			},
+			"minecraft:icon": "sm:loadout_1",
+			"minecraft:display_name": {
+				"value": "Vote for loadout 1"
+			},
+			"minecraft:render_offsets": {
+				"main_hand": {
+					"first_person": {
+						"scale": [
+							0,
+							0,
+							0
+						]
+					},
+					"third_person": {
+						"scale": [
+							0,
+							0,
+							0
+						],
+						"position": [
+							0,
+							0,
+							0
+						]
+					}
+				}
+			}
+		}
+	}
+}

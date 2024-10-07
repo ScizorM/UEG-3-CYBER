@@ -1,0 +1,46 @@
+//bridge-file-version: #63
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.baby_staff": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"idle_fp": "context.is_first_person == 1.0"
+						},
+						{
+							"idle_tp": "context.is_first_person != 1.0"
+						}
+					]
+				},
+				"idle_fp": {
+					"animations": [
+						"fist_fp"
+					],
+					"transitions": [
+						{
+							"idle_fp": "context.is_first_person == 1.0"
+						},
+						{
+							"idle_tp": "context.is_first_person != 1.0"
+						}
+					]
+				},
+				"idle_tp": {
+					"animations": [
+						"fist_tp"
+					],
+					"transitions": [
+						{
+							"idle_fp": "context.is_first_person == 1.0"
+						},
+						{
+							"idle_tp": "context.is_first_person != 1.0"
+						}
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,55 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.map_preview": {
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"textures": [
+				"Array.top[query.variant]"
+			],
+			"arrays": {
+				"geometries": {
+					"Array.geo": [
+						"Geometry.default",
+						"Geometry.blackwhite_1",
+						"Geometry.nether_2",
+						"Geometry.space_3",
+						"Geometry.western_4",
+						"Geometry.stronghold_5",
+						"Geometry.aquatic_6",
+						"Geometry.synthesis_7",
+						"Geometry.neonether_8",
+						"Geometry.redstone_9",
+						"Geometry.ssueg_10",
+						"Geometry.bastion_11",
+						"Geometry.maze_12",
+						"Geometry.void_13"
+					]
+				},
+				"textures": {
+					"Array.top": [
+						"Texture.default",
+						"Texture.blackwhite_1",
+						"Texture.nether_2",
+						"Texture.space_3",
+						"Texture.western_4",
+						"Texture.stronghold_5",
+						"Texture.aquatic_6",
+						"Texture.synthesis_7",
+						"Texture.neonether_8",
+						"Texture.redstone_9",
+						"Texture.ssueg_10",
+						"Texture.bastion_11",
+						"Texture.maze_12",
+						"Texture.void_13"
+					]
+				}
+			},
+			"geometry": "Array.geo[query.variant]"
+		}
+	}
+}

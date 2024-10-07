@@ -1,0 +1,24 @@
+//bridge-file-version: #10
+{
+	"format_version": "1.21.10",
+	"minecraft:block": {
+		"description": {
+			"identifier": "sm:godray"
+		},
+		"components": {
+			"minecraft:light_emission": 2,
+			"minecraft:destructible_by_mining": false,
+			"minecraft:destructible_by_explosion": false,
+			"minecraft:display_name": "Red Sky",
+			"minecraft:material_instances": {
+				"*": {
+					"render_method": "blend",
+					"ambient_occlusion": true,
+					"face_dimming": false,
+					"texture": "sm:blue_sky"
+				}
+			},
+			"minecraft:light_dampening": 0
+		}
+	}
+}
