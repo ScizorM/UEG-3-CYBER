@@ -40,7 +40,43 @@
 			"minecraft:physics": {},
 			"minecraft:conditional_bandwidth_optimization": {}
 		},
-		"component_groups": {},
-		"events": {}
+		"component_groups": {
+			"skin_variant": {
+				"minecraft:variant": {
+					"value": 1
+				}
+			},
+			"no_variant": {
+				"minecraft:variant": {
+					"value": 0
+				}
+			}
+		},
+		"events": {
+			"sm:add_variant": {
+				"add": {
+					"component_groups": [
+						"skin_variant"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"no_variant"
+					]
+				}
+			},
+			"sm:remove_variant": {
+				"remove": {
+					"component_groups": [
+						"skin_variant"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"no_variant"
+					]
+				}
+			}
+		}
 	}
 }

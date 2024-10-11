@@ -1,5 +1,6 @@
 ﻿import { world, ItemCooldownComponent, system, Entity } from '@minecraft/server'
 import { ActionFormData, MessageFormData, ModalFormData } from '@minecraft/server-ui'
+export {clsM, bacM }
 //
 //
 //COLOR CODES
@@ -590,7 +591,7 @@ world.beforeEvents.itemUse.subscribe(data => {
 
 
 
-    if (data.itemStack.typeId === "sm:settings") {
+    if (data.itemStack.typeId === "sm:settings" && player.hasTag("enter_splendid") == false) {
 
         system.run(() => arenaCategorySelect(player))
 

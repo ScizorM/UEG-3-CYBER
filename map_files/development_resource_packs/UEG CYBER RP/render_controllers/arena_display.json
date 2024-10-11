@@ -1,0 +1,25 @@
+//bridge-file-version: #99
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.arena_display": {
+			"geometry": "Geometry.default",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"textures": [
+				"Array.skins[query.variant]"
+			],
+			"arrays": {
+				"textures": {
+					"Array.skins": [
+						"Texture.default",
+						"Texture.skins"
+					]
+				}
+			}
+		}
+	}
+}

@@ -11,6 +11,7 @@ import './blockEvents.js'
 import './loadoutSelect.js'
 import './entityInteract.js'
 import './skinRandomizer.js'
+import './skinSettings.js'
 
 world.sendMessage("[Scripts reloaded]");
 

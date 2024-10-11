@@ -8,13 +8,14 @@
 				"default": "guardian"
 			},
 			"textures": {
-				"default": "textures/entity/arena_terminal"
+				"default": "textures/entity/arena_terminal",
+				"skins": "textures/entity/skin_terminal"
 			},
 			"geometry": {
 				"default": "geometry.arenaTerminal"
 			},
 			"render_controllers": [
-				"controller.render.guardian"
+				"controller.render.arena_display"
 			]
 		}
 	}

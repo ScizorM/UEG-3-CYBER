@@ -1,8 +1,11 @@
 ﻿import { world, ItemCooldownComponent, system, Entity } from '@minecraft/server'
 import { ActionFormData, MessageFormData, ModalFormData } from '@minecraft/server-ui'
+import { skinList, designerList, skinSet } from './skinList.js'
 
 
 world.beforeEvents.itemUse.subscribe(data => {
+
+
 
     const player = data.source
 
@@ -17,8 +20,80 @@ world.beforeEvents.itemUse.subscribe(data => {
 })
 
 
-
 function purchase(player) {
+
+    var skinRandomizer = world.scoreboard.getObjective("skin_randomizer")
+
+    var skinRandActive = skinRandomizer.getScore("active")
+    var skinRandCurrent = skinRandomizer.getScore("current")
+
+    var skinRandNone = skinRandomizer.getScore("none")
+    var skinRand1 = skinRandomizer.getScore("slot1")
+    var skinRand2 = skinRandomizer.getScore("slot2")
+    var skinRand3 = skinRandomizer.getScore("slot3")
+    var skinRand4 = skinRandomizer.getScore("slot4")
+    var skinRand5 = skinRandomizer.getScore("slot5")
+    var skinRand6 = skinRandomizer.getScore("slot6")
+
+
+    var skinNamesSF = new Array(
+        "no name",
+        skinList[skinRand1],
+        skinList[skinRand2],
+        skinList[skinRand3],
+        skinList[skinRand4],
+        skinList[skinRand5],
+        skinList[skinRand6]
+    )
+    var skinDesignSF = new Array(
+        "no name",
+        designerList[skinRand1],
+        designerList[skinRand2],
+        designerList[skinRand3],
+        designerList[skinRand4],
+        designerList[skinRand5],
+        designerList[skinRand6]
+    )
+    var skinSetSF = new Array(
+        "no name",
+        skinSet[skinRand1],
+        skinSet[skinRand2],
+        skinSet[skinRand3],
+        skinSet[skinRand4],
+        skinSet[skinRand5],
+        skinSet[skinRand6]
+    )
+    var skinNumber = new Array(
+        0,
+        skinRand1,
+        skinRand2,
+        skinRand3,
+        skinRand4,
+        skinRand5,
+        skinRand6
+    )
+
+    var currentSkin = 0
+
+    if (player.hasTag("skin_slot_1")) {
+        currentSkin = 1
+    }
+    else if (player.hasTag("skin_slot_2")) {
+        currentSkin = 2
+    }
+    else if (player.hasTag("skin_slot_3")) {
+        currentSkin = 3
+    }
+    else if (player.hasTag("skin_slot_4")) {
+        currentSkin = 4
+    }
+    else if (player.hasTag("skin_slot_5")) {
+        currentSkin = 5
+    }
+    else if (player.hasTag("skin_slot_6")) {
+        currentSkin = 6
+    }
+
     const currency = world.scoreboard.getObjective("credits")
     const currencyCount = currency.getScore(player)
 
@@ -31,7 +106,8 @@ function purchase(player) {
     const apackCost = world.scoreboard.getObjective("arenapack_price")
     const apackCost2 = apackCost.getScore("arenapack_price")
 
-
+    var spackCost = world.scoreboard.getObjective("skin_cost")
+    var spackCostDefault = spackCost.getScore("default")
 
     const music_pack_1_title = "Purchase Hardcore Pack Vol.1"
 
@@ -41,6 +117,8 @@ function purchase(player) {
     const music_pack_2_title = "Purchase Hardcore Pack Vol.2"
 
     const music_pack_2_desc = "Unlocks the following songs:\n\nGALAXY TORIMOTI §o§cCW§r\nBPM: 190 - 380 - 760§d§l!!!!§r\n\nTV MAKES YOU DUMBER §o§cCW§r\nBPM: 200§c§l!!!§r\n\nCOMIC MISCHIEF §o§cCW§r\nBPM: 180§6§l!!§r\n\n§c§lWARNING!§r These songs are very fast and/or aggressive.\n\nPrice: " + packCost2 + "\nChoose a payment option:\n\n"
+
+
 
 
     //Arena Pack Definitions
@@ -188,6 +266,9 @@ function purchase(player) {
     else if (player.hasTag("enter_credits")) {
         var cost = apackCost2
     }
+    else if (currentSkin > 0) {
+        var cost = spackCostDefault
+    }
     else {
         var cost = 0
     }
@@ -215,6 +296,9 @@ function purchase(player) {
     }
     else if (player.hasTag("arena_pack6")) {
         var title = arena_pack_6_title
+    }
+    else if (currentSkin > 0) {
+        var title = "Purchase " + skinNamesSF[currentSkin]
     }
     else {
         var title = "no title"
@@ -244,6 +328,12 @@ function purchase(player) {
     else if (player.hasTag("arena_pack6")) {
         var desc = arena_pack_6_desc
     }
+    else if (currentSkin > 0 && player.hasTag(skinNumber[currentSkin] + "_skin_unlocked") == false) {
+        var desc = "Unlocks the following skin(s):\n\n§e" + skinNamesSF[currentSkin] + "§r\n\nDesigner: §d" + skinDesignSF[currentSkin] + "\n\n§rFrom the §b" + skinSetSF[currentSkin] + " §rCollection.\n\nPrice: " + cost + "\nChoose a payment option: \n\n"
+    }
+    else if (currentSkin > 0 && player.hasTag(skinNumber[currentSkin] + "_skin_unlocked") != false) {
+        var desc = "You already own this skin!\n\n§e" + skinNamesSF[currentSkin] + "§r\n\nDesigner: §d" + skinDesignSF[currentSkin] + "\n\n§rFrom the §b" + skinSetSF[currentSkin] + " §rCollection.\n\nPrice: " + cost + "\n\n"
+    }
     else {
         var desc = "no desc"
     }
@@ -253,16 +343,16 @@ function purchase(player) {
     form.title(title);
     form.body(desc);
 
-    if (currencyCount >= cost) {
+    if (currencyCount >= cost && player.hasTag(skinNumber[currentSkin] + "_skin_unlocked") == false) {
         form.button("Use Personal Credits \n" + currencyCount + "", "textures/ui/button_currency");
     }
-    else {
+    else if (player.hasTag(skinNumber[currentSkin] + "_skin_unlocked") == false) {
         form.button("Insufficient Personal Credits!\n" + currencyCount + "", "textures/ui/button_currency");
     }
-    if (gcurrencyCount >= cost) {
+    if (gcurrencyCount >= cost && player.hasTag(skinNumber[currentSkin] + "_skin_unlocked") == false) {
         form.button("Use Global Credits \n" + gcurrencyCount + "", "textures/ui/button_global_currency");
     }
-    else {
+    else if (player.hasTag(skinNumber[currentSkin] + "_skin_unlocked") == false) {
         form.button("Insufficient Global Credits!\n" + gcurrencyCount + "", "textures/ui/button_global_currency");
     }
     form.button("Cancel", "textures/ui/button_close");
@@ -308,6 +398,10 @@ function purchase(player) {
                 currency.addScore(player, -cost)
                 player.runCommand("function unlock_apack_6")
             }
+            else if (currentSkin > 0) {
+                currency.addScore(player, -cost)
+                player.addTag(skinNumber[currentSkin] + "_skin_unlocked")
+            }
         }
         else if (responseValue == 1 && gcurrencyCount >= cost) {
             if (player.hasTag("enter_music")) {
@@ -343,6 +437,10 @@ function purchase(player) {
             else if (player.hasTag("arena_pack6")) {
                 gcurrency.addScore("global_credits", -cost)
                 player.runCommand("function unlock_apack_6")
+            }
+            else if (currentSkin > 0) {
+                currency.addScore("global_credits", -cost)
+                player.addTag(skinNumber[currentSkin] + "_skin_unlocked")
             }
         }
 
