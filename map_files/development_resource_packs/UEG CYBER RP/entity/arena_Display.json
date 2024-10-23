@@ -9,7 +9,8 @@
 			},
 			"textures": {
 				"default": "textures/entity/arena_terminal",
-				"skins": "textures/entity/skin_terminal"
+				"skins": "textures/entity/skin_terminal",
+				"effects": "textures/entity/effect_terminal"
 			},
 			"geometry": {
 				"default": "geometry.arenaTerminal"

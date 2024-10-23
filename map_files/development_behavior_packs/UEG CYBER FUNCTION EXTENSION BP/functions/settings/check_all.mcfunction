@@ -14,3 +14,4 @@ execute as @e[type=sm:laptop,tag=maxlives] run function settings/max_lives_check
 execute as @e[type=sm:laptop,tag=dash_power] run function settings/dash_power_check
 execute as @e[type=sm:laptop,tag=min_dash_requirement] run function settings/dash_requirement_check
 execute as @e[type=sm:laptop,tag=dash_vert2] run function settings/dash_vert_check
+execute as @e[type=sm:laptop,tag=avote] run function settings/avote_check

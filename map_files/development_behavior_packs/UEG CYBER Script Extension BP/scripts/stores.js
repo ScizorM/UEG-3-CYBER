@@ -349,10 +349,10 @@ function purchase(player) {
     else if (player.hasTag(skinNumber[currentSkin] + "_skin_unlocked") == false) {
         form.button("Insufficient Personal Credits!\n" + currencyCount + "", "textures/ui/button_currency");
     }
-    if (gcurrencyCount >= cost && player.hasTag(skinNumber[currentSkin] + "_skin_unlocked") == false) {
+    if (gcurrencyCount >= cost && player.hasTag(skinNumber[currentSkin] + "_skin_unlocked") == false && player.hasTag("enter_splendid") == false) {
         form.button("Use Global Credits \n" + gcurrencyCount + "", "textures/ui/button_global_currency");
     }
-    else if (player.hasTag(skinNumber[currentSkin] + "_skin_unlocked") == false) {
+    else if (player.hasTag(skinNumber[currentSkin] + "_skin_unlocked") == false && player.hasTag("enter_splendid") == false) {
         form.button("Insufficient Global Credits!\n" + gcurrencyCount + "", "textures/ui/button_global_currency");
     }
     form.button("Cancel", "textures/ui/button_close");
@@ -403,7 +403,7 @@ function purchase(player) {
                 player.addTag(skinNumber[currentSkin] + "_skin_unlocked")
             }
         }
-        else if (responseValue == 1 && gcurrencyCount >= cost) {
+        else if (responseValue == 1 && gcurrencyCount >= cost && player.hasTag("enter_splendid") == false) {
             if (player.hasTag("enter_music")) {
                 if (player.hasTag("music_pack1")) {
                     gcurrency.addScore("global_credits", -cost)

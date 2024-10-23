@@ -108,8 +108,11 @@ function tether(player) {
             else {
                 //system.run(() => tether3(player))
             }
+            return
         }
+        return
     }
+    return
 }
 
 

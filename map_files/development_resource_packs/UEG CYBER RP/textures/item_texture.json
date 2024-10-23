@@ -18,6 +18,11 @@
 				"textures/items/settings"
 			]
 		},
+		"sm:bank":{
+			"textures":[
+				"textures/items/bank"
+			]
+		},
 		"sm:dev_item": {
 			"textures": [
 				"textures/items/new_icons/dev_item"

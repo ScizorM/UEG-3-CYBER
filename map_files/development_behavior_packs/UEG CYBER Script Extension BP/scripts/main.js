@@ -12,6 +12,7 @@ import './loadoutSelect.js'
 import './entityInteract.js'
 import './skinRandomizer.js'
 import './skinSettings.js'
+import './bank_menu.js'
 
 world.sendMessage("[Scripts reloaded]");
 

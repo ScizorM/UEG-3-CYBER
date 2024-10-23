@@ -15,7 +15,11 @@ function settings_info_ticks
 function check_arenapack_count
 
 function music_info_ticks
+
+function check_enabled_arena_count
  
+execute if score total total_en_arenas matches ..2 run execute if score boolean arena_vote_enabled matches 1 run function disable_avote_few 
+
 execute as @a[scores={teleport_cooldown_new=1..}] run scoreboard players remove @s teleport_cooldown_new 1
 scoreboard players add @a teleport_cooldown_new 0
 
@@ -26,7 +30,11 @@ execute as @a run execute positioned as @s run execute unless block ~ ~-1 ~ sm:s
 execute as @a run execute positioned as @s run execute if block ~ ~-1 ~ sm:purchase_block run replaceitem entity @s slot.hotbar 4 sm:purchase 1 0 {"minecraft:item_lock":{"mode":"lock_in_slot"}}
 execute as @a run execute positioned as @s run execute if block ~ ~-1 ~ sm:purchase_block_2 run replaceitem entity @s slot.hotbar 4 sm:purchase 1 0 {"minecraft:item_lock":{"mode":"lock_in_slot"}}
 execute as @a run execute positioned as @s run execute if block ~ ~-1 ~ sm:purchase_block_3 run replaceitem entity @s slot.hotbar 4 sm:purchase 1 0 {"minecraft:item_lock":{"mode":"lock_in_slot"}}
-execute as @a run execute positioned as @s run execute unless block ~ ~-1 ~ sm:purchase_block run execute unless block ~ ~-1 ~ sm:purchase_block_2 run execute unless block ~ ~-1 ~ sm:purchase_block_3 run clear @s sm:purchase
+execute as @a run execute positioned as @s run execute if block ~ ~-1 ~ sm:purchase_block_4 run replaceitem entity @s slot.hotbar 4 sm:purchase 1 0 {"minecraft:item_lock":{"mode":"lock_in_slot"}}
+execute as @a run execute positioned as @s run execute unless block ~ ~-1 ~ sm:purchase_block run execute unless block ~ ~-1 ~ sm:purchase_block_2 run execute unless block ~ ~-1 ~ sm:purchase_block_4 run execute unless block ~ ~-1 ~ sm:purchase_block_3 run clear @s sm:purchase
+
+execute as @a run execute positioned as @s run execute if block ~ ~-1 ~ sm:bank_block_2 run replaceitem entity @s slot.hotbar 4 sm:bank 1 0 {"minecraft:item_lock":{"mode":"lock_in_slot"}}
+execute as @a run execute positioned as @s run execute unless block ~ ~-1 ~ sm:bank_block_2 run clear @s sm:bank
  
 execute if score playMusic playMusic matches 1 run scoreboard players add playMusicTimer playMusicTimer 1
  
@@ -49,7 +57,14 @@ execute as @a[tag=dashAnim] run execute if score @s dash_effect_timer matches 2 
 execute as @a[tag=dashAnim] run execute if score @s dash_effect_timer matches 3 run event entity @s sm:dash_frame3
 execute as @a[tag=dashAnim] run execute if score @s dash_effect_timer matches 4 run event entity @s sm:dash_frame4
 execute as @a[tag=dashAnim] run execute if score @s dash_effect_timer matches 5.. run function reset_dash_effects
- 
+
+scoreboard players add dash_effect variant_timer 1
+execute as @e[tag=dashDisplay] run execute if score dash_effect variant_timer matches 1 run event entity @s sm:variant_1
+execute as @e[tag=dashDisplay] run execute if score dash_effect variant_timer matches 2 run event entity @s sm:variant_2
+execute as @e[tag=dashDisplay] run execute if score dash_effect variant_timer matches 3 run event entity @s sm:variant_3
+execute as @e[tag=dashDisplay] run execute if score dash_effect variant_timer matches 4 run event entity @s sm:variant_4
+execute as @e[tag=dashDisplay] run execute if score dash_effect variant_timer matches 5.. run event entity @s sm:variant_0
+execute if score dash_effect variant_timer matches 30.. run scoreboard players set dash_effect variant_timer 0
  
 scoreboard players add @a selected_effect 0
 

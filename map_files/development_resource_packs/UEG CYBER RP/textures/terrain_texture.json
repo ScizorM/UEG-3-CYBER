@@ -20,6 +20,16 @@
 				"textures/blocks/settings_2"
 			]
 		},
+						"sm:bank_block_2":{
+			"textures":[
+				"textures/blocks/bank_2"
+			]
+		},
+		"sm:purchase_block_4":{
+			"textures":[
+				"textures/blocks/purchase_4"
+			]
+		},
 		"sm:treecolor_00": {
 			"textures": [
 				"textures/blocks/treecolor_00"

@@ -33,7 +33,7 @@ world.afterEvents.itemUse.subscribe((data) => {
             const cooldownComp4 = item.getComponent(ItemCooldownComponent.componentId)
             //world.sendMessage("[Remote Debug] " + item.getComponent('cooldown').getCooldownTicksRemaining(player))
             if (item.getComponent('cooldown').getCooldownTicksRemaining(player) > 58) {
-                cooldownComp5.startCooldown(player)
+                cooldownComp4.startCooldown(player)
             }
             break
         case 'sm:emp_drive':

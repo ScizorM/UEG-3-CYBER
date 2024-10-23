@@ -726,6 +726,9 @@ function mainArenaPageRPG(player) {
             system.run(() => categoryRPG2(player))
         }
         else if (responseValue == 2) {
+
+        }
+        else if (responseValue == 3) {
             system.run(() => arenaCategorySelect(player))
         }
 
@@ -4949,4 +4952,36 @@ function arena_0105_message(player) {
         }
 
     })
+}
+
+function toggleAll(player,title) {
+    let form = new ActionFormData();
+    form.title("... > " + title + " > ");
+    form.body("Select an Option:\n");
+    form.button("Enable All Unlocked " + title + " Arenas", "textures/ui/button_enable_all");
+    form.button("Disable All Unlocked " + title + " Arenas", "textures/ui/button_disable_all");
+    form.button(bacM, "textures/ui/button_back");
+
+    form.show(player).then(r => {
+
+        let responseValue = r.selection
+
+
+
+        if (responseValue == 0) {
+            system.run(() => categoryRPG(player))
+        }
+        else if (responseValue == 1) {
+            system.run(() => categoryRPG2(player))
+        }
+        else if (responseValue == 2) {
+
+        }
+        else if (responseValue == 3) {
+            system.run(() => arenaCategorySelect(player))
+        }
+
+    })//.catch((e) => {
+    //world.sendMessage(e + "")
+    //})
 }

@@ -398,3 +398,45 @@ const skinFileLoc = new Array(
     // UEG Legacy ////////////////////////
     "textures/ui/skin_categories/category_", // 20
 )
+
+const effectNames = new Array(
+    "No Effect", // 00
+    "Default", // 01
+    "Incinerate", // 02
+    "Digi-Bit", // 03
+    "Auric", // 04
+    "Shadow", // 05
+    "Electric", // 06
+    "Confetti", // 07
+    "Nature", // 08
+    "Chromatic", // 09
+    "Smoke Burst", // 10
+    "Baby Storm", // 11
+    "Pure Freedom", // 12
+    "Crimson Thunderbolt", // 13
+    "evel's effect", // 14
+    "rye's effect", // 15
+    "Hopping Trail" // 16
+)
+const sm = "ScizorM"
+
+const effectDesigners = new Array(
+    "No Designer", // 00
+    sm, // 01
+    sm, // 02
+    sm, // 03
+    sm, // 04
+    sm, // 05
+    sm, // 06
+    sm, // 07
+    sm, // 08
+    sm, // 09
+    sm, // 10
+    sm, // 11
+    sm, // 12
+    sm, // 13
+    "evel, " + sm, // 14
+    "zeerye, " + sm, // 15
+    "AubreyThePebble, " + sm // 16
+)
+

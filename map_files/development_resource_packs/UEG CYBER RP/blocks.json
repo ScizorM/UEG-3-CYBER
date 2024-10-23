@@ -11,11 +11,17 @@
 	"sm:polishedbasaltside": {
 		"textures": "sm:polishedbasaltside"
 	},
+	"sm:purchase_block_4":{
+		"textures":"sm:purchase_block_4"
+	},
 	"sm:settings_block":{
 		"textures": "sm:settings_block"
 	},
 		"sm:settings_block_2":{
 		"textures": "sm:settings_block_2"
+	},
+			"sm:bank_block_2":{
+		"textures": "sm:bank_block_2"
 	},
 	"sm:candy_rope":{
 		"textures":{
