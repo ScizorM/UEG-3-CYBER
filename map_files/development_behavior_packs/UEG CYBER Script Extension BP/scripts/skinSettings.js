@@ -1,6 +1,6 @@
-import { world, ItemCooldownComponent, system, Entity } from '@minecraft/server'
+﻿import { world, ItemCooldownComponent, system, Entity } from '@minecraft/server'
 import { ActionFormData, MessageFormData, ModalFormData } from '@minecraft/server-ui'
-import { skinList, designerList, skinSet, skinSet_over, skinFileLoc } from './skinList.js'
+import { skinList, designerList, skinSet, skinSet_over, skinFileLoc, skinIconLoc } from './skinList.js'
 import { clsM, bacM } from './arenaSelects.js'
 
 world.beforeEvents.itemUse.subscribe(data => {
@@ -34,10 +34,20 @@ function skinCategoryInit(player) {
             system.run(() => skinCategoryUEGC(player))
         }
         else if (responseVal == 1) {
-
+            var selectedCPack = 20
+            var skinCount = 3
+            var series = 1
+            var skinIDs = new Array(73, 74, 75)
+            var collection = skinSet_over[20]
+            system.run(() => skinSelectUI(player, skinCount, selectedCPack, skinIDs, series, collection))
         }
         else if (responseVal == 2) {
-
+            var selectedCPack = 18
+            var skinCount = 15
+            var series = 2
+            var skinIDs = new Array(58,59,60,61,62,63,64,65,66,67,68,69,70,71,72)
+            var collection = skinSet_over[18]
+            system.run(() => skinSelectUI(player, skinCount, selectedCPack, skinIDs, series, collection))
         }
 
     })
@@ -48,6 +58,14 @@ function skinCategoryUEGC(player) {
     var selectedCPack = 0
 
     var secretsUnlocked = 0
+
+    var skinCount = 0
+
+    var series = 0
+
+    var collection;
+    var skinIDs = new Array(0, 0, 0, 0)
+    var skinIDsString = new Array("00", "00", "00", "00")
 
     let form = new ActionFormData();
     form.title("... > UEG CYBER Originals")
@@ -84,6 +102,10 @@ function skinCategoryUEGC(player) {
         secretsUnlocked += 1
         form.button(skinSet_over[17], skinFileLoc[17]);
     }
+    if (player.hasTag("spack_secret_angenicidal")) {
+        secretsUnlocked += 1
+        form.button(skinSet_over[21], skinFileLoc[21]);
+    }
     form.button("Back", "textures/ui/button_back");
     form.button("Close", "textures/ui/button_close");
     form.show(player).then(r => {
@@ -95,58 +117,133 @@ function skinCategoryUEGC(player) {
         switch (responseVal) {
             case 0:
                 selectedCPack = 1
+                skinCount = 12
+                skinIDs = new Array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)
+                collection = skinSet_over[1]
+                system.run(() => skinSelectUI(player, skinCount, selectedCPack, skinIDs, series, collection))
                 break;
             case 1:
                 selectedCPack = 2
+                skinCount = 3
+                skinIDs = new Array(13, 14, 15)
+                collection = skinSet_over[2]
+                system.run(() => skinSelectUI(player, skinCount, selectedCPack, skinIDs, series, collection))
                 break;
             case 2:
                 selectedCPack = 3
+                skinCount = 3
+                skinIDs = new Array(16, 17, 18)
+                collection = skinSet_over[3]
+                system.run(() => skinSelectUI(player, skinCount, selectedCPack, skinIDs, series, collection))
                 break;
             case 3:
                 selectedCPack = 4
+                skinCount = 3
+                skinIDs = new Array(19, 20, 21)
+                collection = skinSet_over[4]
+                system.run(() => skinSelectUI(player, skinCount, selectedCPack, skinIDs, series, collection))
                 break;
             case 4:
                 selectedCPack = 5
+                skinCount = 3
+                skinIDs = new Array(22, 23, 24)
+                collection = skinSet_over[5]
+                system.run(() => skinSelectUI(player, skinCount, selectedCPack, skinIDs, series, collection))
                 break;
             case 5:
                 selectedCPack = 6
+                skinCount = 3
+                skinIDs = new Array(25, 26, 27)
+                collection = skinSet_over[6]
+                system.run(() => skinSelectUI(player, skinCount, selectedCPack, skinIDs, series, collection))
                 break;
             case 6:
                 selectedCPack = 7
+                skinCount = 3
+                skinIDs = new Array(28, 29, 30)
+                collection = skinSet_over[7]
+                system.run(() => skinSelectUI(player, skinCount, selectedCPack, skinIDs, series, collection))
                 break;
             case 7:
                 selectedCPack = 8
+                skinCount = 3
+                skinIDs = new Array(31,32,33)
+                collection = skinSet_over[8]
+                system.run(() => skinSelectUI(player, skinCount, selectedCPack, skinIDs, series, collection))
                 break;
             case 8:
                 selectedCPack = 9
+                skinCount = 3
+                skinIDs = new Array(34, 35, 36)
+                collection = skinSet_over[9]
+                system.run(() => skinSelectUI(player, skinCount, selectedCPack, skinIDs, series, collection))
                 break;
             case 9:
                 selectedCPack = 10
+                skinCount = 3
+                skinIDs = new Array(37,38,39)
+                collection = skinSet_over[10]
+                system.run(() => skinSelectUI(player, skinCount, selectedCPack, skinIDs, series, collection))
                 break;
             case 10:
                 selectedCPack = 11
+                skinCount = 3
+                skinIDs = new Array(40,41,42)
+                collection = skinSet_over[11]
+                system.run(() => skinSelectUI(player, skinCount, selectedCPack, skinIDs, series, collection))
                 break;
             case 11:
                 selectedCPack = 12
+                skinCount = 6
+                skinIDs = new Array(43,44,45,76,77,78)
+                collection = skinSet_over[12]
+                system.run(() => skinSelectUI(player, skinCount, selectedCPack, skinIDs, series, collection))
                 break;
             case 12:
                 if (secretsUnlocked == 0) {
                     system.run(() => skinCategoryInit(player))
                 }
                 else if (player.hasTag("spack_secret_freedom")) {
-
+                    selectedCPack = 13
+                    skinCount = 3
+                    skinIDs = new Array(46,47,48)
+                    collection = skinSet_over[13]
+                    system.run(() => skinSelectUI(player, skinCount, selectedCPack, skinIDs, series, collection))
                 }
                 else if (player.hasTag("spack_secret_freedom") == false && player.hasTag("spack_secret_s")) {
-
+                    selectedCPack = 14
+                    skinCount = 3
+                    skinIDs = new Array(49, 50, 51)
+                    collection = skinSet_over[14]
+                    system.run(() => skinSelectUI(player, skinCount, selectedCPack, skinIDs, series, collection))
                 }
                 else if (player.hasTag("spack_secret_freedom") == false && player.hasTag("spack_secret_s") == false && player.hasTag("spack_secret_dev")) {
-
+                    selectedCPack = 15
+                    skinCount = 4
+                    skinIDs = new Array(52, 53, 54, 55)
+                    collection = skinSet_over[15]
+                    system.run(() => skinSelectUI(player, skinCount, selectedCPack, skinIDs, series, collection))
                 }
                 else if (player.hasTag("spack_secret_freedom") == false && player.hasTag("spack_secret_s") == false && player.hasTag("spack_secret_dev") == false && player.hasTag("spack_secret_specialThanks")) {
-
+                    selectedCPack = 16
+                    skinCount = 1
+                    skinIDs = new Array(56, "wow")
+                    collection = skinSet_over[16]
+                    system.run(() => skinSelectUI(player, skinCount, selectedCPack, skinIDs, series, collection))
                 }
                 else if (player.hasTag("spack_secret_freedom") == false && player.hasTag("spack_secret_s") == false && player.hasTag("spack_secret_dev") == false && player.hasTag("spack_secret_specialThanks") == false && player.hasTag("spack_secret_earlyS")) {
-
+                    selectedCPack = 17
+                    skinCount = 1
+                    skinIDs = new Array(57, "wow")
+                    collection = skinSet_over[17]
+                    system.run(() => skinSelectUI(player, skinCount, selectedCPack, skinIDs, series, collection))
+                }
+                else if (player.hasTag("spack_secret_freedom") == false && player.hasTag("spack_secret_s") == false && player.hasTag("spack_secret_dev") == false && player.hasTag("spack_secret_specialThanks") == false && player.hasTag("spack_secret_earlyS") == false && player.hasTag("spack_secret_angenicidal")){
+                    selectedCPack = 21
+                    skinCount = 3
+                    skinIDs = new Array(79,80,81)
+                    collection = skinSet_over[21]
+                    system.run(() => skinSelectUI(player, skinCount, selectedCPack, skinIDs, series, collection))
                 }
                 break;
             case 13:
@@ -155,16 +252,38 @@ function skinCategoryUEGC(player) {
                     system.run(() => skinCategoryInit(player))
                 }
                 else if (player.hasTag("spack_secret_s")) {
-
+                    selectedCPack = 14
+                    skinCount = 3
+                    skinIDs = new Array(49, 50, 51)
+                    collection = skinSet_over[14]
+                    system.run(() => skinSelectUI(player, skinCount, selectedCPack, skinIDs, series, collection))
                 }
                 else if (player.hasTag("spack_secret_s") == false && player.hasTag("spack_secret_dev")) {
-
+                    selectedCPack = 15
+                    skinCount = 4
+                    skinIDs = new Array(52, 53, 54, 55)
+                    collection = skinSet_over[15]
+                    system.run(() => skinSelectUI(player, skinCount, selectedCPack, skinIDs, series, collection))
                 }
                 else if (player.hasTag("spack_secret_s") == false && player.hasTag("spack_secret_dev") == false && player.hasTag("spack_secret_specialThanks")) {
-
+                    selectedCPack = 16
+                    skinCount = 1
+                    skinIDs = new Array(56, "wow")
+                    collection = skinSet_over[16]
+                    system.run(() => skinSelectUI(player, skinCount, selectedCPack, skinIDs, series, collection))
                 }
                 else if (player.hasTag("spack_secret_s") == false && player.hasTag("spack_secret_dev") == false && player.hasTag("spack_secret_specialThanks") == false && player.hasTag("spack_secret_earlyS")) {
-
+                    selectedCPack = 17
+                    skinCount = 1
+                    skinIDs = new Array(57, "wow")
+                    collection = skinSet_over[17]
+                }
+                else if (player.hasTag("spack_secret_s") == false && player.hasTag("spack_secret_dev") == false && player.hasTag("spack_secret_specialThanks") == false && player.hasTag("spack_secret_earlyS") == false && player.hasTag("spack_secret_angenicidal")) {
+                    selectedCPack = 21
+                    skinCount = 3
+                    skinIDs = new Array(79, 80, 81)
+                    collection = skinSet_over[21]
+                    system.run(() => skinSelectUI(player, skinCount, selectedCPack, skinIDs, series, collection))
                 }
                 break;
             case 14:
@@ -172,13 +291,31 @@ function skinCategoryUEGC(player) {
                     system.run(() => skinCategoryInit(player))
                 }
                 else if (player.hasTag("spack_secret_dev")) {
-
+                    selectedCPack = 15
+                    skinCount = 4
+                    skinIDs = new Array(52, 53, 54, 55)
+                    collection = skinSet_over[15]
+                    system.run(() => skinSelectUI(player, skinCount, selectedCPack, skinIDs, series, collection))
                 }
                 else if (player.hasTag("spack_secret_dev") == false && player.hasTag("spack_secret_specialThanks")) {
-
+                    selectedCPack = 16
+                    skinCount = 1
+                    skinIDs = new Array(56, "wow")
+                    collection = skinSet_over[16]
+                    system.run(() => skinSelectUI(player, skinCount, selectedCPack, skinIDs, series, collection))
                 }
                 else if (player.hasTag("spack_secret_dev") == false && player.hasTag("spack_secret_specialThanks") == false && player.hasTag("spack_secret_earlyS")) {
-
+                    selectedCPack = 17
+                    skinCount = 1
+                    skinIDs = new Array(57, "wow")
+                    collection = skinSet_over[17]
+                }
+                else if (player.hasTag("spack_secret_dev") == false && player.hasTag("spack_secret_specialThanks") == false && player.hasTag("spack_secret_earlyS") == false && player.hasTag("spack_secret_angenicidal")) {
+                    selectedCPack = 21
+                    skinCount = 3
+                    skinIDs = new Array(79, 80, 81)
+                    collection = skinSet_over[21]
+                    system.run(() => skinSelectUI(player, skinCount, selectedCPack, skinIDs, series, collection))
                 }
                 break;
             case 15:
@@ -186,10 +323,24 @@ function skinCategoryUEGC(player) {
                     system.run(() => skinCategoryInit(player))
                 }
                 else if (player.hasTag("spack_secret_specialThanks")) {
-
+                    selectedCPack = 16
+                    skinCount = 1
+                    skinIDs = new Array(56, "wow")
+                    collection = skinSet_over[16]
+                    system.run(() => skinSelectUI(player, skinCount, selectedCPack, skinIDs, series, collection))
                 }
                 else if (player.hasTag("spack_secret_specialThanks") == false && player.hasTag("spack_secret_earlyS")) {
-
+                    selectedCPack = 17
+                    skinCount = 1
+                    skinIDs = new Array(57, "wow")
+                    collection = skinSet_over[17]
+                }
+                else if (player.hasTag("spack_secret_specialThanks") == false && player.hasTag("spack_secret_earlyS") == false && player.hasTag("spack_secret_angenicidal")) {
+                    selectedCPack = 21
+                    skinCount = 3
+                    skinIDs = new Array(79, 80, 81)
+                    collection = skinSet_over[21]
+                    system.run(() => skinSelectUI(player, skinCount, selectedCPack, skinIDs, series, collection))
                 }
                 break;
             case 16:
@@ -197,16 +348,132 @@ function skinCategoryUEGC(player) {
                     system.run(() => skinCategoryInit(player))
                 }
                 else if (player.hasTag("spack_secret_earlyS")) {
-
+                    selectedCPack = 17
+                    skinCount = 1
+                    skinIDs = new Array(57, "wow")
+                    collection = skinSet_over[17]
+                    system.run(() => skinSelectUI(player, skinCount, selectedCPack, skinIDs, series, collection))
+                }
+                else if (player.hasTag("spack_secret_earlyS") == false && player.hasTag("spack_secret_angenicidal")) {
+                    selectedCPack = 21
+                    skinCount = 3
+                    skinIDs = new Array(79, 80, 81)
+                    collection = skinSet_over[21]
+                    system.run(() => skinSelectUI(player, skinCount, selectedCPack, skinIDs, series, collection))
                 }
                 break;
             case 17:
                 if (secretsUnlocked == 5) {
                     system.run(() => skinCategoryInit(player))
                 }
+                else if (player.hasTag("spack_secret_angenicidal")) {
+                    selectedCPack = 21
+                    skinCount = 3
+                    skinIDs = new Array(79, 80, 81)
+                    collection = skinSet_over[21]
+                    system.run(() => skinSelectUI(player, skinCount, selectedCPack, skinIDs, series, collection))
+                }
+                break;
+            case 18:
+                if (secretsUnlocked == 6) {
+                    system.run(() => skinCategoryInit(player))
+                }
                 break;
 
         }
 
+    })
+}
+/*
+const defaultUnlock = " "
+const unlockableUnlock = " "
+const secretUnlock = " "
+const locked = " "
+*/
+function skinSelectUI(player, skinCount, selectedCPack, skinIDs, series, collection) {
+    let form = new ActionFormData();
+    form.title("... > " + skinSet_over[selectedCPack])
+    form.body("Select a Skin:\n")
+    var skinNumber = 0
+    if (skinCount > 1) {
+        skinIDs.forEach(int => {
+            var buttonIcon = "textures/ui/skin_categories/button"
+            var buttonTitle = skinList[skinIDs[skinNumber]]
+            var skinTag = skinIDs[skinNumber].toString() + "_skin_unlocked"
+            if (skinIDs[skinNumber] == 1) {
+                buttonTitle = " " + buttonTitle
+                buttonIcon = skinIconLoc[skinIDs[skinNumber]]
+            }
+            else if (player.hasTag(skinTag)) {
+                buttonTitle = " " + buttonTitle
+                buttonIcon = skinIconLoc[skinIDs[skinNumber]]
+            }
+            else {
+                buttonTitle = " LOCKED"
+                buttonIcon = "textures/ui/button_lock"
+            }
+            form.button(buttonTitle, buttonIcon);
+            skinNumber += 1
+        })
+    }
+    else {
+        var buttonIcon = "textures/ui/skin_categories/button"
+        var buttonTitle = skinList[skinIDs[skinNumber]]
+        var skinTag = skinIDs[skinNumber].toString() + "_skin_unlocked"
+        if (skinIDs[skinNumber] == 1) {
+            buttonTitle = " " + buttonTitle
+            buttonIcon = skinIconLoc[skinIDs[skinNumber]]
+        }
+        else if (player.hasTag(skinTag)) {
+            buttonTitle = " " + buttonTitle
+            buttonIcon = skinIconLoc[skinIDs[skinNumber]]
+        }
+        else {
+            buttonTitle = " LOCKED"
+            buttonIcon = "textures/ui/button_lock"
+        }
+        form.button(buttonTitle, buttonIcon);
+    }
+
+    form.button("Back", "textures/ui/button_back");
+    form.button("Close", "textures/ui/button_close");
+    form.show(player).then(r => {
+
+        var response = r.selection
+        if (response < skinCount && player.hasTag(skinIDs[response].toString() + "_skin_unlocked") == false) {
+            skinNumber = 0
+            system.run(() => skinSelectUI(player, skinCount, selectedCPack, skinIDs, series, collection))
+        }
+        else if (response < skinCount) {
+            skinNumber = response
+            system.run(() => skinSelectUIPhase2(player, skinCount, selectedCPack, skinIDs, series, collection, skinNumber))
+        }
+        if (series == 0 && response == skinCount) {
+            system.run(() => skinCategoryUEGC(player))
+        }
+        if (series > 0 && response == skinCount) {
+            system.run(() => skinCategoryInit(player))
+        }
+    })
+}
+
+function skinSelectUIPhase2(player, skinCount, selectedCPack, skinIDs, series, collection, skinNumber) {
+    let form = new MessageFormData();
+    var skinSelectedSB = world.scoreboard.getObjective("selected_skin")
+    var skinName = skinList[skinIDs[skinNumber]]
+    form.title("... > " + skinSet_over[selectedCPack] +  " > " + skinName);
+    form.body("§e" + skinName + "\n\n§fDesigner(s): §d" + designerList[skinIDs[skinNumber]] + "\n\n§fFrom the §b" + collection + "§r Collection.\n\nNote: skins labeled with the  tag have their own dash effect.");
+    form.button1(bacM);
+    form.button2("Select");
+    form.show(player).then(r => {
+        var response = r.selection
+        if (response == 1) {
+            skinSelectedSB.setScore(player, skinIDs[skinNumber])
+            player.sendMessage("§e[Skin Select] §b" + skinName + " §eselected.")
+        }
+        else {
+            skinNumber = 0
+            system.run(() => skinSelectUI(player, skinCount, selectedCPack, skinIDs, series, collection, skinNumber))
+        }
     })
 }

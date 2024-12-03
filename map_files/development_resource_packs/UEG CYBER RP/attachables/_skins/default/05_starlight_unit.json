@@ -1,0 +1,32 @@
+//bridge-file-version: #22
+{
+	"format_version": "1.16.100",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "sm:skin_5",
+			"materials": {
+				"default": "guardian"
+			},
+			"textures": {
+				"default": "textures/entity/skins/starlight_unit",
+				"frame_2": "textures/entity/skins/starlight_unit_frame2",
+				"frame_3": "textures/entity/skins/starlight_unit_frame3",
+				"frame_4": "textures/entity/skins/starlight_unit_frame2",
+				"frame_5": "textures/entity/skins/starlight_unit",
+				"frame_6": "textures/entity/skins/starlight_unit",
+				"frame_7": "textures/entity/skins/starlight_unit",
+				"frame_8": "textures/entity/skins/starlight_unit",
+				"dash1": "textures/entity/skins/starlight_unit",
+				"dash2": "textures/entity/skins/starlight_unit",
+				"dash3": "textures/entity/skins/starlight_unit",
+				"dash4": "textures/entity/skins/starlight_unit"
+			},
+			"geometry": {
+				"default": "geometry.starlight_unit"
+			},
+			"render_controllers": [
+				"controller.render.skin_animations"
+			]
+		}
+	}
+}

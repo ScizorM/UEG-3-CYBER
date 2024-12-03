@@ -17,7 +17,7 @@
 			"minecraft:light_emission": 15,
 			"minecraft:light_dampening": 0,
 			"minecraft:destructible_by_explosion": {
-				"explosion_resistance": 3
+				"explosion_resistance": 9
 			},
 			"minecraft:destructible_by_mining": {
 				"seconds_to_destroy": 3

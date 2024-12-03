@@ -25,6 +25,7 @@
 						"/execute @s[tag=icarus] ~ ~ ~ /summon sm:explosion_icarus",
 						"/execute @s[tag=icarus] ~ ~ ~ /function explosion_fire",
 						"/execute @s[tag=fish] ~ ~ ~ /function fish_explode",
+						"/execute @s[tag=implosion] ~ ~ ~ /function explosion_blackhole",
 						"@s bridge:remove_command_id_1"
 					]
 				},

@@ -1,0 +1,29 @@
+//bridge-file-version: #7
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "sm:scaler_bomb",
+			"textures": {
+				"default": "textures/entity/scaler_bomb"
+			},
+			"geometry": {
+				"default": "geometry.scaler_bomb"
+			},
+			"render_controllers": [
+				"controller.render.guardian"
+			],
+			"animations": {
+				"move": "animation.scaler_bomb.float"
+			},
+			"scripts": {
+				"animate": [
+					"move"
+				]
+			},
+			"materials": {
+				"default": "entity"
+			}
+		}
+	}
+}

@@ -526,6 +526,13 @@
 				"name": "leftPants",
 				"parent": "leftLeg",
 				"pivot": [5.9, 12, 0]
+			},
+			{
+				"name": "bone4",
+				"pivot": [0, 16, -8],
+				"locators": {
+					"locator": [0, 16, -8]
+				}
 			}
 		]
 	},

@@ -1,0 +1,63 @@
+//bridge-file-version: #10
+{
+	"format_version": "1.13.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "sm:dining_chair",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"components": {
+			"minecraft:damage_sensor": {
+				"triggers": {
+					"cause": "all",
+					"deals_damage": false
+				}
+			},
+			"minecraft:type_family": {
+				"family": [
+					"npc",
+					"mob"
+				]
+			},
+			"minecraft:fire_immune": true,
+			"minecraft:movement": {
+				"value": 0.5
+			},
+			"minecraft:loot": {
+				"table": "loot_tables/empty.json"
+			},
+			"minecraft:collision_box": {
+				"width": 0.6,
+				"height": 1
+			},
+			"minecraft:persistent": {},
+			"minecraft:nameable": {
+				"always_show": false,
+				"allow_name_tag_renaming": false
+			},
+			"minecraft:physics": {},
+			"minecraft:conditional_bandwidth_optimization": {},
+			"minecraft:rideable": {
+				"pull_in_entities": true,
+				"controlling_seat": 0,
+				"family_types": [
+					"player"
+				],
+				"seat_count": 1,
+				"interact_text": "Sit",
+				"seats": {
+					"position": [
+						0,
+						0.55,
+						0
+					],
+					"lock_rider_rotation": 90
+				}
+			}
+		},
+		"component_groups": {},
+		"events": {}
+	}
+}

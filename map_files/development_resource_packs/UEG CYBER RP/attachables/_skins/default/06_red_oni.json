@@ -1,0 +1,32 @@
+//bridge-file-version: #18
+{
+	"format_version": "1.16.100",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "sm:skin_6",
+			"materials": {
+				"default": "guardian"
+			},
+			"textures": {
+				"default": "textures/entity/skins/red_oni",
+				"frame_2": "textures/entity/skins/red_oni_frame2",
+				"frame_3": "textures/entity/skins/red_oni_frame3",
+				"frame_4": "textures/entity/skins/red_oni_frame2",
+				"frame_5": "textures/entity/skins/red_oni",
+				"frame_6": "textures/entity/skins/red_oni",
+				"frame_7": "textures/entity/skins/red_oni",
+				"frame_8": "textures/entity/skins/red_oni",
+				"dash1": "textures/entity/skins/red_oni",
+				"dash2": "textures/entity/skins/red_oni",
+				"dash3": "textures/entity/skins/red_oni",
+				"dash4": "textures/entity/skins/red_oni"
+			},
+			"geometry": {
+				"default": "geometry.red_ninja_skin"
+			},
+			"render_controllers": [
+				"controller.render.skin_animations"
+			]
+		}
+	}
+}

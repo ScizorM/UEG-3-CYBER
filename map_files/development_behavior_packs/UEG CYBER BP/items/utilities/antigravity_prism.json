@@ -11,6 +11,7 @@
 			"minecraft:custom_components": [
 				"sm:antigrav"
 			],
+			"minecraft:use_animation": "block",
 			"minecraft:cooldown": {
 				"category": "prism",
 				"duration": 10

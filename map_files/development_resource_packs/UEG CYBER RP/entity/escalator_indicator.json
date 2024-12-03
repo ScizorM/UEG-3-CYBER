@@ -1,0 +1,30 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "sm:escalator_indicator",
+			"materials": {
+				"default": "guardian"
+			},
+			"textures": {
+				"default": "textures/signs/lobby_titles/down_1f",
+				"cyber_2": "textures/signs/lobby_titles/down_2f",
+				"cyber_3": "textures/signs/lobby_titles/down",
+				"cyber_4": "textures/signs/lobby_titles/up_2f",
+				"cyber_5": "textures/signs/lobby_titles/up_3f",
+				"cyber_6": "textures/signs/lobby_titles/up",
+				"ueg_1": "textures/signs/lobby_titles/no_entry",
+				"ueg_plus": "textures/signs/lobby_titles/up",
+				"rpg_1": "textures/signs/lobby_titles/up",
+				"rpg_2": "textures/signs/lobby_titles/up"
+			},
+			"geometry": {
+				"default": "geometry.escalator_indicator"
+			},
+			"render_controllers": [
+				"controller.render.arena_shop"
+			]
+		}
+	}
+}

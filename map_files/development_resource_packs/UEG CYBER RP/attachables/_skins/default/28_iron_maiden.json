@@ -1,0 +1,41 @@
+//bridge-file-version: #18
+{
+	"format_version": "1.16.100",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "sm:skin_28",
+			"materials": {
+				"default": "entity_emissive_alpha"
+			},
+			"textures": {
+				"default": "textures/entity/skins/iron_maiden",
+				"frame_2": "textures/entity/skins/iron_maiden_frame2",
+				"frame_3": "textures/entity/skins/iron_maiden_frame3",
+				"frame_4": "textures/entity/skins/iron_maiden_frame4",
+				"frame_5": "textures/entity/skins/iron_maiden_frame3",
+				"frame_6": "textures/entity/skins/iron_maiden_frame2",
+				"frame_7": "textures/entity/skins/iron_maiden",
+				"frame_8": "textures/entity/skins/iron_maiden",
+				"dash1": "textures/entity/skins/iron_maiden",
+				"dash2": "textures/entity/skins/iron_maiden_dash2",
+				"dash3": "textures/entity/skins/iron_maiden_dash3",
+				"dash4": "textures/entity/skins/iron_maiden_dash4"
+			},
+			"geometry": {
+				"default": "geometry.iron_maiden"
+			},
+			"render_controllers": [
+				"controller.render.skin_animations"
+			],
+			"animations": {
+				"dash": "animation.iron_maiden.mask_up",
+				"controller": "controller.animation.iron_maiden"
+			},
+			"scripts": {
+				"animate": [
+					"controller"
+				]
+			}
+		}
+	}
+}

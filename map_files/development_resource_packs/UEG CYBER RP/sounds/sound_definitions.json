@@ -23,6 +23,41 @@
 				"sounds/weapons/baby_staff_3"
 			]
 		},
+				"clock_tick": {
+			"category": "music",
+			"min_distance": 0,
+			"sounds": [
+				"sounds/effects/clock_tick"
+			]
+		},
+						"cannon_bludgeon": {
+			"category": "music",
+			"min_distance": 0,
+			"sounds": [
+				"sounds/weapons/cannon_bludgeon"
+			]
+		},
+						"clock_bell": {
+			"category": "music",
+			"min_distance": 0,
+			"sounds": [
+				"sounds/effects/clock_bell"
+			]
+		},
+				"dash": {
+			"category": "music",
+			"min_distance": 0,
+			"sounds": [
+				"sounds/effects/dash_sfx"
+			]
+		},
+						"dash_global": {
+			"category": "mobs",
+			"min_distance": 0,
+			"sounds": [
+				"sounds/effects/dash_sfx"
+			]
+		},
 		"keyboard_in": {
 			"category": "music",
 			"min_distance": 0,
@@ -79,7 +114,16 @@
 		"death": {
 			"sounds": [
 				{
-					"name": "sounds/weapons/death_new",
+					"name": "sounds/effects/death_new2",
+					"volume": 2
+				}
+			],
+			"category": "music"
+		},
+				"judgement": {
+			"sounds": [
+				{
+					"name": "sounds/effects/judgement",
 					"volume": 2
 				}
 			],

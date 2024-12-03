@@ -1,0 +1,40 @@
+//bridge-file-version: #18
+{
+	"format_version": "1.16.100",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "sm:skin_34",
+			"materials": {
+				"default": "guardian"
+			},
+			"textures": {
+				"default": "textures/entity/skins/gummy_contraption",
+				"frame_2": "textures/entity/skins/gummy_contraption_frame2",
+				"frame_3": "textures/entity/skins/gummy_contraption_frame3",
+				"frame_4": "textures/entity/skins/gummy_contraption_frame2",
+				"frame_5": "textures/entity/skins/gummy_contraption",
+				"frame_6": "textures/entity/skins/gummy_contraption",
+				"frame_7": "textures/entity/skins/gummy_contraption",
+				"frame_8": "textures/entity/skins/gummy_contraption",
+				"dash1": "textures/entity/skins/gummy_contraption",
+				"dash2": "textures/entity/skins/gummy_contraption",
+				"dash3": "textures/entity/skins/gummy_contraption",
+				"dash4": "textures/entity/skins/gummy_contraption"
+			},
+			"geometry": {
+				"default": "geometry.gummy_contraption"
+			},
+			"render_controllers": [
+				"controller.render.skin_animations"
+			],
+			"animations": {
+				"cloak": "animation.gummy_contraption.cloak"
+			},
+			"scripts": {
+				"animate": [
+					"cloak"
+				]
+			}
+		}
+	}
+}

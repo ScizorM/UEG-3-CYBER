@@ -1,4 +1,4 @@
-//bridge-file-version: #9
+//bridge-file-version: #10
 {
 	"format_version": 2,
 	"header": {
@@ -7,7 +7,7 @@
 		"uuid": "8bb431b1-7802-48ed-8388-f0a3bde33b04",
 		"version": [
 			1,
-			6,
+			7,
 			0
 		],
 		"min_engine_version": [

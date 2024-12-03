@@ -15,6 +15,9 @@ execute @s[tag=team_lambda] ~ ~ ~ execute @a[tag=team_nu,r=4] ~ ~ ~ execute @s ~
  
 execute @s[tag=team_nu] ~ ~ ~ execute @a[tag=team_lambda,r=4] ~ ~ ~ execute @s ~ ~ ~ title @s title §a-STUNNED-
 execute @s[tag=team_lambda] ~ ~ ~ execute @a[tag=team_nu,r=4] ~ ~ ~ execute @s ~ ~ ~ title @s title §a-STUNNED-
+
+execute @s[tag=team_nu] ~ ~ ~ execute @a[tag=team_lambda,r=4] ~ ~ ~ execute @s ~ ~ ~ function add_stun
+execute @s[tag=team_lambda] ~ ~ ~ execute @a[tag=team_nu,r=4] ~ ~ ~ execute @s ~ ~ ~ function add_stun
  
 execute @s[tag=team_nu] ~ ~ ~ execute @a[tag=team_lambda,r=4] ~ ~ ~ execute @s ~ ~ ~ particle sm:stun_bolt ~ ~1 ~
 execute @s[tag=team_lambda] ~ ~ ~ execute @a[tag=team_nu,r=4] ~ ~ ~ execute @s ~ ~ ~ particle sm:stun_bolt ~ ~1 ~

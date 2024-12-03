@@ -1,0 +1,33 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.arena_shop": {
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"textures": [
+				"Array.top[query.variant]"
+			],
+			"arrays": {
+				"textures": {
+					"Array.top": [
+						"Texture.default",
+						"Texture.cyber_2",
+						"Texture.cyber_3",
+						"Texture.cyber_4",
+						"Texture.cyber_5",
+						"Texture.cyber_6",
+						"Texture.ueg_1",
+						"Texture.ueg_plus",
+						"Texture.rpg_1",
+						"Texture.rpg_2"
+					]
+				}
+			},
+			"geometry": "Geometry.default"
+		}
+	}
+}

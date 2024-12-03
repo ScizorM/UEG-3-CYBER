@@ -1,6 +1,7 @@
 #bridge-file-version: #20
 ability @a[tag=teamed] mayfly false
 scoreboard players set game_active game_active 0
+scoreboard players set round_active round_active 0
 function round_inactive
 function reset_gamerules
 function reset_scores
@@ -10,7 +11,7 @@ tag @a remove ingameMusic
 tag @a[tag=teamed] add 1f
 tag @a[tag=teamed] add exit_stores
 clear @a[tag=teamed]
-tp @a[tag=teamed] 140 -4 62 facing 140 -4 63
+tp @a[tag=teamed] 140 13 -41 facing 140 13 -40
 tag @a remove team_nu
 tag @a remove team_lambda
 tag @a remove number_1

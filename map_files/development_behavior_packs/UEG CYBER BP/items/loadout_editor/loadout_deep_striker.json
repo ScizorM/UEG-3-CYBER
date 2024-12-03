@@ -1,0 +1,16 @@
+//bridge-file-version: #12
+{
+	"format_version": "1.21.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "sm:loadout_deep_striker"
+		},
+		"components": {
+			"minecraft:display_name": {
+				"value": "§cPlaceholder §fThe Deep Striker\n\n§9 When a player is in the crosshair, they will be blown up and launched in the air\nIf a block is in the crosshair, the block will explode\nOtherwise, the gun will turn around and shoot you, launching you backwards"
+			},
+			"minecraft:icon": "sm:deep_striker",
+			"minecraft:hand_equipped": true
+		}
+	}
+}

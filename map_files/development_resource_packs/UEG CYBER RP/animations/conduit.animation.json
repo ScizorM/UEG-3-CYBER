@@ -1,0 +1,47 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.conduit.idle": {
+			"loop": true,
+			"animation_length": 2,
+			"bones": {
+				"Barrier": {
+					"position": {
+						"0.0": {
+							"post": [0, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"1.0": {
+							"post": [0, 4, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"2.0": {
+							"post": [0, 0, 0],
+							"lerp_mode": "catmullrom"
+						}
+					}
+				}
+			}
+		},
+		"animation.conduit.dash": {
+			"animation_length": 0.25,
+			"override_previous_animation": true,
+			"bones": {
+				"Barrier": {
+					"rotation": {
+						"0.0": [-22.93246, -7.64427, 6.46635],
+						"0.0833": [-40, 0, 0],
+						"0.125": [-36.75605, 0, 0],
+						"0.2083": [-3.24395, 0, 0],
+						"0.25": [0, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.0833": [0, 1.28558, -1.53209],
+						"0.1667": [0, 0, 0]
+					}
+				}
+			}
+		}
+	}
+}

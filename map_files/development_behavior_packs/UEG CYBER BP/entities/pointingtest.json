@@ -12,6 +12,13 @@
 			"minecraft:physics": {
 				"has_collision": false,
 				"has_gravity": false
+			},
+			"minecraft:projectile": {
+				"gravity": 0
+			},
+			"minecraft:collision_box": {
+				"width": 0,
+				"height": 0
 			}
 		},
 		"events": {}

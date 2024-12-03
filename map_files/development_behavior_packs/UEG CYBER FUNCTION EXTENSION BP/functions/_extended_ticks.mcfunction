@@ -7,16 +7,29 @@ execute as @a[lm=1,tag=!abilitySound] run execute positioned as @s run function 
 execute as @a[tag=!team_nu,tag=!team_lambda,tag=enter_reactor,tag=!reactor_tutorial] run function start_settings_info
  
 execute as @a[tag=!team_nu,tag=!team_lambda,tag=enter_music,tag=!music_tutorial] run function start_music_info
+
  
 execute as @e[type=sm:teleporter_object] run execute positioned as @s run execute if block ~ ~-0.5 ~ air run event entity @s sm:despawn
 
 function settings_info_ticks
- 
+execute as @a[tag=respawning] run scoreboard players remove @s respawn_item_regen 1
+execute as @a run execute if score @s[tag=respawning] respawn_item_regen matches 0 run function respawn_itemrecover
+scoreboard players add @a emergencyphase 0
 function check_arenapack_count
 
 function music_info_ticks
 
+function add_scale
+function add_stun
+execute as @a run execute if score @s icarus_is_inactive matches 1 run tag @s add status_overheat
+execute as @a run execute unless score @s icarus_is_inactive matches 1 run tag @s remove status_overheat
+
+execute as @a[scores={deepstriker_timer = 2..}] run scoreboard players remove @s deepstriker_timer 1
+execute as @a[scores={deepstriker_timer = 1}] run function deepstriker_kb
+
 function check_enabled_arena_count
+
+tag @a[tag=!ingame,tag=!tutorial] remove tetherActive
  
 execute if score total total_en_arenas matches ..2 run execute if score boolean arena_vote_enabled matches 1 run function disable_avote_few 
 
@@ -79,11 +92,6 @@ execute as @a[m=!c] run /execute if score @s dashes < minimum_dash_requirement m
  
 execute as @a run execute as @s positioned as @s run execute unless block ~ ~-0.5 ~ air run tag @s add grounded
 execute as @a run execute as @s positioned as @s run execute if block ~ ~-0.5 ~ air run tag @s remove grounded
- 
-
-replaceitem entity @a[scores={selected_effect=0..1}] slot.armor.legs 0 sm:dash_effect 1 0 {"minecraft:item_lock":{"mode":"lock_in_slot"}}
-replaceitem entity @a[scores={selected_effect=2}] slot.armor.legs 0 sm:dash_effect_fire 1 0 {"minecraft:item_lock":{"mode":"lock_in_slot"}}
-replaceitem entity @a[scores={selected_effect=3}] slot.armor.legs 0 sm:dash_effect_digi 1 0 {"minecraft:item_lock":{"mode":"lock_in_slot"}}
 
 execute as @a[tag=ingame,tag=grounded,scores={selected_effect=0..1}] run execute if score @s dashes < max_dashes max_dashes run execute positioned as @s run particle sm:charging_dashes ~ ~0.2 ~
 execute as @a[tag=ingame,tag=grounded,scores={selected_effect=2}] run execute if score @s dashes < max_dashes max_dashes run execute positioned as @s run particle sm:charging_dashes_fire ~ ~0.2 ~

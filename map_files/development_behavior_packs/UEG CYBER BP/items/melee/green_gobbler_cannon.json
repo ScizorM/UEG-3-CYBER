@@ -1,0 +1,23 @@
+//bridge-file-version: #7
+{
+	"format_version": "1.21.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "sm:green_gobbler_cannon"
+		},
+		"components": {
+			"minecraft:cooldown": {
+				"category": "green_gobbler_cannon",
+				"duration": 1
+			},
+			"minecraft:display_name": {
+				"value": "Green Gobbler's Signature Bludgeoning Cannon\n"
+			},
+			"minecraft:hand_equipped": true,
+			"minecraft:icon": "sm:green_gobbler_cannon",
+			"minecraft:custom_components": [
+				"sm:green_gobbler_cannon"
+			]
+		}
+	}
+}

@@ -10,35 +10,13 @@
 				"category": "select_lo",
 				"duration": 1
 			},
-			"minecraft:icon": {
-				"texture": "sm:loadout_purchasables"
-			},
+			"minecraft:icon": "sm:loadout_purchasables",
 			"minecraft:display_name": {
 				"value": "Loadout 1: Purchasable Items"
 			},
-			"minecraft:render_offsets": {
-				"main_hand": {
-					"first_person": {
-						"scale": [
-							0,
-							0,
-							0
-						]
-					},
-					"third_person": {
-						"scale": [
-							0,
-							0,
-							0
-						],
-						"position": [
-							0,
-							0,
-							0
-						]
-					}
-				}
-			}
+			"minecraft:custom_components": [
+				"sm:loadout_1"
+			]
 		}
 	}
 }

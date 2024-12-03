@@ -1,0 +1,42 @@
+//bridge-file-version: #18
+{
+	"format_version": "1.16.100",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "sm:skin_8",
+			"materials": {
+				"default": "entity_emissive_alpha"
+			},
+			"textures": {
+				"default": "textures/entity/skins/regulator",
+				"frame_2": "textures/entity/skins/regulator",
+				"frame_3": "textures/entity/skins/regulator",
+				"frame_4": "textures/entity/skins/regulator",
+				"frame_5": "textures/entity/skins/regulator",
+				"frame_6": "textures/entity/skins/regulator",
+				"frame_7": "textures/entity/skins/regulator",
+				"frame_8": "textures/entity/skins/regulator",
+				"dash1": "textures/entity/skins/regulator",
+				"dash2": "textures/entity/skins/regulator_dash2",
+				"dash3": "textures/entity/skins/regulator_dash3",
+				"dash4": "textures/entity/skins/regulator_dash4"
+			},
+			"geometry": {
+				"default": "geometry.the_regulator"
+			},
+			"render_controllers": [
+				"controller.render.skin_animations"
+			],
+			"animations": {
+				"vent": "animation.the_regulator.vent_idle",
+				"dash": "animation.the_regulator.vent",
+				"controller": "controller.animation.regulator"
+			},
+			"scripts": {
+				"animate": [
+					"controller"
+				]
+			}
+		}
+	}
+}

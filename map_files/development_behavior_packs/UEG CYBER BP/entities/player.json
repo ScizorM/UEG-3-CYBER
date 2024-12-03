@@ -1,12 +1,32 @@
 //bridge-file-version: #1
 {
-	"format_version": "1.16.0",
+	"format_version": "1.20.0",
 	"minecraft:entity": {
 		"description": {
 			"identifier": "minecraft:player",
 			"is_spawnable": false,
 			"is_summonable": false,
-			"is_experimental": false
+			"is_experimental": false,
+			"properties": {
+				"sm:deepstriker_shooting_self": {
+					"type": "int",
+					"range": [
+						0,
+						4
+					],
+					"default": 0,
+					"client_sync": true
+				},
+				"sm:deepstriker_anim": {
+					"type": "int",
+					"range": [
+						0,
+						4
+					],
+					"default": 0,
+					"client_sync": true
+				}
+			}
 		},
 		"component_groups": {
 			"minecraft:add_bad_omen": {
@@ -56,35 +76,113 @@
 					"value": 0
 				}
 			},
-			"variant_1": {},
-			"variant_2": {},
-			"variant_3": {},
-			"variant_4": {},
-			"variant_5": {},
-			"variant_6": {},
-			"variant_7": {},
+			"variant_1": {
+				"minecraft:variant": {
+					"value": 1
+				}
+			},
+			"variant_2": {
+				"minecraft:variant": {
+					"value": 2
+				}
+			},
+			"variant_3": {
+				"minecraft:variant": {
+					"value": 3
+				}
+			},
+			"variant_4": {
+				"minecraft:variant": {
+					"value": 4
+				}
+			},
+			"variant_5": {
+				"minecraft:variant": {
+					"value": 5
+				}
+			},
+			"variant_6": {
+				"minecraft:variant": {
+					"value": 6
+				}
+			},
+			"variant_7": {
+				"minecraft:variant": {
+					"value": 7
+				}
+			},
 			"dash_frame1": {
 				"minecraft:variant": {
-					"value": 17
+					"value": 8
 				}
 			},
 			"dash_frame2": {
 				"minecraft:variant": {
-					"value": 18
+					"value": 9
 				}
 			},
 			"dash_frame3": {
 				"minecraft:variant": {
-					"value": 19
+					"value": 10
 				}
 			},
 			"dash_frame4": {
 				"minecraft:variant": {
-					"value": 20
+					"value": 11
 				}
 			},
 			"judgement_var": {
 				"minecraft:is_sheared": {}
+			},
+			"scale_default": {
+				"minecraft:scale": {
+					"value": 1
+				}
+			},
+			"scale_1_1x": {
+				"minecraft:scale": {
+					"value": 1.2
+				}
+			},
+			"scale_1_2x": {
+				"minecraft:scale": {
+					"value": 1.4
+				}
+			},
+			"scale_1_3x": {
+				"minecraft:scale": {
+					"value": 1.6
+				}
+			},
+			"scale_1_4x": {
+				"minecraft:scale": {
+					"value": 1.8
+				}
+			},
+			"scale_1_5x": {
+				"minecraft:scale": {
+					"value": 2
+				}
+			},
+			"scale_1_6x": {
+				"minecraft:scale": {
+					"value": 2.2
+				}
+			},
+			"scale_1_7x": {
+				"minecraft:scale": {
+					"value": 2.4
+				}
+			},
+			"scale_1_8x": {
+				"minecraft:scale": {
+					"value": 2.6
+				}
+			},
+			"scale_1_9x": {
+				"minecraft:scale": {
+					"value": 3
+				}
 			}
 		},
 		"components": {
@@ -222,6 +320,92 @@
 			}
 		},
 		"events": {
+			"sm:clear_scales": {
+				"remove": {
+					"component_groups": [
+						"scale_default",
+						"scale_1_1x",
+						"scale_1_2x",
+						"scale_1_3x",
+						"scale_1_4x",
+						"scale_1_5x",
+						"scale_1_6x",
+						"scale_1_7x",
+						"scale_1_8x",
+						"scale_1_9x"
+					]
+				}
+			},
+			"sm:scale_default": {
+				"add": {
+					"component_groups": [
+						"scale_default"
+					]
+				}
+			},
+			"sm:scale_1_1x": {
+				"add": {
+					"component_groups": [
+						"scale_1_1x"
+					]
+				}
+			},
+			"sm:scale_1_2x": {
+				"add": {
+					"component_groups": [
+						"scale_1_2x"
+					]
+				}
+			},
+			"sm:scale_1_3x": {
+				"add": {
+					"component_groups": [
+						"scale_1_3x"
+					]
+				}
+			},
+			"sm:scale_1_4x": {
+				"add": {
+					"component_groups": [
+						"scale_1_4x"
+					]
+				}
+			},
+			"sm:scale_1_5x": {
+				"add": {
+					"component_groups": [
+						"scale_1_5x"
+					]
+				}
+			},
+			"sm:scale_1_6x": {
+				"add": {
+					"component_groups": [
+						"scale_1_6x"
+					]
+				}
+			},
+			"sm:scale_1_7x": {
+				"add": {
+					"component_groups": [
+						"scale_1_7x"
+					]
+				}
+			},
+			"sm:scale_1_8x": {
+				"add": {
+					"component_groups": [
+						"scale_1_8x"
+					]
+				}
+			},
+			"sm:scale_1_9x": {
+				"add": {
+					"component_groups": [
+						"scale_1_9x"
+					]
+				}
+			},
 			"minecraft:gain_bad_omen": {
 				"add": {
 					"component_groups": [
@@ -353,7 +537,102 @@
 					]
 				}
 			},
-			"sm:variant_1": {},
+			"sm:variant_0": {
+				"remove": {
+					"component_groups": [
+						"variant_7"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"variant_0"
+					]
+				}
+			},
+			"sm:variant_1": {
+				"remove": {
+					"component_groups": [
+						"variant_0"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"variant_1"
+					]
+				}
+			},
+			"sm:variant_2": {
+				"remove": {
+					"component_groups": [
+						"variant_1"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"variant_2"
+					]
+				}
+			},
+			"sm:variant_3": {
+				"remove": {
+					"component_groups": [
+						"variant_2"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"variant_3"
+					]
+				}
+			},
+			"sm:variant_4": {
+				"remove": {
+					"component_groups": [
+						"variant_3"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"variant_4"
+					]
+				}
+			},
+			"sm:variant_5": {
+				"remove": {
+					"component_groups": [
+						"variant_4"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"variant_5"
+					]
+				}
+			},
+			"sm:variant_6": {
+				"remove": {
+					"component_groups": [
+						"variant_5"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"variant_6"
+					]
+				}
+			},
+			"sm:variant_7": {
+				"remove": {
+					"component_groups": [
+						"variant_6"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"variant_7"
+					]
+				}
+			},
 			"sm:enable_judgement": {
 				"add": {
 					"component_groups": [
@@ -366,6 +645,11 @@
 					"component_groups": [
 						"judgement_var"
 					]
+				}
+			},
+			"sm:add_deepstriker_property": {
+				"set_property": {
+					"sm:deepstriker_shooting_self": "0"
 				}
 			}
 		}

@@ -15,6 +15,12 @@
 				"textures/blocks/settings"
 			]
 		},
+				"sm:tile_block":{
+			"textures":[
+				"textures/blocks/tile_block"
+			]
+		},
+
 				"sm:settings_block_2":{
 			"textures":[
 				"textures/blocks/settings_2"

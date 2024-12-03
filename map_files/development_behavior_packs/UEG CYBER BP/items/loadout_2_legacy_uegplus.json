@@ -14,29 +14,9 @@
 			"minecraft:display_name": {
 				"value": "Loadout 2: Legacy - UEG PLUS"
 			},
-			"minecraft:render_offsets": {
-				"main_hand": {
-					"first_person": {
-						"scale": [
-							0,
-							0,
-							0
-						]
-					},
-					"third_person": {
-						"scale": [
-							0,
-							0,
-							0
-						],
-						"position": [
-							0,
-							0,
-							0
-						]
-					}
-				}
-			}
+			"minecraft:custom_components": [
+				"sm:loadout_2"
+			]
 		}
 	}
 }

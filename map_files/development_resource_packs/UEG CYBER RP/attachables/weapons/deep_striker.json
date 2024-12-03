@@ -1,0 +1,41 @@
+//bridge-file-version: #44
+{
+	"format_version": "1.10.0",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "sm:deep_striker",
+			"materials": {
+				"default": "entity_alphatest",
+				"enchanted": "entity_alphatest_glint"
+			},
+			"textures": {
+				"default": "textures/entity/weapons/deep_striker_frame1",
+				"frame_2": "textures/entity/weapons/deep_striker_frame1",
+				"frame_3": "textures/entity/weapons/deep_striker_frame1",
+				"frame_4": "textures/entity/weapons/deep_striker_frame1",
+				"frame_5": "textures/entity/weapons/deep_striker_frame1",
+				"frame_6": "textures/entity/weapons/deep_striker_frame1",
+				"frame_7": "textures/entity/weapons/deep_striker_frame1",
+				"frame_8": "textures/entity/weapons/deep_striker_frame1"
+			},
+			"geometry": {
+				"default": "geometry.deep_striker"
+			},
+			"render_controllers": [
+				"controller.render.vulcan_cannon"
+			],
+			"animations": {
+				"controller": "controller.animation.deep_striker",
+				"cannon_tp": "animation.deep_striker.third_person",
+				"cannon_fp": "animation.deep_striker.first_person",
+				"cannon_recoil": "animation.deep_striker.fire",
+				"shoot_self": "animation.deep_striker.shoot_self"
+			},
+			"scripts": {
+				"animate": [
+					"controller"
+				]
+			}
+		}
+	}
+}

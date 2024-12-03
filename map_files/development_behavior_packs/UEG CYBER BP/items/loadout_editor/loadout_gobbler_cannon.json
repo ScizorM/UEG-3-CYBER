@@ -1,0 +1,17 @@
+//bridge-file-version: #11
+{
+	"format_version": "1.21.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "sm:loadout_green_gobbler_cannon"
+		},
+		"components": {
+			"minecraft:hand_equipped": true,
+			"minecraft:max_stack_size": 1,
+			"minecraft:display_name": {
+				"value": "§cPlaceholder §fGreen Gobbler's Signature Bludgeoning Cannon\n\n§d Knocks back hit entities\nif midair, said entity will be launched downwards"
+			},
+			"minecraft:icon": "sm:green_gobbler_cannon"
+		}
+	}
+}

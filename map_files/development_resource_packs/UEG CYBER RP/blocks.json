@@ -11,6 +11,9 @@
 	"sm:polishedbasaltside": {
 		"textures": "sm:polishedbasaltside"
 	},
+		"sm:tile_block": {
+		"textures": "sm:tile_block"
+	},
 	"sm:purchase_block_4":{
 		"textures":"sm:purchase_block_4"
 	},

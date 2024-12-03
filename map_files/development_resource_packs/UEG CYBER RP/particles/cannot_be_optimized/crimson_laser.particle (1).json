@@ -1,0 +1,42 @@
+{
+	"format_version": "1.10.0",
+	"particle_effect": {
+		"description": {
+			"identifier": "sm:crimson_laser",
+			"basic_render_parameters": {
+				"material": "particles_alpha",
+				"texture": "textures/particle/crimson_laser"
+			}
+		},
+		"components": {
+			"minecraft:emitter_rate_instant": {
+				"num_particles": 1
+			},
+			"minecraft:emitter_lifetime_looping": {
+				"active_time": 1
+			},
+			"minecraft:emitter_shape_point": {
+				"offset": [0, 7, 0]
+			},
+			"minecraft:particle_lifetime_expression": {
+				"max_lifetime": 0.3
+			},
+			"minecraft:particle_appearance_billboard": {
+				"size": [1, 7],
+				"facing_camera_mode": "rotate_y",
+				"uv": {
+					"texture_width": 24,
+					"texture_height": 1000,
+					"flipbook": {
+						"base_UV": [0, 0],
+						"size_UV": [24, 200],
+						"step_UV": [0, 200],
+						"frames_per_second": 10,
+						"max_frame": 5,
+						"stretch_to_lifetime": true
+					}
+				}
+			}
+		}
+	}
+}

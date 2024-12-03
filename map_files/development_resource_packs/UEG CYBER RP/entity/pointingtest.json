@@ -15,6 +15,14 @@
 			"render_controllers": [
 				"controller.render.guardian"
 			],
+			"animations": {
+				"point": "animation.pointingtest.pointing"
+			},
+			"scripts": {
+				"animate": [
+					"point"
+				]
+			},
 			"identifier": "sm:pointingtest"
 		}
 	}

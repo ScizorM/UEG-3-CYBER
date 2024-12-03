@@ -13,6 +13,21 @@
 				"textures/items/new_icons/dash_component"
 			]
 		},
+		"sm:emergency_1":{
+			"textures":[
+				"textures/items/emergency_1"
+			]
+		},
+		"sm:emergency_2":{
+			"textures":[
+				"textures/items/emergency_2"
+			]
+		},
+		"sm:emergency_3":{
+			"textures":[
+				"textures/items/emergency_3"
+			]
+		},
 		"sm:settings":{
 			"textures":[
 				"textures/items/settings"
@@ -21,6 +36,31 @@
 		"sm:bank":{
 			"textures":[
 				"textures/items/bank"
+			]
+		},
+		"sm:mb85_crimson_hws":{
+			"textures":[
+				"textures/items/bayocrimson"
+			]
+		},
+		"sm:scaler_bomb":{
+			"textures":[
+				"textures/items/scaler_bomb"
+			]
+		},
+		"sm:deep_striker":{
+			"textures":[
+				"textures/items/deep_striker"
+			]
+		},
+		"sm:green_gobbler_cannon":{
+			"textures":[
+				"textures/items/green_gobbler_cannon"
+			]
+		},
+				"sm:implosion_grenade":{
+			"textures":[
+				"textures/items/implosion_grenade"
 			]
 		},
 		"sm:dev_item": {

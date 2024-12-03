@@ -1,24 +1,29 @@
-1 - Vulcan cannon
-2 - charged bolt rifle
-3 - repulsion blade
-4 - energy pickaxe
-5 - platform fabricator
-6 - block fabricator
-7 - landmine
-8 - remote activator
-9 - gauge gun
-10 - crossbow
-11 - baby stick
-12 - gob goo cannon
-13 - antigravity prism
-14 - shredded cheese quantum eradicator
-15 - 440
-16 - big joe
-17 - disruptor array
-18 - salmon bomb
-
-22 - true holic
-23 - parry fist
-24 - Daedalus & icarus
-25 - datura L17
-26 - archerfish
+0 - Air							 - minecraft:air - minecraft:air
+1 - Vulcan cannon 				 - sm:vulcan_cannon - sm:loadout_cannon
+2 - charged bolt rifle 		 		 - sm:charged_bolt_rifle - sm:loadout_rifle
+3 - repulsion blade				 - sm:repulsion_blade - sm:loadout_blade
+4 - energy pickaxe				 - sm:energy_pickaxe - sm:loadout_pickaxe
+5 - platform fabricator				 - sm:platform_fabricator - sm:loadout_platform
+6 - block fabricator				 - sm:block_fabricator - sm:loadout_block
+7 - landmine					 - sm:landmine_ver_nu, sm:landmine_ver_lambda - sm:loadout_mine 
+8 - remote activator				 - sm:remote_activator_ver_nu, sm:remote_activator_ver_lambda - sm:loadout_remote
+9 - gauge gun					 - minecraft:bow - sm:loadout_gaugegun
+10 - crossbow					 - minecraft:crossbow - sm:loadout_v_cannonv
+11 - baby stick					 - sm:baby_stick - sm:loadout_baby_stick
+12 - gob goo cannon				 - sm:gob_goo_cannon - sm:loadout_gob_goo_cannon
+13 - antigravity prism				 - sm:antigravity_prism - sm:loadout_prism
+14 - shredded cheese quantum eradicator		 - sm:sc_quant-e - sm:loadout_sc_quant-e
+15 - 440					 - sm:heavenpiercer - sm:loadout_sound_blade_1
+16 - big joe					 - sm:big_joe_weapon - sm:loadout_big_joe_weapon
+17 - disruptor array				 - sm:emp_drive - sm:loadout_emp_drive
+18 - salmon bomb				 - sm:salmon_bomb - sm:loadout_salmon_bomb
+19 - scaler bomb				 - sm:scaler_bomb - sm:loadout_scaler_bomb
+20 - implosion grenade				 - sm:implosion_grenade - sm:loadout_implosion_grenade
+21 - green gobbler cannon			 - sm:green_gobbler_cannon - sm:loadout_green_gobbler_cannon
+22 - true holic					 - sm:true_holic - sm:loadout_sight_blade
+23 - parry fist					 - sm:parry_fist - sm:loadout_parry_fist
+24 - Daedalus & icarus				 - sm:icarus - sm:loadout_solis_cannon
+25 - datura L17					 - sm:smorgler - sm:loadout_frigidus_cannon
+26 - archerfish					 - sm:archerfish - sm:loadout_emp_trap
+27 - deep striker				 - sm:deep_striker - sm:loadout_deep_striker
+28 - deep striker reborn			 - sm:mb85_crimson_hws - sm:loadout_mb85_crimson_hws

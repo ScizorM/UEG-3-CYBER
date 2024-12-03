@@ -1,0 +1,30 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "sm:escalator_advertisement",
+			"materials": {
+				"default": "guardian"
+			},
+			"textures": {
+				"default": "textures/ads/discord_ad",
+				"cyber_2": "textures/ads/discord_ad",
+				"cyber_3": "textures/ads/discord_ad",
+				"cyber_4": "textures/ads/discord_ad",
+				"cyber_5": "textures/ads/discord_ad",
+				"cyber_6": "textures/ads/discord_ad",
+				"ueg_1": "textures/ads/discord_ad",
+				"ueg_plus": "textures/ads/discord_ad",
+				"rpg_1": "textures/ads/discord_ad",
+				"rpg_2": "textures/ads/discord_ad"
+			},
+			"geometry": {
+				"default": "geometry.escalator_advertisement"
+			},
+			"render_controllers": [
+				"controller.render.arena_shop"
+			]
+		}
+	}
+}

@@ -31,6 +31,7 @@ const togM = "Toggle Arena"
 const selM = "Select Arena"
 const bacM = "Back"
 const clsM = "Close"
+const masT = "Mass-Toggle Arenas"
 //
 const defaultUnlockColor = "§a"
 const unlockableUnlockColor = "§b"
@@ -591,7 +592,7 @@ world.beforeEvents.itemUse.subscribe(data => {
 
 
 
-    if (data.itemStack.typeId === "sm:settings" && player.hasTag("enter_splendid") == false) {
+    if (data.itemStack.typeId === "sm:settings" && player.hasTag("enter_splendid") == false && player.hasTag("enter_marque") == false) {
 
         system.run(() => arenaCategorySelect(player))
 
@@ -873,7 +874,7 @@ function categoryUEG1(player) {
         form.button(unlockableUnlock + lockedName + "", lockedLoc);
         form.button(unlockableUnlock + lockedName + "", lockedLoc);
     }
-
+    form.button(masT, "textures/ui/button_toggle");
     form.button(bacM, "textures/ui/button_back");
 
     form.show(player).then(r => {
@@ -950,6 +951,10 @@ function categoryUEG1(player) {
             }
         }
         else if (responseValue == 12) {
+            var title = "UEG 1"
+            system.run(() => toggleAll(player, title))
+        }
+        else if (responseValue == 13) {
             system.run(() => mainArenaPageUEG(player))
         }
 
@@ -1074,7 +1079,7 @@ function categoryUEGPLUS(player) {
         form.button(unlockableUnlock + lockedName + "", lockedLoc);
         form.button(unlockableUnlock + lockedName + "", lockedLoc);
     }
-
+    form.button(masT, "textures/ui/button_toggle");
     form.button(bacM, "textures/ui/button_back");
 
     form.show(player).then(r => {
@@ -1143,6 +1148,10 @@ function categoryUEGPLUS(player) {
             }
         }
         else if (responseValue == 10) {
+            var title = "UEG PLUS"
+            system.run(() => toggleAll(player, title))
+        }
+        else if (responseValue == 11) {
             system.run(() => mainArenaPageUEG(player))
         }
 
@@ -1667,7 +1676,7 @@ function categoryUEGCYBER(player) {
 
 
 
-
+    form.button(masT, "textures/ui/button_toggle");
     form.button(bacM, "textures/ui/button_back");
 
     form.show(player).then(r => {
@@ -1899,6 +1908,10 @@ function categoryUEGCYBER(player) {
             }
         }
         else if (responseValue == 34) {
+            var title = "UEG CYBER"
+            system.run(() => toggleAll(player, title))
+        }
+        else if (responseValue == 35) {
             system.run(() => mainArenaPageUEG(player))
         }
 
@@ -2057,6 +2070,8 @@ function categoryUEGCYBER_S(player) {
         form.button(unlockableUnlock + lockedName + "", lockedLoc);
     }
 
+    form.button(masT, "textures/ui/button_toggle");
+
     form.button(bacM, "textures/ui/button_back");
 
     form.show(player).then(r => {
@@ -2130,6 +2145,10 @@ function categoryUEGCYBER_S(player) {
             }
         }
         else if (responseValue == 8) {
+            var title = "UEG CYBER -S-"
+            system.run(() => toggleAll(player, title))
+        }
+        else if (responseValue == 9) {
             system.run(() => mainArenaPageUEG(player))
         }
 
@@ -2218,7 +2237,7 @@ function categoryRPG(player) {
         form.button(unlockableUnlock + lockedName + "", lockedLoc);
         form.button(unlockableUnlock + lockedName + "", lockedLoc);
     }
-
+    form.button(masT, "textures/ui/button_toggle");
     form.button(bacM, "textures/ui/button_back");
 
     form.show(player).then(r => {
@@ -2276,6 +2295,10 @@ function categoryRPG(player) {
             }
         }
         else if (responseValue == 6) {
+            var title = "RPG Game"
+            system.run(() => toggleAll(player, title))
+        }
+        else if (responseValue == 7) {
             system.run(() => mainArenaPageRPG(player))
         }
 
@@ -2328,7 +2351,7 @@ function categoryRPG2(player) {
         form.button(unlockableUnlock + lockedName + "", lockedLoc);
         form.button(unlockableUnlock + lockedName + "", lockedLoc);
     }
-
+    form.button(masT, "textures/ui/button_toggle");
     form.button(bacM, "textures/ui/button_back");
 
     form.show(player).then(r => {
@@ -2355,6 +2378,10 @@ function categoryRPG2(player) {
             }
         }
         else if (responseValue == 2) {
+            var title = "RPG Game 2"
+            system.run(() => toggleAll(player, title))
+        }
+        else if (responseValue == 3) {
             system.run(() => mainArenaPageRPG(player))
         }
 
@@ -2376,6 +2403,14 @@ function categoryRPG2(player) {
 /////////////-SCIZORM
 ////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////
+/*
+10/24/2024 EDIT:
+
+DO NOT DO WHAT I DID, I DID NOT KNOW HOW TO DO MULTI-LINE COMMENTING AT THE TIME, PLEASE DO NOT SHOUT AT ME ABOUT THIS GOD-AWFUL CODE I WROTE.
+-SCIZORM
+
+
+*/
 function arena_0000_message(player) {
     const aVoteEnabled = world.scoreboard.getObjective("arena_vote_enabled")
     const aVoteBool = aVoteEnabled.getScore("boolean")
@@ -4956,11 +4991,12 @@ function arena_0105_message(player) {
 
 function toggleAll(player,title) {
     let form = new ActionFormData();
-    form.title("... > " + title + " > ");
+    form.title("... > " + title + " > Mass-Toggle Arenas");
     form.body("Select an Option:\n");
     form.button("Enable All Unlocked " + title + " Arenas", "textures/ui/button_enable_all");
     form.button("Disable All Unlocked " + title + " Arenas", "textures/ui/button_disable_all");
     form.button(bacM, "textures/ui/button_back");
+    form.button(clsM, "textures/ui/button_close")
 
     form.show(player).then(r => {
 
@@ -4969,16 +5005,82 @@ function toggleAll(player,title) {
 
 
         if (responseValue == 0) {
-            system.run(() => categoryRPG(player))
+            switch (title) {
+                case "UEG CYBER -S-":
+                    player.runCommand("function mass_toggle_arenas/enable_arenas_uegcyber_s")
+                    system.run(() => categoryUEGCYBER_S(player))
+                    break;
+                case "UEG CYBER":
+                    player.runCommand("function mass_toggle_arenas/enable_arenas_uegcyber")
+                    system.run(() => categoryUEGCYBER(player))
+                    break;
+                case "UEG PLUS":
+                    player.runCommand("function mass_toggle_arenas/enable_arenas_uegplus")
+                    system.run(() => categoryUEGPLUS(player))
+                    break;
+                case "UEG 1":
+                    player.runCommand("function mass_toggle_arenas/enable_arenas_ueg1")
+                    system.run(() => categoryUEG1(player))
+                    break;
+                case "RPG Game":
+                    player.runCommand("function mass_toggle_arenas/enable_arenas_rpg1")
+                    system.run(() => categoryRPG(player))
+                    break;
+                case "RPG Game 2":
+                    player.runCommand("function mass_toggle_arenas/enable_arenas_rpg2")
+                    system.run(() => categoryRPG2(player))
+                    break;
+            }
         }
         else if (responseValue == 1) {
-            system.run(() => categoryRPG2(player))
+            switch (title) {
+                case "UEG CYBER -S-":
+                    player.runCommand("function mass_toggle_arenas/disable_arenas_uegcyber_s")
+                    system.run(() => categoryUEGCYBER_S(player))
+                    break;
+                case "UEG CYBER":
+                    player.runCommand("function mass_toggle_arenas/disable_arenas_uegcyber")
+                    system.run(() => categoryUEGCYBER(player))
+                    break;
+                case "UEG PLUS":
+                    player.runCommand("function mass_toggle_arenas/disable_arenas_uegplus")
+                    system.run(() => categoryUEGPLUS(player))
+                    break;
+                case "UEG 1":
+                    player.runCommand("function mass_toggle_arenas/disable_arenas_ueg1")
+                    system.run(() => categoryUEG1(player))
+                    break;
+                case "RPG Game":
+                    player.runCommand("function mass_toggle_arenas/disable_arenas_rpg1")
+                    system.run(() => categoryRPG(player))
+                    break;
+                case "RPG Game 2":
+                    player.runCommand("function mass_toggle_arenas/disable_arenas_rpg2")
+                    system.run(() => categoryRPG2(player))
+                    break;
+            }
         }
         else if (responseValue == 2) {
-
-        }
-        else if (responseValue == 3) {
-            system.run(() => arenaCategorySelect(player))
+            switch (title) {
+                case "UEG CYBER -S-":
+                    system.run(() => categoryUEGCYBER_S(player))
+                    break;
+                case "UEG CYBER":
+                    system.run(() => categoryUEGCYBER(player))
+                    break;
+                case "UEG PLUS":
+                    system.run(() => categoryUEGPLUS(player))
+                    break;
+                case "UEG 1":
+                    system.run(() => categoryUEG1(player))
+                    break;
+                case "RPG Game":
+                    system.run(() => categoryRPG(player))
+                    break;
+                case "RPG Game 2":
+                    system.run(() => categoryRPG2(player))
+                    break;
+            }
         }
 
     })//.catch((e) => {

@@ -1,0 +1,30 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "sm:arenabanner_new",
+			"materials": {
+				"default": "guardian"
+			},
+			"textures": {
+				"default": "textures/signs/arenashop_banners/cst_1",
+				"cyber_2": "textures/signs/arenashop_banners/cst_2",
+				"cyber_3": "textures/signs/arenashop_banners/cst_3",
+				"cyber_4": "textures/signs/arenashop_banners/cst_4",
+				"cyber_5": "textures/signs/arenashop_banners/cst_5",
+				"cyber_6": "textures/signs/arenashop_banners/cst_6",
+				"ueg_1": "textures/signs/arenashop_banners/ueg_1",
+				"ueg_plus": "textures/signs/arenashop_banners/ueg_plus",
+				"rpg_1": "textures/signs/arenashop_banners/rpg_1",
+				"rpg_2": "textures/signs/arenashop_banners/rpg_2"
+			},
+			"geometry": {
+				"default": "geometry.arenapackpreview"
+			},
+			"render_controllers": [
+				"controller.render.arena_shop"
+			]
+		}
+	}
+}

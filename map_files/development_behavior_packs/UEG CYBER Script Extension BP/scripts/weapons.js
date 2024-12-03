@@ -1,11 +1,90 @@
-import { world, ItemCooldownComponent, system, Entity } from '@minecraft/server'
+import { world, ItemCooldownComponent, system, Entity, EquipmentSlot, ItemStack, EntityComponentTypes } from '@minecraft/server'
 
+
+system.runInterval(() => {
+    const dimension = world.getDimension("Overworld")
+    world.getAllPlayers().forEach(player => {
+        var cooldownData = world.scoreboard.getObjective("weapon_cooldown")
+        var item = player.getComponent("equippable").getEquipment("Mainhand")
+
+        if (player.hasTag("deepstriker_kb")) {
+            var source = player
+            var deepTimer = world.scoreboard.getObjective("deepstriker_timer")
+            var deepTimerP = deepTimer.getScore(source)
+            deepTimer.setScore(source, 0)
+            source.runCommand(`execute positioned ${source.location.x} ${source.location.y} ${source.location.z} run /function explosion_deepstriker`)
+            source.runCommand(`execute positioned ${source.location.x} ${source.location.y} ${source.location.z} run /summon sm:explosion_deepstriker`)
+            source.applyKnockback(source.getViewDirection().x, source.getViewDirection().z, -5, 0.5)
+            world.sendMessage("invalid block, attack yourself")
+            source.removeTag("deepstriker_kb")
+        }
+
+
+        if (item) {
+
+            if (item.typeId == "sm:deep_striker") {
+
+                var source = player
+                var entityRay = false
+                if (item.getComponent('cooldown').getCooldownTicksRemaining(player) == 0) {
+                    source.setProperty("sm:deepstriker_anim", 0)
+                    source.setProperty("sm:deepstriker_shooting_self", 0)
+                }
+                const dimension = world.getDimension("overworld")
+                //source.setProperty("sm:deepstriker_shooting_self", 0)
+                var rayLocation = { x: source.location.x, y: source.location.y + 1.5, z: source.location.z }
+                var lookDir = { x: source.getViewDirection().x, y: source.getViewDirection().y, z: source.getViewDirection().z }
+                var blockRC = source.dimension.getBlockFromRay(rayLocation, lookDir, { includeLiquidBlocks: false, includePassableBlocks: false })
+                var entityRC = source.getEntitiesFromViewDirection()
+
+                entityRC.forEach((hit) => {
+                    entityRay = true
+                })
+
+                if (item.getComponent('cooldown').getCooldownTicksRemaining(player) == 0) {
+
+
+                    if (!entityRay && !(blockRC && blockRC.block.typeId != "sm:arenaborder" && blockRC.block.typeId != "minecraft:bedrock" && blockRC.block.typeId != "sm:arenaborder_4" && blockRC.block.typeId != "sm:arenaborder_5")) {
+                        source.setProperty("sm:deepstriker_shooting_self", 1)
+                    }
+                    else {
+                        source.setProperty("sm:deepstriker_shooting_self", 0)
+                    }
+
+                }
+            }
+
+            if (item.getComponent(ItemCooldownComponent.componentId)) {
+                var cooldown = Math.round((item.getComponent(ItemCooldownComponent.componentId).getCooldownTicksRemaining(player)) / 20)
+                const cooldownScore = world.scoreboard.getObjective("icarus_is_inactive")
+                const cooldownScorePlayer = cooldownScore.getScore(player)
+                cooldownData.setScore(player, cooldown)
+
+                if (cooldownScorePlayer == 1 && item.typeId == "sm:icarus") {
+                    const cooldownCompd = item.getComponent(ItemCooldownComponent.componentId)
+                    cooldownCompd.startCooldown(player)
+                    
+                }
+
+            }
+            else {
+                cooldownData.setScore(player, 0)
+            }
+
+        }
+        else {
+            cooldownData.setScore(player,0)
+        }
+
+    })
+})
 
 
 //some code originates from Alien Edds from the bridge discord, I asked them for help specifically but my mom taught me how to use case statements because they're more efficient than ifs lol :skull:
 world.afterEvents.itemUse.subscribe((data) => {
     const item = data.itemStack
     const player = data.source
+
 
     switch (item.typeId) {
         case 'sm:vulcan_cannon':
@@ -56,6 +135,26 @@ world.afterEvents.itemUse.subscribe((data) => {
             if (item.getComponent('cooldown').getCooldownTicksRemaining(player) > 37) {
                 cooldownComp7.startCooldown(player)
             }
+        case 'sm:deep_striker':
+            const cooldownCompz = item.getComponent(ItemCooldownComponent.componentId)
+            //world.sendMessage("[Landmine Debug] " + item.getComponent('cooldown').getCooldownTicksRemaining(player))
+            if (item.getComponent('cooldown').getCooldownTicksRemaining(player) > 197) {
+                cooldownCompz.startCooldown(player)
+            }
+            break
+        case 'sm:scaler_bomb':
+            const cooldownCompb = item.getComponent(ItemCooldownComponent.componentId)
+            world.sendMessage("[Landmine Debug] " + item.getComponent('cooldown').getCooldownTicksRemaining(player))
+            if (item.getComponent('cooldown').getCooldownTicksRemaining(player) > 197) {
+                cooldownCompb.startCooldown(player)
+            }
+            break
+        case 'sm:implosion_grenade':
+            const cooldownCompy = item.getComponent(ItemCooldownComponent.componentId)
+            //world.sendMessage("[Landmine Debug] " + item.getComponent('cooldown').getCooldownTicksRemaining(player))
+            if (item.getComponent('cooldown').getCooldownTicksRemaining(player) > 297) {
+                cooldownCompy.startCooldown(player)
+            }
             break
         case 'sm:antigravity_prism':
             const cooldownComp8 = item.getComponent(ItemCooldownComponent.componentId)
@@ -101,6 +200,8 @@ world.afterEvents.itemUse.subscribe((data) => {
             break
         case 'sm:icarus':
             const cooldownComp14 = item.getComponent(ItemCooldownComponent.componentId)
+            const cooldownScore = world.scoreboard.getObjective("icarus_is_inactive")
+            const cooldownScorePlayer = cooldownScore.getScore(player)
             //world.sendMessage("[Icarus Debug] " + item.getComponent('cooldown').getCooldownTicksRemaining(player))
             if (item.getComponent('cooldown').getCooldownTicksRemaining(player) > 4) {
                 cooldownComp14.startCooldown(player)

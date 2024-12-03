@@ -165,7 +165,9 @@ system.runInterval(() => {
 
         if (player.isSneaking && player.level > 0) {
             if (player.hasTag("rocketjump")) {
+                player.applyKnockback(player.getViewDirection().x, player.getViewDirection().z, 0.1, 0.5)
                 player.runCommand("function explosion_rocketjump")
+                player.runCommand("camerashake add @s 0.5 0.2 positional")
             }
             if (player.hasTag("vel_cancel") && blockBelowPlayerTest == undefined) {
                 player.runCommand("teleport @s " + Math.floor(player.location.x) + " " + Math.floor(player.location.y) + " " + Math.floor(player.location.z))
@@ -226,6 +228,7 @@ system.runInterval(() => {
             else if (player.hasTag("flying") == false && dashes.getScore(player) >= minDashesRequiredVar) {
                 //player.sendMessage(`NOT CREATIVE`)
                 const scoreboard = world.scoreboard.getObjective("dash_strength")
+                player.playSound("dash", {volume: 0.4, pitch: Math.max(Math.random(),0.8)})
                 player.applyKnockback(player.getViewDirection().x / 5, player.getViewDirection().z / 5, Math.sqrt(player.getViewDirection().x ** 2 + player.getViewDirection().z ** 2) * dash_strength, dash_verticalityp/100)
                 player.runCommand("function removeFlightTag")
                 player.runCommand("function redo_dash_effects")
@@ -263,14 +266,16 @@ function judgement(player) {
     const nearestPlayer = player.dimension.getPlayers(option)?.[0]
     //not this part
     if (nearestPlayer != undefined && nearestPlayer.hasTag("ingame")) {
+        player.playSound("judgement")
         player.runCommand("xp -1L")
-        player.runCommand("execute as " + nearestPlayer.name + " positioned as @s run execute positioned ^ ^ ^2 run execute positioned ~ " + nearestPlayer.location.y + " ~ run tp " + player.name + " ~ ~ ~ facing " + nearestPlayer.name + " true")
+        player.runCommand('execute as "' + nearestPlayer.name + '" positioned as @s run execute positioned ^ ^ ^2 run execute positioned ~ ' + nearestPlayer.location.y + ' ~ run tp "' + player.name + '" ~ ~ ~ facing "' + nearestPlayer.name + '" true')
         player.runCommand("camera @s fade time 0 0 0.5 color 100 100 150")
         player.runCommand("playanimation @s animation.player.judgement")
         player.addTag("judgement")
         player.runCommand("tp @s " + Math.floor(player.location.x) + " " + Math.floor(player.location.y) + " " + Math.floor(player.location.z) + " facing " + nearestPlayer.name)
         nearestPlayer.runCommand("tp @s " + Math.floor(nearestPlayer.location.x) + " " + Math.floor(nearestPlayer.location.y) + " " + Math.floor(nearestPlayer.location.z))
         system.run(() => judgement2(player))
+        nearestPlayer.playSound("judgement")
     }
     //end not this part
 

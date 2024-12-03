@@ -1,6 +1,5 @@
 #bridge-file-version: #38
 clear @s
-function load_loadouts/give_items
 playsound respawn @s ~ ~ ~ 0.7
 execute @a[tag=teamed] ~ ~ ~ playsound respawn @s[tag=teamed] ~ ~ ~ 0.4
 execute @s ~ ~ ~ execute @s ~ ~ ~ particle sm:respawn_beam ~ ~10 ~
@@ -14,6 +13,9 @@ effect @s slow_falling 5 0 true
 tp @s -134 76 255
 function stoned_ability_clear
 function title_respawned
+scoreboard players set @s respawn_item_regen 40
 scoreboard players reset @s icarus_is_inactive
 scoreboard players reset @s icarus_temperature
 scoreboard players reset @s icarus_cooldown
+tag @s add respawning
+scoreboard players set @s scaletimer 1

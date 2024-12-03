@@ -1,0 +1,42 @@
+//bridge-file-version: #18
+{
+	"format_version": "1.16.100",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "sm:skin_7",
+			"materials": {
+				"default": "entity_emissive_alpha"
+			},
+			"textures": {
+				"default": "textures/entity/skins/conduit",
+				"frame_2": "textures/entity/skins/conduit_frame2",
+				"frame_3": "textures/entity/skins/conduit_frame3",
+				"frame_4": "textures/entity/skins/conduit_frame4",
+				"frame_5": "textures/entity/skins/conduit_frame3",
+				"frame_6": "textures/entity/skins/conduit_frame2",
+				"frame_7": "textures/entity/skins/conduit",
+				"frame_8": "textures/entity/skins/conduit",
+				"dash1": "textures/entity/skins/conduit_dash_1",
+				"dash2": "textures/entity/skins/conduit_dash_2",
+				"dash3": "textures/entity/skins/conduit_dash_3",
+				"dash4": "textures/entity/skins/conduit_dash_4"
+			},
+			"geometry": {
+				"default": "geometry.conduit"
+			},
+			"render_controllers": [
+				"controller.render.skin_animations"
+			],
+			"animations": {
+				"idle": "animation.conduit.idle",
+				"dash": "animation.conduit.dash",
+				"controller": "controller.animation.conduit"
+			},
+			"scripts": {
+				"animate": [
+					"controller"
+				]
+			}
+		}
+	}
+}

@@ -1,6 +1,6 @@
 ﻿import { world, ItemCooldownComponent, system, Entity } from '@minecraft/server'
 import { ActionFormData, MessageFormData, ModalFormData } from '@minecraft/server-ui'
-import { skinList, designerList, skinSet } from './skinList.js'
+import { skinList, designerList, skinSet, effectSkins } from './skinList.js'
 
 
 world.beforeEvents.itemUse.subscribe(data => {
@@ -108,6 +108,7 @@ function purchase(player) {
 
     var spackCost = world.scoreboard.getObjective("skin_cost")
     var spackCostDefault = spackCost.getScore("default")
+    var spackCostPremium = spackCost.getScore("premium")
 
     const music_pack_1_title = "Purchase Hardcore Pack Vol.1"
 
@@ -267,7 +268,13 @@ function purchase(player) {
         var cost = apackCost2
     }
     else if (currentSkin > 0) {
-        var cost = spackCostDefault
+        if (effectSkins.includes(skinNumber[currentSkin])) {
+            var cost = spackCostPremium
+        }
+        else {
+            var cost = spackCostDefault
+        }
+        
     }
     else {
         var cost = 0
@@ -329,7 +336,7 @@ function purchase(player) {
         var desc = arena_pack_6_desc
     }
     else if (currentSkin > 0 && player.hasTag(skinNumber[currentSkin] + "_skin_unlocked") == false) {
-        var desc = "Unlocks the following skin(s):\n\n§e" + skinNamesSF[currentSkin] + "§r\n\nDesigner: §d" + skinDesignSF[currentSkin] + "\n\n§rFrom the §b" + skinSetSF[currentSkin] + " §rCollection.\n\nPrice: " + cost + "\nChoose a payment option: \n\n"
+        var desc = "Unlocks the following skin(s):\n\n§e" + skinNamesSF[currentSkin] + "§r\n\nDesigner: §d" + skinDesignSF[currentSkin] + "\n\n§rFrom the §b" + skinSetSF[currentSkin] + " §rCollection. \n\nNote: skins labeled with the  tag have their own dash effect.\n\nPrice: " + cost + "\nChoose a payment option: \n\n"
     }
     else if (currentSkin > 0 && player.hasTag(skinNumber[currentSkin] + "_skin_unlocked") != false) {
         var desc = "You already own this skin!\n\n§e" + skinNamesSF[currentSkin] + "§r\n\nDesigner: §d" + skinDesignSF[currentSkin] + "\n\n§rFrom the §b" + skinSetSF[currentSkin] + " §rCollection.\n\nPrice: " + cost + "\n\n"

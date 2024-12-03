@@ -1,0 +1,32 @@
+//bridge-file-version: #24
+{
+	"format_version": "1.16.100",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "sm:skin_16",
+			"materials": {
+				"default": "guardian"
+			},
+			"textures": {
+				"default": "textures/entity/skins/recruit_hws",
+				"frame_2": "textures/entity/skins/recruit_hws_frame2",
+				"frame_3": "textures/entity/skins/recruit_hws_frame3",
+				"frame_4": "textures/entity/skins/recruit_hws_frame2",
+				"frame_5": "textures/entity/skins/recruit_hws",
+				"frame_6": "textures/entity/skins/recruit_hws",
+				"frame_7": "textures/entity/skins/recruit_hws",
+				"frame_8": "textures/entity/skins/recruit_hws",
+				"dash1": "textures/entity/skins/recruit_hws",
+				"dash2": "textures/entity/skins/recruit_hws",
+				"dash3": "textures/entity/skins/recruit_hws",
+				"dash4": "textures/entity/skins/recruit_hws"
+			},
+			"geometry": {
+				"default": "geometry.heavy_weapons_system"
+			},
+			"render_controllers": [
+				"controller.render.skin_animations"
+			]
+		}
+	}
+}

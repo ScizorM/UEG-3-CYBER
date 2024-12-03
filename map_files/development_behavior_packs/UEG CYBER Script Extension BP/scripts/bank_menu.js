@@ -141,13 +141,14 @@ function transferFunds(player) {
                 if (isNaN(parseInt(r.formValues[1])) == false) {
 
                     var amountMoney = parseInt(r.formValues[1])
-                    if (amountMoney <= playerFundsF && amountMoney > 5) {
+                    if (amountMoney <= playerFundsF && playerFundsF > 3) {
                         var allPlayersNew = world.getAllPlayers().filter(plr => player.name != plr.name).map(player => player.name)
                         if (allPlayersNew.includes(allPlayers[r.formValues[0]])) {
-                            world.sendMessage("amount of money sent: " + (amountMoney).toString())
+                            world.sendMessage("§e[Money Transfer] §a" + player.name + " §asent §f" + (amountMoney).toString() + "§a to " + allPlayers[r.formValues[0]].toString())
                             playerFunds.addScore(player, (-amountMoney-3))
 
-                            playerFunds.addScore(allPlayers[r.formValues[0]], amountMoney)//does not work, doesn't use the name of the player and instead makes a placeholder score
+                            player.runCommand("scoreboard players add " + allPlayers[r.formValues[0]] + " credits " + amountMoney)
+                            
                         }
                         else {
                             player.sendMessage("§e[Money Transfer] §cError: Player is not online.\nNo money has been transferred.")

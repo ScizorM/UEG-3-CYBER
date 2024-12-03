@@ -1,0 +1,32 @@
+//bridge-file-version: #62
+{
+	"format_version": "1.10.0",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "sm:green_gobbler_cannon",
+			"materials": {
+				"default": "entity_alphatest",
+				"enchanted": "entity_alphatest_glint"
+			},
+			"geometry": {
+				"default": "geometry.bludgeoning_cannon"
+			},
+			"render_controllers": [
+				"controller.render.guardian"
+			],
+			"animations": {
+				"controller": "controller.animation.bludgeoning_cannon",
+				"fist_tp": "animation.bludgeoning_cannon.thirdperson",
+				"fist_fp": "animation.bludgeoning_cannon.firstperson"
+			},
+			"scripts": {
+				"animate": [
+					"controller"
+				]
+			},
+			"textures": {
+				"default": "textures/entity/weapons/bludgeoning_cannon"
+			}
+		}
+	}
+}

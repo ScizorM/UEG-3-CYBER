@@ -1,5 +1,6 @@
 ﻿import { world, ItemCooldownComponent, system, Entity } from '@minecraft/server'
 import { ActionFormData, MessageFormData, ModalFormData } from '@minecraft/server-ui'
+import { skinItemIds } from './skinList.js'
 
 system.runInterval(() => {
 
@@ -24,7 +25,7 @@ system.runInterval(() => {
 
     var randomNumberTest
 
-
+    const dimension = world.getDimension("Overworld")
 
     if (skinRandActive == 1) {
 
@@ -49,10 +50,23 @@ system.runInterval(() => {
 
         if (skinRandCurrent > 6) {
             world.sendMessage("skin randomizer complete!")
-            skinRandomizer.setScore("active", 0)
-            skinRandomizer.setScore("current", 0)
-            skinRandomizer.setScore("none", 0)
-            skinRandomizer.setScore("wait_period", 0)
+
+            world.getAllPlayers().forEach(player => {
+                if (skinRandomizer.getScore("active") != 0) {
+                    player.runCommand(`execute positioned 165 14 -3 run /replaceitem entity @e[r=1,type=sm:skin_preview_npc] slot.armor.head 0 ${skinItemIds[skinRand1]}`)
+                    player.runCommand(`execute positioned 168 14 -3 run /replaceitem entity @e[r=1,type=sm:skin_preview_npc] slot.armor.head 0 ${skinItemIds[skinRand2]}`)
+                    player.dimension.runCommand(`execute positioned 171 14 -3 run /replaceitem entity @e[r=1,type=sm:skin_preview_npc] slot.armor.head 0 ${skinItemIds[skinRand3]}`)
+                    player.dimension.runCommand(`execute positioned 165 14 1 run /replaceitem entity @e[r=1,type=sm:skin_preview_npc] slot.armor.head 0 ${skinItemIds[skinRand4]}`)
+                    player.dimension.runCommand(`execute positioned 168 14 1 run /replaceitem entity @e[r=1,type=sm:skin_preview_npc] slot.armor.head 0 ${skinItemIds[skinRand5]}`)
+                    player.dimension.runCommand(`execute positioned 171 14 1 run /replaceitem entity @e[r=1,type=sm:skin_preview_npc] slot.armor.head 0 ${skinItemIds[skinRand6]}`)
+                    skinRandomizer.setScore("active", 0)
+                    skinRandomizer.setScore("current", 0)
+                    skinRandomizer.setScore("none", 0)
+                    skinRandomizer.setScore("wait_period", 0)
+                }
+
+            })
+            
         }
 
 

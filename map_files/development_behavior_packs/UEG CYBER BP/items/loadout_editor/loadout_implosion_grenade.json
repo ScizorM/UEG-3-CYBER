@@ -1,0 +1,16 @@
+//bridge-file-version: #12
+{
+	"format_version": "1.21.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "sm:loadout_implosion_grenade"
+		},
+		"components": {
+			"minecraft:display_name": {
+				"value": "§cPlaceholder §fImplosion Grenade\n/\n§9 Tosses a grenade that pulls in nearby players upon collision"
+			},
+			"minecraft:icon": "sm:implosion_grenade",
+			"minecraft:hand_equipped": true
+		}
+	}
+}

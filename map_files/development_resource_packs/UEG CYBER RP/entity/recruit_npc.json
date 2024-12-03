@@ -1,0 +1,29 @@
+//bridge-file-version: #5
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "sm:recruit_npc",
+			"materials": {
+				"default": "guardian"
+			},
+			"textures": {
+				"default": "textures/entity/skins/recruit"
+			},
+			"geometry": {
+				"default": "geometry.default_skin_npc"
+			},
+			"render_controllers": [
+				"controller.render.guardian"
+			],
+			"animations": {
+				"general": "animation.default_skin_npc.sitting"
+			},
+			"scripts": {
+				"animate": [
+					"general"
+				]
+			}
+		}
+	}
+}

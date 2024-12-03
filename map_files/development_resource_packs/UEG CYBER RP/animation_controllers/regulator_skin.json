@@ -1,0 +1,43 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.regulator": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"explode": "query.variant > 7"
+						},
+						{
+							"vent": "query.variant > 1 && query.variant < 7"
+						}
+					],
+					"blend_transition": 0.05
+				},
+				"explode": {
+					"animations": [
+						"dash"
+					],
+					"transitions": [
+						{
+							"default": "query.all_animations_finished"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"vent": {
+					"animations": [
+						"vent"
+					],
+					"transitions": [
+						{
+							"default": "query.all_animations_finished || query.variant > 7"
+						}
+					]
+				}
+			}
+		}
+	}
+}

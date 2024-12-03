@@ -1,2 +1,2 @@
 #bridge-file-version: #8
-function give_items_new
+tag @a[tag=teamed] add giveItems

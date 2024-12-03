@@ -11,7 +11,10 @@
 				"value": "§fDestruction Unit V3\n"
 			},
 			"minecraft:hand_equipped": true,
-			"minecraft:icon": "sm:energy_pickaxe"
+			"minecraft:icon": "sm:energy_pickaxe",
+			"minecraft:custom_components": [
+				"sm:destruction_unit"
+			]
 		}
 	}
 }

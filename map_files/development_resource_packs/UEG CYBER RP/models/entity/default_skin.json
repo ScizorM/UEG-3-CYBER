@@ -143,6 +143,13 @@
 					"parent": "thruster_pack",
 					"pivot": [0, 22, 2],
 					"rotation": [-27.5, 0, 0]
+				},
+				{
+					"name": "bone4",
+					"pivot": [0, 16, -8],
+					"locators": {
+						"locator": [0, 16, -8]
+					}
 				}
 			]
 		}

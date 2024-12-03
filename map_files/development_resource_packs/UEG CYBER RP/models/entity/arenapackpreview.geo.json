@@ -1,0 +1,30 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.arenapackpreview",
+				"texture_width": 377,
+				"texture_height": 488,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 5.5,
+				"visible_bounds_offset": [0, 2.25, 0]
+			},
+			"bones": [
+				{
+					"name": "bb_main",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-24, 0, 7],
+							"size": [48, 64, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [377, 488]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

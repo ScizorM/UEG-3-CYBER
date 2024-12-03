@@ -8,7 +8,7 @@
 		"components": {
 			"minecraft:icon": "sm:settings",
 			"minecraft:display_name": {
-				"value": "Arena Settings"
+				"value": "Settings"
 			}
 		}
 	}

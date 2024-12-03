@@ -12,8 +12,11 @@
 			},
 			"minecraft:icon": "sm:loadout_custom",
 			"minecraft:display_name": {
-				"value": "[Unused Item] Loadout 1: Custom"
-			}
+				"value": "Loadout 1: Custom"
+			},
+			"minecraft:custom_components": [
+				"sm:loadout_1"
+			]
 		}
 	}
 }

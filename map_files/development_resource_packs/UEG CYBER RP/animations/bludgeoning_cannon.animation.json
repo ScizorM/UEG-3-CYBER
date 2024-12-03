@@ -1,0 +1,23 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.bludgeoning_cannon.firstperson": {
+			"loop": true,
+			"bones": {
+				"rightItem": {
+					"rotation": [22.03657, 38.05442, -72.22118],
+					"position": [-9.72879, 23.20127, -3.61268]
+				}
+			}
+		},
+		"animation.bludgeoning_cannon.thirdperson": {
+			"loop": true,
+			"bones": {
+				"rightItem": {
+					"rotation": [51.65264, -36.76303, -38.47125],
+					"position": [-2, 15.71363, -3.17518]
+				}
+			}
+		}
+	}
+}

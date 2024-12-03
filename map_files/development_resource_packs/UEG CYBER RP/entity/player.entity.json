@@ -113,7 +113,11 @@
 				"hold_vulcan_cannon": "animation.vulcan_cannon.third_person_player",
 				"weapon_anims": "controller.animation.player_weapon_anims",
 				"fire_vulcan_cannon": "animation.vulcan_cannon.third_person_recoil",
-				"fire_weapon_controller": "controller.animation.firing_weapon_thirdperson"
+				"fire_weapon_controller": "controller.animation.firing_weapon_thirdperson",
+				"particletest": "animation.default_skin.new"
+			},
+			"particle_effects": {
+				"test_particle": "sm:test_particle"
 			}
 		}
 	}

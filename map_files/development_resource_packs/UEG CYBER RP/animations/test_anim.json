@@ -1,0 +1,52 @@
+"animation.player.mockswing": 
+{
+            "animation_length": 0.41667,
+            "bones": {
+                "rightArm": {
+                    "rotation": {
+                        "0.0": {
+                            "post": [0, 0, 0],
+                            "lerp_mode": "catmullrom"
+                        },
+                        "0.0833": {
+                            "post": [-26.78602, 24.45925, 81.62968],
+                            "lerp_mode": "catmullrom"
+                        },
+                        "0.125": {
+                            "post": [-50.8839, 21.54068, 59.35181],
+                            "lerp_mode": "catmullrom"
+                        },
+                        "0.1667": {
+                            "post": [-66.87298, 4.46359, 3.19276],
+                            "lerp_mode": "catmullrom"
+                        },
+                        "0.375": {
+                            "post": [1.91265, 2.37559, 0.684],
+                            "lerp_mode": "catmullrom"
+                        },
+                        "0.4167": {
+                            "post": [0, 0, 0],
+                            "lerp_mode": "catmullrom"
+                        }
+                    },
+                    "position": {
+                        "0.0": {
+                            "post": [0, 0, 0],
+                            "lerp_mode": "catmullrom"
+                        },
+                        "0.125": {
+                            "post": [0, 0, 7],
+                            "lerp_mode": "catmullrom"
+                        },
+                        "0.25": {
+                            "post": [0, 0, 5],
+                            "lerp_mode": "catmullrom"
+                        },
+                        "0.4167": {
+                            "post": [0, 0, 0],
+                            "lerp_mode": "catmullrom"
+                        }
+                    }
+                }
+            }
+        }

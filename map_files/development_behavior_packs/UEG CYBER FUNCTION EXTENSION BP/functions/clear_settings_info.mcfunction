@@ -5,3 +5,4 @@ scoreboard players set @s settings_info_timer 0
 tag @s remove settings_info
 inputpermission set @s camera enabled
 inputpermission set @s movement enabled
+clear @s sm:skip_cutscene

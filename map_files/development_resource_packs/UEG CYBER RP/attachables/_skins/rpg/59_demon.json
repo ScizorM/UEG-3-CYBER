@@ -1,0 +1,42 @@
+//bridge-file-version: #18
+{
+	"format_version": "1.16.100",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "sm:skin_59",
+			"materials": {
+				"default": "guardian"
+			},
+			"textures": {
+				"default": "textures/entity/skins/rpg/demon_cyberized",
+				"frame_2": "textures/entity/skins/rpg/demon_cyberized_frame2",
+				"frame_3": "textures/entity/skins/rpg/demon_cyberized_frame4",
+				"frame_4": "textures/entity/skins/rpg/demon_cyberized_frame2",
+				"frame_5": "textures/entity/skins/rpg/demon_cyberized",
+				"frame_6": "textures/entity/skins/rpg/demon_cyberized",
+				"frame_7": "textures/entity/skins/rpg/demon_cyberized",
+				"frame_8": "textures/entity/skins/rpg/demon_cyberized",
+				"dash1": "textures/entity/skins/rpg/demon_cyberized_dash1",
+				"dash2": "textures/entity/skins/rpg/demon_cyberized_dash2",
+				"dash3": "textures/entity/skins/rpg/demon_cyberized_dash3",
+				"dash4": "textures/entity/skins/rpg/demon_cyberized_dash4"
+			},
+			"geometry": {
+				"default": "geometry.demon_cyberized_full"
+			},
+			"render_controllers": [
+				"controller.render.skin_animations"
+			],
+			"animations": {
+				"idle": "animation.demon_cyberized.idle",
+				"dash": "animation.demon_cyberized.fly",
+				"controller": "controller.animation.conduit"
+			},
+			"scripts": {
+				"animate": [
+					"controller"
+				]
+			}
+		}
+	}
+}

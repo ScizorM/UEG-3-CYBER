@@ -1238,7 +1238,7 @@
       {
         "ui_profile_warning_bg": {
           "type": "image",
-          "size": [ "200%", "200%" ],
+          "size": [ "0%", "0%" ],
           "texture": "textures/ui/ui_profile_warning_bg",
           "layer": 499
         }
@@ -1246,7 +1246,7 @@
       {
         "ui_profile_warning_bg_2": {
           "type": "image",
-          "size": [ "200%", "200%" ],
+          "size": [ "0%", "0%" ],
           "texture": "textures/ui/ui_profile_warning_bg",
           "layer": 499
         }
@@ -1254,7 +1254,7 @@
       {
         "ui_profile_warning_bg_3": {
           "type": "image",
-          "size": [ "200%", "200%" ],
+          "size": [ "0%", "0%" ],
           "texture": "textures/ui/ui_profile_warning_bg",
           "layer": 499
         }
@@ -1262,7 +1262,7 @@
       {
         "ui_profile_warning_bg_4": {
           "type": "image",
-          "size": [ "200%", "200%" ],
+          "size": [ "0%", "0%" ],
           "texture": "textures/ui/ui_profile_warning_bg",
           "layer": 499
         }
@@ -1270,7 +1270,7 @@
       {
         "ui_profile_warning": {
           "type": "image",
-          "size": [ "70%", "70%" ],
+          "size": [ "0%", "0%" ],
           "texture": "textures/ui/ui_profile_warning",
           "layer": 500
         }
@@ -1278,7 +1278,7 @@
       {
         "ui_profile_warning2": {
           "type": "image",
-          "size": [ "70%", "70%" ],
+          "size": [ "0%", "0%" ],
           "texture": "textures/ui/ui_profile_warning",
           "layer": 500
         }
@@ -1286,7 +1286,7 @@
       {
         "ui_profile_warning3": {
           "type": "image",
-          "size": [ "70%", "70%" ],
+          "size": [ "0%", "0%" ],
           "texture": "textures/ui/ui_profile_warning",
           "layer": 500
         }
@@ -1294,7 +1294,7 @@
       {
         "ui_profile_warning4": {
           "type": "image",
-          "size": [ "70%", "70%" ],
+          "size": [ "0%", "0%" ],
           "texture": "textures/ui/ui_profile_warning",
           "layer": 500
         }
@@ -2974,6 +2974,40 @@
           "bindings": [
             {
               "binding_name": "#hint_deselect_visible",
+              "binding_name_override": "#visible"
+            },
+            {
+              "binding_name": "#layout_customization_hint_offset_y",
+              "binding_name_override": "#anchored_offset_value_y"
+            }
+          ]
+        }
+      },
+            {
+        "layout_customization_hint_drag_frame": {
+          "type": "image",
+          "layer": 40,
+          "use_anchored_offset": true,
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "property_bag": {
+            "#anchored_offset_value_y": 0.0
+          },
+          "texture": "textures/ui/Black",
+          "size": [ "100%c+5px", "100%c+2px" ],
+          "alpha": 0.5,
+          "controls": [
+            {
+              "layout_customization_hint_drag": {
+                "type": "label",
+                "text": "hudScreen.controlCustomization.hintDrag",
+                "color": "$f_color_format"
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hint_drag_visible",
               "binding_name_override": "#visible"
             },
             {

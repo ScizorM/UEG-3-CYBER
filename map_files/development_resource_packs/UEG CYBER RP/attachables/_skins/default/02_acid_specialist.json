@@ -1,0 +1,40 @@
+//bridge-file-version: #18
+{
+	"format_version": "1.16.100",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "sm:skin_2",
+			"materials": {
+				"default": "guardian"
+			},
+			"textures": {
+				"default": "textures/entity/skins/acid_specialist",
+				"frame_2": "textures/entity/skins/acid_specialist_frame2",
+				"frame_3": "textures/entity/skins/acid_specialist_frame3",
+				"frame_4": "textures/entity/skins/acid_specialist_frame4",
+				"frame_5": "textures/entity/skins/acid_specialist_frame5",
+				"frame_6": "textures/entity/skins/acid_specialist_frame6",
+				"frame_7": "textures/entity/skins/acid_specialist_frame7",
+				"frame_8": "textures/entity/skins/acid_specialist",
+				"dash1": "textures/entity/skins/acid_specialist",
+				"dash2": "textures/entity/skins/acid_specialist",
+				"dash3": "textures/entity/skins/acid_specialist",
+				"dash4": "textures/entity/skins/acid_specialist"
+			},
+			"geometry": {
+				"default": "geometry.acid_specialist_new"
+			},
+			"render_controllers": [
+				"controller.render.skin_animations"
+			],
+			"animations": {
+				"idle": "animation.acid_specialist.idle"
+			},
+			"scripts": {
+				"animate": [
+					"idle"
+				]
+			}
+		}
+	}
+}

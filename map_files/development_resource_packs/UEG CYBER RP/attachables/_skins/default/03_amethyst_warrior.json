@@ -1,0 +1,42 @@
+//bridge-file-version: #23
+{
+	"format_version": "1.16.100",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "sm:skin_3",
+			"materials": {
+				"default": "guardian"
+			},
+			"textures": {
+				"default": "textures/entity/skins/amethyst_warrior",
+				"frame_2": "textures/entity/skins/amethyst_warrior_frame2",
+				"frame_3": "textures/entity/skins/amethyst_warrior_frame3",
+				"frame_4": "textures/entity/skins/amethyst_warrior_frame2",
+				"frame_5": "textures/entity/skins/amethyst_warrior",
+				"frame_6": "textures/entity/skins/amethyst_warrior",
+				"frame_7": "textures/entity/skins/amethyst_warrior",
+				"frame_8": "textures/entity/skins/amethyst_warrior",
+				"dash1": "textures/entity/skins/amethyst_warrior_dash1",
+				"dash2": "textures/entity/skins/amethyst_warrior_dash2",
+				"dash3": "textures/entity/skins/amethyst_warrior_dash3",
+				"dash4": "textures/entity/skins/amethyst_warrior_dash4"
+			},
+			"geometry": {
+				"default": "geometry.amethyst_warrior_full"
+			},
+			"render_controllers": [
+				"controller.render.skin_animations"
+			],
+			"animations": {
+				"idle": "animation.amethyst_warrior.idle",
+				"dash": "animation.amethyst_warrior.dash",
+				"controller": "controller.animation.conduit"
+			},
+			"scripts": {
+				"animate": [
+					"controller"
+				]
+			}
+		}
+	}
+}
