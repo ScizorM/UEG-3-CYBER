@@ -1,0 +1,41 @@
+//bridge-file-version: #99
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.devorans_spatium": {
+			"geometry": "Geometry.default",
+			"materials": [
+				{
+					"rightArm": "Material.default",
+					"leftArm": "Material.default",
+					"rightLeg": "Material.default",
+					"leftLeg": "Material.default",
+					"blackHoleFX": "Material.emissive",
+					"bhGuard": "Material.alphatest",
+					"*": "Material.alphatest"
+				}
+			],
+			"textures": [
+				"Array.skins[query.variant]"
+			],
+			"arrays": {
+				"textures": {
+					"Array.skins": [
+						"Texture.default",
+						"Texture.frame_2",
+						"Texture.frame_3",
+						"Texture.frame_4",
+						"Texture.frame_5",
+						"Texture.frame_6",
+						"Texture.frame_7",
+						"Texture.frame_8",
+						"Texture.dash1",
+						"Texture.dash2",
+						"Texture.dash3",
+						"Texture.dash4"
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,2 @@
+##execute if entity @s[hasitem={item=sm:kusarigama,location=slot.weapon.mainhand}] run tag @s add kusarigama_attack
+execute if entity @s[hasitem={item=sm:vulcan_cannon,location=slot.weapon.mainhand}] run tag @s add vulcan_attack

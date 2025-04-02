@@ -1,0 +1,24 @@
+//bridge-file-version: #20
+{
+	"format_version": "1.21.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "sm:enhanced_charged_bolt_rifle"
+		},
+		"components": {
+			"minecraft:icon": "sm:charged_bolt_rifle",
+			"minecraft:hand_equipped": true,
+			"minecraft:display_name": {
+				"value": "§e[Enhanced]§r Charged Bolt Rifle\n\n§eReduced Cooldown"
+			},
+			"minecraft:custom_components": [
+				"sm:charged_bolt_rifle"
+			],
+			"minecraft:cooldown": {
+				"category": "rifle",
+				"duration": 2
+			},
+			"minecraft:max_stack_size": 1
+		}
+	}
+}

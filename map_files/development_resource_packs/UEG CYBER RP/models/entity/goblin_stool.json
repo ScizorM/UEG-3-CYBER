@@ -1,0 +1,32 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.goblin_stool",
+				"texture_width": 64,
+				"texture_height": 48,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "bone",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [4, 9, -6], "size": [2, 15, 2], "uv": [0, 16]},
+						{"origin": [4, 0, -6], "size": [2, 9, 2], "uv": [0, 22]},
+						{"origin": [4, 9, 4], "size": [2, 15, 2], "uv": [8, 16]},
+						{"origin": [4, 0, 4], "size": [2, 9, 2], "uv": [8, 22]},
+						{"origin": [-6, 24, -6], "size": [12, 2, 12], "uv": [0, 0]},
+						{"origin": [-6, 9, 4], "size": [2, 15, 2], "uv": [16, 16]},
+						{"origin": [-6, 0, 4], "size": [2, 9, 2], "uv": [16, 22]},
+						{"origin": [-6, 9, -6], "size": [2, 15, 2], "uv": [24, 16]},
+						{"origin": [-6, 0, -6], "size": [2, 9, 2], "uv": [24, 22]}
+					]
+				}
+			]
+		}
+	]
+}

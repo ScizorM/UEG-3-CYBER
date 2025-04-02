@@ -9,13 +9,27 @@ execute as @a[tag=!team_nu,tag=!team_lambda,tag=enter_reactor,tag=!reactor_tutor
 execute as @a[tag=!team_nu,tag=!team_lambda,tag=enter_music,tag=!music_tutorial] run function start_music_info
 
  
+
+
+execute as @a run execute positioned as @s run execute if block ~ ~ ~ sm:training_death run tag @s add training_death
+
+execute as @a run execute positioned as @s run execute if block ~ ~-1 ~ sm:goal_block_new run tag @s add training_goal
+
+
+
+
+
 execute as @e[type=sm:teleporter_object] run execute positioned as @s run execute if block ~ ~-0.5 ~ air run event entity @s sm:despawn
+
+scoreboard players add @a tokens 0
 
 function settings_info_ticks
 execute as @a[tag=respawning] run scoreboard players remove @s respawn_item_regen 1
 execute as @a run execute if score @s[tag=respawning] respawn_item_regen matches 0 run function respawn_itemrecover
 scoreboard players add @a emergencyphase 0
 function check_arenapack_count
+
+scoreboard players add @a new_title_system 0
 
 function music_info_ticks
 
@@ -37,15 +51,31 @@ execute as @a[scores={teleport_cooldown_new=1..}] run scoreboard players remove 
 scoreboard players add @a teleport_cooldown_new 0
 
 function train_timer_cmds
-execute as @a run execute positioned as @s run execute if block ~ ~-1 ~ sm:settings_block run replaceitem entity @s slot.hotbar 4 sm:settings 1 0 {"minecraft:item_lock":{"mode":"lock_in_slot"}}
-execute as @a run execute positioned as @s run execute if block ~ ~-1 ~ sm:settings_block_2 run replaceitem entity @s slot.hotbar 4 sm:settings 1 0 {"minecraft:item_lock":{"mode":"lock_in_slot"}}
-execute as @a run execute positioned as @s run execute unless block ~ ~-1 ~ sm:settings_block run execute unless block ~ ~-1 ~ sm:settings_block_2 run clear @s sm:settings
-execute as @a run execute positioned as @s run execute if block ~ ~-1 ~ sm:purchase_block run replaceitem entity @s slot.hotbar 4 sm:purchase 1 0 {"minecraft:item_lock":{"mode":"lock_in_slot"}}
-execute as @a run execute positioned as @s run execute if block ~ ~-1 ~ sm:purchase_block_2 run replaceitem entity @s slot.hotbar 4 sm:purchase 1 0 {"minecraft:item_lock":{"mode":"lock_in_slot"}}
-execute as @a run execute positioned as @s run execute if block ~ ~-1 ~ sm:purchase_block_3 run replaceitem entity @s slot.hotbar 4 sm:purchase 1 0 {"minecraft:item_lock":{"mode":"lock_in_slot"}}
-execute as @a run execute positioned as @s run execute if block ~ ~-1 ~ sm:purchase_block_4 run replaceitem entity @s slot.hotbar 4 sm:purchase 1 0 {"minecraft:item_lock":{"mode":"lock_in_slot"}}
-execute as @a run execute positioned as @s run execute unless block ~ ~-1 ~ sm:purchase_block run execute unless block ~ ~-1 ~ sm:purchase_block_2 run execute unless block ~ ~-1 ~ sm:purchase_block_4 run execute unless block ~ ~-1 ~ sm:purchase_block_3 run clear @s sm:purchase
+execute as @a[tag=!enter_marque] run execute positioned as @s run execute if block ~ ~-1 ~ sm:settings_block run replaceitem entity @s slot.hotbar 4 sm:settings 1 0 {"minecraft:item_lock":{"mode":"lock_in_slot"}}
+execute as @a[tag=!enter_marque] run execute positioned as @s run execute if block ~ ~-1 ~ sm:settings_block_2 run replaceitem entity @s slot.hotbar 4 sm:settings 1 0 {"minecraft:item_lock":{"mode":"lock_in_slot"}}
+execute as @a[tag=!enter_marque] run execute positioned as @s run execute unless block ~ ~-1 ~ sm:settings_block run execute unless block ~ ~-1 ~ sm:settings_block_2 run clear @s sm:settings
+execute as @a[tag=!enter_marque] run execute positioned as @s run execute if block ~ ~-1 ~ sm:purchase_block run replaceitem entity @s slot.hotbar 4 sm:purchase 1 0 {"minecraft:item_lock":{"mode":"lock_in_slot"}}
+execute as @a[tag=!enter_marque] run execute positioned as @s run execute if block ~ ~-1 ~ sm:purchase_block_2 run replaceitem entity @s slot.hotbar 4 sm:purchase 1 0 {"minecraft:item_lock":{"mode":"lock_in_slot"}}
+execute as @a[tag=!enter_marque] run execute positioned as @s run execute if block ~ ~-1 ~ sm:purchase_block_3 run replaceitem entity @s slot.hotbar 4 sm:purchase 1 0 {"minecraft:item_lock":{"mode":"lock_in_slot"}}
+execute as @a[tag=!enter_marque] run execute positioned as @s run execute if block ~ ~-1 ~ sm:purchase_block_4 run replaceitem entity @s slot.hotbar 4 sm:purchase 1 0 {"minecraft:item_lock":{"mode":"lock_in_slot"}}
 
+execute as @a[tag=!enter_marque] run execute positioned as @s run execute if block ~ ~-1 ~ sm:gamble_1 run replaceitem entity @s slot.hotbar 4 sm:gamble 1 0 {"minecraft:item_lock":{"mode":"lock_in_slot"}}
+execute as @a[tag=!enter_marque] run execute positioned as @s run execute if block ~ ~-1 ~ sm:gamble_2 run replaceitem entity @s slot.hotbar 4 sm:gamble 1 0 {"minecraft:item_lock":{"mode":"lock_in_slot"}}
+execute as @a[tag=!enter_marque] run execute positioned as @s run execute if block ~ ~-1 ~ sm:gamble_3 run replaceitem entity @s slot.hotbar 4 sm:gamble 1 0 {"minecraft:item_lock":{"mode":"lock_in_slot"}}
+execute as @a[tag=!enter_marque] run execute positioned as @s run execute if block ~ ~-1 ~ sm:gamble_4 run replaceitem entity @s slot.hotbar 4 sm:gamble 1 0 {"minecraft:item_lock":{"mode":"lock_in_slot"}}
+execute as @a[tag=!enter_marque] run execute positioned as @s run execute unless block ~ ~-1 ~ sm:gamble_1 run execute unless block ~ ~-1 ~ sm:gamble_2 run execute unless block ~ ~-1 ~ sm:gamble_3 run execute unless block ~ ~-1 ~ sm:gamble_4 run clear @s sm:gamble
+
+execute as @a[tag=!enter_marque] run execute positioned as @s run execute if block ~ ~-1 ~ sm:token_redeem_block run replaceitem entity @s slot.hotbar 4 sm:token_redeem 1 0 {"minecraft:item_lock":{"mode":"lock_in_slot"}}
+
+execute as @a[tag=!enter_marque] run execute positioned as @s run execute unless block ~ ~-1 ~ sm:token_redeem_block run clear @s sm:token_redeem
+
+execute as @a[tag=!enter_marque] run execute positioned as @s run execute unless block ~ ~-1 ~ sm:purchase_block run execute unless block ~ ~-1 ~ sm:purchase_block_2 run execute unless block ~ ~-1 ~ sm:purchase_block_4 run execute unless block ~ ~-1 ~ sm:purchase_block_3 run clear @s sm:purchase
+execute as @a[tag=enter_marque] run execute positioned as @s run execute if block ~ ~-1 ~ sm:purchase_block run tag @s add purchase_marque
+execute as @a[tag=enter_marque] run execute positioned as @s run execute unless block ~ ~-1 ~ sm:purchase_block run tag @s remove purchase_marque
+execute as @a[tag=enter_marque] run execute positioned as @s run execute if block ~ ~-1 ~ sm:settings_block run tag @s add settings_marque
+execute as @a[tag=enter_marque] run execute positioned as @s run execute unless block ~ ~-1 ~ sm:settings_block run tag @s remove settings_marque
+execute as @a[tag=enter_marque] run execute positioned as @s run execute unless block ~ ~-1 ~ sm:purchase_block run tag @s remove in_menu2
+execute as @a[tag=enter_marque] run execute positioned as @s run execute unless block ~ ~-1 ~ sm:settings_block run tag @s remove in_menu
 execute as @a run execute positioned as @s run execute if block ~ ~-1 ~ sm:bank_block_2 run replaceitem entity @s slot.hotbar 4 sm:bank 1 0 {"minecraft:item_lock":{"mode":"lock_in_slot"}}
 execute as @a run execute positioned as @s run execute unless block ~ ~-1 ~ sm:bank_block_2 run clear @s sm:bank
  
@@ -84,11 +114,10 @@ scoreboard players add @a selected_effect 0
 
 function open_dialogues
  
-function titleMessageCmds
  
 ## re-enable eventually function song_select_particles
  
-execute as @a[m=!c] run /execute if score @s dashes < minimum_dash_requirement minimum_dash_requirement run ability @s mayfly false
+##execute as @a[m=!c] run /execute if score @s dashes < minimum_dash_requirement minimum_dash_requirement run ability @s mayfly false
  
 execute as @a run execute as @s positioned as @s run execute unless block ~ ~-0.5 ~ air run tag @s add grounded
 execute as @a run execute as @s positioned as @s run execute if block ~ ~-0.5 ~ air run tag @s remove grounded
@@ -106,7 +135,7 @@ function autoride_minecart
 execute as @a run execute if score @s dashes >= minimum_dash_requirement minimum_dash_requirement run tag @s add can_dash
 execute as @a run execute if score @s dashes < minimum_dash_requirement minimum_dash_requirement run tag @s remove can_dash
  
-execute if score max_dashes max_dashes matches 0 run ability @a[m=!c] mayfly false
+##execute if score max_dashes max_dashes matches 0 run ability @a[m=!c] mayfly false
 execute as @a[tag=ingame] run /execute if score @s dashes >= minimum_dash_requirement minimum_dash_requirement run /execute as @a run /function debug_resetflight
 execute as @a[tag=tutorialwall] run /execute if score @s dashes >= minimum_dash_requirement minimum_dash_requirement run /execute as @a run /function debug_resetflight
 execute as @a[tag=tutorial] run /execute if score @s dashes >= minimum_dash_requirement minimum_dash_requirement run /execute as @a run /function debug_resetflight
@@ -185,7 +214,6 @@ execute as @a run execute positioned as @s run execute as @s positioned ~ ~1.7 ~
 
 execute as @a run execute positioned as @s run execute as @s positioned ~ ~1.7 ~ run execute positioned ^ ^ ^4 run execute unless entity @e[r=6,tag=projectile] run tag @s remove parry_capable
  
-function ___custom_menu_ticks
 function closed_store_commands
 function zoom_zoom_race_ticks
  

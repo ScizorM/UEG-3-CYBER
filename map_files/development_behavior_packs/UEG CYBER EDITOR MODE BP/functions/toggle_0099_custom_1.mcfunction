@@ -1,6 +1,0 @@
-execute if score 0099_custom_1 enabled_arenas matches 0..1 run scoreboard players add 0099_custom_1 enabled_arenas 1
-execute if score 0099_custom_1 enabled_arenas matches 2 run scoreboard players set 0099_custom_1 enabled_arenas 0
-execute if score 0099_custom_1 enabled_arenas matches 0 run function arena_toggles/off_general_settings
-execute if score 0099_custom_1 enabled_arenas matches 1 run function arena_toggles/on_general_settings
-execute if score 0099_custom_1 enabled_arenas matches 1 run tellraw @a {"rawtext": [{"text": "§e§l-----[Arena Toggles]-----\n§r§7> [EDITOR BAY ARENA SYSTEM] Custom Arena Slot 1 §eEnabled.§e\n§c> File can be edited in functions/toggle_0099_custom_1.mcfunction of the UEG CYBER EDITOR MODE Behavior Pack folder\n§e§l-----------------------"}]}
-execute if score 0099_custom_1 enabled_arenas matches 0 run tellraw @a {"rawtext": [{"text": "§e§l-----[Arena Toggles]-----\n§r§7> [EDITOR BAY ARENA SYSTEM] Custom Arena Slot 1 §eDisabled.§e\n§c> File can be edited in functions/toggle_0099_custom_1.mcfunction of the UEG CYBER EDITOR MODE Behavior Pack folder\n§e§l-----------------------"}]}

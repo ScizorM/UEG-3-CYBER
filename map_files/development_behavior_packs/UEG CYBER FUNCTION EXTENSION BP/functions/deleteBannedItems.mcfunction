@@ -33,7 +33,7 @@ execute if score vulcan_cannon bannedItems matches 1 run clear @a sm:loadout_can
 ####################
  
 execute if score og_cannon bannedItems matches 1 run clear @a bow
-execute if score crossbow bannedItems matches 1 run clear @a sm:loadout_gaugegun
+execute if score og_cannon bannedItems matches 1 run clear @a sm:loadout_gaugegun
  
 execute if score crossbow bannedItems matches 1 run clear @a crossbow
 execute if score crossbow bannedItems matches 1 run clear @a sm:loadout_v_cannonv
@@ -90,5 +90,18 @@ execute if score sc_quant_e bannedItems matches 1 run clear @a sm:loadout_sc_qua
  
 execute if score salmon_bomb bannedItems matches 1 run clear @a sm:salmon_bomb
 execute if score salmon_bomb bannedItems matches 1 run clear @a sm:loadout_salmon_bomb
+
+execute if score deep_striker bannedItems matches 1 run clear @a sm:deep_striker
+execute if score deep_striker bannedItems matches 1 run clear @a sm:loadout_deep_striker
+
+execute if score scaler_bomb bannedItems matches 1 run clear @a sm:scaler_bomb
+execute if score scaler_bomb bannedItems matches 1 run clear @a sm:loadout_scaler_bomb
+
+execute if score implosion_grenade bannedItems matches 1 run clear @a sm:implosion_grenade
+execute if score implosion_grenade bannedItems matches 1 run clear @a sm:loadout_implosion_grenade
+
+execute if score green bannedItems matches 1 run clear @a sm:green_gobbler_cannon
+execute if score green bannedItems matches 1 run clear @a sm:loadout_green_gobbler_cannon
+
 execute if score bans_enabled bans_enabled matches 0 run execute as @e[tag=banned] run execute positioned as @s run particle sm:banneditem ^.5 ^.5 ^
 execute if score bans_enabled bans_enabled matches 1 run execute as @e[tag=banned] run execute positioned as @s run particle sm:perma_banneditem ^.5 ^.5 ^

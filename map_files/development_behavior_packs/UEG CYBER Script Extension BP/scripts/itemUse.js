@@ -1,19 +1,20 @@
 ﻿import { world, ItemCooldownComponent, system, Entity, EntityComponentTypes } from '@minecraft/server'
 import { ActionFormData, MessageFormData, ModalFormData } from '@minecraft/server-ui'
-import { weaponIDList, ingameWeaponIDList, ingameWeaponNames } from './loadoutList.js'
-
+import { weaponIDList, ingameWeaponIDList, loadoutTypeIDs, loadoutTypeIDLocs, loadoutIcons, loadoutNames, ingameWeaponNames } from './loadoutList.js'
+import { itemNameList, itemIconLocation, itemScoreboard, itemDescList } from './foodList.js'
 
 
 world.beforeEvents.worldInitialize.subscribe((initEvent) => {
     const dimension = world.getDimension("overworld")
     var selectedLoadoutSlot = 0;
+    var lobbyMenuState = 0;
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// weapons
 
     initEvent.itemComponentRegistry.registerCustomComponent("custom:item", {
         onUse(event) {
             const { itemStack, source } = event;
 
-            //code obtained from Minato from the Bedrock Addons Discord, I hate mojang so much for removing holiday creator features and ruining so much for me
+            //code obtained from Minato from the Bedrock Addons Discord, I hate mojang so much for removing holiday creator features and ruining everything
             const dimension = world.getDimension("overworld")
             const viewDir = source.getViewDirection()
             const vulcanBlast = source.dimension.spawnEntity("minecraft:arrow", source.getHeadLocation());
@@ -30,6 +31,191 @@ world.beforeEvents.worldInitialize.subscribe((initEvent) => {
             source.runCommand("function vulcan_extendedcmds")
         }
     });
+    initEvent.itemComponentRegistry.registerCustomComponent("sm:marksman", {
+        onUse(event) {
+            var randomNumber = Math.floor(Math.random() * 10)
+            world.sendMessage(randomNumber.toString())
+
+            const { itemStack, source } = event;
+            const dimension = world.getDimension("overworld")
+            const viewDir = source.getViewDirection()
+
+            var entityType;
+            var otherAttack = "none"
+
+            switch (randomNumber) {
+                case 0:
+                    entityType = "minecraft:arrow"
+                    break;
+                case 1:
+                    entityType = "minecraft:snowball"
+                    break;
+                case 2:
+                    entityType = "minecraft:egg<sm:add_normal>"
+                    otherAttack = "implosion"
+                    break;
+                case 3:
+                    entityType = "none"
+                    otherAttack = "charged_bolt"
+                    break;
+                case 4:
+                    entityType = "minecraft:egg<sm:add_icarus>"
+                    otherAttack = "icarus"
+                    break;
+                case 5:
+                    entityType = "minecraft:egg<sm:add_normal>"
+                    otherAttack = "fish"
+                    break;
+                case 6:
+                    entityType = "none"
+                    otherAttack = "deep_striker"
+                    break;
+                case 7:
+                    entityType = "none"
+                    otherAttack = "levitation"
+                    break;
+                case 8:
+                    entityType = "none"
+                    otherAttack = "emp"
+                    break;
+                case 9:
+                    entityType = "none"
+                    otherAttack = "misfire"
+                    break;
+            }
+
+            //code obtained from Minato from the Bedrock Addons Discord, I hate mojang so much for removing holiday creator features and ruining everything
+
+            if (entityType != "none") {
+                const vulcanBlast = source.dimension.spawnEntity(entityType, source.getHeadLocation());
+                const projectile = vulcanBlast.getComponent("projectile");
+                if (otherAttack == "implosion") {
+                    vulcanBlast.addTag("implosion")
+                }
+                else if (otherAttack == "icarus") {
+                    vulcanBlast.addTag("icarus")
+                }
+                else if (otherAttack == "fish") {
+                    vulcanBlast.addTag("fish")
+                }
+                projectile.owner = source;
+                const power = 1
+                const powerV3 = {
+                    x: source.getViewDirection().x * power,
+                    y: source.getViewDirection().y * power,
+                    z: source.getViewDirection().z * power
+                }
+                projectile.shoot(powerV3)
+                source.runCommand("function vulcan")
+                source.runCommand("function vulcan_extendedcmds")
+            }
+            else if (otherAttack == "charged_bolt") {
+                source.runCommand("function summon_laser")
+                source.runCommand("function vulcan_extendedcmds")
+            }
+            else if (otherAttack == "deep_striker") {
+                var entityRay = false
+                const dimension = world.getDimension("overworld")
+
+                const { itemStack, source } = event;
+
+                var missileCountSB = world.scoreboard.getObjective("missile_fires")
+                var missileCountPlayer = missileCountSB.getScore(source)
+
+                var rayLocation = { x: source.location.x, y: source.location.y + 1.5, z: source.location.z }
+                var lookDir = { x: source.getViewDirection().x, y: source.getViewDirection().y, z: source.getViewDirection().z }
+                var blockRC = source.dimension.getBlockFromRay(rayLocation, lookDir, { includeLiquidBlocks: false, includePassableBlocks: false })
+                var entityRC = source.getEntitiesFromViewDirection()
+
+
+
+
+                var particleType = "sm:crimson_hexa"
+                var particleWarningType = "sm:big_joe_warning"
+
+                entityRC.forEach((hit) => {
+
+                    source.setProperty("sm:deepstriker_anim", 1)
+
+                    var hitEntity = hit.entity
+
+                    var rayDisplacement = { x: source.location.x - hitEntity.location.x, y: source.location.y - hitEntity.location.y + .4, z: source.location.z - hitEntity.location.z }
+                    var totalDisplacement = Math.abs(rayDisplacement.x) + Math.abs(rayDisplacement.y) + Math.abs(rayDisplacement.z)
+                    var loopTimes = 50
+                    for (let i = 1; i < loopTimes; i = i + .25) {
+                        var particleLocation = {
+                            x: hitEntity.location.x + (rayDisplacement.x / i),
+                            y: hitEntity.location.y + (rayDisplacement.y / i) + 1,
+                            z: hitEntity.location.z + (rayDisplacement.z / i)
+                        }
+                        source.runCommand(`particle ${particleType} ${particleLocation.x} ${particleLocation.y} ${particleLocation.z}`)
+
+                        if (i >= loopTimes) {
+                            break;
+                        }
+                    }
+
+
+
+                    hitEntity.applyKnockback(source.getViewDirection().x, source.getViewDirection().z, 4, 1)
+                    hitEntity.runCommand(`execute positioned ${hitEntity.location.x} ${hitEntity.location.y} ${hitEntity.location.z} run /function explosion_crimson_weak`)
+                    hitEntity.runCommand(`execute positioned ${hitEntity.location.x} ${hitEntity.location.y} ${hitEntity.location.z} run /summon sm:explosion_crimson`)
+                    entityRay = true
+                })
+
+                if (entityRay) {
+
+                }
+                else {
+                    source.setProperty("sm:deepstriker_anim", 1)
+                    var rayDisplacementBlock = { x: source.location.x - blockRC.block.location.x, y: source.location.y - blockRC.block.location.y + .4, z: source.location.z - blockRC.block.location.z }
+
+
+
+
+
+                    if (missileCountPlayer < 5) {
+                        missileCountSB.addScore(source, 1)
+                        source.runCommand(`execute positioned ${blockRC.block.location.x} ${blockRC.block.location.y} ${blockRC.block.location.z} run /function explosion_crimson_weak`)
+                        source.runCommand(`execute positioned ${blockRC.block.location.x} ${blockRC.block.location.y} ${blockRC.block.location.z} run /summon sm:explosion_crimson`)
+                        var totalDisplacement = Math.abs(rayDisplacementBlock.x) + Math.abs(rayDisplacementBlock.y) + Math.abs(rayDisplacementBlock.z)
+
+                        var loopTimes = 50
+
+                        for (let i = 1; i < loopTimes; i = i + .25) {
+                            var particleLocation = {
+                                x: blockRC.block.location.x + (rayDisplacementBlock.x / i),
+                                y: blockRC.block.location.y + (rayDisplacementBlock.y / i) + 0.5,
+                                z: blockRC.block.location.z + (rayDisplacementBlock.z / i)
+                            }
+
+                            source.runCommand(`particle ${particleType} ${particleLocation.x} ${particleLocation.y} ${particleLocation.z}`)
+
+                            if (i >= loopTimes) {
+                                break;
+                            }
+                        }
+                    }
+                    else {
+                        source.runCommand(`execute positioned ${blockRC.block.location.x} ${blockRC.block.location.y + 2} ${blockRC.block.location.z} run function explosion_crimson`)
+                        missileCountSB.setScore(source, 0)
+                    }
+                }
+            }
+            else if (otherAttack == "levitation") {
+                source.runCommand("function antigrav_prism")
+            }
+            else if (otherAttack == "emp") {
+                source.runCommand("execute positioned ~ ~1 ~ run function emp")
+            }
+            else if (otherAttack == "misfire") {
+
+            }
+            var cooldownComp1 = itemStack.getComponent(ItemCooldownComponent.componentId)
+            cooldownComp1.startCooldown(source)
+
+        }
+    });
     initEvent.itemComponentRegistry.registerCustomComponent("sm:loadout_1", {
         onUse(event) {
             const { itemStack, source } = event;
@@ -38,6 +224,34 @@ world.beforeEvents.worldInitialize.subscribe((initEvent) => {
             cooldownComp1.startCooldown(source)
             source.playAnimation("animation.player.swing")
             system.run(() => loadoutSelectUI(source, selectedLoadoutSlot))
+        }
+    });
+    initEvent.itemComponentRegistry.registerCustomComponent("sm:lobby_menu", {
+        onUse(event) {
+            const { itemStack, source } = event;
+            var cooldownComp1 = itemStack.getComponent(ItemCooldownComponent.componentId)
+            cooldownComp1.startCooldown(source)
+            source.playAnimation("animation.player.swing")
+            source.addTag("lobby_menu_open")
+
+        }
+    });
+    initEvent.itemComponentRegistry.registerCustomComponent("sm:assign_item", {
+        onUse(event) {
+            const { itemStack, source } = event;
+            var cooldownComp1 = itemStack.getComponent(ItemCooldownComponent.componentId)
+            cooldownComp1.startCooldown(source)
+            source.playAnimation("animation.player.swing")
+            source.addTag("assign_food_items")
+
+        }
+    });
+    initEvent.itemComponentRegistry.registerCustomComponent("sm:loadout_select", {
+        onUse(event) {
+            const { itemStack, source } = event;
+            var cooldownComp1 = itemStack.getComponent(ItemCooldownComponent.componentId)
+            cooldownComp1.startCooldown(source)
+            LoadoutDecide(source)
         }
     });
     initEvent.itemComponentRegistry.registerCustomComponent("sm:loadout_2", {
@@ -58,6 +272,59 @@ world.beforeEvents.worldInitialize.subscribe((initEvent) => {
             cooldownComp1.startCooldown(source)
             source.playAnimation("animation.player.swing")
             system.run(() => loadoutSelectUI(source, selectedLoadoutSlot))
+        }
+    });
+    initEvent.itemComponentRegistry.registerCustomComponent("sm:use_stored_item", {
+        onUse(event) {
+            const { itemStack, source } = event;
+            var player = source
+            var cooldownComp1 = itemStack.getComponent(ItemCooldownComponent.componentId)
+            cooldownComp1.startCooldown(source)
+            source.playAnimation("animation.player.swing")
+            var assignedItemSB = world.scoreboard.getObjective("assigned_food")
+            var assignedItemSBPlayer = assignedItemSB.getScore(player)
+
+
+            if (assignedItemSBPlayer != undefined) {
+                var itemCountSB = world.scoreboard.getObjective(itemScoreboard[assignedItemSBPlayer])
+                itemCountSB.addScore(player, -1)
+                var itemCount = itemCountSB.getScore(player)
+
+                if (assignedItemSBPlayer == 0) { //Gob Dog
+                    player.addTag("gob_effects")
+                    player.runCommand("scoreboard players set @s food_effect_timer 100")
+                    player.runCommand("effect @s jump_boost 5 8")
+                    player.runCommand("effect @s nausea 10 8")
+                }
+                else if (assignedItemSBPlayer == 1) { //Gob Fries
+                    player.addTag("gob_effects")
+                    player.runCommand("scoreboard players set @s food_effect_timer 100")
+                    player.runCommand("effect @s speed 5 8")
+                    player.runCommand("effect @s nausea 10 8")
+                }
+                else if (assignedItemSBPlayer == 2) { //Freedom Burger
+                    player.runCommand("scoreboard players set @s food_effect_uses 3")
+                }
+                else if (assignedItemSBPlayer == 3) { //Hog Ramen
+                    player.runCommand("scoreboard players set @s food_effect_uses 3")
+                }
+
+                if (itemCount == 0) {
+                    player.sendMessage(`§e[Utility Lunchbox]§d Used ${itemNameList[assignedItemSBPlayer]}. ${itemCount} remaining.\n§cOut of items!`)
+                    player.runCommand(`scoreboard players reset @s assigned_food`)
+                    player.runCommand(`scoreboard players reset @s ${itemScoreboard[assignedItemSBPlayer]}`)
+                } 
+                else {
+                    player.sendMessage(`§e[Utility Lunchbox]§d Used ${itemNameList[assignedItemSBPlayer]}. ${itemCount} remaining.`)
+                }
+
+
+
+
+            }
+            else {
+                player.sendMessage("§e[Utility Lunchbox]§c You have no item linked to the lunchbox.")
+            }
         }
     });
     initEvent.itemComponentRegistry.registerCustomComponent("sm:skip_cutscene", {
@@ -100,8 +367,102 @@ world.beforeEvents.worldInitialize.subscribe((initEvent) => {
             hitEntity.applyKnockback(attackingEntity.getViewDirection().x, attackingEntity.getViewDirection().z, 2, -1)
             hitEntity.runCommand(`particle sm:gobbler_hit ${hitEntity.location.x} ${hitEntity.location.y + 1} ${hitEntity.location.z}`)
             hitEntity.runCommand(`effect @s nausea 10 2 true`)
-            hitEntity.playSound("cannon_bludgeon")
+            if (hitEntity.typeId == "minecraft:player") {
+                hitEntity.playSound("cannon_bludgeon")
+            }
             attackingEntity.playSound("cannon_bludgeon")
+        }
+    });
+    initEvent.itemComponentRegistry.registerCustomComponent("sm:crappy_dodgeball", {
+        onHitEntity(event) {
+            const { itemStack, attackingEntity, hitEntity } = event;
+            hitEntity.applyKnockback(attackingEntity.getViewDirection().x, attackingEntity.getViewDirection().z, 10, 5)
+            hitEntity.runCommand(`particle sm:you_play_too_much ${hitEntity.location.x} ${hitEntity.location.y + 1} ${hitEntity.location.z}`)
+            hitEntity.runCommand(`effect @s nausea 10 2 true`)
+            if (hitEntity.typeId == "minecraft:player") {
+                hitEntity.playSound("cannon_bludgeon")
+            }
+            attackingEntity.playSound("cannon_bludgeon")
+        },
+        onUse(event) {
+            const { itemStack, source } = event;
+            var entityRC = source.getEntitiesFromViewDirection()
+
+
+
+
+
+            entityRC.forEach((hit) => {
+
+
+                var hitEntity = hit.entity
+
+                var rayDisplacement = { x: source.location.x - hitEntity.location.x, y: source.location.y - hitEntity.location.y + .4, z: source.location.z - hitEntity.location.z }
+                var totalDisplacement = Math.abs(rayDisplacement.x) + Math.abs(rayDisplacement.y) + Math.abs(rayDisplacement.z)
+
+
+
+                hitEntity.runCommand(`execute positioned ${hitEntity.location.x} ${hitEntity.location.y} ${hitEntity.location.z} run particle sm:you_play_too_much ~ ~1 ~`)
+                hitEntity.applyKnockback(source.getViewDirection().x, source.getViewDirection().z, 10, 5)
+                source.runCommand("/clear @s sm:crappy_dodgeball 0 1")
+            })
+        }
+    });
+    initEvent.itemComponentRegistry.registerCustomComponent("sm:kusarigama", {
+        onHitEntity(event) {
+            const { itemStack, attackingEntity, hitEntity } = event;
+            var yDisplacement = attackingEntity.location.y - hitEntity.location.y
+            hitEntity.applyKnockback(attackingEntity.getViewDirection().x, attackingEntity.getViewDirection().z, -2, Math.min(Math.max(yDisplacement, -1), 1))
+            hitEntity.runCommand(`particle sm:gobbler_hit ${hitEntity.location.x} ${hitEntity.location.y + 1} ${hitEntity.location.z}`)
+            if (hitEntity.typeId == "minecraft:player") {
+                hitEntity.playSound("cannon_bludgeon")
+            }
+
+            attackingEntity.playSound("cannon_bludgeon")
+        },
+        onUse(event) {
+            var entityRay = false
+            const dimension = world.getDimension("overworld")
+
+            const { itemStack, source } = event;
+
+            var rayLocation = { x: source.location.x, y: source.location.y + 1.5, z: source.location.z }
+            var lookDir = { x: source.getViewDirection().x, y: source.getViewDirection().y, z: source.getViewDirection().z }
+            var entityRC = source.getEntitiesFromViewDirection()
+            var blockRC = source.dimension.getBlockFromRay(rayLocation, lookDir, { includeLiquidBlocks: false, includePassableBlocks: false, maxDistance: 25 })
+
+
+
+
+            var particleType = "sm:striker_sparkle"
+
+
+            if (blockRC != undefined) {
+                source.setProperty("sm:deepstriker_anim", 1)
+                var rayDisplacementBlock = { x: source.location.x - blockRC.block.location.x, y: source.location.y - blockRC.block.location.y + .4, z: source.location.z - blockRC.block.location.z }
+
+                source.runCommand(`execute positioned ${blockRC.block.location.x} ${blockRC.block.location.y} ${blockRC.block.location.z} run tp @e[r=3] ${source.location.x} ${source.location.y} ${source.location.z}`)
+                
+
+                var totalDisplacement = Math.abs(rayDisplacementBlock.x) + Math.abs(rayDisplacementBlock.y) + Math.abs(rayDisplacementBlock.z)
+
+                var loopTimes = 50
+
+                for (let i = 1; i < loopTimes; i = i + .25) {
+                    var particleLocation = {
+                        x: blockRC.block.location.x + (rayDisplacementBlock.x / i),
+                        y: blockRC.block.location.y + (rayDisplacementBlock.y / i) + 0.5,
+                        z: blockRC.block.location.z + (rayDisplacementBlock.z / i)
+                    }
+
+                    source.runCommand(`particle ${particleType} ${particleLocation.x} ${particleLocation.y} ${particleLocation.z}`)
+
+                    if (i >= loopTimes) {
+                        break;
+                    }
+                }
+            }
+
         }
     });
     initEvent.itemComponentRegistry.registerCustomComponent("sm:repulsion_blade", {
@@ -300,6 +661,13 @@ world.beforeEvents.worldInitialize.subscribe((initEvent) => {
             const { itemStack, source } = event;
             source.playAnimation("animation.player.swing")
             source.runCommand("summon sm:landmine_ver_lambda")
+        }
+    });
+    initEvent.itemComponentRegistry.registerCustomComponent("sm:teamless_landmine", {
+        onUse(event) {
+            const { itemStack, source } = event;
+            source.playAnimation("animation.player.swing")
+            source.runCommand("summon sm:teamless_landmine")
         }
     });
     initEvent.itemComponentRegistry.registerCustomComponent("sm:landminenu", {
@@ -604,8 +972,8 @@ world.beforeEvents.worldInitialize.subscribe((initEvent) => {
     });
 });
 
-function loadoutSelectUI(source, selectedLoadoutSlot) {
-
+function loadoutSelectUI(source, selectedLoadoutSlot, buttonNames) {
+    selectedLoadoutSlot += 1
     let form = new MessageFormData();
     var loadoutNumber = "function select_loadout_" + selectedLoadoutSlot.toString()
     var itemSlots = new Array("", "")
@@ -629,7 +997,7 @@ function loadoutSelectUI(source, selectedLoadoutSlot) {
         var loadoutSBPlayer = loadoutSB.getScore(source)
         itemSlots[i - 1] = `§eSlot ${i}:§r ` + ingameWeaponNames[loadoutSBPlayer]
     }
-    var itemList = `Loadout ${selectedLoadoutSlot}:\n`
+    var itemList = `Slot ${selectedLoadoutSlot}: ${buttonNames[selectedLoadoutSlot - 1]}\n`
     itemSlots.forEach(string => {
         if (string != undefined) {
             itemList = `${itemList}\n${string}\n`
@@ -638,7 +1006,7 @@ function loadoutSelectUI(source, selectedLoadoutSlot) {
             itemList = `${itemList}\n"§cUnsupported Item§r"`
         }
     })
-    form.title(`Loadout ${selectedLoadoutSlot}§r`);
+    form.title(`Slot ${selectedLoadoutSlot}: ${buttonNames[selectedLoadoutSlot - 1]}§r`);
     form.body(itemList);
     form.button1("Cancel");
     form.button2("Select");
@@ -646,10 +1014,69 @@ function loadoutSelectUI(source, selectedLoadoutSlot) {
         var response = r.selection
         if (response == 1) {
             source.runCommand(loadoutNumber)
+            source.sendMessage(`§e[Loadouts] §aSelected slot ${selectedLoadoutSlot}.`)
         }
         else {
             
         }
     })
 
+}
+
+
+
+
+
+
+
+function LoadoutDecide(player) {
+
+    var nickNameSB1 = world.scoreboard.getObjective("loadout1Nick")
+    var nickNameSB2 = world.scoreboard.getObjective("loadout2Nick")
+    var nickNameSB3 = world.scoreboard.getObjective("loadout3Nick")
+    var playerNickName1 = nickNameSB1.getScore(player)
+    var playerNickName2 = nickNameSB2.getScore(player)
+    var playerNickName3 = nickNameSB3.getScore(player)
+    var iconSB1 = world.scoreboard.getObjective("loadout1Icon")
+    var iconSB2 = world.scoreboard.getObjective("loadout2Icon")
+    var iconSB3 = world.scoreboard.getObjective("loadout3Icon")
+    var playerIcon1 = iconSB1.getScore(player)
+    var playerIcon2 = iconSB2.getScore(player)
+    var playerIcon3 = iconSB3.getScore(player)
+
+    var loadoutTypes = new Array(playerIcon1, playerIcon2, playerIcon3)
+    var loadoutNamesInit = loadoutNames
+    loadoutNamesInit[0] = "Custom"
+
+    const mainTitle = "Select Loadout"
+    const mainDesc = "Select an option:\n\n"
+
+    const buttonNames = new Array(loadoutNamesInit[playerNickName1], loadoutNamesInit[playerNickName2], loadoutNamesInit[playerNickName3])
+    const buttonIconLoc = new Array(loadoutTypeIDLocs[loadoutTypes[0]], loadoutTypeIDLocs[loadoutTypes[1]], loadoutTypeIDLocs[loadoutTypes[2]])
+
+    let form = new ActionFormData();
+    form.title(mainTitle);
+    form.body(mainDesc);
+    form.button("Slot 1: " + buttonNames[0], buttonIconLoc[0])
+    form.button("Slot 2: " + buttonNames[1], buttonIconLoc[1])
+    form.button("Slot 3: " + buttonNames[2], buttonIconLoc[2])
+    form.button("Cancel", "textures/ui/button_close");
+
+    form.show(player).then(r => {
+
+        let responseValue = r.selection
+
+        if (responseValue == 0) {
+            
+            loadoutSelectUI(player, responseValue, buttonNames)
+        }
+        if (responseValue == 1) {
+            
+            loadoutSelectUI(player, responseValue, buttonNames)
+        }
+        if (responseValue == 2) {
+            loadoutSelectUI(player, responseValue, buttonNames)
+        }
+
+    })
 }

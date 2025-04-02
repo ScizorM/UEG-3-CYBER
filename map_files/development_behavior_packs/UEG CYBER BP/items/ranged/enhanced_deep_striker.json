@@ -1,0 +1,24 @@
+//bridge-file-version: #20
+{
+	"format_version": "1.21.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "sm:enhanced_deep_striker"
+		},
+		"components": {
+			"minecraft:icon": "sm:deep_striker",
+			"minecraft:hand_equipped": true,
+			"minecraft:display_name": {
+				"value": "§e[Enhanced]§r The Deep Striker\n\n§eReduced Cooldown"
+			},
+			"minecraft:custom_components": [
+				"sm:deep_striker"
+			],
+			"minecraft:cooldown": {
+				"category": "deep_striker",
+				"duration": 2
+			},
+			"minecraft:max_stack_size": 1
+		}
+	}
+}

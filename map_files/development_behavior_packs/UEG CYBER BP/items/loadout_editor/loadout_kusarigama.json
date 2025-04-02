@@ -1,0 +1,16 @@
+//bridge-file-version: #12
+{
+	"format_version": "1.21.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "sm:loadout_kusarigama"
+		},
+		"components": {
+			"minecraft:display_name": {
+				"value": "§cPlaceholder §fKusarigama\n/\n§d Pulls hit entities towards you\n§9 Tosses a chain that hits a block and drags every nearby entity to you"
+			},
+			"minecraft:icon": "sm:kusarigama",
+			"minecraft:hand_equipped": true
+		}
+	}
+}

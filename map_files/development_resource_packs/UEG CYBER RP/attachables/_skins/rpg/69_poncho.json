@@ -1,0 +1,42 @@
+//bridge-file-version: #18
+{
+	"format_version": "1.16.100",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "sm:skin_69",
+			"materials": {
+				"default": "guardian"
+			},
+			"textures": {
+				"default": "textures/entity/skins/poncho",
+				"frame_2": "textures/entity/skins/poncho",
+				"frame_3": "textures/entity/skins/poncho",
+				"frame_4": "textures/entity/skins/poncho",
+				"frame_5": "textures/entity/skins/poncho",
+				"frame_6": "textures/entity/skins/poncho",
+				"frame_7": "textures/entity/skins/poncho",
+				"frame_8": "textures/entity/skins/poncho",
+				"dash1": "textures/entity/skins/poncho",
+				"dash2": "textures/entity/skins/poncho",
+				"dash3": "textures/entity/skins/poncho",
+				"dash4": "textures/entity/skins/poncho"
+			},
+			"geometry": {
+				"default": "geometry.poncho"
+			},
+			"render_controllers": [
+				"controller.render.skin_animations"
+			],
+			"animations": {
+				"idle": "animation.poncho.swing",
+				"dash": "animation.poncho.dash",
+				"controller": "controller.animation.conduit"
+			},
+			"scripts": {
+				"animate": [
+					"controller"
+				]
+			}
+		}
+	}
+}

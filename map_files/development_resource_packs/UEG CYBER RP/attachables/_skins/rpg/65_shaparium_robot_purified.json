@@ -1,0 +1,32 @@
+//bridge-file-version: #18
+{
+	"format_version": "1.16.100",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "sm:skin_65",
+			"materials": {
+				"default": "guardian"
+			},
+			"textures": {
+				"default": "textures/entity/skins/shaparium_robot_purified",
+				"frame_2": "textures/entity/skins/shaparium_robot_purified_frame2",
+				"frame_3": "textures/entity/skins/shaparium_robot_purified_frame3",
+				"frame_4": "textures/entity/skins/shaparium_robot_purified_frame4",
+				"frame_5": "textures/entity/skins/shaparium_robot_purified_frame5",
+				"frame_6": "textures/entity/skins/shaparium_robot_purified_frame6",
+				"frame_7": "textures/entity/skins/shaparium_robot_purified_frame7",
+				"frame_8": "textures/entity/skins/shaparium_robot_purified",
+				"dash1": "textures/entity/skins/shaparium_robot_purified",
+				"dash2": "textures/entity/skins/shaparium_robot_purified",
+				"dash3": "textures/entity/skins/shaparium_robot_purified",
+				"dash4": "textures/entity/skins/shaparium_robot_purified"
+			},
+			"geometry": {
+				"default": "geometry.shaparium_robot"
+			},
+			"render_controllers": [
+				"controller.render.skin_animations"
+			]
+		}
+	}
+}

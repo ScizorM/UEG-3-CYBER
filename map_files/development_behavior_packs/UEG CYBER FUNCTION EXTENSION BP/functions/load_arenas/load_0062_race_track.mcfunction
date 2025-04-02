@@ -1,5 +1,5 @@
 #bridge-file-version: #51
-tellraw @a {"rawtext": [{"text": "§e§l-----[Arena Select]-----\n\n§r§b> [UEG CYBER] Race Track Selected.§e\n> Difficulty: Hard\n> Size: Medium\n> Creator: tbd\n\n§e§l-----------------------"}]}
+tellraw @a {"rawtext": [{"text": "§e§l-----[Arena Select]-----\n\n§r§b> [UEG CYBER] Race Track Selected.§e\n> Difficulty: Normal\n> Size: Medium\n> Creator: AubreyThePebble\n\n§e§l-----------------------"}]}
 clone -242 38 -9 -242 38 -9 -161 0 229
  
 scoreboard players set selected_arena selected_arena 61

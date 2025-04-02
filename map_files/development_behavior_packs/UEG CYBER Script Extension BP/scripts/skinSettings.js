@@ -1,6 +1,6 @@
 ﻿import { world, ItemCooldownComponent, system, Entity } from '@minecraft/server'
 import { ActionFormData, MessageFormData, ModalFormData } from '@minecraft/server-ui'
-import { skinList, designerList, skinSet, skinSet_over, skinFileLoc, skinIconLoc } from './skinList.js'
+import { skinList, designerList, skinSet, skinSet_over, skinFileLoc, skinIconLoc, effectNames } from './skinList.js'
 import { clsM, bacM } from './arenaSelects.js'
 
 world.beforeEvents.itemUse.subscribe(data => {
@@ -19,11 +19,12 @@ world.beforeEvents.itemUse.subscribe(data => {
 
 function skinCategoryInit(player) {
     let form = new ActionFormData();
-    form.title("Series Select")
-    form.body("Select a Series:\n")
+    form.title("Cosmetic Menu")
+    form.body("Select an Option:\n")
     form.button("UEG CYBER Originals [2024]", "textures/ui/button_cyber");
     form.button("UEG (Legacy) [2020-22]", "textures/ui/button_ueg1");
     form.button("RPG Game Series [2020-23]", "textures/ui/button_rpg1");
+    form.button("Effect Select", "textures/ui/button_effects");
     form.button("Close", "textures/ui/button_close");
     form.show(player).then(r => {
 
@@ -45,14 +46,74 @@ function skinCategoryInit(player) {
             var selectedCPack = 18
             var skinCount = 15
             var series = 2
-            var skinIDs = new Array(58,59,60,61,62,63,64,65,66,67,68,69,70,71,72)
+            var skinIDs = new Array(58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72)
             var collection = skinSet_over[18]
             system.run(() => skinSelectUI(player, skinCount, selectedCPack, skinIDs, series, collection))
+        }
+        else if (responseVal == 3) {
+            system.run(() => effectList(player))
         }
 
     })
 }
 
+function effectList(player) {
+
+    if (player.hasTag("add_all_effects")) {
+        var indexx = 0;
+        effectNames.forEach(effect => {
+            player.addTag("unl_effect_" + indexx)
+            
+            indexx++
+        })
+        player.sendMessage("unlocked effects")
+        player.removeTag("add_all_effects")
+    }
+
+    var index = 0;
+    let form = new ActionFormData();
+    form.title("... > Effect Select")
+    form.body("Select an Effect:\n\n§cPlease Note: §rsome skins may not support dash effects as they have their own custom effect already.\n\n")
+    effectNames.forEach(buttonName => {
+
+        if (player.hasTag("unl_effect_" + index) || index == 0) {
+            form.button(buttonName, "textures/items/effects/effect_" + index.toString());
+        }
+        else {
+            form.button("LOCKED", "textures/ui/button_lock");
+        }
+
+        index++
+
+
+    })
+
+    form.button("Back", "textures/ui/button_back")
+
+    form.show(player).then(r => {
+
+        var responseVal = r.selection
+        world.sendMessage(responseVal.toString())
+
+        if (responseVal < effectNames.length - 1) {
+            if (responseVal == 0) {
+                player.runCommand(`scoreboard players set @s selected_effect ${responseVal + 1}`)
+                player.sendMessage(`§e[Effect Select] §a${effectNames[responseVal]} selected.`)
+            }
+            else if (player.hasTag("unl_effect_" + responseVal.toString())) {
+                player.runCommand(`scoreboard players set @s selected_effect ${responseVal + 1}`)
+                player.sendMessage(`§e[Effect Select] §a${effectNames[responseVal]} selected.`)
+            }
+            else {
+                system.run(() => effectList(player))
+            }
+        }
+        else {
+            system.run(() => skinCategoryInit[player])
+        }
+
+    })
+}
 function skinCategoryUEGC(player) {
 
     var selectedCPack = 0
@@ -71,17 +132,17 @@ function skinCategoryUEGC(player) {
     form.title("... > UEG CYBER Originals")
     form.body("Select a Collection:\n")//13-17 are secret, remove from list, goes up to 20 but they are legacy
     form.button(skinSet_over[1], skinFileLoc[1]);
-    form.button(skinSet_over[2], skinFileLoc[2]);
+    //form.button(skinSet_over[2], skinFileLoc[2]);
     form.button(skinSet_over[3], skinFileLoc[3]);
-    form.button(skinSet_over[4], skinFileLoc[4]);
-    form.button(skinSet_over[5], skinFileLoc[5]);
+    //form.button(skinSet_over[4], skinFileLoc[4]);
+    //form.button(skinSet_over[5], skinFileLoc[5]);
     form.button(skinSet_over[6], skinFileLoc[6]);
     form.button(skinSet_over[7], skinFileLoc[7]);
     form.button(skinSet_over[8], skinFileLoc[8]);
     form.button(skinSet_over[9], skinFileLoc[9]);
     form.button(skinSet_over[10], skinFileLoc[10]);
-    form.button(skinSet_over[11], skinFileLoc[11]);
-    form.button(skinSet_over[12], skinFileLoc[12]);
+    //form.button(skinSet_over[11], skinFileLoc[11]);
+    //form.button(skinSet_over[12], skinFileLoc[12]);
     if (player.hasTag("spack_secret_freedom")) {
         secretsUnlocked += 1
         form.button(skinSet_over[13], skinFileLoc[13]);
@@ -112,6 +173,19 @@ function skinCategoryUEGC(player) {
 
         let responseVal = r.selection
 
+
+
+        if (responseVal > 6) {
+            responseVal++
+            responseVal++
+        }
+        if (responseVal > 1) {
+            responseVal++
+            responseVal++
+        }
+        if (responseVal > 0) {
+            responseVal++
+        }
 
 
         switch (responseVal) {

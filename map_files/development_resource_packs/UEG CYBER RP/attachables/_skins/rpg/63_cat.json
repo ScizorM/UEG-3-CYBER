@@ -1,0 +1,42 @@
+//bridge-file-version: #18
+{
+	"format_version": "1.16.100",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "sm:skin_63",
+			"materials": {
+				"default": "guardian"
+			},
+			"textures": {
+				"default": "textures/entity/skins/cat",
+				"frame_2": "textures/entity/skins/cat_frame2",
+				"frame_3": "textures/entity/skins/cat_frame3",
+				"frame_4": "textures/entity/skins/cat_frame2",
+				"frame_5": "textures/entity/skins/cat",
+				"frame_6": "textures/entity/skins/cat",
+				"frame_7": "textures/entity/skins/cat",
+				"frame_8": "textures/entity/skins/cat",
+				"dash1": "textures/entity/skins/cat_dash1",
+				"dash2": "textures/entity/skins/cat_dash1",
+				"dash3": "textures/entity/skins/cat_dash2",
+				"dash4": "textures/entity/skins/cat_dash3"
+			},
+			"geometry": {
+				"default": "geometry.cat_cyberized"
+			},
+			"render_controllers": [
+				"controller.render.skin_animations"
+			],
+			"animations": {
+				"idle": "animation.cat.idle",
+				"dash": "animation.cat.fly",
+				"controller": "controller.animation.conduit"
+			},
+			"scripts": {
+				"animate": [
+					"controller"
+				]
+			}
+		}
+	}
+}

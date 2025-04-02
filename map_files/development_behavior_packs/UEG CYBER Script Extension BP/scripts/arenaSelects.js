@@ -592,11 +592,11 @@ world.beforeEvents.itemUse.subscribe(data => {
 
 
 
-    if (data.itemStack.typeId === "sm:settings" && player.hasTag("enter_splendid") == false && player.hasTag("enter_marque") == false) {
+    //if (data.itemStack.typeId === "sm:settings" && player.hasTag("enter_splendid") == false && player.hasTag("enter_marque") == false) {
 
-        system.run(() => arenaCategorySelect(player))
+    //    system.run(() => arenaCategorySelect(player))
 
-    }
+    //}
 })
 
 function enabledOrDisableEmoji(player) {

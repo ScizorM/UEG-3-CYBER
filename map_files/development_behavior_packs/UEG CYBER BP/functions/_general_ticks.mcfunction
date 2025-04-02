@@ -9,7 +9,7 @@ kill @e[type=falling_block]
  
 scoreboard players add @a[tag=tutorial] tutorial_dialogue_timer 1
  
-effect @a[tag=!ingame,tag=!tutorialwall] weakness 1 255 true
+effect @a[tag=!ingame,tag=!tutorialwall,tag=!tutorial] weakness 1 255 true
  
 ##weaponselect
  

@@ -1,109 +1,111 @@
-﻿import { world, ItemCooldownComponent, system, Entity } from '@minecraft/server'
+﻿
+import { world, ItemCooldownComponent, system, Entity } from '@minecraft/server'
 import { ActionFormData, MessageFormData, ModalFormData } from '@minecraft/server-ui'
-export { skinList, designerList, skinSet, skinSet_over, skinFileLoc, skinIconLoc, skinItemIds, effectSkins }
+export { skinList, designerList, skinSet, skinSet_over, skinFileLoc, skinIconLoc, skinItemIds, effectSkins, skinPrices, effectNames }
 
+//Common: Uncommon: Rare: Epic: Mythic: Secret: Dev:
 
 const skinList = new Array(
     // Default ////////////////////////
-    "No Skin", // 00
-    "Recruit", // 01
-    "Acid Specialist", // 02
-    "Amethyst Warrior", // 03
-    "Sound Goddess", // 04
-    "Starlight Unit", // 05
-    "Red Oni", // 06
-    "Conduit", // 07
-    "The Regulator", // 08
+    "No Skin", // 00
+    "Recruit", // 01
+    "Acid Specialist", // 02
+    "Amethyst Warrior", // 03
+    "Sound Goddess", // 04
+    "Starlight Unit", // 05
+    "Red Oni", // 06
+    "Conduit", // 07
+    "The Regulator", // 08
     "09 - Unfinished", // 09
-    "10 - Unfinished", // 10
+    "Finite", // 10
     "11 - Unfinished", // 11
     "12 - Unfinished", // 12
     // Hidden Valley ////////////////////////
-    "Mirage", // 13
-    "14 - Unfinished", // 14
-    "15 - Unfinished", // 15
+    "Mirage", // 13################################
+    "14 - Unfinished", // 14#######################
+    "15 - Unfinished", // 15############################
     // Overdrive ////////////////////////
-    "Recruit: HWS", // 16
+    "Recruit: HWS", // 16
     "Maxibooster", // 17
     "18 - Unfinished", // 18
     // Crystallized ////////////////////////
-    "19 - Unfinished", // 19
-    "20 - Unfinished", // 20
-    "21 - Unfinished", // 21
+    "19 - Unfinished", // 19###########################
+    "20 - Unfinished", // 20#########################
+    "21 - Unfinished", // 21#########################
     // Abstract ////////////////////////
-    "Supporter of Bilfred", // 22
-    "Harold", // 23
-    "24 - Unfinished", // 24
+    "Supporter of Bilfred", // 22#######################
+    "Harold", // 23##############################
+    "24 - Unfinished", // 24#########################
     // Steampunk ////////////////////////
-    "Steampunk Navigator", // 25
+    "Steampunk Navigator", // 25
     "Pale Crusader", // 26
     "27 - Unfinished", // 27
     // Brutal ////////////////////////
-    "The Iron Maiden", // 28
+    "The Iron Maiden", // 28
     "Excalibarbara", // 29
     "30 - Unfinished", // 30
     // Intergalactic ////////////////////////
-    "31 - Unfinished", // 31
+    "Devorans Spatium", // 31
     "32 - Unfinished", // 32
     "33 - Unfinished", // 33
     // Wonderland ////////////////////////
-    "Gummy Contraption", // 34
+    "Gummy Contraption", // 34
     "Ringmaster", // 35
     "Monarch of Hearts", // 36
     // Auric ////////////////////////
-    "Golden Striker", // 37
+    "Golden Striker", // 37
     "38 - Unfinished", // 38
     "39 - Unfinished", // 39
     // Seasons ////////////////////////
-    "40 - Unfinished", // 40
-    "41 - Unfinished", // 41
-    "42 - Unfinished", // 42
+    "40 - Unfinished", // 40#######################
+    "41 - Unfinished", // 41##################
+    "42 - Unfinished", // 42#####################
     // Weapons (pt.1) ////////////////////////
-    "Melee Class", // 43
-    "Ranger Class", // 44
-    "Trapper Class", // 45
+    "Melee Class", // 43#######################
+    "Ranger Class", // 44#######################
+    "Trapper Class", // 45#######################
     // Freedom -S- ////////////////////////
-    "Cheeseburger Freedom Man", // 46
-    "Cheeseburger Freedom Man's Father", // 47
-    "Cheeseburger Freedom Man's Mother", // 48
+    "Cheeseburger Freedom Man", // 46
+    "Cheeseburger Freedom Man's Father", // 47
+    "Cheeseburger Freedom Man's Mother", // 48
     // -S- ////////////////////////
-    "Baby who has an extremely cigarette-looking rocket securely strapped to its back in an unsafe manner", // 49
-    "Big Joe", // 50
-    "Gundam Astray Red Frame", // 51
+    "Baby who has an extremely cigarette-looking rocket securely strapped to its back in an unsafe manner", // 49
+    "Big Joe", // 50
+    "Gundam Astray Red Frame", // 51
     // Dev ////////////////////////
-    "ScizorM", // 52
-    "zeerye", // 53
-    "AubreyThePebble", // 54
-    "evel", // 55
+    "ScizorM", // 52
+    "zeerye", // 53
+    "AubreyThePebble", // 54
+    "evel", // 55
     // Special Thanks ////////////////////////
-    "Torimoti Armor", // 56
+    "Torimoti Armor", // 56
     // Early Supporter ////////////////////////
     "57 - Incomplete", // 57
     // RPG Game 1 ////////////////////////
-    "Robot (Cyberized)", // 58
-    "Demon (Cyberized)", // 59
-    "Spectral (Cyberized)", // 60
-    "Elf (Cyberized)", // 61
-    "Golem (Cyberized)", // 62
-    "Shaparium Robot", // 63
-    "64 - Unfinished", // 64
-    "65 - Unfinished", // 65
-    "66 - Unfinished", // 66
+    "Robot (Cyberized)", // 58
+    "Demon (Cyberized)", // 59
+    "Spectral (Cyberized)", // 60
+    "Elf (Cyberized)", // 61
+    "Golem (Cyberized)", // 62
+    "Cat (Cyberized)", // 63
+    "Shaparium Robot", // 64
+    "Shaparium Robot (Purified)", // 65
+    "The Overlord", // 66
     // RPG Game 2 ////////////////////////
-    "Shadow Elf", // 67
-    "Shadow King", // 68
-    "Poncho", // 69
-    "Mushroom Person", // 70
+    "Shadow Elf", // 67
+    "Shadow King", // 68
+    "Poncho", // 69
+    "Mushroom Person", // 70
     "Chrysan", // 71
     "Lilith", // 72
     // UEG Legacy ////////////////////////
-    "Demolitionist", // 73
-    "Demolition Knight", // 74
-    "UEG Red Recruit", // 75
+    "Demolitionist", // 73
+    "Demolition Knight", // 74
+    "UEG Red Recruit", // 75
     // Weapons pt.2 ////////////////////////
-    "Utility Class", // 76
-    "Secret Class", // 77
-    "Omni Class", // 78
+    "Utility Class", // 76#################################
+    "Secret Class", // 77####################################
+    "Omni Class", // 78###########
     // Angenicidal Pack //////////////////////
     "79 - Incomplete", // 79
     "80 - Incomplete", // 80
@@ -115,10 +117,24 @@ const effectSkins = new Array(
     4,
     7,
     8,
+    10,
     28,
-    59
+    59,
+    61,
+    63,
+    66,
+    67,
+    73
 )
 
+//Common: Uncommon: Rare: Epic: Mythic: Secret: Dev:
+
+var skinPrices = new Array(
+    10, //Uncommon
+    15, //Rare
+    25, //Epic
+    35  //Mythic
+)
 
 const incoSk = "sm:skin_incomplete"
 
@@ -135,7 +151,7 @@ const skinItemIds = new Array(
     "sm:skin_7", // 07
     "sm:skin_8", // 08
     incoSk, // 09
-    incoSk, // 10
+    "sm:skin_10", // 10
     incoSk, // 11
     incoSk, // 12
     // Hidden Valley ////////////////////////
@@ -155,7 +171,7 @@ const skinItemIds = new Array(
     incoSk, // 23
     incoSk, // 24
     // Steampunk ////////////////////////
-    incoSk, // 25
+    "sm:skin_25", // 25
     incoSk, // 26
     incoSk, // 27
     // Brutal ////////////////////////
@@ -163,7 +179,7 @@ const skinItemIds = new Array(
     incoSk, // 29
     incoSk, // 30
     // Intergalactic ////////////////////////
-    incoSk, // 31
+    "sm:skin_31", // 31
     incoSk, // 32
     incoSk, // 33
     // Wonderland ////////////////////////
@@ -183,9 +199,9 @@ const skinItemIds = new Array(
     incoSk, // 44
     incoSk, // 45
     // Freedom -S- ////////////////////////
-    incoSk, // 46
-    incoSk, // 47
-    incoSk, // 48
+    "sm:skin_46", // 46
+    "sm:skin_47", // 47
+    "sm:skin_48", // 48
     // -S- ////////////////////////
     "sm:skin_49", // 49
     incoSk, // 50
@@ -203,23 +219,23 @@ const skinItemIds = new Array(
     "sm:skin_58", // 58
     "sm:skin_59", // 59
     "sm:skin_60", // 60
-    incoSk, // 61
-    incoSk, // 62
-    incoSk, // 63
-    incoSk, // 64
-    incoSk, // 65
-    incoSk, // 66
+    "sm:skin_61", // 61
+    "sm:skin_62", // 62
+    "sm:skin_63", // 63
+    "sm:skin_64", // 64
+    "sm:skin_65", // 65
+    "sm:skin_66", // 66
     // RPG Game 2 ////////////////////////
-    incoSk, // 67
-    incoSk, // 68
-    incoSk, // 69
-    incoSk, // 70
+    "sm:skin_67", // 67
+    "sm:skin_68", // 68
+    "sm:skin_69", // 69
+    "sm:skin_70", // 70
     incoSk, // 71
     incoSk, // 72
     // UEG Legacy ////////////////////////
-    incoSk, // 73
-    incoSk, // 74
-    incoSk, // 75
+    "sm:skin_73", // 73
+    "sm:skin_74", // 74
+    "sm:skin_75", // 75
     // Weapons pt.2 ////////////////////////
     incoSk, // 76
     incoSk, // 77
@@ -242,7 +258,7 @@ const skinIconLoc = new Array(
     "textures/ui/skin_icons/skin_7", // 07
     "textures/ui/skin_icons/skin_8", // 08
     "textures/ui/skin_categories/button", // 09
-    "textures/ui/skin_categories/button", // 10
+    "textures/ui/skin_icons/skin_10", // 10
     "textures/ui/skin_categories/button", // 11
     "textures/ui/skin_categories/button", // 12
     // Hidden Valley ////////////////////////
@@ -262,7 +278,7 @@ const skinIconLoc = new Array(
     "textures/ui/skin_categories/button", // 23
     "textures/ui/skin_categories/button", // 24
     // Steampunk ////////////////////////
-    "textures/ui/skin_categories/button", // 25
+    "textures/ui/skin_icons/skin_25", // 25
     "textures/ui/skin_categories/button", // 26
     "textures/ui/skin_categories/button", // 27
     // Brutal ////////////////////////
@@ -270,7 +286,7 @@ const skinIconLoc = new Array(
     "textures/ui/skin_categories/button", // 29
     "textures/ui/skin_categories/button", // 30
     // Intergalactic ////////////////////////
-    "textures/ui/skin_categories/button", // 31
+    "textures/ui/skin_icons/skin_31", // 31
     "textures/ui/skin_categories/button", // 32
     "textures/ui/skin_categories/button", // 33
     // Wonderland ////////////////////////
@@ -290,9 +306,9 @@ const skinIconLoc = new Array(
     "textures/ui/skin_categories/button", // 44
     "textures/ui/skin_categories/button", // 45
     // Freedom -S- ////////////////////////
-    "textures/ui/skin_categories/button", // 46
-    "textures/ui/skin_categories/button", // 47
-    "textures/ui/skin_categories/button", // 48
+    "textures/ui/skin_icons/skin_46", // 46
+    "textures/ui/skin_icons/skin_47", // 47
+    "textures/ui/skin_icons/skin_48", // 48
     // -S- ////////////////////////
     "textures/ui/skin_icons/skin_49", // 49
     "textures/ui/skin_categories/button", // 50
@@ -310,23 +326,23 @@ const skinIconLoc = new Array(
     "textures/ui/skin_icons/skin_58", // 58
     "textures/ui/skin_icons/skin_59", // 59
     "textures/ui/skin_icons/skin_60", // 60
-    "textures/ui/skin_categories/button", // 61
-    "textures/ui/skin_categories/button", // 62
-    "textures/ui/skin_categories/button", // 63
-    "textures/ui/skin_categories/button", // 64
-    "textures/ui/skin_categories/button", // 65
-    "textures/ui/skin_categories/button", // 66
+    "textures/ui/skin_icons/skin_61", // 61
+    "textures/ui/skin_icons/skin_62", // 62
+    "textures/ui/skin_icons/skin_63", // 63
+    "textures/ui/skin_icons/skin_64", // 64
+    "textures/ui/skin_icons/skin_65", // 65
+    "textures/ui/skin_icons/skin_66", // 66
     // RPG Game 2 ////////////////////////
-    "textures/ui/skin_categories/button", // 67
-    "textures/ui/skin_categories/button", // 68
-    "textures/ui/skin_categories/button", // 69
-    "textures/ui/skin_categories/button", // 70
+    "textures/ui/skin_icons/skin_67", // 67
+    "textures/ui/skin_icons/skin_68", // 68
+    "textures/ui/skin_icons/skin_69", // 69
+    "textures/ui/skin_icons/skin_70", // 70
     "textures/ui/skin_categories/button", // 71
     "textures/ui/skin_categories/button", // 72
     // UEG Legacy ////////////////////////
-    "textures/ui/skin_categories/button", // 73
+    "textures/ui/skin_icons/skin_73", // 73
     "textures/ui/skin_categories/button", // 74
-    "textures/ui/skin_categories/button", // 75
+    "textures/ui/skin_icons/skin_75", // 75
     // Weapons pt.2 ////////////////////////
     "textures/ui/skin_categories/button", // 76
     "textures/ui/skin_categories/button", // 77
@@ -349,7 +365,7 @@ const designerList = new Array(
     "ScizorM", // 07
     "ScizorM", // 08
     "09 - Unfinished", // 09
-    "10 - Unfinished", // 10
+    "ScizorM", // 10
     "11 - Unfinished", // 11
     "12 - Unfinished", // 12
     // Hidden Valley ////////////////////////
@@ -377,7 +393,7 @@ const designerList = new Array(
     "29 - Unfinished", // 29
     "30 - Unfinished", // 30
     // Intergalactic ////////////////////////
-    "31 - Unfinished", // 31
+    "evel", // 31
     "32 - Unfinished", // 32
     "33 - Unfinished", // 33
     // Wonderland ////////////////////////
@@ -397,13 +413,13 @@ const designerList = new Array(
     "Ranger Class", // 44
     "Trapper Class", // 45
     // Freedom -S- ////////////////////////
-    "Reference: Vargskelethor Joel, ScizorM", // 46
+    "(Reference: Vargskelethor Joel) ScizorM", // 46
     "ScizorM", // 47
     "ScizorM", // 48
     // -S- ////////////////////////
     "ScizorM", // 49
     "zeerye", // 50
-    "Reference: Mobile Suit Gundam, ScizorM", // 51
+    "(Reference: Mobile Suit Gundam) ScizorM", // 51
     // Dev ////////////////////////
     "ScizorM", // 52
     "zeerye", // 53
@@ -417,11 +433,11 @@ const designerList = new Array(
     "ScizorM", // 58
     "ScizorM", // 59
     "ScizorM", // 60
-    "Elf (Cyberized)", // 61
-    "Golem (Cyberized)", // 62
+    "ScizorM", // 61
+    "ScizorM", // 62
     "ScizorM", // 63
-    "64 - Unfinished", // 64
-    "65 - Unfinished", // 65
+    "ScizorM", // 64
+    "ScizorM", // 65
     "66 - Unfinished", // 66
     // RPG Game 2 ////////////////////////
     "evel", // 67
@@ -556,13 +572,13 @@ const skinSet_over = new Array(
     "No Set", // 00
     "UEG CYBER: Default", // 01
     // Hidden Valley ////////////////////////
-    "UEG CYBER: Hidden Valley", // 02
+    "COMING SOON", // 02 ## UEG CYBER: HIDDEN VALLEY
     // Overdrive ////////////////////////
     "UEG CYBER: Overdrive", // 03
     // Crystallized ////////////////////////
-    "UEG CYBER: Crystallized", // 04
+    "COMING SOON", // 04 UEG CYBER: CRYSTALLIZED
     // Abstract ////////////////////////
-    "UEG CYBER: Abstract", // 05
+    "COMING SOON", // 05 UEG CYBER: ABSTRACT
     // Steampunk ////////////////////////
     "UEG CYBER: Steampunk", // 06
     // Brutal ////////////////////////
@@ -574,9 +590,9 @@ const skinSet_over = new Array(
     // Auric ////////////////////////
     "UEG CYBER: Auric", // 10
     // Seasons ////////////////////////
-    "UEG CYBER: Seasons", // 11
+    "COMING SOON", // 11 UEG CYBER: SEASONS
     // Weapons (pt.1) ////////////////////////
-    "UEG CYBER: Weapons", // 12
+    "COMING SOON", // 12 UEG CYBER: WEAPONS
     // Freedom -S- ////////////////////////
     "UEG CYBER -S-: Freedom", // 13
     // -S- ////////////////////////
@@ -602,13 +618,13 @@ const skinFileLoc = new Array(
     "textures/ui/skin_categories/category_", // 00
     "textures/ui/skin_categories/category_default", // 01
     // Hidden Valley ////////////////////////
-    "textures/ui/skin_categories/category_hidden_valley", // 02
+    "textures/ui/skin_categories/category_", // 02 hidden valley
     // Overdrive ////////////////////////
     "textures/ui/skin_categories/category_overdrive", // 03
     // Crystallized ////////////////////////
-    "textures/ui/skin_categories/category_crystallized", // 04
+    "textures/ui/skin_categories/category_", // 04 crystallized
     // Abstract ////////////////////////
-    "textures/ui/skin_categories/category_abstract", // 05
+    "textures/ui/skin_categories/category_", // 05 abstract
     // Steampunk ////////////////////////
     "textures/ui/skin_categories/category_steampunk", // 06
     // Brutal ////////////////////////
@@ -620,9 +636,9 @@ const skinFileLoc = new Array(
     // Auric ////////////////////////
     "textures/ui/skin_categories/category_auric", // 10
     // Seasons ////////////////////////
-    "textures/ui/skin_categories/category_seasons", // 11
+    "textures/ui/skin_categories/category_", // 11 seasons
     // Weapons (pt.1) ////////////////////////
-    "textures/ui/skin_categories/category_weapons", // 12
+    "textures/ui/skin_categories/category_", // 12 weapons
     // Freedom -S- ////////////////////////
     "textures/ui/skin_categories/category_freedom", // 13/////////////////////////////////////
     // -S- ////////////////////////
@@ -644,8 +660,7 @@ const skinFileLoc = new Array(
 )
 
 const effectNames = new Array(
-    "No Effect", // 00
-    "Default", // 01
+    "Default", // 01 (actually 00 and beyond, whoops)
     "Incinerate", // 02
     "Digi-Bit", // 03
     "Auric", // 04
@@ -653,19 +668,18 @@ const effectNames = new Array(
     "Electric", // 06
     "Confetti", // 07
     "Nature", // 08
-    "Chromatic", // 09
-    "Smoke Burst", // 10
-    "Baby Storm", // 11
-    "Pure Freedom", // 12
-    "Crimson Thunderbolt", // 13
-    "evel's effect", // 14
-    "rye's effect", // 15
-    "Hopping Trail" // 16
+    //"Chromatic" // 09
+    //"Smoke Burst", // 10
+    //"Baby Storm", // 11
+    //"Pure Freedom", // 12
+    //"Crimson Thunderbolt", // 13
+    //"evel's effect", // 14
+    //"rye's effect", // 15
+    //"Hopping Trail" // 16
 )
 const sm = "ScizorM"
 
 const effectDesigners = new Array(
-    "No Designer", // 00
     sm, // 01
     sm, // 02
     sm, // 03
@@ -674,13 +688,13 @@ const effectDesigners = new Array(
     sm, // 06
     sm, // 07
     sm, // 08
-    sm, // 09
-    sm, // 10
-    sm, // 11
-    sm, // 12
-    sm, // 13
-    "evel, " + sm, // 14
-    "zeerye, " + sm, // 15
-    "AubreyThePebble, " + sm // 16
+    sm // 09
+    //sm, // 10
+    //sm, // 11
+    //sm, // 12
+    //sm, // 13
+    //"evel, " + sm, // 14
+    //"zeerye, " + sm, // 15
+    //"AubreyThePebble, " + sm // 16
 )
 

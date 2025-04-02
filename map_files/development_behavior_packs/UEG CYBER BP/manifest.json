@@ -1,8 +1,8 @@
 {
 	"format_version": 2,
 	"header": {
-		"name": "pack.name",
-		"description": "pack.description",
+		"name": "UEG CYBER BP",
+		"description": "UEG CYBER's default behavior pack.",
 		"uuid": "10df730c-96a6-4b3b-9809-a64943d113ed",
 		"version": [
 			1,

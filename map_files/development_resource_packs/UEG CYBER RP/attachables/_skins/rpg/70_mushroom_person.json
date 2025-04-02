@@ -1,0 +1,32 @@
+//bridge-file-version: #18
+{
+	"format_version": "1.16.100",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "sm:skin_70",
+			"materials": {
+				"default": "guardian"
+			},
+			"textures": {
+				"default": "textures/entity/skins/mushroom_person",
+				"frame_2": "textures/entity/skins/mushroom_person_frame2",
+				"frame_3": "textures/entity/skins/mushroom_person_frame2",
+				"frame_4": "textures/entity/skins/mushroom_person",
+				"frame_5": "textures/entity/skins/mushroom_person",
+				"frame_6": "textures/entity/skins/mushroom_person",
+				"frame_7": "textures/entity/skins/mushroom_person",
+				"frame_8": "textures/entity/skins/mushroom_person",
+				"dash1": "textures/entity/skins/mushroom_person",
+				"dash2": "textures/entity/skins/mushroom_person",
+				"dash3": "textures/entity/skins/mushroom_person",
+				"dash4": "textures/entity/skins/mushroom_person"
+			},
+			"geometry": {
+				"default": "geometry.mushroom_person"
+			},
+			"render_controllers": [
+				"controller.render.skin_animations"
+			]
+		}
+	}
+}

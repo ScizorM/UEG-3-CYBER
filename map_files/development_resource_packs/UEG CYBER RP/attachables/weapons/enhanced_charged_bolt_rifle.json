@@ -1,0 +1,40 @@
+//bridge-file-version: #60
+{
+	"format_version": "1.10.0",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "sm:enhanced_charged_bolt_rifle",
+			"materials": {
+				"default": "entity_alphatest",
+				"enchanted": "entity_alphatest_glint"
+			},
+			"textures": {
+				"default": "textures/entity/weapons/chargedboltrifle",
+				"inactive": "textures/entity/weapons/parry_fist_inactive",
+				"frame_3": "textures/entity/weapons/vulcan_cannon_frame3",
+				"frame_4": "textures/entity/weapons/vulcan_cannon_frame4",
+				"frame_5": "textures/entity/weapons/vulcan_cannon_frame5",
+				"frame_6": "textures/entity/weapons/vulcan_cannon_frame6",
+				"frame_7": "textures/entity/weapons/vulcan_cannon_frame7",
+				"frame_8": "textures/entity/weapons/vulcan_cannon_frame8"
+			},
+			"geometry": {
+				"default": "geometry.charged_bolt_rifle"
+			},
+			"render_controllers": [
+				"controller.render.armor"
+			],
+			"animations": {
+				"controller": "controller.animation.parry_fist",
+				"fist_tp": "animation.charged_bolt_rifle.thirdperson",
+				"fist_fp": "animation.charged_bolt_rifle.firstperson",
+				"parry": "animation.charged_bolt_rifle.fire"
+			},
+			"scripts": {
+				"animate": [
+					"controller"
+				]
+			}
+		}
+	}
+}

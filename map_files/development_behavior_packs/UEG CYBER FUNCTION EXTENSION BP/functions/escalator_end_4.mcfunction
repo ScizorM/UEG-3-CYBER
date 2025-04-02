@@ -7,3 +7,5 @@ tag @s remove esc1_started
 tag @s add 1f
 tag @s remove 3f
 tag @s remove 2f
+tag @s add new_title_1f
+tag @s add new_title_init

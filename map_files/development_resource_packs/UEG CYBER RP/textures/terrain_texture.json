@@ -10,29 +10,125 @@
 				"textures/blocks/polished_basalt_side_c"
 			]
 		},
-		"sm:settings_block":{
+		"sm:training_block_new_side":{
 			"textures":[
+				"textures/blocks/training_side"
+			]
+		},
+		
+		"sm:goal_gradient":{
+			"textures":[
+				"textures/blocks/goal_gradient"
+			]
+		},
+				"sm:tgt_gradient":{
+			"textures":[
+				"textures/blocks/target_gradient"
+			]
+		},
+						"sm:checkp_gradient":{
+			"textures":[
+				"textures/blocks/checkpoint_gradient"
+			]
+		},
+		"sm:training_block_new_top":{
+			"textures":[
+				"textures/blocks/training_top"
+			]
+		},
+				"sm:indicator_0":{
+			"textures":[
+				"textures/blocks/indicator_0"
+			]
+		},
+						"sm:indicator_1":{
+			"textures":[
+				"textures/blocks/indicator_1"
+			]
+		},
+						"sm:indicator_2":{
+			"textures":[
+				"textures/blocks/indicator_2"
+			]
+		},
+						"sm:indicator_3":{
+			"textures":[
+				"textures/blocks/indicator_3"
+			]
+		},
+				"sm:checkp_block_new_top":{
+			"textures":[
+				"textures/blocks/checkpoint_block"
+			]
+		},
+		"sm:goal_block_new_top":{
+			"textures":[
+				"textures/blocks/goal_block"
+			]
+		},
+		"sm:settings_block": {
+			"textures": [
 				"textures/blocks/settings"
 			]
 		},
-				"sm:tile_block":{
-			"textures":[
+				"sm:training_death_top": {
+			"textures": [
+				"textures/blocks/training_death_top"
+			]
+		},
+		"sm:tile_block": {
+			"textures": [
 				"textures/blocks/tile_block"
 			]
 		},
 
-				"sm:settings_block_2":{
-			"textures":[
+		"sm:settings_block_2": {
+			"textures": [
 				"textures/blocks/settings_2"
 			]
 		},
-						"sm:bank_block_2":{
-			"textures":[
+		"sm:type_riftzone": {
+			"textures": [
+				"textures/blocks/type_riftzone"
+			]
+		},
+		"sm:gamble_1": {
+			"textures": [
+				"textures/blocks/gamble_1"
+			]
+		},
+		"sm:gamble_2": {
+			"textures": [
+				"textures/blocks/gamble_2"
+			]
+		},
+		"sm:gamble_3": {
+			"textures": [
+				"textures/blocks/gamble_3"
+			]
+		},
+		"sm:gamble_4": {
+			"textures": [
+				"textures/blocks/gamble_4"
+			]
+		},
+		"sm:type_riftzone_jm": {
+			"textures": [
+				"textures/blocks/type_riftzone_jm"
+			]
+		},
+		"sm:token_redeem_block": {
+			"textures": [
+				"textures/blocks/token_redeem_block"
+			]
+		},
+		"sm:bank_block_2": {
+			"textures": [
 				"textures/blocks/bank_2"
 			]
 		},
-		"sm:purchase_block_4":{
-			"textures":[
+		"sm:purchase_block_4": {
+			"textures": [
 				"textures/blocks/purchase_4"
 			]
 		},
@@ -41,88 +137,88 @@
 				"textures/blocks/treecolor_00"
 			]
 		},
-		"sm:candy_rope_1":{
-			"textures":[
+		"sm:candy_rope_1": {
+			"textures": [
 				"textures/blocks/candy_rope_indi"
 			]
 		},
-		"sm:cyberspace_0":{
-			"textures":[
+		"sm:cyberspace_0": {
+			"textures": [
 				"textures/blocks/cyberspace_0"
 			]
 		},
-		"sm:cyberspace_1":{
-			"textures":[
+		"sm:cyberspace_1": {
+			"textures": [
 				"textures/blocks/cyberspace_1"
 			]
 		},
-		"sm:cyberspace_2":{
-			"textures":[
+		"sm:cyberspace_2": {
+			"textures": [
 				"textures/blocks/cyberspace_2"
 			]
 		},
-		"sm:cyberspace_3":{
-			"textures":[
+		"sm:cyberspace_3": {
+			"textures": [
 				"textures/blocks/cyberspace_3"
 			]
 		},
-		"sm:cyberspace_4":{
-			"textures":[
+		"sm:cyberspace_4": {
+			"textures": [
 				"textures/blocks/cyberspace_4"
 			]
 		},
-		"sm:cyberspace_5":{
-			"textures":[
+		"sm:cyberspace_5": {
+			"textures": [
 				"textures/blocks/cyberspace_5"
 			]
 		},
-		"sm:cyberspace_6":{
-			"textures":[
+		"sm:cyberspace_6": {
+			"textures": [
 				"textures/blocks/cyberspace_6"
 			]
 		},
-		"sm:cyberspace_7":{
-			"textures":[
+		"sm:cyberspace_7": {
+			"textures": [
 				"textures/blocks/cyberspace_7"
 			]
 		},
-		"sm:cyberspace_8":{
-			"textures":[
+		"sm:cyberspace_8": {
+			"textures": [
 				"textures/blocks/cyberspace_8"
 			]
 		},
-		"sm:vaporframe":{
-			"textures":[
+		"sm:vaporframe": {
+			"textures": [
 				"textures/blocks/vaporframe"
 			]
 		},
-		"sm:vaportile_1":{
-			"textures":[
+		"sm:vaportile_1": {
+			"textures": [
 				"textures/blocks/vaportile_1"
 			]
 		},
-		"sm:vaportile_2":{
-			"textures":[
+		"sm:vaportile_2": {
+			"textures": [
 				"textures/blocks/vaportile_2"
 			]
 		},
-		"sm:vaporglitch":{
-			"textures":[
+		"sm:vaporglitch": {
+			"textures": [
 				"textures/blocks/vaporglitch"
 			]
 		},
-		"sm:candy_rope":{
-			"textures":[
+		"sm:candy_rope": {
+			"textures": [
 				"textures/blocks/candy_rope"
 			]
 		},
-		"sm:candy_rope_top":{
-			"textures":[
+		"sm:candy_rope_top": {
+			"textures": [
 				"textures/blocks/candy_rope_top"
-			]	
+			]
 		},
-		"sm:reinforced_block":{
-			"textures":[
+		"sm:reinforced_block": {
+			"textures": [
 				"textures/blocks/reinforced_block"
 			]
 		},

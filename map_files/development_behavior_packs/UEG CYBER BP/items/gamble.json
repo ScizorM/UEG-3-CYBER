@@ -1,0 +1,15 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.21.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "sm:gamble"
+		},
+		"components": {
+			"minecraft:icon": "sm:gamble",
+			"minecraft:display_name": {
+				"value": "Test Your Luck"
+			}
+		}
+	}
+}

@@ -1,6 +1,5 @@
 #bridge-file-version: #4
 ##priority: 1
 function titleclear_priority1
-tag @s add titlea
-tag @s add title_temprecover
-hud @s hide crosshair
+tag @s add new_title_init
+tag @s add new_title_cooldown

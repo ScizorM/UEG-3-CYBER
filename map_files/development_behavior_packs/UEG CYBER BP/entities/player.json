@@ -26,6 +26,14 @@
 					"default": 0,
 					"client_sync": true
 				}
+			},
+			"animations": {
+				"meleeDetect": "controller.animation.meleeDetect"
+			},
+			"scripts": {
+				"animate": [
+					"meleeDetect"
+				]
 			}
 		},
 		"component_groups": {

@@ -1,0 +1,93 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.demo_knight",
+				"texture_width": 82,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "Head",
+					"pivot": [0, 24, 0],
+					"cubes": [
+						{"origin": [-4, 24, -4], "size": [8, 8, 8], "uv": [0, 0]},
+						{"origin": [-4, 24, 0], "size": [8, 4, 4], "inflate": 0.1, "pivot": [0, 24, 0], "rotation": [-7.5, 0, 0], "uv": [2, 32]},
+						{"origin": [-4, 24, -4], "size": [8, 8, 8], "inflate": 0.2, "uv": [32, 0]}
+					]
+				},
+				{
+					"name": "Body",
+					"pivot": [0, 24, 0],
+					"cubes": [
+						{"origin": [-4, 12, -2], "size": [8, 12, 4], "uv": [16, 16]}
+					]
+				},
+				{
+					"name": "rockets",
+					"parent": "Body",
+					"pivot": [0, 22, 2],
+					"cubes": [
+						{"origin": [2, 18, 1], "size": [2, 4, 3], "inflate": -0.1, "uv": [66, 0]},
+						{"origin": [-4, 18, 1], "size": [2, 4, 3], "inflate": -0.1, "uv": [66, 0]}
+					]
+				},
+				{
+					"name": "thruster_pack",
+					"parent": "rockets",
+					"pivot": [0, 22, 2],
+					"rotation": [45, 0, 0],
+					"cubes": [
+						{"origin": [-4, 12, -1], "size": [2, 9, 2], "inflate": -0.01, "uv": [62, 53]},
+						{"origin": [2, 12, -1], "size": [2, 9, 2], "inflate": -0.01, "uv": [64, 53]}
+					]
+				},
+				{
+					"name": "upper",
+					"parent": "thruster_pack",
+					"pivot": [0, 22, 2],
+					"rotation": [-27.5, 0, 0],
+					"cubes": [
+						{"origin": [2, 21, 2], "size": [2, 2, 10], "inflate": -0.01, "uv": [58, 35]},
+						{"origin": [-4, 21, 2], "size": [2, 2, 10], "inflate": -0.01, "uv": [58, 35]}
+					]
+				},
+				{
+					"name": "RightArm",
+					"pivot": [-5, 22, 0],
+					"cubes": [
+						{"origin": [-7, 12, -2], "size": [3, 12, 4], "uv": [40, 16]},
+						{"origin": [-7, 12, -2], "size": [3, 12, 4], "inflate": 0.25, "uv": [40, 32]}
+					]
+				},
+				{
+					"name": "LeftArm",
+					"pivot": [5, 22, 0],
+					"cubes": [
+						{"origin": [4, 12, -2], "size": [3, 12, 4], "uv": [32, 48]},
+						{"origin": [4, 12, -2], "size": [3, 12, 4], "inflate": 0.25, "uv": [48, 48]}
+					]
+				},
+				{
+					"name": "RightLeg",
+					"pivot": [-2, 12, 0],
+					"cubes": [
+						{"origin": [-4, 0, -2], "size": [4, 12, 4], "uv": [0, 16]}
+					]
+				},
+				{
+					"name": "LeftLeg",
+					"pivot": [2, 12, 0],
+					"cubes": [
+						{"origin": [0, 0, -2], "size": [4, 12, 4], "uv": [16, 48]},
+						{"origin": [-0.1, 0, -2], "size": [4, 12, 4], "inflate": 0.25, "uv": [0, 48]}
+					]
+				}
+			]
+		}
+	]
+}

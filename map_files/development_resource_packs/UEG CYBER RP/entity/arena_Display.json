@@ -10,7 +10,9 @@
 			"textures": {
 				"default": "textures/entity/arena_terminal",
 				"skins": "textures/entity/skin_terminal",
-				"effects": "textures/entity/effect_terminal"
+				"effects": "textures/entity/effect_terminal",
+				"weapons": "textures/entity/weapon_buy_terminal",
+				"loadouts": "textures/entity/loadout_terminal"
 			},
 			"geometry": {
 				"default": "geometry.arenaTerminal"

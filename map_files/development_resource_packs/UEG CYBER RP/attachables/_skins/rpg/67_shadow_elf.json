@@ -1,0 +1,42 @@
+//bridge-file-version: #18
+{
+	"format_version": "1.16.100",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "sm:skin_67",
+			"materials": {
+				"default": "guardian"
+			},
+			"textures": {
+				"default": "textures/entity/skins/shadow_elf",
+				"frame_2": "textures/entity/skins/shadow_elf_frame2",
+				"frame_3": "textures/entity/skins/shadow_elf_frame3",
+				"frame_4": "textures/entity/skins/shadow_elf_frame2",
+				"frame_5": "textures/entity/skins/shadow_elf",
+				"frame_6": "textures/entity/skins/shadow_elf",
+				"frame_7": "textures/entity/skins/shadow_elf",
+				"frame_8": "textures/entity/skins/shadow_elf",
+				"dash1": "textures/entity/skins/shadow_elf_dash1",
+				"dash2": "textures/entity/skins/shadow_elf_dash2",
+				"dash3": "textures/entity/skins/shadow_elf_dash3",
+				"dash4": "textures/entity/skins/shadow_elf"
+			},
+			"geometry": {
+				"default": "geometry.shadow_elf"
+			},
+			"render_controllers": [
+				"controller.render.skin_animations"
+			],
+			"animations": {
+				"idle": "animation.demon_cyberized.idle",
+				"dash": "animation.demon_cyberized.fly",
+				"controller": "controller.animation.conduit"
+			},
+			"scripts": {
+				"animate": [
+					"controller"
+				]
+			}
+		}
+	}
+}

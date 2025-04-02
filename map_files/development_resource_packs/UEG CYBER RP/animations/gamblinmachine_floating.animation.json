@@ -1,0 +1,13 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.gamblinmachine_floating.lever": {
+			"animation_length": 1,
+			"bones": {
+				"bone4": {
+					"rotation": [0, 0, 0]
+				}
+			}
+		}
+	}
+}

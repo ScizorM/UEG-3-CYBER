@@ -11,117 +11,185 @@
 	"sm:polishedbasaltside": {
 		"textures": "sm:polishedbasaltside"
 	},
-		"sm:tile_block": {
+	"sm:tile_block": {
 		"textures": "sm:tile_block"
 	},
-	"sm:purchase_block_4":{
-		"textures":"sm:purchase_block_4"
-	},
-	"sm:settings_block":{
-		"textures": "sm:settings_block"
-	},
-		"sm:settings_block_2":{
-		"textures": "sm:settings_block_2"
-	},
-			"sm:bank_block_2":{
-		"textures": "sm:bank_block_2"
-	},
-	"sm:candy_rope":{
+	"sm:training_block_new":{
 		"textures":{
-			"side":"sm:candy_rope",
-			"up":"sm:candy_rope_top",
-			"down":"sm:candy_rope_top"
+			"side":"sm:training_block_new_side",
+			"up":"sm:training_block_new_top",
+			"down":"sm:training_block_new_side"
 		}
 	},
-	"sm:cyberspace_0":{
+		"sm:indicator_0":{
+		"textures": "sm:indicator_0"
+	},
+			"sm:indicator_1":{
+		"textures": "sm:indicator_1"
+	},
+			"sm:indicator_2":{
+		"textures": "sm:indicator_2"
+	},
+			"sm:indicator_3":{
+		"textures": "sm:indicator_3"
+	},
+		"sm:checkp_block_new":{
 		"textures":{
-			"side":"sm:cyberspace_8",
-			"down":"sm:cyberspace_8",
-			"up":"sm:cyberspace_0"
-		}	
+			"side":"sm:training_block_new_side",
+			"up":"sm:checkp_block_new_top",
+			"down":"sm:training_block_new_side"
+		}
 	},
-	"sm:cyberspace_1":{
+		"sm:goal_block_new":{
 		"textures":{
-			"side":"sm:cyberspace_8",
-			"down":"sm:cyberspace_8",
-			"up":"sm:cyberspace_1"
-		}	
+			"side":"sm:training_block_new_side",
+			"up":"sm:goal_block_new_top",
+			"down":"sm:training_block_new_side"
+		}
 	},
-	"sm:cyberspace_2":{
+		"sm:goal_gradient":{
 		"textures":{
-			"side":"sm:cyberspace_8",
-			"down":"sm:cyberspace_8",
-			"up":"sm:cyberspace_2"
-		}	
+			"side":"sm:goal_gradient",
+			"up":"sm:empty",
+			"down":"sm:empty"
+		}
 	},
-	"sm:cyberspace_3":{
+			"sm:training_death":{
 		"textures":{
-			"side":"sm:cyberspace_8",
-			"down":"sm:cyberspace_8",
-			"up":"sm:cyberspace_3"
-		}	
+			"side":"sm:empty",
+			"up":"sm:training_death_top",
+			"down":"sm:training_death_top"
+		}
 	},
-	"sm:cyberspace_4":{
-		"textures":{
-			"side":"sm:cyberspace_8",
-			"down":"sm:cyberspace_8",
-			"up":"sm:cyberspace_4"
-		}	
+	"sm:gamble_1": {
+		"textures": "sm:gamble_1"
 	},
-	"sm:cyberspace_5":{
-		"textures":{
-			"side":"sm:cyberspace_8",
-			"down":"sm:cyberspace_8",
-			"up":"sm:cyberspace_5"
-		}	
+	"sm:gamble_2": {
+		"textures": "sm:gamble_2"
 	},
-	"sm:cyberspace_6":{
-		"textures":{
-			"side":"sm:cyberspace_8",
-			"down":"sm:cyberspace_8",
-			"up":"sm:cyberspace_6"
-		}	
+	"sm:gamble_3": {
+		"textures": "sm:gamble_3"
 	},
-	"sm:cyberspace_7":{
-		"textures":{
-			"side":"sm:cyberspace_8",
-			"down":"sm:cyberspace_8",
-			"up":"sm:cyberspace_7"
-		}	
+	"sm:gamble_4": {
+		"textures": "sm:gamble_4"
 	},
-	"sm:cyberspace_8":{
-		"textures":{
-			"side":"sm:cyberspace_8",
-			"down":"sm:cyberspace_8",
-			"up":"sm:cyberspace_8"
-		}	
+	"sm:token_redeem_block": {
+		"textures": "sm:token_redeem_block"
 	},
-	"sm:vaportile_1":{
-		"textures":"sm:vaportile_1"
+	"sm:purchase_block_4": {
+		"textures": "sm:purchase_block_4"
 	},
-	"sm:vaportile_2":{
-		"textures":"sm:vaportile_2"
+	"sm:settings_block": {
+		"textures": "sm:settings_block"
 	},
-	"sm:vaporglitch":{
-		"textures":"sm:vaporglitch"
+	"sm:settings_block_2": {
+		"textures": "sm:settings_block_2"
 	},
-	"sm:vaporframe":{
-		"textures":"sm:vaporframe"
+	"sm:bank_block_2": {
+		"textures": "sm:bank_block_2"
+	},
+	"sm:type_riftzone": {
+		"textures": "sm:type_riftzone"
+	},
+	"sm:type_riftzone_jm": {
+		"textures": "sm:type_riftzone_jm"
+	},
+	"sm:candy_rope": {
+		"textures": {
+			"side": "sm:candy_rope",
+			"up": "sm:candy_rope_top",
+			"down": "sm:candy_rope_top"
+		}
+	},
+	"sm:cyberspace_0": {
+		"textures": {
+			"side": "sm:cyberspace_8",
+			"down": "sm:cyberspace_8",
+			"up": "sm:cyberspace_0"
+		}
+	},
+	"sm:cyberspace_1": {
+		"textures": {
+			"side": "sm:cyberspace_8",
+			"down": "sm:cyberspace_8",
+			"up": "sm:cyberspace_1"
+		}
+	},
+	"sm:cyberspace_2": {
+		"textures": {
+			"side": "sm:cyberspace_8",
+			"down": "sm:cyberspace_8",
+			"up": "sm:cyberspace_2"
+		}
+	},
+	"sm:cyberspace_3": {
+		"textures": {
+			"side": "sm:cyberspace_8",
+			"down": "sm:cyberspace_8",
+			"up": "sm:cyberspace_3"
+		}
+	},
+	"sm:cyberspace_4": {
+		"textures": {
+			"side": "sm:cyberspace_8",
+			"down": "sm:cyberspace_8",
+			"up": "sm:cyberspace_4"
+		}
+	},
+	"sm:cyberspace_5": {
+		"textures": {
+			"side": "sm:cyberspace_8",
+			"down": "sm:cyberspace_8",
+			"up": "sm:cyberspace_5"
+		}
+	},
+	"sm:cyberspace_6": {
+		"textures": {
+			"side": "sm:cyberspace_8",
+			"down": "sm:cyberspace_8",
+			"up": "sm:cyberspace_6"
+		}
+	},
+	"sm:cyberspace_7": {
+		"textures": {
+			"side": "sm:cyberspace_8",
+			"down": "sm:cyberspace_8",
+			"up": "sm:cyberspace_7"
+		}
+	},
+	"sm:cyberspace_8": {
+		"textures": {
+			"side": "sm:cyberspace_8",
+			"down": "sm:cyberspace_8",
+			"up": "sm:cyberspace_8"
+		}
+	},
+	"sm:vaportile_1": {
+		"textures": "sm:vaportile_1"
+	},
+	"sm:vaportile_2": {
+		"textures": "sm:vaportile_2"
+	},
+	"sm:vaporglitch": {
+		"textures": "sm:vaporglitch"
+	},
+	"sm:vaporframe": {
+		"textures": "sm:vaporframe"
 	},
 	"sm:cyber_piglin_head": {
 		"textures": "sm:cyber_piglin_head"
 	},
-	"sm:reinforced_block":{
-		"textures":"sm:reinforced_block"
+	"sm:reinforced_block": {
+		"textures": "sm:reinforced_block"
 	},
 	"sm:purchase_block": {
 		"textures": "sm:purchase_block"
 	},
-	"sm:candy_rope_1":{
-		"textures":"sm:candy_rope_1"
+	"sm:candy_rope_1": {
+		"textures": "sm:candy_rope_1"
 	},
-	"sm:candy_rope_2":{
-		"textures":"sm:candy_rope_1"
+	"sm:candy_rope_2": {
+		"textures": "sm:candy_rope_1"
 	},
 	"sm:purchase_block_disabled": {
 		"textures": "sm:purchase_block_disabled"
@@ -394,10 +462,7 @@
 		"textures": "sm:fall_generator"
 	},
 	"sm:blind_generator": {
-	"textures": "sm:fall_generator"
-	},
-	"sm:mall_fence": {
-		"textures": "sm:mall_fence"
+		"textures": "sm:fall_generator"
 	},
 	"sm:cloud": {
 		"sound": "cloth",

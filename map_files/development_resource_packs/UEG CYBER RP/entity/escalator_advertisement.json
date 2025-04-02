@@ -24,7 +24,17 @@
 			},
 			"render_controllers": [
 				"controller.render.arena_shop"
-			]
+			],
+			"animations": {
+				"anim": "animation.escalator_advertisement.slant"
+			},
+			"scripts": {
+				"animate": [
+					{
+						"anim": "query.is_name_any('slant') == 1"
+					}
+				]
+			}
 		}
 	}
 }

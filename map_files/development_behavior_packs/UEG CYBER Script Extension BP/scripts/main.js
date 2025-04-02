@@ -1,7 +1,10 @@
 ﻿import { world, ItemCooldownComponent, system, Entity, EntityComponentTypes } from '@minecraft/server'
 import { ActionFormData, MessageFormData, ModalFormData } from '@minecraft/server-ui'
 import { skinItemIds, effectSkins } from './skinList.js'
-import './arenaSelects.js'
+import { titleTags, storeTags } from './tagList.js'
+import { weaponIDList } from './loadoutList.js'
+import './newArenaLoading.js'
+//import './arenaSelects.js'
 import './abilities_and_dashes.js'
 import './weapons.js'
 import './playerNames.js'
@@ -15,7 +18,17 @@ import './skinSettings.js'
 import './bank_menu.js'
 import './loadouts.js'
 import './emergencyReset.js'
-
+import './weaponStore.js'
+import './lobbyMenu.js'
+import './foodAssign.js'
+import './foodStore.js'
+import './newerStores.js'
+import './sList.js'
+import './gamble.js'
+import './trainingFunctions.js'
+import './rpgSkinRandomizer.js'
+import './questConditions.js'
+import { itemNameList, itemIconLocation, itemScoreboard, itemDescList } from './foodList.js'
 world.sendMessage("[Scripts reloaded]");
 
 
@@ -23,6 +36,7 @@ world.sendMessage("[Scripts reloaded]");
 
 world.afterEvents.playerSpawn.subscribe(({ player, InitialSpawn }) => {
     player.runCommandAsync('function join_commands')
+    player.removeTag("seated")
     player.removeTag("music_playing")
 })
 
@@ -46,13 +60,51 @@ world.afterEvents.entityHurt.subscribe((data) => {
 const dimension = world.getDimension("Overworld")
 
 
+function RandomGambleEvent() {
 
+}
 
 
 system.runInterval(() => {
 
+    var gamblingArenaTimer = world.scoreboard.getObjective("gambling_arena_timer")
+
+    var gamblingArenaTimerT = gamblingArenaTimer.getScore("timer")
 
 
+    var roundActiveSB = world.scoreboard.getObjective("round_active")
+    var roundActive = roundActiveSB.getScore("round_active")
+
+
+    if (roundActive == 1) {
+        if (gamblingArenaTimerT > 0) {
+            gamblingArenaTimer.addScore("timer", -1)
+        }
+        else {
+            gamblingArenaTimer.setScore("timer", 200)
+        }
+    }
+    else {
+        gamblingArenaTimer.setScore("timer",200)
+    }
+
+
+    var skinRerollTimer = world.scoreboard.getObjective("skin_reroll_timer")
+    var skinRerollRealtime = skinRerollTimer.getScore("skin_reroll_real")
+    var skinRerollMinutes = skinRerollTimer.getScore("skin_reroll_timer")
+
+
+    if (skinRerollRealtime > 0) {
+        skinRerollTimer.addScore("skin_reroll_real", -1)
+    }
+    else {
+        skinRerollTimer.setScore("skin_reroll_real", 48000)
+        world.sendMessage("§e[Skin Stores]§a Skin stores are now restocking their inventory!")
+        world.getDimension("overworld").runCommand("function trigger_skin_randomizer")
+        world.getDimension("overworld").runCommand("scoreboard players set active rpg_store_randomizer 1")
+    }
+
+    skinRerollTimer.setScore("skin_reroll_timer",Math.round(skinRerollRealtime/2000))
 
     var allEntities = world.getDimension("overworld").getEntities().forEach(entity => {
 
@@ -65,6 +117,8 @@ system.runInterval(() => {
 
             }
         }
+
+
 
 
     })
@@ -131,6 +185,525 @@ system.runInterval(() => {
 
     world.getAllPlayers().forEach(player => {
 
+
+        if (player.hasTag("enter_tc")) {
+            player.runCommand(`execute if score @s curTrainRoom matches -1 run replaceitem entity @s slot.hotbar 4 sm:training_menu 1 0 {"minecraft:item_lock":{"mode":"lock_in_inventory"}}`)
+        }
+        else {
+            player.runCommand("clear @s sm:training_menu")
+        }
+
+        const belowPos = {
+            x: 0,
+            y: -1,
+            z: 0
+        }
+
+        var blockBelow = dimension.getBlockFromRay(player.location, belowPos, {includeTypes:["sm:enter_store_new","sm:exit_store_new"],maxDistance:5})
+
+        if (blockBelow) {
+            if (blockBelow.block.typeId == "sm:exit_store_new") {
+
+                if (player.hasTag("exit_stores") == false) {
+                    var enterStoreIndexSB = world.scoreboard.getObjective("title_index")
+                    var enterStoreIndexPlayer = enterStoreIndexSB.getScore(player)
+                    player.removeTag(storeTags[enterStoreIndexPlayer])
+                    player.runCommand("title @s subtitle update")
+                    player.addTag("new_title_init")
+                    player.addTag("exit_stores")
+                    player.removeTag("music_playing")
+                    if (player.hasTag("1f")) {
+                        player.addTag("new_title_1f")
+                    }
+                    else if (player.hasTag("2f")) {
+                        player.addTag("new_title_2f")
+                    }
+                    else if (player.hasTag("3f")) {
+                        player.addTag("new_title_3f")
+                    }
+                    weaponIDList.forEach(item => {
+                        player.runCommand(`clear @s ${item}`)
+                    })
+                }
+
+            }
+            else if (blockBelow.block.typeId == "sm:enter_store_new") {
+                var enterStoreIndexSB = world.scoreboard.getObjective("title_index")
+                var enterStoreIndexPlayer = enterStoreIndexSB.getScore(player)
+                if (player.hasTag(storeTags[enterStoreIndexPlayer]) == false) {
+
+                    titleTags.forEach(tag => {
+                        player.runCommand(`tag @s remove ${tag}`)
+                    })
+
+                    player.addTag(storeTags[enterStoreIndexPlayer])
+                    player.removeTag("exit_stores")
+                    player.removeTag("music_playing")
+                    player.addTag("new_title_init")
+                }
+
+            }
+            else {
+            }
+        }
+
+        var newTitleSystemSB = world.scoreboard.getObjective("new_title_system")
+        var newTitleSystemPlayer = newTitleSystemSB.getScore(player)
+
+        var titleText;
+        var processedText;
+        var innerColor;   //Misc. text
+        var outerColor; //Brackets
+        var maxTitleTime;
+
+        var subtitle = ""
+
+
+        if (player.hasTag("new_title_respawned")) {
+            titleText = "RESPAWNED"
+            innerColor = "§b"
+            outerColor = "§l§f"
+            maxTitleTime = 20
+
+        }
+        else if (player.hasTag("new_title_death")) {
+            titleText = "SYSTEM FAILURE."
+            innerColor = "§c"
+            outerColor = "§l§f"
+            maxTitleTime = 10
+
+        }
+        else if (player.hasTag("new_title_3f")) {
+            titleText = "3F:SHOPPING DISTRICT"
+            innerColor = "§e"
+            outerColor = "§l§f"
+            maxTitleTime = 20
+
+        }
+        else if (player.hasTag("new_title_2f")) {
+            titleText = "2F:CENTRAL PLAZA"
+            innerColor = "§e"
+            outerColor = "§l§f"
+            maxTitleTime = 20
+
+        }
+        else if (player.hasTag("new_title_riftzone")) {
+            titleText = "RIFT_ZONE"
+            innerColor = "§f"
+            outerColor = "§l§f"
+            maxTitleTime = 20
+
+        }
+        else if (player.hasTag("new_title_j_mikes")) {
+            titleText = "JERSEY_MICHAELS"
+            innerColor = "§b"
+            outerColor = "§l§f"
+            maxTitleTime = 20
+
+        }
+        else if (player.hasTag("new_title_1f")) {
+            titleText = "1F:METRO"
+            innerColor = "§e"
+            outerColor = "§l§f"
+            maxTitleTime = 20
+
+        }
+        else if (player.hasTag("new_title_3")) {
+            titleText = "3"
+            innerColor = "§a"
+            outerColor = "§l§f"
+            maxTitleTime = 10
+
+        }
+        else if (player.hasTag("new_title_2")) {
+            titleText = "2"
+            innerColor = "§e"
+            outerColor = "§l§f"
+            maxTitleTime = 10
+
+        }
+        else if (player.hasTag("new_title_1")) {
+            titleText = "1"
+            innerColor = "§6"
+            outerColor = "§l§f"
+            maxTitleTime = 10
+
+        }
+        else if (player.hasTag("new_title_engage")) {
+            titleText = "ENGAGE"
+            innerColor = "§c"
+            outerColor = "§l§f"
+            maxTitleTime = 20
+
+        }
+        else if (player.hasTag("new_title_round_end")) {
+            titleText = "ZONE CLEAR"
+            innerColor = "§a"
+            outerColor = "§l§f"
+            maxTitleTime = 10
+
+        }
+        else if (player.hasTag("new_title_team_nu_win")) {
+            titleText = "TEAM NU WINS."
+            innerColor = "§c"
+            outerColor = "§l§f"
+            maxTitleTime = 20
+
+        }
+        else if (player.hasTag("new_title_team_lambda_win")) {
+            titleText = "TEAM LAMBDA WINS."
+            innerColor = "§d"
+            outerColor = "§l§f"
+            maxTitleTime = 20
+
+        }
+        else if (player.hasTag("new_title_overheat")) {
+            titleText = "SYSTEM OVERHEAT."
+            innerColor = "§c"
+            outerColor = "§l§f"
+            maxTitleTime = 10
+
+        }
+        else if (player.hasTag("new_title_cooldown")) {
+            titleText = "TEMP. RECOVERED"
+            innerColor = "§a"
+            outerColor = "§l§f"
+            maxTitleTime = 10
+
+        }
+        else if (player.hasTag("new_title_stunned")) {
+            titleText = "STUNNED"
+            innerColor = "§a"
+            outerColor = "§l§f"
+            maxTitleTime = 10
+
+        }
+        else if (player.hasTag("new_title_scaled")) {
+            titleText = "SCALED."
+            innerColor = "§c"
+            outerColor = "§l§f"
+            maxTitleTime = 10
+
+        }
+        else if (player.hasTag("enter_marque")) {
+            titleText = "MARQUE'S WEAPON CENTER"
+            innerColor = "§6"
+            outerColor = "§l§f"
+            maxTitleTime = 20
+
+        }
+        else if (player.hasTag("enter_music")) {
+            titleText = "TORIMOTI MUSIC"
+            innerColor = "§d"
+            outerColor = "§l§f"
+            maxTitleTime = 20
+
+        }
+        else if (player.hasTag("enter_credits")) {
+            titleText = "CYBER-SPACE TRAVEL"
+            innerColor = "§b"
+            outerColor = "§l§f"
+            maxTitleTime = 20
+
+        }
+        else if (player.hasTag("enter_reactor")) {
+            titleText = "REACTOR SETTINGS CENTER"
+            innerColor = "§g"
+            outerColor = "§l§f"
+            maxTitleTime = 20
+
+        }
+        else if (player.hasTag("enter_splendid")) {
+            titleText = "SPLENDID SUITS"
+            innerColor = "§a"
+            outerColor = "§l§f"
+            maxTitleTime = 20
+
+        }
+        else if (player.hasTag("enter_credits_new")) {
+            titleText = "CREDITS"
+            innerColor = "§c"
+            outerColor = "§l§f"
+            maxTitleTime = 20
+
+        }
+        else if (player.hasTag("enter_ueg")) {
+            titleText = "UEG LEGACY STORE"
+            innerColor = "§d"
+            outerColor = "§l§f"
+            maxTitleTime = 20
+
+        }
+        else if (player.hasTag("enter_rpg")) {
+            titleText = "RPG GAME STORE"
+            innerColor = "§a"
+            outerColor = "§l§f"
+            maxTitleTime = 20
+
+        }
+        else if (player.hasTag("enter_questMaster")) {
+            titleText = "QUEST STORE"
+            innerColor = "§a"
+            outerColor = "§l§f"
+            maxTitleTime = 20
+
+        }
+        else if (player.hasTag("enter_bank")) {
+            titleText = "CYBER BANK"
+            innerColor = "§b"
+            outerColor = "§l§f"
+            maxTitleTime = 20
+
+        }
+        else if (player.hasTag("enter_freedom")) {
+            titleText = "FREEDOM BURGER DINER"
+            innerColor = "§c"
+            outerColor = "§l§f"
+            maxTitleTime = 20
+
+        }
+        else if (player.hasTag("enter_abilitystore")) {
+            titleText = "WIP ABILITY STORE"
+            innerColor = "§c"
+            outerColor = "§l§f"
+            maxTitleTime = 20
+
+        }
+        else if (player.hasTag("new_title_train_ready")) {
+            titleText = "ENTER THE TRAIN"
+            innerColor = "§a"
+            outerColor = "§l§f"
+            maxTitleTime = 20
+
+        }
+        else if (player.hasTag("new_title_to_azure")) {
+            titleText = "TO: AZURE STADIUM"
+            innerColor = "§b"
+            outerColor = "§l§f"
+            maxTitleTime = 20
+
+        }
+        else if (player.hasTag("new_title_welcome_azure")) {
+            titleText = "ARENA VOTE"
+            innerColor = "§e"
+            outerColor = "§l§f"
+            maxTitleTime = 20
+
+        }
+        else if (player.hasTag("new_title_arena_vote")) {
+            titleText = "ARENA VOTE"
+            innerColor = "§e"
+            outerColor = "§l§f"
+            maxTitleTime = 20
+
+        }
+        else if (player.hasTag("new_title_start_train")) {
+            titleText = "START THE TRAIN"
+            innerColor = "§c"
+            outerColor = "§l§f"
+            maxTitleTime = 20
+
+        }
+        else if (player.hasTag("new_title_abilitystore")) {
+            titleText = "ABILITY STORE"
+            innerColor = "§c"
+            outerColor = "§l§f"
+            maxTitleTime = 20
+
+        }
+        else if (player.hasTag("new_title_enter_training_center")) {
+            titleText = "TRAINING CENTER"
+            innerColor = "§c"
+            outerColor = "§l§f"
+            maxTitleTime = 20
+
+        }
+        else if (player.hasTag("enter_hot_topic_clone")) {
+            titleText = "NAME TBD"
+            innerColor = "§c"
+            outerColor = "§l§f"
+            maxTitleTime = 20
+
+        }
+        else if (player.hasTag("enter_perfume_store")) {
+            titleText = "PERFUME STORE"
+            innerColor = "§c"
+            outerColor = "§l§f"
+            maxTitleTime = 20
+
+        }
+        else if (player.hasTag("enter_gamblinzone")) {
+            titleText = "GAMBLINZONE"
+            innerColor = "§6"
+            outerColor = "§l§f"
+            maxTitleTime = 20
+
+        }
+        else if (player.hasTag("new_title_training_try_again")) {
+            titleText = "TRY AGAIN"
+            innerColor = "§C"
+            outerColor = "§l§f"
+            maxTitleTime = 20
+        }
+        else if (player.hasTag("new_title_training_checkpoint")) {
+            titleText = "CHECKPOINT"
+            innerColor = "§6"
+            outerColor = "§l§f"
+            maxTitleTime = 20
+        }
+        else if (player.hasTag("new_title_training_clear")) {
+            titleText = "TRAINING CLEAR"
+            innerColor = "§a"
+            outerColor = "§l§f"
+            maxTitleTime = 20
+        }
+
+        else {
+            titleText = "void"
+            innerColor = "§c"
+            outerColor = "§l§f"
+            maxTitleTime = 10
+        }
+
+        if (player.hasTag("new_title_init")) {
+            newTitleSystemSB.setScore(player, maxTitleTime)
+            player.removeTag("new_title_init")
+        }
+
+        if (newTitleSystemPlayer > 0) {
+
+
+
+
+            var titleTextLength = titleText.length
+            var loopTimes;
+
+            if (titleText != "void") {
+                if (newTitleSystemPlayer == maxTitleTime) {
+                    var processedText = ""
+                    for (var char of titleText) {
+
+                        processedText += char + "  "
+
+                    }
+
+                    player.runCommand(`title @s subtitle update${outerColor}[§r${innerColor}${processedText.trim()}§r${outerColor}]`)
+                }
+                else if (newTitleSystemPlayer == Math.round(maxTitleTime - (maxTitleTime * .05))) {
+                    player.runCommand(`title @s subtitle update`)
+                }
+                else if (newTitleSystemPlayer == Math.round(maxTitleTime - (maxTitleTime * .1))) {
+                    var processedText = ""
+                    for (var char of titleText) {
+
+                        processedText += char + " "
+
+                    }
+
+                    player.runCommand(`title @s subtitle update${outerColor}[§r${innerColor}${processedText.trim()}§r${outerColor}]`)
+                }
+                else if (newTitleSystemPlayer == Math.round(maxTitleTime - (maxTitleTime * .15))) {
+                    player.runCommand(`title @s subtitle update`)
+                }
+                else if (newTitleSystemPlayer == Math.round(maxTitleTime - (maxTitleTime * .2))) {
+                    player.runCommand(`title @s subtitle update${outerColor}[§r${innerColor}${titleText}§r${outerColor}]§r${subtitle}`)
+                }
+
+                else if (newTitleSystemPlayer == Math.round(maxTitleTime - (maxTitleTime * .95))) {
+                    var byeText = "";
+                    var preProcessedText = "[" + titleText + "]"
+                    for (var char in preProcessedText) {
+
+                        byeText += "-"
+
+                    }
+
+                    player.runCommand(`title @s subtitle update${outerColor}[§r${innerColor}${byeText.trim()}§r${outerColor}]`)
+                }
+            }
+
+
+            newTitleSystemSB.addScore(player, -1)
+            if (newTitleSystemPlayer == 1) {
+                titleTags.forEach(tagName => {
+
+                    player.removeTag(tagName)
+
+                })
+            }
+        }
+        else {
+
+            player.runCommand(`title @s subtitle update`)
+            player.removeTag("new_title_active")
+
+        }
+
+
+
+
+        var foodEffectTimerSB = world.scoreboard.getObjective("food_effect_timer")
+        var foodEffectTimerPlayer = foodEffectTimerSB.getScore(player)
+
+
+
+
+        if (foodEffectTimerPlayer != undefined) {
+            if (foodEffectTimerPlayer > 0) {
+                if (player.hasTag("gob_effects")) {
+                    player.runCommand("particle sm:gob_goo_trail ~ ~0.5 ~")
+                }
+                
+                foodEffectTimerSB.addScore(player, -1)
+            }
+            else {
+                player.removeTag("gob_effects")
+                player.runCommand("scoreboard players reset @s food_effect_timer")
+            }
+        }
+
+        var assignedItemSB = world.scoreboard.getObjective("assigned_food")
+        var assignedItemSBPlayer = assignedItemSB.getScore(player)
+
+        var assignedItemName;
+
+        var icarusTempSB = world.scoreboard.getObjective("icarus_temperature")
+        var icarusTempPlayer = icarusTempSB.getScore(player)
+
+        var icarusTempDisplayName = "0°F"
+
+        if (icarusTempPlayer != undefined) {
+            if (icarusTempPlayer < 30) {
+                icarusTempDisplayName = "§a" + (icarusTempPlayer * 10) + "°F"
+            }
+            else if (icarusTempPlayer < 50) {
+                icarusTempDisplayName = "§e" + (icarusTempPlayer * 10) + "°F"
+            }
+            else if (icarusTempPlayer < 70) {
+                icarusTempDisplayName = "§6" + (icarusTempPlayer * 10) + "°F"
+            }
+            else if (icarusTempPlayer < 100){
+                icarusTempDisplayName = "§c" + (icarusTempPlayer * 10) + "°F"
+            }
+            else {
+                icarusTempDisplayName = "§b" + (icarusTempPlayer * 10) + "°F"
+            }
+
+        }
+
+        if (assignedItemSBPlayer != undefined) {
+            assignedItemName = itemNameList[assignedItemSBPlayer]
+            var assignedItemCountSB = world.scoreboard.getObjective(itemScoreboard[assignedItemSBPlayer])
+            var assignedItemCountPlayer = assignedItemCountSB.getScore(player)
+        }
+        else {
+            assignedItemName = "No Item"
+            var assignedItemCountPlayer = 0
+        }
+        player.runCommand(`execute unless entity @s[hasitem={location=slot.weapon.mainhand,item=sm:use_stored_item}] run execute unless entity @s[hasitem={location=slot.weapon.mainhand,item=sm:icarus}] run execute as @s[tag=ingame] run titleraw @s actionbar {"rawtext":[{"text":"Azure Stadium\n\nRemaining Players:\n"},{"score":{"name":"team_nu","objective":"player_alive_count"}},{"text":" - "},{"score":{"name":"team_lambda","objective":"player_alive_count"}},{"text":"\n\nLives:\n"},{"score":{"name":"@s","objective":"lives"}},{"text":"\n\nWeapon Cooldown:\n"},{"score":{"name":"@s","objective":"weapon_cooldown"}}]}`)
+        player.runCommand(`execute if entity @s[hasitem={location=slot.weapon.mainhand,item=sm:use_stored_item}] run execute unless entity @s[hasitem={location=slot.weapon.mainhand,item=sm:icarus}] run execute as @s[tag=ingame] run titleraw @s actionbar {"rawtext":[{"text":"Azure Stadium\n\nRemaining Players:\n"},{"score":{"name":"team_nu","objective":"player_alive_count"}},{"text":" - "},{"score":{"name":"team_lambda","objective":"player_alive_count"}},{"text":"\n\nLives:\n"},{"score":{"name":"@s","objective":"lives"}},{"text":"\n\nStored Item:\n${assignedItemName} (${assignedItemCountPlayer})"}]}`)
+        player.runCommand(`execute if entity @s[hasitem={location=slot.weapon.mainhand,item=sm:icarus}] run execute unless entity @s[hasitem={location=slot.weapon.mainhand,item=sm:use_stored_item}] run execute as @s[tag=ingame] run titleraw @s actionbar {"rawtext":[{"text":"Azure Stadium\n\nRemaining Players:\n"},{"score":{"name":"team_nu","objective":"player_alive_count"}},{"text":" - "},{"score":{"name":"team_lambda","objective":"player_alive_count"}},{"text":"\n\nLives:\n"},{"score":{"name":"@s","objective":"lives"}},{"text":"\n\nTemperature:\n${icarusTempDisplayName}"}]}`)
+
         var gameActive = world.scoreboard.getObjective("game_active")
         var gameActiveNum = gameActive.getScore("game_active")
 
@@ -183,6 +756,43 @@ system.runInterval(() => {
                 statusIcons = statusIcons + "Status Effects: "
             }
             statusIcons = statusIcons + ""
+        }
+
+        const marqueStanding = world.scoreboard.getObjective("marque_standing_time")
+
+        if (player.hasTag("purchase_marque")) {
+            if (!player.hasTag("in_menu2")) {
+                marqueStanding.addScore(player, 1)
+                statusIcons = statusIcons + "§eStand here for 3 seconds to open the menu."
+            }
+            else if (player.hasTag("in_menu2")) {
+                marqueStanding.setScore(player, 0)
+                statusIcons = statusIcons + "§ePlease step off the settings block to open the menu."
+            }
+            if (marqueStanding.getScore(player) > 60) {
+                marqueStanding.setScore(player, 0)
+                player.addTag("in_menu2")
+                player.addTag("open_loadoutmenu2")
+            }
+        }
+        else if (player.hasTag("settings_marque")) {
+
+            if (!player.hasTag("in_menu")) {
+                marqueStanding.addScore(player, 1)
+                statusIcons = statusIcons + "§eStand here for 3 seconds to open the menu."
+            }
+            else if (player.hasTag("in_menu")){
+                marqueStanding.setScore(player, 0)
+                statusIcons = statusIcons + "§ePlease step off the settings block to open the menu."
+            }
+            if (marqueStanding.getScore(player) > 60) {
+                marqueStanding.setScore(player, 0)
+                player.addTag("in_menu")
+                player.addTag("open_loadoutmenu")
+            }
+        }
+        else {
+            marqueStanding.setScore(player, 0)
         }
 
         if (player.hasTag("status_scaled") && statusCount == 1) {

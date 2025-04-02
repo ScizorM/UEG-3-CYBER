@@ -54,6 +54,94 @@ system.runInterval(() => {
                 }
             }
 
+            if (item.typeId == "sm:kusarigama") {
+
+                //if (player.hasTag("kusarigama_attack")) {
+                    
+
+                //    var source = player
+                //    var entityRay = false
+                //    if (item.getComponent('cooldown').getCooldownTicksRemaining(player) == 0) {
+
+                //        var entityRay = false
+                //        const dimension = world.getDimension("overworld")
+
+
+                //        var rayLocation = { x: source.location.x, y: source.location.y + 1.5, z: source.location.z }
+                //        var lookDir = { x: source.getViewDirection().x, y: source.getViewDirection().y, z: source.getViewDirection().z }
+                //        var entityRC = source.getEntitiesFromViewDirection()
+                //        var blockRC = source.dimension.getBlockFromRay(rayLocation, lookDir, { includeLiquidBlocks: false, includePassableBlocks: false, maxDistance: 20})
+
+
+
+
+                //        var particleType = "sm:striker_sparkle"
+
+
+                //        if (blockRC != undefined) {
+                //            source.setProperty("sm:deepstriker_anim", 1)
+                //            var rayDisplacementBlock = { x: source.location.x - blockRC.block.location.x, y: source.location.y - blockRC.block.location.y + .4, z: source.location.z - blockRC.block.location.z }
+
+                //            source.runCommand(`tp @s ${blockRC.block.location.x} ${blockRC.block.location.y} ${blockRC.block.location.z}`)
+
+
+                //            var totalDisplacement = Math.abs(rayDisplacementBlock.x) + Math.abs(rayDisplacementBlock.y) + Math.abs(rayDisplacementBlock.z)
+
+                //            var loopTimes = 50
+
+                //            for (let i = 1; i < loopTimes; i = i + .25) {
+                //                var particleLocation = {
+                //                    x: blockRC.block.location.x + (rayDisplacementBlock.x / i),
+                //                    y: blockRC.block.location.y + (rayDisplacementBlock.y / i) + 0.5,
+                //                    z: blockRC.block.location.z + (rayDisplacementBlock.z / i)
+                //                }
+
+                //                source.runCommand(`particle ${particleType} ${particleLocation.x} ${particleLocation.y} ${particleLocation.z}`)
+
+                //                if (i >= loopTimes) {
+                //                    break;
+                //                }
+                //            }
+                //        }
+                //    }
+
+                    player.removeTag("kusarigama_attack")
+                }
+
+
+            }
+
+            //if (item.typeId == "sm:vulcan_cannon") {
+
+            //    if (player.hasTag("vulcan_attack")) {
+
+
+            //        var source = player
+            //        var entityRay = false
+            //        if (item.getComponent('cooldown').getCooldownTicksRemaining(player) == 0) {
+
+            //            const dimension = world.getDimension("overworld")
+            //            const viewDir = source.getViewDirection()
+            //            const vulcanBlast = source.dimension.spawnEntity("minecraft:arrow", source.getHeadLocation());
+            //            const projectile = vulcanBlast.getComponent("projectile");
+            //            projectile.owner = source;
+            //            const power = 1
+            //            const powerV3 = {
+            //                x: source.getViewDirection().x * power,
+            //                y: source.getViewDirection().y * power,
+            //                z: source.getViewDirection().z * power
+            //            }
+            //            projectile.shoot(powerV3)
+            //            source.runCommand("function vulcan")
+            //            source.runCommand("function vulcan_extendedcmds")
+            //        }
+
+            //        player.removeTag("vulcan_attack")
+            //    }
+
+
+            //}
+        if (item) {
             if (item.getComponent(ItemCooldownComponent.componentId)) {
                 var cooldown = Math.round((item.getComponent(ItemCooldownComponent.componentId).getCooldownTicksRemaining(player)) / 20)
                 const cooldownScore = world.scoreboard.getObjective("icarus_is_inactive")
@@ -63,18 +151,16 @@ system.runInterval(() => {
                 if (cooldownScorePlayer == 1 && item.typeId == "sm:icarus") {
                     const cooldownCompd = item.getComponent(ItemCooldownComponent.componentId)
                     cooldownCompd.startCooldown(player)
-                    
+
                 }
 
             }
             else {
                 cooldownData.setScore(player, 0)
             }
+        }
 
-        }
-        else {
-            cooldownData.setScore(player,0)
-        }
+
 
     })
 })
@@ -135,11 +221,30 @@ world.afterEvents.itemUse.subscribe((data) => {
             if (item.getComponent('cooldown').getCooldownTicksRemaining(player) > 37) {
                 cooldownComp7.startCooldown(player)
             }
+        case 'sm:teamless_landmine':
+            const cooldownCompasd = item.getComponent(ItemCooldownComponent.componentId)
+            //world.sendMessage("[Landmine Debug] " + item.getComponent('cooldown').getCooldownTicksRemaining(player))
+            if (item.getComponent('cooldown').getCooldownTicksRemaining(player) > 37) {
+                cooldownCompasd.startCooldown(player)
+            }
+        case 'sm:enhanced_charged_bolt_rifle':
+            const cooldownCompcds = item.getComponent(ItemCooldownComponent.componentId)
+            //world.sendMessage("[Landmine Debug] " + item.getComponent('cooldown').getCooldownTicksRemaining(player))
+            if (item.getComponent('cooldown').getCooldownTicksRemaining(player) > 37) {
+                cooldownCompcds.startCooldown(player)
+            }
         case 'sm:deep_striker':
             const cooldownCompz = item.getComponent(ItemCooldownComponent.componentId)
             //world.sendMessage("[Landmine Debug] " + item.getComponent('cooldown').getCooldownTicksRemaining(player))
             if (item.getComponent('cooldown').getCooldownTicksRemaining(player) > 197) {
                 cooldownCompz.startCooldown(player)
+            }
+            break
+        case 'sm:enhanced_deep_striker':
+            const cooldownCompdd = item.getComponent(ItemCooldownComponent.componentId)
+            world.sendMessage("[Landmine Debug] " + item.getComponent('cooldown').getCooldownTicksRemaining(player))
+            if (item.getComponent('cooldown').getCooldownTicksRemaining(player) > 37) {
+                cooldownCompdd.startCooldown(player)
             }
             break
         case 'sm:scaler_bomb':
@@ -175,6 +280,13 @@ world.afterEvents.itemUse.subscribe((data) => {
             //world.sendMessage("[Charged Debug] " + item.getComponent('cooldown').getCooldownTicksRemaining(player))
             if (item.getComponent('cooldown').getCooldownTicksRemaining(player) > 97) {
                 cooldownComp10.startCooldown(player)
+            }
+            break
+        case 'sm:enhanced_platform_fabricator':
+            const cooldownComp10a = item.getComponent(ItemCooldownComponent.componentId)
+            //world.sendMessage("[Charged Debug] " + item.getComponent('cooldown').getCooldownTicksRemaining(player))
+            if (item.getComponent('cooldown').getCooldownTicksRemaining(player) > 97) {
+                cooldownComp10a.startCooldown(player)
             }
             break
         case 'sm:repulsion_blade':
@@ -248,6 +360,13 @@ world.afterEvents.itemUse.subscribe((data) => {
             //world.sendMessage("[Big Joe Debug] " + item.getComponent('cooldown').getCooldownTicksRemaining(player))
             if (item.getComponent('cooldown').getCooldownTicksRemaining(player) > 797) {
                 cooldownComp20.startCooldown(player)
+            }
+            break
+        case 'sm:kusarigama':
+            const cooldownComp22 = item.getComponent(ItemCooldownComponent.componentId)
+            world.sendMessage("[Kusarigama Debug] " + item.getComponent('cooldown').getCooldownTicksRemaining(player))
+            if (item.getComponent('cooldown').getCooldownTicksRemaining(player) > 17) {
+                cooldownComp22.startCooldown(player)
             }
             break
         case 'sm:baby_stick':

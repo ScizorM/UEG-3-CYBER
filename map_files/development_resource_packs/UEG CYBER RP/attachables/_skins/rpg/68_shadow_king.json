@@ -1,0 +1,42 @@
+//bridge-file-version: #18
+{
+	"format_version": "1.16.100",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "sm:skin_68",
+			"materials": {
+				"default": "guardian"
+			},
+			"textures": {
+				"default": "textures/entity/skins/shadow_king",
+				"frame_2": "textures/entity/skins/shadow_king_frame2",
+				"frame_3": "textures/entity/skins/shadow_king_frame3",
+				"frame_4": "textures/entity/skins/shadow_king_frame2",
+				"frame_5": "textures/entity/skins/shadow_king",
+				"frame_6": "textures/entity/skins/shadow_king",
+				"frame_7": "textures/entity/skins/shadow_king",
+				"frame_8": "textures/entity/skins/shadow_king",
+				"dash1": "textures/entity/skins/shadow_king",
+				"dash2": "textures/entity/skins/shadow_king",
+				"dash3": "textures/entity/skins/shadow_king",
+				"dash4": "textures/entity/skins/shadow_king"
+			},
+			"geometry": {
+				"default": "geometry.shadow_king"
+			},
+			"render_controllers": [
+				"controller.render.skin_animations"
+			],
+			"animations": {
+				"idle": "animation.shadow_king.float",
+				"dash": "animation.shadow_king.float",
+				"controller": "controller.animation.conduit"
+			},
+			"scripts": {
+				"animate": [
+					"controller"
+				]
+			}
+		}
+	}
+}

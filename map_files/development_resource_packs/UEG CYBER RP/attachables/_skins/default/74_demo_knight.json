@@ -1,0 +1,32 @@
+//bridge-file-version: #18
+{
+	"format_version": "1.16.100",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "sm:skin_74",
+			"materials": {
+				"default": "entity_emissive_alpha"
+			},
+			"textures": {
+				"default": "textures/entity/skins/demo_knight",
+				"frame_2": "textures/entity/skins/demo_knight",
+				"frame_3": "textures/entity/skins/demo_knight",
+				"frame_4": "textures/entity/skins/demo_knight",
+				"frame_5": "textures/entity/skins/demo_knight",
+				"frame_6": "textures/entity/skins/demo_knight",
+				"frame_7": "textures/entity/skins/demo_knight",
+				"frame_8": "textures/entity/skins/demo_knight",
+				"dash1": "textures/entity/skins/demo_knight",
+				"dash2": "textures/entity/skins/demo_knight",
+				"dash3": "textures/entity/skins/demo_knight",
+				"dash4": "textures/entity/skins/demo_knight"
+			},
+			"geometry": {
+				"default": "geometry.demo_knight"
+			},
+			"render_controllers": [
+				"controller.render.skin_animations"
+			]
+		}
+	}
+}

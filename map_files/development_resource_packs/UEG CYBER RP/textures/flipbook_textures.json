@@ -25,6 +25,126 @@
 		"atlas_tile_variant": 2
 	},
 	{
+		"flipbook_texture": "textures/blocks/training_top",
+		"atlas_tile": "sm:training_block_new_top",
+		"frames": [
+			0,
+			1,
+			2,
+			3,
+			4
+		],
+		"blend_frames": true,
+		"ticks_per_frame": 10,
+		"atlas_tile_variant": 2
+	},
+	{
+		"flipbook_texture": "textures/blocks/indicator_0",
+		"atlas_tile": "sm:indicator_0",
+		"frames": [
+			0,
+			1,
+			2,
+			3,
+			4
+		],
+		"blend_frames": true,
+		"ticks_per_frame": 2,
+		"atlas_tile_variant": 2
+	},
+	{
+		"flipbook_texture": "textures/blocks/indicator_1",
+		"atlas_tile": "sm:indicator_1",
+		"frames": [
+			0,
+			1,
+			2,
+			3,
+			4
+		],
+		"blend_frames": true,
+		"ticks_per_frame": 2,
+		"atlas_tile_variant": 2
+	},
+	{
+		"flipbook_texture": "textures/blocks/indicator_2",
+		"atlas_tile": "sm:indicator_2",
+		"frames": [
+			0,
+			1,
+			2,
+			3,
+			4
+		],
+		"blend_frames": true,
+		"ticks_per_frame": 2,
+		"atlas_tile_variant": 2
+	},
+	{
+		"flipbook_texture": "textures/blocks/indicator_3",
+		"atlas_tile": "sm:indicator_3",
+		"frames": [
+			0,
+			1,
+			2,
+			3,
+			4
+		],
+		"blend_frames": true,
+		"ticks_per_frame": 2,
+		"atlas_tile_variant": 2
+	},
+	{
+		"flipbook_texture": "textures/blocks/checkpoint_block",
+		"atlas_tile": "sm:checkp_block_new_top",
+		"frames": [
+			0,
+			1,
+			2,
+			3,
+			4
+		],
+		"blend_frames": true,
+		"ticks_per_frame": 10,
+		"atlas_tile_variant": 2
+	},
+	{
+		"flipbook_texture": "textures/blocks/goal_block",
+		"atlas_tile": "sm:goal_block_new_top",
+		"frames": [
+			0,
+			1,
+			2,
+			3,
+			4
+		],
+		"blend_frames": true,
+		"ticks_per_frame": 10,
+		"atlas_tile_variant": 2
+	},
+	{
+		"flipbook_texture": "textures/blocks/type_riftzone",
+		"atlas_tile": "sm:type_riftzone",
+		"frames": [
+			0,
+			1
+		],
+		"blend_frames": true,
+		"ticks_per_frame": 30,
+		"atlas_tile_variant": 1
+	},
+	{
+		"flipbook_texture": "textures/blocks/type_riftzone_jm",
+		"atlas_tile": "sm:type_riftzone_jm",
+		"frames": [
+			0,
+			1
+		],
+		"blend_frames": true,
+		"ticks_per_frame": 30,
+		"atlas_tile_variant": 1
+	},
+	{
 		"flipbook_texture": "textures/blocks/vaporglitch",
 		"atlas_tile": "sm:vaporglitch",
 		"frames": [

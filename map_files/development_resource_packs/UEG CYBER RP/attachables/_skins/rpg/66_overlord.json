@@ -1,0 +1,42 @@
+//bridge-file-version: #18
+{
+	"format_version": "1.16.100",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "sm:skin_66",
+			"materials": {
+				"default": "entity_emissive_alpha"
+			},
+			"textures": {
+				"default": "textures/entity/skins/overlord",
+				"frame_2": "textures/entity/skins/overlord",
+				"frame_3": "textures/entity/skins/overlord",
+				"frame_4": "textures/entity/skins/overlord",
+				"frame_5": "textures/entity/skins/overlord",
+				"frame_6": "textures/entity/skins/overlord",
+				"frame_7": "textures/entity/skins/overlord",
+				"frame_8": "textures/entity/skins/overlord",
+				"dash1": "textures/entity/skins/overlord_dash1",
+				"dash2": "textures/entity/skins/overlord_dash2",
+				"dash3": "textures/entity/skins/overlord_dash3",
+				"dash4": "textures/entity/skins/overlord_dash4"
+			},
+			"geometry": {
+				"default": "geometry.overlord"
+			},
+			"render_controllers": [
+				"controller.render.skin_animations"
+			],
+			"animations": {
+				"idle": "animation.overlord.idle",
+				"dash": "animation.overlord.fly",
+				"controller": "controller.animation.conduit"
+			},
+			"scripts": {
+				"animate": [
+					"controller"
+				]
+			}
+		}
+	}
+}

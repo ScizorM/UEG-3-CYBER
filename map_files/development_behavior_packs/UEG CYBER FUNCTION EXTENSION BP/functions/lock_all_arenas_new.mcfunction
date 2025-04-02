@@ -25,3 +25,7 @@ scoreboard players set "0095" arenapacks_unlocked 0
 scoreboard players set "0096" arenapacks_unlocked 0
 scoreboard players set "secret" arenapacks_unlocked 0
 function reset_apack_blocks
+setblock 98 29 31 sm:purchase_block_2
+setblock 98 29 25 sm:purchase_block_3
+setblock 106 34 17 sm:purchase_block_2
+setblock 110 34 17 sm:purchase_block_2

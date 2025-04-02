@@ -1,0 +1,32 @@
+//bridge-file-version: #18
+{
+	"format_version": "1.16.100",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "sm:skin_73",
+			"materials": {
+				"default": "entity_emissive_alpha"
+			},
+			"textures": {
+				"default": "textures/entity/skins/demolitionist_ueg1",
+				"frame_2": "textures/entity/skins/demolitionist_ueg1",
+				"frame_3": "textures/entity/skins/demolitionist_ueg1",
+				"frame_4": "textures/entity/skins/demolitionist_ueg1",
+				"frame_5": "textures/entity/skins/demolitionist_ueg1",
+				"frame_6": "textures/entity/skins/demolitionist_ueg1",
+				"frame_7": "textures/entity/skins/demolitionist_ueg1",
+				"frame_8": "textures/entity/skins/demolitionist_ueg1",
+				"dash1": "textures/entity/skins/demolitionist_ueg1_dash_1",
+				"dash2": "textures/entity/skins/demolitionist_ueg1_dash_2",
+				"dash3": "textures/entity/skins/demolitionist_ueg1",
+				"dash4": "textures/entity/skins/demolitionist_ueg1"
+			},
+			"geometry": {
+				"default": "geometry.ueg1_skin_full"
+			},
+			"render_controllers": [
+				"controller.render.skin_animations"
+			]
+		}
+	}
+}

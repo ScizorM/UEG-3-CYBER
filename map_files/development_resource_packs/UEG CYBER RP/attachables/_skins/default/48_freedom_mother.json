@@ -1,0 +1,21 @@
+//bridge-file-version: #21
+{
+	"format_version": "1.16.100",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "sm:skin_48",
+			"materials": {
+				"default": "guardian"
+			},
+			"textures": {
+				"default": "textures/entity/cheeseburger_mom"
+			},
+			"geometry": {
+				"default": "geometry.cheeseburger_mom"
+			},
+			"render_controllers": [
+				"controller.render.darkless"
+			]
+		}
+	}
+}

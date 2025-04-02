@@ -1,0 +1,42 @@
+//bridge-file-version: #18
+{
+	"format_version": "1.16.100",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "sm:skin_10",
+			"materials": {
+				"default": "entity_emissive_alpha"
+			},
+			"textures": {
+				"default": "textures/entity/skins/finite",
+				"frame_2": "textures/entity/skins/finite",
+				"frame_3": "textures/entity/skins/finite",
+				"frame_4": "textures/entity/skins/finite",
+				"frame_5": "textures/entity/skins/finite",
+				"frame_6": "textures/entity/skins/finite",
+				"frame_7": "textures/entity/skins/finite",
+				"frame_8": "textures/entity/skins/finite",
+				"dash1": "textures/entity/skins/finite_dash_1",
+				"dash2": "textures/entity/skins/finite_dash_2",
+				"dash3": "textures/entity/skins/finite_dash_2",
+				"dash4": "textures/entity/skins/finite_dash_3"
+			},
+			"geometry": {
+				"default": "geometry.finite"
+			},
+			"render_controllers": [
+				"controller.render.skin_animations"
+			],
+			"animations": {
+				"idle": "animation.finite.idle",
+				"dash": "animation.finite.dash",
+				"controller": "controller.animation.finite"
+			},
+			"scripts": {
+				"animate": [
+					"controller"
+				]
+			}
+		}
+	}
+}

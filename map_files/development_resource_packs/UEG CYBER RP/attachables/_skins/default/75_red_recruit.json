@@ -1,0 +1,21 @@
+//bridge-file-version: #21
+{
+	"format_version": "1.16.100",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "sm:skin_75",
+			"materials": {
+				"default": "guardian"
+			},
+			"textures": {
+				"default": "textures/entity/skins/red_recruit_final"
+			},
+			"geometry": {
+				"default": "geometry.red_recruit"
+			},
+			"render_controllers": [
+				"controller.render.darkless"
+			]
+		}
+	}
+}

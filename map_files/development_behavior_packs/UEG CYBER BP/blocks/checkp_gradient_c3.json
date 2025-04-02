@@ -1,0 +1,25 @@
+//bridge-file-version: #5
+{
+	"format_version": "1.21.10",
+	"minecraft:block": {
+		"description": {
+			"identifier": "sm:checkp_gradient_c3"
+		},
+		"components": {
+			"minecraft:light_emission": 1,
+			"minecraft:light_dampening": 0.0,
+			"minecraft:destructible_by_mining": false,
+			"minecraft:destructible_by_explosion": false,
+			"minecraft:collision_box": false,
+			"minecraft:geometry": "geometry.gradient_c3",
+			"minecraft:material_instances": {
+				"*": {
+					"face_dimming": false,
+					"render_method": "blend",
+					"ambient_occlusion": false,
+					"texture": "sm:checkp_gradient"
+				}
+			}
+		}
+	}
+}

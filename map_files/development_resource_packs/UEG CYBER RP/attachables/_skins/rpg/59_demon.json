@@ -29,7 +29,7 @@
 			],
 			"animations": {
 				"idle": "animation.demon_cyberized.idle",
-				"dash": "animation.demon_cyberized.fly",
+				"dash": "animation.shadow_elf.fly",
 				"controller": "controller.animation.conduit"
 			},
 			"scripts": {

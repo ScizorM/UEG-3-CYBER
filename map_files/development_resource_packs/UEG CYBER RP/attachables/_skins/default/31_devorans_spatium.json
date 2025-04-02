@@ -1,0 +1,44 @@
+//bridge-file-version: #18
+{
+	"format_version": "1.16.100",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "sm:skin_31",
+			"materials": {
+				"default": "entity_alphablend",
+				"alphatest": "entity_alphatest",
+				"emissive": "entity_emissive_alpha"
+			},
+			"textures": {
+				"default": "textures/entity/skins/devorans_spatium",
+				"frame_2": "textures/entity/skins/devorans_spatium",
+				"frame_3": "textures/entity/skins/devorans_spatium",
+				"frame_4": "textures/entity/skins/devorans_spatium",
+				"frame_5": "textures/entity/skins/devorans_spatium",
+				"frame_6": "textures/entity/skins/devorans_spatium",
+				"frame_7": "textures/entity/skins/devorans_spatium",
+				"frame_8": "textures/entity/skins/devorans_spatium",
+				"dash1": "textures/entity/skins/devorans_spatium_dash1",
+				"dash2": "textures/entity/skins/devorans_spatium_dash2",
+				"dash3": "textures/entity/skins/devorans_spatium",
+				"dash4": "textures/entity/skins/devorans_spatium"
+			},
+			"geometry": {
+				"default": "geometry.devorans_spatium"
+			},
+			"render_controllers": [
+				"controller.render.devorans_spatium"
+			],
+			"animations": {
+				"idle": "animation.devorans_spatium.rotate",
+				"dash": "animation.devorans_spatium.dash",
+				"controller": "controller.animation.conduit"
+			},
+			"scripts": {
+				"animate": [
+					"controller"
+				]
+			}
+		}
+	}
+}

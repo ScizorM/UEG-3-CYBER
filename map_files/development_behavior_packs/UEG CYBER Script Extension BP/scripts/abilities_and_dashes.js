@@ -165,7 +165,7 @@ system.runInterval(() => {
 
         if (player.isSneaking && player.level > 0) {
             if (player.hasTag("rocketjump")) {
-                player.applyKnockback(player.getViewDirection().x, player.getViewDirection().z, 0.1, 0.5)
+                player.applyKnockback(0, 0, 0, 1.25)
                 player.runCommand("function explosion_rocketjump")
                 player.runCommand("camerashake add @s 0.5 0.2 positional")
             }
@@ -188,6 +188,8 @@ system.runInterval(() => {
             if (player.hasTag("remote")) {
 
             }
+
+            player.runCommand("xp -100L @s")
         }
 
         if (player.hasTag("vel_cancel") && blockBelowPlayerTest == undefined) {
@@ -202,11 +204,11 @@ system.runInterval(() => {
 
         if (player.hasTag("stoned")) {
             player.applyKnockback(0, 0, 0, -1)
-            const targets = player.dimension.getEntities({ location: player.location, maxDistance: 3 });
+            const targets = player.dimension.getEntities({ location: player.location, maxDistance: 5 });
             if (player.getVelocity().y > -0.000000001 && blockBelowPlayer != undefined) {
                 for (const target of targets) {
                     if (target != player) {
-                        target.applyKnockback(target.location.x - player.location.x, target.location.z - player.location.z, 3, 0.8);
+                        target.applyKnockback(target.location.x - player.location.x, target.location.z - player.location.z, 4, 1);
                     }
                 }
                 player.runCommand("function stoned_ability_explode")
@@ -220,19 +222,59 @@ system.runInterval(() => {
 
 
 
+        player.runCommand("/scoreboard players add @s dashCooldown 0 ")
+        player.runCommand("/scoreboard players add @s airTime 0 ")
 
-        if (player.isFlying == true) {
+        var dashCooldownSB = world.scoreboard.getObjective("dashCooldown")
+        var dashCooldownPlayer = dashCooldownSB.getScore(player)
+
+        var airTimeSB = world.scoreboard.getObjective("airTime")
+        var airTimePlayer = airTimeSB.getScore(player)
+
+        if (dashCooldownPlayer > 0) {
+            dashCooldownSB.addScore(player, -1)
+        }
+
+        if (Math.abs(player.getVelocity().y) > 0) {
+            airTimeSB.addScore(player, 1)
+        }
+        else {
+            airTimeSB.setScore(player,0)
+        }
+
+        if (player.getVelocity().y != 0 && player.hasTag("onGround")) {
+            player.removeTag("onGround")
+            player.addTag("hasJumped")
+        }
+
+        if (!player.isJumping && player.hasTag("hasJumped")) {
+            player.removeTag("hasJumped")
+        }
+
+        if (player.isOnGround && !player.hasTag("onGround")) {
+            player.addTag("onGround")
+        }
+
+
+        if (player.isJumping == true && !player.hasTag("hasJumped") && !player.hasTag("onGround")) {
+            player.addTag("hasJumped")
             if (player.getGameMode() == `creative`) {
 
             }
-            else if (player.hasTag("flying") == false && dashes.getScore(player) >= minDashesRequiredVar) {
+            else if (dashes.getScore(player) >= minDashesRequiredVar) {
+                dashCooldownSB.setScore(player,5)
                 //player.sendMessage(`NOT CREATIVE`)
                 const scoreboard = world.scoreboard.getObjective("dash_strength")
-                player.playSound("dash", {volume: 0.4, pitch: Math.max(Math.random(),0.8)})
-                player.applyKnockback(player.getViewDirection().x / 5, player.getViewDirection().z / 5, Math.sqrt(player.getViewDirection().x ** 2 + player.getViewDirection().z ** 2) * dash_strength, dash_verticalityp/100)
+                player.playSound("dash", { volume: 0.4, pitch: Math.max(Math.random(), 0.8) })
+                player.sendMessage("View Direction Y: " + player.getViewDirection().y.toString()) 
+
+                    player.applyKnockback(player.getViewDirection().x, player.getViewDirection().z, dash_strength - Math.abs(player.getViewDirection().y / 1.5), ((player.getViewDirection().y + 1) / 2) * (dash_strength / 2))
+                    dashes.addScore(player, dash_usage)
+
+
                 player.runCommand("function removeFlightTag")
                 player.runCommand("function redo_dash_effects")
-                dashes.addScore(player, dash_usage)
+
                 player.addTag("flying")
                 player.addTag("dash_timer")
                 player.addTag("dashAnim")

@@ -152,26 +152,16 @@
 						{
 							"punching": "variable.attack_time > 0"
 						}
-					],
-					"on_entry": [
-						"@s sm:not_punching"
-					],
-					"on_exit": [
-						"@s sm:not_punching"
 					]
 				},
 				"punching": {
 					"on_entry": [
-						"/function melee_cmds",
-						"@s sm:punching"
+						"/function swing_functions"
 					],
 					"transitions": [
 						{
 							"default": "variable.attack_time == 0"
 						}
-					],
-					"on_exit": [
-						"@s sm:not_punching"
 					]
 				}
 			}

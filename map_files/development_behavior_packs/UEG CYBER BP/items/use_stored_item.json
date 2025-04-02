@@ -1,0 +1,22 @@
+//bridge-file-version: #10
+{
+	"format_version": "1.21.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "sm:use_stored_item"
+		},
+		"components": {
+			"minecraft:cooldown": {
+				"category": "stored_item",
+				"duration": 1
+			},
+			"minecraft:icon": "sm:use_stored_item",
+			"minecraft:display_name": {
+				"value": "Utility Lunchbox\n"
+			},
+			"minecraft:custom_components": [
+				"sm:use_stored_item"
+			]
+		}
+	}
+}

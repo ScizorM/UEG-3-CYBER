@@ -43,7 +43,13 @@ world.beforeEvents.worldInitialize.subscribe((initEvent) => {
         onPlayerInteract(event) {
             const { entity, block } = event;
             const dimension = world.getDimension("overworld")
+            var blockx = block.location.x
+            var blocky = block.location.y
+            var blockz = block.location.z
+            block.dimension.runCommand("particle sm:respawn_beam " + blockx + " " + blocky + " " + blockz)
+            block.dimension.runCommand("setblock " + blockx + " " + blocky + " " + blockz + " air")
             block.dimension.runCommand("function find_piglin_head")
+
         }
     });
     initEvent.blockComponentRegistry.registerCustomComponent("sm:blockfab1", {

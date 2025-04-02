@@ -14,7 +14,10 @@ world.beforeEvents.itemUse.subscribe(data => {
 
     if (data.itemStack.typeId === "sm:purchase") {
 
-        system.run(() => purchase(player))
+        if (!player.hasTag("enter_ueg") && (!player.hasTag("enter_j_mikes")) && (!player.hasTag("enter_rpg") && (!player.hasTag("enter_abilitystore")) && (!player.hasTag("enter_gamblinzone")) &&  (!player.hasTag("enter_hot_topic_clone")))) {
+            system.run(() => purchase(player))
+        }
+
 
     }
 })
@@ -408,6 +411,7 @@ function purchase(player) {
             else if (currentSkin > 0) {
                 currency.addScore(player, -cost)
                 player.addTag(skinNumber[currentSkin] + "_skin_unlocked")
+                player.addTag("checkSkinCount")
             }
         }
         else if (responseValue == 1 && gcurrencyCount >= cost && player.hasTag("enter_splendid") == false) {
@@ -448,6 +452,7 @@ function purchase(player) {
             else if (currentSkin > 0) {
                 currency.addScore("global_credits", -cost)
                 player.addTag(skinNumber[currentSkin] + "_skin_unlocked")
+                player.addTag("checkSkinCount")
             }
         }
 

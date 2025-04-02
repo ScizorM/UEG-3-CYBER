@@ -3,4 +3,3 @@
 function titleclear_priority1
 tag @s add titlea
 tag @s add title_321
-hud @s hide crosshair

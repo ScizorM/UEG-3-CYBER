@@ -11,3 +11,5 @@ replaceitem entity @s slot.hotbar 7 sm:loadout_block
 function save_loadout_3
 scoreboard players set @s loadout3_type 1
 clear @s
+scoreboard players set @s loadout3Nick 20
+scoreboard players set @s loadout3Icon 1

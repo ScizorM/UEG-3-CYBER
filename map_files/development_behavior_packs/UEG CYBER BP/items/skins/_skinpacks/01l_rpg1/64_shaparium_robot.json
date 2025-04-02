@@ -1,0 +1,22 @@
+//bridge-file-version: #7
+{
+	"format_version": "1.21.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "sm:skin_64"
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:display_name": {
+				"value": "Skin: Shaparium Robot\nDesigner: ScizorM"
+			},
+			"minecraft:wearable": {
+				"slot": "slot.armor.head"
+			},
+			"minecraft:armor": {
+				"protection": 0
+			},
+			"minecraft:icon": "sm:cosmetic_component"
+		}
+	}
+}

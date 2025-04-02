@@ -1,0 +1,21 @@
+//bridge-file-version: #11
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "sm:medium_info_display",
+			"materials": {
+				"default": "guardian"
+			},
+			"render_controllers": [
+				"controller.render.guardian"
+			],
+			"textures": {
+				"default": "textures/entity/infographic_large"
+			},
+			"geometry": {
+				"default": "geometry.medium_infographic_display"
+			}
+		}
+	}
+}

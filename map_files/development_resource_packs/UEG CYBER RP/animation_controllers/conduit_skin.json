@@ -1,31 +1,29 @@
-//bridge-file-version: #1
 {
 	"format_version": "1.10.0",
 	"animation_controllers": {
 		"controller.animation.conduit": {
-			"initial_state": "default",
 			"states": {
 				"default": {
-					"animations": [
-						"idle"
-					],
+					"animations": ["idle"],
 					"transitions": [
-						{
-							"explode": "query.variant > 7"
-						}
+						{"explode": "query.variant > 7"}
 					],
 					"blend_transition": 0.05
 				},
 				"explode": {
-					"animations": [
-						"dash"
-					],
+					"animations": ["dash"],
 					"transitions": [
-						{
-							"default": "query.all_animations_finished"
-						}
+						{"default": "query.all_animations_finished"}
 					],
-					"blend_transition": 0.2
+					"blend_transition": {
+						"0.0": 1,
+						"0.04": 0.896,
+						"0.08": 0.648,
+						"0.12": 0.352,
+						"0.16": 0.104,
+						"0.2": 0
+					},
+					"blend_via_shortest_path": true
 				}
 			}
 		}

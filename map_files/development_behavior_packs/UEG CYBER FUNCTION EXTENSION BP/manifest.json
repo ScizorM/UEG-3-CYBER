@@ -16,7 +16,7 @@
 	},
 	"header": {
 		"name": "UEG CYBER FUNCTION EXTENSION",
-		"description": "Adds 1.19 command support.",
+		"description": "Provides the new /execute syntax to UEG CYBER.",
 		"min_engine_version": [
 			1,
 			20,

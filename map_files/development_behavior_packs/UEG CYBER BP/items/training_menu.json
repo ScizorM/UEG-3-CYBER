@@ -1,0 +1,22 @@
+//bridge-file-version: #10
+{
+	"format_version": "1.21.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "sm:training_menu"
+		},
+		"components": {
+			"minecraft:cooldown": {
+				"category": "st",
+				"duration": 1
+			},
+			"minecraft:icon": "sm:training_menu",
+			"minecraft:display_name": {
+				"value": "Training Menu"
+			},
+			"minecraft:custom_components": [
+				"sm:training_menu"
+			]
+		}
+	}
+}

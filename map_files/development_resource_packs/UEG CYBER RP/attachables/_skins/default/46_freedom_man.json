@@ -1,0 +1,32 @@
+//bridge-file-version: #24
+{
+	"format_version": "1.16.100",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "sm:skin_46",
+			"materials": {
+				"default": "guardian"
+			},
+			"textures": {
+				"default": "textures/entity/skins/cheeseburger_freedom_man",
+				"frame_2": "textures/entity/skins/cheeseburger_freedom_man_frame2",
+				"frame_3": "textures/entity/skins/cheeseburger_freedom_man_frame2",
+				"frame_4": "textures/entity/skins/cheeseburger_freedom_man",
+				"frame_5": "textures/entity/skins/cheeseburger_freedom_man",
+				"frame_6": "textures/entity/skins/cheeseburger_freedom_man",
+				"frame_7": "textures/entity/skins/cheeseburger_freedom_man",
+				"frame_8": "textures/entity/skins/cheeseburger_freedom_man",
+				"dash1": "textures/entity/skins/cheeseburger_freedom_man",
+				"dash2": "textures/entity/skins/cheeseburger_freedom_man",
+				"dash3": "textures/entity/skins/cheeseburger_freedom_man",
+				"dash4": "textures/entity/skins/cheeseburger_freedom_man"
+			},
+			"geometry": {
+				"default": "geometry.cheeseburger_freedom_man"
+			},
+			"render_controllers": [
+				"controller.render.skin_animations"
+			]
+		}
+	}
+}

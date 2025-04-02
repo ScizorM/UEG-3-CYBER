@@ -17,7 +17,9 @@
 					"Array.skins": [
 						"Texture.default",
 						"Texture.skins",
-						"Texture.effects"
+						"Texture.effects",
+						"Texture.loadouts",
+						"Texture.weapons"
 					]
 				}
 			}

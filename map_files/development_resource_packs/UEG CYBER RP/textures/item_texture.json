@@ -13,53 +13,138 @@
 				"textures/items/new_icons/dash_component"
 			]
 		},
-		"sm:emergency_1":{
-			"textures":[
+		"sm:emergency_1": {
+			"textures": [
 				"textures/items/emergency_1"
 			]
 		},
-		"sm:emergency_2":{
-			"textures":[
+				"sm:crappy_dodgeball": {
+			"textures": [
+				"textures/items/secret/crappy_dodgeball"
+			]
+		},
+				"sm:training_menu": {
+			"textures": [
+				"textures/items/training_menu"
+			]
+		},
+		"sm:emergency_2": {
+			"textures": [
 				"textures/items/emergency_2"
 			]
 		},
-		"sm:emergency_3":{
-			"textures":[
+				"sm:advancements_menu": {
+			"textures": [
+				"textures/items/advancements_menu"
+			]
+		},
+		"sm:gamble": {
+			"textures": [
+				"textures/items/gamble"
+			]
+		},
+		"sm:token_redeem": {
+			"textures": [
+				"textures/items/token_redeem"
+			]
+		},
+		"sm:lobby_menu": {
+			"textures": [
+				"textures/items/lobby_menu"
+			]
+		},
+		"sm:emergency_3": {
+			"textures": [
 				"textures/items/emergency_3"
 			]
 		},
-		"sm:settings":{
-			"textures":[
+		"sm:perfume_0": {
+			"textures": [
+				"textures/items/effects/effect_0"
+			]
+		},
+		"sm:perfume_1": {
+			"textures": [
+				"textures/items/effects/effect_1"
+			]
+		},
+		"sm:perfume_2": {
+			"textures": [
+				"textures/items/effects/effect_2"
+			]
+		},
+		"sm:perfume_3": {
+			"textures": [
+				"textures/items/effects/effect_3"
+			]
+		},
+		"sm:perfume_4": {
+			"textures": [
+				"textures/items/effects/effect_4"
+			]
+		},
+		"sm:perfume_5": {
+			"textures": [
+				"textures/items/effects/effect_5"
+			]
+		},
+		"sm:perfume_6": {
+			"textures": [
+				"textures/items/effects/effect_6"
+			]
+		},
+		"sm:perfume_7": {
+			"textures": [
+				"textures/items/effects/effect_7"
+			]
+		},
+		"sm:kusarigama": {
+			"textures": [
+				"textures/items/kusarigama"
+			]
+		},
+		"sm:gilded_marksman": {
+			"textures": [
+				"textures/items/gilded_marksman"
+			]
+		},
+		"sm:settings": {
+			"textures": [
 				"textures/items/settings"
 			]
 		},
-		"sm:bank":{
-			"textures":[
+		"sm:use_stored_item": {
+			"textures": [
+				"textures/items/stored_item"
+			]
+		},
+		"sm:bank": {
+			"textures": [
 				"textures/items/bank"
 			]
 		},
-		"sm:mb85_crimson_hws":{
-			"textures":[
+		"sm:mb85_crimson_hws": {
+			"textures": [
 				"textures/items/bayocrimson"
 			]
 		},
-		"sm:scaler_bomb":{
-			"textures":[
+		"sm:scaler_bomb": {
+			"textures": [
 				"textures/items/scaler_bomb"
 			]
 		},
-		"sm:deep_striker":{
-			"textures":[
+		"sm:deep_striker": {
+			"textures": [
 				"textures/items/deep_striker"
 			]
 		},
-		"sm:green_gobbler_cannon":{
-			"textures":[
+		"sm:green_gobbler_cannon": {
+			"textures": [
 				"textures/items/green_gobbler_cannon"
 			]
 		},
-				"sm:implosion_grenade":{
-			"textures":[
+		"sm:implosion_grenade": {
+			"textures": [
 				"textures/items/implosion_grenade"
 			]
 		},

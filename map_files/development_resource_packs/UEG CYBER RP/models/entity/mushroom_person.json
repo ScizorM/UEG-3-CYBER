@@ -1,0 +1,112 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.mushroom_person",
+				"texture_width": 128,
+				"texture_height": 64,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 5.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "waist",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "leftArm",
+					"parent": "waist",
+					"pivot": [-6, 22, 0],
+					"cubes": [
+						{"origin": [-5.99999, 12, -2], "size": [3, 12, 4], "pivot": [-5, 24, 0], "rotation": [0, 180, 0], "uv": [32, 41]},
+						{"origin": [-5.99999, 20, -2], "size": [3, 4, 4], "inflate": 0.09, "pivot": [-5, 24, 0], "rotation": [0, 180, 0], "uv": [60, 41]}
+					]
+				},
+				{
+					"name": "body",
+					"parent": "waist",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "head",
+					"parent": "body",
+					"pivot": [0, 24, 0],
+					"cubes": [
+						{"origin": [-4, 24, -4], "size": [8, 8, 8], "uv": [0, 25]},
+						{"origin": [-4, 24, -4], "size": [8, 8, 8], "inflate": 0.11, "uv": [0, 9]}
+					]
+				},
+				{
+					"name": "hat",
+					"parent": "head",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "mushroom",
+					"parent": "head",
+					"pivot": [0, 29, 0],
+					"cubes": [
+						{"origin": [-3, 33.5, -3], "size": [6, 1, 6], "uv": [90, 25]},
+						{"origin": [-5, 29.5, -5], "size": [10, 2, 10], "inflate": 0.1, "uv": [66, 13]},
+						{"origin": [-4, 31.5, -4], "size": [8, 2, 8], "inflate": 0.12, "uv": [96, 13]},
+						{"origin": [-6, 28.5, -6], "size": [12, 1, 12], "inflate": 0.3, "uv": [67, 0]}
+					]
+				},
+				{
+					"name": "rightLeg",
+					"parent": "body",
+					"pivot": [2, 12, 0],
+					"cubes": [
+						{"origin": [0, 0, -2], "size": [4, 12, 4], "uv": [0, 41]}
+					]
+				},
+				{
+					"name": "leftLeg",
+					"parent": "body",
+					"pivot": [-2, 12, 0],
+					"cubes": [
+						{"origin": [-4, 0, -2], "size": [4, 12, 4], "uv": [16, 41]}
+					]
+				},
+				{
+					"name": "actual_body",
+					"parent": "body",
+					"pivot": [0, 12, 0],
+					"cubes": [
+						{"origin": [-4, 12, -2], "size": [8, 12, 4], "uv": [32, 25]},
+						{"origin": [-4, 12, -2], "size": [8, 12, 4], "inflate": 0.1, "uv": [56, 25]}
+					]
+				},
+				{
+					"name": "bone3",
+					"parent": "actual_body",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-4, 13, 2], "size": [8, 12, 0], "pivot": [0, 24, 5], "rotation": [12.5, 0, 0], "uv": [31, 0]}
+					]
+				},
+				{
+					"name": "bone2",
+					"parent": "actual_body",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "rightArm",
+					"parent": "waist",
+					"pivot": [6, 22, 0],
+					"cubes": [
+						{"origin": [4, 20, -2], "size": [3, 4, 4], "inflate": 0.09, "uv": [60, 41]},
+						{"origin": [4, 12, -2], "size": [3, 12, 4], "uv": [32, 41]}
+					]
+				},
+				{
+					"name": "rightItem",
+					"parent": "rightArm",
+					"pivot": [7, 14, 1]
+				}
+			]
+		}
+	]
+}

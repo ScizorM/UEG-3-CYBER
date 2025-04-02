@@ -41,12 +41,11 @@ system.runInterval(() => {
 
         skinRandomizer.addScore("wait_period", 1)
 
-        if (skinRandCurrent != 0 && skinRandCurrent < 7 && skinWait > 10 && (randomNumberTest < 46 || randomNumberTest > 74) && randomNumberTest > 1 && skinValues.includes(randomNumberTest) == false) {
+        if (skinRandCurrent != 0 && skinRandCurrent < 7 && skinWait > 10 && (randomNumberTest < 46 || randomNumberTest > 74) && randomNumberTest > 1 && skinValues.includes(randomNumberTest) == false && (randomNumberTest < 13 || randomNumberTest > 15) && (randomNumberTest < 19 || randomNumberTest > 24) && (randomNumberTest < 40 || randomNumberTest > 45) && (randomNumberTest < 76 || randomNumberTest > 78)){
             skinRandomizer.setScore(skinToRand[skinRandCurrent].toString(), randomNumberTest)
             skinRandomizer.addScore("current", 1)
             skinRandomizer.setScore("wait_period", 0)
         }
-
 
         if (skinRandCurrent > 6) {
             world.sendMessage("skin randomizer complete!")

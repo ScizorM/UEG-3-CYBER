@@ -1,0 +1,31 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "sm:shoebox",
+			"min_engine_version": "1.8.0",
+			"materials": {
+				"default": "armor_stand"
+			},
+			"textures": {
+				"default": "textures/entity/shoeboxes/base_shoebox"
+			},
+			"geometry": {
+				"default": "geometry.shoebox"
+			},
+			"render_controllers": [
+				"controller.render.armor_stand"
+			],
+			"animations": {
+				"float": "animation.shoebox.float"
+			},
+			"scripts": {
+				"animate": [
+					"float"
+				]
+			},
+			"enable_attachables": true
+		}
+	}
+}

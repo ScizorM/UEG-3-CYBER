@@ -30,12 +30,12 @@
 			},
 			"minecraft:collision_box": {
 				"width": 0.6,
-				"height": 4
+				"height": 1.25
 			},
 			"minecraft:persistent": {},
 			"minecraft:nameable": {
 				"always_show": false,
-				"allow_name_tag_renaming": false
+				"allow_name_tag_renaming": true
 			},
 			"minecraft:physics": {},
 			"minecraft:conditional_bandwidth_optimization": {}
@@ -54,6 +54,16 @@
 			"effect_variant": {
 				"minecraft:variant": {
 					"value": 2
+				}
+			},
+			"loadout_variant": {
+				"minecraft:variant": {
+					"value": 3
+				}
+			},
+			"weapon_variant": {
+				"minecraft:variant": {
+					"value": 4
 				}
 			}
 		},
@@ -74,7 +84,9 @@
 				"remove": {
 					"component_groups": [
 						"skin_variant",
-						"effect_variant"
+						"effect_variant",
+						"weapon_variant",
+						"loadout_variant"
 					]
 				},
 				"add": {
@@ -87,6 +99,30 @@
 				"add": {
 					"component_groups": [
 						"effect_variant"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"no_variant"
+					]
+				}
+			},
+			"sm:weapon_variant": {
+				"add": {
+					"component_groups": [
+						"weapon_variant"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"no_variant"
+					]
+				}
+			},
+			"sm:loadout_variant": {
+				"add": {
+					"component_groups": [
+						"loadout_variant"
 					]
 				},
 				"remove": {
