@@ -5,4 +5,4 @@ tp @s -279 33 165 facing -280 33 165
 tag @s add tutorial
 tag @s add tutorialwall
 gamemode survival @s
-ability @s mayfly true
+ability @s mayfly false
