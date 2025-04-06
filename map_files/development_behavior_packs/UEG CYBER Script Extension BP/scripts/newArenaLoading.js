@@ -35,7 +35,7 @@ system.runInterval(() => {
         newArenaLoadTriggerSB.setScore("value",0)
     }
 
-    var processArenaVoteSB = world.scoreboard.getObjective("new_vote_process")
+    var processArenaVoteSB = world.scoreboard.getObjective("new_arena_vote_process")
     var processArenaVote = processArenaVoteSB.getScore("value")
     if (processArenaVote > 0) {
         system.run(() => SetVotedArena())
@@ -358,7 +358,7 @@ function MassToggleCategory(category,toggleVal) { //send 0 through toggleVal if 
 
 
 function LoadSelectedArena() {
-    let storedArenaSB = world.scoreboard.getObjective("arena_to_load")
+    let storedArenaSB = world.scoreboard.getObjective("arena_to_load_new")
     let storedArenaID = storedArenaSB.getScore("arena_id")
     let storedArenaCategory = storedArenaSB.getScore("arena_category")
     world.sendMessage(versionCollection[storedArenaCategory][storedArenaID].structure)
@@ -422,83 +422,85 @@ function SetVotedArena() {
     let storedArenaIndexes = [storedArenasSB.getScore("arena_1_id"), storedArenasSB.getScore("arena_2_id"), storedArenasSB.getScore("arena_3_id")]
     let storedCategoryIndexes = [storedArenasSB.getScore("arena_1_category"), storedArenasSB.getScore("arena_2_category"), storedArenasSB.getScore("arena_3_category")]
 
-    let storedArenaSB = world.scoreboard.getObjective("arena_to_load")
+    let storedArenaSB = world.scoreboard.getObjective("arena_to_load_new")
     let storedArenaID = storedArenaSB.getScore("arena_id")
     let storedArenaCategory = storedArenaSB.getScore("arena_category")
+
+
 
     let arenas = [versionCollection[storedCategoryIndexes[0]][storedArenaIndexes[0]], versionCollection[storedCategoryIndexes[1]][storedArenaIndexes[1]], versionCollection[storedCategoryIndexes[2]][storedArenaIndexes[2]]]
 
     if (arenaOne > arenaTwo && arenaOne > arenaThree) {
 
-        SendLoadedArenaMessage(arenas[0])
-        storedArenaSB.SetScore("arena_id", storedArenaIndexes[0])
-        storedArenaSB.SetScore("arena_category", storedCategoryIndexes[0])
+        //SendLoadedArenaMessage(arenas[0])
+        storedArenaSB.setScore("arena_id", storedArenaIndexes[0])
+        storedArenaSB.setScore("arena_category", storedCategoryIndexes[0])
     }
     else if (arenaTwo > arenaOne && arenaTwo > arenaThree) {
-        SendLoadedArenaMessage(arenas[1])
-        storedArenaSB.SetScore("arena_id", storedArenaIndexes[1])
-        storedArenaSB.SetScore("arena_category", storedCategoryIndexes[1])
+        //SendLoadedArenaMessage(arenas[1])
+        storedArenaSB.setScore("arena_id", storedArenaIndexes[1])
+        storedArenaSB.setScore("arena_category", storedCategoryIndexes[1])
     }
     else if (arenaThree > arenaOne && arenaThree > arenaTwo) {
-        SendLoadedArenaMessage(arenas[2])
-        storedArenaSB.SetScore("arena_id", storedArenaIndexes[2])
-        storedArenaSB.SetScore("arena_category", storedCategoryIndexes[2])
+        //SendLoadedArenaMessage(arenas[2])
+        storedArenaSB.setScore("arena_id", storedArenaIndexes[2])
+        storedArenaSB.setScore("arena_category", storedCategoryIndexes[2])
     }
     else if (arenaOne == arenaTwo && arenaOne > arenaThree) {
         let randomSelector = Math.floor(Math.random() * 9)
         if (randomSelector > 4) {
-            SendLoadedArenaMessage(arenas[1])
-            storedArenaSB.SetScore("arena_id", storedArenaIndexes[1])
-            storedArenaSB.SetScore("arena_category", storedCategoryIndexes[1])
+            //SendLoadedArenaMessage(arenas[1])
+            storedArenaSB.setScore("arena_id", storedArenaIndexes[1])
+            storedArenaSB.setScore("arena_category", storedCategoryIndexes[1])
         }
         else {
-            SendLoadedArenaMessage(arenas[0])
-            storedArenaSB.SetScore("arena_id", storedArenaIndexes[0])
-            storedArenaSB.SetScore("arena_category", storedCategoryIndexes[0])
+            //SendLoadedArenaMessage(arenas[0])
+            storedArenaSB.setScore("arena_id", storedArenaIndexes[0])
+            storedArenaSB.setScore("arena_category", storedCategoryIndexes[0])
         }
     }
     else if (arenaOne == arenaThree && arenaOne > arenaTwo) {
         let randomSelector = Math.floor(Math.random() * 9)
         if (randomSelector > 4) {
-            SendLoadedArenaMessage(arenas[2])
-            storedArenaSB.SetScore("arena_id", storedArenaIndexes[2])
-            storedArenaSB.SetScore("arena_category", storedCategoryIndexes[2])
+            //SendLoadedArenaMessage(arenas[2])
+            storedArenaSB.setScore("arena_id", storedArenaIndexes[2])
+            storedArenaSB.setScore("arena_category", storedCategoryIndexes[2])
         }
         else {
-            SendLoadedArenaMessage(arenas[0])
-            storedArenaSB.SetScore("arena_id", storedArenaIndexes[0])
-            storedArenaSB.SetScore("arena_category", storedCategoryIndexes[0])
+            //SendLoadedArenaMessage(arenas[0])
+            storedArenaSB.setScore("arena_id", storedArenaIndexes[0])
+            storedArenaSB.setScore("arena_category", storedCategoryIndexes[0])
         }
     }
     else if (arenaTwo == arenaThree && arenaTwo > arenaOne) {
         let randomSelector = Math.floor(Math.random() * 9)
         if (randomSelector > 4) {
-            SendLoadedArenaMessage(arenas[1])
-            storedArenaSB.SetScore("arena_id", storedArenaIndexes[1])
-            storedArenaSB.SetScore("arena_category", storedCategoryIndexes[1])
+            //SendLoadedArenaMessage(arenas[1])
+            storedArenaSB.setScore("arena_id", storedArenaIndexes[1])
+            storedArenaSB.setScore("arena_category", storedCategoryIndexes[1])
         }
         else {
-            SendLoadedArenaMessage(arenas[2])
-            storedArenaSB.SetScore("arena_id", storedArenaIndexes[2])
-            storedArenaSB.SetScore("arena_category", storedCategoryIndexes[2])
+            //SendLoadedArenaMessage(arenas[2])
+            storedArenaSB.setScore("arena_id", storedArenaIndexes[2])
+            storedArenaSB.setScore("arena_category", storedCategoryIndexes[2])
         }
     }
     else if (arenaOne == arenaTwo == arenaThree) {
         let randomSelector = Math.floor(Math.random() * 12)
         if (randomSelector > 8) {
             SendLoadedArenaMessage(arenas[2])
-            storedArenaSB.SetScore("arena_id", storedArenaIndexes[2])
-            storedArenaSB.SetScore("arena_category", storedCategoryIndexes[2])
+            storedArenaSB.setScore("arena_id", storedArenaIndexes[2])
+            storedArenaSB.setScore("arena_category", storedCategoryIndexes[2])
         }
         else if (randomSelector > 4) {
             SendLoadedArenaMessage(arenas[1])
-            storedArenaSB.SetScore("arena_id", storedArenaIndexes[1])
-            storedArenaSB.SetScore("arena_category", storedCategoryIndexes[1])
+            storedArenaSB.setScore("arena_id", storedArenaIndexes[1])
+            storedArenaSB.setScore("arena_category", storedCategoryIndexes[1])
         }
         else {
             SendLoadedArenaMessage(arenas[0])
-            storedArenaSB.SetScore("arena_id", storedArenaIndexes[0])
-            storedArenaSB.SetScore("arena_category", storedCategoryIndexes[0])
+            storedArenaSB.setScore("arena_id", storedArenaIndexes[0])
+            storedArenaSB.setScore("arena_category", storedCategoryIndexes[0])
         }
     }
 }
