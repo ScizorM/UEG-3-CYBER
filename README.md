@@ -4,7 +4,7 @@
 # This is where all progress is updated live, so expect some bugs here and there if you plan to download directly from the repo. (pre-release releases will have problems as well)
 
 # Developers:
-# ScizorM: Lead Gameplay, Lead Design, Builder
-# zeerye: Lead Builder, Gameplay, Design
-# AubreyThePebble: Design, Builder
-# evel: Design, Builder
+ScizorM: Lead Gameplay, Lead Design, Builder
+zeerye: Lead Builder, Gameplay, Design
+AubreyThePebble: Design, Builder
+evel: Design, Builder
