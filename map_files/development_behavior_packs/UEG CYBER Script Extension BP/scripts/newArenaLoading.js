@@ -1,4 +1,4 @@
-import { world, ItemCooldownComponent, system, Entity, EntityComponentTypes, StructureManager } from '@minecraft/server'
+﻿import { world, ItemCooldownComponent, system, Entity, EntityComponentTypes, StructureManager } from '@minecraft/server'
 import { ActionFormData, MessageFormData, ModalFormData } from '@minecraft/server-ui'
 
 
@@ -19,6 +19,49 @@ Sizes:
 3 - Abstract
 
 */
+
+world.beforeEvents.itemUse.subscribe(data => {
+
+    const player = data.source
+
+
+
+
+    if (data.itemStack.typeId === "sm:settings" && player.hasTag("enter_splendid") == false && player.hasTag("enter_marque") == false && !player.hasTag("debug_randomize")) {
+
+        world.sendMessage(ueg1Collection.length.toString())
+        system.run(() => GetArenasCount(versionCollection, 0))
+        system.run(() => GetArenasCount(versionCollection, 1))
+
+        //system.run(() => LoadArenaInterface(player))
+        system.run(() => ArenaStoreMenu(player))
+
+    }
+    else if (player.hasTag("debug_randomize")) {
+
+        system.run(() => RandomizeArenaVoteSlots(versionCollection))
+
+    }
+    else if (player.hasTag("debug_enableAll")) {
+        versionCollection.forEach(category => {
+            system.run(() => MassToggleCategory(category, 1))
+
+        })
+        player.sendMessage("don't forget to remove the debug tag.")
+
+    }
+    else if (player.hasTag("debug_unlockAll")) {
+        versionCollection.forEach(category => {
+            system.run(() => DebugUnlockAllArenas(1))
+
+        })
+        player.sendMessage("don't forget to remove the debug tag.")
+
+    }
+
+
+
+})
 
 system.runInterval(() => {
     var randomizerEnableSB = world.scoreboard.getObjective("arena_randomizer_new")
@@ -44,10 +87,12 @@ system.runInterval(() => {
 })
 
 class Arena {
-    constructor(displayName, creators, remasters, difficulty, size, isDefault, categoryArr, structureName, includeEntitiesPrint, categoryIndexPrint, arenaIndexPrint) {
+    constructor(displayName, creatorsList, remastersList, difficulty, size, isDefault, categoryArr, structureName, includeEntitiesPrint, categoryIndexPrint, arenaIndexPrint) {
         this.displayName = displayName;
-        this.creators = creators;
-        this.remasters = remasters;
+        this.creators = []
+        this.creators.push(creatorsList)
+        this.remasters = []
+        this.remasters.push(remastersList)
         this.difficulty = difficulty;
         this.size = size;
         this.isDefault = isDefault;
@@ -62,27 +107,40 @@ class Arena {
 
     GetCreators() {
         let output;
-        for (var i = 0; i < this.creators.length; i++) {
-            if (i == this.creators.length - 1) {
-                output += this.creators[i]
-            }
-            else {
-                output += this.creators[i] + ", "
+        if (this.creators.length == 1) {
+            output = this.creators[0]
+        }
+        else {
+            for (var i = 0; i < this.creators.length; i++) {
+                if (i == this.creators.length - 1) {
+                    output += this.creators[i]
+                }
+                else {
+                    output += this.creators[i] + ", "
+                }
             }
         }
+
         return output;
     }
 
     GetRemasters() {
         let output;
-        for (var i = 0; i < remasters.length; i++) {
-            if (i == remasters.length - 1) {
-                output += remasters[i]
-            }
-            else {
-                output += remasters[i] + ", "
+        if (this.remasters.length == 1) {
+            output = this.remasters[0]
+        }
+        else {
+            for (var i = 0; i < this.remasters.length; i++) {
+                if (i == this.remasters.length - 1) {
+                    output += this.remasters[i]
+
+                }
+                else {
+                    output += this.remasters[i] + ", "
+                }
             }
         }
+
         return output;
     }
 
@@ -152,12 +210,12 @@ var size = [
 ]
 
 var category = {
-    ueg1: ["ueg1","UEG 1"],
-    uegplus: ["uegplus","UEG PLUS"],
-    rpg1: ["rpg1","RPG Game 1"],
-    rpg2: ["rpg2","RPG Game 2"],
-    uegcyber: ["uegcyber","UEG CYBER"],
-    uegcybers: ["uegcybers","UEG CYBER -S-"]
+    ueg1: ["ueg1","UEG 1","textures/ui/button_ueg1"],
+    uegplus: ["uegplus","UEG PLUS","textures/ui/button_uegplus"],
+    rpg1: ["rpg1","RPG Game 1","textures/ui/button_rpg1"],
+    rpg2: ["rpg2","RPG Game 2","textures/ui/button_rpg2"],
+    uegcyber: ["uegcyber","UEG CYBER", "textures/ui/button_cyber"],
+    uegcybers: ["uegcybers","UEG CYBER -S-", "textures/ui/button_cyber_s"]
 }
 
 var hasRemaster = [
@@ -174,7 +232,7 @@ var hasRemaster = [
 var ueg1Collection = [
     //Default
     new Arena("Lost City", [creator.scizor, creator.eido, creator.darthmac], [creator.scizor], 1, 1, true, category.ueg1, "lost_city", false, 0, 0),
-    new Arena("BlackWhite", [creator.darthmac, creator.scizorm, creator.poizon], [creator.scizor], 0, 1, true, category.ueg1, "blackwhite", false, 0, 1),
+    new Arena("BlackWhite", [creator.darthmac, creator.scizor, creator.poizon], [creator.scizor], 0, 1, true, category.ueg1, "blackwhite", false, 0, 1),
     new Arena("Nether", [creator.poizon, creator.scizor], [creator.scizor], 1, 2, true, category.ueg1, "nether", false, 0, 2),
     new Arena("Space", [creator.poizon], [creator.scizor], 1, 2, true, category.ueg1, "space", false, 0, 3),
     new Arena("Western", [creator.banana, creator.poizon, creator.scizor], [creator.scizor], 1, 1, true, category.ueg1, "western", false, 0, 4),
@@ -257,39 +315,435 @@ var versionCollection = [
     ueg1Collection, uegPlusCollection, rpg1Collection, rpg2Collection, uegCyberCollection, uegCyberSCollection
 ]
 
-world.beforeEvents.itemUse.subscribe(data => {
+var allArenas = [...ueg1Collection, ...uegPlusCollection, ...rpg1Collection, ...rpg2Collection, ...uegCyberCollection, ...uegCyberSCollection]
 
-    const player = data.source
+function GetArenaFromID(id, category) {
+    let arenaReturn;
+    allArenas.forEach(arena => {
+        if (arena.arenaIndex == id && arena.arenaCategory == category) {
+            arenaReturn = arena;
+        }
+    })
+    return arenaReturn;
+}
+function ArenaStoreMenu(player) {
+    var playerArenaSortSB = world.scoreboard.getObjective("player_arena_sort")
+    playerArenaSortSB.addScore(player, 0)
+    var playerArenaSortPlayer = playerArenaSortSB.getScore(player)
+    /*
+    *   0 - version
+    *   1 - size
+    *   2 - difficulty
+    *   3 - all unlocked
+    */
+
+    let form = new ActionFormData();
+    if (playerArenaSortPlayer == 0) {
+        form.title("Arena Select");
+        form.body("");
+        form.button("Sort By: Series", "textures/ui/button_sort");
+        world.sendMessage(Object.keys(category).length.toString())
+        for (var i = 0; i < (Object.keys(category).length - 1); i++) {
+            form.button(Object.values(category)[i][1], Object.values(category)[i][2]);
+        }
+
+        form.button("Cancel", "textures/ui/button_close");
+
+        form.show(player).then(r => {
+
+            let responseValue = r.selection
+
+            switch (responseValue) {
+                case 0:
+                    playerArenaSortSB.setScore(player, 1)
+                    system.run(() => ArenaStoreMenu(player))
+                    break;
+                case 1:
+                    system.run(() => ArenaMenu(player, ueg1Collection))
+                    break;
+                case 2:
+                    system.run(() => ArenaMenu(player, uegPlusCollection))
+                    break;
+                case 3:
+                    system.run(() => ArenaMenu(player,rpg1Collection))
+                    break;
+                case 4:
+                    system.run(() => ArenaMenu(player,rpg2Collection))
+                    break;
+                case 5:
+                    system.run(() => ArenaMenu(player,uegCyberCollection))
+                    break;
+
+            }
+
+            //if (responseValue == 0) {
+            //    system.run(() => mainArenaPageUEG(player))
+            //}
+            //else if (responseValue == 1) {
+            //    system.run(() => mainArenaPageRPG(player))
+            //}
 
 
 
-
-    if (data.itemStack.typeId === "sm:settings" && player.hasTag("enter_splendid") == false && player.hasTag("enter_marque") == false && !player.hasTag("debug_randomize")) {
-
-        world.sendMessage(ueg1Collection.length.toString())
-
-        system.run(() => LoadArenaInterface(player))
-
-    }
-    else if (player.hasTag("debug_randomize")) {
-
-        system.run(() => RandomizeArenaVoteSlots(versionCollection))
-
-    }
-    else if (player.hasTag("debug_enableAll")) {
-        versionCollection.forEach(category => {
-            system.run(() => MassToggleCategory(category, 1))
 
         })
-        player.sendMessage("don't forget to remove the debug tag.")
-        
+    }
+    if (playerArenaSortPlayer == 2) {
+        form.title("Arena Select");
+        form.body("");
+        form.button("Sort By: Size", "textures/ui/button_sort");
+        form.button("Small", "textures/ui/button_small");
+        form.button("Medium", "textures/ui/button_medium");
+        form.button("Large", "textures/ui/button_large");
+        form.button("Other", "textures/ui/button_size_unknown");
+
+        form.button("Cancel", "textures/ui/button_close");
+
+        form.show(player).then(r => {
+
+            let responseValue = r.selection
+
+            switch (responseValue) {
+                case 0:
+                    playerArenaSortSB.setScore(player, 0)
+                    system.run(() => ArenaStoreMenu(player))
+                    break;
+                case 1:
+                    system.run(() => PreProcessArenaList(player,1,0))
+                    break;
+                case 2:
+                    system.run(() => PreProcessArenaList(player, 1,1))
+                    break;
+                case 3:
+                    system.run(() => PreProcessArenaList(player, 1, 2))
+                    break;
+                case 4:
+                    system.run(() => PreProcessArenaList(player, 1, 3, 4, 5))
+                    break;
+            }
+
+            //if (responseValue == 0) {
+            //    system.run(() => mainArenaPageUEG(player))
+            //}
+            //else if (responseValue == 1) {
+            //    system.run(() => mainArenaPageRPG(player))
+            //}
+
+
+
+
+        })
+    }
+    if (playerArenaSortPlayer == 1) {
+        form.title("Arena Select");
+        form.body("");
+
+        form.button("Sort By: Difficulty", "textures/ui/button_sort");
+        form.button("Easy", "textures/ui/button_easy");
+        form.button("Normal", "textures/ui/button_normal");
+        form.button("Hard", "textures/ui/button_hard");
+        form.button("Other", "textures/ui/button_difficulty_unknown");
+
+
+        form.button("Cancel", "textures/ui/button_close");
+
+        form.show(player).then(r => {
+
+            let responseValue = r.selection
+
+            switch (responseValue) {
+                case 0:
+                    playerArenaSortSB.setScore(player, 2)
+                    system.run(() => ArenaStoreMenu(player))
+                    break;
+                case 1:
+                    system.run(() => PreProcessArenaList(player, 0, 0))
+                    break;
+                case 2:
+                    system.run(() => PreProcessArenaList(player, 0, 1))
+                    break;
+                case 3:
+                    system.run(() => PreProcessArenaList(player, 0, 2))
+                    break;
+                case 4:
+                    system.run(() => PreProcessArenaList(player, 0, 3, 4, 5))
+                    break;
+
+            }
+
+
+            //if (responseValue == 0) {
+            //    system.run(() => mainArenaPageUEG(player))
+            //}
+            //else if (responseValue == 1) {
+            //    system.run(() => mainArenaPageRPG(player))
+            //}
+
+
+
+
+        })
     }
 
+}
+
+function PreProcessArenaList(player, isDifficultyOrSize, criteria, criteria2, criteria3, criteria4) { //0 = difficulty, 1 = size
+    var unlockedArenaSB = world.scoreboard.getObjective("unlocked_arenas_new")
+    var arenaCollection = [];
+    if (isDifficultyOrSize == 0) {
+        allArenas.forEach(arena => {
+
+            if (arena.difficulty == criteria) {
+                arenaCollection.push(arena)
+            }
+            else if (criteria2 != undefined) {
+                if (arena.difficulty == criteria2) {
+                    arenaCollection.push(arena)
+                }
+            }
+            else if (criteria3 != undefined) {
+                if (arena.difficulty == criteria3) {
+                    arenaCollection.push(arena)
+                }
+            }
+            else if (criteria4 != undefined) {
+                if (arena.difficulty == criteria4) {
+                    arenaCollection.push(arena)
+                }
+            }
+        })
+    }
+    else {
+        allArenas.forEach(arena => {
+            if (arena.size == criteria) {
+                arenaCollection.push(arena)
+                world.sendMessage(arena.displayName)
+            }
+            else if (criteria2 != undefined) {
+                if (arena.difficulty == criteria2) {
+                    arenaCollection.push(arena)
+                }
+            }
+            else if (criteria3 != undefined) {
+                if (arena.difficulty == criteria3) {
+                    arenaCollection.push(arena)
+                }
+            }
+            else if (criteria4 != undefined) {
+                if (arena.difficulty == criteria4) {
+                    arenaCollection.push(arena)
+                }
+            }
+        })
+    }
+    system.run(() => ArenaMenu(player,arenaCollection))
+}
+
+function ArenaInfo(player, arena, arenaCategory) {
+    var arenaVoteEnabledSB = world.scoreboard.getObjective("arena_vote_enabled")
+    var arenaVoteEnabledScore = arenaVoteEnabledSB.getScore("boolean")
+    var enabledArenasNewSB = world.scoreboard.getObjective("enabled_arenas_new")
+    var arenaEnabled = enabledArenasNewSB.getScore(arena.enabledName)
+    var arenaToLoadSB = world.scoreboard.getObjective("arena_to_load_new")
+    var arenaToLoadID = arenaToLoadSB.getScore("arena_id")
+    var arenaToLoadCategory = arenaToLoadSB.getScore("arena_category")
+    let form = new MessageFormData();
+    form.title(arena.displayName);
+    let message = "";
+    let buttonMessage = "";
+    if (arena.GetRemasters() != undefined) {
+        message += `Original Creator(s): ${arena.GetCreators()}\nRemaster: ${arena.GetRemasters()}\nDifficulty: ${difficulties[arena.difficulty]}\nSize: ${size[arena.size]}`
+    }
+    else {
+        message += `Creator(s): ${arena.GetCreators()}\nDifficulty: ${difficulties[arena.difficulty]}\nSize: ${size[arena.size]}`
+    }
+
+    if (arenaVoteEnabledScore == 1) {
+        message += `\nEnabled? `
+
+        if (arenaEnabled > 0) {
+            message += "Yes"
+        }
+        else {
+            message += "No"
+        }
+        buttonMessage += "Toggle Arena"
+    }
+    else {
+        message += `\nSelected? `
+        if (arenaToLoadID == arena.arenaIndex && arenaToLoadCategory == arena.arenaCategory) {
+            message += "Yes"
+        }
+        else {
+            message += "No"
+        }
+        buttonMessage += "Select Arena"
+    }
+    form.body(message)
+    form.button2(buttonMessage);
+    form.button1("Back");
+    form.show(player).then(r => {
+        let responseVal = r.selection;
+        if (responseVal == 1) {
+            if (arenaVoteEnabledScore == 1) {
+
+                if (arenaEnabled > 0) {
+                    world.sendMessage("Disabled " + arena.displayName)
+                    enabledArenasNewSB.setScore(arena.enabledName,0)
+                }
+                else {
+                    world.sendMessage("Enabled " + arena.displayName)
+                    enabledArenasNewSB.setScore(arena.enabledName,1)
+                }
+            }
+            else {
+                system.run(() => SendLoadedArenaMessage(arena))
+                system.run(() => ArmArena(arena.arenaIndex,arena.arenaCategory))
+            }
+            system.run(() => ArenaMenu(player, arenaCategory))
+        }
+        else {
+            system.run(() => ArenaMenu(player, arenaCategory))
+        }
+    })
+}
+
+function CheckEnabledCount(arenaCategory) {
+    var enabledArenasNewSB = world.scoreboard.getObjective("enabled_arenas_new")
+    let count = 0;
+    arenaCategory.forEach(arena => {
+        var currentScore = enabledArenasNewSB.getScore(arena.enabledName)
+        if (currentScore > 0) {
+            count++;
+        }
+    })
+    return count;
+}
+
+function ArenaMenu(player, arenaCategory) {
+    var unlockedArenasNewSB = world.scoreboard.getObjective("unlocked_arenas_new")
+    var enabledArenasNewSB = world.scoreboard.getObjective("enabled_arenas_new")
+    var arenaVoteEnabledSB = world.scoreboard.getObjective("arena_vote_enabled")
+    var arenaVoteEnabledScore = arenaVoteEnabledSB.getScore("boolean")
+    var arenaToLoadSB = world.scoreboard.getObjective("arena_to_load_new")
+    var arenaToLoadID = arenaToLoadSB.getScore("arena_id")
+    var arenaToLoadCategory = arenaToLoadSB.getScore("arena_category")
+    let form = new ActionFormData();
+    form.title("Arena Select")
+    form.body("Select an arena:\n")
+    let arenaCount = CheckEnabledCount(arenaCategory)
+    let toggleArenasEnable = 0;
+    if (arenaCount > Math.floor(arenaCategory.length / 2)) {
+        form.button("Mass-Toggle Arena Category", "textures/ui/button_disable_all")
+        toggleArenasEnable = 0
+    }
+    else {
+        form.button("Mass-Toggle Arena Category", "textures/ui/button_enable_all")
+        toggleArenasEnable = 1
+    }
+
+    arenaCategory.forEach(arena => {
+        var arenaScore = unlockedArenasNewSB.getScore(arena.enabledName)
+        var arenaEnabled = enabledArenasNewSB.getScore(arena.enabledName)
+        var name = ""
+        var filePath = ""
+        if (arenaScore > 0) {
+            if (arena.isDefault) {
+                name += "§2"
+            }
+            else {
+                name += "§3"
+            }
+            name += "§l" + arena.displayName + "§r"
+            if (arenaVoteEnabledScore > 0) {
+                if (arenaEnabled > 0) {
+                    name += " "
+                }
+                else {
+                    name += " "
+                }
+            }
+            else {
+                if (arenaToLoadCategory == arena.categoryIndex && arenaToLoadID == arena.arenaIndex) {
+                    name += " (Selected)"
+                }
+            }
+
+            name += "§r\n" + difficulties[arena.difficulty] + ", " + size[arena.size]
+
+            filePath = arena.filePath
+        }
+        else {
+            name = "§lLocked§r"
+            filePath = "textures/ui/button_lock"
+        }
+        form.button(name, filePath)
+    })
+    form.button("Back", "textures/ui/button_back")
+    form.button("Cancel", "textures/ui/button_close")
+    form.show(player).then(r => {
+        let responseValue = r.selection
+        if (responseValue == 0) {
+            system.run(() => MassToggleCategory(arenaCategory, toggleArenasEnable, true, player))
+        }
+        if (responseValue < arenaCategory.length + 1 && responseValue != 0) {
+            system.run(() => ArenaInfo(player,arenaCategory[responseValue - 1], arenaCategory))
+        }
+        if (responseValue == arenaCategory.length + 1) {
+            system.run(() => ArenaStoreMenu(player))
+        }
+    })
+}
+
+function SortMenu(player) {
+    let form = new ActionFormData();
+    form.title("Sort Arenas");
+    form.body("Select a Sorting Method:\n");
+    form.button("Sort by Version", "textures/ui/button_sort")
+    form.button("Sort by Difficulty", "textures/ui/button_sort")
+    form.button("Sort by Size", "textures/ui/button_sort")
+    form.button("Back", "textures/ui/button_back");
+    form.button("Cancel", "textures/ui/button_close");
+
+    form.show(player).then(r => {
+
+        let responseValue = r.selection
+        var playerArenaSortSB = world.scoreboard.getObjective("player_arena_sort")
+        switch (responseValue) {
+            case 0:
+                playerArenaSortSB.setScore(player, 0)
+                system.run(() => ArenaStoreMenu(player))
+                break;
+            case 1:
+                playerArenaSortSB.setScore(player, 1)
+                system.run(() => ArenaStoreMenu(player))
+                break;
+            case 2:
+                playerArenaSortSB.setScore(player, 2)
+                system.run(() => ArenaStoreMenu(player))
+                break;
+            case 3:
+                system.run(() => ArenaStoreMenu(player))
+                break;
+            case 4:
+                break;
+
+        }
+
+        //if (responseValue == 0) {
+        //    system.run(() => mainArenaPageUEG(player))
+        //}
+        //else if (responseValue == 1) {
+        //    system.run(() => mainArenaPageRPG(player))
+        //}
 
 
-})
 
-function LoadArenaInterface(player) {
+
+    })
+}
+
+function DebugArenaInterface(player) {
     let form = new ModalFormData()
     let categories = [ category.ueg1[1], category.uegplus[1], category.rpg1[1], category.rpg2[1], category.uegcyber[1], category.uegcybers[1]]
     form.title("Effect Generator");
@@ -319,10 +773,10 @@ function LoadArenaInterface(player) {
 function GetArenasCount(versionCollection, unlockOrEnable) { //0 if check for unlock, 1 for check for enable
     let arenaCount = 0;
     var arenaArr = [];
-    world.sendMessage("pre-arena count: " + arenaCount.toString())
-    world.sendMessage(versionCollection.length.toString() + " <- version collection length")
-    for (let j = 0; j < versionCollection.length - 1; j++) { //someone once tried correcting me about doing this, I do not feel like finding an alternative right now, this goes out to you if you know who you are (it isn't moore, you're fine)
-        for (let i = 0; i < versionCollection[j].length - 1; i++) {
+    //world.sendMessage("pre-arena count: " + arenaCount.toString())
+    //world.sendMessage(versionCollection.length.toString() + " <- version collection length")
+    for (let j = 0; j < versionCollection.length; j++) { //someone once tried correcting me about doing this, I do not feel like finding an alternative right now, this goes out to you if you know who you are (it isn't moore, you're fine)
+        for (let i = 0; i < versionCollection[j].length; i++) {
             let arena = versionCollection[j][i]
             var currentScoreboard;
             if (unlockOrEnable == 0) {
@@ -342,26 +796,44 @@ function GetArenasCount(versionCollection, unlockOrEnable) { //0 if check for un
             }
         }
     }
-    world.sendMessage("arena count total: " + arenaCount.toString())
+    //world.sendMessage("arena count total: " + arenaCount.toString())
     return arenaArr;
 }
 
 
-function MassToggleCategory(category,toggleVal) { //send 0 through toggleVal if disable, 1 if enable
-    for (let i = 0; i < category.length - 1; i++) {
+function MassToggleCategory(category, toggleVal, returnTo, player) { //send 0 through toggleVal if disable, 1 if enable
+    var unlockedArenasNewSB = world.scoreboard.getObjective("unlocked_arenas_new")
+    for (let i = 0; i < category.length; i++) {
         let arena = category[i]
         let currentScoreboard = world.scoreboard.getObjective("enabled_arenas_new")
-        currentScoreboard.setScore(arena.enabledName, toggleVal)
+        let currentArenaE = unlockedArenasNewSB.getScore(arena.enabledName)
+        if (currentArenaE > 0) {
+            currentScoreboard.setScore(arena.enabledName, toggleVal)
+        }
+        else {
+            currentScoreboard.setScore(arena.enabledName, 0)
+        }
+
+    }
+    if (returnTo == true) {
+        system.run(() => ArenaMenu(player,category))
     }
 }
 
+function DebugUnlockAllArenas(unlockOrLock) { //0 = lock, 1 = unlock
+    allArenas.forEach(arena => {
+        var currentScoreboard = world.scoreboard.getObjective("unlocked_arenas_new")
+        if (!arena.isDefault) {
+            currentScoreboard.setScore(arena.enabledName, unlockOrLock)
+        }
 
+    })
+}
 
 function LoadSelectedArena() {
     let storedArenaSB = world.scoreboard.getObjective("arena_to_load_new")
     let storedArenaID = storedArenaSB.getScore("arena_id")
     let storedArenaCategory = storedArenaSB.getScore("arena_category")
-    world.sendMessage(versionCollection[storedArenaCategory][storedArenaID].structure)
     world.structureManager.place(versionCollection[storedArenaCategory][storedArenaID].structure, world.getDimension("overworld"), structureLoadLocation, { includeEntities: versionCollection[storedArenaCategory][storedArenaID].includeEntities })
 }
 
@@ -412,6 +884,14 @@ function RandomizeArenaVoteSlots(versionCollection) {
 
 }
 
+function ArmArena(id, category) {
+    let storedArenaSB = world.scoreboard.getObjective("arena_to_load_new")
+    let storedArenaID = storedArenaSB.getScore("arena_id")
+    let storedArenaCategory = storedArenaSB.getScore("arena_category")
+    storedArenaSB.setScore("arena_id", id)
+    storedArenaSB.setScore("arena_category",category)
+}
+
 function SetVotedArena() {
     let arenaVoteSB = world.scoreboard.getObjective("arena_vote")
     let arenaOne = arenaVoteSB.getScore("arena_1")
@@ -432,75 +912,62 @@ function SetVotedArena() {
 
     if (arenaOne > arenaTwo && arenaOne > arenaThree) {
 
-        //SendLoadedArenaMessage(arenas[0])
-        storedArenaSB.setScore("arena_id", storedArenaIndexes[0])
-        storedArenaSB.setScore("arena_category", storedCategoryIndexes[0])
+        SendLoadedArenaMessage(arenas[0])
+        ArmArena(storedArenaIndexes[0],storedArenaCategory[0])
     }
     else if (arenaTwo > arenaOne && arenaTwo > arenaThree) {
-        //SendLoadedArenaMessage(arenas[1])
-        storedArenaSB.setScore("arena_id", storedArenaIndexes[1])
-        storedArenaSB.setScore("arena_category", storedCategoryIndexes[1])
+        ArmArena(storedArenaIndexes[1], storedArenaCategory[1])
     }
     else if (arenaThree > arenaOne && arenaThree > arenaTwo) {
-        //SendLoadedArenaMessage(arenas[2])
-        storedArenaSB.setScore("arena_id", storedArenaIndexes[2])
-        storedArenaSB.setScore("arena_category", storedCategoryIndexes[2])
+        SendLoadedArenaMessage(arenas[2])
+        ArmArena(storedArenaIndexes[2], storedArenaCategory[2])
     }
     else if (arenaOne == arenaTwo && arenaOne > arenaThree) {
         let randomSelector = Math.floor(Math.random() * 9)
         if (randomSelector > 4) {
-            //SendLoadedArenaMessage(arenas[1])
-            storedArenaSB.setScore("arena_id", storedArenaIndexes[1])
-            storedArenaSB.setScore("arena_category", storedCategoryIndexes[1])
+            SendLoadedArenaMessage(arenas[1])
+            ArmArena(storedArenaIndexes[1], storedArenaCategory[1])
         }
         else {
-            //SendLoadedArenaMessage(arenas[0])
-            storedArenaSB.setScore("arena_id", storedArenaIndexes[0])
-            storedArenaSB.setScore("arena_category", storedCategoryIndexes[0])
+            SendLoadedArenaMessage(arenas[0])
+            ArmArena(storedArenaIndexes[0], storedArenaCategory[0])
         }
     }
     else if (arenaOne == arenaThree && arenaOne > arenaTwo) {
         let randomSelector = Math.floor(Math.random() * 9)
         if (randomSelector > 4) {
-            //SendLoadedArenaMessage(arenas[2])
-            storedArenaSB.setScore("arena_id", storedArenaIndexes[2])
-            storedArenaSB.setScore("arena_category", storedCategoryIndexes[2])
+            SendLoadedArenaMessage(arenas[2])
+            ArmArena(storedArenaIndexes[2], storedArenaCategory[2])
         }
         else {
-            //SendLoadedArenaMessage(arenas[0])
-            storedArenaSB.setScore("arena_id", storedArenaIndexes[0])
-            storedArenaSB.setScore("arena_category", storedCategoryIndexes[0])
+            SendLoadedArenaMessage(arenas[0])
+            ArmArena(storedArenaIndexes[0], storedArenaCategory[0])
         }
     }
     else if (arenaTwo == arenaThree && arenaTwo > arenaOne) {
         let randomSelector = Math.floor(Math.random() * 9)
         if (randomSelector > 4) {
-            //SendLoadedArenaMessage(arenas[1])
-            storedArenaSB.setScore("arena_id", storedArenaIndexes[1])
-            storedArenaSB.setScore("arena_category", storedCategoryIndexes[1])
+            SendLoadedArenaMessage(arenas[1])
+            ArmArena(storedArenaIndexes[1], storedArenaCategory[1])
         }
         else {
-            //SendLoadedArenaMessage(arenas[2])
-            storedArenaSB.setScore("arena_id", storedArenaIndexes[2])
-            storedArenaSB.setScore("arena_category", storedCategoryIndexes[2])
+            SendLoadedArenaMessage(arenas[2])
+            ArmArena(storedArenaIndexes[2], storedArenaCategory[2])
         }
     }
     else if (arenaOne == arenaTwo == arenaThree) {
         let randomSelector = Math.floor(Math.random() * 12)
         if (randomSelector > 8) {
             SendLoadedArenaMessage(arenas[2])
-            storedArenaSB.setScore("arena_id", storedArenaIndexes[2])
-            storedArenaSB.setScore("arena_category", storedCategoryIndexes[2])
+            ArmArena(storedArenaIndexes[2], storedArenaCategory[2])
         }
         else if (randomSelector > 4) {
             SendLoadedArenaMessage(arenas[1])
-            storedArenaSB.setScore("arena_id", storedArenaIndexes[1])
-            storedArenaSB.setScore("arena_category", storedCategoryIndexes[1])
+            ArmArena(storedArenaIndexes[1], storedArenaCategory[1])
         }
         else {
             SendLoadedArenaMessage(arenas[0])
-            storedArenaSB.setScore("arena_id", storedArenaIndexes[0])
-            storedArenaSB.setScore("arena_category", storedCategoryIndexes[0])
+            ArmArena(storedArenaIndexes[0], storedArenaCategory[0])
         }
     }
 }

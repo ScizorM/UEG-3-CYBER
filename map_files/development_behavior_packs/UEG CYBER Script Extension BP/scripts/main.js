@@ -185,6 +185,12 @@ system.runInterval(() => {
 
     world.getAllPlayers().forEach(player => {
 
+        if (player.hasTag("exit_stores") && !player.hasTag("team_nu") && !player.hasTag("team_lambda")) {
+            player.runCommand(`replaceitem entity @s slot.hotbar 0 sm:lobby_menu 1 0 {"minecraft:item_lock":{"mode":"lock_in_slot"}}`)
+        }
+        else {
+            player.runCommand(`clear @s sm:lobby_menu `)
+        }
 
         if (player.hasTag("enter_tc")) {
             player.runCommand(`execute if score @s curTrainRoom matches -1 run replaceitem entity @s slot.hotbar 4 sm:training_menu 1 0 {"minecraft:item_lock":{"mode":"lock_in_inventory"}}`)
