@@ -64,7 +64,7 @@ system.runInterval(() => {
     function randomizeMusic0() {
         currentRandomSong = 1
         system.run(() => randomizeMusic1(currentRandomSong))
-        world.sendMessage("randomizeMusic: Phase 0")
+        ////world.sendMessage("randomizeMusic: Phase 0")
     }
 
     function randomizeMusic1(currentRandomSong) {
@@ -300,13 +300,13 @@ system.runInterval(() => {
         }
 
         if (continue_disabled == false) {
-            world.sendMessage("randomizeMusic: song is enabled")
+            ////world.sendMessage("randomizeMusic: song is enabled")
 
             switch (currentRandomSong) {
                 case 1:
                     randomSong1 = randomSongActive
                     randomSongName1 = randomSongNameActive
-                    world.sendMessage("randomizeMusic: Song 1")
+                    ////world.sendMessage("randomizeMusic: Song 1")
                     currentRandomSong = 2
                     system.run(() => randomizeMusic1(currentRandomSong))
                     break;
@@ -316,18 +316,18 @@ system.runInterval(() => {
                         randomSongName2 = randomSongNameActive
                         currentRandomSong = 3
                         system.run(() => randomizeMusic1(currentRandomSong))
-                        world.sendMessage("randomizeMusic: Song 2")
+                        //world.sendMessage("randomizeMusic: Song 2")
                     }
                     else if (randomSongActive != randomSong1 && songEnabledCount == 1) {
                         randomSong2 = randomSong1
                         randomSongName2 = randomSongName1
                         currentRandomSong = 3
                         system.run(() => randomizeMusic1(currentRandomSong))
-                        world.sendMessage("randomizeMusic: Song 2 (is the same as 1!)")
+                        //world.sendMessage("randomizeMusic: Song 2 (is the same as 1!)")
                     }
                     else {
                         system.run(() => randomizeMusic1(currentRandomSong))
-                        world.sendMessage("randomizeMusic: Song 2 invalid")
+                        //world.sendMessage("randomizeMusic: Song 2 invalid")
                     }
                     break;
                 case 3:
@@ -336,18 +336,18 @@ system.runInterval(() => {
                         randomSongName3 = randomSongNameActive
                         currentRandomSong = 4
                         system.run(() => randomizeMusic1(currentRandomSong))
-                        world.sendMessage("randomizeMusic: Song 3")
+                        //world.sendMessage("randomizeMusic: Song 3")
                     }
                     else if (songEnabledCount <= 2) {
                         randomSong3 = randomSong1
                         randomSongName3 = randomSongName1
                         currentRandomSong = 4
                         system.run(() => randomizeMusic1(currentRandomSong))
-                        world.sendMessage("randomizeMusic: Song 3 (only 2 songs enabled!)")
+                        //world.sendMessage("randomizeMusic: Song 3 (only 2 songs enabled!)")
                     }
                     else {
                         system.run(() => randomizeMusic1(currentRandomSong))
-                        world.sendMessage("randomizeMusic: Song 3 invalid")
+                        //world.sendMessage("randomizeMusic: Song 3 invalid")
                     }
                     break;
                 case 4:
@@ -356,18 +356,18 @@ system.runInterval(() => {
                         randomSongName4 = randomSongNameActive
                         currentRandomSong = 5
                         system.run(() => randomizeMusic1(currentRandomSong))
-                        world.sendMessage("randomizeMusic: Song 4")
+                        //world.sendMessage("randomizeMusic: Song 4")
                     }
                     else if (songEnabledCount <= 3) {
                         randomSong4 = randomSong2
                         randomSongName4 = randomSongName2
                         currentRandomSong = 5
                         system.run(() => randomizeMusic1(currentRandomSong))
-                        world.sendMessage("randomizeMusic: Song 4 (only 3 songs or less enabled!)")
+                        //world.sendMessage("randomizeMusic: Song 4 (only 3 songs or less enabled!)")
                     }
                     else {
                         system.run(() => randomizeMusic1(currentRandomSong))
-                        world.sendMessage("randomizeMusic: Song 4 invalid")
+                        //world.sendMessage("randomizeMusic: Song 4 invalid")
                     }
                     break;
                 case 5:
@@ -376,38 +376,38 @@ system.runInterval(() => {
                         randomSongName5 = randomSongNameActive
                         currentRandomSong = 6
                         system.run(() => randomizeMusic1(currentRandomSong))
-                        world.sendMessage("randomizeMusic: Song 5")
+                        //world.sendMessage("randomizeMusic: Song 5")
                     }
                     else if (songEnabledCount <= 4) {
                         randomSong5 = randomSong3
                         randomSongName5 = randomSongName3
                         currentRandomSong = 6
                         system.run(() => randomizeMusic1(currentRandomSong))
-                        world.sendMessage("randomizeMusic: Song 5 (only 4 or less enabled)")
+                        //world.sendMessage("randomizeMusic: Song 5 (only 4 or less enabled)")
                     }
                     else {
                         system.run(() => randomizeMusic1(currentRandomSong))
-                        world.sendMessage("randomizeMusic: Song 5 invalid")
+                        //world.sendMessage("randomizeMusic: Song 5 invalid")
                     }
                     break;
                 case 6:
                     if (randomSongActive != randomSong1 && randomSongActive != randomSong2 && randomSongActive != randomSong3 && randomSongActive != randomSong4 && randomSongActive != randomSong5 && songEnabledCount > 5) {
                         randomSong6 = randomSongActive
                         randomSongName6 = randomSongNameActive
-                        world.sendMessage("randomizeMusic: Song 6")
+                        //world.sendMessage("randomizeMusic: Song 6")
                         system.run(() => randomizeMusic2(randomSong1, randomSong2, randomSong3, randomSong4, randomSongName1, randomSongName2, randomSongName3, randomSongName4, randomSongName5, randomSongName6))
-                        world.sendMessage("Song 1: " + randomSongName1 + "\nSong 2: " + randomSongName2 + "\nSong 3: " + randomSongName3 + "\nSong 4: " + randomSongName4 + "\nSong 5: " + randomSongName5 + "\nSong 6: " + randomSongName6)
+                        //world.sendMessage("Song 1: " + randomSongName1 + "\nSong 2: " + randomSongName2 + "\nSong 3: " + randomSongName3 + "\nSong 4: " + randomSongName4 + "\nSong 5: " + randomSongName5 + "\nSong 6: " + randomSongName6)
                     }
                     else if (songEnabledCount <= 5) {
                         randomSong6 = randomSong1
                         randomSongName6 = randomSongName1
-                        world.sendMessage("randomizeMusic: Song 6 (5 or less!)")
+                        //world.sendMessage("randomizeMusic: Song 6 (5 or less!)")
                         system.run(() => randomizeMusic2(randomSong1, randomSong2, randomSong3, randomSong4, randomSongName1, randomSongName2, randomSongName3, randomSongName4, randomSongName5, randomSongName6))
-                        world.sendMessage("Song 1: " + randomSongName1 + "\nSong 2: " + randomSongName2 + "\nSong 3: " + randomSongName3 + "\nSong 4: " + randomSongName4 + "\nSong 5: " + randomSongName5 + "\nSong 6: " + randomSongName6)
+                        //world.sendMessage("Song 1: " + randomSongName1 + "\nSong 2: " + randomSongName2 + "\nSong 3: " + randomSongName3 + "\nSong 4: " + randomSongName4 + "\nSong 5: " + randomSongName5 + "\nSong 6: " + randomSongName6)
                     }
                     else {
                         system.run(() => randomizeMusic1(currentRandomSong))
-                        world.sendMessage("randomizeMusic: Song 6 invalid")
+                        //world.sendMessage("randomizeMusic: Song 6 invalid")
                     }
                     break;
 
@@ -415,18 +415,18 @@ system.runInterval(() => {
         }
         else {
             system.run(() => randomizeMusic1(currentRandomSong))
-            world.sendMessage("randomizeMusic: song is disabled")
+            //world.sendMessage("randomizeMusic: song is disabled")
         }
         
 
-        world.sendMessage(randomSongActive + "")
+        //world.sendMessage(randomSongActive + "")
     }
 
 
 
 
     function randomizeMusic2(randomSong1, randomSong2, randomSong3, randomSong4, randomSongName1, randomSongName2, randomSongName3, randomSongName4, randomSongName5, randomSongName6) {
-        //world.sendMessage("received randomize2")
+        ////world.sendMessage("received randomize2")
         const playMusicSB = world.scoreboard.getObjective("playMusic")
         const playMusicScore = playMusicSB.getScore("playMusic")
         
@@ -450,7 +450,7 @@ system.runInterval(() => {
         const playMusicTimer = world.scoreboard.getObjective("playMusicTimer")
         const playMusicTimerS = playMusicTimer.getScore("playMusicTimer")
 
-        world.sendMessage("playmusic found")
+        //world.sendMessage("playmusic found")
         if (playMusicScore == 1) {
         system.run(() => playMusicG(randomSong1, randomSong2, randomSong3, randomSong4, randomSongName1, randomSongName2, randomSongName3, randomSongName4, randomSongName5, randomSongName6, timesStarted, warning2))
         function playMusicG(randomSong1, randomSong2, randomSong3, randomSong4, randomSongName1, randomSongName2, randomSongName3, randomSongName4, randomSongName5, randomSongName6, timesStarted, warning2) {
@@ -598,7 +598,7 @@ system.runInterval(() => {
 
 
             })//.catch((e) => {
-            //world.sendMessage(e + "")
+            ////world.sendMessage(e + "")
             //})
         }
 

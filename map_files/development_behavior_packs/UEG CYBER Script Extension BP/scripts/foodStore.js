@@ -25,19 +25,25 @@ system.runInterval(() => {
         }
 
         if (entity.typeId == "sm:oak_stool") {
-
-            //code yoinked from halo333x from the bedrock addons discord
-            var rideableComponent = entity.getComponent('rideable');
-            var player = rideableComponent.getRiders()[0];
-            //end code yoinking
+            
+                //code yoinked from halo333x from the bedrock addons discord
+                var rideableComponent = entity.getComponent('rideable');
+                var player = rideableComponent.getRiders()[0];
+                //end code yoinking
 
             if (player != undefined) {
-                if (!player.hasTag("seated")) {
-                    system.run(() => openFoodStoreMenu(1, player))
-                }
+                if (player.hasTag("enter_freedom")) {
 
-                player.addTag("seated")
-            }
+                    if (!player.hasTag("seated")) {
+                        system.run(() => openFoodStoreMenu(1, player))
+                    }
+
+                    player.addTag("seated")
+}
+
+                }
+            
+
         }
 
 

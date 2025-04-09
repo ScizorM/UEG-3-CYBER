@@ -266,7 +266,7 @@ system.runInterval(() => {
                 //player.sendMessage(`NOT CREATIVE`)
                 const scoreboard = world.scoreboard.getObjective("dash_strength")
                 player.playSound("dash", { volume: 0.4, pitch: Math.max(Math.random(), 0.8) })
-                player.sendMessage("View Direction Y: " + player.getViewDirection().y.toString()) 
+                //player.sendMessage("View Direction Y: " + player.getViewDirection().y.toString()) 
 
                     player.applyKnockback(player.getViewDirection().x, player.getViewDirection().z, dash_strength - Math.abs(player.getViewDirection().y / 1.5), ((player.getViewDirection().y + 1) / 2) * (dash_strength / 2))
                     dashes.addScore(player, dash_usage)

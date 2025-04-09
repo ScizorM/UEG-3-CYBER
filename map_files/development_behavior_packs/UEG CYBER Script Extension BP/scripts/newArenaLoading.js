@@ -58,6 +58,12 @@ world.beforeEvents.itemUse.subscribe(data => {
         player.sendMessage("don't forget to remove the debug tag.")
 
     }
+    else if (player.hasTag("debug_loadVoted")) {
+        system.run(() => {
+            SetVotedArena()
+        })
+        player.sendMessage("don't forget to remove the debug tag.")
+    }
 
 
 
@@ -342,7 +348,7 @@ function ArenaStoreMenu(player) {
         form.title("Arena Select");
         form.body("");
         form.button("Sort By: Series", "textures/ui/button_sort");
-        world.sendMessage(Object.keys(category).length.toString())
+        //world.sendMessage(Object.keys(category).length.toString())
         for (var i = 0; i < (Object.keys(category).length - 1); i++) {
             form.button(Object.values(category)[i][1], Object.values(category)[i][2]);
         }
@@ -517,7 +523,7 @@ function PreProcessArenaList(player, isDifficultyOrSize, criteria, criteria2, cr
         allArenas.forEach(arena => {
             if (arena.size == criteria) {
                 arenaCollection.push(arena)
-                world.sendMessage(arena.displayName)
+                //world.sendMessage(arena.displayName)
             }
             else if (criteria2 != undefined) {
                 if (arena.difficulty == criteria2) {
@@ -834,7 +840,9 @@ function LoadSelectedArena() {
     let storedArenaSB = world.scoreboard.getObjective("arena_to_load_new")
     let storedArenaID = storedArenaSB.getScore("arena_id")
     let storedArenaCategory = storedArenaSB.getScore("arena_category")
-    world.structureManager.place(versionCollection[storedArenaCategory][storedArenaID].structure, world.getDimension("overworld"), structureLoadLocation, { includeEntities: versionCollection[storedArenaCategory][storedArenaID].includeEntities })
+    let arena = GetArenaFromID(storedArenaID, storedArenaCategory)
+    world.sendMessage(arena)
+    world.structureManager.place(arena.structure, world.getDimension("overworld"), structureLoadLocation, { includeEntities: arena.includeEntities })
 }
 
 function RandomizeArenaVoteSlots(versionCollection) {
@@ -843,19 +851,19 @@ function RandomizeArenaVoteSlots(versionCollection) {
     let random2 = 0;
     let random3 = 0;
     enabledArenas = GetArenasCount(versionCollection, 0)
-    world.sendMessage("current number of enabled arenas: " + enabledArenas.length)
+    //world.sendMessage("current number of enabled arenas: " + enabledArenas.length)
     enabledArenas.forEach(arena => {
-        world.sendMessage(arena.displayName)
+        //world.sendMessage(arena.displayName)
     })
     random1 = Math.floor(Math.random() * enabledArenas.length)
-    world.sendMessage(random1.toString())
-    world.sendMessage("random slot 1: " + enabledArenas[random1].displayName.toString())
+    //world.sendMessage(random1.toString())
+    //world.sendMessage("random slot 1: " + enabledArenas[random1].displayName.toString())
     if (enabledArenas.length >= 3) {
         random2 = Math.floor(Math.random() * enabledArenas.length)
         for (var i = 0; random1 == random2; i++) {
             random2 = Math.floor(Math.random() * enabledArenas.length)
         }
-        world.sendMessage("random slot 2: " + enabledArenas[random2].displayName.toString())
+        //world.sendMessage("random slot 2: " + enabledArenas[random2].displayName.toString())
         random3 = Math.floor(Math.random() * enabledArenas.length)
         while (random1 == random3 || random2 == random3) {
             random3 = Math.floor(Math.random() * enabledArenas.length)
@@ -863,7 +871,7 @@ function RandomizeArenaVoteSlots(versionCollection) {
                 break;
             }
         }
-        world.sendMessage("random slot 3: " + enabledArenas[random3].displayName.toString())
+        //world.sendMessage("random slot 3: " + enabledArenas[random3].displayName.toString())
     }
     else {
         random2 = random1;
@@ -876,7 +884,7 @@ function RandomizeArenaVoteSlots(versionCollection) {
     let coordCmds = ["execute positioned -50 1 133 run event entity @e[r=1] ", "execute positioned -50 1 140 run event entity @e[r=1] ","execute positioned -50 1 147 run event entity @e[r=1] "]
     for (var i = 0; i < 3; i++) {
         world.getDimension("overworld").runCommand(coordCmds[i] + "remove_all")
-        world.sendMessage(coordCmds[i] + enabledArenas[randomArr[i]].enabledName)
+        //world.sendMessage(coordCmds[i] + enabledArenas[randomArr[i]].enabledName)
         world.getDimension("overworld").runCommand(coordCmds[i] + enabledArenas[randomArr[i]].enabledName)
         storedArenasSB.setScore(sbStoredNames[i], enabledArenas[randomArr[i]].arenaIndex)
         storedArenasSB.setScore(sbStoredNames[i + 3], enabledArenas[randomArr[i]].categoryIndex)
@@ -885,6 +893,8 @@ function RandomizeArenaVoteSlots(versionCollection) {
 }
 
 function ArmArena(id, category) {
+    //world.sendMessage("ID: " + id.toString())
+    //world.sendMessage("Category: " + category.toString())
     let storedArenaSB = world.scoreboard.getObjective("arena_to_load_new")
     let storedArenaID = storedArenaSB.getScore("arena_id")
     let storedArenaCategory = storedArenaSB.getScore("arena_category")
@@ -893,6 +903,7 @@ function ArmArena(id, category) {
 }
 
 function SetVotedArena() {
+    //world.sendMessage("loadvotedarena")
     let arenaVoteSB = world.scoreboard.getObjective("arena_vote")
     let arenaOne = arenaVoteSB.getScore("arena_1")
     let arenaTwo = arenaVoteSB.getScore("arena_2")
@@ -913,61 +924,61 @@ function SetVotedArena() {
     if (arenaOne > arenaTwo && arenaOne > arenaThree) {
 
         SendLoadedArenaMessage(arenas[0])
-        ArmArena(storedArenaIndexes[0],storedArenaCategory[0])
+        ArmArena(storedArenaIndexes[0],storedCategoryIndexes[0])
     }
     else if (arenaTwo > arenaOne && arenaTwo > arenaThree) {
-        ArmArena(storedArenaIndexes[1], storedArenaCategory[1])
+        ArmArena(storedArenaIndexes[1], storedCategoryIndexes[1])
     }
     else if (arenaThree > arenaOne && arenaThree > arenaTwo) {
         SendLoadedArenaMessage(arenas[2])
-        ArmArena(storedArenaIndexes[2], storedArenaCategory[2])
+        ArmArena(storedArenaIndexes[2], storedCategoryIndexes[2])
     }
     else if (arenaOne == arenaTwo && arenaOne > arenaThree) {
         let randomSelector = Math.floor(Math.random() * 9)
         if (randomSelector > 4) {
             SendLoadedArenaMessage(arenas[1])
-            ArmArena(storedArenaIndexes[1], storedArenaCategory[1])
+            ArmArena(storedArenaIndexes[1], storedCategoryIndexes[1])
         }
         else {
             SendLoadedArenaMessage(arenas[0])
-            ArmArena(storedArenaIndexes[0], storedArenaCategory[0])
+            ArmArena(storedArenaIndexes[0], storedCategoryIndexes[0])
         }
     }
     else if (arenaOne == arenaThree && arenaOne > arenaTwo) {
         let randomSelector = Math.floor(Math.random() * 9)
         if (randomSelector > 4) {
             SendLoadedArenaMessage(arenas[2])
-            ArmArena(storedArenaIndexes[2], storedArenaCategory[2])
+            ArmArena(storedArenaIndexes[2], storedCategoryIndexes[2])
         }
         else {
             SendLoadedArenaMessage(arenas[0])
-            ArmArena(storedArenaIndexes[0], storedArenaCategory[0])
+            ArmArena(storedArenaIndexes[0], storedCategoryIndexes[0])
         }
     }
     else if (arenaTwo == arenaThree && arenaTwo > arenaOne) {
         let randomSelector = Math.floor(Math.random() * 9)
         if (randomSelector > 4) {
             SendLoadedArenaMessage(arenas[1])
-            ArmArena(storedArenaIndexes[1], storedArenaCategory[1])
+            ArmArena(storedArenaIndexes[1], storedCategoryIndexes[1])
         }
         else {
             SendLoadedArenaMessage(arenas[2])
-            ArmArena(storedArenaIndexes[2], storedArenaCategory[2])
+            ArmArena(storedArenaIndexes[2], storedCategoryIndexes[2])
         }
     }
     else if (arenaOne == arenaTwo == arenaThree) {
         let randomSelector = Math.floor(Math.random() * 12)
         if (randomSelector > 8) {
             SendLoadedArenaMessage(arenas[2])
-            ArmArena(storedArenaIndexes[2], storedArenaCategory[2])
+            ArmArena(storedArenaIndexes[2], storedCategoryIndexes[2])
         }
         else if (randomSelector > 4) {
             SendLoadedArenaMessage(arenas[1])
-            ArmArena(storedArenaIndexes[1], storedArenaCategory[1])
+            ArmArena(storedArenaIndexes[1], storedCategoryIndexes[1])
         }
         else {
             SendLoadedArenaMessage(arenas[0])
-            ArmArena(storedArenaIndexes[0], storedArenaCategory[0])
+            ArmArena(storedArenaIndexes[0], storedCategoryIndexes[0])
         }
     }
 }

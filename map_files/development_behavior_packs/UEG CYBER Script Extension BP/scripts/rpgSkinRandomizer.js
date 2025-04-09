@@ -27,7 +27,7 @@ system.runInterval(() => {
             world.getDimension("overworld").runCommand(`execute positioned 103 35 16 run replaceitem entity @e[r=1,type=sm:skin_preview_npc] slot.armor.head 0 ${skinItemIds[randomizerSlot1]}`)
             world.getDimension("overworld").runCommand(`execute positioned 103 35 14 run replaceitem entity @e[r=1,type=sm:skin_preview_npc] slot.armor.head 0 ${skinItemIds[randomizerSlot2]}`)
             world.getDimension("overworld").runCommand(`execute positioned 103 35 12 run replaceitem entity @e[r=1,type=sm:skin_preview_npc] slot.armor.head 0 ${skinItemIds[randomizerSlot3]}`)
-            world.sendMessage("randomizer complete")
+            //world.sendMessage("randomizer complete")
         }
     }
 

@@ -36,7 +36,7 @@ system.runInterval(() => {
         }
         else if (skinValues.includes(randomNumberTest)) {
             randomNumberTest = Math.floor(Math.random() * 76)
-            world.sendMessage(skinRandCurrent + " is a duplicate. rerolling...")
+            //world.sendMessage(skinRandCurrent + " is a duplicate. rerolling...")
         }
 
         skinRandomizer.addScore("wait_period", 1)
@@ -48,7 +48,7 @@ system.runInterval(() => {
         }
 
         if (skinRandCurrent > 6) {
-            world.sendMessage("skin randomizer complete!")
+            //world.sendMessage("skin randomizer complete!")
 
             world.getAllPlayers().forEach(player => {
                 if (skinRandomizer.getScore("active") != 0) {

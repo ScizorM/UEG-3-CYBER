@@ -1,0 +1,6 @@
+Changelog (4-8-2025 to 4-9-2025 )
+
+- Removed quite a few debug messages that are no longer needed at this moment
+- Fixed the bug where the arena vote menu wouldn't properly load the voted-for arena sometimes
+- Re-implemented the arena vote rerolling system.
+- Finished the randomly-generating train system.

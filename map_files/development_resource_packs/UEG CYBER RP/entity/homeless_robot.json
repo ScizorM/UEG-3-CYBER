@@ -1,0 +1,29 @@
+//bridge-file-version: #5
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "sm:homeless_robot",
+			"materials": {
+				"default": "guardian"
+			},
+			"textures": {
+				"default": "textures/entity/homeless_robot"
+			},
+			"geometry": {
+				"default": "geometry.homeless_robot"
+			},
+			"render_controllers": [
+				"controller.render.guardian"
+			],
+			"animations": {
+				"general": "animation.homeless_robot.sitting"
+			},
+			"scripts": {
+				"animate": [
+					"general"
+				]
+			}
+		}
+	}
+}
