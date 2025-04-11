@@ -340,159 +340,172 @@ system.runInterval(() => {
 })
 
 function QuestTier0Check(player, gameWinsSB, creditsSB) {
-    var playerGameWins = gameWinsSB.getScore(player)
-    //var playerCredits = creditsSB.getScore(player) Don't need this for now, leaving it here just in case
 
-    var completeQuestMsg = `§e[Advancements]§a Advancement Completed: §dGame Winner (Tier`
+    if (player != undefined) {
+        var playerGameWins = gameWinsSB.getScore(player)
+        //var playerCredits = creditsSB.getScore(player) Don't need this for now, leaving it here just in case
 
-    if (playerGameWins >= 100 && !player.hasTag("quest_0_7")) {
-        player.addTag("quest_0_7")
-        player.sendMessage(completeQuestMsg + ` 8)§r\n+${quest0Currency[7].toString()}`)
-        creditsSB.addScore(player,quest0Currency[7])
-        system.run(() => PlayAdvancementSound(player))
+        var completeQuestMsg = `§e[Advancements]§a Advancement Completed: §dGame Winner (Tier`
+
+        if (playerGameWins >= 100 && !player.hasTag("quest_0_7")) {
+            player.addTag("quest_0_7")
+            player.sendMessage(completeQuestMsg + ` 8)§r\n+${quest0Currency[7].toString()}`)
+            creditsSB.addScore(player, quest0Currency[7])
+            system.run(() => PlayAdvancementSound(player))
+        }
+        else if (playerGameWins >= 50 && !player.hasTag("quest_0_6")) {
+            player.addTag("quest_0_6")
+            player.sendMessage(completeQuestMsg + ` 7)§r\n+${quest0Currency[6].toString()}`)
+            creditsSB.addScore(player, quest0Currency[6])
+            system.run(() => PlayAdvancementSound(player))
+        }
+        else if (playerGameWins >= 40 && !player.hasTag("quest_0_5")) {
+            player.addTag("quest_0_5")
+            player.sendMessage(completeQuestMsg + ` 6)§r\n+${quest0Currency[5].toString()}`)
+            creditsSB.addScore(player, quest0Currency[5])
+            system.run(() => PlayAdvancementSound(player))
+        }
+        else if (playerGameWins >= 30 && !player.hasTag("quest_0_4")) {
+            player.addTag("quest_0_4")
+            player.sendMessage(completeQuestMsg + ` 5)§r\n+${quest0Currency[4].toString()}`)
+            creditsSB.addScore(player, quest0Currency[4])
+            system.run(() => PlayAdvancementSound(player))
+        }
+        else if (playerGameWins >= 20 && !player.hasTag("quest_0_3")) {
+            player.addTag("quest_0_3")
+            player.sendMessage(completeQuestMsg + ` 4)§r\n+${quest0Currency[3].toString()}`)
+            creditsSB.addScore(player, quest0Currency[3])
+            system.run(() => PlayAdvancementSound(player))
+        }
+        else if (playerGameWins >= 10 && !player.hasTag("quest_0_2")) {
+            player.addTag("quest_0_2")
+            player.sendMessage(completeQuestMsg + ` 3)§r\n+${quest0Currency[3].toString()}`)
+            creditsSB.addScore(player, quest0Currency[2])
+            system.run(() => PlayAdvancementSound(player))
+        }
+        else if (playerGameWins >= 5 && !player.hasTag("quest_0_1")) {
+            player.addTag("quest_0_1")
+            player.sendMessage(completeQuestMsg + ` 2)§r\n+${quest0Currency[1].toString()}`)
+            creditsSB.addScore(player, quest0Currency[1])
+            system.run(() => PlayAdvancementSound(player))
+        }
+        else if (playerGameWins >= 1 && !player.hasTag("quest_0_0")) {
+            player.addTag("quest_0_0")
+            player.sendMessage(completeQuestMsg + ` 1)§r\n+${quest0Currency[0].toString()}`)
+            creditsSB.addScore(player, quest0Currency[0])
+            system.run(() => PlayAdvancementSound(player))
+        }
     }
-    else if (playerGameWins >= 50 && !player.hasTag("quest_0_6")) {
-        player.addTag("quest_0_6")
-        player.sendMessage(completeQuestMsg + ` 7)§r\n+${quest0Currency[6].toString()}`)
-        creditsSB.addScore(player, quest0Currency[6])
-        system.run(() => PlayAdvancementSound(player))
-    }
-    else if (playerGameWins >= 40 && !player.hasTag("quest_0_5")) {
-        player.addTag("quest_0_5")
-        player.sendMessage(completeQuestMsg + ` 6)§r\n+${quest0Currency[5].toString()}`)
-        creditsSB.addScore(player, quest0Currency[5])
-        system.run(() => PlayAdvancementSound(player))
-    }
-    else if (playerGameWins >= 30 && !player.hasTag("quest_0_4")) {
-        player.addTag("quest_0_4")
-        player.sendMessage(completeQuestMsg + ` 5)§r\n+${quest0Currency[4].toString()}`)
-        creditsSB.addScore(player, quest0Currency[4])
-        system.run(() => PlayAdvancementSound(player))
-    }
-    else if (playerGameWins >= 20 && !player.hasTag("quest_0_3")) {
-        player.addTag("quest_0_3")
-        player.sendMessage(completeQuestMsg + ` 4)§r\n+${quest0Currency[3].toString()}`)
-        creditsSB.addScore(player, quest0Currency[3])
-        system.run(() => PlayAdvancementSound(player))
-    }
-    else if (playerGameWins >= 10 && !player.hasTag("quest_0_2")) {
-        player.addTag("quest_0_2")
-        player.sendMessage(completeQuestMsg + ` 3)§r\n+${quest0Currency[3].toString()}`)
-        creditsSB.addScore(player, quest0Currency[2])
-        system.run(() => PlayAdvancementSound(player))
-    }
-    else if (playerGameWins >= 5 && !player.hasTag("quest_0_1")) {
-        player.addTag("quest_0_1")
-        player.sendMessage(completeQuestMsg + ` 2)§r\n+${quest0Currency[1].toString()}`)
-        creditsSB.addScore(player, quest0Currency[1])
-        system.run(() => PlayAdvancementSound(player))
-    }
-    else if (playerGameWins >= 1 && !player.hasTag("quest_0_0")) {
-        player.addTag("quest_0_0")
-        player.sendMessage(completeQuestMsg + ` 1)§r\n+${quest0Currency[0].toString()}`)
-        creditsSB.addScore(player, quest0Currency[0])
-        system.run(() => PlayAdvancementSound(player))
-    }
+    
 
 }
 
 function QuestTier1Check(player, roundWinsSB, creditsSB) {
-    var playerRoundWins = roundWinsSB.getScore(player)
+    if (player != undefined) {
+        var playerRoundWins = roundWinsSB.getScore(player)
 
-    var completeQuestMsg = `§e[Advancements]§a Advancement Completed: §dRound Winner (Tier`
+        var completeQuestMsg = `§e[Advancements]§a Advancement Completed: §dRound Winner (Tier`
 
-    if (playerRoundWins >= 500 && !player.hasTag("quest_1_5")) {
-        player.addTag("quest_1_5")
-        player.sendMessage(completeQuestMsg + ` 6)§r\n+${quest1Currency[5].toString()}`)
-        creditsSB.addScore(player, quest1Currency[5])
-        system.run(() => PlayAdvancementSound(player))
-    }
-    else if (playerRoundWins >= 100 && !player.hasTag("quest_1_4")) {
-        player.addTag("quest_1_4")
-        player.sendMessage(completeQuestMsg + ` 5)§r\n+${quest1Currency[4].toString()}`)
-        creditsSB.addScore(player, quest1Currency[4])
-        system.run(() => PlayAdvancementSound(player))
-    }
-    else if (playerRoundWins >= 50 && !player.hasTag("quest_1_3")) {
-        player.addTag("quest_1_3")
-        player.sendMessage(completeQuestMsg + ` 4)§r\n+${quest1Currency[3].toString()}`)
-        creditsSB.addScore(player, quest1Currency[3])
-        system.run(() => PlayAdvancementSound(player))
-    }
-    else if (playerRoundWins >= 10 && !player.hasTag("quest_1_2")) {
-        player.addTag("quest_1_2")
-        player.sendMessage(completeQuestMsg + ` 3)§r\n+${quest1Currency[2].toString()}`)
-        creditsSB.addScore(player, quest1Currency[2])
-        system.run(() => PlayAdvancementSound(player))
-    }
-    else if (playerRoundWins >= 5 && !player.hasTag("quest_1_1")) {
-        player.addTag("quest_1_1")
-        player.sendMessage(completeQuestMsg + ` 2)§r\n+${quest1Currency[1].toString()}`)
-        creditsSB.addScore(player, quest1Currency[1])
-        system.run(() => PlayAdvancementSound(player))
-    }
-    else if (playerRoundWins >= 1 && !player.hasTag("quest_1_0")) {
-        player.addTag("quest_1_0")
-        player.sendMessage(completeQuestMsg + ` 1)§r\n+${quest1Currency[0].toString()}`)
-        creditsSB.addScore(player, quest1Currency[0])
-        system.run(() => PlayAdvancementSound(player))
+        if (playerRoundWins >= 500 && !player.hasTag("quest_1_5")) {
+            player.addTag("quest_1_5")
+            player.sendMessage(completeQuestMsg + ` 6)§r\n+${quest1Currency[5].toString()}`)
+            creditsSB.addScore(player, quest1Currency[5])
+            system.run(() => PlayAdvancementSound(player))
+        }
+        else if (playerRoundWins >= 100 && !player.hasTag("quest_1_4")) {
+            player.addTag("quest_1_4")
+            player.sendMessage(completeQuestMsg + ` 5)§r\n+${quest1Currency[4].toString()}`)
+            creditsSB.addScore(player, quest1Currency[4])
+            system.run(() => PlayAdvancementSound(player))
+        }
+        else if (playerRoundWins >= 50 && !player.hasTag("quest_1_3")) {
+            player.addTag("quest_1_3")
+            player.sendMessage(completeQuestMsg + ` 4)§r\n+${quest1Currency[3].toString()}`)
+            creditsSB.addScore(player, quest1Currency[3])
+            system.run(() => PlayAdvancementSound(player))
+        }
+        else if (playerRoundWins >= 10 && !player.hasTag("quest_1_2")) {
+            player.addTag("quest_1_2")
+            player.sendMessage(completeQuestMsg + ` 3)§r\n+${quest1Currency[2].toString()}`)
+            creditsSB.addScore(player, quest1Currency[2])
+            system.run(() => PlayAdvancementSound(player))
+        }
+        else if (playerRoundWins >= 5 && !player.hasTag("quest_1_1")) {
+            player.addTag("quest_1_1")
+            player.sendMessage(completeQuestMsg + ` 2)§r\n+${quest1Currency[1].toString()}`)
+            creditsSB.addScore(player, quest1Currency[1])
+            system.run(() => PlayAdvancementSound(player))
+        }
+        else if (playerRoundWins >= 1 && !player.hasTag("quest_1_0")) {
+            player.addTag("quest_1_0")
+            player.sendMessage(completeQuestMsg + ` 1)§r\n+${quest1Currency[0].toString()}`)
+            creditsSB.addScore(player, quest1Currency[0])
+            system.run(() => PlayAdvancementSound(player))
+        }
     }
 }
 
 function QuestTier2Check(player, creditsSB) {
 
-    var completeQuestMsg = `§e[Advancements]§a Advancement Completed:`
+    if (player != undefined) {
+        var completeQuestMsg = `§e[Advancements]§a Advancement Completed:`
 
-    if (player.hasTag("quest_2_0_add") && !player.hasTag("quest_2_0")) {
-        player.addTag("quest_2_0")
-        player.sendMessage(completeQuestMsg + ` ${quest2Data[0].name}§r\n+${quest2Currency[0].toString()}`)
-        creditsSB.addScore(player, quest2Currency[0])
-        system.run(() => PlayAdvancementSound(player))
+        if (player.hasTag("quest_2_0_add") && !player.hasTag("quest_2_0")) {
+            player.addTag("quest_2_0")
+            player.sendMessage(completeQuestMsg + ` ${quest2Data[0].name}§r\n+${quest2Currency[0].toString()}`)
+            creditsSB.addScore(player, quest2Currency[0])
+            system.run(() => PlayAdvancementSound(player))
+        }
+        else if (player.hasTag("quest_2_1_add") && !player.hasTag("quest_2_1")) {
+            player.addTag("quest_2_1")
+            player.sendMessage(completeQuestMsg + ` ${quest2Data[1].name}§r\n+${quest2Currency[1].toString()}`)
+            creditsSB.addScore(player, quest2Currency[1])
+            system.run(() => PlayAdvancementSound(player))
+        }
+        else if (player.hasTag("quest_2_2_add") && !player.hasTag("quest_2_2")) {
+            player.addTag("quest_2_2")
+            player.sendMessage(completeQuestMsg + ` ${quest2Data[2].name}§r\n+${quest2Currency[2].toString()}`)
+            creditsSB.addScore(player, quest2Currency[2])
+            system.run(() => PlayAdvancementSound(player))
+        }
     }
-    else if (player.hasTag("quest_2_1_add") && !player.hasTag("quest_2_1")) {
-        player.addTag("quest_2_1")
-        player.sendMessage(completeQuestMsg + ` ${quest2Data[1].name}§r\n+${quest2Currency[1].toString()}`)
-        creditsSB.addScore(player, quest2Currency[1])
-        system.run(() => PlayAdvancementSound(player))
-    }
-    else if (player.hasTag("quest_2_2_add") && !player.hasTag("quest_2_2")) {
-        player.addTag("quest_2_2")
-        player.sendMessage(completeQuestMsg + ` ${quest2Data[2].name}§r\n+${quest2Currency[2].toString()}`)
-        creditsSB.addScore(player, quest2Currency[2])
-        system.run(() => PlayAdvancementSound(player))
-    }
+    
 }
 
 function QuestTier3Check(player, creditsSB) {
 
-    var totalSkinsSB = world.scoreboard.getObjective("player_skins_unlocked")
 
-    var skins = totalSkinsSB.getScore(player)
+    if (player != undefined) {
 
-    var completeQuestMsg = `§e[Advancements]§a Advancement Completed: §dSkin Collector (Tier` 
-    if (skins >= quest3Requirement[3] && !player.hasTag("quest_3_3")) {
-        player.addTag("quest_3_3")
-        player.sendMessage(completeQuestMsg + ` 4)§r\n+${quest3Currency[3].toString()}`)
-        creditsSB.addScore(player, quest3Currency[3])
-        system.run(() => PlayAdvancementSound(player))
-    }
-    else if (skins >= quest3Requirement[2] && !player.hasTag("quest_3_2")) {
-        player.addTag("quest_3_2")
-        player.sendMessage(completeQuestMsg + ` 3)§r\n+${quest3Currency[2].toString()}`)
-        creditsSB.addScore(player, quest3Currency[2])
-        system.run(() => PlayAdvancementSound(player))
-    }
-    else if (skins >= quest3Requirement[1] && !player.hasTag("quest_3_1")) {
-        player.addTag("quest_3_1")
-        player.sendMessage(completeQuestMsg + ` 2)§r\n+${quest3Currency[1].toString()}`)
-        creditsSB.addScore(player, quest3Currency[1])
-        system.run(() => PlayAdvancementSound(player))
-    }
-    else if (skins >= quest3Requirement[0] && !player.hasTag("quest_3_0")) {
-        player.addTag("quest_3_0")
-        player.sendMessage(completeQuestMsg + ` 1)§r\n+${quest3Currency[0].toString()}`)
-        creditsSB.addScore(player, quest3Currency[0])
-        system.run(() => PlayAdvancementSound(player))
+        var totalSkinsSB = world.scoreboard.getObjective("player_skins_unlocked")
+
+        var skins = totalSkinsSB.getScore(player)
+
+        var completeQuestMsg = `§e[Advancements]§a Advancement Completed: §dSkin Collector (Tier`
+        if (skins >= quest3Requirement[3] && !player.hasTag("quest_3_3")) {
+            player.addTag("quest_3_3")
+            player.sendMessage(completeQuestMsg + ` 4)§r\n+${quest3Currency[3].toString()}`)
+            creditsSB.addScore(player, quest3Currency[3])
+            system.run(() => PlayAdvancementSound(player))
+        }
+        else if (skins >= quest3Requirement[2] && !player.hasTag("quest_3_2")) {
+            player.addTag("quest_3_2")
+            player.sendMessage(completeQuestMsg + ` 3)§r\n+${quest3Currency[2].toString()}`)
+            creditsSB.addScore(player, quest3Currency[2])
+            system.run(() => PlayAdvancementSound(player))
+        }
+        else if (skins >= quest3Requirement[1] && !player.hasTag("quest_3_1")) {
+            player.addTag("quest_3_1")
+            player.sendMessage(completeQuestMsg + ` 2)§r\n+${quest3Currency[1].toString()}`)
+            creditsSB.addScore(player, quest3Currency[1])
+            system.run(() => PlayAdvancementSound(player))
+        }
+        else if (skins >= quest3Requirement[0] && !player.hasTag("quest_3_0")) {
+            player.addTag("quest_3_0")
+            player.sendMessage(completeQuestMsg + ` 1)§r\n+${quest3Currency[0].toString()}`)
+            creditsSB.addScore(player, quest3Currency[0])
+            system.run(() => PlayAdvancementSound(player))
+        }
     }
 }
 function PlayAdvancementSound(player) {

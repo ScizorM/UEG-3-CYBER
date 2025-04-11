@@ -40,6 +40,7 @@ execute as @a run execute unless score @s icarus_is_inactive matches 1 run tag @
 
 execute as @a[scores={deepstriker_timer = 2..}] run scoreboard players remove @s deepstriker_timer 1
 execute as @a[scores={deepstriker_timer = 1}] run function deepstriker_kb
+execute as @a[scores={deepstriker_timer = 1}] run execute positioned as @s run playsound deep_striker @a ~ ~ ~
 
 function check_enabled_arena_count
 
@@ -142,7 +143,6 @@ execute as @a[tag=tutorial] run /execute if score @s dashes >= minimum_dash_requ
  
 function alive_player_count_check
  
-function death_spectate
  
 function arenavote_blockdetect
  

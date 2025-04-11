@@ -12,6 +12,8 @@ tag @a[tag=teamed] add 1f
 tag @a[tag=teamed] add exit_stores
 clear @a[tag=teamed]
 tp @a[tag=teamed] 140 13 -41 facing 140 13 -40
+tag @s remove 1f
+tag @s add 2f
 tag @a remove team_nu
 tag @a remove team_lambda
 tag @a remove number_1

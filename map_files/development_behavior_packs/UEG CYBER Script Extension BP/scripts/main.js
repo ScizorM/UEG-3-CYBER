@@ -1,4 +1,4 @@
-﻿import { world, ItemCooldownComponent, system, Entity, EntityComponentTypes } from '@minecraft/server'
+﻿import { world, ItemCooldownComponent, system, Entity, EntityComponentTypes} from '@minecraft/server'
 import { ActionFormData, MessageFormData, ModalFormData } from '@minecraft/server-ui'
 import { skinItemIds, effectSkins } from './skinList.js'
 import { titleTags, storeTags } from './tagList.js'
@@ -15,6 +15,7 @@ import './itemUse.js'
 import './blockEvents.js'
 import './entityInteract.js'
 import './skinRandomizer.js'
+import './trusted.js'
 import './skinSettings.js'
 import './bank_menu.js'
 import './loadouts.js'
@@ -852,98 +853,107 @@ system.runInterval(() => {
 function renderSkins(player) {
 
     const dashEffectSB = world.scoreboard.getObjective("dash_effect_timer")
-    var dashEffectPlayer = dashEffectSB.getScore(player)
+
+
 
     const currentVariantSB = world.scoreboard.getObjective("skin_variant_timer")
-    var currentVariantPlayer = currentVariantSB.getScore(player)
+
     var currentVariantNPC = currentVariantSB.getScore("npc")
+    if (player != undefined) {
+        var dashEffectPlayer = dashEffectSB.getScore(player)
+        var currentVariantPlayer = currentVariantSB.getScore(player)
+        currentVariantSB.addScore(player, 1)
+    }
 
-    currentVariantSB.addScore(player, 1)
     currentVariantSB.addScore("npc", 1)
+    if (player != undefined) {
+        if (currentVariantNPC < 5) {
+            player.runCommand("event entity @e[type=sm:skin_preview_npc] sm:skin_variant_0")
+        }
+        else if (currentVariantNPC < 7) {
+            player.runCommand("event entity @e[type=sm:skin_preview_npc] sm:skin_variant_1")
+        }
+        else if (currentVariantNPC < 9) {
+            player.runCommand("event entity @e[type=sm:skin_preview_npc] sm:skin_variant_2")
+        }
+        else if (currentVariantNPC < 11) {
+            player.runCommand("event entity @e[type=sm:skin_preview_npc] sm:skin_variant_3")
+        }
+        else if (currentVariantNPC < 13) {
+            player.runCommand("event entity @e[type=sm:skin_preview_npc] sm:skin_variant_4")
+        }
+        else if (currentVariantNPC < 15) {
+            player.runCommand("event entity @e[type=sm:skin_preview_npc] sm:skin_variant_5")
+        }
+        else if (currentVariantNPC < 17) {
+            player.runCommand("event entity @e[type=sm:skin_preview_npc] sm:skin_variant_6")
+        }
+        else if (currentVariantNPC < 19) {
+            player.runCommand("event entity @e[type=sm:skin_preview_npc] sm:skin_variant_7")
+        }
+        else if (currentVariantNPC > 80) {
+            currentVariantSB.setScore("npc", 0)
+        }
 
-    if (currentVariantNPC < 5) {
-        player.runCommand("event entity @e[type=sm:skin_preview_npc] sm:skin_variant_0")
-    }
-    else if (currentVariantNPC < 7) {
-        player.runCommand("event entity @e[type=sm:skin_preview_npc] sm:skin_variant_1")
-    }
-    else if (currentVariantNPC < 9) {
-        player.runCommand("event entity @e[type=sm:skin_preview_npc] sm:skin_variant_2")
-    }
-    else if (currentVariantNPC < 11) {
-        player.runCommand("event entity @e[type=sm:skin_preview_npc] sm:skin_variant_3")
-    }
-    else if (currentVariantNPC < 13) {
-        player.runCommand("event entity @e[type=sm:skin_preview_npc] sm:skin_variant_4")
-    }
-    else if (currentVariantNPC < 15) {
-        player.runCommand("event entity @e[type=sm:skin_preview_npc] sm:skin_variant_5")
-    }
-    else if (currentVariantNPC < 17) {
-        player.runCommand("event entity @e[type=sm:skin_preview_npc] sm:skin_variant_6")
-    }
-    else if (currentVariantNPC < 19) {
-        player.runCommand("event entity @e[type=sm:skin_preview_npc] sm:skin_variant_7")
-    }
-    else if (currentVariantNPC > 80) {
-        currentVariantSB.setScore("npc", 0)
-    }
+        if (dashEffectPlayer == undefined) {
+            if (currentVariantPlayer < 5) {
+                player.runCommand("event entity @s sm:variant_0")
+            }
+            else if (currentVariantPlayer < 7) {
+                player.runCommand("event entity @s sm:variant_1")
+            }
+            else if (currentVariantPlayer < 9) {
+                player.runCommand("event entity @s sm:variant_2")
+            }
+            else if (currentVariantPlayer < 11) {
+                player.runCommand("event entity @s sm:variant_3")
+            }
+            else if (currentVariantPlayer < 13) {
+                player.runCommand("event entity @s sm:variant_4")
+            }
+            else if (currentVariantPlayer < 15) {
+                player.runCommand("event entity @s sm:variant_5")
+            }
+            else if (currentVariantPlayer < 17) {
+                player.runCommand("event entity @s sm:variant_6")
+            }
+            else if (currentVariantPlayer < 19) {
+                player.runCommand("event entity @s sm:variant_7")
+            }
+            else if (currentVariantPlayer > 80) {
+                currentVariantSB.setScore(player, 0)
+            }
+        }
 
-    if (dashEffectPlayer == undefined) {
-        if (currentVariantPlayer < 5) {
-            player.runCommand("event entity @s sm:variant_0")
-        }
-        else if (currentVariantPlayer < 7) {
-            player.runCommand("event entity @s sm:variant_1")
-        }
-        else if (currentVariantPlayer < 9) {
-            player.runCommand("event entity @s sm:variant_2")
-        }
-        else if (currentVariantPlayer < 11) {
-            player.runCommand("event entity @s sm:variant_3")
-        }
-        else if (currentVariantPlayer < 13) {
-            player.runCommand("event entity @s sm:variant_4")
-        }
-        else if (currentVariantPlayer < 15) {
-            player.runCommand("event entity @s sm:variant_5")
-        }
-        else if (currentVariantPlayer < 17) {
-            player.runCommand("event entity @s sm:variant_6")
-        }
-        else if (currentVariantPlayer < 19) {
-            player.runCommand("event entity @s sm:variant_7")
-        }
-        else if (currentVariantPlayer > 80) {
-            currentVariantSB.setScore(player, 0)
+        const selectedSkinSB = world.scoreboard.getObjective("selected_skin")
+        var selectedSkinPlayer = selectedSkinSB.getScore(player)
+
+        const selectedEffectSB = world.scoreboard.getObjective("selected_effect")
+        var selectedEffectPlayer = selectedEffectSB.getScore(player)
+
+        var item = player.getComponent("equippable")
+
+        var identifier = skinItemIds[selectedSkinPlayer]
+
+        player.runCommand(`replaceitem entity @s slot.armor.head 0 ${identifier} 1 0 {"minecraft:item_lock":{"mode":"lock_in_slot"}}`)
+
+
+        if (effectSkins.includes(selectedSkinPlayer) == false) {
+            if (selectedEffectPlayer < 2) {
+                player.runCommand('function render_rocket_default')
+            }
+            else if (selectedEffectPlayer == 2) {
+                player.runCommand('function render_rocket_fire')
+            }
+            else if (selectedEffectPlayer == 3) {
+                player.runCommand('function render_rocket_digi')
+            }
         }
     }
 
 
-    const selectedSkinSB = world.scoreboard.getObjective("selected_skin")
-    var selectedSkinPlayer = selectedSkinSB.getScore(player)
-
-    const selectedEffectSB = world.scoreboard.getObjective("selected_effect")
-    var selectedEffectPlayer = selectedEffectSB.getScore(player)
-
-    var item = player.getComponent("equippable")
-
-    var identifier = skinItemIds[selectedSkinPlayer]
-
-    player.runCommand(`replaceitem entity @s slot.armor.head 0 ${identifier} 1 0 {"minecraft:item_lock":{"mode":"lock_in_slot"}}`)
 
 
-    if (effectSkins.includes(selectedSkinPlayer) == false) {
-        if (selectedEffectPlayer < 2) {
-            player.runCommand('function render_rocket_default')
-        }
-        else if (selectedEffectPlayer == 2) {
-            player.runCommand('function render_rocket_fire')
-        }
-        else if (selectedEffectPlayer == 3) {
-            player.runCommand('function render_rocket_digi')
-        }
-    }
 
     
 

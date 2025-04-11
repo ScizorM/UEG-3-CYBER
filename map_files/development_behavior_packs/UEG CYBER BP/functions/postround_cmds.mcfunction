@@ -15,6 +15,7 @@ function postround_extended
 execute @a[tag=ingame] ~ ~ ~ function disable_movement_controls
 event entity @e[type=sm:landmine_ver_lambda] sm:explode
 event entity @e[type=sm:landmine_ver_nu] sm:explode
+kill @e[type=tnt_minecart]
 function songs/kaizoslumber/stop_music
 scoreboard players set playMusic playMusic 0
 function postround_clear_entities

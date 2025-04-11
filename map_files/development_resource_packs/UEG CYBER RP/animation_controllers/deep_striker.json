@@ -7,13 +7,10 @@
 				"default": {
 					"transitions": [
 						{
-							"firing": "context.is_first_person == 1.0 && query.cooldown_time_remaining('slot.weapon.mainhand') > 0 && query.property('sm:deepstriker_shooting_self') == 0 && query.property('sm:deepstriker_anim') == 0 && query.cooldown_time_remaining('slot.weapon.mainhand') > 9"
+							"firing": "context.is_first_person == 1.0 && query.cooldown_time_remaining('slot.weapon.mainhand') > 0"
 						},
 						{
-							"shoot_self": "context.is_first_person == 1.0 && query.cooldown_time_remaining('slot.weapon.mainhand') > 0 && query.property('sm:deepstriker_shooting_self') != 0 && query.property('sm:deepstriker_anim') == 0 && query.cooldown_time_remaining('slot.weapon.mainhand') > 9"
-						},
-						{
-							"idle_fp": "context.is_first_person == 1.0 && query.cooldown_time_remaining('slot.weapon.mainhand') < 10"
+							"idle_fp": "context.is_first_person == 1.0 && query.cooldown_time_remaining('slot.weapon.mainhand') == 0"
 						},
 						{
 							"idle_tp": "context.is_first_person != 1.0"
@@ -26,20 +23,7 @@
 					],
 					"transitions": [
 						{
-							"idle_fp": "context.is_first_person == 1.0 && query.all_animations_finished"
-						},
-						{
-							"idle_tp": "context.is_first_person != 1.0"
-						}
-					]
-				},
-				"shoot_self": {
-					"animations": [
-						"shoot_self"
-					],
-					"transitions": [
-						{
-							"idle_fp": "context.is_first_person == 1.0 && query.all_animations_finished"
+							"idle_fp": "context.is_first_person == 1.0 && query.cooldown_time_remaining('slot.weapon.mainhand') == 0"
 						},
 						{
 							"idle_tp": "context.is_first_person != 1.0"
@@ -52,13 +36,10 @@
 					],
 					"transitions": [
 						{
-							"firing": "context.is_first_person == 1.0 && query.cooldown_time_remaining('slot.weapon.mainhand') > 0 && query.property('sm:deepstriker_shooting_self') == 0 && query.property('sm:deepstriker_anim') == 0"
+							"firing": "context.is_first_person == 1.0 && query.cooldown_time_remaining('slot.weapon.mainhand') > 0"
 						},
 						{
-							"shoot_self": "context.is_first_person == 1.0 && query.cooldown_time_remaining('slot.weapon.mainhand') > 0 && query.property('sm:deepstriker_shooting_self') != 0 && query.property('sm:deepstriker_anim') == 0"
-						},
-						{
-							"idle_fp": "context.is_first_person == 1.0 && query.cooldown_time_remaining('slot.weapon.mainhand') == 0 "
+							"idle_fp": "context.is_first_person == 1.0 && query.cooldown_time_remaining('slot.weapon.mainhand') == 0"
 						},
 						{
 							"idle_tp": "context.is_first_person != 1.0"
@@ -71,7 +52,10 @@
 					],
 					"transitions": [
 						{
-							"idle_fp": "context.is_first_person == 1.0"
+							"firing": "context.is_first_person == 1.0 && query.cooldown_time_remaining('slot.weapon.mainhand') > 0"
+						},
+						{
+							"idle_fp": "context.is_first_person == 1.0 && query.cooldown_time_remaining('slot.weapon.mainhand') == 0"
 						},
 						{
 							"idle_tp": "context.is_first_person != 1.0"

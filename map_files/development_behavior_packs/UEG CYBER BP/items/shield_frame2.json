@@ -12,23 +12,7 @@
 			},
 			"minecraft:icon": "sm:shield_frame2",
 			"minecraft:max_stack_size": 1,
-			"minecraft:hand_equipped": true,
-			"minecraft:render_offsets": {
-				"off_hand": {
-					"third_person": {
-						"position": [
-							-0.2,
-							0.2,
-							-0.7
-						],
-						"scale": [
-							0.12,
-							0.12,
-							0.12
-						]
-					}
-				}
-			}
+			"minecraft:hand_equipped": true
 		}
 	}
 }

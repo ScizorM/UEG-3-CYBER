@@ -37,10 +37,14 @@ world.beforeEvents.itemUse.subscribe(data => {
         system.run(() => ArenaStoreMenu(player))
 
     }
+    else if (player.hasTag("arenaDebugMenu")) {
+        system.run(() => DebugArenaInterface(player))
+        player.sendMessage("don't forget to remove the debug tag.")
+    }
     else if (player.hasTag("debug_randomize")) {
 
         system.run(() => RandomizeArenaVoteSlots(versionCollection))
-
+        player.sendMessage("don't forget to remove the debug tag.")
     }
     else if (player.hasTag("debug_enableAll")) {
         versionCollection.forEach(category => {
@@ -326,8 +330,9 @@ var allArenas = [...ueg1Collection, ...uegPlusCollection, ...rpg1Collection, ...
 function GetArenaFromID(id, category) {
     let arenaReturn;
     allArenas.forEach(arena => {
-        if (arena.arenaIndex == id && arena.arenaCategory == category) {
+        if (arena.arenaIndex == id && arena.categoryIndex == category) {
             arenaReturn = arena;
+            world.sendMessage(arenaReturn.displayName + " = " + arena.displayName)
         }
     })
     return arenaReturn;
@@ -763,7 +768,8 @@ function DebugArenaInterface(player) {
         let parsedTextField = parseInt(textField.trim())
 
         if (!isNaN(parsedTextField)) {
-            LoadSelectedArena(r.formValues[0],parsedTextField)
+            ArmArena(parsedTextField, r.formValues[0])
+            LoadSelectedArena()
         }
         else {
 
@@ -840,8 +846,9 @@ function LoadSelectedArena() {
     let storedArenaSB = world.scoreboard.getObjective("arena_to_load_new")
     let storedArenaID = storedArenaSB.getScore("arena_id")
     let storedArenaCategory = storedArenaSB.getScore("arena_category")
+    world.sendMessage("arena id: " + storedArenaID.toString())
+    world.sendMessage("arena Category: " + storedArenaCategory.toString())
     let arena = GetArenaFromID(storedArenaID, storedArenaCategory)
-    world.sendMessage(arena)
     world.structureManager.place(arena.structure, world.getDimension("overworld"), structureLoadLocation, { includeEntities: arena.includeEntities })
 }
 
@@ -924,7 +931,7 @@ function SetVotedArena() {
     if (arenaOne > arenaTwo && arenaOne > arenaThree) {
 
         SendLoadedArenaMessage(arenas[0])
-        ArmArena(storedArenaIndexes[0],storedCategoryIndexes[0])
+        ArmArena(storedArenaIndexes[0], storedCategoryIndexes[0])
     }
     else if (arenaTwo > arenaOne && arenaTwo > arenaThree) {
         ArmArena(storedArenaIndexes[1], storedCategoryIndexes[1])
@@ -967,6 +974,21 @@ function SetVotedArena() {
         }
     }
     else if (arenaOne == arenaTwo == arenaThree) {
+        let randomSelector = Math.floor(Math.random() * 12)
+        if (randomSelector > 8) {
+            SendLoadedArenaMessage(arenas[2])
+            ArmArena(storedArenaIndexes[2], storedCategoryIndexes[2])
+        }
+        else if (randomSelector > 4) {
+            SendLoadedArenaMessage(arenas[1])
+            ArmArena(storedArenaIndexes[1], storedCategoryIndexes[1])
+        }
+        else {
+            SendLoadedArenaMessage(arenas[0])
+            ArmArena(storedArenaIndexes[0], storedCategoryIndexes[0])
+        }
+    }
+    else {
         let randomSelector = Math.floor(Math.random() * 12)
         if (randomSelector > 8) {
             SendLoadedArenaMessage(arenas[2])

@@ -39,8 +39,9 @@
 					"variable.hand_bob = query.life_time < 0.01 ? 0.0 : variable.hand_bob + ((query.is_on_ground && query.is_alive ? math.clamp(math.sqrt(math.pow(query.position_delta(0), 2.0) + math.pow(query.position_delta(2), 2.0)), 0.0, 0.1) : 0.0) - variable.hand_bob) * 0.02;",
 					"variable.map_angle = math.clamp(1 - variable.player_x_rotation / 45.1, 0.0, 1.0);",
 					"variable.item_use_normalized = query.main_hand_item_use_duration / query.main_hand_item_max_duration;",
-					"variable.firing_animation = query.cooldown_time_remaining('slot.weapon.mainhand') * 7.0;",
-					"variable.icarus_frame = 1;"
+					"variable.icarus_frame = 1;",
+					"variable.deepstriker_anim = 0;",
+					"variable.deepstriker_shooting_self = 0;"
 				],
 				"animate": [
 					"root"

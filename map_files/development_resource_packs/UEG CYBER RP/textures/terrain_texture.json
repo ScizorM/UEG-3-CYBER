@@ -1246,6 +1246,31 @@
 			"textures": [
 				"textures/entity/piglin_cyber"
 			]
+		},
+				"sm:cyber_piglin_head_p2": {
+			"textures": [
+				"textures/entity/piglin_cyber_p2"
+			]
+		},
+						"sm:cyber_piglin_head_p3": {
+			"textures": [
+				"textures/entity/piglin_cyber_p3"
+			]
+		},
+						"sm:cyber_piglin_head_p4": {
+			"textures": [
+				"textures/entity/piglin_cyber_p4"
+			]
+		},
+						"sm:cyber_piglin_head_p5": {
+			"textures": [
+				"textures/entity/piglin_cyber_p5"
+			]
+		},
+						"sm:cyber_piglin_head_p6": {
+			"textures": [
+				"textures/entity/piglin_cyber_p6"
+			]
 		}
 	}
 }

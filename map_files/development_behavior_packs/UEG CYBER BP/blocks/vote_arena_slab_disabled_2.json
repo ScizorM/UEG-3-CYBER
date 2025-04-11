@@ -13,9 +13,9 @@
 					0
 				],
 				"size": [
-					16,
 					8,
-					16
+					8,
+					8
 				]
 			},
 			"minecraft:geometry": "geometry.slabtest",

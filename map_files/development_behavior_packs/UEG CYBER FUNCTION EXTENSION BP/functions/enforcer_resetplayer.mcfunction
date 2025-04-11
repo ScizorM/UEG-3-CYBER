@@ -9,6 +9,9 @@ execute if score enforcer_creditR enforcer_creditR matches 0 run tellraw @a {"ra
 execute if score enforcer_creditR enforcer_creditR matches 0 run scoreboard players remove @s credits 2
 execute if score enforcer_creditR enforcer_creditR matches 1 run tellraw @a {"rawtext": [{"text": "§e[Enforcer Anti-Leave Systems] §c"}, {"selector": "@s"},{"text": "§c has reconnected after leaving mid-battle. They will not lose any  as the penalty is disabled in settings."}]}
 tp @s 140 13 -41 facing 140 13 -40
+tag @s add 2f
+tag @s add exit_stores
+tag @s remove 1f
 gamemode adventure @s
 #ability @s mayfly false
 gamemode adventure @s

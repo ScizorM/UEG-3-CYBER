@@ -23,6 +23,31 @@
 				"sounds/weapons/baby_staff_3"
 			]
 		},
+		"implosion_grenade": {
+			"category": "music",
+			"min_distance": 0,
+			
+			"sounds": [
+				"sounds/weapons/implosion_grenade"
+			]
+		},
+		"deep_striker": {
+			"category": "music",
+			"min_distance": 0,
+			
+			"sounds": [
+				"sounds/weapons/deep_striker"
+			]
+		},
+
+				"charged_bolt_rifle_new": {
+			"category": "music",
+			"min_distance": 0,
+			
+			"sounds": [
+				"sounds/weapons/charged_bolt_rifle_new"
+			]
+		},
 				"clock_tick": {
 			"category": "music",
 			"min_distance": 0,
@@ -30,11 +55,12 @@
 				"sounds/effects/clock_tick"
 			]
 		},
-						"cannon_bludgeon": {
+				"cannon_bludgeon": {
 			"category": "music",
 			"min_distance": 0,
+			
 			"sounds": [
-				"sounds/weapons/cannon_bludgeon"
+				"sounds/weapons/green_gobbler_cannon_new"
 			]
 		},
 						"clock_bell": {

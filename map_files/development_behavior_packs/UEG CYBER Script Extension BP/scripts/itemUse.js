@@ -762,6 +762,7 @@ world.beforeEvents.worldInitialize.subscribe((initEvent) => {
                 hitEntity.applyKnockback(source.getViewDirection().x, source.getViewDirection().z, 0, 2)
                 hitEntity.runCommand(`execute positioned ${hitEntity.location.x} ${hitEntity.location.y} ${hitEntity.location.z} run /function explosion_deepstriker`)
                 hitEntity.runCommand(`execute positioned ${hitEntity.location.x} ${hitEntity.location.y} ${hitEntity.location.z} run /summon sm:explosion_deepstriker`)
+                source.runCommand(`playsound deep_striker @a ~ ~ ~`)
                 entityRay = true
             })
 
@@ -773,7 +774,7 @@ world.beforeEvents.worldInitialize.subscribe((initEvent) => {
                 var rayDisplacementBlock = { x: source.location.x - blockRC.block.location.x, y: source.location.y - blockRC.block.location.y + .4, z: source.location.z - blockRC.block.location.z }
 
 
-
+                source.runCommand(`playsound deep_striker @a ~ ~ ~`)
                 source.runCommand(`execute positioned ${blockRC.block.location.x} ${blockRC.block.location.y} ${blockRC.block.location.z} run /function explosion_deepstriker`)
                 source.runCommand(`execute positioned ${blockRC.block.location.x} ${blockRC.block.location.y} ${blockRC.block.location.z} run /summon sm:explosion_deepstriker`)
                 

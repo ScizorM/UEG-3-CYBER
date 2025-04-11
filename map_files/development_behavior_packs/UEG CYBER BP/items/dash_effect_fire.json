@@ -9,9 +9,6 @@
 			"minecraft:wearable": {
 				"slot": "slot.armor.legs"
 			},
-			"minecraft:armor": {
-				"protection": 0
-			},
 			"minecraft:display_name": {
 				"value": "Dash Effects"
 			},

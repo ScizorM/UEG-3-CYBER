@@ -179,6 +179,21 @@
 	"sm:cyber_piglin_head": {
 		"textures": "sm:cyber_piglin_head"
 	},
+		"sm:cyber_piglin_head_p2": {
+		"textures": "sm:cyber_piglin_head_p2"
+	},
+			"sm:cyber_piglin_head_p3": {
+		"textures": "sm:cyber_piglin_head_p3"
+	},
+			"sm:cyber_piglin_head_p4": {
+		"textures": "sm:cyber_piglin_head_p4"
+	},
+			"sm:cyber_piglin_head_p5": {
+		"textures": "sm:cyber_piglin_head_p5"
+	},
+			"sm:cyber_piglin_head_p6": {
+		"textures": "sm:cyber_piglin_head_p6"
+	},
 	"sm:reinforced_block": {
 		"textures": "sm:reinforced_block"
 	},

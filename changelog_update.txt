@@ -4,3 +4,15 @@ Changelog (4-8-2025 to 4-9-2025 )
 - Fixed the bug where the arena vote menu wouldn't properly load the voted-for arena sometimes
 - Re-implemented the arena vote rerolling system.
 - Finished the randomly-generating train system.
+
+Changelog (4-9-2025 to 4-11-2025 ) 
+
+- Fixed a critical arena loading error
+- Fixed arenas rerolling and not removing player votes
+- Fixed a bug where the arena McRye's would not load
+- Temporarily removed most spectating features, as I have no way to ensure they work correctly right now
+- Operator-only settings are now fully functional
+- Enforced anti-entry settings for stores that should not be able to be entered while a match is active
+- Fixed a few content log errors, but there are too many so I really don't care enough to fix them all
+- Fixed another variety of issues
+- Started working on the riftzone again

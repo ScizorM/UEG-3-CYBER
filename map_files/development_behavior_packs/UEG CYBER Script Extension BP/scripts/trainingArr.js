@@ -1,7 +1,7 @@
 export {itemList, beginner0, beginner1, intermediate0, advanced0, intermediate1, intermediateTips, beginnerTips, advancedTips }
 
 
-var itemList = ["sm:enhanced_platform_fabricator","sm:enhanced_charged_bolt_rifle","sm:teamless_landmine","enhanced_deep_striker"]
+var itemList = ["sm:enhanced_platform_fabricator","sm:enhanced_charged_bolt_rifle","sm:teamless_landmine","sm:enhanced_deep_striker"]
 
 //first true/false is dashes enabled, second is abilities enabled, if second, check for ability override, after that, select ability to override with (yes I know this code is a war crime shut up) after that, check for time limit, and set time limit
 
