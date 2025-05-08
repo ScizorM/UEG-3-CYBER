@@ -1,0 +1,29 @@
+//bridge-file-version: #5
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "sm:wisdom_rat",
+			"materials": {
+				"default": "guardian"
+			},
+			"textures": {
+				"default": "textures/entity/wisdom_rat"
+			},
+			"geometry": {
+				"default": "geometry.wisdom_rat"
+			},
+			"render_controllers": [
+				"controller.render.guardian"
+			],
+			"animations": {
+				"general": "animation.wisdom_rat.idle"
+			},
+			"scripts": {
+				"animate": [
+					"general"
+				]
+			}
+		}
+	}
+}

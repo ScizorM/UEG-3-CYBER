@@ -11,7 +11,7 @@
 							"explode": "query.variant > 7"
 						},
 						{
-							"vent": "query.variant > 1 && query.variant < 7"
+							"vent": "query.variant < 7"
 						}
 					],
 					"blend_transition": 0.05

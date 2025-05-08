@@ -24,7 +24,7 @@ function skinCategoryInit(player) {
     form.button("UEG CYBER Originals [2024]", "textures/ui/button_cyber");
     form.button("UEG (Legacy) [2020-22]", "textures/ui/button_ueg1");
     form.button("RPG Game Series [2020-23]", "textures/ui/button_rpg1");
-    form.button("Effect Select", "textures/ui/button_effects");
+    form.button("Coming Soon?", "textures/ui/skin_categories/category_");
     form.button("Close", "textures/ui/button_close");
     form.show(player).then(r => {
 
@@ -50,9 +50,9 @@ function skinCategoryInit(player) {
             var collection = skinSet_over[18]
             system.run(() => skinSelectUI(player, skinCount, selectedCPack, skinIDs, series, collection))
         }
-        else if (responseVal == 3) {
-            system.run(() => effectList(player))
-        }
+        //else if (responseVal == 3) {
+        //    system.run(() => effectList(player))
+        //}
 
     })
 }

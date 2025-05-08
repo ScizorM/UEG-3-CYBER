@@ -26,7 +26,7 @@ const skinList = new Array(
     "15 - Unfinished", // 15############################
     // Overdrive ////////////////////////
     "Recruit: HWS", // 16
-    "Maxibooster", // 17
+    "Maxibooster", // 17
     "18 - Unfinished", // 18
     // Crystallized ////////////////////////
     "19 - Unfinished", // 19###########################
@@ -43,14 +43,14 @@ const skinList = new Array(
     // Brutal ////////////////////////
     "The Iron Maiden", // 28
     "Excalibarbara", // 29
-    "30 - Unfinished", // 30
+    "The Fallen", // 30
     // Intergalactic ////////////////////////
     "Devorans Spatium", // 31
     "32 - Unfinished", // 32
     "33 - Unfinished", // 33
     // Wonderland ////////////////////////
     "Gummy Contraption", // 34
-    "Ringmaster", // 35
+    "Ringmaster", // 35
     "Monarch of Hearts", // 36
     // Auric ////////////////////////
     "Golden Striker", // 37
@@ -119,6 +119,8 @@ const effectSkins = new Array(
     8,
     10,
     28,
+    30,
+    35,
     59,
     61,
     63,
@@ -160,7 +162,7 @@ const skinItemIds = new Array(
     incoSk, // 15
     // Overdrive ////////////////////////
     "sm:skin_16", // 16
-    incoSk, // 17
+    "sm:skin_17", // 17
     incoSk, // 18
     // Crystallized ////////////////////////
     incoSk, // 19
@@ -177,14 +179,14 @@ const skinItemIds = new Array(
     // Brutal ////////////////////////
     "sm:skin_28", // 28
     incoSk, // 29
-    incoSk, // 30
+    "sm:skin_30", // 30
     // Intergalactic ////////////////////////
     "sm:skin_31", // 31
     incoSk, // 32
     incoSk, // 33
     // Wonderland ////////////////////////
     "sm:skin_34", // 34
-    incoSk, // 35
+    "sm:skin_35", // 35
     incoSk, // 36
     // Auric ////////////////////////
     "sm:skin_37", // 37
@@ -267,7 +269,7 @@ const skinIconLoc = new Array(
     "textures/ui/skin_categories/button", // 15
     // Overdrive ////////////////////////
     "textures/ui/skin_icons/skin_16", // 16
-    "textures/ui/skin_categories/button", // 17
+    "textures/ui/skin_icons/skin_17", // 17
     "textures/ui/skin_categories/button", // 18
     // Crystallized ////////////////////////
     "textures/ui/skin_categories/button", // 19
@@ -284,14 +286,14 @@ const skinIconLoc = new Array(
     // Brutal ////////////////////////
     "textures/ui/skin_icons/skin_28", // 28
     "textures/ui/skin_categories/button", // 29
-    "textures/ui/skin_categories/button", // 30
+    "textures/ui/skin_icons/skin_30", // 30
     // Intergalactic ////////////////////////
     "textures/ui/skin_icons/skin_31", // 31
     "textures/ui/skin_categories/button", // 32
     "textures/ui/skin_categories/button", // 33
     // Wonderland ////////////////////////
     "textures/ui/skin_icons/skin_34", // 34
-    "textures/ui/skin_categories/button", // 35
+    "textures/ui/skin_icons/skin_35", // 35
     "textures/ui/skin_categories/button", // 36
     // Auric ////////////////////////
     "textures/ui/skin_icons/skin_37", // 37
@@ -391,7 +393,7 @@ const designerList = new Array(
     // Brutal ////////////////////////
     "zeerye", // 28
     "29 - Unfinished", // 29
-    "30 - Unfinished", // 30
+    "evel", // 30
     // Intergalactic ////////////////////////
     "evel", // 31
     "32 - Unfinished", // 32

@@ -1,0 +1,32 @@
+//bridge-file-version: #24
+{
+	"format_version": "1.16.100",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "sm:skin_17",
+			"materials": {
+				"default": "entity_emissive_alpha"
+			},
+			"textures": {
+				"default": "textures/entity/skins/maxibooster_dark",
+				"frame_2": "textures/entity/skins/maxibooster_dark_1",
+				"frame_3": "textures/entity/skins/maxibooster_dark_2",
+				"frame_4": "textures/entity/skins/maxibooster_dark_1",
+				"frame_5": "textures/entity/skins/maxibooster_dark",
+				"frame_6": "textures/entity/skins/maxibooster_dark",
+				"frame_7": "textures/entity/skins/maxibooster_dark",
+				"frame_8": "textures/entity/skins/maxibooster_dark",
+				"dash1": "textures/entity/skins/maxibooster_dark",
+				"dash2": "textures/entity/skins/maxibooster_dark",
+				"dash3": "textures/entity/skins/maxibooster_dark",
+				"dash4": "textures/entity/skins/maxibooster_dark"
+			},
+			"geometry": {
+				"default": "geometry.maxibooster"
+			},
+			"render_controllers": [
+				"controller.render.skin_animations"
+			]
+		}
+	}
+}

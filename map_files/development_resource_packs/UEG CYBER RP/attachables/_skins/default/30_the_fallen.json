@@ -1,0 +1,42 @@
+//bridge-file-version: #18
+{
+	"format_version": "1.16.100",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "sm:skin_30",
+			"materials": {
+				"default": "entity_emissive_alpha"
+			},
+			"textures": {
+				"default": "textures/entity/skins/the_fallen",
+				"frame_2": "textures/entity/skins/the_fallen_frame2",
+				"frame_3": "textures/entity/skins/the_fallen_frame3",
+				"frame_4": "textures/entity/skins/the_fallen_frame4",
+				"frame_5": "textures/entity/skins/the_fallen_frame3",
+				"frame_6": "textures/entity/skins/the_fallen_frame2",
+				"frame_7": "textures/entity/skins/the_fallen",
+				"frame_8": "textures/entity/skins/the_fallen",
+				"dash1": "textures/entity/skins/the_fallen",
+				"dash2": "textures/entity/skins/the_fallen",
+				"dash3": "textures/entity/skins/the_fallen",
+				"dash4": "textures/entity/skins/the_fallen"
+			},
+			"geometry": {
+				"default": "geometry.the_fallen"
+			},
+			"render_controllers": [
+				"controller.render.skin_animations"
+			],
+			"animations": {
+				"idle": "animation.the_fallen.idle",
+				"dash": "animation.the_fallen.fly",
+				"controller": "controller.animation.conduit"
+			},
+			"scripts": {
+				"animate": [
+					"controller"
+				]
+			}
+		}
+	}
+}

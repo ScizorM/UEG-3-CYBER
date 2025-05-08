@@ -1,0 +1,42 @@
+//bridge-file-version: #18
+{
+	"format_version": "1.16.100",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "sm:skin_35",
+			"materials": {
+				"default": "guardian"
+			},
+			"textures": {
+				"default": "textures/entity/skins/ringmaster",
+				"frame_2": "textures/entity/skins/ringmaster",
+				"frame_3": "textures/entity/skins/ringmaster",
+				"frame_4": "textures/entity/skins/ringmaster",
+				"frame_5": "textures/entity/skins/ringmaster",
+				"frame_6": "textures/entity/skins/ringmaster",
+				"frame_7": "textures/entity/skins/ringmaster",
+				"frame_8": "textures/entity/skins/ringmaster",
+				"dash1": "textures/entity/skins/ringmaster",
+				"dash2": "textures/entity/skins/ringmaster",
+				"dash3": "textures/entity/skins/ringmaster",
+				"dash4": "textures/entity/skins/ringmaster"
+			},
+			"geometry": {
+				"default": "geometry.ringmaster"
+			},
+			"render_controllers": [
+				"controller.render.skin_animations"
+			],
+			"animations": {
+				"idle": "animation.ringmaster.idle",
+				"dash": "animation.ringmaster.fly",
+				"controller": "controller.animation.finite"
+			},
+			"scripts": {
+				"animate": [
+					"controller"
+				]
+			}
+		}
+	}
+}
