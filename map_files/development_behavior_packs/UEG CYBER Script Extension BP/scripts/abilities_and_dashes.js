@@ -256,7 +256,7 @@ system.runInterval(() => {
         }
 
 
-        if (player.isJumping == true && !player.hasTag("hasJumped") && !player.hasTag("onGround")) {
+        if (player.isJumping == true && !player.hasTag("hasJumped") && !player.hasTag("onGround") && dashes.getScore(player) >= minDashesRequiredVar) {
             player.addTag("hasJumped")
             if (player.getGameMode() == `creative`) {
 

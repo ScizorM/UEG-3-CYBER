@@ -19,3 +19,4 @@ gamemode adventure @s
 gamemode adventure @s
 #ability @s mayfly false
 scoreboard players operation @s enforcer_round_verifier = verify enforcer_round_verifier
+tag @a add changeSkin

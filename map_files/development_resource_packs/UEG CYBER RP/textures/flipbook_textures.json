@@ -39,6 +39,74 @@
 		"atlas_tile_variant": 2
 	},
 	{
+		"flipbook_texture": "textures/blocks/virus_block_red",
+		"atlas_tile": "sm:virus_block_red",
+		"frames": [
+			0,
+			1,
+			2,
+			3,
+			4,
+			5,
+			6,
+			7
+		],
+		"blend_frames": true,
+		"ticks_per_frame": 10,
+		"atlas_tile_variant": 0
+	},
+	{
+		"flipbook_texture": "textures/blocks/virus_block_orange",
+		"atlas_tile": "sm:virus_block_orange",
+		"frames": [
+			0,
+			1,
+			2,
+			3,
+			4,
+			5,
+			6,
+			7
+		],
+		"blend_frames": true,
+		"ticks_per_frame": 10,
+		"atlas_tile_variant": 2
+	},
+	{
+		"flipbook_texture": "textures/blocks/virus_block_purple",
+		"atlas_tile": "sm:virus_block_purple",
+		"frames": [
+			0,
+			1,
+			2,
+			3,
+			4,
+			5,
+			6,
+			7
+		],
+		"blend_frames": true,
+		"ticks_per_frame": 10,
+		"atlas_tile_variant": 2
+	},
+	{
+		"flipbook_texture": "textures/blocks/virus_block_green",
+		"atlas_tile": "sm:virus_block_green",
+		"frames": [
+			0,
+			1,
+			2,
+			3,
+			4,
+			5,
+			6,
+			7
+		],
+		"blend_frames": true,
+		"ticks_per_frame": 10,
+		"atlas_tile_variant": 2
+	},
+	{
 		"flipbook_texture": "textures/blocks/indicator_0",
 		"atlas_tile": "sm:indicator_0",
 		"frames": [

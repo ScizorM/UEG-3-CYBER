@@ -21,6 +21,13 @@
 			"down":"sm:training_block_new_side"
 		}
 	},
+		"sm:dash_0":{
+		"textures":{
+			"side":"sm:dash_0_side",
+			"up":"sm:dash_0_top",
+			"down":"sm:dash_0_bottom"
+		}
+	},
 		"sm:indicator_0":{
 		"textures": "sm:indicator_0"
 	},
@@ -172,6 +179,18 @@
 	},
 	"sm:vaporglitch": {
 		"textures": "sm:vaporglitch"
+	},
+	"sm:virus_block_red": {
+		"textures": "sm:virus_block_red"
+	},
+	"sm:virus_block_orange": {
+		"textures": "sm:virus_block_orange"
+	},
+	"sm:virus_block_purple": {
+		"textures": "sm:virus_block_purple"
+	},
+	"sm:virus_block_green": {
+		"textures": "sm:virus_block_green"
 	},
 	"sm:vaporframe": {
 		"textures": "sm:vaporframe"

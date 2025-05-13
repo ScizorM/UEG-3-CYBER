@@ -16,3 +16,12 @@ Changelog (4-9-2025 to 4-11-2025 )
 - Fixed a few content log errors, but there are too many so I really don't care enough to fix them all
 - Fixed another variety of issues
 - Started working on the riftzone again
+
+Changelog (4-12-2025 to ???)
+
+- Added new skins
+- Fixed a syntax error with the training menu
+- Players can now dash once to twice in the lobby at a time
+- Fixed pitfall blocks
+- Finished the remaining non-secret arenas
+- Added a new block: dash block

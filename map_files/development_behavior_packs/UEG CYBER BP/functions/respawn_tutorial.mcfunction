@@ -7,3 +7,4 @@ tellraw @s {"rawtext": [{"text": "§e[PVP Announcements] §c"}, {"selector": "@s
 effect @s slow_falling 5 0 true
 tp @s -62 122 -6
 function title_respawned
+tag @a add changeSkin

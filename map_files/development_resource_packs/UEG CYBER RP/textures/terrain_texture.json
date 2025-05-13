@@ -26,6 +26,21 @@
 				"textures/blocks/target_gradient"
 			]
 		},
+		"sm:dash_0_top":{
+			"textures":[
+				"textures/blocks/dash_block_top_final"
+			]
+		},
+				"sm:dash_0_bottom":{
+			"textures":[
+				"textures/blocks/dash_block_bottom"
+			]
+		},
+				"sm:dash_0_side":{
+			"textures":[
+				"textures/blocks/dash_block_side"
+			]
+		},
 						"sm:checkp_gradient":{
 			"textures":[
 				"textures/blocks/checkpoint_gradient"
@@ -205,6 +220,26 @@
 		"sm:vaporglitch": {
 			"textures": [
 				"textures/blocks/vaporglitch"
+			]
+		},
+		"sm:virus_block_red": {
+			"textures": [
+				"textures/blocks/virus_block_red"
+			]
+		},
+		"sm:virus_block_orange": {
+			"textures": [
+				"textures/blocks/virus_block_orange"
+			]
+		},
+		"sm:virus_block_purple": {
+			"textures": [
+				"textures/blocks/virus_block_purple"
+			]
+		},
+		"sm:virus_block_green": {
+			"textures": [
+				"textures/blocks/virus_block_green"
 			]
 		},
 		"sm:candy_rope": {

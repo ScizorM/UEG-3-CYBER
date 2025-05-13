@@ -7,3 +7,4 @@ function start_zone_timer
 scoreboard players operation @a[tag=teamed] lives = max_lives max_lives
 function 03_start_round_extended
 function startround_extended
+tag @a add changeSkin

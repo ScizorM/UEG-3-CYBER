@@ -409,7 +409,11 @@ system.runInterval(() => {
         if (player.hasTag("dash_disabled")) {
             player.runCommand("scoreboard players set @s dashes 0")
         }
-        setTrainingLeaderSB.addScore(player, 0)
+        if (!player.hasTag("scoreAddedTrainingL")) {
+            setTrainingLeaderSB.addScore(player, 0)
+            player.addTag("scoreAddedtrainingL");
+        }
+
         var checkForLeader = setTrainingLeaderSB.getScore(player)
 
 
@@ -453,21 +457,21 @@ system.runInterval(() => {
             ReassignRoomLeader(roomThreeList, 2,player)
         }
 
-        if ((player.hasTag(`roomLeader_0` && plrCurrentRoom != 0))) {
+        if (player.hasTag(`roomLeader_0`) && plrCurrentRoom != 0) {
             player.removeTag("roomLeader_0")
             ReassignRoomLeader(roomOneList,0,player)
 
             player.sendMessage("§e[Training] §cYou are no longer the room leader of training room 1.")
         }
 
-        else if ((player.hasTag(`roomLeader_1` && plrCurrentRoom != 1)) || (player.hasTag(`roomLeader_2` && plrCurrentRoom != 2))) {
+        else if ((player.hasTag(`roomLeader_1`) && plrCurrentRoom != 1) || (player.hasTag(`roomLeader_2`) && plrCurrentRoom != 2)) {
             player.removeTag("roomLeader_1")
             ReassignRoomLeader(roomTwoList,1,player)
 
             player.sendMessage("§e[Training] §cYou are no longer the room leader of training room 2.")
         }
 
-        else  if ((player.hasTag(`roomLeader_2` && plrCurrentRoom != 2))) {
+        else if ((player.hasTag(`roomLeader_2`) && plrCurrentRoom != 2)) {
             player.removeTag("roomLeader_2")
             ReassignRoomLeader(roomThreeList,2)
 

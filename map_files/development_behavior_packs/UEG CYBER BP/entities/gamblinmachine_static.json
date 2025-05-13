@@ -6,7 +6,15 @@
 			"identifier": "sm:gamblinmachine_static",
 			"is_spawnable": false,
 			"is_summonable": true,
-			"is_experimental": false
+			"is_experimental": false,
+			"scripts": {
+				"animate": [
+					"ac"
+				]
+			},
+			"animations": {
+				"ac": "controller.animation.gamblinmachine_ingame"
+			}
 		},
 		"components": {
 			"minecraft:type_family": {
@@ -46,6 +54,16 @@
 				"is_pushable": false,
 				"is_pushable_by_piston": false
 			},
+			"minecraft:timer": {
+				"looping": true,
+				"time": [
+					20,
+					40
+				],
+				"time_down_event": {
+					"event": "sm:addTag"
+				}
+			},
 			"minecraft:conditional_bandwidth_optimization": {},
 			"minecraft:damage_sensor": {
 				"triggers": [
@@ -63,11 +81,45 @@
 						"despawn"
 					]
 				}
+			},
+			"sm:addTag": {
+				"add": {
+					"component_groups": [
+						"sm:addTag"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"sm:removeTag"
+					]
+				}
+			},
+			"sm:removeTag": {
+				"add": {
+					"component_groups": [
+						"sm:removeTag"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"sm:addTag"
+					]
+				}
 			}
 		},
 		"component_groups": {
 			"despawn": {
 				"minecraft:instant_despawn": {}
+			},
+			"sm:addTag": {
+				"minecraft:variant": {
+					"value": 1
+				}
+			},
+			"sm:removeTag": {
+				"minecraft:variant": {
+					"value": 2
+				}
 			}
 		}
 	}

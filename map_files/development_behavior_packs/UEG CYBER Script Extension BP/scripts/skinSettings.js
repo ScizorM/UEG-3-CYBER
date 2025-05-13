@@ -544,6 +544,7 @@ function skinSelectUIPhase2(player, skinCount, selectedCPack, skinIDs, series, c
         if (response == 1) {
             skinSelectedSB.setScore(player, skinIDs[skinNumber])
             player.sendMessage("§e[Skin Select] §b" + skinName + " §eselected.")
+            player.addTag("changeSkin")
         }
         else {
             skinNumber = 0

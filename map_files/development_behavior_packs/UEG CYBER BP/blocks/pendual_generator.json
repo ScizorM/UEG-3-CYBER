@@ -21,6 +21,13 @@
 			"minecraft:custom_components": [
 				"sm:pendual_generator"
 			]
+		},
+		"minecraft:tick": {
+			"looping": true,
+			"interval_range": [
+				3,
+				3
+			]
 		}
 	}
 }

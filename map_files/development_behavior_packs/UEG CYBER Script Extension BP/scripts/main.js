@@ -3,25 +3,23 @@ import { ActionFormData, MessageFormData, ModalFormData } from '@minecraft/serve
 import { skinItemIds, effectSkins } from './skinList.js'
 import { titleTags, storeTags } from './tagList.js'
 import { weaponIDList } from './loadoutList.js'
+
 import './newArenaLoading.js'
-//import './arenaSelects.js'
-import './abilities_and_dashes.js'
-import './weapons.js'
-import './playerNames.js'
-import './train_randomizer.js'
-import './music.js'
-import './stores.js'
-import './itemUse.js'
-import './blockEvents.js'
-import './entityInteract.js'
-import './skinRandomizer.js'
-import './trusted.js'
+//import './arenaSelects.js' //keep disabled
+
 import './skinSettings.js'
 import './bank_menu.js'
 import './loadouts.js'
 import './emergencyReset.js'
 import './weaponStore.js'
 import './lobbyMenu.js'
+
+
+
+
+
+
+
 import './foodAssign.js'
 import './foodStore.js'
 import './newerStores.js'
@@ -29,7 +27,26 @@ import './sList.js'
 import './gamble.js'
 import './trainingFunctions.js'
 import './rpgSkinRandomizer.js'
+
 import './questConditions.js'
+
+import './abilities_and_dashes.js'
+
+import './weapons.js'
+import './playerNames.js'
+import './train_randomizer.js'
+import './music.js'
+import './stores.js'
+import './itemUse.js'
+
+import './blockEvents.js'
+import './entityInteract.js'
+import './skinRandomizer.js'
+import './trusted.js'
+
+
+
+
 import { itemNameList, itemIconLocation, itemScoreboard, itemDescList } from './foodList.js'
 world.sendMessage("[Scripts reloaded]");
 
@@ -61,146 +78,88 @@ world.afterEvents.entityHurt.subscribe((data) => {
 
 const dimension = world.getDimension("Overworld")
 
+///Event Type 0 = spawn entity, Event Type 1 = spawn particle
+function RandomlySpawnEntities(entityType,entityCount,eventType){
+    const baseCoords = {x:-109,y:75,z:280}
+    const spawnCount = entityCount;
+    const dimension = world.getDimension("Overworld")
+    var randomPositions = {};
+
+    for(var i = 0; i < spawnCount; i++){
+        randomPositions = {x:baseCoords.x-Math.floor(Math.random()*49),y:baseCoords.y,z:baseCoords.z-Math.floor(Math.random()*49)}
+        if(eventType == 0){
+            world.getDimension("Overworld").runCommand(`summon ${entityType} ${randomPositions.x} ${randomPositions.y} ${randomPositions.z}`)
+        }
+        else{
+            world.getDimension("Overworld").runCommand(`particle ${entityType} ${randomPositions.x} ${randomPositions.y} ${randomPositions.z}`)
+        }
+
+    }
+}
+
+function SendGambleMessage(eventType){
+    world.sendMessage(`§e[Arena Event] §o§6${eventType}!!!`)
+}
+
+function ArenaEventTntRain(){
+    SendGambleMessage("TNT Rain")
+    RandomlySpawnEntities("tnt",50,0)
+}
+
+function ArenaEventSlowFall(){
+    SendGambleMessage("Slow Falling")
+    world.getDimension("Overworld").runCommand("effect @a[tag=ingame] slow_falling 10 3")
+}
+
+function ArenaEventBigJoeMode(){
+    SendGambleMessage("Big Joe Rain")
+    RandomlySpawnEntities("sm:big_joe",2,0)
+}
+
+function ArenaEventBabyStorm(){
+    SendGambleMessage("Baby Storm")
+    RandomlySpawnEntities("sm:robot_babies",2,1)
+}
+
+function ArenaEventEmp(){
+    SendGambleMessage("EMP")
+    world.getDimension("Overworld").runCommand("execute as @a[tag=ingame] run function emp_other")
+}
+
+function ArenaEventScale(){
+    SendGambleMessage("Scaler Explosion")
+    world.getDimension("Overworld").runCommand("execute as @a[tag=ingame] run execute positioned as @s run function explosion_scaler")
+}
 
 function RandomGambleEvent() {
 
+    var randomNumber = Math.floor(Math.random() * 6)
+
+    switch(randomNumber){
+        case 0:
+            system.run((tntrain)=>ArenaEventTntRain())
+            break;
+        case 1:
+            system.run((slowFall)=>ArenaEventSlowFall())
+            break;
+        case 2:
+            system.run((bigJoe)=>ArenaEventBigJoeMode())
+            break;
+        case 3:
+            system.run((babyStorm)=>ArenaEventBabyStorm())
+            break;
+        case 4:
+            system.run((emp)=>ArenaEventEmp())
+            break;
+        case 5:
+            system.run((scale)=>ArenaEventScale())
+            break;
+    }
+
 }
 
-
-system.runInterval(() => {
-
-    var gamblingArenaTimer = world.scoreboard.getObjective("gambling_arena_timer")
-
-    var gamblingArenaTimerT = gamblingArenaTimer.getScore("timer")
-
-
-    var roundActiveSB = world.scoreboard.getObjective("round_active")
-    var roundActive = roundActiveSB.getScore("round_active")
-
-
-    if (roundActive == 1) {
-        if (gamblingArenaTimerT > 0) {
-            gamblingArenaTimer.addScore("timer", -1)
-        }
-        else {
-            gamblingArenaTimer.setScore("timer", 200)
-        }
-    }
-    else {
-        gamblingArenaTimer.setScore("timer",200)
-    }
-
-
-    var skinRerollTimer = world.scoreboard.getObjective("skin_reroll_timer")
-    var skinRerollRealtime = skinRerollTimer.getScore("skin_reroll_real")
-    var skinRerollMinutes = skinRerollTimer.getScore("skin_reroll_timer")
-
-
-    if (skinRerollRealtime > 0) {
-        skinRerollTimer.addScore("skin_reroll_real", -1)
-    }
-    else {
-        skinRerollTimer.setScore("skin_reroll_real", 48000)
-        world.sendMessage("§e[Skin Stores]§a Skin stores are now restocking their inventory!")
-        world.getDimension("overworld").runCommand("function trigger_skin_randomizer")
-        world.getDimension("overworld").runCommand("scoreboard players set active rpg_store_randomizer 1")
-    }
-
-    skinRerollTimer.setScore("skin_reroll_timer",Math.round(skinRerollRealtime/2000))
-
-    var allEntities = world.getDimension("overworld").getEntities().forEach(entity => {
-
-
-        if (entity.typeId == "sm:scaler_bomb") {
-            if (entity.getComponent(EntityComponentTypes.Health).currentValue == 1) {
-
-                entity.runCommand("function explosion_scaler")
-                entity.triggerEvent("sm:explode")
-
-            }
-        }
-
-
-
-
-    })
-
-
-    const trainTimer = world.scoreboard.getObjective("train_timer")
-
-    const trainTimerTime = trainTimer.getScore("train_timer")
-
-
-    const trainTimerVisual = world.scoreboard.getObjective("train_visual_timer")
-
-    const trainTimerTimeVisual = trainTimerVisual.getScore("train_visual_timer")
-
-
-    if (trainTimerTime > 0) {
-        trainTimerVisual.setScore("train_visual_timer", 30 - (Math.round(trainTimerTime)) / 20)
-    }
-    else {
-        trainTimerVisual.setScore("train_visual_timer", 0)
-    }
-
-
-    const pregameTimer = world.scoreboard.getObjective("new_pregame_timer")
-
-    const pregameTimerTime = pregameTimer.getScore("new_pregame_timer")
-
-    const pregameTimerVisual = world.scoreboard.getObjective("new_pregame_timer_visual")
-
-    const pregameTimerTimeVisual = pregameTimerVisual.getScore("new_pregame_timer_visual")
-
-
-    if (pregameTimerTime > 0) {
-        pregameTimerVisual.setScore("new_pregame_timer_visual", 15 - (Math.round(pregameTimerTime)) / 20)
-    }
-    else {
-        pregameTimerVisual.setScore("new_pregame_timer_visual", 0)
-    }
-
-    var allBomb = world.getDimension("overworld").getEntities({type:"sm:black_hole"}).forEach(entity => {
-
-
-        entity.dimension.getEntities({ maxDistance: 7, location: entity.location, type:"minecraft:player" }).forEach(entity2 => {
-            var playerDisplacement = { x: entity.location.x - entity2.location.x, y: entity.location.y - entity2.location.y, z: entity.location.z - entity2.location.z }
-            var verticality = 0;
-            if (playerDisplacement.y > 0) {
-                verticality = 0.5;
-            }
-            else if (playerDisplacement.y < 0) {
-                verticality = -0.5;
-            }
-            else {
-                verticality = 0;
-            }
-            if (Math.abs(playerDisplacement.x) > 0.5 || Math.abs(playerDisplacement.y) > 2 || Math.abs(playerDisplacement.z) > 0.5) {
-                    entity2.applyKnockback(playerDisplacement.x, playerDisplacement.z, 1, verticality)
-                
-            }
-
-        })
-
-
-    })
-
-    world.getAllPlayers().forEach(player => {
-
-        if (player.hasTag("exit_stores") && !player.hasTag("team_nu") && !player.hasTag("team_lambda")) {
-            player.runCommand(`replaceitem entity @s slot.hotbar 0 sm:lobby_menu 1 0 {"minecraft:item_lock":{"mode":"lock_in_slot"}}`)
-        }
-        else {
-            player.runCommand(`clear @s sm:lobby_menu `)
-        }
-
-        if (player.hasTag("enter_tc")) {
-            player.runCommand(`execute if score @s curTrainRoom matches -1 run replaceitem entity @s slot.hotbar 4 sm:training_menu 1 0 {"minecraft:item_lock":{"mode":"lock_in_inventory"}}`)
-        }
-        else {
-            player.runCommand("clear @s sm:training_menu")
-        }
-
+function NewTitleSystem(player){
+    
         const belowPos = {
             x: 0,
             y: -1,
@@ -209,7 +168,7 @@ system.runInterval(() => {
 
         var blockBelow = dimension.getBlockFromRay(player.location, belowPos, {includeTypes:["sm:enter_store_new","sm:exit_store_new"],maxDistance:5})
 
-        if (blockBelow) {
+        if (blockBelow && !player.hasTag("ingame")) {
             if (blockBelow.block.typeId == "sm:exit_store_new") {
 
                 if (player.hasTag("exit_stores") == false) {
@@ -648,28 +607,14 @@ system.runInterval(() => {
         }
 
 
-
-
-        var foodEffectTimerSB = world.scoreboard.getObjective("food_effect_timer")
-        var foodEffectTimerPlayer = foodEffectTimerSB.getScore(player)
+}
 
 
 
 
-        if (foodEffectTimerPlayer != undefined) {
-            if (foodEffectTimerPlayer > 0) {
-                if (player.hasTag("gob_effects")) {
-                    player.runCommand("particle sm:gob_goo_trail ~ ~0.5 ~")
-                }
-                
-                foodEffectTimerSB.addScore(player, -1)
-            }
-            else {
-                player.removeTag("gob_effects")
-                player.runCommand("scoreboard players reset @s food_effect_timer")
-            }
-        }
+function ItemTitles(player){
 
+    if(player.hasTag("ingame")){
         var assignedItemSB = world.scoreboard.getObjective("assigned_food")
         var assignedItemSBPlayer = assignedItemSB.getScore(player)
 
@@ -711,8 +656,213 @@ system.runInterval(() => {
         player.runCommand(`execute unless entity @s[hasitem={location=slot.weapon.mainhand,item=sm:use_stored_item}] run execute unless entity @s[hasitem={location=slot.weapon.mainhand,item=sm:icarus}] run execute as @s[tag=ingame] run titleraw @s actionbar {"rawtext":[{"text":"Azure Stadium\n\nRemaining Players:\n"},{"score":{"name":"team_nu","objective":"player_alive_count"}},{"text":" - "},{"score":{"name":"team_lambda","objective":"player_alive_count"}},{"text":"\n\nLives:\n"},{"score":{"name":"@s","objective":"lives"}},{"text":"\n\nWeapon Cooldown:\n"},{"score":{"name":"@s","objective":"weapon_cooldown"}}]}`)
         player.runCommand(`execute if entity @s[hasitem={location=slot.weapon.mainhand,item=sm:use_stored_item}] run execute unless entity @s[hasitem={location=slot.weapon.mainhand,item=sm:icarus}] run execute as @s[tag=ingame] run titleraw @s actionbar {"rawtext":[{"text":"Azure Stadium\n\nRemaining Players:\n"},{"score":{"name":"team_nu","objective":"player_alive_count"}},{"text":" - "},{"score":{"name":"team_lambda","objective":"player_alive_count"}},{"text":"\n\nLives:\n"},{"score":{"name":"@s","objective":"lives"}},{"text":"\n\nStored Item:\n${assignedItemName} (${assignedItemCountPlayer})"}]}`)
         player.runCommand(`execute if entity @s[hasitem={location=slot.weapon.mainhand,item=sm:icarus}] run execute unless entity @s[hasitem={location=slot.weapon.mainhand,item=sm:use_stored_item}] run execute as @s[tag=ingame] run titleraw @s actionbar {"rawtext":[{"text":"Azure Stadium\n\nRemaining Players:\n"},{"score":{"name":"team_nu","objective":"player_alive_count"}},{"text":" - "},{"score":{"name":"team_lambda","objective":"player_alive_count"}},{"text":"\n\nLives:\n"},{"score":{"name":"@s","objective":"lives"}},{"text":"\n\nTemperature:\n${icarusTempDisplayName}"}]}`)
+    }
+        
+}
 
-        var gameActive = world.scoreboard.getObjective("game_active")
+function FoodEffectManager(player){
+    var foodEffectTimerSB = world.scoreboard.getObjective("food_effect_timer")
+        var foodEffectTimerPlayer = foodEffectTimerSB.getScore(player)
+
+
+
+
+        if (foodEffectTimerPlayer != undefined) {
+            if (foodEffectTimerPlayer > 0) {
+                if (player.hasTag("gob_effects")) {
+                    player.runCommand("particle sm:gob_goo_trail ~ ~0.5 ~")
+                }
+                
+                foodEffectTimerSB.addScore(player, -1)
+            }
+            else {
+                player.removeTag("gob_effects")
+                player.runCommand("scoreboard players reset @s food_effect_timer")
+            }
+        }
+}
+
+function MenuItemManager(player){
+        if (player.hasTag("exit_stores") && !player.hasTag("team_nu") && !player.hasTag("team_lambda")) {
+            player.runCommand(`replaceitem entity @s slot.hotbar 0 sm:lobby_menu 1 0 {"minecraft:item_lock":{"mode":"lock_in_slot"}}`)
+        }
+        else {
+            player.runCommand(`clear @s sm:lobby_menu `)
+        }
+
+        if (player.hasTag("enter_tc")) {
+            player.runCommand(`execute if score @s curTrainRoom matches -1 run replaceitem entity @s slot.hotbar 4 sm:training_menu 1 0 {"minecraft:item_lock":{"mode":"lock_in_inventory"}}`)
+        }
+        else {
+            player.runCommand("clear @s sm:training_menu")
+        }
+
+}
+
+system.runInterval((runInt) => {
+
+    var gamblingArenaTimer = world.scoreboard.getObjective("gambling_arena_timer")
+
+    var gamblingArenaTimerT = gamblingArenaTimer.getScore("timer")
+
+
+    var roundActiveSB = world.scoreboard.getObjective("round_active")
+    var roundActive = roundActiveSB.getScore("round_active")
+
+
+    if (roundActive == 1) {
+        if (gamblingArenaTimerT > 0) {
+            gamblingArenaTimer.addScore("timer", -1)
+        }
+        else {
+            gamblingArenaTimer.setScore("timer", 200)
+        }
+    }
+    else {
+        gamblingArenaTimer.setScore("timer",200)
+    }
+
+
+    var skinRerollTimer = world.scoreboard.getObjective("skin_reroll_timer")
+    var skinRerollRealtime = skinRerollTimer.getScore("skin_reroll_real")
+    var skinRerollMinutes = skinRerollTimer.getScore("skin_reroll_timer")
+
+
+    if (skinRerollRealtime > 0) {
+        skinRerollTimer.addScore("skin_reroll_real", -1)
+    }
+    else {
+        skinRerollTimer.setScore("skin_reroll_real", 48000)
+        world.sendMessage("§e[Skin Stores]§a Skin stores are now restocking their inventory!")
+        world.getDimension("overworld").runCommand("function trigger_skin_randomizer")
+        world.getDimension("overworld").runCommand("scoreboard players set active rpg_store_randomizer 1")
+    }
+
+    skinRerollTimer.setScore("skin_reroll_timer",Math.round(skinRerollRealtime/2000))
+
+    var allEntities = world.getDimension("overworld").getEntities().forEach(entity => {
+
+
+        if (entity.typeId == "sm:scaler_bomb") {
+            if (entity.getComponent(EntityComponentTypes.Health).currentValue == 1) {
+
+                entity.runCommand("function explosion_scaler")
+                entity.triggerEvent("sm:explode")
+
+            }
+        }
+        else if(entity.typeId == "sm:gamblinmachine_static"){
+            if(entity.hasTag("debug_randomEffect")){
+            system.run((randGamble)=>RandomGambleEvent())
+            entity.removeTag("debug_randomEffect")
+        }
+        }
+
+
+
+
+    })
+
+
+    const trainTimer = world.scoreboard.getObjective("train_timer")
+
+    const trainTimerTime = trainTimer.getScore("train_timer")
+
+
+    const trainTimerVisual = world.scoreboard.getObjective("train_visual_timer")
+
+    const trainTimerTimeVisual = trainTimerVisual.getScore("train_visual_timer")
+
+
+    if (trainTimerTime > 0) {
+        trainTimerVisual.setScore("train_visual_timer", 30 - (Math.round(trainTimerTime)) / 20)
+    }
+    else {
+        trainTimerVisual.setScore("train_visual_timer", 0)
+    }
+
+
+    const pregameTimer = world.scoreboard.getObjective("new_pregame_timer")
+
+    const pregameTimerTime = pregameTimer.getScore("new_pregame_timer")
+
+    const pregameTimerVisual = world.scoreboard.getObjective("new_pregame_timer_visual")
+
+    const pregameTimerTimeVisual = pregameTimerVisual.getScore("new_pregame_timer_visual")
+
+
+    if (pregameTimerTime > 0) {
+        pregameTimerVisual.setScore("new_pregame_timer_visual", 15 - (Math.round(pregameTimerTime)) / 20)
+    }
+    else {
+        pregameTimerVisual.setScore("new_pregame_timer_visual", 0)
+    }
+
+    var allBomb = world.getDimension("overworld").getEntities({type:"sm:black_hole"}).forEach(entity => {
+
+
+        entity.dimension.getEntities({ maxDistance: 7, location: entity.location, type:"minecraft:player" }).forEach(entity2 => {
+            var playerDisplacement = { x: entity.location.x - entity2.location.x, y: entity.location.y - entity2.location.y, z: entity.location.z - entity2.location.z }
+            var verticality = 0;
+            if (playerDisplacement.y > 0) {
+                verticality = 0.5;
+            }
+            else if (playerDisplacement.y < 0) {
+                verticality = -0.5;
+            }
+            else {
+                verticality = 0;
+            }
+            if (Math.abs(playerDisplacement.x) > 0.5 || Math.abs(playerDisplacement.y) > 2 || Math.abs(playerDisplacement.z) > 0.5) {
+                    entity2.applyKnockback(playerDisplacement.x, playerDisplacement.z, 1, verticality)
+                
+            }
+
+        })
+
+
+    })
+    
+
+
+    world.getAllPlayers().forEach(player => {
+
+
+        //ms diff below is tested with two online players
+
+        NewTitleSystem(player) //1ms diff
+
+        MenuItemManager(player) //1ms diff
+
+        FoodEffectManager(player) //minimal diff
+
+        ItemTitles(player) //1.5ms diff per ingame player
+        
+        IcarusEffects(player) //0.5ms diff
+
+        ScoreBoardMenu(player) //1ms diff
+
+
+
+        if(player.hasTag("changeSkin")){
+            system.run(() => renderSkins(player))
+            player.removeTag("changeSkin")
+        }
+
+
+
+
+
+        
+
+
+
+        
+    })
+});
+
+function ScoreBoardMenu(player){
+            var gameActive = world.scoreboard.getObjective("game_active")
         var gameActiveNum = gameActive.getScore("game_active")
 
         var emergencyPhase = world.scoreboard.getObjective("emergencyphase")
@@ -822,18 +972,10 @@ system.runInterval(() => {
         else if (gameActiveNum == 1) {
             player.runCommand(`titleraw @s title {"rawtext":[{"text":"Scoreboard\n${scoreboardIngame}\n\n${team}${statusEffect}"}]}`)
         }
+}
 
-        system.run(() => renderSkins(player))
-
-        if (player.hasTag("usingBone")) {
-            world.sendMessage("hasbone")
-        }
-
-
-
-        
-
-        const icarus_detect = world.scoreboard.getObjective("icarus_gun_fire")
+function IcarusEffects(player){
+            const icarus_detect = world.scoreboard.getObjective("icarus_gun_fire")
 
         if (icarus_detect.getScore(player) == "1") {
             player.triggerEvent("sm:icarus_alternate_1")
@@ -845,10 +987,7 @@ system.runInterval(() => {
         if (player.getViewDirection.y > 0) {
             world.sendMessage("above 0")
         }
-
-        
-    })
-});
+}
 
 function renderSkins(player) {
 

@@ -29,9 +29,12 @@ world.beforeEvents.itemUse.subscribe(data => {
 
     if (data.itemStack.typeId === "sm:settings" && player.hasTag("enter_splendid") == false && player.hasTag("enter_marque") == false && !player.hasTag("debug_randomize")) {
 
-        world.sendMessage(ueg1Collection.length.toString())
         system.run(() => GetArenasCount(versionCollection, 0))
         system.run(() => GetArenasCount(versionCollection, 1))
+        system.run(() => GetArenasCount(versionCollection, 2))
+        system.run(() => GetArenasCount(versionCollection, 3))
+        system.run(() => GetArenasCount(versionCollection, 4))
+        system.run(() => GetArenasCount(versionCollection, 5))
 
         //system.run(() => LoadArenaInterface(player))
         system.run(() => ArenaStoreMenu(player))
@@ -299,10 +302,10 @@ var uegCyberCollection = [
     //Unlockables
     new Arena("Amusement Park", [creator.scizor, creator.aubrey], undefined, 2, 1, false, category.uegcyber, "amusement_park",true,4,7),
     new Arena("Candyland", [creator.evel], undefined, 2, 0, false, category.uegcyber, "candyland",false,4,8),
-    new Arena("Battlefield", [creator.unknown], undefined, 3, 3, false, category.uegcyber, "battlefield",false,4,9),
-    new Arena("Not Gambling", [creator.scizor], undefined, 3, 3, false, category.uegcyber, "not_gambling",true,4,10),
+    new Arena("Battlefield", [creator.scizor], undefined, 2, 1, false, category.uegcyber, "battlefield",false,4,9),
+    new Arena("Not Gambling", [creator.scizor], undefined, 1, 2, false, category.uegcyber, "not_gambling",true,4,10),
     new Arena("Arcade", [creator.scizor], undefined, 2, 2, false, category.uegcyber, "arcade",false,4,11),
-    new Arena("Computer Virus", [creator.unknown], undefined, 3, 3, false, category.uegcyber, "computer_virus",false,4,12),
+    new Arena("Computer Virus", [creator.scizor], undefined, 2, 1, false, category.uegcyber, "computer_virus",false,4,12),
     new Arena("The Line", [creator.scizor], undefined, 2, 0, false, category.uegcyber, "the_line",false,4,13),
     new Arena("McRye's", [creator.rye], undefined, 1, 1, false, category.uegcyber, "mcryes",false,4,14),
     new Arena("Mole Life", [creator.scizor], undefined, 2, 2, false, category.uegcyber, "mole_life",false,4,15),

@@ -10,17 +10,22 @@
 				"*": {
 					"face_dimming": false,
 					"render_method": "blend",
-					"ambient_occlusion": true
+					"ambient_occlusion": true,
+					"texture": "sm:banana_peel"
 				}
 			},
+			"minecraft:custom_components": [
+				"sm:banana_peel"
+			],
 			"minecraft:light_emission": 0.5,
 			"minecraft:light_dampening": 0.0,
+			"minecraft:geometry": "geometry.banana_peel",
 			"minecraft:destructible_by_mining": false,
 			"minecraft:collision_box": {
 				"size": [
-					0,
-					0,
-					0
+					8,
+					4,
+					8
 				]
 			},
 			"minecraft:destructible_by_explosion": false

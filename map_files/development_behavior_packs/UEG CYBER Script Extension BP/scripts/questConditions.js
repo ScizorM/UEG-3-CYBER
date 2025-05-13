@@ -248,6 +248,9 @@ system.runInterval(() => {
     var roundWinsSB = world.scoreboard.getObjective("player_round_wins")
     var creditsSB = world.scoreboard.getObjective("credits")
 
+    var triggerAdvCheck = world.scoreboard.getObjective("triggerAdvancementCheck")
+    var triggerAdvPlayer = triggerAdvCheck.getScore("value")
+
     var nearDeathCountSB = world.scoreboard.getObjective("nearDeathCount")
     var skinCountSB = world.scoreboard.getObjective("player_skins_unlocked")
     var yLevelQuestSB = world.scoreboard.getObjective("yLevelQuest")
@@ -256,6 +259,8 @@ system.runInterval(() => {
     teamSizesSB.setScore("teamNu", 0)
     teamSizesSB.setScore("teamLambda", 0)
 
+
+    if(triggerAdvPlayer == 1){
     world.getAllPlayers().forEach(player => {
 
         if (player.hasTag("checkSkinCount")) {
@@ -337,6 +342,11 @@ system.runInterval(() => {
 
 
     })
+
+    triggerAdvCheck.setScore("value",0)
+    }
+
+
 })
 
 function QuestTier0Check(player, gameWinsSB, creditsSB) {

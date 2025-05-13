@@ -124,7 +124,7 @@ world.beforeEvents.worldInitialize.subscribe((initEvent) => {
             var blockx = block.location.x
             var blocky = block.location.y
             var blockz = block.location.z
-            block.dimension.runCommand("execute positioned " + blockx + " " + blocky + " " + blockz + " run effect @a[r=41] slow_falling 2 0 true")
+            block.dimension.runCommand("execute positioned " + blockx + " " + blocky + " " + blockz + " run effect @a[r=41] slow_falling 5 0 true")
         }
     });
     initEvent.blockComponentRegistry.registerCustomComponent("sm:blind_generator", {
@@ -134,7 +134,7 @@ world.beforeEvents.worldInitialize.subscribe((initEvent) => {
             var blockx = block.location.x
             var blocky = block.location.y
             var blockz = block.location.z
-            block.dimension.runCommand("execute positioned " + blockx + " " + blocky + " " + blockz + " run effect @a[r=41,tag=ingame] blindness 2 0 true")
+            block.dimension.runCommand("execute positioned " + blockx + " " + blocky + " " + blockz + " run effect @a[r=41,tag=ingame] blindness 5 0 true")
         }
     });
     initEvent.blockComponentRegistry.registerCustomComponent("sm:pendual_generator", {
@@ -155,14 +155,41 @@ world.beforeEvents.worldInitialize.subscribe((initEvent) => {
             var blocky = block.location.y
             var blockz = block.location.z
             if (block.typeId == "sm:pitfall_1") {
-                block.dimension.runCommand("execute positioned " + blockx + " " + blocky + " " + blockz + " run setblock ~ ~ ~ pitfall_2")
+                block.dimension.runCommand("execute positioned " + blockx + " " + blocky + " " + blockz + " run setblock ~ ~ ~ sm:pitfall_2")
             }
             else if (block.typeId == "sm:pitfall_2") {
-                block.dimension.runCommand("execute positioned " + blockx + " " + blocky + " " + blockz + " run setblock ~ ~ ~ pitfall_3")
+                block.dimension.runCommand("execute positioned " + blockx + " " + blocky + " " + blockz + " run setblock ~ ~ ~ sm:pitfall_3")
             }
             else if (block.typeId == "sm:pitfall_3") {
                 block.dimension.runCommand("execute positioned " + blockx + " " + blocky + " " + blockz + " run setblock ~ ~ ~ air")
             }
+        }
+    });
+    initEvent.blockComponentRegistry.registerCustomComponent("sm:dash_0", {
+        onStepOn(event) {
+            const { entity, block } = event;
+            var player = entity;
+            const dimension = world.getDimension("overworld")
+            var blockx = block.location.x
+            var blocky = block.location.y
+            var blockz = block.location.z
+            var dash_strength = 3;
+            player.applyKnockback(player.getViewDirection().x, player.getViewDirection().z, dash_strength - Math.abs(player.getViewDirection().y / 1.5), (dash_strength / 3))
+
+        }
+    });
+        initEvent.blockComponentRegistry.registerCustomComponent("sm:banana_peel", {
+        onStepOn(event) {
+            const { entity, block } = event;
+            var player = entity;
+            const dimension = world.getDimension("overworld")
+            var blockx = block.location.x
+            var blocky = block.location.y
+            var blockz = block.location.z
+            var dash_strength = 10;
+            player.playSound("banan_slip")
+            player.applyKnockback(player.getViewDirection().x, player.getViewDirection().z, dash_strength - Math.abs(player.getViewDirection().y / 1.5), (dash_strength / 3))
+
         }
     });
     initEvent.blockComponentRegistry.registerCustomComponent("sm:tickingParticles", {
@@ -178,25 +205,25 @@ world.beforeEvents.worldInitialize.subscribe((initEvent) => {
         }
     });
     initEvent.blockComponentRegistry.registerCustomComponent("sm:teleporters", {
-        onTick(event) {
-            const dimension = world.getDimension("overworld")
-            const { block } = event;
-            var blockx = block.location.x
-            var blocky = block.location.y + 0.5
-            var blockz = block.location.z
-            if (block.typeId == "sm:teleporter_p_a") {
-                block.dimension.runCommand("execute positioned " + blockx + " " + blocky + " " + blockz + " run function optimizep_teleporterPA")
-            }
-            else if (block.typeId == "sm:teleporter_p_b") {
-                block.dimension.runCommand("execute positioned " + blockx + " " + blocky + " " + blockz + " run function optimizep_teleporterPB")
-            }
-            else if (block.typeId == "sm:teleporter_y_a") {
-                block.dimension.runCommand("execute positioned " + blockx + " " + blocky + " " + blockz + " run function optimizep_teleporterYA")
-            }
-            else if (block.typeId == "sm:teleporter_y_b") {
-                block.dimension.runCommand("execute positioned " + blockx + " " + blocky + " " + blockz + " run function optimizep_teleporterYB")
-            }
-        },
+        // onTick(event) {
+        //     const dimension = world.getDimension("overworld")
+        //     const { block } = event;
+        //     var blockx = block.location.x
+        //     var blocky = block.location.y + 0.5
+        //     var blockz = block.location.z
+        //     if (block.typeId == "sm:teleporter_p_a") {
+        //         block.dimension.runCommand("execute positioned " + blockx + " " + blocky + " " + blockz + " run function optimizep_teleporterPA")
+        //     }
+        //     else if (block.typeId == "sm:teleporter_p_b") {
+        //         block.dimension.runCommand("execute positioned " + blockx + " " + blocky + " " + blockz + " run function optimizep_teleporterPB")
+        //     }
+        //     else if (block.typeId == "sm:teleporter_y_a") {
+        //         block.dimension.runCommand("execute positioned " + blockx + " " + blocky + " " + blockz + " run function optimizep_teleporterYA")
+        //     }
+        //     else if (block.typeId == "sm:teleporter_y_b") {
+        //         block.dimension.runCommand("execute positioned " + blockx + " " + blocky + " " + blockz + " run function optimizep_teleporterYB")
+        //     }
+        // },
         onPlace(event) {
             const dimension = world.getDimension("overworld")
             const { block } = event;

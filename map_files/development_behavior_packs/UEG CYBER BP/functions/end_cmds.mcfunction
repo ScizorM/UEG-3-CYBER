@@ -27,3 +27,8 @@ tag @a remove ingame
 function disable_movement_controls
 scoreboard players set round round 0
 function open_settings_area
+
+scoreboard players set "value" triggerAdvancementCheck 1
+
+kill @e[type=sm:gamblinmachine_static]
+tag @a add changeSkin

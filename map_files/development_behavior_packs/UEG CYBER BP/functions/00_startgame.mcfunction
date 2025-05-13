@@ -16,3 +16,4 @@ tag @a[tag=team_nu] add new_title_to_azure
 tag @a[tag=team_nu] add new_title_init
 tag @a[tag=team_lambda] add new_title_to_azure
 tag @a[tag=team_lambda] add new_title_init
+tag @a add changeSkin
