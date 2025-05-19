@@ -467,6 +467,11 @@
 				"textures/blocks/fabricated_block"
 			]
 		},
+				"sm:fabricated_block_static": {
+			"textures": [
+				"textures/blocks/fabricated_block_static"
+			]
+		},
 		"sm:death_warning": {
 			"textures": [
 				"textures/blocks/death_warning"

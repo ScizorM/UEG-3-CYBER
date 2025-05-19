@@ -103,5 +103,8 @@ execute if score implosion_grenade bannedItems matches 1 run clear @a sm:loadout
 execute if score green bannedItems matches 1 run clear @a sm:green_gobbler_cannon
 execute if score green bannedItems matches 1 run clear @a sm:loadout_green_gobbler_cannon
 
+execute if score heirloom bannedItems matches 1 run clear @a sm:heirloom
+execute if score heirloom bannedItems matches 1 run clear @a sm:loadout_heirloom
+
 execute if score bans_enabled bans_enabled matches 0 run execute as @e[tag=banned] run execute positioned as @s run particle sm:banneditem ^.5 ^.5 ^
 execute if score bans_enabled bans_enabled matches 1 run execute as @e[tag=banned] run execute positioned as @s run particle sm:perma_banneditem ^.5 ^.5 ^

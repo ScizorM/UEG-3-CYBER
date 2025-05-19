@@ -1,0 +1,16 @@
+//bridge-file-version: #12
+{
+	"format_version": "1.21.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "sm:loadout_blushing_bloomfan"
+		},
+		"components": {
+			"minecraft:display_name": {
+				"value": "§cPlaceholder §fBlushing Bloomfan\n\n§d Knocks back hit entities\n§9 Upon targeting a nearby block, a trap is set that explodes into a burst of flowers when an enemy steps on it."
+			},
+			"minecraft:icon": "sm:blushing_bloomfan",
+			"minecraft:hand_equipped": true
+		}
+	}
+}

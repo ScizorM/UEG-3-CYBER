@@ -1,0 +1,29 @@
+//bridge-file-version: #35
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "sm:chain",
+			"textures": {
+				"default": "textures/entity/chain"
+			},
+			"geometry": {
+				"default": "geometry.chain"
+			},
+			"render_controllers": [
+				"controller.render.guardian"
+			],
+			"materials": {
+				"default": "entity_alphablend"
+			},
+			"animations": {
+				"chain": "animation.chains.scaleOut"
+			},
+			"scripts": {
+				"animate": [
+					"chain"
+				]
+			}
+		}
+	}
+}

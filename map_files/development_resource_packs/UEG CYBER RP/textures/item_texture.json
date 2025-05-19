@@ -23,9 +23,19 @@
 				"textures/items/secret/crappy_dodgeball"
 			]
 		},
+		"sm:blushing_bloomfan":{
+			"textures":[
+				"textures/items/blushing_bloomfan"
+			]
+		},
 				"sm:training_menu": {
 			"textures": [
 				"textures/items/training_menu"
+			]
+		},
+		"sm:heirloom":{
+			"textures":[
+				"textures/items/heirloom"
 			]
 		},
 		"sm:emergency_2": {

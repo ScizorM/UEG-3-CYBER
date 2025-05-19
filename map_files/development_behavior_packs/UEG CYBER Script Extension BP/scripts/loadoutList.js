@@ -68,7 +68,8 @@ var weaponIDList = new Array(
     "sm:loadout_mb85_crimson_hws",
     "sm:loadout_gilded_marksman",
     "sm:loadout_kusarigama",
-    "sm:loadout_use_stored_item"
+    "sm:loadout_use_stored_item",
+    "sm:loadout_heirloom"
 )
 
 var ingameWeaponIDList = new Array(
@@ -103,7 +104,8 @@ var ingameWeaponIDList = new Array(
     "sm:mb85_crimson_hws",
     "sm:gilded_marksman",
     "sm:kusarigama",
-    "sm:use_stored_item"
+    "sm:use_stored_item",
+    "sm:heirloom"
 )
 //Ranged: 
 //Utils:
@@ -144,7 +146,8 @@ var ingameWeaponNames = new Array(
     "The Deep Striker REBORN + Missile Heavy Weapons System ",
     "Gilded Marksman ",
     "Kusarigama /",
-    "Utility Lunchbox "
+    "Utility Lunchbox ",
+    "Nakaw's Heirloom "
 )
 
 const loadoutTypeIDs = new Array(

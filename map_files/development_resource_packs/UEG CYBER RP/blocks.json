@@ -628,6 +628,9 @@
 	"sm:fabricated_block": {
 		"textures": "sm:fabricated_block"
 	},
+	"sm:fabricated_block_static": {
+		"textures": "sm:fabricated_block_static"
+	},
 	"sm:pitfall_2": {
 		"textures": {
 			"side": "sm:pitfall_2_side",

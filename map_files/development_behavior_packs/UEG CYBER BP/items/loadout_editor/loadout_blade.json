@@ -13,7 +13,7 @@
 				"value": 5
 			},
 			"minecraft:display_name": {
-				"value": "§cPlaceholder §fRepulsion Blade\n\n§d Knocks back hit entities\n§9 Blocks knockback for 1 second"
+				"value": "§cPlaceholder §fRepulsion Blade\n\n§d Knocks back hit entities"
 			},
 			"minecraft:icon": "sm:repulsion_blade",
 			"minecraft:hover_text_color": "white",

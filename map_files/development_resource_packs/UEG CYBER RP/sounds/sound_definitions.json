@@ -31,6 +31,22 @@
 				"sounds/weapons/implosion_grenade"
 			]
 		},
+		"kusarigama_swing": {
+			"category": "music",
+			"min_distance": 0,
+			
+			"sounds": [
+				"sounds/weapons/kusarigama_swing"
+			]
+		},
+		"kusarigama_swing_global": {
+			"category": "mobs",
+			"min_distance": 0,
+			
+			"sounds": [
+				"sounds/weapons/kusarigama_swing"
+			]
+		},
 		"deep_striker": {
 			"category": "music",
 			"min_distance": 0,

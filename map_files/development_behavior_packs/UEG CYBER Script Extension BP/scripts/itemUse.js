@@ -1,4 +1,4 @@
-﻿import { world, ItemCooldownComponent, system, Entity, EntityComponentTypes } from '@minecraft/server'
+﻿import { world, ItemCooldownComponent, system, Entity, EntityComponentTypes, EquipmentSlot } from '@minecraft/server'
 import { ActionFormData, MessageFormData, ModalFormData } from '@minecraft/server-ui'
 import { weaponIDList, ingameWeaponIDList, loadoutTypeIDs, loadoutTypeIDLocs, loadoutIcons, loadoutNames, ingameWeaponNames } from './loadoutList.js'
 import { itemNameList, itemIconLocation, itemScoreboard, itemDescList } from './foodList.js'
@@ -280,7 +280,8 @@ world.beforeEvents.worldInitialize.subscribe((initEvent) => {
             var player = source
             var cooldownComp1 = itemStack.getComponent(ItemCooldownComponent.componentId)
             cooldownComp1.startCooldown(source)
-            source.playAnimation("animation.player.swing")
+            source.runCommand("playsound random.eat @a ~ ~ ~")
+            source.playSound("random.eat")
             var assignedItemSB = world.scoreboard.getObjective("assigned_food")
             var assignedItemSBPlayer = assignedItemSB.getScore(player)
 
@@ -340,8 +341,10 @@ world.beforeEvents.worldInitialize.subscribe((initEvent) => {
             const heavenPlayer = heavenP.getScore(source)
             if (heavenPlayer > 5) {
 
-    
+                var player = source;
                 source.runCommand("execute if score @s heavenpiercer_meter matches 6.. run function heavenpiercer_triggergroundslam")
+                player.applyKnockback(player.getViewDirection().x / 5, player.getViewDirection().z / 5, Math.sqrt(player.getViewDirection().x ** 2 + player.getViewDirection().z ** 2) * 1, 2)
+                heavenP.setScore(source,0)
             }
             source.playAnimation("animation.player.swing")
         },
@@ -412,6 +415,7 @@ world.beforeEvents.worldInitialize.subscribe((initEvent) => {
         onHitEntity(event) {
             const { itemStack, attackingEntity, hitEntity } = event;
             var yDisplacement = attackingEntity.location.y - hitEntity.location.y
+
             hitEntity.applyKnockback(attackingEntity.getViewDirection().x, attackingEntity.getViewDirection().z, -2, Math.min(Math.max(yDisplacement, -1), 1))
             hitEntity.runCommand(`particle sm:gobbler_hit ${hitEntity.location.x} ${hitEntity.location.y + 1} ${hitEntity.location.z}`)
             if (hitEntity.typeId == "minecraft:player") {
@@ -426,42 +430,85 @@ world.beforeEvents.worldInitialize.subscribe((initEvent) => {
 
             const { itemStack, source } = event;
 
-            var rayLocation = { x: source.location.x, y: source.location.y + 1.5, z: source.location.z }
+            var rayLocation = [{ x: source.location.x, y: source.location.y + 1.5, z: source.location.z }]
+            
             var lookDir = { x: source.getViewDirection().x, y: source.getViewDirection().y, z: source.getViewDirection().z }
-            var entityRC = source.getEntitiesFromViewDirection()
-            var blockRC = source.dimension.getBlockFromRay(rayLocation, lookDir, { includeLiquidBlocks: false, includePassableBlocks: false, maxDistance: 25 })
+            var entityRC = [];
+            for(var i = 0; i < 5; i++){
+                var lookDirRefined = { x: source.getViewDirection().x, y: source.getViewDirection().y + i/5, z: source.getViewDirection().z }
+                var spawnPos = {x:(source.getViewDirection().x + source.location.x), y:source.getViewDirection().y + source.location.y + 1, z:source.getViewDirection().z + source.location.z}
+                var tempRay = entityRC.push(world.getDimension("overworld").getEntitiesFromRay(spawnPos,lookDirRefined))
+                if(tempRay != undefined){
+                    entityRC.push(tempRay)
+                }
+
+            }
+
+            RaySpreadData(source)
+            // var blockRC = source.dimension.getBlockFromRay(rayLocation, lookDir, { includeLiquidBlocks: false, includePassableBlocks: false, maxDistance: 25 })
+
+            // const rotation = source.getRotation();
+            // source.sendMessage(`${lookDir.x} ${lookDir.y} ${lookDir.z}`)
 
 
+            // var particleType = "sm:striker_sparkle"
+
+            // //for(var j = 0; j < entityRC.length; j++){
+            //     hits.forEach((hit) => {
+
+            //     source.setProperty("sm:deepstriker_anim", 1)
+
+            //     var hitEntity = hit.entity
+
+            //     var rayDisplacement = { x: source.location.x - hitEntity.location.x, y: source.location.y - hitEntity.location.y + .4, z: source.location.z - hitEntity.location.z }
+            //     var totalDisplacement = Math.abs(rayDisplacement.x) + Math.abs(rayDisplacement.y) + Math.abs(rayDisplacement.z)
+            //     var loopTimes = 50
+            //     for (let i = 1; i < loopTimes; i = i + .25) {
+            //         var particleLocation = {
+            //             x: hitEntity.location.x + (rayDisplacement.x / i),
+            //             y: hitEntity.location.y + (rayDisplacement.y / i) + 1,
+            //             z: hitEntity.location.z + (rayDisplacement.z / i)
+            //         }
+            //         source.runCommand(`particle ${particleType} ${particleLocation.x} ${particleLocation.y} ${particleLocation.z}`)
+
+            //         if (i >= loopTimes) {
+            //             break;
+            //         }
+            //     }
+            //     // hitEntity.applyKnockback(source.getViewDirection().x, source.getViewDirection().z, 0, 2)
+            //     // hitEntity.runCommand(`execute positioned ${hitEntity.location.x} ${hitEntity.location.y} ${hitEntity.location.z} run /function explosion_deepstriker`)
+            //     // hitEntity.runCommand(`execute positioned ${hitEntity.location.x} ${hitEntity.location.y} ${hitEntity.location.z} run /summon sm:explosion_deepstriker`)
+            //     source.runCommand(`playsound deep_striker @a ~ ~ ~`)
+            //     entityRay = true
+            // })
+            //}
 
 
-            var particleType = "sm:striker_sparkle"
+            // if (blockRC != undefined) {
+            //     source.setProperty("sm:deepstriker_anim", 1)
+            //     var rayDisplacementBlock = { x: source.location.x - blockRC.block.location.x, y: source.location.y - blockRC.block.location.y + .4, z: source.location.z - blockRC.block.location.z }
 
-
-            if (blockRC != undefined) {
-                source.setProperty("sm:deepstriker_anim", 1)
-                var rayDisplacementBlock = { x: source.location.x - blockRC.block.location.x, y: source.location.y - blockRC.block.location.y + .4, z: source.location.z - blockRC.block.location.z }
-
-                source.runCommand(`execute positioned ${blockRC.block.location.x} ${blockRC.block.location.y} ${blockRC.block.location.z} run tp @e[r=3] ${source.location.x} ${source.location.y} ${source.location.z}`)
+            //     source.runCommand(`execute positioned ${blockRC.block.location.x} ${blockRC.block.location.y} ${blockRC.block.location.z} run tp @e[r=3] ${source.location.x} ${source.location.y} ${source.location.z}`)
                 
 
-                var totalDisplacement = Math.abs(rayDisplacementBlock.x) + Math.abs(rayDisplacementBlock.y) + Math.abs(rayDisplacementBlock.z)
+            //     var totalDisplacement = Math.abs(rayDisplacementBlock.x) + Math.abs(rayDisplacementBlock.y) + Math.abs(rayDisplacementBlock.z)
 
-                var loopTimes = 50
+            //     var loopTimes = 50
 
-                for (let i = 1; i < loopTimes; i = i + .25) {
-                    var particleLocation = {
-                        x: blockRC.block.location.x + (rayDisplacementBlock.x / i),
-                        y: blockRC.block.location.y + (rayDisplacementBlock.y / i) + 0.5,
-                        z: blockRC.block.location.z + (rayDisplacementBlock.z / i)
-                    }
+            //     for (let i = 1; i < loopTimes; i = i + .25) {
+            //         var particleLocation = {
+            //             x: blockRC.block.location.x + (rayDisplacementBlock.x / i),
+            //             y: blockRC.block.location.y + (rayDisplacementBlock.y / i) + 0.5,
+            //             z: blockRC.block.location.z + (rayDisplacementBlock.z / i)
+            //         }
 
-                    source.runCommand(`particle ${particleType} ${particleLocation.x} ${particleLocation.y} ${particleLocation.z}`)
+            //         source.runCommand(`particle ${particleType} ${particleLocation.x} ${particleLocation.y} ${particleLocation.z}`)
 
-                    if (i >= loopTimes) {
-                        break;
-                    }
-                }
-            }
+            //         if (i >= loopTimes) {
+            //             break;
+            //         }
+            //     }
+            // }
 
         }
     });
@@ -705,6 +752,27 @@ world.beforeEvents.worldInitialize.subscribe((initEvent) => {
             source.runCommand("execute positioned ~ ~1 ~ run function emp")
         }
     });
+    initEvent.itemComponentRegistry.registerCustomComponent("sm:heirloom", {
+        onUse(event) {
+            const { itemStack, source } = event;
+            let spawnLocation = {x:source.location.x,y:source.location.y+1.5,z:source.location.z}
+            source.playAnimation("animation.player.swing")
+            source.spawnParticle("sm:heirloom_shards",spawnLocation)
+            source.runCommand("clear @s sm:heirloom 0 1")
+            source.runCommand("playsound random.glass @a ~ ~ ~")
+            let nearestPlayer = world.getDimension("Overworld").getPlayers({closest:true,maxDistance:3,location:source.location,excludeNames:[source.name]})
+            nearestPlayer.forEach(tgtPlayer =>{
+                let item = tgtPlayer.getComponent("equippable").getEquipment(EquipmentSlot.Mainhand);
+                if(item){
+                    tgtPlayer.runCommand(`clear @s ${item.typeId} 0 1`)
+                    source.runCommand(`replaceitem entity @s slot.weapon.mainhand 0 ${item.typeId} 1 0 { "minecraft:item_lock": { "mode": "lock_in_inventory" } }`)
+                    world.sendMessage(item.typeId.toString())
+                }
+                tgtPlayer.runCommand("summon sm:heirloom_effect")
+            })
+
+        }
+    });
     initEvent.itemComponentRegistry.registerCustomComponent("sm:platform_fabricator", {
         onUse(event) {
             const { itemStack, source } = event;
@@ -894,7 +962,7 @@ world.beforeEvents.worldInitialize.subscribe((initEvent) => {
                     missileCountSB.setScore(source, 0)
                 }
                 
-
+                source.runCommand("function mb85_cmds")
 
             }
 
@@ -1081,3 +1149,178 @@ function LoadoutDecide(player) {
 
     })
 }
+
+//grabbed via chatgpt, I was completely lost on how to do this - I have a better understanding now but I need to go back and renew my knowledge of trigonometry and calculus
+function GetRightAndUpVectors(forward) {
+  // Get the right vector as cross product of forward and up (world up = Y+)
+  const worldUp = { x: 0, y: 1, z: 0 };
+
+  let right = {
+    x: forward.y * worldUp.z - forward.z * worldUp.y,
+    y: forward.z * worldUp.x - forward.x * worldUp.z,
+    z: forward.x * worldUp.y - forward.y * worldUp.x,
+  };
+
+  // Normalize right
+  let len = Math.sqrt(right.x ** 2 + right.y ** 2 + right.z ** 2);
+  right = { x: right.x / len, y: right.y / len, z: right.z / len };
+
+  // Up vector is perpendicular to both forward and right
+  const up = {
+    x: right.y * forward.z - right.z * forward.y,
+    y: right.z * forward.x - right.x * forward.z,
+    z: right.x * forward.y - right.y * forward.x,
+  };
+
+  return { right, up };
+}
+
+function Build3DSpreadDirections(forward, spreadAngleDeg, countX, countY) {
+    const { right, up } = GetRightAndUpVectors(forward);
+    const spread = [];
+
+    const angleRad = (spreadAngleDeg * Math.PI) / 180;
+    const halfX = Math.floor(countX / 2);
+    const halfY = Math.floor(countY / 2);
+
+    for (let i = -halfX; i <= halfX; i++) {
+        for (let j = -halfY; j <= halfY; j++) {
+            const offsetX = i * (angleRad / countX);
+            const offsetY = j * (angleRad / countY);
+
+            const dir = {
+                x: forward.x + right.x * Math.sin(offsetX) + up.x * Math.sin(offsetY),
+                y: forward.y + right.y * Math.sin(offsetX) + up.y * Math.sin(offsetY),
+                z: forward.z + right.z * Math.sin(offsetX) + up.z * Math.sin(offsetY),
+            };
+
+            const mag = Math.sqrt(dir.x ** 2 + dir.y ** 2 + dir.z ** 2);
+            spread.push({
+                x: dir.x / mag,
+                y: dir.y / mag,
+                z: dir.z / mag,
+            });
+        }
+    }
+
+    return spread;
+}
+
+//wrote this part myself, I don't use it now lol
+// function RaySpreadDataTest(source){
+//     var baseLookDir = source.getViewDirection()
+//     var forward = source.getViewDirection();
+//     var output = [];
+//     var spreads = [];
+//     var spreadOptions = []
+//     for(let h = -0.5; h < 1; h+=0.5){
+//         spreadOptions.push(h)
+//     }
+
+//     for(let i = 0; i < spreadOptions.length; i++){
+
+//             for(let k = 0; k < spreadOptions.length; k++){
+//                 // spreads.push({x:spreadOptions[i],y:spreadOptions[j],z:spreadOptions[k]})
+//                 let lookDirectionRefinedMkII = {
+//                     x:source.location.x * spreadOptions[i],
+//                     y:source.location.y + 1.5,
+//                     z:source.location.z * spreadOptions[k]
+//                 }
+//                 let spawnPos = {x:(source.getViewDirection().x + source.location.x), y:source.getViewDirection().y + source.location.y + 1, z:source.getViewDirection().z + source.location.z}
+//                 let ray = world.getDimension("overworld").getEntitiesFromRay(spawnPos,lookDirectionRefinedMkII)
+//                 if(ray != undefined){
+//                     output = ray;
+//                     return output;
+//                 }
+//                 world.sendMessage(world.getDimension("overworld").getEntitiesFromRay(spawnPos,lookDirectionRefinedMkII).toString())
+//                 //world.sendMessage(`${spreadOptions[i]} ${spreadOptions[j]} ${spreadOptions[k]}`)
+//             }
+
+
+//     }
+// }
+
+//modified from chatgpt
+function RaySpreadData(source) {
+    var finished = false;
+    const forward = source.getViewDirection();  //the direction the player is looking in relative on each axis from -1 to 1 (ex: 1,0.5,-0.6)
+    const origin = source.getHeadLocation();  //head coordinates (x,y,z)  
+    const spreadDirs = Build3DSpreadDirections(forward, 30, 5, 5); //parameters: the direction the player is looking in, angle of spread to create the spread at, number of horizontal rays, number of vertical rays
+    const dimension = world.getDimension("overworld"); //gets what dimension to run all of this in (always overworld since I don't use the nether or end)
+
+    for (const dir of spreadDirs) { //for each direction in the spread of directions
+        const hits = dimension.getEntitiesFromRay(origin, dir, { maxDistance: 20 }); //get all entities from each raycast that hits something within a distance of 20 blocks
+
+        for (const hit of hits) { //for each entity hit within each ray
+            if (hit.entity.id === source.id) continue; //if the player is hit in the ray who fired the ray, ignore and continue until the loop is no longer targeting them
+            
+            const entity = hit.entity; // just doing this so I don't have to type hit.entity over and over
+            let spawnCoords = {x:entity.location.x,y:entity.location.y+1,z:entity.location.z} //spawn all visual effects one block above the feet of the targeted entity
+            dimension.spawnEntity("sm:chain_effect",spawnCoords) //spawn the chain visual effect that spawns on the entity that is hit by the chain attack
+            //world.sendMessage(`Hit: ${entity.nameTag ?? entity.typeId}`);
+            let hitEntity = hit.entity //redundancy of entity
+            let particleType = "sm:chain" //no longer used, saved just in case I need it
+            let loopTimes = 25 //how many times the chain spawns between the user and the targeted entity (spaghetti code but if it ain't broke don't fix it)
+            PullPlayerToSpot(hitEntity,source.location) //pull targeted entity to the user's location
+            let rayDisplacement = { x: source.location.x - hitEntity.location.x, y: source.location.y - hitEntity.location.y + .4, z: source.location.z - hitEntity.location.z }
+            let totalDisplacement = Math.abs(rayDisplacement.x) + Math.abs(rayDisplacement.y) + Math.abs(rayDisplacement.z)
+            for (let i = 1; i < loopTimes; i = i + .25) {
+                var particleLocation = {
+                    x: hitEntity.location.x + (rayDisplacement.x / i),
+                    y: hitEntity.location.y + (rayDisplacement.y / i) + 1,
+                    z: hitEntity.location.z + (rayDisplacement.z / i)
+                }
+               source.runCommand(`summon sm:chain ${particleLocation.x} ${particleLocation.y} ${particleLocation.z} facing ${source.location.x} ${source.location.y} ${source.location.z}`)
+
+                 if (i >= loopTimes) {
+                     break;
+                }
+            }
+            finished = true;
+            break; // only first hit per ray
+        }
+        if(finished){
+            break;
+        }
+    }
+}
+
+function PullPlayerToSpot(player,destination){
+
+    let displacement = {
+        x:destination.x-player.location.x,
+        y:destination.y-player.location.y,
+        z:destination.z-player.location.z
+    }
+
+    player.addTag("pulling")
+
+
+    let verticalStrength;
+
+
+    if(displacement.y > 3){
+        verticalStrength = 1;
+    }
+    else if(displacement.y > 0){
+        verticalStrength = 0.8;
+    }
+    else if(displacement.y > -3){
+        verticalStrength = -0.8
+    }
+    else{
+        verticalStrength = -1
+    }
+
+    let processedDisplacement = Math.abs(displacement.x) + Math.abs(displacement.y) + Math.abs(displacement.z)
+    if(processedDisplacement < 52 && processedDisplacement > 1 && player.hasTag("pulling")){
+        player.clearVelocity()
+        player.applyKnockback(displacement.x,displacement.z,3,verticalStrength)
+    }
+
+    player.removeTag("pulling")
+
+    
+
+}
+

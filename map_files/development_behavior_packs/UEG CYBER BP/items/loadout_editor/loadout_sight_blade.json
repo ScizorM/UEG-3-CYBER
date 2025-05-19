@@ -9,7 +9,7 @@
 			"minecraft:max_stack_size": 1,
 			"minecraft:hand_equipped": true,
 			"minecraft:display_name": {
-				"value": "§cPlaceholder §fTrue Holic\n\n§d Knocks back hit enemies,\nincreases the player's speed the more hits (resets on respawn)\n§9 Removes a speed level"
+				"value": "§cPlaceholder §fTrue Holic\n\n§d Knocks back hit enemies,\nincreases the player's speed and dash strength the more hits (resets on respawn)\n§9 Removes a speed level"
 			},
 			"minecraft:enchantable": {
 				"slot": "sword",

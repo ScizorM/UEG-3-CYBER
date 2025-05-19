@@ -1,0 +1,35 @@
+//bridge-file-version: #35
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "sm:heirloom_effect",
+			"textures": {
+				"default": "textures/entity/heirloom_model"
+			},
+			"geometry": {
+				"default": "geometry.heirloom_steal"
+			},
+			"render_controllers": [
+				"controller.render.guardian"
+			],
+			"materials": {
+				"default": "entity_alphablend"
+			},
+			"animations": {
+				"steal": "animation.heirloom_steal.steal"
+			},
+			"scripts": {
+				"animate": [
+					"steal"
+				]
+			},
+			"sound_effects": {
+				"glass": "random.glass"
+			},
+			"particle_effects": {
+				"shatter": "sm:heirloom_shards"
+			}
+		}
+	}
+}

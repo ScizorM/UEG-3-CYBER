@@ -120,7 +120,12 @@ function tether(player) {
 system.runInterval(() => {
     world.getAllPlayers().forEach(player => {
 
+        var holicHitsSB = world.scoreboard.getObjective("holic_hits")
+        var holicLevel = holicHitsSB.getScore(player)/12
 
+        if(holicLevel > 22/12){
+            holicLevel = 22/12
+        }
 
         const minDashesRequired = world.scoreboard.getObjective("minimum_dash_requirement")
         const minDashesRequiredVar = minDashesRequired.getScore("minimum_dash_requirement")
@@ -267,8 +272,9 @@ system.runInterval(() => {
                 const scoreboard = world.scoreboard.getObjective("dash_strength")
                 player.playSound("dash", { volume: 0.4, pitch: Math.max(Math.random(), 0.8) })
                 //player.sendMessage("View Direction Y: " + player.getViewDirection().y.toString()) 
-
-                    player.applyKnockback(player.getViewDirection().x, player.getViewDirection().z, dash_strength - Math.abs(player.getViewDirection().y / 1.5), ((player.getViewDirection().y + 1) / 2) * (dash_strength / 2))
+                    holicHitsSB.addScore(player,0)
+                    holicLevel = holicHitsSB.getScore(player)/12
+                    player.applyKnockback(player.getViewDirection().x, player.getViewDirection().z, dash_strength - Math.abs(player.getViewDirection().y / 1.5)  + holicLevel, ((player.getViewDirection().y + 1) / 2) * (dash_strength / 2))
                     dashes.addScore(player, dash_usage)
 
 

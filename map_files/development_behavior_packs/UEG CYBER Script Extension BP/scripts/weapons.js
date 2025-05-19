@@ -208,6 +208,13 @@ world.afterEvents.itemUse.subscribe((data) => {
                 cooldownComp6.startCooldown(player)
             }
             break
+        case 'sm:heirloom':
+            const cooldownComp93 = item.getComponent(ItemCooldownComponent.componentId)
+            //world.sendMessage("[EMP Debug] " + item.getComponent('cooldown').getCooldownTicksRemaining(player))
+            if (item.getComponent('cooldown').getCooldownTicksRemaining(player) > 298) {
+                cooldownComp93.startCooldown(player)
+            }
+            break
         case 'sm:landmine_ver_nu':
             const cooldownComp = item.getComponent(ItemCooldownComponent.componentId)
             //world.sendMessage("[Landmine Debug] " + item.getComponent('cooldown').getCooldownTicksRemaining(player))
@@ -319,12 +326,19 @@ world.afterEvents.itemUse.subscribe((data) => {
                 cooldownComp14.startCooldown(player)
             }
             break
+        case 'sm:mb85_crimson_hws':
+            const cooldownComp2000 = item.getComponent(ItemCooldownComponent.componentId)
+            //world.sendMessage("[Icarus Debug] " + item.getComponent('cooldown').getCooldownTicksRemaining(player))
+            if (item.getComponent('cooldown').getCooldownTicksRemaining(player) > 8) {
+                cooldownComp2000.startCooldown(player)
+            }
+            break
         case 'sm:heavenpiercer':
             const cooldownComp15 = item.getComponent(ItemCooldownComponent.componentId)
             //world.sendMessage("[HeavenPiercer Debug] " + item.getComponent('cooldown').getCooldownTicksRemaining(player))
             if (item.getComponent('cooldown').getCooldownTicksRemaining(player) > 97) {
                 cooldownComp15.startCooldown(player)
-                player.applyKnockback(player.getViewDirection().x / 5, player.getViewDirection().z / 5, Math.sqrt(player.getViewDirection().x ** 2 + player.getViewDirection().z ** 2) * 1, 2)
+                
             }
             break
         case 'sm:true_holic':

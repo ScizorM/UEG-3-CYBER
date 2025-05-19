@@ -722,6 +722,7 @@ system.runInterval((runInt) => {
         gamblingArenaTimer.setScore("timer",200)
     }
 
+    
 
     var skinRerollTimer = world.scoreboard.getObjective("skin_reroll_timer")
     var skinRerollRealtime = skinRerollTimer.getScore("skin_reroll_real")
@@ -830,6 +831,8 @@ system.runInterval((runInt) => {
 
         //ms diff below is tested with two online players
 
+        MeleeSystem(player)
+
         NewTitleSystem(player) //1ms diff
 
         MenuItemManager(player) //1ms diff
@@ -842,7 +845,7 @@ system.runInterval((runInt) => {
 
         ScoreBoardMenu(player) //1ms diff
 
-
+        HeavenPiercerEvents(player)
 
         if(player.hasTag("changeSkin")){
             system.run(() => renderSkins(player))
@@ -860,6 +863,104 @@ system.runInterval((runInt) => {
         
     })
 });
+
+function HeavenPiercerEvents(player){
+    if(player.hasTag("heavenpiercer_slam_event")){
+        if(player.isOnGround){
+            player.runCommand("summon sm:explosion_440_2")
+            player.removeTag("heavenpiercer_slam_event")
+        }
+    }
+
+    
+}
+
+function MeleeSystem(player){
+
+    if(player.hasTag("immuneToCurrentAttack")){
+    var allEntities = world.getDimension("overworld").getEntities({maxDistance: 4, location: player.location,tags: ["hit"], excludeFamilies:["npc","creeper"]}).forEach(entity => {
+
+
+        if(entity.hasTag("hit_repulsion")){
+            if(!entity.hasTag("kbApplied")){
+                entity.applyKnockback(player.getViewDirection().x, player.getViewDirection().z, 5, 0.3)
+                entity.addTag("kbApplied")
+            }
+            
+
+            entity.runCommand("damage @s 1")
+            entity.removeTag("hit")
+            entity.removeTag("hit_repulsion")
+            entity.removeTag("kbApplied")
+        }
+
+        if(entity.hasTag("hit_kusarigama")){
+            if(!entity.hasTag("kbApplied")){
+                entity.applyKnockback(-player.getViewDirection().x, -player.getViewDirection().z, 1, 0.35)
+                entity.addTag("kbApplied")
+            }
+            let hitEntity = entity;
+            hitEntity.runCommand(`particle sm:blood_splatter ${hitEntity.location.x} ${hitEntity.location.y + 1} ${hitEntity.location.z}`)
+            player.runCommand("playsound kusarigama_swing @s ~ ~ ~")
+            entity.runCommand(`playsound kusarigama_swing_global @a[name=!"${player.name}"] ~ ~ ~`)
+            entity.runCommand("damage @s 1")
+            entity.removeTag("hit")
+            entity.removeTag("hit_kusarigama")
+            entity.removeTag("kbApplied")
+        }
+
+        if(entity.hasTag("hit_heavenpiercer")){
+            if(!entity.hasTag("kbApplied")){
+                entity.applyKnockback(player.getViewDirection().x, player.getViewDirection().z, 2, 0.3)
+                entity.addTag("kbApplied")
+                player.runCommand("function heavenpiercerL_cmds")
+            }
+            
+
+            entity.runCommand("damage @s 1")
+            entity.removeTag("hit")
+            entity.removeTag("hit_heavenpiercer")
+            entity.removeTag("kbApplied")
+        }
+
+        if(entity.hasTag("hit_holic")){
+            if(!entity.hasTag("kbApplied")){
+                entity.applyKnockback(player.getViewDirection().x, player.getViewDirection().z, 1, 0.3)
+                entity.addTag("kbApplied")
+                player.runCommand("function holic_attack")
+            }
+            
+
+            entity.runCommand("damage @s 1")
+            entity.removeTag("hit")
+            entity.removeTag("hit_holic")
+            entity.removeTag("kbApplied")
+        }
+
+        if(entity.hasTag("hit_gobbler")){
+            if(!entity.hasTag("kbApplied")){
+                var hitEntity = entity;
+                var attackingEntity = player;
+                hitEntity.applyKnockback(attackingEntity.getViewDirection().x, attackingEntity.getViewDirection().z, 2, -1)
+                hitEntity.runCommand(`particle sm:gobbler_hit ${hitEntity.location.x} ${hitEntity.location.y + 1} ${hitEntity.location.z}`)
+                if (hitEntity.typeId == "minecraft:player") {
+                    hitEntity.playSound("cannon_bludgeon")
+                }
+                attackingEntity.playSound("cannon_bludgeon")
+                entity.addTag("kbApplied")
+            }
+            
+
+            entity.runCommand("damage @s 1")
+            entity.removeTag("hit")
+            entity.removeTag("hit_gobbler")
+            entity.removeTag("kbApplied")
+        }
+
+        player.removeTag("immuneToCurrentAttack")
+    })
+    }
+}
 
 function ScoreBoardMenu(player){
             var gameActive = world.scoreboard.getObjective("game_active")

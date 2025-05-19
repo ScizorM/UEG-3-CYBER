@@ -1,3 +1,3 @@
 #bridge-file-version: #2
-tag @s add in_air_heavenpiercer
-event entity @s sm:heavenpiercer_levitation
+execute if score @s heavenpiercer_meter matches 6.. run tag @s add heavenpiercer_slam_event
+execute if score @s heavenpiercer_meter matches 6.. run event entity @s sm:heavenpiercer_levitation

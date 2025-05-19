@@ -1,0 +1,70 @@
+//bridge-file-version: #11
+{
+	"format_version": "1.13.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "sm:heirloom_effect",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"components": {
+			"minecraft:damage_sensor": {
+				"triggers": {
+					"cause": "all",
+					"deals_damage": false
+				}
+			},
+			"minecraft:type_family": {
+				"family": [
+					"npc",
+					"mob"
+				]
+			},
+			"minecraft:fire_immune": true,
+			"minecraft:movement": {
+				"value": 0.5
+			},
+			"minecraft:loot": {
+				"table": "loot_tables/empty.json"
+			},
+			"minecraft:collision_box": {
+				"width": 0,
+				"height": 0
+			},
+			"minecraft:persistent": {},
+			"minecraft:physics": {
+				"has_collision": false,
+				"has_gravity": false
+			},
+			"minecraft:conditional_bandwidth_optimization": {},
+			"minecraft:knockback_resistance": {
+				"value": 100000000
+			},
+			"minecraft:timer": {
+				"looping": false,
+				"time": [
+					3,
+					3
+				],
+				"time_down_event": {
+					"event": "sm:despawn"
+				}
+			}
+		},
+		"events": {
+			"sm:despawn": {
+				"add": {
+					"component_groups": [
+						"despawn"
+					]
+				}
+			}
+		},
+		"component_groups": {
+			"despawn": {
+				"minecraft:instant_despawn": {}
+			}
+		}
+	}
+}
