@@ -1,0 +1,33 @@
+//bridge-file-version: #52
+{
+	"format_version": "1.10.0",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "sm:mb85_greatsword",
+			"materials": {
+				"default": "entity_alphatest",
+				"enchanted": "entity_alphatest_glint"
+			},
+			"textures": {
+				"default": "textures/entity/weapons/mega_rocketblade"
+			},
+			"geometry": {
+				"default": "geometry.mega_rocketblade"
+			},
+			"render_controllers": [
+				"controller.render.armor"
+			],
+			"animations": {
+				"controller": "controller.animation.parry_fist",
+				"fist_tp": "animation.mega_rocketblade.thirdperson",
+				"fist_fp": "animation.mega_rocketblade.firstperson",
+				"parry": "animation.mega_rocketblade.fire"
+			},
+			"scripts": {
+				"animate": [
+					"controller"
+				]
+			}
+		}
+	}
+}

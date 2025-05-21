@@ -31,6 +31,18 @@ world.beforeEvents.worldInitialize.subscribe((initEvent) => {
             source.runCommand("function vulcan_extendedcmds")
         }
     });
+    initEvent.itemComponentRegistry.registerCustomComponent("sm:fish_car", {
+        onUse(event) {
+            const { itemStack, source } = event;
+            const fishCarTime = world.scoreboard.getObjective("fish_car_time")
+            fishCarTime.setScore(source,10)
+            //code obtained from Minato from the Bedrock Addons Discord, I hate mojang so much for removing holiday creator features and ruining everything
+            const dimension = world.getDimension("overworld")
+            const viewDir = source.getViewDirection()
+            source.applyKnockback(source.getViewDirection().x, source.getViewDirection().z, 4, 0)
+            PlayWeaponSounds("fish_car","fish_car_global",source,0.5,0.5)
+        }
+    });
     initEvent.itemComponentRegistry.registerCustomComponent("sm:marksman", {
         onUse(event) {
             var randomNumber = Math.floor(Math.random() * 10)
@@ -787,6 +799,48 @@ world.beforeEvents.worldInitialize.subscribe((initEvent) => {
             source.runCommand("execute positioned ~ ~1 ~ run summon sm:scaler_bomb ^ ^ ^1 ")
         }
     });
+    initEvent.itemComponentRegistry.registerCustomComponent("sm:blushing_bloomfan", {
+        onUse(event) {
+            const { itemStack, source } = event;
+            var entityRay = false
+            const dimension = world.getDimension("overworld")
+
+
+
+            var rayLocation = {x: source.location.x, y: source.location.y + 1.5, z: source.location.z}
+            var lookDir = {x: source.getViewDirection().x, y: source.getViewDirection().y , z: source.getViewDirection().z }
+            var blockRC = source.dimension.getBlockFromRay(rayLocation, lookDir, { includeLiquidBlocks: false, includePassableBlocks: false })
+
+            if (blockRC.block.typeId != "sm:arenaborder" && blockRC.block.typeId != "minecraft:bedrock" && blockRC.block.typeId != "sm:arenaborder_4" && blockRC.block.typeId != "sm:arenaborder_5") {
+                var rayDisplacementBlock = { x: source.location.x - blockRC.block.location.x, y: source.location.y - blockRC.block.location.y + .4, z: source.location.z - blockRC.block.location.z }
+
+                let spawnPos = {x: blockRC.block.location.x,y: blockRC.block.location.y+1,z: blockRC.block.location.z}
+                PlayWeaponSounds("blossom_fan","blossom_fan_global",source,1,1)
+                // source.runCommand(`execute positioned ${blockRC.block.location.x} ${blockRC.block.location.y} ${blockRC.block.location.z} run /function explosion_deepstriker`)
+                // source.runCommand(`execute positioned ${blockRC.block.location.x} ${blockRC.block.location.y} ${blockRC.block.location.z} run /summon sm:explosion_deepstriker`)
+                source.spawnParticle("sm:petal_ring",spawnPos)
+                source.spawnParticle("sm:petal_warning",spawnPos)
+                source.spawnParticle("sm:heart_burst",spawnPos)
+                source.dimension.spawnEntity("sm:petal_emitter",spawnPos)
+                let particleType = "sm:heart"
+                var loopTimes = 50
+
+                for (let i = 1; i < loopTimes; i = i + .25) {
+                    var particleLocation = {
+                        x: blockRC.block.location.x + (rayDisplacementBlock.x / i),
+                        y: blockRC.block.location.y + (rayDisplacementBlock.y / i) + 1,
+                        z: blockRC.block.location.z + (rayDisplacementBlock.z / i)
+                    }
+
+                    source.runCommand(`particle ${particleType} ${particleLocation.x} ${particleLocation.y} ${particleLocation.z}`)
+
+                    if (i >= loopTimes) {
+                        break;
+                    }
+                }
+            }
+        }
+    });
     initEvent.itemComponentRegistry.registerCustomComponent("sm:deep_striker", {
         onUse(event) {
             var entityRay = false
@@ -794,8 +848,8 @@ world.beforeEvents.worldInitialize.subscribe((initEvent) => {
 
             const { itemStack, source } = event;
 
-            world.sendMessage("Deepstriker animation active: " + source.getProperty("sm:deepstriker_anim").toString())
-            world.sendMessage("Deepstriker shooting self active: " + source.getProperty("sm:deepstriker_shooting_self").toString())
+            //world.sendMessage("Deepstriker animation active: " + source.getProperty("sm:deepstriker_anim").toString())
+            //world.sendMessage("Deepstriker shooting self active: " + source.getProperty("sm:deepstriker_shooting_self").toString())
             var rayLocation = {x: source.location.x, y: source.location.y + 1.5, z: source.location.z}
             var lookDir = {x: source.getViewDirection().x, y: source.getViewDirection().y , z: source.getViewDirection().z }
             var blockRC = source.dimension.getBlockFromRay(rayLocation, lookDir, { includeLiquidBlocks: false, includePassableBlocks: false })
@@ -968,7 +1022,101 @@ world.beforeEvents.worldInitialize.subscribe((initEvent) => {
 
         }
     });
+    initEvent.itemComponentRegistry.registerCustomComponent("sm:mb85_greatsword", {
+        onUse(event) {
+            var entityRay = false
+            const dimension = world.getDimension("overworld")
 
+            const { itemStack, source } = event;
+
+            var missileCountSB = world.scoreboard.getObjective("missile_fires")
+            var missileCountPlayer = missileCountSB.getScore(source)
+
+            var rayLocation = { x: source.location.x, y: source.location.y + 1.5, z: source.location.z }
+            var lookDir = { x: source.getViewDirection().x, y: source.getViewDirection().y, z: source.getViewDirection().z }
+            var blockRC = source.dimension.getBlockFromRay(rayLocation, lookDir, { includeLiquidBlocks: false, includePassableBlocks: false })
+            var entityRC = source.getEntitiesFromViewDirection()
+
+
+
+
+            var particleType = "sm:crimson_hexa"
+            var particleWarningType = "sm:big_joe_warning"
+
+            entityRC.forEach((hit) => {
+
+                source.setProperty("sm:deepstriker_anim", 1)
+
+                var hitEntity = hit.entity
+
+                var rayDisplacement = { x: source.location.x - hitEntity.location.x, y: source.location.y - hitEntity.location.y + .4, z: source.location.z - hitEntity.location.z }
+                var totalDisplacement = Math.abs(rayDisplacement.x) + Math.abs(rayDisplacement.y) + Math.abs(rayDisplacement.z)
+                var loopTimes = 50
+                for (let i = 1; i < loopTimes; i = i + .25) {
+                    var particleLocation = {
+                        x: hitEntity.location.x + (rayDisplacement.x / i),
+                        y: hitEntity.location.y + (rayDisplacement.y / i) + 1,
+                        z: hitEntity.location.z + (rayDisplacement.z / i)
+                    }
+                    source.runCommand(`particle ${particleType} ${particleLocation.x} ${particleLocation.y} ${particleLocation.z}`)
+
+                    if (i >= loopTimes) {
+                        break;
+                    }
+                }
+
+
+
+                hitEntity.applyKnockback(source.getViewDirection().x, source.getViewDirection().z, 4, 1)
+                hitEntity.runCommand(`execute positioned ${hitEntity.location.x} ${hitEntity.location.y} ${hitEntity.location.z} run /function explosion_crimson_weak`)
+                hitEntity.runCommand(`execute positioned ${hitEntity.location.x} ${hitEntity.location.y} ${hitEntity.location.z} run /summon sm:explosion_crimson`)
+                entityRay = true
+            })
+
+            if (entityRay) {
+
+            }
+            else {
+                source.setProperty("sm:deepstriker_anim", 1)
+                var rayDisplacementBlock = { x: source.location.x - blockRC.block.location.x, y: source.location.y - blockRC.block.location.y + .4, z: source.location.z - blockRC.block.location.z }
+
+
+
+
+
+                if (missileCountPlayer < 5) {
+                    missileCountSB.addScore(source, 1)
+                    source.runCommand(`execute positioned ${blockRC.block.location.x} ${blockRC.block.location.y} ${blockRC.block.location.z} run /function explosion_crimson_weak`)
+                    source.runCommand(`execute positioned ${blockRC.block.location.x} ${blockRC.block.location.y} ${blockRC.block.location.z} run /summon sm:explosion_crimson`)
+                    var totalDisplacement = Math.abs(rayDisplacementBlock.x) + Math.abs(rayDisplacementBlock.y) + Math.abs(rayDisplacementBlock.z)
+
+                    var loopTimes = 50
+
+                    for (let i = 1; i < loopTimes; i = i + .25) {
+                        var particleLocation = {
+                            x: blockRC.block.location.x + (rayDisplacementBlock.x / i),
+                            y: blockRC.block.location.y + (rayDisplacementBlock.y / i) + 0.5,
+                            z: blockRC.block.location.z + (rayDisplacementBlock.z / i)
+                        }
+
+                        source.runCommand(`particle ${particleType} ${particleLocation.x} ${particleLocation.y} ${particleLocation.z}`)
+
+                        if (i >= loopTimes) {
+                            break;
+                        }
+                    }
+                }
+                else {
+                    source.runCommand(`execute positioned ${blockRC.block.location.x} ${blockRC.block.location.y + 2} ${blockRC.block.location.z} run function explosion_crimson`)
+                    missileCountSB.setScore(source, 0)
+                }
+
+                source.runCommand("function mb85_cmds")
+
+            }
+
+        }
+    });
     initEvent.itemComponentRegistry.registerCustomComponent("sm:archerfish", {
         onUse(event) {
             const { itemStack, source } = event;
@@ -1324,3 +1472,8 @@ function PullPlayerToSpot(player,destination){
 
 }
 
+
+function PlayWeaponSounds(personalSound,globalSound,source,personalVolume,globalVolume){
+    world.playSound(globalSound,source.location,{volume:globalVolume})
+    source.playSound(personalSound,{volume:personalVolume})
+}

@@ -38,6 +38,11 @@
 				"textures/items/heirloom"
 			]
 		},
+				"sm:mb85_greatsword":{
+			"textures":[
+				"textures/items/mb85_greatsword"
+			]
+		},
 		"sm:emergency_2": {
 			"textures": [
 				"textures/items/emergency_2"

@@ -1,0 +1,27 @@
+//bridge-file-version: #25
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.fishCar": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"holding_vulcan_cannon": "query.get_equipped_item_name(0, 0) == 'fish_car'"
+						}
+					]
+				},
+				"holding_vulcan_cannon": {
+					"transitions": [
+						{
+							"default": "query.get_equipped_item_name(0, 0) != 'fish_car'"
+						}
+					],
+					"animations": [
+						"hideLegs"
+					]
+				}
+			}
+		}
+	}
+}

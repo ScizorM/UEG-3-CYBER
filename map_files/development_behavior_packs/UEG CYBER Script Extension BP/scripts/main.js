@@ -744,6 +744,14 @@ system.runInterval((runInt) => {
     var allEntities = world.getDimension("overworld").getEntities().forEach(entity => {
 
 
+
+        if(entity.typeId == "sm:petal_emitter"){
+            world.getDimension("overworld").getPlayers({maxDistance:2.5,location:entity.location}).forEach(player => {
+                let petalCooldown = world.scoreboard.getObjective("petal_cooldown")
+                PetalExplosion(player,petalCooldown,entity)
+            })
+        }
+
         if (entity.typeId == "sm:scaler_bomb") {
             if (entity.getComponent(EntityComponentTypes.Health).currentValue == 1) {
 
@@ -791,6 +799,7 @@ system.runInterval((runInt) => {
 
     const pregameTimerTimeVisual = pregameTimerVisual.getScore("new_pregame_timer_visual")
 
+    const petalCooldown = world.scoreboard.getObjective("petal_cooldown")
 
     if (pregameTimerTime > 0) {
         pregameTimerVisual.setScore("new_pregame_timer_visual", 15 - (Math.round(pregameTimerTime)) / 20)
@@ -827,7 +836,10 @@ system.runInterval((runInt) => {
 
 
     world.getAllPlayers().forEach(player => {
+    
+        PetalSystem(player,petalCooldown)
 
+        FishCar(player)
 
         //ms diff below is tested with two online players
 
@@ -847,6 +859,9 @@ system.runInterval((runInt) => {
 
         HeavenPiercerEvents(player)
 
+
+        
+
         if(player.hasTag("changeSkin")){
             system.run(() => renderSkins(player))
             player.removeTag("changeSkin")
@@ -864,6 +879,33 @@ system.runInterval((runInt) => {
     })
 });
 
+function PetalExplosion(player,petalCooldown,entity){
+    if(petalCooldown.getScore(player) == 0){
+        let spawnPos = {x:player.location.x,y:player.location.y+1,z:player.location.z}
+        world.getDimension("Overworld").spawnEntity("sm:explosion_display",spawnPos)
+        world.getDimension("Overworld").spawnEntity("sm:explosion_crimson",spawnPos)
+        world.getDimension("Overworld").spawnParticle("sm:explosion_burst_flower",spawnPos)
+        world.getDimension("Overworld").spawnParticle("sm:heart_burst",spawnPos)
+        let displacement = {
+            x:player.location.x-entity.location.x,
+            y:player.location.y-entity.location.y,
+            z:player.location.z-entity.location.z
+        }
+        player.applyKnockback(displacement.x,displacement.z,3,1)
+        petalCooldown.setScore(player,20)
+    }  
+}
+
+function PetalSystem(player,petalCooldown){
+    petalCooldown.addScore(player,0)
+    let petalScore = petalCooldown.getScore(player)
+
+    if(petalScore > 0){
+        petalCooldown.addScore(player,-1)
+    }
+    
+}
+
 function HeavenPiercerEvents(player){
     if(player.hasTag("heavenpiercer_slam_event")){
         if(player.isOnGround){
@@ -880,6 +922,21 @@ function MeleeSystem(player){
     if(player.hasTag("immuneToCurrentAttack")){
     var allEntities = world.getDimension("overworld").getEntities({maxDistance: 4, location: player.location,tags: ["hit"], excludeFamilies:["npc","creeper"]}).forEach(entity => {
 
+
+        if(entity.hasTag("hit_bloomfan")){
+            if(!entity.hasTag("kbApplied")){
+                entity.applyKnockback(player.getViewDirection().x, player.getViewDirection().z, 8, 0.3)
+                entity.addTag("kbApplied")
+                let spawnPos = {x:entity.location.x,y:entity.location.y+1,z:entity.location.z}
+                world.getDimension("Overworld").spawnParticle("sm:heart_burst",spawnPos)
+                
+            }
+            entity.runCommand("damage @s 1")
+            entity.removeTag("hit")
+            entity.removeTag("hit_bloomfan")
+            entity.removeTag("kbApplied")
+            PlayWeaponSounds("blossom_fan","blossom_fan_global",player,1,1)
+        }
 
         if(entity.hasTag("hit_repulsion")){
             if(!entity.hasTag("kbApplied")){
@@ -1090,6 +1147,20 @@ function IcarusEffects(player){
         }
 }
 
+function FishCar(player){
+    const fishCarTime = world.scoreboard.getObjective("fish_car_time")
+    let spawnPos = {x:player.location.x,y:player.location.y+1,z:player.location.z}
+    fishCarTime.addScore(player,0)
+
+    if(fishCarTime.getScore(player) > 0){
+        fishCarTime.addScore(player,-1)
+        if(player.hasTag("ingame") && fishCarTime.getScore(player) % 2 == 1){
+            player.runCommand("function fish_explode_noslow")
+            world.getDimension("Overworld").spawnEntity("sm:explosion_crimson_laser",player.location)
+        }
+    }
+}
+
 function renderSkins(player) {
 
     const dashEffectSB = world.scoreboard.getObjective("dash_effect_timer")
@@ -1198,4 +1269,10 @@ function renderSkins(player) {
     
 
 
+}
+
+
+function PlayWeaponSounds(personalSound,globalSound,source,personalVolume,globalVolume){
+    world.playSound(globalSound,source.location,{volume:globalVolume})
+    source.playSound(personalSound,{volume:personalVolume})
 }

@@ -1,0 +1,16 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.fishCar.hideLegs": {
+			"loop": true,
+			"bones": {
+				"RightLeg": {
+					"scale": 0
+				},
+				"LeftLeg": {
+					"scale": 0
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,33 @@
+//bridge-file-version: #60
+{
+	"format_version": "1.10.0",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "sm:blushing_bloomfan",
+			"materials": {
+				"default": "entity_alphatest",
+				"enchanted": "entity_alphatest_glint"
+			},
+			"textures": {
+				"default": "textures/entity/weapons/blushing_bloomfan"
+			},
+			"geometry": {
+				"default": "geometry.blushing_bloomfan"
+			},
+			"render_controllers": [
+				"controller.render.armor"
+			],
+			"animations": {
+				"controller": "controller.animation.parry_fist",
+				"fist_tp": "animation.blushing_bloomfan.third_person",
+				"fist_fp": "animation.blushing_bloomfan.first_person",
+				"parry": "animation.blushing_bloomfan.use"
+			},
+			"scripts": {
+				"animate": [
+					"controller"
+				]
+			}
+		}
+	}
+}

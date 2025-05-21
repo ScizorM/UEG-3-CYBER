@@ -1,0 +1,75 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.fishcar",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 7,
+				"visible_bounds_height": 4,
+				"visible_bounds_offset": [0, 1, 0]
+			},
+			"bones": [
+				{
+					"name": "Head",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "Body",
+					"pivot": [0, 24, 0],
+					"cubes": [
+						{"origin": [0, 5, 14], "size": [0, 16, 29], "uv": [0, 0]},
+						{"origin": [0, 17, 3], "size": [0, 5, 11], "uv": [88, 0]},
+						{"origin": [-2, 13, -15], "size": [4, 3, 1], "uv": [88, 38]},
+						{"origin": [-3, 10, -14], "size": [6, 7, 10], "uv": [0, 71]},
+						{"origin": [-6, 10, -8], "size": [3, 7, 4], "uv": [88, 16]},
+						{"origin": [3, 10, -8], "size": [3, 7, 4], "uv": [88, 27]},
+						{"origin": [-2, 10, -15], "size": [4, 2, 1], "uv": [60, 88]},
+						{"origin": [-8, 9, -4], "size": [16, 8, 18], "uv": [0, 45]},
+						{"origin": [5, 0, 4], "size": [4, 11, 11], "uv": [58, 0]},
+						{"origin": [-9, 0, 4], "size": [4, 11, 11], "uv": [58, 22]},
+						{"origin": [5, 0, -12], "size": [4, 11, 11], "uv": [68, 66]},
+						{"origin": [-9, 0, -12], "size": [4, 11, 11], "uv": [68, 44]}
+					]
+				},
+				{
+					"name": "bone2",
+					"parent": "Body",
+					"pivot": [8, 15, -4],
+					"rotation": [0, 25, 0],
+					"cubes": [
+						{"origin": [5, 10, -15], "size": [3, 7, 11], "inflate": 0.01, "uv": [32, 71]},
+						{"origin": [8, 14, -11], "size": [1, 2, 2], "uv": [60, 71]}
+					]
+				},
+				{
+					"name": "bone",
+					"parent": "Body",
+					"pivot": [-8, 14, -4],
+					"rotation": [0, -25, 0],
+					"cubes": [
+						{"origin": [-8, 10, -15], "size": [3, 7, 11], "inflate": 0.01, "uv": [0, 88]},
+						{"origin": [-9, 14, -11], "size": [1, 2, 2], "uv": [60, 75]}
+					]
+				},
+				{
+					"name": "RightArm",
+					"pivot": [-5, 21.5, 0]
+				},
+				{
+					"name": "LeftArm",
+					"pivot": [5, 21.5, 0]
+				},
+				{
+					"name": "RightLeg",
+					"pivot": [-1.9, 12, 0]
+				},
+				{
+					"name": "LeftLeg",
+					"pivot": [1.9, 12, 0]
+				}
+			]
+		}
+	]
+}

@@ -39,5 +39,14 @@ execute if entity @s[hasitem={item=sm:kusarigama,location=slot.weapon.mainhand}]
 execute if entity @s[hasitem={item=sm:kusarigama,location=slot.weapon.mainhand}] run execute positioned as @s run execute positioned ~ ~1.5 ~ run execute positioned ^ ^ ^4 run execute as @e[r=2.5,tag=!immuneToCurrentAttack] run tag @s add hit
 execute if entity @s[hasitem={item=sm:kusarigama,location=slot.weapon.mainhand}] run execute positioned as @s run execute positioned ~ ~1.5 ~ run execute positioned ^ ^ ^4 run execute as @e[r=2.5,tag=!immuneToCurrentAttack] run tag @s add hit_kusarigama
 #say swing
+
+execute if entity @s[hasitem={item=sm:blushing_bloomfan,location=slot.weapon.mainhand}] run execute positioned as @s run execute positioned ~ ~1.5 ~ run execute positioned ^ ^ ^1 run execute as @e[r=2,tag=!immuneToCurrentAttack] run tag @s add hit
+execute if entity @s[hasitem={item=sm:blushing_bloomfan,location=slot.weapon.mainhand}] run execute positioned as @s run execute positioned ~ ~1.5 ~ run execute positioned ^ ^ ^1 run execute as @e[r=2,tag=!immuneToCurrentAttack] run tag @s add hit_bloomfan
+
+execute if entity @s[hasitem={item=sm:blushing_bloomfan,location=slot.weapon.mainhand}] run execute positioned as @s run execute positioned ~ ~1.5 ~ run execute positioned ^ ^ ^2 run execute as @e[r=2,tag=!immuneToCurrentAttack] run tag @s add hit
+execute if entity @s[hasitem={item=sm:blushing_bloomfan,location=slot.weapon.mainhand}] run execute positioned as @s run execute positioned ~ ~1.5 ~ run execute positioned ^ ^ ^2 run execute as @e[r=2,tag=!immuneToCurrentAttack] run tag @s add hit_bloomfan
+
+execute if entity @s[hasitem={item=sm:blushing_bloomfan,location=slot.weapon.mainhand}] run execute positioned as @s run execute positioned ~ ~1.5 ~ run execute positioned ^ ^ ^3 run execute as @e[r=2,tag=!immuneToCurrentAttack] run tag @s add hit
+execute if entity @s[hasitem={item=sm:blushing_bloomfan,location=slot.weapon.mainhand}] run execute positioned as @s run execute positioned ~ ~1.5 ~ run execute positioned ^ ^ ^3 run execute as @e[r=2,tag=!immuneToCurrentAttack] run tag @s add hit_bloomfan
 #execute positioned as @s run execute positioned ~ ~1.5 ~ run execute positioned ^ ^ ^1 run particle minecraft:basic_flame_particle ~ ~ ~
 #execute if entity @s[hasitem={item=sm:repulsion_blade,location=slot.weapon.mainhand}] run execute positioned as @s run execute positioned ~ ~1.5 ~ run execute positioned ^ ^ ^2 run particle minecraft:basic_flame_particle ~ ~ ~

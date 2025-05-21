@@ -23,6 +23,7 @@
 				"sounds/weapons/baby_staff_3"
 			]
 		},
+
 		"implosion_grenade": {
 			"category": "music",
 			"min_distance": 0,
@@ -45,6 +46,38 @@
 			
 			"sounds": [
 				"sounds/weapons/kusarigama_swing"
+			]
+		},
+		"fish_car": {
+			"category": "music",
+			"min_distance": 0,
+			
+			"sounds": [
+				"sounds/weapons/fish_car"
+			]
+		},
+		"fish_car_global": {
+			"category": "mobs",
+			"min_distance": 0,
+			
+			"sounds": [
+				"sounds/weapons/fish_car"
+			]
+		},
+		"blossom_fan": {
+			"category": "music",
+			"min_distance": 0,
+			
+			"sounds": [
+				"sounds/weapons/blossom_fan_2"
+			]
+		},
+		"blossom_fan_global": {
+			"category": "mobs",
+			"min_distance": 0,
+			
+			"sounds": [
+				"sounds/weapons/blossom_fan_2"
 			]
 		},
 		"deep_striker": {

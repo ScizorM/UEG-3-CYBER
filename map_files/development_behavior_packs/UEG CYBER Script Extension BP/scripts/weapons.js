@@ -310,6 +310,20 @@ world.afterEvents.itemUse.subscribe((data) => {
                 cooldownComp12.startCooldown(player)
             }
             break
+        case 'sm:blushing_bloomfan':
+            const cooldownComp133 = item.getComponent(ItemCooldownComponent.componentId)
+            //world.sendMessage("[SC_Quant Debug] " + item.getComponent('cooldown').getCooldownTicksRemaining(player))
+            if (item.getComponent('cooldown').getCooldownTicksRemaining(player) > 7) {
+                cooldownComp133.startCooldown(player)
+            }
+            break
+        case 'sm:fish_car':
+            const cooldownComp1222 = item.getComponent(ItemCooldownComponent.componentId)
+            //world.sendMessage("[SC_Quant Debug] " + item.getComponent('cooldown').getCooldownTicksRemaining(player))
+            if (item.getComponent('cooldown').getCooldownTicksRemaining(player) > 17) {
+                cooldownComp1222.startCooldown(player)
+            }
+            break
         case 'sm:parry_fist':
             const cooldownComp13 = item.getComponent(ItemCooldownComponent.componentId)
             //world.sendMessage("[Parry Debug] " + item.getComponent('cooldown').getCooldownTicksRemaining(player))
@@ -331,6 +345,13 @@ world.afterEvents.itemUse.subscribe((data) => {
             //world.sendMessage("[Icarus Debug] " + item.getComponent('cooldown').getCooldownTicksRemaining(player))
             if (item.getComponent('cooldown').getCooldownTicksRemaining(player) > 8) {
                 cooldownComp2000.startCooldown(player)
+            }
+            break
+        case 'sm:mb85_greatsword':
+            const cooldownComp20002 = item.getComponent(ItemCooldownComponent.componentId)
+            //world.sendMessage("[Icarus Debug] " + item.getComponent('cooldown').getCooldownTicksRemaining(player))
+            if (item.getComponent('cooldown').getCooldownTicksRemaining(player) > 57) {
+                cooldownComp20002.startCooldown(player)
             }
             break
         case 'sm:heavenpiercer':

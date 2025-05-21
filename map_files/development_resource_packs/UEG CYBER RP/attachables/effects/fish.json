@@ -1,0 +1,21 @@
+//bridge-file-version: #26
+{
+	"format_version": "1.16.100",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "sm:fish_car",
+			"materials": {
+				"default": "entity_emissive_alpha"
+			},
+			"textures": {
+				"default": "textures/entity/fishcar"
+			},
+			"geometry": {
+				"default": "geometry.fishcar"
+			},
+			"render_controllers": [
+				"controller.render.guardian"
+			]
+		}
+	}
+}

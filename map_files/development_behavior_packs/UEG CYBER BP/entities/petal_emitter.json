@@ -1,0 +1,109 @@
+//bridge-file-version: #13
+{
+	"format_version": "1.17.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "sm:petal_emitter",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"armor_stand",
+					"inanimate",
+					"mob",
+					"npc"
+				]
+			},
+			"minecraft:collision_box": {
+				"width": 0,
+				"height": 0
+			},
+			"minecraft:health": {
+				"value": 6,
+				"max": 6
+			},
+			"minecraft:scale": {
+				"value": 3
+			},
+			"minecraft:loot": {
+				"table": "loot_tables/entities/armor_stand.json"
+			},
+			"minecraft:nameable": {
+				"allow_name_tag_renaming": true,
+				"always_show": false
+			},
+			"minecraft:persistent": {},
+			"minecraft:physics": {
+				"has_gravity": false,
+				"has_collision": false
+			},
+			"minecraft:knockback_resistance": {
+				"value": 999999
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			},
+			"minecraft:timer": {
+				"looping": true,
+				"time": [
+					10,
+					10
+				],
+				"time_down_event": {
+					"event": "sm:despawn"
+				}
+			},
+			"minecraft:conditional_bandwidth_optimization": {},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "all",
+						"deals_damage": false
+					}
+				]
+			}
+		},
+		"events": {
+			"sm:despawn": {
+				"add": {
+					"component_groups": [
+						"despawn"
+					]
+				}
+			},
+			"sm:addTag": {
+				"add": {
+					"component_groups": [
+						"sm:addTag"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"sm:removeTag"
+					]
+				}
+			},
+			"sm:removeTag": {
+				"add": {
+					"component_groups": [
+						"sm:removeTag"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"sm:addTag"
+					]
+				}
+			}
+		},
+		"component_groups": {
+			"despawn": {
+				"minecraft:instant_despawn": {}
+			}
+		}
+	}
+}
