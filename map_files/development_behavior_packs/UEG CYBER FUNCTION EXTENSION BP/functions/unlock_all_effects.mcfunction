@@ -1,1 +1,0 @@
-execute if entity @a[tag=dev] run tag @s add add_all_effects

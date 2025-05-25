@@ -1,1 +1,0 @@
-replaceitem entity @s slot.armor.legs 0 sm:dash_effect_fire 1 0 {"minecraft:item_lock":{"mode":"lock_in_slot"}}

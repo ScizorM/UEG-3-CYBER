@@ -1,1 +1,0 @@
-execute if score "round_active" round_active matches 1 run /tag @s add debug_randomEffect

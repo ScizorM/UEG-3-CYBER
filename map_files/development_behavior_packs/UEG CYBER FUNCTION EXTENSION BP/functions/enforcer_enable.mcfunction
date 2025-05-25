@@ -1,1 +1,0 @@
-scoreboard players set enabled enforcer_enabled 1

@@ -1,7 +1,0 @@
-#bridge-file-version: #3
-execute as @s[tag=!gob_goo,tag=!solis,tag=!frigidus] run execute as @s positioned as @s run execute if entity @p[hasitem={item=sm:gob_goo_cannon,location=slot.weapon.mainhand}] run event entity @s gob_goo
-execute as @s[tag=!gob_goo,tag=!solis,tag=!frigidus] run execute as @s positioned as @s run execute if entity @p[hasitem={item=sm:gob_goo_cannon,location=slot.weapon.mainhand}] run tag @s add gob_goo
-execute as @s[tag=!gob_goo,tag=!solis,tag=!frigidus] run execute as @s positioned as @s run execute if entity @p[hasitem={item=sm:solis_cannon,location=slot.weapon.mainhand}] run event entity @s solis
-execute as @s[tag=!gob_goo,tag=!solis,tag=!frigidus] run execute as @s positioned as @s run execute if entity @p[hasitem={item=sm:solis_cannon,location=slot.weapon.mainhand}] run tag @s add solis
-execute as @s[tag=!gob_goo,tag=!solis,tag=!frigidus] run execute as @s positioned as @s run execute if entity @p[hasitem={item=sm:frigidus_cannon,location=slot.weapon.mainhand}] run event entity @s frigidus
-execute as @s[tag=!gob_goo,tag=!solis,tag=!frigidus] run execute as @s positioned as @s run execute if entity @p[hasitem={item=sm:frigidus_cannon,location=slot.weapon.mainhand}] run tag @s add frigidus

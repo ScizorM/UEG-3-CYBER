@@ -1,2 +1,0 @@
-execute if score "non_music_op" non_music_op matches 0 run /function enable_disable_song
-execute if score "non_music_op" non_music_op matches 1 run /execute if entity @a[r=3,tag=op] run /function enable_disable_song

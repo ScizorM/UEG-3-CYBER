@@ -1,1 +1,0 @@
-scoreboard players set "value" new_arena_load_trigger 1

@@ -1,1 +1,0 @@
-summon sm:teleporter_object "teleporter_p_b" ~ ~ ~

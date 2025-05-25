@@ -1,1 +1,0 @@
-particle sm:loadout_two ~ ~3 ~

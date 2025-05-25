@@ -1,3 +1,0 @@
-#bridge-file-version: #5
-title @s subtitle §eShutting Down...
-title @s title §cCRITICAL FILES MISSING.
