@@ -1,0 +1,130 @@
+//bridge-file-version: #26
+{
+	"format_version": "1.13.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "sm:terminal_leave_teams",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false,
+			"scripts": {
+				"animate": [
+					"bridge_execute_commands"
+				]
+			},
+			"animations": {
+				"bridge_execute_commands": "controller.animation.bridge_terminal_leave_teams.execute_commands"
+			}
+		},
+		"components": {
+			"minecraft:damage_sensor": {
+				"triggers": {
+					"cause": "all",
+					"deals_damage": false
+				}
+			},
+			"minecraft:type_family": {
+				"family": [
+					"npc",
+					"mob"
+				]
+			},
+			"minecraft:fire_immune": true,
+			"minecraft:movement": {
+				"value": 0.5
+			},
+			"minecraft:loot": {
+				"table": "loot_tables/empty.json"
+			},
+			"minecraft:collision_box": {
+				"width": 0.6,
+				"height": 0.7
+			},
+			"minecraft:persistent": {},
+			"minecraft:physics": {},
+			"minecraft:conditional_bandwidth_optimization": {},
+			"minecraft:nameable": {
+				"always_show": false
+			},
+			"minecraft:interact": {
+				"interactions": [
+					{
+						"interact_text": "Leave Teams",
+						"swing": true,
+						"on_interact": {
+							"event": "sm:leave_teams",
+							"target": "other"
+						}
+					}
+				]
+			}
+		},
+		"events": {
+			"sm:command": {
+				"add": {
+					"component_groups": [
+						"bridge:execute_command_id_1"
+					]
+				}
+			},
+			"sm:game_not_active": {
+				"add": {
+					"component_groups": [
+						"game_not_active"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"game_active"
+					]
+				}
+			},
+			"sm:game_active": {
+				"add": {
+					"component_groups": [
+						"game_active"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"game_not_active"
+					]
+				}
+			},
+			"bridge:remove_command_id_1": {
+				"add": {
+					"component_groups": [
+						"bridge:execute_no_command"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"bridge:execute_command_id_1"
+					]
+				}
+			}
+		},
+		"component_groups": {
+			"game_not_active": {
+				"minecraft:variant": {
+					"value": 0
+				}
+			},
+			"game_active": {
+				"minecraft:variant": {
+					"value": 1
+				}
+			},
+			"bridge:execute_command_id_1": {
+				"minecraft:skin_id": {
+					"value": 1
+				}
+			},
+			"bridge:execute_no_command": {
+				"minecraft:skin_id": {
+					"value": 0
+				}
+			}
+		}
+	}
+}

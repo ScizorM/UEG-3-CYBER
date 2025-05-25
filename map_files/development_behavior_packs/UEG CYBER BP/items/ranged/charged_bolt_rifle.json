@@ -1,0 +1,24 @@
+//bridge-file-version: #20
+{
+	"format_version": "1.21.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "sm:charged_bolt_rifle"
+		},
+		"components": {
+			"minecraft:icon": "sm:charged_bolt_rifle",
+			"minecraft:hand_equipped": true,
+			"minecraft:display_name": {
+				"value": "Charged Bolt Rifle\n"
+			},
+			"minecraft:custom_components": [
+				"sm:charged_bolt_rifle"
+			],
+			"minecraft:cooldown": {
+				"category": "rifle",
+				"duration": 5
+			},
+			"minecraft:max_stack_size": 1
+		}
+	}
+}

@@ -1,0 +1,15 @@
+//bridge-file-version: #17
+{
+	"format_version": "1.21.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "sm:test_shotgun"
+		},
+		"components": {
+			"minecraft:icon": "sm:unused_item",
+			"minecraft:display_name": {
+				"value": "[Unused Item] Test Shotgun"
+			}
+		}
+	}
+}

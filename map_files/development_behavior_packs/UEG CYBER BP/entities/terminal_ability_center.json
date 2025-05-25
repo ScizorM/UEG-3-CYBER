@@ -1,0 +1,58 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.13.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "sm:terminal_test",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"components": {
+			"minecraft:damage_sensor": {
+				"triggers": {
+					"cause": "all",
+					"deals_damage": false
+				}
+			},
+			"minecraft:type_family": {
+				"family": [
+					"npc",
+					"mob"
+				]
+			},
+			"minecraft:fire_immune": true,
+			"minecraft:movement": {
+				"value": 0.5
+			},
+			"minecraft:loot": {
+				"table": "loot_tables/empty.json"
+			},
+			"minecraft:collision_box": {
+				"width": 0.6,
+				"height": 1
+			},
+			"minecraft:persistent": {},
+			"minecraft:physics": {},
+			"minecraft:conditional_bandwidth_optimization": {},
+			"minecraft:interact": {
+				"interactions": [
+					{
+						"interact_text": "Center",
+						"on_interact": {
+							"event": "sm:command",
+							"target": "self"
+						}
+					}
+				]
+			},
+			"minecraft:nameable": {
+				"always_show": false
+			}
+		},
+		"events": {
+			"sm:command": {}
+		},
+		"component_groups": {}
+	}
+}

@@ -1,0 +1,20 @@
+//bridge-file-version: #27
+{
+	"format_version": "1.21.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "sm:loadout_display_spleef"
+		},
+		"components": {
+			"minecraft:cooldown": {
+				"category": "select_lo",
+				"duration": 1
+			},
+			"minecraft:icon": "sm:loadout_spleef",
+			"minecraft:display_name": {
+				"value": "Loadout 3: Spleef"
+			},
+			"minecraft:hand_equipped": true
+		}
+	}
+}

@@ -1,0 +1,665 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.20.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "minecraft:player",
+			"is_spawnable": false,
+			"is_summonable": false,
+			"is_experimental": false,
+			"properties": {
+				"sm:deepstriker_shooting_self": {
+					"type": "int",
+					"range": [
+						0,
+						4
+					],
+					"default": 0,
+					"client_sync": true
+				},
+				"sm:deepstriker_anim": {
+					"type": "int",
+					"range": [
+						0,
+						4
+					],
+					"default": 0,
+					"client_sync": true
+				}
+			},
+			"animations": {
+				"meleeDetect": "controller.animation.meleeDetect"
+			},
+			"scripts": {
+				"animate": [
+					"meleeDetect"
+				]
+			}
+		},
+		"component_groups": {
+			"minecraft:add_bad_omen": {
+				"minecraft:spell_effects": {
+					"add_effects": [
+						{
+							"effect": "bad_omen",
+							"duration": 6000,
+							"display_on_screen_animation": true
+						}
+					]
+				},
+				"minecraft:timer": {
+					"time": [
+						0,
+						0
+					],
+					"looping": false,
+					"time_down_event": {
+						"event": "minecraft:clear_add_bad_omen",
+						"target": "self"
+					}
+				}
+			},
+			"minecraft:clear_bad_omen_spell_effect": {
+				"minecraft:spell_effects": {}
+			},
+			"minecraft:raid_trigger": {
+				"minecraft:raid_trigger": {
+					"triggered_event": {
+						"event": "minecraft:remove_raid_trigger",
+						"target": "self"
+					}
+				},
+				"minecraft:spell_effects": {
+					"remove_effects": "bad_omen"
+				}
+			},
+			"sm:icarus_alternator": {
+				"minecraft:is_sheared": {}
+			},
+			"sm:fist": {
+				"minecraft:is_ignited": {}
+			},
+			"variant_0": {
+				"minecraft:variant": {
+					"value": 0
+				}
+			},
+			"variant_1": {
+				"minecraft:variant": {
+					"value": 1
+				}
+			},
+			"variant_2": {
+				"minecraft:variant": {
+					"value": 2
+				}
+			},
+			"variant_3": {
+				"minecraft:variant": {
+					"value": 3
+				}
+			},
+			"variant_4": {
+				"minecraft:variant": {
+					"value": 4
+				}
+			},
+			"variant_5": {
+				"minecraft:variant": {
+					"value": 5
+				}
+			},
+			"variant_6": {
+				"minecraft:variant": {
+					"value": 6
+				}
+			},
+			"variant_7": {
+				"minecraft:variant": {
+					"value": 7
+				}
+			},
+			"dash_frame1": {
+				"minecraft:variant": {
+					"value": 8
+				}
+			},
+			"dash_frame2": {
+				"minecraft:variant": {
+					"value": 9
+				}
+			},
+			"dash_frame3": {
+				"minecraft:variant": {
+					"value": 10
+				}
+			},
+			"dash_frame4": {
+				"minecraft:variant": {
+					"value": 11
+				}
+			},
+			"judgement_var": {
+				"minecraft:is_sheared": {}
+			},
+			"scale_default": {
+				"minecraft:scale": {
+					"value": 1
+				}
+			},
+			"scale_1_1x": {
+				"minecraft:scale": {
+					"value": 1.2
+				}
+			},
+			"scale_1_2x": {
+				"minecraft:scale": {
+					"value": 1.4
+				}
+			},
+			"scale_1_3x": {
+				"minecraft:scale": {
+					"value": 1.6
+				}
+			},
+			"scale_1_4x": {
+				"minecraft:scale": {
+					"value": 1.8
+				}
+			},
+			"scale_1_5x": {
+				"minecraft:scale": {
+					"value": 2
+				}
+			},
+			"scale_1_6x": {
+				"minecraft:scale": {
+					"value": 2.2
+				}
+			},
+			"scale_1_7x": {
+				"minecraft:scale": {
+					"value": 2.4
+				}
+			},
+			"scale_1_8x": {
+				"minecraft:scale": {
+					"value": 2.6
+				}
+			},
+			"scale_1_9x": {
+				"minecraft:scale": {
+					"value": 3
+				}
+			}
+		},
+		"components": {
+			"minecraft:experience_reward": {
+				"on_death": "Math.Min(query.player_level * 7, 100)"
+			},
+			"minecraft:type_family": {
+				"family": [
+					"player"
+				]
+			},
+			"minecraft:is_hidden_when_invisible": {},
+			"minecraft:loot": {
+				"table": "loot_tables/empty.json"
+			},
+			"minecraft:collision_box": {
+				"width": 0.6,
+				"height": 1.8
+			},
+			"minecraft:can_climb": {},
+			"minecraft:movement": {
+				"value": 0.1
+			},
+			"minecraft:hurt_on_condition": {
+				"damage_conditions": [
+					{
+						"filters": {
+							"test": "in_lava",
+							"subject": "self",
+							"operator": "==",
+							"value": true
+						},
+						"cause": "lava",
+						"damage_per_tick": 4
+					}
+				]
+			},
+			"minecraft:attack": {
+				"damage": 1
+			},
+			"minecraft:player.saturation": {
+				"value": 20
+			},
+			"minecraft:player.exhaustion": {
+				"value": 0,
+				"max": 4
+			},
+			"minecraft:player.level": {
+				"value": 0,
+				"max": 24791
+			},
+			"minecraft:player.experience": {
+				"value": 0,
+				"max": 1
+			},
+			"minecraft:breathable": {
+				"total_supply": 15,
+				"suffocate_time": -1,
+				"inhale_time": 3.75,
+				"generates_bubbles": false
+			},
+			"minecraft:nameable": {
+				"always_show": true,
+				"allow_name_tag_renaming": false
+			},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:insomnia": {
+				"days_until_insomnia": 3
+			},
+			"minecraft:rideable": {
+				"seat_count": 2,
+				"family_types": [
+					"parrot_tame"
+				],
+				"pull_in_entities": true,
+				"seats": [
+					{
+						"position": [
+							0.4,
+							-0.2,
+							-0.1
+						],
+						"min_rider_count": 0,
+						"max_rider_count": 0,
+						"lock_rider_rotation": 0
+					},
+					{
+						"position": [
+							-0.4,
+							-0.2,
+							-0.1
+						],
+						"min_rider_count": 1,
+						"max_rider_count": 2,
+						"lock_rider_rotation": 0
+					}
+				]
+			},
+			"minecraft:conditional_bandwidth_optimization": {},
+			"minecraft:scaffolding_climber": {},
+			"minecraft:environment_sensor": {
+				"triggers": {
+					"filters": {
+						"all_of": [
+							{
+								"test": "has_mob_effect",
+								"subject": "self",
+								"value": "bad_omen"
+							},
+							{
+								"test": "is_in_village",
+								"subject": "self",
+								"value": true
+							}
+						]
+					},
+					"event": "minecraft:trigger_raid"
+				}
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "void",
+						"deals_damage": false
+					},
+					{
+						"cause": "entity_explosion",
+						"deals_damage": false
+					}
+				]
+			}
+		},
+		"events": {
+			"sm:clear_scales": {
+				"remove": {
+					"component_groups": [
+						"scale_default",
+						"scale_1_1x",
+						"scale_1_2x",
+						"scale_1_3x",
+						"scale_1_4x",
+						"scale_1_5x",
+						"scale_1_6x",
+						"scale_1_7x",
+						"scale_1_8x",
+						"scale_1_9x"
+					]
+				}
+			},
+			"sm:scale_default": {
+				"add": {
+					"component_groups": [
+						"scale_default"
+					]
+				}
+			},
+			"sm:scale_1_1x": {
+				"add": {
+					"component_groups": [
+						"scale_1_1x"
+					]
+				}
+			},
+			"sm:scale_1_2x": {
+				"add": {
+					"component_groups": [
+						"scale_1_2x"
+					]
+				}
+			},
+			"sm:scale_1_3x": {
+				"add": {
+					"component_groups": [
+						"scale_1_3x"
+					]
+				}
+			},
+			"sm:scale_1_4x": {
+				"add": {
+					"component_groups": [
+						"scale_1_4x"
+					]
+				}
+			},
+			"sm:scale_1_5x": {
+				"add": {
+					"component_groups": [
+						"scale_1_5x"
+					]
+				}
+			},
+			"sm:scale_1_6x": {
+				"add": {
+					"component_groups": [
+						"scale_1_6x"
+					]
+				}
+			},
+			"sm:scale_1_7x": {
+				"add": {
+					"component_groups": [
+						"scale_1_7x"
+					]
+				}
+			},
+			"sm:scale_1_8x": {
+				"add": {
+					"component_groups": [
+						"scale_1_8x"
+					]
+				}
+			},
+			"sm:scale_1_9x": {
+				"add": {
+					"component_groups": [
+						"scale_1_9x"
+					]
+				}
+			},
+			"minecraft:gain_bad_omen": {
+				"add": {
+					"component_groups": [
+						"minecraft:add_bad_omen"
+					]
+				}
+			},
+			"minecraft:clear_add_bad_omen": {
+				"remove": {
+					"component_groups": [
+						"minecraft:add_bad_omen"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"minecraft:clear_bad_omen_spell_effect"
+					]
+				}
+			},
+			"minecraft:trigger_raid": {
+				"add": {
+					"component_groups": [
+						"minecraft:raid_trigger"
+					]
+				}
+			},
+			"minecraft:remove_raid_trigger": {
+				"remove": {
+					"component_groups": [
+						"minecraft:raid_trigger"
+					]
+				}
+			},
+			"sm:icarus_alternate_1": {
+				"add": {
+					"component_groups": [
+						"sm:icarus_alternator"
+					]
+				}
+			},
+			"sm:icarus_alternate_2": {
+				"remove": {
+					"component_groups": [
+						"sm:icarus_alternator"
+					]
+				}
+			},
+			"sm:fist_trigger": {
+				"add": {
+					"component_groups": [
+						"sm:fist"
+					]
+				}
+			},
+			"sm:no_fist_trigger": {
+				"remove": {
+					"component_groups": [
+						"sm:fist"
+					]
+				}
+			},
+			"sm:dash_frame1": {
+				"add": {
+					"component_groups": [
+						"dash_frame1"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"variant_0"
+					]
+				}
+			},
+			"sm:dash_frame2": {
+				"add": {
+					"component_groups": [
+						"dash_frame2"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"dash_frame2"
+					]
+				}
+			},
+			"sm:dash_frame3": {
+				"add": {
+					"component_groups": [
+						"dash_frame3"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"dash_frame2"
+					]
+				}
+			},
+			"sm:dash_frame4": {
+				"add": {
+					"component_groups": [
+						"dash_frame4"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"dash_frame3"
+					]
+				}
+			},
+			"sm:clear_variants": {
+				"remove": {
+					"component_groups": [
+						"dash_frame1",
+						"dash_frame2",
+						"dash_frame3",
+						"dash_frame4",
+						"variant_1",
+						"variant_2",
+						"variant_3",
+						"variant_4",
+						"variant_5",
+						"variant_6",
+						"variant_7"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"variant_0"
+					]
+				}
+			},
+			"sm:variant_0": {
+				"remove": {
+					"component_groups": [
+						"variant_7"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"variant_0"
+					]
+				}
+			},
+			"sm:variant_1": {
+				"remove": {
+					"component_groups": [
+						"variant_0"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"variant_1"
+					]
+				}
+			},
+			"sm:variant_2": {
+				"remove": {
+					"component_groups": [
+						"variant_1"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"variant_2"
+					]
+				}
+			},
+			"sm:variant_3": {
+				"remove": {
+					"component_groups": [
+						"variant_2"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"variant_3"
+					]
+				}
+			},
+			"sm:variant_4": {
+				"remove": {
+					"component_groups": [
+						"variant_3"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"variant_4"
+					]
+				}
+			},
+			"sm:variant_5": {
+				"remove": {
+					"component_groups": [
+						"variant_4"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"variant_5"
+					]
+				}
+			},
+			"sm:variant_6": {
+				"remove": {
+					"component_groups": [
+						"variant_5"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"variant_6"
+					]
+				}
+			},
+			"sm:variant_7": {
+				"remove": {
+					"component_groups": [
+						"variant_6"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"variant_7"
+					]
+				}
+			},
+			"sm:enable_judgement": {
+				"add": {
+					"component_groups": [
+						"judgement_var"
+					]
+				}
+			},
+			"sm:disable_judgement": {
+				"remove": {
+					"component_groups": [
+						"judgement_var"
+					]
+				}
+			},
+			"sm:add_deepstriker_property": {
+				"set_property": {
+					"sm:deepstriker_shooting_self": "0"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,26 @@
+//bridge-file-version: #11
+{
+	"format_version": "1.21.10",
+	"minecraft:block": {
+		"description": {
+			"identifier": "sm:pendual_magic"
+		},
+		"components": {
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 1
+			},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 2
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"ambient_occlusion": true,
+					"render_method": "blend",
+					"face_dimming": false
+				}
+			},
+			"minecraft:light_emission": 8,
+			"minecraft:display_name": "Pendual Magic"
+		}
+	}
+}

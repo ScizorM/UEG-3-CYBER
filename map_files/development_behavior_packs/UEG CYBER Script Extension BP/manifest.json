@@ -1,0 +1,60 @@
+{
+	"format_version": 2,
+	"metadata": {
+		"authors": [
+			"ScizorM"
+		],
+		"generated_with": {
+			"bridge": [
+				"1.8.5"
+			]
+		}
+	},
+	"header": {
+		"name": "UEG CYBER Script Extension",
+		"description": "Adds scripts to UEG CYBER.",
+		"min_engine_version": [
+			1,
+			20,
+			60
+		],
+		"uuid": "73b74bac-8bc0-47e8-891b-df0c7199b175",
+		"version": [
+			1,
+			0,
+			0
+		]
+	},
+	"modules": [
+		{
+			"type": "data",
+			"uuid": "b290d166-b7c6-4d1a-b6c2-c3ad1f219468",
+			"version": [
+				1,
+				0,
+				0
+			]
+		},
+		{
+			"type": "script",
+			"uuid": "6040069f-9646-4fff-8b35-eb9cb48311bb",
+			"entry": "scripts/main.js",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"module_name": "@minecraft/server",
+			"version": "1.11.0"
+		},
+		{
+			"module_name": "@minecraft/server-ui",
+			"version": "1.1.0"
+		}
+
+	]
+}

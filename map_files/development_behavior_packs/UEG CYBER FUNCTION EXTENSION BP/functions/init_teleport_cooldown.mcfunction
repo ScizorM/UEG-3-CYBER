@@ -1,0 +1,1 @@
+scoreboard players set @s teleport_cooldown_new 10

@@ -1,0 +1,136 @@
+//bridge-file-version: #10
+{
+	"format_version": "1.13.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "sm:arena_display",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"components": {
+			"minecraft:damage_sensor": {
+				"triggers": {
+					"cause": "all",
+					"deals_damage": false
+				}
+			},
+			"minecraft:type_family": {
+				"family": [
+					"npc",
+					"mob"
+				]
+			},
+			"minecraft:fire_immune": true,
+			"minecraft:movement": {
+				"value": 0.5
+			},
+			"minecraft:loot": {
+				"table": "loot_tables/empty.json"
+			},
+			"minecraft:collision_box": {
+				"width": 0.6,
+				"height": 1.25
+			},
+			"minecraft:persistent": {},
+			"minecraft:nameable": {
+				"always_show": false,
+				"allow_name_tag_renaming": true
+			},
+			"minecraft:physics": {},
+			"minecraft:conditional_bandwidth_optimization": {}
+		},
+		"component_groups": {
+			"skin_variant": {
+				"minecraft:variant": {
+					"value": 1
+				}
+			},
+			"no_variant": {
+				"minecraft:variant": {
+					"value": 0
+				}
+			},
+			"effect_variant": {
+				"minecraft:variant": {
+					"value": 2
+				}
+			},
+			"loadout_variant": {
+				"minecraft:variant": {
+					"value": 3
+				}
+			},
+			"weapon_variant": {
+				"minecraft:variant": {
+					"value": 4
+				}
+			}
+		},
+		"events": {
+			"sm:add_variant": {
+				"add": {
+					"component_groups": [
+						"skin_variant"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"no_variant"
+					]
+				}
+			},
+			"sm:remove_variant": {
+				"remove": {
+					"component_groups": [
+						"skin_variant",
+						"effect_variant",
+						"weapon_variant",
+						"loadout_variant"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"no_variant"
+					]
+				}
+			},
+			"sm:effect_variant": {
+				"add": {
+					"component_groups": [
+						"effect_variant"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"no_variant"
+					]
+				}
+			},
+			"sm:weapon_variant": {
+				"add": {
+					"component_groups": [
+						"weapon_variant"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"no_variant"
+					]
+				}
+			},
+			"sm:loadout_variant": {
+				"add": {
+					"component_groups": [
+						"loadout_variant"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"no_variant"
+					]
+				}
+			}
+		}
+	}
+}

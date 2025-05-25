@@ -1,0 +1,1 @@
+particle sm:loadout_one ~ ~3 ~

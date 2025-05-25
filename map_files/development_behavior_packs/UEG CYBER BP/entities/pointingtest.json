@@ -1,0 +1,26 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.16.100",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "sm:pointingtest",
+			"is_summonable": true,
+			"is_spawnable": true
+		},
+		"component_groups": {},
+		"components": {
+			"minecraft:physics": {
+				"has_collision": false,
+				"has_gravity": false
+			},
+			"minecraft:projectile": {
+				"gravity": 0
+			},
+			"minecraft:collision_box": {
+				"width": 0,
+				"height": 0
+			}
+		},
+		"events": {}
+	}
+}

@@ -1,0 +1,19 @@
+//bridge-file-version: #5
+{
+	"format_version": "1.21.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "sm:left"
+		},
+		"components": {
+			"minecraft:icon": "sm:left",
+			"minecraft:display_name": {
+				"value": "[Unused Item] Cycle Selection Left"
+			},
+			"minecraft:cooldown": {
+				"category": "menuChanger",
+				"duration": 0.3
+			}
+		}
+	}
+}

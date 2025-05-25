@@ -1,0 +1,51 @@
+//bridge-file-version: #10
+{
+	"format_version": "1.13.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "sm:scizorm_jm",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"components": {
+			"minecraft:damage_sensor": {
+				"triggers": {
+					"cause": "all",
+					"deals_damage": false
+				}
+			},
+			"minecraft:type_family": {
+				"family": [
+					"npc",
+					"mob"
+				]
+			},
+			"minecraft:fire_immune": true,
+			"minecraft:movement": {
+				"value": 0.5
+			},
+			"minecraft:loot": {
+				"table": "loot_tables/empty.json"
+			},
+			"minecraft:collision_box": {
+				"width": 0.6,
+				"height": 1.6
+			},
+			"minecraft:behavior.look_at_player": {
+				"priority": 0,
+				"look_distance": 6,
+				"probability": 0.02
+			},
+			"minecraft:persistent": {},
+			"minecraft:nameable": {
+				"always_show": false,
+				"allow_name_tag_renaming": true
+			},
+			"minecraft:physics": {},
+			"minecraft:conditional_bandwidth_optimization": {}
+		},
+		"component_groups": {},
+		"events": {}
+	}
+}

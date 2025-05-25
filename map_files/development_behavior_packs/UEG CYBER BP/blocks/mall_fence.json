@@ -1,0 +1,18 @@
+{
+	"format_version": "1.19.40",
+	"minecraft:block": {
+		"description": {
+			"identifier": "sm:mall_fence"
+		},
+		"components": {
+			"minecraft:geometry": "geometry.mall_fence",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "sm:mall_fence",
+					"render_method": "blend",
+					"ambient_occlusion": true
+				}
+			}
+		}
+	}
+}

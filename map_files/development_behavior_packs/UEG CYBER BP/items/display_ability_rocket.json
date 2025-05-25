@@ -1,0 +1,19 @@
+//bridge-file-version: #6
+{
+	"format_version": "1.21.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "sm:display_ability_rocket"
+		},
+		"components": {
+			"minecraft:hand_equipped": true,
+			"minecraft:display_name": {
+				"value": "DISPLAY - Selected Ability: Rocket Jump"
+			},
+			"minecraft:icon": "sm:ability_rocket",
+			"minecraft:wearable": {
+				"slot": "slot.armor.legs"
+			}
+		}
+	}
+}

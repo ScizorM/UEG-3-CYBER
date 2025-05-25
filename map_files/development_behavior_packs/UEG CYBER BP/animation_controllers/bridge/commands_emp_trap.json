@@ -1,0 +1,41 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.bridge_emp_trap.execute_commands": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"execute_command_id_2": "query.skin_id == 2"
+						},
+						{
+							"execute_command_id_1": "query.skin_id == 1"
+						}
+					]
+				},
+				"execute_command_id_1": {
+					"transitions": [
+						{
+							"default": "query.skin_id != 1"
+						}
+					],
+					"on_entry": [
+						"/tag @s add team_nu",
+						"@s bridge:remove_command_id_1"
+					]
+				},
+				"execute_command_id_2": {
+					"transitions": [
+						{
+							"default": "query.skin_id != 2"
+						}
+					],
+					"on_entry": [
+						"/execute @s ~ ~.80 ~ /function emp",
+						"@s bridge:remove_command_id_2"
+					]
+				}
+			}
+		}
+	}
+}

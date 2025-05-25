@@ -1,0 +1,21 @@
+//bridge-file-version: #17
+{
+	"format_version": "1.21.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "sm:loadout_rifle"
+		},
+		"components": {
+			"minecraft:icon": "sm:charged_bolt_rifle",
+			"minecraft:hand_equipped": true,
+			"minecraft:display_name": {
+				"value": "§cPlaceholder §fCharged Bolt Rifle\n\n§9 Fires a high-power explosive charge"
+			},
+			"minecraft:cooldown": {
+				"category": "rifle",
+				"duration": 5
+			},
+			"minecraft:max_stack_size": 1
+		}
+	}
+}

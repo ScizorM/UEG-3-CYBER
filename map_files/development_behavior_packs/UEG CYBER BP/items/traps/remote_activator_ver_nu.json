@@ -1,0 +1,23 @@
+//bridge-file-version: #10
+{
+	"format_version": "1.21.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "sm:remote_activator_ver_nu"
+		},
+		"components": {
+			"minecraft:display_name": {
+				"value": "§fRemote Activator Ver Nu\n\n§9 Triggers all mines on your team"
+			},
+			"minecraft:max_stack_size": 1,
+			"minecraft:cooldown": {
+				"category": "remote",
+				"duration": 3
+			},
+			"minecraft:icon": "sm:remote_explosive",
+			"minecraft:custom_components": [
+				"sm:rnu"
+			]
+		}
+	}
+}

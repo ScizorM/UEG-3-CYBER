@@ -1,0 +1,30 @@
+//bridge-file-version: #19
+{
+	"format_version": "1.21.10",
+	"minecraft:block": {
+		"description": {
+			"identifier": "sm:slabtest"
+		},
+		"components": {
+			"minecraft:collision_box": {
+				"origin": [
+					0,
+					0,
+					0
+				],
+				"size": [
+					8,
+					8,
+					8
+				]
+			},
+			"minecraft:geometry": "geometry.slabtest",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "sm:slabtest",
+					"render_method": "alpha_test"
+				}
+			}
+		}
+	}
+}

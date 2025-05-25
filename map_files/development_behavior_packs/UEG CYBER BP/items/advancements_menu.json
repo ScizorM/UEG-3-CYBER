@@ -1,0 +1,22 @@
+//bridge-file-version: #10
+{
+	"format_version": "1.21.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "sm:advancements_menu"
+		},
+		"components": {
+			"minecraft:cooldown": {
+				"category": "st",
+				"duration": 1
+			},
+			"minecraft:icon": "sm:advancements_menu",
+			"minecraft:display_name": {
+				"value": "Advancements Menu"
+			},
+			"minecraft:custom_components": [
+				"sm:advancements_menu"
+			]
+		}
+	}
+}

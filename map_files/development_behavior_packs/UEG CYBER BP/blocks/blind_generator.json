@@ -1,0 +1,39 @@
+//bridge-file-version: #12
+{
+	"format_version": "1.21.10",
+	"minecraft:block": {
+		"description": {
+			"identifier": "sm:blind_generator"
+		},
+		"components": {
+			"minecraft:geometry": "geometry.fall_generator",
+			"minecraft:destructible_by_mining": false,
+			"minecraft:destructible_by_explosion": false,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "sm:fall_generator",
+					"face_dimming": false,
+					"ambient_occlusion": true,
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:custom_components": [
+				"sm:blind_generator"
+			],
+			"minecraft:collision_box": {
+				"size": [
+					0,
+					0,
+					0
+				]
+			},
+			"minecraft:tick": {
+				"looping": true,
+				"interval_range": [
+					3,
+					3
+				]
+			}
+		}
+	}
+}

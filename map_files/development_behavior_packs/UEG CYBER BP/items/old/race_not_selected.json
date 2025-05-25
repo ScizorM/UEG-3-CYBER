@@ -1,0 +1,15 @@
+//bridge-file-version: #15
+{
+	"format_version": "1.21.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "sm:race_not_selected"
+		},
+		"components": {
+			"minecraft:display_name": {
+				"value": "[Unused Item] Select a race"
+			},
+			"minecraft:icon": "sm:unused_item"
+		}
+	}
+}

@@ -1,0 +1,419 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.bridge_map_preview_1.execute_commands": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"execute_command_id_29": "query.skin_id == 29"
+						},
+						{
+							"execute_command_id_28": "query.skin_id == 28"
+						},
+						{
+							"execute_command_id_27": "query.skin_id == 27"
+						},
+						{
+							"execute_command_id_26": "query.skin_id == 26"
+						},
+						{
+							"execute_command_id_25": "query.skin_id == 25"
+						},
+						{
+							"execute_command_id_24": "query.skin_id == 24"
+						},
+						{
+							"execute_command_id_23": "query.skin_id == 23"
+						},
+						{
+							"execute_command_id_22": "query.skin_id == 22"
+						},
+						{
+							"execute_command_id_21": "query.skin_id == 21"
+						},
+						{
+							"execute_command_id_20": "query.skin_id == 20"
+						},
+						{
+							"execute_command_id_19": "query.skin_id == 19"
+						},
+						{
+							"execute_command_id_18": "query.skin_id == 18"
+						},
+						{
+							"execute_command_id_17": "query.skin_id == 17"
+						},
+						{
+							"execute_command_id_16": "query.skin_id == 16"
+						},
+						{
+							"execute_command_id_2": "query.skin_id == 2"
+						},
+						{
+							"execute_command_id_15": "query.skin_id == 15"
+						},
+						{
+							"execute_command_id_13": "query.skin_id == 13"
+						},
+						{
+							"execute_command_id_14": "query.skin_id == 14"
+						},
+						{
+							"execute_command_id_3": "query.skin_id == 3"
+						},
+						{
+							"execute_command_id_12": "query.skin_id == 12"
+						},
+						{
+							"execute_command_id_11": "query.skin_id == 11"
+						},
+						{
+							"execute_command_id_9": "query.skin_id == 9"
+						},
+						{
+							"execute_command_id_10": "query.skin_id == 10"
+						},
+						{
+							"execute_command_id_7": "query.skin_id == 7"
+						},
+						{
+							"execute_command_id_8": "query.skin_id == 8"
+						},
+						{
+							"execute_command_id_4": "query.skin_id == 4"
+						},
+						{
+							"execute_command_id_6": "query.skin_id == 6"
+						},
+						{
+							"execute_command_id_5": "query.skin_id == 5"
+						},
+						{
+							"execute_command_id_1": "query.skin_id == 1"
+						}
+					]
+				},
+				"execute_command_id_1": {
+					"transitions": [
+						{
+							"default": "query.skin_id != 1"
+						}
+					],
+					"on_entry": [
+						"/event entity @s sm:remove_all",
+						"@s bridge:remove_command_id_15"
+					]
+				},
+				"execute_command_id_5": {
+					"transitions": [
+						{
+							"default": "query.skin_id != 5"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s random_arena_1 3",
+						"@s bridge:remove_command_id_15"
+					]
+				},
+				"execute_command_id_6": {
+					"transitions": [
+						{
+							"default": "query.skin_id != 6"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s random_arena_1 4",
+						"@s bridge:remove_command_id_15"
+					]
+				},
+				"execute_command_id_4": {
+					"transitions": [
+						{
+							"default": "query.skin_id != 4"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s random_arena_1 2",
+						"@s bridge:remove_command_id_15"
+					]
+				},
+				"execute_command_id_8": {
+					"transitions": [
+						{
+							"default": "query.skin_id != 8"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s random_arena_1 6",
+						"@s bridge:remove_command_id_15"
+					]
+				},
+				"execute_command_id_7": {
+					"transitions": [
+						{
+							"default": "query.skin_id != 7"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s random_arena_1 5",
+						"@s bridge:remove_command_id_15"
+					]
+				},
+				"execute_command_id_10": {
+					"transitions": [
+						{
+							"default": "query.skin_id != 10"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s random_arena_1 8",
+						"@s bridge:remove_command_id_15"
+					]
+				},
+				"execute_command_id_9": {
+					"transitions": [
+						{
+							"default": "query.skin_id != 9"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s random_arena_1 7",
+						"@s bridge:remove_command_id_15"
+					]
+				},
+				"execute_command_id_11": {
+					"transitions": [
+						{
+							"default": "query.skin_id != 11"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s random_arena_1 9",
+						"@s bridge:remove_command_id_15"
+					]
+				},
+				"execute_command_id_12": {
+					"transitions": [
+						{
+							"default": "query.skin_id != 12"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s random_arena_1 10",
+						"@s bridge:remove_command_id_15"
+					]
+				},
+				"execute_command_id_3": {
+					"transitions": [
+						{
+							"default": "query.skin_id != 3"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s random_arena_1 1",
+						"@s bridge:remove_command_id_15"
+					]
+				},
+				"execute_command_id_14": {
+					"transitions": [
+						{
+							"default": "query.skin_id != 14"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s random_arena_1 12",
+						"@s bridge:remove_command_id_15"
+					]
+				},
+				"execute_command_id_13": {
+					"transitions": [
+						{
+							"default": "query.skin_id != 13"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s random_arena_1 11",
+						"@s bridge:remove_command_id_15"
+					]
+				},
+				"execute_command_id_15": {
+					"transitions": [
+						{
+							"default": "query.skin_id != 15"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s random_arena_1 13",
+						"@s bridge:remove_command_id_15"
+					]
+				},
+				"execute_command_id_2": {
+					"transitions": [
+						{
+							"default": "query.skin_id != 2"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s random_arena_1 0",
+						"@s bridge:remove_command_id_15"
+					]
+				},
+				"execute_command_id_16": {
+					"transitions": [
+						{
+							"default": "query.skin_id != 16"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set integer random_arena_1 3",
+						"@s bridge:remove_command_id_16"
+					]
+				},
+				"execute_command_id_17": {
+					"transitions": [
+						{
+							"default": "query.skin_id != 17"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set integer random_arena_1 4",
+						"@s bridge:remove_command_id_17"
+					]
+				},
+				"execute_command_id_18": {
+					"transitions": [
+						{
+							"default": "query.skin_id != 18"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set integer random_arena_1 5",
+						"@s bridge:remove_command_id_18"
+					]
+				},
+				"execute_command_id_19": {
+					"transitions": [
+						{
+							"default": "query.skin_id != 19"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set integer random_arena_1 6",
+						"@s bridge:remove_command_id_19"
+					]
+				},
+				"execute_command_id_20": {
+					"transitions": [
+						{
+							"default": "query.skin_id != 20"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set integer random_arena_1 7",
+						"@s bridge:remove_command_id_20"
+					]
+				},
+				"execute_command_id_21": {
+					"transitions": [
+						{
+							"default": "query.skin_id != 21"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set integer random_arena_1 8",
+						"@s bridge:remove_command_id_21"
+					]
+				},
+				"execute_command_id_22": {
+					"transitions": [
+						{
+							"default": "query.skin_id != 22"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set integer random_arena_1 9",
+						"@s bridge:remove_command_id_22"
+					]
+				},
+				"execute_command_id_23": {
+					"transitions": [
+						{
+							"default": "query.skin_id != 23"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set integer random_arena_1 10",
+						"@s bridge:remove_command_id_23"
+					]
+				},
+				"execute_command_id_24": {
+					"transitions": [
+						{
+							"default": "query.skin_id != 24"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set integer random_arena_1 11",
+						"@s bridge:remove_command_id_24"
+					]
+				},
+				"execute_command_id_25": {
+					"transitions": [
+						{
+							"default": "query.skin_id != 25"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set integer random_arena_1 12",
+						"@s bridge:remove_command_id_25"
+					]
+				},
+				"execute_command_id_26": {
+					"transitions": [
+						{
+							"default": "query.skin_id != 26"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set integer random_arena_1 13",
+						"@s bridge:remove_command_id_26"
+					]
+				},
+				"execute_command_id_27": {
+					"transitions": [
+						{
+							"default": "query.skin_id != 27"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set integer random_arena_1 2",
+						"@s bridge:remove_command_id_27"
+					]
+				},
+				"execute_command_id_28": {
+					"transitions": [
+						{
+							"default": "query.skin_id != 28"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set integer random_arena_1 1",
+						"@s bridge:remove_command_id_28"
+					]
+				},
+				"execute_command_id_29": {
+					"transitions": [
+						{
+							"default": "query.skin_id != 29"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set integer random_arena_1 0",
+						"@s bridge:remove_command_id_29"
+					]
+				}
+			}
+		}
+	}
+}

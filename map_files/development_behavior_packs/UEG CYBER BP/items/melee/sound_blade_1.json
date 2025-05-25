@@ -1,0 +1,24 @@
+//bridge-file-version: #11
+{
+	"format_version": "1.21.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "sm:sound_blade_1"
+		},
+		"components": {
+			"minecraft:display_name": {
+				"value": "[Unused Item] §fSound Blade -Freq.-\n"
+			},
+			"minecraft:icon": "sm:unused_item",
+			"minecraft:hand_equipped": true,
+			"minecraft:cooldown": {
+				"duration": 25,
+				"category": "block"
+			},
+			"minecraft:enchantable": {
+				"slot": "sword",
+				"value": 1
+			}
+		}
+	}
+}

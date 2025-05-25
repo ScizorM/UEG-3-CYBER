@@ -1,0 +1,19 @@
+//bridge-file-version: #6
+{
+	"format_version": "1.21.10",
+	"minecraft:block": {
+		"description": {
+			"identifier": "sm:fabricated_block_static"
+		},
+		"components": {
+			"minecraft:material_instances": {
+				"*": {
+					"face_dimming": false,
+					"render_method": "blend",
+					"ambient_occlusion": true,
+					"texture": "sm:fabricated_block_static"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,22 @@
+//bridge-file-version: #10
+{
+	"format_version": "1.21.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "sm:loadout_1_custom"
+		},
+		"components": {
+			"minecraft:cooldown": {
+				"category": "select_lo",
+				"duration": 1
+			},
+			"minecraft:icon": "sm:loadout_custom",
+			"minecraft:display_name": {
+				"value": "Loadout 1: Custom"
+			},
+			"minecraft:custom_components": [
+				"sm:loadout_1"
+			]
+		}
+	}
+}

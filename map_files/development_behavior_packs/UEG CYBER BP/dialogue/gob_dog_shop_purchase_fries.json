@@ -1,0 +1,70 @@
+//bridge-file-version: #44
+{
+	"format_version": "1.17.40",
+	"minecraft:npc_dialogue": {
+		"scenes": [
+			{
+				"scene_tag": "gob_dog_shop_purchase_fries",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "Gob Dog Salesman"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"translate": "Gob Fries - Doubles  upon winning a game at the cost of slowness and a few strange, lingering effects throughout the period the food is active"
+						},
+						{
+							"translate": "\n\nBoost Period: 15 Minutes"
+						},
+						{
+							"translate": "\n\nWould you like to buy this item?"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "§0Purchase 1"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator[scores={credits=!1..}] ~ ~ ~ execute @s ~ ~ ~ function not_enough_money_gob_shop",
+							"/execute @initiator[scores={credits=1..}] ~ ~ ~ execute @s ~ ~ ~ function buy_gob_fries"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "§3Go Back"
+								}
+							]
+						},
+						"commands": [
+							"/dialogue open @s @initiator gob_dog_shop_intro"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "§4Exit"
+								}
+							]
+						},
+						"commands": [
+							"/event entity @s sm:despawn"
+						]
+					}
+				]
+			}
+		]
+	}
+}

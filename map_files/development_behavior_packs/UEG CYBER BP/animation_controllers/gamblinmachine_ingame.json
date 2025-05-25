@@ -1,0 +1,29 @@
+//bridge-file-version: #15
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.gamblinmachine_ingame": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"tagAdd": "query.variant == 1"
+						}
+					]
+				},
+				"tagAdd": {
+					"on_entry": [
+						"/function gamblinmachine_check",
+						"@s sm:removeTag"
+					],
+					"transitions": [
+						{
+							"default": "query.variant != 1"
+						}
+					]
+				}
+			}
+		}
+	}
+}

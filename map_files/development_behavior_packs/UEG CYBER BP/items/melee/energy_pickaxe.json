@@ -1,0 +1,20 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.21.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "sm:energy_pickaxe"
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:display_name": {
+				"value": "§fDestruction Unit V3\n"
+			},
+			"minecraft:hand_equipped": true,
+			"minecraft:icon": "sm:energy_pickaxe",
+			"minecraft:custom_components": [
+				"sm:destruction_unit"
+			]
+		}
+	}
+}

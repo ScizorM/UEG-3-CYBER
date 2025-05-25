@@ -1,0 +1,27 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.21.10",
+	"minecraft:block": {
+		"description": {
+			"identifier": "sm:speedline_block_l"
+		},
+		"components": {
+			"minecraft:light_emission": 2,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "sm:speedline_block_l",
+					"face_dimming": false,
+					"render_method": "blend",
+					"ambient_occlusion": false
+				}
+			},
+			"minecraft:collision_box": {
+				"size": [
+					0,
+					0,
+					0
+				]
+			}
+		}
+	}
+}

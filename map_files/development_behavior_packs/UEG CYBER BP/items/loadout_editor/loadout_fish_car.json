@@ -1,0 +1,16 @@
+//bridge-file-version: #12
+{
+	"format_version": "1.21.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "sm:loadout_fish_car"
+		},
+		"components": {
+			"minecraft:display_name": {
+				"value": "§cPlaceholder §fFish Car\n\n§9 Launches you forwards at immense speed with destructive power"
+			},
+			"minecraft:icon": "sm:dev_item",
+			"minecraft:hand_equipped": true
+		}
+	}
+}

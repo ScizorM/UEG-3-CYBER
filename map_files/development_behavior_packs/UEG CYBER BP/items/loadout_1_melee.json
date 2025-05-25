@@ -1,0 +1,22 @@
+//bridge-file-version: #16
+{
+	"format_version": "1.21.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "sm:loadout_1_melee"
+		},
+		"components": {
+			"minecraft:cooldown": {
+				"category": "select_lo",
+				"duration": 1
+			},
+			"minecraft:icon": "sm:loadout_melee",
+			"minecraft:display_name": {
+				"value": "Loadout 1: Melee"
+			},
+			"minecraft:custom_components": [
+				"sm:loadout_1"
+			]
+		}
+	}
+}

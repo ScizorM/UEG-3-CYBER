@@ -1,0 +1,15 @@
+//bridge-file-version: #7
+{
+	"format_version": "1.21.10",
+	"minecraft:block": {
+		"description": {
+			"identifier": "sm:indicator_0"
+		},
+		"components": {
+			"minecraft:destructible_by_explosion": false,
+			"minecraft:destructible_by_mining": false,
+			"minecraft:light_emission": 0.2,
+			"minecraft:display_name": "training_block"
+		}
+	}
+}

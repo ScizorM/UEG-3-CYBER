@@ -1,0 +1,14 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.21.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "sm:skip_tutorial"
+		},
+		"components": {
+			"minecraft:display_name": {
+				"value": "[unused item] skip tutorial item"
+			}
+		}
+	}
+}

@@ -1,0 +1,20 @@
+//bridge-file-version: #5
+{
+	"format_version": "1.21.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "sm:thruster_status_3"
+		},
+		"components": {
+			"minecraft:display_name": {
+				"value": "Advanced Movement Component (3)"
+			},
+			"minecraft:icon": "sm:dash_component",
+			"minecraft:wearable": {
+				"dispensable": false,
+				"protection": 6,
+				"slot": "slot.armor.chest"
+			}
+		}
+	}
+}

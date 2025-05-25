@@ -1,0 +1,39 @@
+//bridge-file-version: #7
+{
+	"format_version": "1.21.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "sm:kusarigama"
+		},
+		"components": {
+			"minecraft:cooldown": {
+				"category": "kusarigama",
+				"duration": 1
+			},
+			"minecraft:display_name": {
+				"value": "Kusarigama\n/"
+			},
+			"minecraft:icon": "sm:kusarigama",
+			"minecraft:custom_components": [
+				"sm:kusarigama"
+			],
+			"minecraft:hand_equipped": true,
+			"minecraft:render_offsets": {
+				"main_hand": {
+					"third_person": {
+						"scale": [
+							0,
+							0,
+							0
+						],
+						"position": [
+							0,
+							0,
+							0
+						]
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,19 @@
+//bridge-file-version: #6
+{
+	"format_version": "1.21.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "sm:heavy_weapons_system"
+		},
+		"components": {
+			"minecraft:wearable": {
+				"slot": "slot.armor.feet",
+				"protection": 0
+			},
+			"minecraft:display_name": {
+				"value": "Selected Rockets: HWS"
+			},
+			"minecraft:icon": "sm:thruster_cosmetic"
+		}
+	}
+}

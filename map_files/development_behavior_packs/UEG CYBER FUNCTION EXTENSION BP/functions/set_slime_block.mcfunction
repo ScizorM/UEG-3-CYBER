@@ -1,0 +1,2 @@
+#bridge-file-version: #0
+execute as @s unless block ~ ~ ~ air run execute as @s unless block ~ ~ ~ bedrock run execute as @s unless block ~ ~ ~ barrier run execute as @s unless block ~ ~ ~ deny run execute as @s unless block ~ ~ ~ allow positioned as @s run setblock ~ ~ ~ slime
