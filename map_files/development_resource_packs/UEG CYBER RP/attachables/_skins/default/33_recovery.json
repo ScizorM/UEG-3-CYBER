@@ -1,0 +1,32 @@
+//bridge-file-version: #18
+{
+	"format_version": "1.16.100",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "sm:skin_33_recovery",
+			"materials": {
+				"default": "entity_emissive_alpha"
+			},
+			"textures": {
+				"default": "textures/entity/skins/shapeshifting_alien_other",
+				"frame_2": "textures/entity/skins/shapeshifting_alien_other",
+				"frame_3": "textures/entity/skins/shapeshifting_alien_other",
+				"frame_4": "textures/entity/skins/shapeshifting_alien_other",
+				"frame_5": "textures/entity/skins/shapeshifting_alien_other",
+				"frame_6": "textures/entity/skins/shapeshifting_alien_other",
+				"frame_7": "textures/entity/skins/shapeshifting_alien_other",
+				"frame_8": "textures/entity/skins/shapeshifting_alien_other",
+				"dash1": "textures/entity/skins/shapeshifting_alien_other",
+				"dash2": "textures/entity/skins/shapeshifting_alien_other",
+				"dash3": "textures/entity/skins/shapeshifting_alien_other",
+				"dash4": "textures/entity/skins/shapeshifting_alien_other"
+			},
+			"geometry": {
+				"default": "geometry.shapeshifting_alien_other"
+			},
+			"render_controllers": [
+				"controller.render.skin_animations"
+			]
+		}
+	}
+}

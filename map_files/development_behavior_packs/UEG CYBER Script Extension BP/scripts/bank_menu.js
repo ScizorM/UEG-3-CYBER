@@ -145,7 +145,7 @@ function transferFunds(player) {
                         var allPlayersNew = world.getAllPlayers().filter(plr => player.name != plr.name).map(player => player.name)
                         if (allPlayersNew.includes(allPlayers[r.formValues[0]])) {
                             world.sendMessage("§e[Money Transfer] §a" + player.name + " §asent §f" + (amountMoney).toString() + "§a to " + allPlayers[r.formValues[0]].toString())
-                            playerFunds.addScore(player, (-amountMoney-3))
+                            playerFunds.addScore(player, (-(amountMoney+3)))
 
                             player.runCommand("scoreboard players add " + allPlayers[r.formValues[0]] + " credits " + amountMoney)
                             

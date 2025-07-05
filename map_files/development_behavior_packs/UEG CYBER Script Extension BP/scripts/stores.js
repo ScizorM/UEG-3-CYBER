@@ -1,6 +1,7 @@
 ﻿import { world, ItemCooldownComponent, system, Entity } from '@minecraft/server'
 import { ActionFormData, MessageFormData, ModalFormData } from '@minecraft/server-ui'
 import { skinList, designerList, skinSet, effectSkins } from './skinList.js'
+import { uegCyberCollection } from './newArenaLoading.js'
 
 
 world.beforeEvents.itemUse.subscribe(data => {
@@ -14,14 +15,144 @@ world.beforeEvents.itemUse.subscribe(data => {
 
     if (data.itemStack.typeId === "sm:purchase") {
 
-        if (!player.hasTag("enter_ueg") && (!player.hasTag("enter_j_mikes")) && (!player.hasTag("enter_rpg") && (!player.hasTag("enter_abilitystore")) && (!player.hasTag("enter_gamblinzone")) &&  (!player.hasTag("enter_hot_topic_clone")))) {
+        if (!player.hasTag("enter_credits") && !player.hasTag("enter_ueg") && (!player.hasTag("enter_j_mikes")) && (!player.hasTag("enter_rpg") && (!player.hasTag("enter_abilitystore")) && (!player.hasTag("enter_gamblinzone")) &&  (!player.hasTag("enter_hot_topic_clone")))) {
             system.run(() => purchase(player))
         }
 
-
+        if (player.hasTag("enter_credits")) {
+            system.run(() => ArenaStoreMenu(player))
+        }
     }
 })
 
+function ArenaStoreMenu(player) {
+    var difficulties = [
+        "Easy",
+        "Normal",
+        "Hard",
+        "Abstract",
+        "12 - MW",
+        "HELL"
+    ]
+
+    var size = [
+        "Small",
+        "Medium",
+        "Large",
+        "Abstract",
+        "12 - MW",
+        "HELL"
+    ]
+    let cost = 15;
+
+    let arenaList = GetAllUnlockableArenasFromList(uegCyberCollection)
+
+    let title = "Arena Store"
+    let desc = "Every arena costs " + cost.toString() + "."
+
+    let form = new ActionFormData();
+    form.title(title);
+    form.body(desc);
+
+    arenaList.forEach(arena => {
+        form.button("§l§3" + arena.displayName + "\n§r" + difficulties[arena.difficulty] + ", " + size[arena.size],arena.filePath)
+    })
+
+    form.show(player).then(r => {
+        let selection = r.selection;
+
+        if (!r.canceled) {
+            PurchaseArena(arenaList[selection],cost,difficulties,size,player)
+        }
+    })
+}
+
+function PurchaseArena(arena, cost, difficulties, size, player) {
+
+
+    var unlockedArenasNewSB = world.scoreboard.getObjective("unlocked_arenas_new")
+
+    const currency = world.scoreboard.getObjective("credits")
+    const currencyCount = currency.getScore(player)
+
+    const gcurrency = world.scoreboard.getObjective("global_credits")
+    const gcurrencyCount = gcurrency.getScore("global_credits")
+
+    let title = "Purchase " + arena.displayName
+    let desc = "Size: " + size[arena.size] + "\n\nDifficulty: " + difficulties[arena.difficulty] + "\n\nCreator(s): " + arena.GetCreators() + "\n\nPrice: " + cost.toString() + "\nChoose a payment option:\n"
+    let form = new ActionFormData();
+    let arenaUnlocked = unlockedArenasNewSB.getScore(arena.enabledName)
+    if (arenaUnlocked == 1) {
+        desc += "\n\nYou already own this arena!"
+    }
+    form.title(title);
+    form.body(desc);
+
+    let affordPC = true;
+    let affordGC = true;
+
+    if (arenaUnlocked != 1) {
+        if (currencyCount >= cost) {
+            form.button("Use Personal Credits \n" + currencyCount + "", "textures/ui/button_currency");
+            affordPC = true;
+        }
+        else{
+            form.button("Insufficient Personal Credits!\n" + currencyCount + "", "textures/ui/button_currency");
+            affordPC = false;
+        }
+        if (gcurrencyCount >= cost) {
+            form.button("Use Global Credits \n" + gcurrencyCount + "", "textures/ui/button_global_currency");
+            affordGC = true;
+        }
+        else {
+            form.button("Insufficient Global Credits!\n" + gcurrencyCount + "", "textures/ui/button_global_currency");
+            affordGC = false;
+        }
+    }
+
+    form.button("Cancel","textures/ui/button_close")
+
+
+    form.show(player).then(r => {
+        let selection = r.selection
+
+        if (arenaUnlocked != 1) {
+
+            if (selection == 0) {
+                if (affordPC == true) {
+                    currency.addScore(player, -cost)
+                    unlockedArenasNewSB.setScore(arena.enabledName,1)
+                    world.sendMessage(`§e[Arena Unlock]§a ${arena.displayName} unlocked.`)
+                }
+                else {
+                    player.sendMessage("§e[Error]§c Insufficient .")
+                }
+            }
+            else if (selection == 1) {
+                if (affordGC == true) {
+                    gcurrency.addScore("global_credits",-cost)
+                    unlockedArenasNewSB.setScore(arena.enabledName, 1)
+                    world.sendMessage(`§e[Arena Unlock]§a ${arena.displayName} unlocked.`)
+                }
+                else {
+                    player.sendMessage("§e[Error]§c Insufficient .")
+                }
+            }
+
+        }
+    })
+}
+
+
+function GetAllUnlockableArenasFromList(uegCyberCollection) {
+    let arenaList = [];
+    uegCyberCollection.forEach(arena => {
+        if (!arena.isDefault) {
+            arenaList.push(arena)
+        }
+    })
+    return arenaList
+}
 
 function purchase(player) {
 

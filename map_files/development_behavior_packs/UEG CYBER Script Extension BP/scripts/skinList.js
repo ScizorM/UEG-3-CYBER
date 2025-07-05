@@ -16,9 +16,9 @@ const skinList = new Array(
     "Red Oni", // 06
     "Conduit", // 07
     "The Regulator", // 08
-    "09 - Unfinished", // 09
+    "Violet Machine", // 09
     "Finite", // 10
-    "11 - Unfinished", // 11
+    "Dark Frame", // 11
     "12 - Unfinished", // 12
     // Hidden Valley ////////////////////////
     "Mirage", // 13################################
@@ -46,12 +46,12 @@ const skinList = new Array(
     "The Fallen", // 30
     // Intergalactic ////////////////////////
     "Devorans Spatium", // 31
-    "32 - Unfinished", // 32
+    "Sol Invictus", // 32
     "33 - Unfinished", // 33
     // Wonderland ////////////////////////
     "Gummy Contraption", // 34
     "Ringmaster", // 35
-    "Monarch of Hearts", // 36
+    "Monarch of Hearts", // 36
     // Auric ////////////////////////
     "Golden Striker", // 37
     "38 - Unfinished", // 38
@@ -117,10 +117,13 @@ const effectSkins = new Array(
     4,
     7,
     8,
+    9,
     10,
+    11,
     28,
     30,
     35,
+    36,
     59,
     61,
     63,
@@ -152,9 +155,9 @@ const skinItemIds = new Array(
     "sm:skin_6", // 06
     "sm:skin_7", // 07
     "sm:skin_8", // 08
-    incoSk, // 09
+    "sm:skin_9", // 09
     "sm:skin_10", // 10
-    incoSk, // 11
+    "sm:skin_11", // 11
     incoSk, // 12
     // Hidden Valley ////////////////////////
     incoSk, // 13
@@ -182,12 +185,12 @@ const skinItemIds = new Array(
     "sm:skin_30", // 30
     // Intergalactic ////////////////////////
     "sm:skin_31", // 31
-    incoSk, // 32
+    "sm:skin_32", // 32
     incoSk, // 33
     // Wonderland ////////////////////////
     "sm:skin_34", // 34
     "sm:skin_35", // 35
-    incoSk, // 36
+    "sm:skin_36", // 36
     // Auric ////////////////////////
     "sm:skin_37", // 37
     incoSk, // 38
@@ -259,9 +262,9 @@ const skinIconLoc = new Array(
     "textures/ui/skin_icons/skin_6", // 06
     "textures/ui/skin_icons/skin_7", // 07
     "textures/ui/skin_icons/skin_8", // 08
-    "textures/ui/skin_categories/button", // 09
+    "textures/ui/skin_icons/skin_9", // 09
     "textures/ui/skin_icons/skin_10", // 10
-    "textures/ui/skin_categories/button", // 11
+    "textures/ui/skin_icons/skin_11", // 11
     "textures/ui/skin_categories/button", // 12
     // Hidden Valley ////////////////////////
     "textures/ui/skin_categories/button", // 13
@@ -289,12 +292,12 @@ const skinIconLoc = new Array(
     "textures/ui/skin_icons/skin_30", // 30
     // Intergalactic ////////////////////////
     "textures/ui/skin_icons/skin_31", // 31
-    "textures/ui/skin_categories/button", // 32
+    "textures/ui/skin_icons/skin_32", // 32
     "textures/ui/skin_categories/button", // 33
     // Wonderland ////////////////////////
     "textures/ui/skin_icons/skin_34", // 34
     "textures/ui/skin_icons/skin_35", // 35
-    "textures/ui/skin_categories/button", // 36
+    "textures/ui/skin_icons/skin_36", // 36
     // Auric ////////////////////////
     "textures/ui/skin_icons/skin_37", // 37
     "textures/ui/skin_categories/button", // 38
@@ -366,9 +369,9 @@ const designerList = new Array(
     "AubreyThePebble", // 06
     "ScizorM", // 07
     "ScizorM", // 08
-    "09 - Unfinished", // 09
+    "evel", // 09
     "ScizorM", // 10
-    "11 - Unfinished", // 11
+    "ScizorM", // 11
     "12 - Unfinished", // 12
     // Hidden Valley ////////////////////////
     "ScizorM", // 13
@@ -396,12 +399,12 @@ const designerList = new Array(
     "evel", // 30
     // Intergalactic ////////////////////////
     "evel", // 31
-    "32 - Unfinished", // 32
+    "evel", // 32
     "33 - Unfinished", // 33
     // Wonderland ////////////////////////
     "AubreyThePebble", // 34
     "evel", // 35
-    "36 - Unfinished", // 36
+    "evel", // 36
     // Auric ////////////////////////
     "AubreyThePebble, ScizorM", // 37
     "38 - Unfinished", // 38

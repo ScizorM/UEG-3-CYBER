@@ -1,4 +1,4 @@
-﻿export { weaponIDList, ingameWeaponIDList, ingameWeaponNames, loadoutTypeIDs, loadoutTypeIDLocs, loadoutIcons, loadoutNames,abilityList, abilityIconList, abilityFunctionList, abilitySBList }
+﻿export { weaponIDList, ingameWeaponIDList, ingameWeaponNames, loadoutTypeIDs, loadoutTypeIDLocs, loadoutIcons, loadoutNames,abilityList, abilityIconList, abilityFunctionList, abilitySBList, weaponTypes }
 
 const abilityList = new Array(
     "Rocket Jump",
@@ -215,3 +215,49 @@ const loadoutNames = new Array(
     "Foods"
 
 )
+
+//note to future self: create variables that contain the names of every item so I can globally change them in the future
+const weaponTypes = {
+    melee: [
+        "sm:repulsion_blade",
+        "sm:energy_pickaxe",
+        "sm:mb85_greatsword",
+        "sm:true_holic",
+        "sm:parry_fist",
+        "sm:kusarigama",
+        "sm:fish_car",
+        "sm:heavenpiercer"
+    ],
+    ranged: [
+        "sm:archerfish",
+        "sm:deep_striker",
+        "sm:mb85_crimson_hws",
+        "sm:gilded_marksman",
+        "sm:icarus",
+        "sm:green_gobbler_cannon",
+        "sm:sc-quant-e",
+        "sm:gob_goo_cannon",
+        "minecraft:bow",
+        "minecraft:crossbow",
+        "sm:vulcan_cannon",
+        "sm:charged_bolt_rifle"
+    ], utils: [
+        "sm:salmon_bomb",
+        "sm:implosion_grenade",
+        "sm:heirloom",
+        "sm:use_stored_item",
+        "sm:smorgler",
+        "sm:big_joe_weapon",
+        "sm:emp_drive",
+        "sm:antigravity_prism",
+        "sm:baby_stick",
+        "sm:platform_fabricator",
+        "sm:block_fabricator"
+    ], traps: [
+        "sm:scaler_bomb",
+        "sm:landmine_ver_nu",
+        "sm:landmine_ver_lambda",
+        "sm:remote_activator_ver_nu",
+        "sm:remote_activator_ver_lambda"
+    ]
+} //Since I have nothing designed for secret items, I just attach them to the type they are most like

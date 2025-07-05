@@ -2,6 +2,16 @@
 import { ActionFormData, MessageFormData, ModalFormData } from '@minecraft/server-ui'
 export {clsM, bacM }
 //
+
+/* PLEASE NOTE!!!!!!
+
+I DO NOT USE THIS SCRIPT ANYMORE!!!
+
+I AM LEAVING THIS HERE AS AN EXAMPLE OF WHAT **NOT** TO DO WHEN SCRIPTING!!!
+
+-ScizorM, 6/3/2025
+
+*/
 //
 //COLOR CODES
 //

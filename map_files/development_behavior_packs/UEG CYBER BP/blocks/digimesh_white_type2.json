@@ -16,7 +16,8 @@
 				"*": {
 					"ambient_occlusion": true,
 					"render_method": "blend",
-					"face_dimming": false
+					"face_dimming": false,
+					"texture": "sm:digimesh-white_type2"
 				}
 			},
 			"minecraft:light_emission": 0.8,

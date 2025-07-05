@@ -1,0 +1,32 @@
+//bridge-file-version: #18
+{
+	"format_version": "1.16.100",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "sm:skin_33_ranged",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/skins/shapeshifting_alien_ranged",
+				"frame_2": "textures/entity/skins/shapeshifting_alien_ranged",
+				"frame_3": "textures/entity/skins/shapeshifting_alien_ranged",
+				"frame_4": "textures/entity/skins/shapeshifting_alien_ranged",
+				"frame_5": "textures/entity/skins/shapeshifting_alien_ranged",
+				"frame_6": "textures/entity/skins/shapeshifting_alien_ranged",
+				"frame_7": "textures/entity/skins/shapeshifting_alien_ranged",
+				"frame_8": "textures/entity/skins/shapeshifting_alien_ranged",
+				"dash1": "textures/entity/skins/shapeshifting_alien_ranged",
+				"dash2": "textures/entity/skins/shapeshifting_alien_ranged",
+				"dash3": "textures/entity/skins/shapeshifting_alien_ranged",
+				"dash4": "textures/entity/skins/shapeshifting_alien_ranged"
+			},
+			"geometry": {
+				"default": "geometry.shapeshifting_alien_ranged"
+			},
+			"render_controllers": [
+				"controller.render.skin_animations"
+			]
+		}
+	}
+}

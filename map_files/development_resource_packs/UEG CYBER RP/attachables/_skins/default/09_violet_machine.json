@@ -1,0 +1,32 @@
+//bridge-file-version: #18
+{
+	"format_version": "1.16.100",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "sm:skin_9",
+			"materials": {
+				"default": "entity_emissive_alpha"
+			},
+			"textures": {
+				"default": "textures/entity/skins/violet_machine",
+				"frame_2": "textures/entity/skins/violet_machine",
+				"frame_3": "textures/entity/skins/violet_machine",
+				"frame_4": "textures/entity/skins/violet_machine",
+				"frame_5": "textures/entity/skins/violet_machine",
+				"frame_6": "textures/entity/skins/violet_machine",
+				"frame_7": "textures/entity/skins/violet_machine",
+				"frame_8": "textures/entity/skins/violet_machine",
+				"dash1": "textures/entity/skins/violet_machine_dash1",
+				"dash2": "textures/entity/skins/violet_machine_dash2",
+				"dash3": "textures/entity/skins/violet_machine_dash3",
+				"dash4": "textures/entity/skins/violet_machine"
+			},
+			"geometry": {
+				"default": "geometry.the_violet_machine"
+			},
+			"render_controllers": [
+				"controller.render.skin_animations"
+			]
+		}
+	}
+}

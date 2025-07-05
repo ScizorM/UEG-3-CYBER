@@ -1,6 +1,6 @@
 ﻿import { world, ItemCooldownComponent, system, Entity, EntityComponentTypes, StructureManager } from '@minecraft/server'
 import { ActionFormData, MessageFormData, ModalFormData } from '@minecraft/server-ui'
-
+export { uegCyberCollection }
 
 /*
 
@@ -20,6 +20,20 @@ Sizes:
 
 */
 
+function DisableArenaVote() {
+    world.scoreboard.getObjective("arena_vote_enabled").setScore("boolean",0)
+    world.sendMessage("§e[Warning] §cThe arena vote system has been disabled, there are not enough arenas to have it active. To re-enable it, enter the REACTOR Settings Store and use the the `Arena Vote` laptop.")
+}
+
+function EnableArenaVote() {
+    let enabledArenasSB = world.scoreboard.getObjective("enabled_arenas_new")
+    enabledArenasSB.setScore(ueg1Collection[0].enabledName, 1)
+    enabledArenasSB.setScore(ueg1Collection[1].enabledName, 1)
+    enabledArenasSB.setScore(ueg1Collection[2].enabledName, 1)
+    world.sendMessage("§e[Warning] §aArena Voting has been re-enabled. Just to ensure there are enough arenas for this to function correctly, Lost City, BlackWhite, and Nether have been enabled.")
+}
+
+
 world.beforeEvents.itemUse.subscribe(data => {
 
     const player = data.source
@@ -30,15 +44,22 @@ world.beforeEvents.itemUse.subscribe(data => {
     if (data.itemStack.typeId === "sm:settings" && player.hasTag("enter_splendid") == false && player.hasTag("enter_marque") == false && !player.hasTag("debug_randomize")) {
 
         system.run(() => GetArenasCount(versionCollection, 0))
-        system.run(() => GetArenasCount(versionCollection, 1))
-        system.run(() => GetArenasCount(versionCollection, 2))
-        system.run(() => GetArenasCount(versionCollection, 3))
-        system.run(() => GetArenasCount(versionCollection, 4))
-        system.run(() => GetArenasCount(versionCollection, 5))
+        //system.run(() => GetArenasCount(versionCollection, 1))
+
 
         //system.run(() => LoadArenaInterface(player))
         system.run(() => ArenaStoreMenu(player))
 
+    }
+    else if (player.hasTag("remoteArenaAccess")) {
+
+        system.run(() => GetArenasCount(versionCollection, 0))
+        //system.run(() => GetArenasCount(versionCollection, 1))
+
+
+        //system.run(() => LoadArenaInterface(player))
+        system.run(() => ArenaStoreMenu(player))
+        player.sendMessage("warning! `remoteArenaAccess` tag active")
     }
     else if (player.hasTag("arenaDebugMenu")) {
         system.run(() => DebugArenaInterface(player))
@@ -65,11 +86,11 @@ world.beforeEvents.itemUse.subscribe(data => {
         player.sendMessage("don't forget to remove the debug tag.")
 
     }
-    else if (player.hasTag("debug_loadVoted")) {
+    else if (player.hasTag("debug_loadVoted")) { //NOTE!!!! THIS LOADS THE MOST-VOTED FOR ARENA
         system.run(() => {
             SetVotedArena()
         })
-        player.sendMessage("don't forget to remove the debug tag.")
+        player.sendMessage("warning! `debug_loadVoted` tag active")
     }
 
 
@@ -96,6 +117,38 @@ system.runInterval(() => {
     if (processArenaVote > 0) {
         system.run(() => SetVotedArena())
         processArenaVoteSB.setScore("value", 0)
+    }
+
+    let arenaUnlockTrigger = world.scoreboard.getObjective("arenaUnlockTrigger")
+    let arenaUnlockValue = arenaUnlockTrigger.getScore("value")
+
+    if (arenaUnlockValue == 1) {
+        LockUnlockAllArenas(1, allArenas)
+        arenaUnlockTrigger.setScore("value", 0)
+    }
+    else if (arenaUnlockValue == 2) {
+        LockUnlockAllArenas(0, allArenas)
+        arenaUnlockTrigger.setScore("value", 0)
+    }
+    else if (arenaUnlockValue == 3) {
+        LockUnlockAllArenas(1, ueg1Collection)
+        arenaUnlockTrigger.setScore("value", 0)
+    }
+    else if (arenaUnlockValue == 4) {
+        LockUnlockAllArenas(1, uegPlusCollection)
+        arenaUnlockTrigger.setScore("value", 0)
+    }
+    else if (arenaUnlockValue == 5) {
+        LockUnlockAllArenas(1, rpg1Collection)
+        arenaUnlockTrigger.setScore("value", 0)
+    }
+    else if (arenaUnlockValue == 6) {
+        LockUnlockAllArenas(1, rpg2Collection)
+        arenaUnlockTrigger.setScore("value", 0)
+    }
+    else if (arenaUnlockValue == 7) {
+        EnableArenaVote()
+        arenaUnlockTrigger.setScore("value", 0)
     }
 })
 
@@ -316,11 +369,11 @@ var uegCyberCollection = [
 
 var uegCyberSCollection = [
     //Unlockables
-    new Arena("Mike's Way", [creator.rye], undefined, 5, 5, false, category.uegcybers, "mikes_way",false,5,0),
-    new Arena("Bananaland Bouncehouse", [creator.rye], undefined, 6, 0, false, category.uegcybers, "bananaland_bouncehou",false,5,1),
+    new Arena("Mike's Way", [creator.rye], undefined, 3, 3, false, category.uegcybers, "mikes_way",false,5,0),
+    new Arena("Bananaland Bouncehouse", [creator.rye], undefined, 3, 3, false, category.uegcybers, "bananaland",false,5,1),
     new Arena("ABS:CYBER", [creator.scizor], undefined, 3, 3, false, category.uegcybers, "abstract_cyber",true,5,2),
-    new Arena("shrek on crack", [creator.harbinger], undefined, 6, 6, false, category.uegcybers, "shrek_on",true,5,3),
-    new Arena("hog_metro_hq", [creator.unknown], undefined, 4, 4, false, category.uegcybers, "hog_metro_hq",false,5,4)
+    new Arena("shrek on crack", [creator.harbinger], undefined, 3, 3, false, category.uegcybers, "shrek_on",true,5,3),
+    new Arena("Hog Metro HQ", [creator.unknown], undefined, 3, 3, false, category.uegcybers, "hog_metro_hq",false,5,4)
 
 ]
 
@@ -340,6 +393,22 @@ function GetArenaFromID(id, category) {
     })
     return arenaReturn;
 }
+
+function CheckForUEGCYBERSUnlock() {
+    let value = 0
+    let active = false
+    uegCyberSCollection.forEach(arena => {
+        if (world.scoreboard.getObjective("unlocked_arenas_new").getScore(arena.enabledName) > 0) {
+            world.sendMessage(arena.displayName + " works")
+            value++
+        }
+    })
+    if (value > 0) {
+        active = true
+    }
+    return active
+}
+
 function ArenaStoreMenu(player) {
     var playerArenaSortSB = world.scoreboard.getObjective("player_arena_sort")
     playerArenaSortSB.addScore(player, 0)
@@ -356,10 +425,19 @@ function ArenaStoreMenu(player) {
         form.title("Arena Select");
         form.body("");
         form.button("Sort By: Series", "textures/ui/button_sort");
+        let checkForUnlock = CheckForUEGCYBERSUnlock()
         //world.sendMessage(Object.keys(category).length.toString())
-        for (var i = 0; i < (Object.keys(category).length - 1); i++) {
-            form.button(Object.values(category)[i][1], Object.values(category)[i][2]);
+        if (checkForUnlock) {
+            for (var i = 0; i < (Object.keys(category).length); i++) {
+                form.button(Object.values(category)[i][1], Object.values(category)[i][2]);
+            }
         }
+        else {
+            for (var i = 0; i < (Object.keys(category).length - 1); i++) {
+                form.button(Object.values(category)[i][1], Object.values(category)[i][2]);
+            }
+        }
+
 
         form.button("Cancel", "textures/ui/button_close");
 
@@ -388,6 +466,12 @@ function ArenaStoreMenu(player) {
                     system.run(() => ArenaMenu(player,uegCyberCollection))
                     break;
 
+            }
+
+            if (checkForUnlock) {
+                if (responseValue == 6) {
+                    system.run(() => ArenaMenu(player, uegCyberSCollection))
+                }
             }
 
             //if (responseValue == 0) {
@@ -509,44 +593,65 @@ function PreProcessArenaList(player, isDifficultyOrSize, criteria, criteria2, cr
 
             if (arena.difficulty == criteria) {
                 arenaCollection.push(arena)
+                world.sendMessage(arena.displayName)
             }
             else if (criteria2 != undefined) {
                 if (arena.difficulty == criteria2) {
                     arenaCollection.push(arena)
+                    world.sendMessage(arena.displayName)
+                }
+                else {
+                    world.sendMessage(arena.displayName + " did not meet criteria")
                 }
             }
             else if (criteria3 != undefined) {
                 if (arena.difficulty == criteria3) {
                     arenaCollection.push(arena)
+                    world.sendMessage(arena.displayName)
+                }
+                else {
+                    world.sendMessage(arena.displayName + " did not meet criteria")
                 }
             }
             else if (criteria4 != undefined) {
                 if (arena.difficulty == criteria4) {
                     arenaCollection.push(arena)
+                    world.sendMessage(arena.displayName)
+                }
+                else {
+                    world.sendMessage(arena.displayName + " did not meet criteria")
                 }
             }
+
         })
     }
     else {
         allArenas.forEach(arena => {
             if (arena.size == criteria) {
                 arenaCollection.push(arena)
+                world.sendMessage(arena.displayName)
                 //world.sendMessage(arena.displayName)
             }
             else if (criteria2 != undefined) {
                 if (arena.difficulty == criteria2) {
                     arenaCollection.push(arena)
+                    world.sendMessage(arena.displayName)
                 }
             }
             else if (criteria3 != undefined) {
                 if (arena.difficulty == criteria3) {
                     arenaCollection.push(arena)
+                    world.sendMessage(arena.displayName)
                 }
             }
             else if (criteria4 != undefined) {
                 if (arena.difficulty == criteria4) {
                     arenaCollection.push(arena)
+                    world.sendMessage(arena.displayName)
                 }
+            }
+            else {
+                world.sendMessage(arena.displayName + " did not meet criteria")
             }
         })
     }
@@ -603,7 +708,8 @@ function ArenaInfo(player, arena, arenaCategory) {
 
                 if (arenaEnabled > 0) {
                     world.sendMessage("Disabled " + arena.displayName)
-                    enabledArenasNewSB.setScore(arena.enabledName,0)
+                    enabledArenasNewSB.setScore(arena.enabledName, 0)
+                    system.run(() => GetArenasCount(versionCollection, 0))
                 }
                 else {
                     world.sendMessage("Enabled " + arena.displayName)
@@ -623,15 +729,22 @@ function ArenaInfo(player, arena, arenaCategory) {
 }
 
 function CheckEnabledCount(arenaCategory) {
+    var unlockedArenasNewSB = world.scoreboard.getObjective("unlocked_arenas_new")
     var enabledArenasNewSB = world.scoreboard.getObjective("enabled_arenas_new")
     let count = 0;
+    let total = 0;
     arenaCategory.forEach(arena => {
         var currentScore = enabledArenasNewSB.getScore(arena.enabledName)
-        if (currentScore > 0) {
-            count++;
+        if (unlockedArenasNewSB.getScore(arena.enabledName) == 1) {
+            if (currentScore > 0) {
+                count++;
+            }
+
+            total++;
         }
+
     })
-    return count;
+    return [count,total];
 }
 
 function ArenaMenu(player, arenaCategory) {
@@ -643,11 +756,15 @@ function ArenaMenu(player, arenaCategory) {
     var arenaToLoadID = arenaToLoadSB.getScore("arena_id")
     var arenaToLoadCategory = arenaToLoadSB.getScore("arena_category")
     let form = new ActionFormData();
+    let warning = ""
+    if (arenaVoteEnabledScore == 0) {
+        warning = " §cWARNING! Arena Voting is disabled, only one arena can be loaded at a time with this enabled."
+    }
     form.title("Arena Select")
     form.body("Select an arena:\n")
     let arenaCount = CheckEnabledCount(arenaCategory)
     let toggleArenasEnable = 0;
-    if (arenaCount > Math.floor(arenaCategory.length / 2)) {
+    if (arenaCount[0] > Math.floor(arenaCount[1] / 2)) {
         form.button("Mass-Toggle Arena Category", "textures/ui/button_disable_all")
         toggleArenasEnable = 0
     }
@@ -701,7 +818,13 @@ function ArenaMenu(player, arenaCategory) {
             system.run(() => MassToggleCategory(arenaCategory, toggleArenasEnable, true, player))
         }
         if (responseValue < arenaCategory.length + 1 && responseValue != 0) {
-            system.run(() => ArenaInfo(player,arenaCategory[responseValue - 1], arenaCategory))
+            if (unlockedArenasNewSB.getScore(arenaCategory[responseValue - 1].enabledName) == 1) {
+                system.run(() => ArenaInfo(player, arenaCategory[responseValue - 1], arenaCategory))
+            }
+            else {
+                ArenaMenu(player,arenaCategory)
+            }
+
         }
         if (responseValue == arenaCategory.length + 1) {
             system.run(() => ArenaStoreMenu(player))
@@ -783,25 +906,52 @@ function DebugArenaInterface(player) {
     })
 }
 
+function LockUnlockAllArenas(lockOrUnlock, arenaList) {
 
+    let unlockedArenasSB = world.scoreboard.getObjective("unlocked_arenas_new")
 
-function GetArenasCount(versionCollection, unlockOrEnable) { //0 if check for unlock, 1 for check for enable
+    arenaList.forEach(arena => {
+        if (lockOrUnlock == 0) {
+            if (!arena.isDefault) {
+                unlockedArenasSB.setScore(arena.enabledName, lockOrUnlock)
+            }
+            else {
+                unlockedArenasSB.setScore(arena.enabledName, 1)
+            }
+
+        }
+        else {
+            unlockedArenasSB.setScore(arena.enabledName, lockOrUnlock)
+        }
+
+    })
+}
+
+function GetArenasCount(versionCollection, unlockOrEnable) { //1 if check for unlock, 0 for check for enable
     let arenaCount = 0;
     var arenaArr = [];
+
+    let debugValue;
     //world.sendMessage("pre-arena count: " + arenaCount.toString())
     //world.sendMessage(versionCollection.length.toString() + " <- version collection length")
     for (let j = 0; j < versionCollection.length; j++) { //someone once tried correcting me about doing this, I do not feel like finding an alternative right now, this goes out to you if you know who you are (it isn't moore, you're fine)
         for (let i = 0; i < versionCollection[j].length; i++) {
             let arena = versionCollection[j][i]
+            let extraInfo = ""
             var currentScoreboard;
             if (unlockOrEnable == 0) {
                 currentScoreboard = world.scoreboard.getObjective("enabled_arenas_new")
+                extraInfo = " unlocked? "
             }
             else {
                 currentScoreboard = world.scoreboard.getObjective("unlocked_arenas_new")
                 if (arena.isDefault) {
                     currentScoreboard.setScore(arena.enabledName, 1)
                 }
+                if (currentScoreboard.getScore(arena.enabledName) != 1) {
+                    world.scoreboard.getObjective("enabled_arenas_new").setScore(arena.enabledName,0)
+                }
+                extraInfo = " enabled? "
             }
             currentScoreboard.addScore(arena.enabledName, 0)
             let currentArena = currentScoreboard.getScore(arena.enabledName)
@@ -809,8 +959,17 @@ function GetArenasCount(versionCollection, unlockOrEnable) { //0 if check for un
                 arenaCount++;
                 arenaArr.push(arena)
             }
+
+
+            
+            world.getDimension("Overworld").runCommand("tell @a[tag=debug] " + arena.displayName + extraInfo + currentArena.toString() + " is default? " + arena.isDefault.toString() + " total count: " + arenaCount.toString())
         }
     }
+
+    if (arenaCount < 3) {
+        DisableArenaVote()
+    }
+
     //world.sendMessage("arena count total: " + arenaCount.toString())
     return arenaArr;
 }
@@ -833,6 +992,8 @@ function MassToggleCategory(category, toggleVal, returnTo, player) { //send 0 th
     if (returnTo == true) {
         system.run(() => ArenaMenu(player,category))
     }
+
+    system.run(() => GetArenasCount(versionCollection,0))
 }
 
 function DebugUnlockAllArenas(unlockOrLock) { //0 = lock, 1 = unlock
@@ -937,6 +1098,7 @@ function SetVotedArena() {
         ArmArena(storedArenaIndexes[0], storedCategoryIndexes[0])
     }
     else if (arenaTwo > arenaOne && arenaTwo > arenaThree) {
+        SendLoadedArenaMessage(arenas[1])
         ArmArena(storedArenaIndexes[1], storedCategoryIndexes[1])
     }
     else if (arenaThree > arenaOne && arenaThree > arenaTwo) {

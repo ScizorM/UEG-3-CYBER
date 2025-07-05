@@ -10,7 +10,8 @@
 				"*": {
 					"ambient_occlusion": true,
 					"render_method": "blend",
-					"face_dimming": false
+					"face_dimming": false,
+					"texture": "sm:virus_block_green"
 				}
 			},
 			"minecraft:light_emission": 0.5,

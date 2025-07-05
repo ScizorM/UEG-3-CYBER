@@ -1,0 +1,22 @@
+//bridge-file-version: #10
+{
+	"format_version": "1.21.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "sm:lobby_join_team"
+		},
+		"components": {
+			"minecraft:cooldown": {
+				"category": "select_lo",
+				"duration": 1
+			},
+			"minecraft:icon": "sm:lobby_join_team",
+			"minecraft:display_name": {
+				"value": "Team Select"
+			},
+			"minecraft:custom_components": [
+				"sm:lobby_join_team"
+			]
+		}
+	}
+}

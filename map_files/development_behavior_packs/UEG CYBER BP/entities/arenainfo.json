@@ -182,7 +182,8 @@
 						"uegcybers_bananaland_bouncehouse",
 						"uegcybers_abstract_cyber",
 						"uegcybers_shrek_on_crack",
-						"uegcybers_hog_metro_hq"
+						"uegcybers_hog_metro_hq",
+						"disabled"
 					]
 				}
 			},
@@ -190,6 +191,11 @@
 				"add": {
 					"component_groups": [
 						"ueg1_lost_city"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"disabled"
 					]
 				}
 			},
@@ -536,7 +542,7 @@
 					]
 				}
 			},
-			"uegcybers_bananaland_bouncehouse": {
+			"uegcybers_bananaland": {
 				"add": {
 					"component_groups": [
 						"uegcybers_bananaland_bouncehouse"
@@ -554,6 +560,27 @@
 				"add": {
 					"component_groups": [
 						"uegcybers_hog_metro_hq"
+					]
+				}
+			},
+			"uegcybers_shrek_on": {
+				"add": {
+					"component_groups": [
+						"uegcybers_shrek_on_crack"
+					]
+				}
+			},
+			"sm:add_disabled": {
+				"add": {
+					"component_groups": [
+						"disabled"
+					]
+				}
+			},
+			"sm:remove_disabled": {
+				"remove": {
+					"component_groups": [
+						"disabled"
 					]
 				}
 			}

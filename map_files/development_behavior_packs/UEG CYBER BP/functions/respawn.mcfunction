@@ -9,7 +9,7 @@ camera @s fade time 0 0.1 0.5 color 40 40 150
 scoreboard players remove @s lives 1
 execute @s[tag=team_nu] ~ ~ ~ tellraw @a {"rawtext": [{"text": "§e[PVP Announcements] §c "}, {"selector": "@s"},{"text": " has been recovered. §cRemaining Lives: "},{"score":{"name":"@s","objective":"lives"}}]}
 execute @s[tag=team_lambda] ~ ~ ~ tellraw @a {"rawtext": [{"text": "§e[PVP Announcements] §c "}, {"selector": "@s"},{"text": " has been recovered. §cRemaining Lives: "},{"score":{"name":"@s","objective":"lives"}}]}
-effect @s slow_falling 5 0 true
+effect @s slow_falling 1 0 true
 tp @s -134 76 255
 function stoned_ability_clear
 function title_respawned

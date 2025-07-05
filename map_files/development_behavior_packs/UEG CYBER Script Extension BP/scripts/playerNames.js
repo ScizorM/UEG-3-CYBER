@@ -36,10 +36,10 @@ system.runInterval(() => {
         if (player.hasTag("dev")) {
 
             if (player.hasTag("team_nu")) {
-                player.nameTag = '' + '§c' + '' + playername + '\n§f' + livesMessage + ' ' + creditsMessage + ' ' + winsMessage + ' '
+                player.nameTag = '' + '§9' + '' + playername + '\n§f' + livesMessage + ' ' + creditsMessage + ' ' + winsMessage + ' '
             }
             else if (player.hasTag("team_lambda")) {
-                player.nameTag = '' + '§d' + '' + playername + '\n§f' + livesMessage + ' ' + creditsMessage + ' ' + winsMessage + ' '
+                player.nameTag = '' + '§6' + '' + playername + '\n§f' + livesMessage + ' ' + creditsMessage + ' ' + winsMessage + ' '
             }
             else {
                 player.nameTag = '§7' + playername + '\n§f' + '' + creditsMessage + ' ' + winsMessage + ' '
@@ -49,10 +49,10 @@ system.runInterval(() => {
         if (player.hasTag("dev") == false) {
 
             if (player.hasTag("team_nu")) {
-                player.nameTag = '§c' + playername + '\n§f' + livesMessage + ' ' + creditsMessage + ' ' + winsMessage
+                player.nameTag = '§9' + playername + '\n§f' + livesMessage + ' ' + creditsMessage + ' ' + winsMessage
             }
             else if (player.hasTag("team_lambda")) {
-                player.nameTag = '§d' + playername + '\n§f' + livesMessage + ' ' + creditsMessage + ' ' + winsMessage
+                player.nameTag = '§6' + playername + '\n§f' + livesMessage + ' ' + creditsMessage + ' ' + winsMessage
             }
             else {
                 player.nameTag = '§7' + playername + '\n§f' + '' + creditsMessage + ' ' + winsMessage

@@ -1,0 +1,40 @@
+//bridge-file-version: #18
+{
+	"format_version": "1.16.100",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "sm:skin_36",
+			"materials": {
+				"default": "guardian"
+			},
+			"textures": {
+				"default": "textures/entity/skins/monarch_of_hearts",
+				"frame_2": "textures/entity/skins/monarch_of_hearts",
+				"frame_3": "textures/entity/skins/monarch_of_hearts",
+				"frame_4": "textures/entity/skins/monarch_of_hearts",
+				"frame_5": "textures/entity/skins/monarch_of_hearts",
+				"frame_6": "textures/entity/skins/monarch_of_hearts",
+				"frame_7": "textures/entity/skins/monarch_of_hearts",
+				"frame_8": "textures/entity/skins/monarch_of_hearts",
+				"dash1": "textures/entity/skins/monarch_of_hearts_dash1",
+				"dash2": "textures/entity/skins/monarch_of_hearts_dash2",
+				"dash3": "textures/entity/skins/monarch_of_hearts_dash3",
+				"dash4": "textures/entity/skins/monarch_of_hearts_dash4"
+			},
+			"geometry": {
+				"default": "geometry.monarch_of_hearts"
+			},
+			"render_controllers": [
+				"controller.render.skin_animations"
+			],
+			"animations": {
+				"idle": "animation.monarch_of_hearts.idle"
+			},
+			"scripts": {
+				"animate": [
+					"idle"
+				]
+			}
+		}
+	}
+}

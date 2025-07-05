@@ -2,7 +2,7 @@
 import { ActionFormData, MessageFormData, ModalFormData } from '@minecraft/server-ui'
 import { skinItemIds, effectSkins } from './skinList.js'
 import { titleTags, storeTags } from './tagList.js'
-import { weaponIDList } from './loadoutList.js'
+import { weaponIDList, weaponTypes } from './loadoutList.js'
 
 import './newArenaLoading.js'
 //import './arenaSelects.js' //keep disabled
@@ -28,7 +28,7 @@ import './gamble.js'
 import './trainingFunctions.js'
 import './rpgSkinRandomizer.js'
 
-import './questConditions.js'
+//import './questConditions.js'
 
 import './abilities_and_dashes.js'
 
@@ -683,11 +683,43 @@ function FoodEffectManager(player){
 }
 
 function MenuItemManager(player){
+
+    let gameActiveSB = world.scoreboard.getObjective("game_active")
+    let gameActivePLR = gameActiveSB.getScore("game_active")
+
+    let restrictTeamJoinSB = world.scoreboard.getObjective("restrict_team_joins")
+    let restrictTeamVal = restrictTeamJoinSB.getScore("value")
+
+
+
         if (player.hasTag("exit_stores") && !player.hasTag("team_nu") && !player.hasTag("team_lambda")) {
+
             player.runCommand(`replaceitem entity @s slot.hotbar 0 sm:lobby_menu 1 0 {"minecraft:item_lock":{"mode":"lock_in_slot"}}`)
+            if (gameActivePLR == 0 && restrictTeamVal == 0) {
+
+                player.runCommand(`replaceitem entity @s slot.hotbar 4 sm:lobby_join_team 1 0 {"minecraft:item_lock":{"mode":"lock_in_slot"}}`)
+            }
+            else{
+                player.runCommand(`replaceitem entity @s slot.hotbar 4 sm:lobby_spectate 1 0 {"minecraft:item_lock":{"mode":"lock_in_slot"}}`)
+            }
+
+
         }
-        else {
+        else if (gameActivePLR != 1) {
+            if (player.hasTag("exit_stores")) {
+                player.runCommand(`replaceitem entity @s slot.hotbar 4 sm:lobby_join_team 1 0 {"minecraft:item_lock":{"mode":"lock_in_slot"}}`)
+            }
+            else {
+                player.runCommand(`clear @s sm:lobby_join_team `)
+            }
+
             player.runCommand(`clear @s sm:lobby_menu `)
+            player.runCommand(`clear @s sm:lobby_spectate `)
+        }
+        else{
+            player.runCommand(`clear @s sm:lobby_menu `)
+            player.runCommand(`clear @s sm:lobby_spectate `)
+            player.runCommand(`clear @s sm:lobby_join_team `)
         }
 
         if (player.hasTag("enter_tc")) {
@@ -871,10 +903,10 @@ system.runInterval((runInt) => {
         // }
 
         if(player.hasTag("changeSkin")){
-            system.run(() => renderSkins(player))
+
             player.removeTag("changeSkin")
         }
-
+        system.run(() => renderSkins(player))
 
 
         world.getDimension("Overworld").runCommand("execute as @a run execute if entity @s[hasitem={item=sm:mb85_greatsword,location=slot.weapon.mainhand}] run tag @s add mb85_greatsword")
@@ -1176,10 +1208,10 @@ function IcarusEffects(player){
             const icarus_detect = world.scoreboard.getObjective("icarus_gun_fire")
 
         if (icarus_detect.getScore(player) == "1") {
-            player.triggerEvent("sm:icarus_alternate_1")
+            //player.triggerEvent("sm:icarus_alternate_1")
         }
         else if (icarus_detect.getScore(player) == "0") {
-            player.triggerEvent("sm:icarus_alternate_2")
+            //player.triggerEvent("sm:icarus_alternate_2")
         }
 
         if (player.getViewDirection.y > 0) {
@@ -1205,7 +1237,8 @@ function renderSkins(player) {
 
     const dashEffectSB = world.scoreboard.getObjective("dash_effect_timer")
 
-
+    const currentSkinSB = world.scoreboard.getObjective("selected_skin")
+    const currentSkinPlayer = currentSkinSB.getScore(player)
 
     const currentVariantSB = world.scoreboard.getObjective("skin_variant_timer")
 
@@ -1284,9 +1317,49 @@ function renderSkins(player) {
 
         var item = player.getComponent("equippable")
 
-        var identifier = skinItemIds[selectedSkinPlayer]
+        if (selectedSkinPlayer != 33) {
+            var identifier = skinItemIds[selectedSkinPlayer]
 
-        player.runCommand(`replaceitem entity @s slot.armor.head 0 ${identifier} 1 0 {"minecraft:item_lock":{"mode":"lock_in_slot"}}`)
+            player.runCommand(`replaceitem entity @s slot.armor.head 0 ${identifier} 1 0 {"minecraft:item_lock":{"mode":"lock_in_slot"}}`)
+        }
+        else {
+            let lastShapeShiftSB = world.scoreboard.getObjective("lastShapeShift")
+            lastShapeShiftSB.addScore(player,0)
+            let lastShapeShiftPlayer = lastShapeShiftSB.getScore(player)
+
+            
+
+            let skinList = { melee: "sm:skin_33_melee", ranged: "sm:skin_33_ranged", other: "sm:skin_33_recovery" }
+            let backupList = [skinList.melee,skinList.ranged,skinList.other]
+
+            var itemR = player.getComponent("equippable").getEquipment("Mainhand")
+            if (itemR) {
+                if (weaponTypes.melee.includes(itemR.typeId)) {
+                    player.runCommand(`replaceitem entity @s slot.armor.head 0 ${skinList.melee} 1 0 {"minecraft:item_lock":{"mode":"lock_in_slot"}}`)
+                    lastShapeShiftSB.setScore(player, 0)
+                }
+                else if (weaponTypes.ranged.includes(itemR.typeId)) {
+                    player.runCommand(`replaceitem entity @s slot.armor.head 0 ${skinList.ranged} 1 0 {"minecraft:item_lock":{"mode":"lock_in_slot"}}`)
+                    lastShapeShiftSB.setScore(player, 1)
+                }
+                else if (weaponTypes.utils.includes(itemR.typeId)) {
+                    player.runCommand(`replaceitem entity @s slot.armor.head 0 ${skinList.other} 1 0 {"minecraft:item_lock":{"mode":"lock_in_slot"}}`)
+                    lastShapeShiftSB.setScore(player, 2)
+                }
+                else if (weaponTypes.traps.includes(itemR.typeId)) {
+                    player.runCommand(`replaceitem entity @s slot.armor.head 0 ${skinList.other} 1 0 {"minecraft:item_lock":{"mode":"lock_in_slot"}}`)
+                    lastShapeShiftSB.setScore(player, 2)
+                }
+                else {
+                    player.runCommand(`replaceitem entity @s slot.armor.head 0 ${backupList[lastShapeShiftPlayer]} 1 0 {"minecraft:item_lock":{"mode":"lock_in_slot"}}`)
+                }
+            }
+            else {
+                player.runCommand(`replaceitem entity @s slot.armor.head 0 ${backupList[lastShapeShiftPlayer]} 1 0 {"minecraft:item_lock":{"mode":"lock_in_slot"}}`)
+            }
+
+        }
+
 
 
         if (effectSkins.includes(selectedSkinPlayer) == false) {

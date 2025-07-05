@@ -162,20 +162,20 @@ function giveItems(slotString, selectedSlot, player) {
             var currentLoSlPlayer = currentLoadoutSB.getScore(loadoutSlot)
             var itemName = ingameWeaponIDList[currentLoSlPlayer]
             if (itemName != "checkforteam_landmine" && itemName != "checkforteam_remote") {
-                player.runCommand(`replaceitem entity @s slot.hotbar ${i} ${itemName}`)
+                player.runCommand(`replaceitem entity @s slot.hotbar ${i} ${itemName} 1 0 {"minecraft:item_lock":{"mode":"lock_in_inventory"}}`)
             }
             else {
                 if (player.hasTag("team_nu") && itemName == "checkforteam_landmine") {
-                    player.runCommand(`replaceitem entity @s slot.hotbar ${i} sm:landmine_ver_nu`)
+                    player.runCommand(`replaceitem entity @s slot.hotbar ${i} sm:landmine_ver_nu 1 0 {"minecraft:item_lock":{"mode":"lock_in_inventory"}}`)
                 }
                 else if (player.hasTag("team_nu") && itemName == "checkforteam_remote") {
-                    player.runCommand(`replaceitem entity @s slot.hotbar ${i} sm:remote_activator_ver_nu`)
+                    player.runCommand(`replaceitem entity @s slot.hotbar ${i} sm:remote_activator_ver_nu 1 0 {"minecraft:item_lock":{"mode":"lock_in_inventory"}}`)
                 }
                 else if (player.hasTag("team_lambda") && itemName == "checkforteam_landmine") {
-                    player.runCommand(`replaceitem entity @s slot.hotbar ${i} sm:landmine_ver_lambda`)
+                    player.runCommand(`replaceitem entity @s slot.hotbar ${i} sm:landmine_ver_lambda 1 0 {"minecraft:item_lock":{"mode":"lock_in_inventory"}}`)
                 }
                 else if (player.hasTag("team_lambda") && itemName == "checkforteam_remote") {
-                    player.runCommand(`replaceitem entity @s slot.hotbar ${i} sm:remote_activator_ver_lambda`)
+                    player.runCommand(`replaceitem entity @s slot.hotbar ${i} sm:remote_activator_ver_lambda 1 0 {"minecraft:item_lock":{"mode":"lock_in_inventory"}}`)
                 }
             }
 
@@ -189,20 +189,20 @@ function giveItems(slotString, selectedSlot, player) {
             var currentLoSlPlayer = currentLoadoutSB.getScore(loadoutSlot)
             var itemName = ingameWeaponIDList[currentLoSlPlayer]
             if (itemName != "checkforteam_landmine" && itemName != "checkforteam_remote") {
-                player.runCommand(`replaceitem entity @s slot.hotbar ${i} ${itemName}`)
+                player.runCommand(`replaceitem entity @s slot.hotbar ${i} ${itemName} 1 0 {"minecraft:item_lock":{"mode":"lock_in_inventory"}}`)
             }
             else {
                 if (player.hasTag("team_nu") && itemName == "checkforteam_landmine") {
-                    player.runCommand(`replaceitem entity @s slot.hotbar ${i} sm:landmine_ver_nu`)
+                    player.runCommand(`replaceitem entity @s slot.hotbar ${i} sm:landmine_ver_nu 1 0 {"minecraft:item_lock":{"mode":"lock_in_inventory"}}`)
                 }
                 else if (player.hasTag("team_nu") && itemName == "checkforteam_remote") {
-                    player.runCommand(`replaceitem entity @s slot.hotbar ${i} sm:remote_activator_ver_nu`)
+                    player.runCommand(`replaceitem entity @s slot.hotbar ${i} sm:remote_activator_ver_nu 1 0 {"minecraft:item_lock":{"mode":"lock_in_inventory"}}`)
                 }
                 else if (player.hasTag("team_lambda") && itemName == "checkforteam_landmine") {
-                    player.runCommand(`replaceitem entity @s slot.hotbar ${i} sm:landmine_ver_lambda`)
+                    player.runCommand(`replaceitem entity @s slot.hotbar ${i} sm:landmine_ver_lambda 1 0 {"minecraft:item_lock":{"mode":"lock_in_inventory"}}`)
                 }
                 else if (player.hasTag("team_lambda") && itemName == "checkforteam_remote") {
-                    player.runCommand(`replaceitem entity @s slot.hotbar ${i} sm:remote_activator_ver_lambda`)
+                    player.runCommand(`replaceitem entity @s slot.hotbar ${i} sm:remote_activator_ver_lambda 1 0 {"minecraft:item_lock":{"mode":"lock_in_inventory"}}`)
                 }
             }
 
@@ -215,20 +215,20 @@ function giveItems(slotString, selectedSlot, player) {
             var currentLoSlPlayer = currentLoadoutSB.getScore(player)
             var itemName = ingameWeaponIDList[currentLoSlPlayer]
             if (itemName != "checkforteam_landmine" && itemName != "checkforteam_remote") {
-                player.runCommand(`replaceitem entity @s slot.hotbar ${i} ${itemName}`)
+                player.runCommand(`replaceitem entity @s slot.hotbar ${i} ${itemName} 1 0 {"minecraft:item_lock":{"mode":"lock_in_inventory"}}`)
             }
             else {
                 if (player.hasTag("team_nu") && itemName == "checkforteam_landmine") {
-                    player.runCommand(`replaceitem entity @s slot.hotbar ${i} sm:landmine_ver_nu`)
+                    player.runCommand(`replaceitem entity @s slot.hotbar ${i} sm:landmine_ver_nu 1 0 {"minecraft:item_lock":{"mode":"lock_in_inventory"}}`)
                 }
                 else if (player.hasTag("team_nu") && itemName == "checkforteam_remote") {
-                    player.runCommand(`replaceitem entity @s slot.hotbar ${i} sm:remote_activator_ver_nu`)
+                    player.runCommand(`replaceitem entity @s slot.hotbar ${i} sm:remote_activator_ver_nu 1 0 {"minecraft:item_lock":{"mode":"lock_in_inventory"}}`)
                 }
                 else if (player.hasTag("team_lambda") && itemName == "checkforteam_landmine") {
-                    player.runCommand(`replaceitem entity @s slot.hotbar ${i} sm:landmine_ver_lambda`)
+                    player.runCommand(`replaceitem entity @s slot.hotbar ${i} sm:landmine_ver_lambda 1 0 {"minecraft:item_lock":{"mode":"lock_in_inventory"}}`)
                 }
                 else if (player.hasTag("team_lambda") && itemName == "checkforteam_remote") {
-                    player.runCommand(`replaceitem entity @s slot.hotbar ${i} sm:remote_activator_ver_lambda`)
+                    player.runCommand(`replaceitem entity @s slot.hotbar ${i} sm:remote_activator_ver_lambda 1 0 {"minecraft:item_lock":{"mode":"lock_in_inventory"}}`)
                 }
             }
 
@@ -244,20 +244,20 @@ function givePlaceholderItems(slotString, selectedSlot,player) {
         var currentLoSlPlayer = currentLoadoutSB.getScore(player)
         var itemName = weaponIDList[currentLoSlPlayer]
         if (itemName != "checkforteam_landmine" && itemName != "checkforteam_remote") {
-            player.runCommand(`replaceitem entity @s slot.hotbar ${i} ${itemName}`)
+            player.runCommand(`replaceitem entity @s slot.hotbar ${i} ${itemName} 1 0 {"minecraft:item_lock":{"mode":"lock_in_inventory"}}`)
         }
         else {
             if (player.hasTag("team_nu") && itemName == "checkforteam_landmine") {
-                player.runCommand(`replaceitem entity @s slot.hotbar ${i} sm:landmine_ver_nu`)
+                player.runCommand(`replaceitem entity @s slot.hotbar ${i} sm:landmine_ver_nu 1 0 {"minecraft:item_lock":{"mode":"lock_in_inventory"}}`)
             }
             else if (player.hasTag("team_nu") && itemName == "checkforteam_remote") {
-                player.runCommand(`replaceitem entity @s slot.hotbar ${i} sm:remote_activator_ver_nu`)
+                player.runCommand(`replaceitem entity @s slot.hotbar ${i} sm:remote_activator_ver_nu 1 0 {"minecraft:item_lock":{"mode":"lock_in_inventory"}}`)
             }
             else if (player.hasTag("team_lambda") && itemName == "checkforteam_landmine") {
-                player.runCommand(`replaceitem entity @s slot.hotbar ${i} sm:landmine_ver_lambda`)
+                player.runCommand(`replaceitem entity @s slot.hotbar ${i} sm:landmine_ver_lambda 1 0 {"minecraft:item_lock":{"mode":"lock_in_inventory"}}`)
             }
             else if (player.hasTag("team_lambda") && itemName == "checkforteam_remote") {
-                player.runCommand(`replaceitem entity @s slot.hotbar ${i} sm:remote_activator_ver_lambda`)
+                player.runCommand(`replaceitem entity @s slot.hotbar ${i} sm:remote_activator_ver_lambda 1 0 {"minecraft:item_lock":{"mode":"lock_in_inventory"}}`)
             }
         }
 

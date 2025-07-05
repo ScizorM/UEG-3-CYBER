@@ -1,0 +1,40 @@
+//bridge-file-version: #18
+{
+	"format_version": "1.16.100",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "sm:skin_11",
+			"materials": {
+				"default": "guardian"
+			},
+			"textures": {
+				"default": "textures/entity/skins/dark_frame",
+				"frame_2": "textures/entity/skins/dark_frame",
+				"frame_3": "textures/entity/skins/dark_frame",
+				"frame_4": "textures/entity/skins/dark_frame",
+				"frame_5": "textures/entity/skins/dark_frame",
+				"frame_6": "textures/entity/skins/dark_frame",
+				"frame_7": "textures/entity/skins/dark_frame",
+				"frame_8": "textures/entity/skins/dark_frame",
+				"dash1": "textures/entity/skins/dark_frame_dash1",
+				"dash2": "textures/entity/skins/dark_frame_dash1",
+				"dash3": "textures/entity/skins/dark_frame_dash2",
+				"dash4": "textures/entity/skins/dark_frame_dash3"
+			},
+			"geometry": {
+				"default": "geometry.black_robot"
+			},
+			"render_controllers": [
+				"controller.render.skin_animations"
+			],
+			"animations": {
+				"idle": "animation.dark_frame.idle"
+			},
+			"scripts": {
+				"animate": [
+					"idle"
+				]
+			}
+		}
+	}
+}

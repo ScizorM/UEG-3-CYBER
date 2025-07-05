@@ -1,0 +1,26 @@
+//bridge-file-version: #5
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "sm:sign_splendid",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/signs/lobby_titles/splendid_suits",
+				"startgame": "textures/signs/start_game",
+				"spectate": "textures/signs/spectate",
+				"nu": "textures/signs/team_nu",
+				"lambda": "textures/signs/team_lambda",
+				"information": "textures/signs/information"
+			},
+			"geometry": {
+				"default": "geometry.sign_reactor"
+			},
+			"render_controllers": [
+				"controller.render.guardian"
+			]
+		}
+	}
+}

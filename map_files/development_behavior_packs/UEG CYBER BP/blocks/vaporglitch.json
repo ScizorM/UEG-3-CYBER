@@ -13,7 +13,8 @@
 			"minecraft:material_instances": {
 				"*": {
 					"face_dimming": false,
-					"render_method": "blend"
+					"render_method": "blend",
+					"texture": "sm:vaporglitch"
 				}
 			},
 			"minecraft:destructible_by_mining": {

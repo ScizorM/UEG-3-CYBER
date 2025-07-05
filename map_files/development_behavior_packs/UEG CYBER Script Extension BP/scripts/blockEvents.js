@@ -48,7 +48,7 @@ world.beforeEvents.worldInitialize.subscribe((initEvent) => {
             var blockz = block.location.z
             block.dimension.runCommand("particle sm:respawn_beam " + blockx + " " + blocky + " " + blockz)
             block.dimension.runCommand("setblock " + blockx + " " + blocky + " " + blockz + " air")
-            block.dimension.runCommand("function find_piglin_head")
+            block.dimension.runCommand("execute positioned ~ ~ ~ run function find_piglin_head")
 
         }
     });

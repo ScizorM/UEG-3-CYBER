@@ -1,5 +1,5 @@
 import { fishMode, juggernautMode, legacyMode, spleefMode, tntMode, sumoMode } from "./forceLoadoutList.js"
-export { modeList }
+export { modeList, fullEventList }
 
 class modeSystem {
     //loadoutIDCollection: collection of 9 slots with the id of the item you need
@@ -23,9 +23,12 @@ events to do:
 
 */
 
+const fullEventList = ["Random Events","No Event","TNT Rain","Random Potion Effects","Big Joe Rain","EMP Trigger","Scaler Explosion","Dash Recovery","Baby Storm","TNT Trail"]
+
+
 const tntRain = 0
 const randomPotions = 1
-const tntTrail = 2
+const tntTrail = 7
 
 const defaultModeSettings = new modeSystem(
     { maxWins: 2, maxLives: 3 },

@@ -248,6 +248,32 @@ world.beforeEvents.worldInitialize.subscribe((initEvent) => {
 
         }
     });
+        initEvent.itemComponentRegistry.registerCustomComponent("sm:lobby_join_team", {
+        onUse(event) {
+            const { itemStack, source } = event;
+            var cooldownComp1 = itemStack.getComponent(ItemCooldownComponent.componentId)
+            cooldownComp1.startCooldown(source)
+            source.playAnimation("animation.player.swing")
+            if(source.hasTag("on_train")){
+                source.sendMessage("§e[Error]§c Please exit the train to use this item.")
+            }
+            else{
+                source.addTag("lobby_menu_team")
+            }
+
+
+        }
+    });
+        initEvent.itemComponentRegistry.registerCustomComponent("sm:lobby_spectate", {
+        onUse(event) {
+            const { itemStack, source } = event;
+            var cooldownComp1 = itemStack.getComponent(ItemCooldownComponent.componentId)
+            cooldownComp1.startCooldown(source)
+            source.playAnimation("animation.player.swing")
+            source.addTag("lobby_menu_spectate")
+
+        }
+    });
     initEvent.itemComponentRegistry.registerCustomComponent("sm:assign_item", {
         onUse(event) {
             const { itemStack, source } = event;

@@ -1,0 +1,33 @@
+//bridge-file-version: #18
+{
+	"format_version": "1.16.100",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "sm:skin_33_melee",
+			"materials": {
+				"default": "entity_alphatest",
+				"alphaBlend": "entity_alphablend"
+			},
+			"textures": {
+				"default": "textures/entity/skins/shapeshifting_alien_melee",
+				"frame_2": "textures/entity/skins/shapeshifting_alien_melee",
+				"frame_3": "textures/entity/skins/shapeshifting_alien_melee",
+				"frame_4": "textures/entity/skins/shapeshifting_alien_melee",
+				"frame_5": "textures/entity/skins/shapeshifting_alien_melee",
+				"frame_6": "textures/entity/skins/shapeshifting_alien_melee",
+				"frame_7": "textures/entity/skins/shapeshifting_alien_melee",
+				"frame_8": "textures/entity/skins/shapeshifting_alien_melee",
+				"dash1": "textures/entity/skins/shapeshifting_alien_melee",
+				"dash2": "textures/entity/skins/shapeshifting_alien_melee",
+				"dash3": "textures/entity/skins/shapeshifting_alien_melee",
+				"dash4": "textures/entity/skins/shapeshifting_alien_melee"
+			},
+			"geometry": {
+				"default": "geometry.shapeshifting_alien_melee"
+			},
+			"render_controllers": [
+				"controller.render.shapeshifting_alien_melee"
+			]
+		}
+	}
+}

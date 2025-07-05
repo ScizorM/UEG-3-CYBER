@@ -28,6 +28,16 @@
 				"textures/items/blushing_bloomfan"
 			]
 		},
+		"sm:lobby_join_team":{
+			"textures":[
+				"textures/items/team_select"
+			]
+		},
+				"sm:lobby_spectate":{
+			"textures":[
+				"textures/items/spectate"
+			]
+		},
 				"sm:training_menu": {
 			"textures": [
 				"textures/items/training_menu"

@@ -11,6 +11,15 @@ system.runInterval(() => {
             player.removeTag("lobby_menu_open")
         }
 
+        if (player.hasTag("lobby_menu_team")) {
+            system.run(() => JoinTeam(player))
+            player.removeTag("lobby_menu_team")
+        }
+
+        if (player.hasTag("lobby_menu_spectate")) {
+            system.run(() => lobbyMenu(player))
+            player.removeTag("lobby_menu_spectate")
+        }
 
     })
 
@@ -184,3 +193,142 @@ function Warps(player) {
     })
 }
 
+
+function GetTeamCounts(){
+    let teamCounts = {nu:[],lambda:[]};
+
+    world.getAllPlayers().forEach(player => {
+        if(player.hasTag("team_nu")){
+            teamCounts.nu.push(player)
+        }
+        if(player.hasTag("team_lambda")){
+            teamCounts.lambda.push(player)
+        }
+    })
+
+    return teamCounts;
+}
+
+function ConvertTeamCountsToText(teamCounts,currentTeamCount,nuTeamLimit,lambdaTeamLimit){
+    let text = ""
+    text += `Team Nu: (${currentTeamCount.nu.toString()}/${nuTeamLimit.toString()})\n\n`
+    teamCounts.nu.forEach(player => {
+        text += ("- " + player.name + "\n")
+    })
+    text += `Team Lambda: (${currentTeamCount.lambda.toString()}/${lambdaTeamLimit.toString()})\n\n`
+    teamCounts.lambda.forEach(player => {
+        text += ("- " + player.name + "\n")
+    })
+    text += "\n"
+    return text;
+}
+
+function ConvertTeamCountsToNumber(teamCounts) {
+    let counts = { nu: 0, lambda: 0 }
+    teamCounts.nu.forEach(player => {
+        counts.nu++
+    })
+    teamCounts.lambda.forEach(player => {
+        counts.lambda++
+    })
+    return counts;
+}
+
+
+function JoinTeam(player) {
+    let teamLimitsSB = world.scoreboard.getObjective("team_limits")
+    let nuTeamLimit = teamLimitsSB.getScore("team_nu")
+    let lambdaTeamLimit = teamLimitsSB.getScore('team_lambda')
+
+    let teamCounts = GetTeamCounts()
+    let currentTeamCount = ConvertTeamCountsToNumber(teamCounts)
+    let playerListStr = ConvertTeamCountsToText(teamCounts,currentTeamCount,nuTeamLimit,lambdaTeamLimit)
+    let mainDesc = "Players on teams (as of opening this menu):\n\n" + playerListStr;
+    let mainTitle = "test"
+
+    let restrictTeamJoinSB = world.scoreboard.getObjective("restrict_team_joins")
+    let restrictTeamVal = restrictTeamJoinSB.getScore("value")
+
+
+
+    let form = new ActionFormData();
+    if (restrictTeamVal == 0) {
+        form.title(mainTitle);
+        form.body(mainDesc)
+        form.button(`Join Team Nu (${currentTeamCount.nu}/${nuTeamLimit})`, "textures/ui/button_nu");
+        form.button(`Join Team Lambda (${currentTeamCount.lambda}/${lambdaTeamLimit})`, "textures/ui/button_lambda");
+        form.button("Leave Teams", "textures/ui/button_teamless");
+        form.button("Cancel", "textures/ui/button_close");
+        form.show(player).then(r => {
+            let selection = r.selection
+            nuTeamLimit = teamLimitsSB.getScore("team_nu")
+            lambdaTeamLimit = teamLimitsSB.getScore('team_lambda')
+            teamCounts = GetTeamCounts()
+            currentTeamCount = ConvertTeamCountsToNumber(teamCounts)
+
+
+
+            switch (selection) {
+                case 0:
+                    if (currentTeamCount.nu < nuTeamLimit || player.hasTag("team_nu")) {
+                        if (player.hasTag("team_nu")) {
+                            player.sendMessage("§e[Error]§c You are already on this team.")
+                        }
+                        else {
+                            if (player.hasTag("team_lambda")) {
+                                player.removeTag("team_lambda")
+                                world.sendMessage(`§e[Team Join] §9${player.name} left Team Lambda and joined Team Nu.`)
+                            }
+                            else {
+                                world.sendMessage(`§e[Team Join] §9${player.name} joined Team Nu.`)
+                            }
+                            player.addTag("team_nu")
+
+                        }
+                    }
+                    else {
+                        player.sendMessage("§e[Error]§c This team is now full.")
+                    }
+
+
+                    break;
+                case 1:
+
+                    if (currentTeamCount.lambda < lambdaTeamLimit || player.hasTag("team_lambda")) {
+                        if (player.hasTag("team_lambda")) {
+                            player.sendMessage("§e[Error]§c You are already on this team.")
+                        }
+                        else {
+                            if (player.hasTag("team_nu")) {
+                                player.removeTag("team_nu")
+                                world.sendMessage(`§e[Team Join] §6${player.name} left Team Nu and joined Team Lambda.`)
+                            }
+                            else {
+                                world.sendMessage(`§e[Team Join] §6${player.name} joined Team Lambda.`)
+                            }
+
+                            player.addTag("team_lambda")
+
+                        }
+                    }
+                    else {
+                        player.sendMessage("§e[Error]§c This team is now full.")
+                    }
+
+                    break;
+                case 2:
+                    if (!player.hasTag("team_nu") && !player.hasTag("team_lambda")) {
+                        player.sendMessage("§e[Error]§c You are not on a team.")
+                    }
+                    else {
+                        world.sendMessage(`§e[Team Leave] §c${player.name} left both teams.`)
+                        player.removeTag("team_nu")
+                        player.removeTag("team_lambda")
+                    }
+                    break;
+            }
+        })
+    }
+    
+
+}
