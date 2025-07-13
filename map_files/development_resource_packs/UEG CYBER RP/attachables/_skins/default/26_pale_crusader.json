@@ -1,0 +1,32 @@
+//bridge-file-version: #18
+{
+	"format_version": "1.16.100",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "sm:skin_26",
+			"materials": {
+				"default": "guardian"
+			},
+			"textures": {
+				"default": "textures/entity/skins/pale_crusader",
+				"frame_2": "textures/entity/skins/pale_crusader_frame1",
+				"frame_3": "textures/entity/skins/pale_crusader_frame2",
+				"frame_4": "textures/entity/skins/pale_crusader_frame3",
+				"frame_5": "textures/entity/skins/pale_crusader_frame2",
+				"frame_6": "textures/entity/skins/pale_crusader_frame1",
+				"frame_7": "textures/entity/skins/pale_crusader",
+				"frame_8": "textures/entity/skins/pale_crusader",
+				"dash1": "textures/entity/skins/pale_crusader",
+				"dash2": "textures/entity/skins/pale_crusader",
+				"dash3": "textures/entity/skins/pale_crusader",
+				"dash4": "textures/entity/skins/pale_crusader"
+			},
+			"geometry": {
+				"default": "geometry.pale_crusader"
+			},
+			"render_controllers": [
+				"controller.render.skin_animations"
+			]
+		}
+	}
+}

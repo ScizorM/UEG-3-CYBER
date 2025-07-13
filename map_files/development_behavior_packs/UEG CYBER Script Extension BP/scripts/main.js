@@ -409,7 +409,7 @@ function NewTitleSystem(player){
 
         }
         else if (player.hasTag("enter_questMaster")) {
-            titleText = "QUEST STORE"
+            titleText = "THE RAT OF WISDOM"
             innerColor = "§a"
             outerColor = "§l§f"
             maxTitleTime = 20

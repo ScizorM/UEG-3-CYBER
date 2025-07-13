@@ -85,7 +85,7 @@ execute as @a[tag=!ingame,tag=!teamed,tag=enter_gamblinzone] run titleraw @s act
  
 execute as @a[tag=!ingame,tag=!teamed,tag=enter_splendid] run titleraw @s actionbar {"rawtext":[{"text":"Splendid Suits\n\nUnlocked Skins:\n"},{"score":{"name":"@s","objective":"skin_unlock_count"}},{"text":"/48\n\nNext Reroll:\n"},{"score":{"name":"skin_reroll_timer","objective":"skin_reroll_timer"}},{"text":" Min."},{"text":"\n\nCredits:\n"},{"score":{"name":"@s","objective":"credits"}},{"text":", "},{"score":{"name":"global_credits","objective":"global_credits"}},{"text":""}]}
 
-execute as @a[tag=!ingame,tag=!teamed,tag=enter_questMaster] run titleraw @s actionbar {"rawtext":[{"text":"Quest Store\n\nUnlocked Skins:\n"},{"score":{"name":"@s","objective":"skin_unlock_count"}},{"text":"/48\n\nNext Reroll:\n"},{"score":{"name":"skin_reroll_timer","objective":"skin_reroll_timer"}},{"text":" Min."},{"text":"\n\nCredits:\n"},{"score":{"name":"@s","objective":"credits"}},{"text":", "},{"score":{"name":"global_credits","objective":"global_credits"}},{"text":""}]}
+execute as @a[tag=!ingame,tag=!teamed,tag=enter_questMaster] run titleraw @s actionbar {"rawtext":[{"text":"Rat of Wisdom\n\nGame Wins:\n"},{"score":{"name":"@s","objective":"player_wins"}},{"text":"\n\nWisdom Earned:\n"},{"text":""},{"score":{"name":"@s","objective":"wisdom_earned"}},{"text":"\n\nCredits:\n"},{"score":{"name":"@s","objective":"credits"}},{"text":", "},{"score":{"name":"global_credits","objective":"global_credits"}},{"text":""}]}
  
 execute if score round_active round_active matches 0 run execute if score cycle_stat_menus cycle_stat_menus matches 3 run scoreboard players set cycle_stat_menus cycle_stat_menus 0
  

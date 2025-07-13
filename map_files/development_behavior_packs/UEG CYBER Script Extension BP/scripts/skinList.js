@@ -38,16 +38,16 @@ const skinList = new Array(
     "24 - Unfinished", // 24#########################
     // Steampunk ////////////////////////
     "Steampunk Navigator", // 25
-    "Pale Crusader", // 26
+    "Amber Crusader", // 26
     "27 - Unfinished", // 27
     // Brutal ////////////////////////
     "The Iron Maiden", // 28
-    "Excalibarbara", // 29
+    "NATASHA", // 29
     "The Fallen", // 30
     // Intergalactic ////////////////////////
     "Devorans Spatium", // 31
     "Sol Invictus", // 32
-    "33 - Unfinished", // 33
+    "Shapeshifter (Changes Forms)", // 33
     // Wonderland ////////////////////////
     "Gummy Contraption", // 34
     "Ringmaster", // 35
@@ -121,6 +121,7 @@ const effectSkins = new Array(
     10,
     11,
     28,
+    29,
     30,
     35,
     36,
@@ -177,16 +178,16 @@ const skinItemIds = new Array(
     incoSk, // 24
     // Steampunk ////////////////////////
     "sm:skin_25", // 25
-    incoSk, // 26
+    "sm:skin_26", // 26
     incoSk, // 27
     // Brutal ////////////////////////
     "sm:skin_28", // 28
-    incoSk, // 29
+    "sm:skin_29", // 29
     "sm:skin_30", // 30
     // Intergalactic ////////////////////////
     "sm:skin_31", // 31
     "sm:skin_32", // 32
-    incoSk, // 33
+    "sm:skin_33_recovery", // 33
     // Wonderland ////////////////////////
     "sm:skin_34", // 34
     "sm:skin_35", // 35
@@ -284,11 +285,11 @@ const skinIconLoc = new Array(
     "textures/ui/skin_categories/button", // 24
     // Steampunk ////////////////////////
     "textures/ui/skin_icons/skin_25", // 25
-    "textures/ui/skin_categories/button", // 26
+    "textures/ui/skin_icons/skin_26", // 26
     "textures/ui/skin_categories/button", // 27
     // Brutal ////////////////////////
     "textures/ui/skin_icons/skin_28", // 28
-    "textures/ui/skin_categories/button", // 29
+    "textures/ui/skin_icons/skin_29", // 29
     "textures/ui/skin_icons/skin_30", // 30
     // Intergalactic ////////////////////////
     "textures/ui/skin_icons/skin_31", // 31
@@ -390,17 +391,17 @@ const designerList = new Array(
     "23 - Unfinished", // 23
     "24 - Unfinished", // 24
     // Steampunk ////////////////////////
-    "25 - Unfinished", // 25
-    "26 - Unfinished", // 26
+    "evel", // 25
+    "Ripped from Warhammer (for Cameron) (please don't sue me games workshop)", // 26
     "27 - Unfinished", // 27
     // Brutal ////////////////////////
     "zeerye", // 28
-    "29 - Unfinished", // 29
+    "Fopull", // 29
     "evel", // 30
     // Intergalactic ////////////////////////
     "evel", // 31
     "evel", // 32
-    "33 - Unfinished", // 33
+    "evel", // 33
     // Wonderland ////////////////////////
     "AubreyThePebble", // 34
     "evel", // 35

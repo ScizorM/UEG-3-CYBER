@@ -22,7 +22,7 @@
 				"dash4": "textures/entity/skins/violet_machine"
 			},
 			"geometry": {
-				"default": "geometry.the_violet_machine"
+				"default": "geometry.violet_machine"
 			},
 			"render_controllers": [
 				"controller.render.skin_animations"
