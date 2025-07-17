@@ -23,39 +23,53 @@ world.beforeEvents.itemUse.subscribe(data => {
 
     }
 })
-
+    /*
 system.runInterval(() => {
+
+
     let headCount = world.scoreboard.getObjective("found_heads")
     let headCountVar = headCount.getScore("found_heads")
     let secretPhases = world.scoreboard.getObjective("secretPhases")
     let secretPhaseID = 0;
-    let phaseCounts = [4,4,4,4,4]
+    let phaseCounts = [4, 4, 4, 4, 4, 1]
+
+    let total = 0;
+
+    phaseCounts.forEach(count => {
+        total += count;
+    })
+
     let totalPhaseCounts = 0
     phaseCounts.forEach(phase => {
         totalPhaseCounts += phase;
     })
 
-    if(headCountVar >= phaseCounts[0] + phaseCounts[1] + phaseCounts[2] + phaseCounts[3] + phaseCounts[4]){
-        secretPhaseID = 5
-    }
-    else if(headCountVar >= phaseCounts[0] + phaseCounts[1] + phaseCounts[2] + phaseCounts[3]){
-        secretPhaseID = 4
-    }
-    else if(headCountVar >= phaseCounts[0] + phaseCounts[1] + phaseCounts[2]){
-        secretPhaseID = 3
-    }
-    else if(headCountVar >= phaseCounts[0] + phaseCounts[1]){
-        secretPhaseID = 2
-    }
-    else if(headCountVar >= phaseCounts[0]){
-        secretPhaseID = 1
-    }
-    else{
-        secretPhaseID = 0
-    }
+        if (headCountVar >= total) {
+            secretPhaseID = 6
+        }
+        else if (headCountVar >= phaseCounts[0] + phaseCounts[1] + phaseCounts[2] + phaseCounts[3] + phaseCounts[4]) {
+            secretPhaseID = 5
+        }
+        else if (headCountVar >= phaseCounts[0] + phaseCounts[1] + phaseCounts[2] + phaseCounts[3]) {
+            secretPhaseID = 4
+        }
+        else if (headCountVar >= phaseCounts[0] + phaseCounts[1] + phaseCounts[2]) {
+            secretPhaseID = 3
+        }
+        else if (headCountVar >= phaseCounts[0] + phaseCounts[1]) {
+            secretPhaseID = 2
+        }
+        else if (headCountVar >= phaseCounts[0]) {
+            secretPhaseID = 1
+        }
+        else {
+            secretPhaseID = 0
+        }
+
 
     secretPhases.setScore("value",secretPhaseID)
 })
+*/
 
 const fail_redeem = "§f<§kScizorM§r> That's not the answer I'm looking for."
 const success_redeem = "§f<§kScizorM§r> That was the right answer."

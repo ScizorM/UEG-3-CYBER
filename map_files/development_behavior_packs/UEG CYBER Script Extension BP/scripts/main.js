@@ -17,7 +17,7 @@ import './lobbyMenu.js'
 
 import './modeManager.js'
 
-
+import { masterRellaTips, otherMasterRellaMessages } from './masterRellaTips.js'
 
 
 import './foodAssign.js'
@@ -891,6 +891,8 @@ system.runInterval((runInt) => {
 
         HeavenPiercerEvents(player)
 
+        RatTipSystem(player)
+
         // let mb85ParryTimer = world.scoreboard.getObjective("mb85_parry_timer")
         // mb85ParryTimer.addScore(player,0)
         // let mb85Player = mb85ParryTimer.getScore(player)
@@ -923,6 +925,47 @@ system.runInterval((runInt) => {
         
     })
 });
+
+function RatTipSystem(player) {
+
+    if (player.hasTag("getTip")) {
+        if (!player.hasTag("tipped")) {
+            let dialogueCollection = []
+
+            masterRellaTips.gameplay.forEach(part => {
+                dialogueCollection.push(part)
+            })
+
+            masterRellaTips.weaponCombos.forEach(part2 => {
+                dialogueCollection.push(part2)
+            })
+
+            masterRellaTips.lobby.forEach(part3 => {
+                dialogueCollection.push(part3)
+            })
+            let maxVal = dialogueCollection.length;
+
+            let randomVal = Math.floor(Math.random() * maxVal)
+
+            player.sendMessage(otherMasterRellaMessages.prefix[0] + dialogueCollection[randomVal])
+
+        }
+        else {
+            let dialogueCollectionTips = masterRellaTips.secrets
+            let maxVal = dialogueCollectionTips.length;
+
+            let randomVal = Math.floor(Math.random() * maxVal)
+            player.sendMessage(otherMasterRellaMessages.prefix[0] + dialogueCollectionTips[randomVal])
+
+        }
+        player.removeTag("tipped")
+        player.removeTag("getTip")
+    }
+
+
+
+
+}
 
 function PetalExplosion(player,petalCooldown,entity){
     if(petalCooldown.getScore(player) == 0){

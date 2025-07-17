@@ -399,7 +399,6 @@ function CheckForUEGCYBERSUnlock() {
     let active = false
     uegCyberSCollection.forEach(arena => {
         if (world.scoreboard.getObjective("unlocked_arenas_new").getScore(arena.enabledName) > 0) {
-            world.sendMessage(arena.displayName + " works")
             value++
         }
     })

@@ -14,3 +14,6 @@ tag @s remove code_02
 tag @s remove code_03
 tag @s remove code_04
 tag @s remove code_05
+tag @s remove code_06
+tag @s remove code_07
+tag @s remove code_08

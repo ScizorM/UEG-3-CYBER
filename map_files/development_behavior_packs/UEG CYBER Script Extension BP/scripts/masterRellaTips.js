@@ -1,3 +1,5 @@
+ï»¿export {masterRellaTips, otherMasterRellaMessages }
+
 const masterRellaTips = {
     gameplay: [
         "Don't forget to fill up yer loadout, ya hear? I don' wanna see any of y'all go boom while only having one weapon.",
@@ -5,17 +7,18 @@ const masterRellaTips = {
         "If you ain't happy with the selections the pihs made for you in the arena vote lobby, REROLL THEM! (If yer dang operators ain't disabled it)",
         "Don't forget there might be a deathzone in the ceiling! I hear so many of y'all shooting yerselves into the sun and losing 'cause of it.",
         "Watch out for snipers after respawning! They might shoot at ya when you ain't payin' attention.",
-        ""
+        "Did ya know you can do more than one dash while in midair? Just keep punchin' that jump button!!!!"
     ],
     weaponCombos: [
         "You know that thingy you can use to keep yerself ferm fallin' by placing a platferm? You can use it with the green thingy that goes kaboom when your enemies are nearby to recover just a lil' bit. Just place the platferm, set the mine down, jump, then look down and beat the heck outta that thing and you'll go a bit in the air.",
-        "That one weird rifle thingy... Not like any rifle from back in my day... The §dCharged Bolt Rifle§r, that's it. Did you know it §elaunches you in any direction opposite to where yer lookin'?§r Y'all can use it to §eblast yerself upwerds if you look down enough.§r Hope you ain't afraid of heights.",
+        "That one weird rifle thingy... Not like any rifle from back in my day... The Â§dCharged Bolt RifleÂ§r, that's it. Did you know it Â§elaunches you in any direction opposite to where yer lookin'?Â§r Y'all can use it to Â§eblast yerself upwerds if you look down enough.Â§r Hope you ain't afraid of heights.",
         "I heard a set of pistols you can get from Marque has a problem with overheatin'... Nothin' a fish from the sea can't help with! If you can get yerself ahold of an Archerfish, you can shake that thingy up to cause it to spit out some water to cool that dern pistol set down.",
         "Some of y'all ain't usin' the dang landmines right! You don't need to wait for someone to trip over them, just shoot at 'em! They'll cause a chain reaction if they are near other mines!",
         "I been eavesdroppin' on some passersby recently, and they say there's some new strategy in the arena around using the Implosion Grenade to keep yourself from falling for a bit by shooting it against a wall you are falling on. Sounds like a lot of bologna to me, but you can always give it a shot and let me know how it goes.",
         "Where the heck are they getting shrooms for mines now?! I reckon the pihs were really diggin' for ideas when makin' that one. Anyways, I hear it can be used to make yer enemies easier to hit with precise firearms. The... Deep Striker especially, I hear? Whatever that dern thing is. Who is in charge of naming these dern guns anyways?",
         "Thar's a big fist you can buy at Marque's nowadays I hear. Heard it gives people the ability to punch Vulcan Cannon blasts, even yall's own. What in tarnation is going on over there???",
-        "Which of y'all designed this dang 'Deep Striker'? Why in tarnation does it shoot you if you miss your dern target?! Not only that, I hear some of y'all usin' it to purposefully launch yerselves across the dang stadium??? Are y'all INSANE?"
+        "Which of y'all designed this dang 'Deep Striker'? Why in tarnation does it shoot you if you miss your dern target?! Not only that, I hear some of y'all usin' it to purposefully launch yerselves across the dang stadium??? Are y'all INSANE?",
+        "If ya get the Scaler Bomb from Marque, you can stack a ton of 'em in the same spot to increase how long the effect lasts for, and how large the player around it is scaled."
     ],
     lobby: [
         //Reactor Tips
@@ -23,6 +26,8 @@ const masterRellaTips = {
         "Ever wanted to make your gamin' a little more intense or less intense? Head on over to the Reactor Settings Center on the second floor to view all the things you can do to make your experience just a liiilll' betterrr.",
         "Thar's some fun gamemodes you can't play any other way in the Reactor store on the second floor. Like one that has a dern FISH that you get to use to fly around!!! YEEEEEHAWWWWW!!!!",
         "I hear there's some way to make all of y'all playin' have the same items in the Reactor store on the second floor.",
+        "Sick of letting people have free will and wanna do the same dang arena over and over? Y'all can disable the arena vote option in the Reactor Settings Store on the second floor to do that. After that, just head over to Bilfred's on the same floor to select which arena you wanna do at their arena select terminal.",
+        "If you miss the good ol' days when these dang newgens with their dumb, stupid 'dashes' and 'abilities' didn't exist, y'all should check the Reactor settings store on the second floor for options to make that change.",
         //Credits Tips
         "If you wanna know who made this place, take a gander at the credits on the second floor.",
         //Music Tips
@@ -32,6 +37,7 @@ const masterRellaTips = {
         "Wanna change what arenas can be voted for or unlock new ones? Check out the place Bilfred runs on the second floor. They got tons of new places to explore there. There are also other stores that sell arenas on the third floor.",
         "If y'all don't wanna vote for arenas and just play the same one over and over instead, turn off the arena voting setting on the Reactor Store on the second floor. Then in Bilfred's store on the same floor, y'all should be able to select which arena you wanna play over and over. Y'all are boring, I swear.",
         //Splendid Tips
+        "You may wonder where in tarnation all the skins are in Splendid Suits and other participating stores, well, every 15 minutes they restock.",
         "Don' like how ya look? Check out the Splendid Suits place on the second floor. They've got an endlessly-rotating collection of suits y'all can buy and wear. (Y'all can also change yer outfit in there at the computer they've got) Don't forget there's also other stores on the third floor that sell skins as well.",
         //Marque Tips
         "Some weapon one of yer friends usin' pissin' you off? If yer operators don't have this disabled, BAN IT! Just head on over to Marque's on the second floor and select the item makin' you mad and click ban item.",
@@ -52,13 +58,18 @@ const masterRellaTips = {
         "If y'all don't wanna take the escalators, don't forget you can use the Quick Warp menu built into the menu item on your hotbar. Not only that, it also allows you to view your inventory."
     ],
     secrets: [
-        "§cHave yew seen some weird ol' pih heads around while yer explorin'? I hear them heads are used for somethin'. Might be me losin' my mind though.",
-        "§cThe first floor seems a lil' suspicious... Look for weird doors down there.",
-        "§cI hear there's four sets of five pih heads around...",
-        "§cI hear there's a gun made of shredded cheese hidden within the depths of this world somewhere. Sounds yummy.",
-        "§cI was told about some fella named Joe known to fall from the sky. Sounds like a buncha balogna to me.",
-        "§cSome players have been seen snoopin' around the first floor of the lobby just to vanish when they get close to the sides of the escalators.",
-        "§cI don't think all the pih heads are in the lobby.",
+        "Â§cHave yew seen some weird ol' pih heads around while yer explorin'? I hear them heads are used for somethin'. Might be me losin' my mind though.",
+        "Â§cThe first floor seems a lil' suspicious... Look for weird doors down there.",
+        "Â§cI hear there's four sets of five pih heads around...",
+        "Â§cI hear there's a gun made of shredded cheese hidden within the depths of this world somewhere. Sounds yummy.",
+        "Â§cI was told about some fella named Joe known to fall from the sky. Sounds like a buncha balogna to me.",
+        "Â§cSome players have been seen snoopin' around the first floor of the lobby just to vanish when they get close to the sides of the escalators.",
+        "Â§cI don't think all the pih heads are in the lobby.",
+        "Â§cI heard the word 'Burger' is used for a code somewhere?",
+        "Â§cWhat're you talkin' about? I never said I would give you better advice just because you gave me money. Oh, wait... I did. Sorry. Better luck next time.",
+        "Â§cSome rascal sent me a little voucher with some gibberish on it. I'd say you want it more than me, take a look. (It says 'r3llaCh22z1!' on it.)",
+        "Â§cThere was a little robot running around the lobby with the text 'Il03vePizAA!!!' on it, not sure where it went though. Probably outta here by now.",
+        "Â§cSorry youngun, I don't have anything to tell you right now. I'm keepin' that cash though."
         //If you are reading this, fuck you -ScizorM, 7/12/2025
     ]
 
@@ -68,29 +79,9 @@ const masterRellaTips = {
 
 const otherMasterRellaMessages = {
     prefix: [
-        "§e[Master Rella]§r "
+        "Â§e[Master Rella]Â§r "
     ],
     tip: [
         "Thank yew for yer tip! I'll make shure you'll get a guuuuuuud sayin' from me next time."
     ]
-}
-
-const masterRellaRatesWOTip = {
-    gameplay: [0,40],
-    lobby: [41,80],
-    weaponCombos: [81,120],
-    secrets:[121,130],
-    numRange:[0,130]
-
-
-}
-
-const masterRellaRatesWTip = {
-    gameplay: [0, 0],
-    lobby: [0, 0],
-    weaponCombos: [0, 0],
-    secrets: [0, 130],
-    numRange: [0, 130]
-
-
 }

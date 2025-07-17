@@ -2,20 +2,20 @@
 
 Full list of wisdom:
 
-- chaining dashes (using multiple back to back)
-- donating to global credits
-- use the charged bolt rifle to launch yourself
-- landmines can cause chain reactions
-- toggling what arenas to load in the arena store
-- enable/disable arena voting in the settings store
-- allow for the map to be played like older versions in the settings store
-= skin shops (that can reroll) reroll every 15 minutes
-- food items can be purchased at the base floor that can be used ingame if you have the utility lunchbox
-- extra weapons can be purchased around the lobby
-- weapons can be banned, which prevents players from using them
-- the player can complete training missions in the training center to improve at the game
-- the player can complete advancements to earn rewards
-- there might be some secrets around the lobby
+- chaining dashes (using multiple back to back)////
+- donating to global credits///
+- use the charged bolt rifle to launch yourself////
+- landmines can cause chain reactions////
+- toggling what arenas to load in the arena store///
+- enable/disable arena voting in the settings store////
+- allow for the map to be played like older versions in the settings store////
+= skin shops (that can reroll) reroll every 15 minutes///
+- food items can be purchased at the base floor that can be used ingame if you have the utility lunchbox///
+- extra weapons can be purchased around the lobby///
+- weapons can be banned, which prevents players from using them///
+- the player can complete training missions in the training center to improve at the game///
+- the player can complete advancements to earn rewards///
+- there might be some secrets around the lobby///
 
 If the deep striker is unlocked...
 - the deep striker can be used to distance yourself from enemies

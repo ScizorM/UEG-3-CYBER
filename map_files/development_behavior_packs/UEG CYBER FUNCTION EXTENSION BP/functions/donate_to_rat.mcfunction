@@ -1,0 +1,5 @@
+execute if score @s[tag=!tipped] credits matches 5.. run tellraw @s {"rawtext":[{"text":"§e[Master Rella] §rMoney? For me? Thank ya, bud! I'll give ya a bitta §cspecial§r advice next time you ask for some wisdom."}]}
+execute as @s[tag=!tipped] run execute unless score @s credits matches 5.. run tellraw @s {"rawtext":[{"text":"§e[Master Rella] §rSorry bud, I don't feel right taking money from ya if you can't afford even that much."}]}
+execute as @s[tag=tipped] run tellraw @s {"rawtext":[{"text":"§e[Master Rella] §rSorry pal, it seems like you haven't redeemed the tip you paid for last time. Get that one then you can pay me again."}]}
+execute if score @s[tag=!tipped] credits matches 5.. run tag @s add tipped
+execute if score @s[tag=!tipped] credits matches 5.. run scoreboard players remove @s credits 5
