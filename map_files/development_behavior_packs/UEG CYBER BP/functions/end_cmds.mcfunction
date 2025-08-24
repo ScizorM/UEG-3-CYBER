@@ -32,3 +32,5 @@ scoreboard players set "value" triggerAdvancementCheck 1
 
 kill @e[type=sm:gamblinmachine_static]
 tag @a add changeSkin
+
+scoreboard players set @a horse_charges 0

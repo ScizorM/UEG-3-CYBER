@@ -17,7 +17,21 @@ world.beforeEvents.worldInitialize.subscribe((initEvent) => {
             //code obtained from Minato from the Bedrock Addons Discord, I hate mojang so much for removing holiday creator features and ruining everything
             const dimension = world.getDimension("overworld")
             const viewDir = source.getViewDirection()
-            const vulcanBlast = source.dimension.spawnEntity("minecraft:arrow", source.getHeadLocation());
+
+            source.runCommand("scoreboard players add @s horse_charges 0")
+
+            let horseChargeSB = world.scoreboard.getObjective("horse_charges")
+
+            let horseChargePlayer = horseChargeSB.getScore(source)
+
+            let projectileT = "minecraft:arrow"
+
+            if (horseChargePlayer > 0) {
+                projectileT = "sm:freedom_horse"
+                horseChargeSB.addScore(source,-1)
+            }
+
+            const vulcanBlast = source.dimension.spawnEntity(projectileT, source.getHeadLocation());
             const projectile = vulcanBlast.getComponent("projectile");
             projectile.owner = source;
             const power = 1
@@ -342,7 +356,7 @@ world.beforeEvents.worldInitialize.subscribe((initEvent) => {
                     player.runCommand("effect @s nausea 10 8")
                 }
                 else if (assignedItemSBPlayer == 2) { //Freedom Burger
-                    player.runCommand("scoreboard players set @s food_effect_uses 3")
+                    player.runCommand("scoreboard players set @s horse_charges 3")
                 }
                 else if (assignedItemSBPlayer == 3) { //Hog Ramen
                     player.runCommand("scoreboard players set @s food_effect_uses 3")
@@ -451,16 +465,7 @@ world.beforeEvents.worldInitialize.subscribe((initEvent) => {
     });
     initEvent.itemComponentRegistry.registerCustomComponent("sm:kusarigama", {
         onHitEntity(event) {
-            const { itemStack, attackingEntity, hitEntity } = event;
-            var yDisplacement = attackingEntity.location.y - hitEntity.location.y
 
-            hitEntity.applyKnockback(attackingEntity.getViewDirection().x, attackingEntity.getViewDirection().z, -2, Math.min(Math.max(yDisplacement, -1), 1))
-            hitEntity.runCommand(`particle sm:gobbler_hit ${hitEntity.location.x} ${hitEntity.location.y + 1} ${hitEntity.location.z}`)
-            if (hitEntity.typeId == "minecraft:player") {
-                hitEntity.playSound("cannon_bludgeon")
-            }
-
-            attackingEntity.playSound("cannon_bludgeon")
         },
         onUse(event) {
             var entityRay = false
@@ -480,7 +485,10 @@ world.beforeEvents.worldInitialize.subscribe((initEvent) => {
                     entityRC.push(tempRay)
                 }
 
+
             }
+
+
 
             RaySpreadData(source)
             // var blockRC = source.dimension.getBlockFromRay(rayLocation, lookDir, { includeLiquidBlocks: false, includePassableBlocks: false, maxDistance: 25 })
@@ -825,6 +833,21 @@ world.beforeEvents.worldInitialize.subscribe((initEvent) => {
             source.runCommand("execute positioned ~ ~1 ~ run summon sm:scaler_bomb ^ ^ ^1 ")
         }
     });
+    initEvent.itemComponentRegistry.registerCustomComponent("sm:reload_test_zone", {
+        onUse(event) {
+            const { itemStack, source } = event;
+            source.runCommand("setblock -163 0 630 redstone_block")
+        }
+    });
+    initEvent.itemComponentRegistry.registerCustomComponent("sm:exit_test_zone", {
+        onUse(event) {
+            const { itemStack, source } = event;
+            source.removeTag("tutorial")
+            source.runCommand("clear @s")
+            source.runCommand("effect @s clear")
+            source.runCommand("tp @s 166 13 16 facing 168 13 16")
+        }
+    });
     initEvent.itemComponentRegistry.registerCustomComponent("sm:blushing_bloomfan", {
         onUse(event) {
             const { itemStack, source } = event;
@@ -844,9 +867,10 @@ world.beforeEvents.worldInitialize.subscribe((initEvent) => {
                 PlayWeaponSounds("blossom_fan","blossom_fan_global",source,1,1)
                 // source.runCommand(`execute positioned ${blockRC.block.location.x} ${blockRC.block.location.y} ${blockRC.block.location.z} run /function explosion_deepstriker`)
                 // source.runCommand(`execute positioned ${blockRC.block.location.x} ${blockRC.block.location.y} ${blockRC.block.location.z} run /summon sm:explosion_deepstriker`)
-                source.spawnParticle("sm:petal_ring",spawnPos)
-                source.spawnParticle("sm:petal_warning",spawnPos)
-                source.spawnParticle("sm:heart_burst",spawnPos)
+
+                source.runCommand(`particle sm:petal_ring ${spawnPos.x} ${spawnPos.y} ${spawnPos.z}`)
+                source.runCommand(`particle sm:petal_warning ${spawnPos.x} ${spawnPos.y} ${spawnPos.z}`)
+                source.runCommand(`particle sm:heart_burst ${spawnPos.x} ${spawnPos.y} ${spawnPos.z}`)
                 source.dimension.spawnEntity("sm:petal_emitter",spawnPos)
                 let particleType = "sm:heart"
                 var loopTimes = 50
@@ -1439,7 +1463,12 @@ function RaySpreadData(source) {
             let hitEntity = hit.entity //redundancy of entity
             let particleType = "sm:chain" //no longer used, saved just in case I need it
             let loopTimes = 25 //how many times the chain spawns between the user and the targeted entity (spaghetti code but if it ain't broke don't fix it)
-            PullPlayerToSpot(hitEntity,source.location) //pull targeted entity to the user's location
+            PullPlayerToSpot(hitEntity, source.location) //pull targeted entity to the user's location
+
+            hitEntity.runCommand("playsound kusarigama_chain @s")
+            hitEntity.runCommand("playsound kusarigama_chain_global @a")
+            source.runCommand('playsound kusarigama_chain @s')
+
             let rayDisplacement = { x: source.location.x - hitEntity.location.x, y: source.location.y - hitEntity.location.y + .4, z: source.location.z - hitEntity.location.z }
             let totalDisplacement = Math.abs(rayDisplacement.x) + Math.abs(rayDisplacement.y) + Math.abs(rayDisplacement.z)
             for (let i = 1; i < loopTimes; i = i + .25) {

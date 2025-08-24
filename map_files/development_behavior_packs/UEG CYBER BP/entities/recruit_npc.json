@@ -40,8 +40,8 @@
 				"npc_data": {
 					"portrait_offsets": {
 						"translate": [
-							-7,
 							0,
+							50,
 							0
 						],
 						"scale": [
@@ -122,6 +122,9 @@
 						},
 						{
 							"variant": 19
+						},
+						{
+							"variant": 20
 						}
 					]
 				}
@@ -132,7 +135,35 @@
 				"minecraft:collision_box": {
 					"height": 0.9,
 					"width": 0.8
+				},
+				"minecraft:is_charged": true
+			},
+			"sm:collision_standing": {
+				"minecraft:collision_box": {
+					"height": 1.5,
+					"width": 0.8
 				}
+			},
+			"sm:animation_idle": {
+				"minecraft:is_stackable": true
+			},
+			"sm:animation_thinking": {
+				"minecraft:is_dyeable": true
+			},
+			"sm:animation_facepalm": {
+				"minecraft:is_tamed": true
+			},
+			"sm:animation_soyjak": {
+				"minecraft:is_sheared": true
+			},
+			"sm:animation_looking_up": {
+				"minecraft:is_saddled": true
+			},
+			"sm:animation_talking": {
+				"minecraft:is_illager_captain": true
+			},
+			"sm:animation_listening": {
+				"minecraft:is_baby": true
 			}
 		},
 		"events": {
@@ -140,6 +171,52 @@
 				"add": {
 					"component_groups": [
 						"sm:collision_sitting"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"sm:collision_standing"
+					]
+				}
+			},
+			"sm:remove_sitting": {
+				"remove": {
+					"component_groups": [
+						"sm:collision_sitting"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"sm:collision_standing"
+					]
+				}
+			},
+			"sm:remove_all": {
+				"remove": {
+					"component_groups": [
+						"sm:collision_sitting",
+						"sm:collision_standing",
+						"sm:animation_idle",
+						"sm:animation_thinking",
+						"sm:animation_facepalm",
+						"sm:animation_soyjak",
+						"sm:animation_looking_up",
+						"sm:animation_talking",
+						"sm:animation_listening"
+					]
+				}
+			},
+			"sm:idle": {
+				"add": {
+					"component_groups": [
+						"sm:animation_idle"
+					]
+				}
+			},
+			"sm:animation_thinking": {
+				"add": {
+					"component_groups": [
+						"sm:animation_thinking"
 					]
 				}
 			}

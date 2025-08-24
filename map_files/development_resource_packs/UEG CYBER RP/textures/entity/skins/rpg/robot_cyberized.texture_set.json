@@ -1,0 +1,7 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "robot_cyberized",
+		"metalness_emissive_roughness": "robot_cyberized_mer"
+	}
+}

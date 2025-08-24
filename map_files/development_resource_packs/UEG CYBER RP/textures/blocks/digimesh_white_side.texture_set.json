@@ -1,0 +1,7 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "digimesh_white_side",
+		"metalness_emissive_roughness": "digimesh_white_side_mer"
+	}
+}

@@ -8,16 +8,59 @@
 				"default": "guardian"
 			},
 			"textures": {
-				"default": "textures/entity/skins/recruit"
+				"default": "textures/entity/skins/recruit",
+				"skin2": "textures/entity/skins/acid_specialist",
+				"skin3": "textures/entity/skins/starlight_unit",
+				"skin4": "textures/entity/skins/conduit",
+				"skin5": "textures/entity/skins/finite",
+				"skin6": "textures/entity/skins/steampunk_navigator",
+				"skin7": "textures/entity/skins/pale_crusader",
+				"skin8": "textures/entity/skins/iron_maiden",
+				"skin9": "textures/entity/skins/natasha",
+				"skin10": "textures/entity/skins/sol_invictus",
+				"skin11": "textures/entity/golden_striker",
+				"skin12": "textures/entity/skins/monarch_of_hearts",
+				"skin13": "textures/entity/skins/gummy_contraption",
+				"skin14": "textures/entity/skins/red_recruit_final",
+				"skin15": "textures/entity/skins/rpg/demon_cyberized",
+				"skin16": "textures/entity/skins/demolitionist_ueg1",
+				"skin17": "textures/entity/skins/rpg/spectral_cyberized",
+				"skin18": "textures/entity/skins/mushroom_person",
+				"skin19": "textures/entity/skins/recruit",
+				"skin20": "textures/entity/skins/shaparium_robot"
 			},
 			"geometry": {
-				"default": "geometry.default_skin_npc"
+				"default": "geometry.default_skin_npc",
+				"skin2": "geometry.acid_specialist_new",
+				"skin3": "geometry.starlight_unit",
+				"skin4": "geometry.conduit",
+				"skin5": "geometry.finite",
+				"skin6": "geometry.steampunk_navigator",
+				"skin7": "geometry.pale_crusader",
+				"skin8": "geometry.iron_maiden",
+				"skin9": "geometry.natasha",
+				"skin10": "geometry.sol_invictus",
+				"skin11": "geometry.golden_striker",
+				"skin12": "geometry.monarch_of_hearts",
+				"skin13": "geometry.gummy_contraption",
+				"skin14": "geometry.red_recruit",
+				"skin15": "geometry.demon_cyberized_full",
+				"skin16": "geometry.ueg1_skin_full",
+				"skin17": "geometry.spectral_full",
+				"skin18": "geometry.mushroom_person",
+				"skin19": "geometry.default_skin_full",
+				"skin20": "geometry.shaparium_robot"
 			},
 			"render_controllers": [
-				"controller.render.guardian"
+				"controller.render.lobbyNPC"
 			],
 			"animations": {
-				"general": "animation.default_skin_npc.sitting"
+				"general": "controller.animation.recruit_npc",
+				"sit": "animation.default_skin_npc.sitting",
+				"idle": "animation.default_skin_npc.idle",
+				"thinking": "animation.default_skin_npc.thinking",
+				"looking_up_conduit": "animation.conduit.looking_up",
+				"talking": "animation.acid_specialist_new.talking"
 			},
 			"scripts": {
 				"animate": [

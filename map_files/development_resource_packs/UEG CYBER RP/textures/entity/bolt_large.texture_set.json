@@ -1,0 +1,7 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "bolt_large",
+		"metalness_emissive_roughness": "bolt_large_mer"
+	}
+}

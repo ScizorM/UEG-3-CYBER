@@ -1,0 +1,86 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.recruit_npc": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						"idle"
+					],
+					"transitions": [
+						{
+							"sit": "query.variant == 1"
+						},
+						{
+							"idle": "query.variant==0"
+						},
+						{
+							"thinking": "query.variant==2"
+						},
+						{
+							"conduitLookingUp": "query.variant==3"
+						},
+						{
+							"talking": "query.variant==20"
+						}
+					],
+					"blend_transition": 0.05
+				},
+				"sit": {
+					"animations": [
+						"sit"
+					],
+					"transitions": [
+						{
+							"default": "query.variant != 1"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"idle": {
+					"animations": [
+						"idle"
+					],
+					"transitions": [
+						{
+							"default": "query.variant != 0"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"thinking": {
+					"animations": [
+						"thinking"
+					],
+					"transitions": [
+						{
+							"default": "query.variant!=2"
+						}
+					]
+				},
+				"conduitLookingUp": {
+					"animations": [
+						"looking_up_conduit"
+					],
+					"transitions": [
+						{
+							"default": "query.variant!=3"
+						}
+					]
+				},
+				"talking": {
+					"animations": [
+						"talking"
+					],
+					"transitions": [
+						{
+							"default": "query.variant!=20"
+						}
+					]
+				}
+			}
+		}
+	}
+}

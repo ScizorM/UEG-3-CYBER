@@ -1,0 +1,67 @@
+//bridge-file-version: #31
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.lobbyNPC": {
+			"geometry": "Array.models[query.variant]",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"textures": [
+				"Array.skins[query.variant]"
+			],
+			"arrays": {
+				"textures": {
+					"Array.skins": [
+						"Texture.default",
+						"Texture.skin2",
+						"Texture.skin3",
+						"Texture.skin4",
+						"Texture.skin5",
+						"Texture.skin6",
+						"Texture.skin7",
+						"Texture.skin8",
+						"Texture.skin9",
+						"Texture.skin10",
+						"Texture.skin11",
+						"Texture.skin12",
+						"Texture.skin13",
+						"Texture.skin14",
+						"Texture.skin15",
+						"Texture.skin16",
+						"Texture.skin17",
+						"Texture.skin18",
+						"Texture.skin19",
+						"Texture.skin20"
+					]
+				},
+				"geometries": {
+					"Array.models": [
+						"Geometry.default",
+						"Geometry.skin2",
+						"Geometry.skin3",
+						"Geometry.skin4",
+						"Geometry.skin5",
+						"Geometry.skin6",
+						"Geometry.skin7",
+						"Geometry.skin8",
+						"Geometry.skin9",
+						"Geometry.skin10",
+						"Geometry.skin11",
+						"Geometry.skin12",
+						"Geometry.skin13",
+						"Geometry.skin14",
+						"Geometry.skin15",
+						"Geometry.skin16",
+						"Geometry.skin17",
+						"Geometry.skin18",
+						"Geometry.skin19",
+						"Geometry.skin20"
+					]
+				}
+			}
+		}
+	}
+}

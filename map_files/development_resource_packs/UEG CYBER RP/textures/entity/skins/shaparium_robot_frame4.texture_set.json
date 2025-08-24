@@ -1,0 +1,7 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "shaparium_robot_frame4",
+		"metalness_emissive_roughness": "shaparium_robot_frame4_mer"
+	}
+}

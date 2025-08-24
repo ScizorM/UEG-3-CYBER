@@ -1,0 +1,7 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "goal_gradient",
+		"metalness_emissive_roughness": "goal_gradient_mer"
+	}
+}

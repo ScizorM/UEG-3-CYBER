@@ -1,0 +1,7 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "wire_block",
+		"metalness_emissive_roughness": "wire_block_mer"
+	}
+}

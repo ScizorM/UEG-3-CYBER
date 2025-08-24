@@ -4,11 +4,13 @@ execute if score game_active game_active matches 1 run function game_active_cmds
 execute as @a[lm=0,l=0] run tag @s remove abilitySound
 execute as @a[lm=1,tag=!abilitySound] run execute positioned as @s run function playAbilitySound
  
-execute as @a[tag=!team_nu,tag=!team_lambda,tag=enter_reactor,tag=!reactor_tutorial] run function start_settings_info
- 
-execute as @a[tag=!team_nu,tag=!team_lambda,tag=enter_music,tag=!music_tutorial] run function start_music_info
 
  
+
+execute as @e[type=sm:freedom_horse] run scoreboard players add @s horse_timer 1
+execute as @e[type=sm:freedom_horse,scores={horse_timer=60..}] run execute positioned as @s run function explosion_crimson_weak
+execute as @e[type=sm:freedom_horse,scores={horse_timer=60..}] run execute positioned as @s run summon sm:explosion_crimson_laser
+execute as @e[type=sm:freedom_horse,scores={horse_timer=61..}] run kill @s
 
 
 execute as @a run execute positioned as @s run execute if block ~ ~ ~ sm:training_death run tag @s add training_death

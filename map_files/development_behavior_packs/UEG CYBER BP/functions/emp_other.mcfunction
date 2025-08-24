@@ -21,3 +21,5 @@ scoreboard players set @s dashes 0
  
 playsound emp @s
  
+playsound emp_stun @s
+playsound emp_stun_global @a

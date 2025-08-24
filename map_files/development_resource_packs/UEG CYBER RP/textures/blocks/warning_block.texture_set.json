@@ -1,0 +1,7 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "warning_block",
+		"metalness_emissive_roughness": "warning_block_mer"
+	}
+}

@@ -10,7 +10,7 @@ const itemNameList = new Array(
 const itemDescList = new Array(
     "A hot dog with an unpleasant green sludge splattered all over it.\n\nWhen consumed, it grants the following effects:\n\n- §aJump Boost IX (5 Seconds)\n§r- §cNausea IX (10 Seconds)\n§r- §6Gob Goo follows you around\n\n§eThis item can be applied to your §bUtility Lunchbox §eat Marque's Weapon Center.\n\n",
     "A pack of fries with an unpleasant green sludge splattered all over them.\n\nWhen consumed, it grants the following effects:\n\n- §aSpeed IX (5 Seconds)\n§r- §cNausea IX (10 Seconds)\n§r- §6Gob Goo follows you around\n\n§eThis item can be applied to your §bUtility Lunchbox §eat Marque's Weapon Center.\n\n",
-    "A cheeseburger with the essence of freedom infused within it.\n\nWhen consumed, it grants the following effects:\n\n- §aReplaces projectiles from the Vulcan Cannon with a `freedom horse` cluster bomb for three shots.§r\n- §cAll shots are lost when you die/respawn.§r\n- §cAlso, this comes at the cost of extreme slowness while firing the Vulcan Cannon.\n\n§eThis item can be applied to your §bUtility Lunchbox §eat Marque's Weapon Center.\n\n",
+    "A cheeseburger with the essence of freedom infused within it.\n\nWhen consumed, it grants the following effects:\n\n- §aReplaces projectiles from the Vulcan Cannon with a `freedom horse` cluster bomb for three shots.§r\n- §cAll shots are lost when you die/respawn, and when the game ends.§r\n- §cAlso, this comes at the cost of extreme slowness while firing the Vulcan Cannon.\n\n§eThis item can be applied to your §bUtility Lunchbox §eat Marque's Weapon Center.\n\n",
     "A bowl of ramen with tusks covered in unidentifiable runes. Somehow, the steam coming off the broth seems to never subside.\n\nWhen consumed, it grants the following effects:\n\n- §aFor the next three hits with the Repulsion Blade, an explosion will spawn on the hit player, launching you backwards.\n§r- §aSlow Falling is granted upon hit.\n§r- §aA hog that can be used to chain the explosion combo spawns on hit.\n\n§eThis item can be applied to your §bUtility Lunchbox §eat Marque's Weapon Center.\n\n"
 )
 
@@ -76,12 +76,12 @@ const goblinShopBundleList = new Array(
 
 const freedomShopItemList = new Array(
     2, //Freedom Burger
-    2 //Freedom Burger
+    2
 )
 
 const foodShopLength = new Array(
     goblinShopItemList.length,
-    freedomShopItemList.length
+    1
 )
 
 const bundleShopLength = new Array(

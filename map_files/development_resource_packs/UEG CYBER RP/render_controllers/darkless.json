@@ -3,12 +3,6 @@
 	"format_version": "1.8.0",
 	"render_controllers": {
 		"controller.render.darkless": {
-			"overlay_color": {
-				"r": 25555,
-				"g": 0,
-				"b": 1,
-				"a": 1
-			},
 			"geometry": "Geometry.default",
 			"materials": [
 				{

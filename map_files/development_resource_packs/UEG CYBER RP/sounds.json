@@ -1,79 +1,51 @@
-//bridge-file-version: #7
 {
-	"individual_event_sounds": {
-		"events": {}
-	},
-	"block_sounds": {},
 	"entity_sounds": {
-		"defaults": {
-			"volume": 1,
-			"pitch": [
-				0.8,
-				1.2
-			],
-			"events": {
-				"fall.big": {
-					"sound": "damage.fallbig",
-					"volume": 0.75,
-					"pitch": 1
-				},
-				"fall.small": {
-					"sound": "damage.fallsmall",
-					"volume": 0.75,
-					"pitch": 1
-				},
-				"splash": {
-					"sound": "random.splash",
-					"pitch": [
-						0.6,
-						1.4
-					]
-				},
-				"swim": {
-					"sound": "random.swim",
-					"pitch": [
-						0.6,
-						1.4
-					]
-				},
-				"fizz": {
-					"sound": "random.fizz",
-					"volume": 0.7,
-					"pitch": [
-						1.2,
-						2
-					]
-				},
-				"drink": {
-					"sound": "random.drink",
-					"volume": 0.5,
-					"pitch": [
-						0.9,
-						1
-					]
-				},
-				"eat": {
-					"sound": "random.eat",
-					"volume": [
-						0.5,
-						1.5
-					],
-					"pitch": [
-						0.8,
-						1.2
-					]
-				},
-				"ambient": {},
-				"flop": {},
-				"hurt": "game.player.hurt",
-				"death": "game.player.die",
-				"ambient.in.water": {},
-				"hurt.in.water": {},
-				"death.in.water": {},
-				"ambient.in.raid": {}
-			}
-		},
 		"entities": {
+			"sm:freedom_horse": {
+				"events": {
+					"add.chest": {
+						"pitch": [0.8, 1.2],
+						"sound": "mob.horse.armor",
+						"volume": 1
+					},
+					"ambient": "mob.horse.idle",
+					"armor": {
+						"pitch": 1,
+						"sound": "mob.horse.armor",
+						"volume": 0.6
+					},
+					"breathe": {
+						"pitch": 1,
+						"sound": "mob.horse.breathe",
+						"volume": 0.7
+					},
+					"death": "mob.horse.death",
+					"eat": {
+						"pitch": [0.8, 1.2],
+						"sound": "mob.horse.eat",
+						"volume": [0.5, 1.5]
+					},
+					"hurt": "mob.horse.hit",
+					"jump": {
+						"pitch": 1,
+						"sound": "mob.horse.jump",
+						"volume": 0.4
+					},
+					"land": {
+						"pitch": 1,
+						"sound": "mob.horse.land",
+						"volume": 0.4
+					},
+					"mad": "mob.horse.angry",
+					"saddle": {
+						"pitch": 1,
+						"sound": "mob.horse.leather",
+						"volume": 0.6
+					}
+				},
+				"pitch": [0.8, 1.2],
+				"volume": 0.8
+			},
 			"sm:landmine_ver_nu": {
 				"volume": 0,
 				"events": {
@@ -108,6 +80,57 @@
 					}
 				}
 			}
+		},
+		"defaults": {
+			"volume": 1,
+			"pitch": [0.8, 1.2],
+			"events": {
+				"fall.big": {
+					"sound": "damage.fallbig",
+					"volume": 0.75,
+					"pitch": 1
+				},
+				"fall.small": {
+					"sound": "damage.fallsmall",
+					"volume": 0.75,
+					"pitch": 1
+				},
+				"splash": {
+					"sound": "random.splash",
+					"pitch": [0.6, 1.4]
+				},
+				"swim": {
+					"sound": "random.swim",
+					"pitch": [0.6, 1.4]
+				},
+				"fizz": {
+					"sound": "random.fizz",
+					"volume": 0.7,
+					"pitch": [1.2, 2]
+				},
+				"drink": {
+					"sound": "random.drink",
+					"volume": 0.5,
+					"pitch": [0.9, 1]
+				},
+				"eat": {
+					"sound": "random.eat",
+					"volume": [0.5, 1.5],
+					"pitch": [0.8, 1.2]
+				},
+				"ambient": {},
+				"flop": {},
+				"hurt": "game.player.hurt",
+				"death": "game.player.die",
+				"ambient.in.water": {},
+				"hurt.in.water": {},
+				"death.in.water": {},
+				"ambient.in.raid": {}
+			}
 		}
-	}
+	},
+	"individual_event_sounds": {
+		"events": {}
+	},
+	"block_sounds": {}
 }

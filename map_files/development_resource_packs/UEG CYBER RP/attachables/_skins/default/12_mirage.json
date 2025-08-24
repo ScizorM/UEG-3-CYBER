@@ -1,0 +1,32 @@
+//bridge-file-version: #18
+{
+	"format_version": "1.16.100",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "sm:skin_12",
+			"materials": {
+				"default": "guardian"
+			},
+			"textures": {
+				"default": "textures/entity/skins/mirage",
+				"frame_2": "textures/entity/skins/mirage_frame2",
+				"frame_3": "textures/entity/skins/mirage_frame2",
+				"frame_4": "textures/entity/skins/mirage_frame3",
+				"frame_5": "textures/entity/skins/mirage_frame3",
+				"frame_6": "textures/entity/skins/mirage_frame4",
+				"frame_7": "textures/entity/skins/mirage_frame4",
+				"frame_8": "textures/entity/skins/mirage",
+				"dash1": "textures/entity/skins/mirage",
+				"dash2": "textures/entity/skins/mirage",
+				"dash3": "textures/entity/skins/mirage",
+				"dash4": "textures/entity/skins/mirage"
+			},
+			"geometry": {
+				"default": "geometry.mirage"
+			},
+			"render_controllers": [
+				"controller.render.skin_animations"
+			]
+		}
+	}
+}

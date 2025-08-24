@@ -165,24 +165,6 @@
                   }
                 ]
               }
-            },
-            {
-              "progress_text_label@progress_text_label": {
-                "offset": [
-                  83,
-                  8
-                ],
-                "layer": 7
-              }
-            },
-            {
-              "ability_not_available@ability_not_available": {
-                "offset": [
-                  83,
-                  8
-                ],
-                "layer": 6
-              }
             }
           ],
           "bindings": [
@@ -449,14 +431,6 @@
     ]
   },
 
-  "ability_not_available": {
-    "type": "label",
-    "shadow": false,
-    "text": "",
-    "color": "$experience_text_color",
-    "anchor_from": "top_middle",
-    "anchor_to": "bottom_middle"
-  },
 
 
   "horse_jump_renderer": {
@@ -1152,30 +1126,6 @@
           "size": [ "50%", "50%" ],
           "offset": [
             0,
-            -7
-          ],
-          "alpha": 0.6
-        }
-      },
-      {
-        "hotbar_label_ability": {
-          "offset": [
-            75,
-            -13
-          ],
-          "shadow": "true",
-          "type": "label",
-          "text": "Ability",
-          "layer": 1
-        }
-      },
-      {
-        "hotbar_label_dashes_background2": {
-          "type": "image",
-          "texture": "textures/ui/hud_tip_text_background",
-          "size": [ "18%", "50%" ],
-          "offset": [
-            75,
             -7
           ],
           "alpha": 0.6

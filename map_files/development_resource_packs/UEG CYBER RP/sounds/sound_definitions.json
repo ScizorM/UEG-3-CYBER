@@ -32,6 +32,15 @@
 				"sounds/weapons/implosion_grenade"
 			]
 		},
+		"random.levelup": {
+			"category": "music",
+			"min_distance": 0,
+			"volume":0,
+			
+			"sounds": [
+				
+			]
+		},
 		"kusarigama_swing": {
 			"category": "music",
 			"min_distance": 0,
@@ -46,6 +55,38 @@
 			
 			"sounds": [
 				"sounds/weapons/kusarigama_swing"
+			]
+		},
+				"kusarigama_chain": {
+			"category": "music",
+			"min_distance": 0,
+			
+			"sounds": [
+				"sounds/weapons/kusarigama_chain"
+			]
+		},
+		"kusarigama_chain_global": {
+			"category": "mobs",
+			"min_distance": 0,
+			
+			"sounds": [
+				"sounds/weapons/kusarigama_chain"
+			]
+		},
+		"emp_stun": {
+			"category": "music",
+			"min_distance": 0,
+			
+			"sounds": [
+				"sounds/weapons/emp_stun"
+			]
+		},
+		"emp_stun_global": {
+			"category": "mobs",
+			"min_distance": 0,
+			
+			"sounds": [
+				"sounds/weapons/emp_stun"
 			]
 		},
 		"fish_car": {
@@ -168,7 +209,7 @@
 		},
 		"ability_charged": {
 			"sounds": [
-				"sounds/effects/ability_charged"
+				"sounds/effects/ability_charged_old"
 			],
 			"category": "music"
 		},

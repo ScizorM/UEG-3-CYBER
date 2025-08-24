@@ -1,0 +1,7 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "azure_tv",
+		"metalness_emissive_roughness": "azure_tv_mer"
+	}
+}

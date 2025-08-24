@@ -1,0 +1,7 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "acid_specialist_frame4",
+		"metalness_emissive_roughness": "acid_specialist_frame4_mer"
+	}
+}

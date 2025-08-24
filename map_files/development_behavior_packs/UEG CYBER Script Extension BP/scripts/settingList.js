@@ -32,8 +32,8 @@ const settingList = [
     new SettingLaptop("Dash Power", false, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], { x: 103, y: 14, z: 15 }, "dash_strength", "dash_strength", 1),
     new SettingLaptop("Minimum Dash Requirement", false, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], { x: 103, y: 14, z: 13 }, "minimum_dash_requirement", "minimum_dash_requirement", 1),
     new SettingLaptop("Abilities", true, [0, 1], { x: 103, y: 14, z: 11 }, "abilities_enabled", "abilities_enabled", 1),
-    new SettingLaptop("Arena Vote Rerolls Enabled", true, [0, 1], { x: 110, y: 14, z: 29 }, "rerolls_enabled", "rerolls_enabled", 1),
-    new SettingLaptop("Arena Vote Enabled", true, [0, 1], { x: 108, y: 14, z: 29 }, "arena_vote_enabled", "boolean", 1),
+    //new SettingLaptop("Arena Vote Rerolls Enabled", true, [0, 1], { x: 110, y: 14, z: 29 }, "rerolls_enabled", "rerolls_enabled", 1),
+    //new SettingLaptop("Arena Vote Enabled", true, [0, 1], { x: 108, y: 14, z: 29 }, "arena_vote_enabled", "boolean", 1),
     new SettingLaptop("Zone Phases Enabled", true, [0, 1], { x: 106, y: 14, z: 28 }, "deathzone_enabled", "deathzone_enabled", 0),
     new SettingLaptop("Initial Zone Phase", true, [0, 1, 2], { x: 108, y: 14, z: 26 }, "deathzone_initial", "deathzone_initial", 0),
     new SettingLaptop("Enable Top Death Zone", true, [0, 1], { x: 108, y: 14, z: 24 }, "deathzone_top_enabled", "deathzone_top_enabled")

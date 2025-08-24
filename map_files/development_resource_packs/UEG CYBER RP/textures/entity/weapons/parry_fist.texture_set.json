@@ -1,0 +1,7 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "parry_fist",
+		"metalness_emissive_roughness": "parry_fist_mer"
+	}
+}

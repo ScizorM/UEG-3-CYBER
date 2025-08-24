@@ -1,0 +1,7 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "deep_striker_frame1",
+		"metalness_emissive_roughness": "deep_striker_frame1_mer"
+	}
+}

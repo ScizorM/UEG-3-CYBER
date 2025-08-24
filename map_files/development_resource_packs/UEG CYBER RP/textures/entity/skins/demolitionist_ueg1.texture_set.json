@@ -1,0 +1,7 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "demolitionist_ueg1",
+		"metalness_emissive_roughness": "demolitionist_ueg1_mer"
+	}
+}

@@ -83,7 +83,7 @@ const tntSurvivalSettings = new modeSystem(
     { speed: 2, jumpBoost: 3, slowFalling: 0, darkness: 0 },
     { maxDashes: 3, dashPower: 1, minDashReq: 1, abilities: true },
     { zonePhases: false, initZonePhase: 0, topDeathZone: true },
-    { forceLoadout: true, loadoutData: tntMode, randomEvents: true, eventTime: 3, randomEventData: [0], perTeamPlayerLimit: false, nuLimit: undefined, lambdaLimit: undefined },
+    { forceLoadout: true, loadoutData: tntMode, randomEvents: true, eventTime: 3, randomEventData: 0, perTeamPlayerLimit: false, nuLimit: undefined, lambdaLimit: undefined },
     "TNT Survival")
 
 const roboSumoSettings = new modeSystem(

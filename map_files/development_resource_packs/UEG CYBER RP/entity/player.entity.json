@@ -84,7 +84,7 @@
 				"charging": "animation.humanoid.charging",
 				"attack.positions": "animation.player.attack.positions",
 				"attack.rotations": "animation.player.attack.rotations",
-				"sneaking": "animation.player.sneaking",
+				"sneaking": "animation.none",
 				"bob": "animation.player.bob",
 				"damage_nearby_mobs": "animation.humanoid.damage_nearby_mobs",
 				"bow_and_arrow": "animation.humanoid.bow_and_arrow",

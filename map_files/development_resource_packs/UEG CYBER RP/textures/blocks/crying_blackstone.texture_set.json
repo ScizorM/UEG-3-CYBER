@@ -1,0 +1,7 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "crying_blackstone",
+		"metalness_emissive_roughness": "crying_blackstone_mer"
+	}
+}

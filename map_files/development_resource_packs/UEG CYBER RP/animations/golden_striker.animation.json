@@ -95,6 +95,32 @@
 					}
 				}
 			}
+		},
+		"animation.golden_striker.look_left": {
+			"loop": true,
+			"animation_length": 9.625,
+			"override_previous_animation": true,
+			"bones": {
+				"head": {
+					"rotation": {
+						"0.0": [0, -50, 0],
+						"9.625": [0, -50, 0]
+					}
+				}
+			}
+		},
+		"animation.golden_striker.look_right": {
+			"loop": true,
+			"animation_length": 9.625,
+			"override_previous_animation": true,
+			"bones": {
+				"head": {
+					"rotation": {
+						"0.0": [0, 50, 0],
+						"9.625": [0, 50, 0]
+					}
+				}
+			}
 		}
 	}
 }

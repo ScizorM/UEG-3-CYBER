@@ -1,0 +1,7 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "soder_machine",
+		"metalness_emissive_roughness": "soder_machine_mer"
+	}
+}

@@ -21,3 +21,4 @@ tag @s add respawning
 scoreboard players set @s scaletimer 1
 scoreboard players add @s total_respawns 1
 tag @a add changeSkin
+scoreboard players set @s horse_charges 0

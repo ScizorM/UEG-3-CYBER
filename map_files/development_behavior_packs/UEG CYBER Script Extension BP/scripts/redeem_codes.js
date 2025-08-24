@@ -2,6 +2,8 @@
 import { ActionFormData, MessageFormData, ModalFormData } from '@minecraft/server-ui'
 const fail_redeem = "§e[Redeem Code] §cSorry, that code is invalid, or has already been redeemed."
 const success_redeem = "§e[Redeem Code] §aSuccess! The code has been redeemed. You have unlocked the following items:"
+export {codeList }
+
 export function redeemCode(player) {
     let form = new ModalFormData();
     form.title("Redeem Code");

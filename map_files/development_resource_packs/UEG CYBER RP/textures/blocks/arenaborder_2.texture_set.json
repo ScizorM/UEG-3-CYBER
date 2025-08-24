@@ -1,0 +1,7 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "arenaborder_2",
+		"metalness_emissive_roughness": "arenaborder_2_mer"
+	}
+}

@@ -88,7 +88,6 @@ function loadoutMenu(player) {
     form.button(buttonNames[1], buttonIconLoc[1])
     form.button(buttonNames[2], buttonIconLoc[2])
     form.button(buttonNames[3], buttonIconLoc[3])
-    form.button(buttonNames[4], buttonIconLoc[4])
     form.button("Cancel", "textures/ui/button_close");
 
     form.show(player).then(r => {
@@ -105,9 +104,6 @@ function loadoutMenu(player) {
         }
         else if (responseValue == 3) {
             system.run(() => ResetLoadoutSlot(player, loadout1SBStr, loadout2SBStr, loadout3SBStr));
-        }
-        else if (responseValue == 4) {
-            system.run(() => SelectAbility(player))
         }
 
     })

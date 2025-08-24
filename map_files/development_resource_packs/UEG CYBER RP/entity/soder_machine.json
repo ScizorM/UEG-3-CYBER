@@ -1,0 +1,21 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "sm:soder_machine",
+			"materials": {
+				"default": "entity"
+			},
+			"textures": {
+				"default": "textures/entity/soder_machine"
+			},
+			"geometry": {
+				"default": "geometry.soder_machine"
+			},
+			"render_controllers": [
+				"controller.render.guardian"
+			]
+		}
+	}
+}

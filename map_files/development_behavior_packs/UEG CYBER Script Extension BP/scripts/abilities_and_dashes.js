@@ -167,7 +167,7 @@ system.runInterval(() => {
         var blockBelowPlayer = player.dimension.getBlockFromRay(player.location, fallDetectDir, { includeLiquidBlocks: false, maxDistance: 1, includePassableBlocks: false })?.block
 
 
-
+        /*
         if (player.isSneaking && player.level > 0) {
             if (player.hasTag("rocketjump")) {
                 player.applyKnockback(0, 0, 0, 1.25)
@@ -196,7 +196,7 @@ system.runInterval(() => {
 
             player.runCommand("xp -100L @s")
         }
-
+        */
         if (player.hasTag("vel_cancel") && blockBelowPlayerTest == undefined) {
             if (blockBelowPlayerParticle != undefined) {
                 var blockX = blockBelowPlayerParticle.location.x
@@ -255,7 +255,7 @@ system.runInterval(() => {
             player.addTag("hasJumped")
         }
 
-        if (!player.isJumping && player.hasTag("hasJumped")) {
+        if (!player.isSneaking && player.hasTag("hasJumped")) {
             player.removeTag("hasJumped")
         }
 
@@ -263,8 +263,9 @@ system.runInterval(() => {
             player.addTag("onGround")
         }
 
+        //if (player.isSneaking == true && !player.hasTag("hasJumped") && !player.hasTag("onGround") && dashes.getScore(player) >= minDashesRequiredVar) {
 
-        if (player.isJumping == true && !player.hasTag("hasJumped") && !player.hasTag("onGround") && dashes.getScore(player) >= minDashesRequiredVar) {
+        if (player.isSneaking == true && !player.hasTag("hasJumped") && dashes.getScore(player) >= minDashesRequiredVar) {
             player.addTag("hasJumped")
             if (player.getGameMode() == `creative`) {
 

@@ -1,0 +1,7 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "blushing_bloomfan",
+		"metalness_emissive_roughness": "blushing_bloomfan_mer"
+	}
+}

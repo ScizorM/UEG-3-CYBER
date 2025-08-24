@@ -1,0 +1,7 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "repulsion_blade",
+		"metalness_emissive_roughness": "repulsion_blade_mer"
+	}
+}

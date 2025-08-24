@@ -1,0 +1,7 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "death_warning",
+		"metalness_emissive_roughness": "death_warning_mer"
+	}
+}

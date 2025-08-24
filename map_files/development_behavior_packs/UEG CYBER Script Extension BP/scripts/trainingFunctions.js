@@ -3,9 +3,9 @@ import { ActionFormData, MessageFormData, ModalFormData } from '@minecraft/serve
 import { itemList, beginner0, beginner1, intermediate0, intermediate1, advanced0, intermediateTips, beginnerTips, advancedTips} from './trainingArr.js'
 
 
-var beginnerTrainingCoords = [beginner0, beginner1]
+var beginnerTrainingCoords = [beginner0]
 var intermediateTrainingCoords = [intermediate0, intermediate1]
-var advancedTrainingCoords = [advanced0, advanced0]
+var advancedTrainingCoords = [advanced0]
 
 var allCoords = [beginnerTrainingCoords, intermediateTrainingCoords, advancedTrainingCoords]
 
@@ -81,10 +81,10 @@ function trainingNavMenu(player) {
             }
             
             form.body(`Training Room: Room ${currentRoomPlayer + 1}\n\nRoom Leader: ${playerList[0]}\n\nCurrent Level: ${allCoords[difficultyR][currentLevel][6][0]}\n\nLevel Tip: ${trainingTips[difficultyR][currentLevel]}\n\n`)
-            form.button("Beginner Training", "textures/ui/button_close")
-            form.button("Intermediate Training", "textures/ui/button_close")
-            form.button("Advanced Training", "textures/ui/button_close");
-            form.button("Exit", "textures/ui/button_close");
+            form.button("Beginner Training", "textures/ui/button_easy")
+            form.button("Intermediate Training", "textures/ui/button_normal")
+            form.button("Advanced Training", "textures/ui/button_hard");
+            form.button("Exit", "textures/ui/teleport");
             form.button("Cancel", "textures/ui/button_close");
 
             form.show(player).then(r => {
@@ -140,18 +140,27 @@ function trainingNavMenu(player) {
         if (roomOneList.length != undefined) {
             lengths[0] = roomOneList.length
         }
+        else {
+            lengths[0] = undefined;
+        }
         if (roomTwoList.length != undefined) {
             lengths[1] = roomTwoList.length
+        }
+        else {
+            lengths[1] = undefined;
         }
         if (roomThreeList.length != undefined) {
             lengths[2] = roomThreeList.length
         }
+        else {
+            lengths[2] = undefined;
+        }
         let form = new ActionFormData();
         form.title("Training Menu");
         form.body(`Test`);
-        form.button(`Room 1 (${lengths[0]} Players)`, "textures/ui/button_close");
-        form.button(`Room 2 (${lengths[1]} Players)`, "textures/ui/button_close");
-        form.button(`Room 3 (${lengths[2]} Players)`, "textures/ui/button_close");
+        form.button(`Room 1 (${lengths[0]} Players)`, "textures/ui/teleport_0");
+        form.button(`Room 2 (${lengths[1]} Players)`, "textures/ui/teleport_1");
+        form.button(`Room 3 (${lengths[2]} Players)`, "textures/ui/teleport_2");
         form.button("Cancel", "textures/ui/button_close");
         form.show(player).then(r => {
             var trainingDifIndexSB = world.scoreboard.getObjective("trainingDifIndex")
@@ -160,49 +169,62 @@ function trainingNavMenu(player) {
             var coordIndexF = [beginnerTrainingCoords, intermediateTrainingCoords, advancedTrainingCoords]
             switch (r.selection) {
                 case 0:
-                    currentRoomSB.setScore(player, 0)
-                    if (lengths[0] == undefined) {
+                    if (lengths[0] == 0) {
+                        currentRoomSB.setScore(player, 0)
                         player.addTag("roomLeader_0")
-                    }
-                    var difficulty = trainingDifIndexSB.getScore("roomOne")
-                    var currentDifficulty = coordIndexF[difficulty]
-                    var currentLevel = currentDifficulty[trainingLevelID.getScore("roomOne")]
+                        var difficulty = trainingDifIndexSB.getScore("roomOne")
+                        var currentDifficulty = coordIndexF[difficulty]
+                        var currentLevel = currentDifficulty[trainingLevelID.getScore("roomOne")]
 
-                    var startCoords = `${currentLevel[0]} ${currentLevel[1]} ${parseInt(currentLevel[2])} facing ${currentLevel[3]} ${currentLevel[4]} ${currentLevel[5]}`
-                    //world.sendMessage(startCoords)
-                    system.run(() => InitPlayerTrainingPersonal(player, currentLevel, 0, startCoords))
+                        var startCoords = `${currentLevel[0]} ${currentLevel[1]} ${parseInt(currentLevel[2])} facing ${currentLevel[3]} ${currentLevel[4]} ${currentLevel[5]}`
+                        //world.sendMessage(startCoords)
+                        system.run(() => InitPlayerTrainingPersonal(player, currentLevel, 0, startCoords))
+                    }
+                    else {
+                        player.sendMessage("§e[Error]§c Unfortunately, as of now there can only be one player per training area for the time being due to a restriction the developer (ScizorM) is too lazy to look into. This might be fixed in the future. Let him know in the Discord if it is big enough of a problem to fix.")
+                    }
+
                     break;
                 case 1:
-                    currentRoomSB.setScore(player, 1)
-                    if (lengths[1] == undefined) {
+                    if (lengths[1] == 0) {
+                        currentRoomSB.setScore(player, 1)
                         player.addTag("roomLeader_1")
+                        var difficulty = trainingDifIndexSB.getScore("roomTwo")
+                        var currentDifficulty = coordIndexF[difficulty]
+                        var currentLevel = currentDifficulty[trainingLevelID.getScore("roomTwo")]
+
+                        var roomDisplacements = [0, 72, 146]
+
+
+                        var startCoords = `${currentLevel[0]} ${currentLevel[1]} ${(currentLevel[2] + roomDisplacements[1])} facing ${currentLevel[3]} ${currentLevel[4]} ${currentLevel[5] + roomDisplacements[1]}`
+                        //world.sendMessage(startCoords)
+                        system.run(() => InitPlayerTrainingPersonal(player, currentLevel, 1, startCoords))
                     }
-                    var difficulty = trainingDifIndexSB.getScore("roomTwo")
-                    var currentDifficulty = coordIndexF[difficulty]
-                    var currentLevel = currentDifficulty[trainingLevelID.getScore("roomTwo")]
+                    else {
+                        player.sendMessage("§e[Error]§c Unfortunately, as of now there can only be one player per training area for the time being due to a restriction the developer (ScizorM) is too lazy to look into. This might be fixed in the future. Let him know in the Discord if it is big enough of a problem to fix.")
+                    }
 
-                    var roomDisplacements = [0, 72, 146]
-
-
-                    var startCoords = `${currentLevel[0]} ${currentLevel[1]} ${(currentLevel[2] + roomDisplacements[1])} facing ${currentLevel[3]} ${currentLevel[4]} ${currentLevel[5] + roomDisplacements[1]}`
-                    //world.sendMessage(startCoords)
-                    system.run(() => InitPlayerTrainingPersonal(player, currentLevel, 1, startCoords))
                     break;
                 case 2:
-                    currentRoomSB.setScore(player, 2)
-                    if (lengths[2] == undefined) {
+                    if (lengths[2] == 0) {
+                        currentRoomSB.setScore(player, 2)
                         player.addTag("roomLeader_2")
+                        var difficulty = trainingDifIndexSB.getScore("roomThree")
+                        var currentDifficulty = coordIndexF[difficulty]
+                        var currentLevel = currentDifficulty[trainingLevelID.getScore("roomThree")]
+
+                        var roomDisplacements = [0, 72, 146]
+
+
+                        var startCoords = `${currentLevel[0]} ${currentLevel[1]} ${(currentLevel[2] + roomDisplacements[2])} facing ${currentLevel[3]} ${currentLevel[4]} ${currentLevel[5] + roomDisplacements[2]}`
+                        //world.sendMessage(startCoords)
+                        system.run(() => InitPlayerTrainingPersonal(player, currentLevel, 2, startCoords))
                     }
-                    var difficulty = trainingDifIndexSB.getScore("roomThree")
-                    var currentDifficulty = coordIndexF[difficulty]
-                    var currentLevel = currentDifficulty[trainingLevelID.getScore("roomThree")]
+                    else {
+                        player.sendMessage("§e[Error]§c Unfortunately, as of now there can only be one player per training area for the time being due to a restriction the developer (ScizorM) is too lazy to look into. This might be fixed in the future. Let him know in the Discord if it is big enough of a problem to fix.")
 
-                    var roomDisplacements = [0, 72, 146]
+                    }
 
-
-                    var startCoords = `${currentLevel[0]} ${currentLevel[1]} ${(currentLevel[2] + roomDisplacements[2])} facing ${currentLevel[3]} ${currentLevel[4]} ${currentLevel[5] + roomDisplacements[2]}`
-                    //world.sendMessage(startCoords)
-                    system.run(() => InitPlayerTrainingPersonal(player, currentLevel, 2, startCoords))
                     break;
 
             }
@@ -216,6 +238,7 @@ function trainingNavMenu(player) {
 
 function ExitTraining(player, currentRoomSB, currentRoomPlayer) {
     player.runCommand("clear @s")
+    player.runCommand("gamemode a")
     if (player.hasTag(`roomLeader_${currentRoomPlayer}`)) {
         player.removeTag(`roomLeader_${currentRoomPlayer}`)
     }
@@ -265,7 +288,7 @@ function trainingList(player, difficulty) {
             title = currentDifficulty[i][6][0] + ""
         }
 
-        form.button(title, "textures/ui/button_close");
+        form.button(title, "textures/ui/teleport");
     }
 
     form.button("Back", "textures/ui/button_back");
@@ -309,6 +332,9 @@ function trainingList(player, difficulty) {
                 player.runCommand(`execute as @a run execute as @s if score @s curTrainRoom matches ${currentRoomPlayer} run tp @s ${startCoords}`)
                 system.run(() => giveItems(player, currentLevel))
             }
+        }
+        if (r.selection == currentDifficulty.length) {
+            system.run(() => trainingNavMenu(player))
         }
     })
 }

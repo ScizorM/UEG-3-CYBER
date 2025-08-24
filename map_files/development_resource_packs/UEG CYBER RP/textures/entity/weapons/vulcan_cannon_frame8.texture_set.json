@@ -1,0 +1,7 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "vulcan_cannon_frame8",
+		"metalness_emissive_roughness": "vulcan_cannon_frame8_mer"
+	}
+}

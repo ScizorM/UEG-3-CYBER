@@ -19,16 +19,16 @@ const skinList = new Array(
     "Violet Machine", // 09
     "Finite", // 10
     "Dark Frame", // 11
-    "12 - Unfinished", // 12
-    // Hidden Valley ////////////////////////
+    "Mirage", // 12
+    // Hidden Valley //////////////////////// -CANCELED-
     "Mirage", // 13################################
     "14 - Unfinished", // 14#######################
     "15 - Unfinished", // 15############################
     // Overdrive ////////////////////////
     "Recruit: HWS", // 16
     "Maxibooster", // 17
-    "18 - Unfinished", // 18
-    // Crystallized ////////////////////////
+    "Coming Soon?", // 18
+    // Crystallized //////////////////////// -CANCELED-
     "19 - Unfinished", // 19###########################
     "20 - Unfinished", // 20#########################
     "21 - Unfinished", // 21#########################
@@ -39,7 +39,7 @@ const skinList = new Array(
     // Steampunk ////////////////////////
     "Steampunk Navigator", // 25
     "Amber Crusader", // 26
-    "27 - Unfinished", // 27
+    "Coming Soon?", // 27
     // Brutal ////////////////////////
     "The Iron Maiden", // 28
     "NATASHA", // 29
@@ -159,7 +159,7 @@ const skinItemIds = new Array(
     "sm:skin_9", // 09
     "sm:skin_10", // 10
     "sm:skin_11", // 11
-    incoSk, // 12
+    "sm:skin_12", // 12
     // Hidden Valley ////////////////////////
     incoSk, // 13
     incoSk, // 14
@@ -266,7 +266,7 @@ const skinIconLoc = new Array(
     "textures/ui/skin_icons/skin_9", // 09
     "textures/ui/skin_icons/skin_10", // 10
     "textures/ui/skin_icons/skin_11", // 11
-    "textures/ui/skin_categories/button", // 12
+    "textures/ui/skin_icons/skin_12", // 12
     // Hidden Valley ////////////////////////
     "textures/ui/skin_categories/button", // 13
     "textures/ui/skin_categories/button", // 14
@@ -373,7 +373,7 @@ const designerList = new Array(
     "evel", // 09
     "ScizorM", // 10
     "ScizorM", // 11
-    "12 - Unfinished", // 12
+    "ScizorM", // 12
     // Hidden Valley ////////////////////////
     "ScizorM", // 13
     "14 - Unfinished", // 14
@@ -449,7 +449,7 @@ const designerList = new Array(
     "evel", // 67
     "zeerye", // 68
     "zeerye", // 69
-    "ScizorM", // 70
+    "RoofusDoofus", // 70
     "evel", // 71
     "evel", // 72
     // UEG Legacy ////////////////////////

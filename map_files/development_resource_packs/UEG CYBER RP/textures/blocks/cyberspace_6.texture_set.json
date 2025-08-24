@@ -1,0 +1,7 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "cyberspace_6",
+		"metalness_emissive_roughness": "cyberspace_6_mer"
+	}
+}

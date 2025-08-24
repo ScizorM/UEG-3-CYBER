@@ -1,0 +1,7 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "effect_terminal",
+		"metalness_emissive_roughness": "effect_terminal_mer"
+	}
+}

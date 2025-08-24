@@ -42,3 +42,6 @@ accessibility.chat.howtoemote=§fMusic provided by Kaizo Slumber §d(kaizoslumbe
 
 ##accessibility.chat.howtoopen=Press %s to open chat
 ##accessibility.chat.howtoemote=Press or Hold %s to Emote
+entity.sm:freedom_horse.name=Freedom Horse
+item.spawn_egg.entity.sm:freedom_horse.name=Spawn Freedom Horse
+action.hint.exit.sm:freedom_horse=Tap sneak to dismount

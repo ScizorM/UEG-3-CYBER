@@ -1,0 +1,7 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "golden_striker_frame3",
+		"metalness_emissive_roughness": "golden_striker_frame3_mer"
+	}
+}

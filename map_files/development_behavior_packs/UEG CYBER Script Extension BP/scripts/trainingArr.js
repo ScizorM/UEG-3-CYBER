@@ -5,15 +5,15 @@ var itemList = ["sm:enhanced_platform_fabricator","sm:enhanced_charged_bolt_rifl
 
 //first true/false is dashes enabled, second is abilities enabled, if second, check for ability override, after that, select ability to override with (yes I know this code is a war crime shut up) after that, check for time limit, and set time limit
 
-var beginnerTips = ["To traverse this course, it may seem like it's possible to just jump down to the goal. While it seems like this, it's more likely to succeed if you use the Platform Fabricator supplied to you so you can spawn a platform below you while falling to get to the goal easier.", "To traverse this course, use the Rocket Jump ability and your dashes to get from platform to platform.\n\nRemember: sneak to trigger your rocket jump, and double tap jump to dash."]
+var beginnerTips = ["To traverse this course, it may seem like it's possible to just jump down to the goal. While it seems like this, it's more likely to succeed if you use the Platform Fabricator supplied to you so you can spawn a platform below you while falling to get to the goal easier.", "INCOMPLETE!"]
 
 var beginner0 = [-134, 35, 437, -134, 35, 436, ["B-1: Platform Fabricator Recovery Training", "Level B-1", false, false, "no_override", false, 0], "sm:enhanced_platform_fabricator"]
-var beginner1 = [-156, 7, 415, -155, 7, 415, ["B-2: Rocket Jump Training", "Level B-2", true, true, "select_ability_rocket", false, 0]]
+var beginner1 = [-156, 7, 415, -155, 7, 415, ["B-2: COMING SOON!", "Level B-2", true, true, "no_override", false, 0]]
 
 /*
 * 0 - Platform Fabricator Recovery [COMPLETE]
 * 
-* 1 - Rocket Jump Training [COMPLETE]
+* 1 - REMOVED! [INCOMPLETE]
 *
 * 2 - Beginner Movement Mechanics Training
 */
@@ -32,7 +32,7 @@ var intermediate1 = [-111, 4, 460, -111, 4, 459, ["I-2: Deep Striker Movement Tr
 * 4 - Intermediate Movement Mechanics Training
 */
 var advancedTips = ["To traverse this course, use the collection of recovery/movement-oriented weapons/items to your advantage.\n\nIf you're stuck, the method to complete this course is to fall, spawn a platform below you, spawn a landmine, jump, then look down and punch the landmine, and then finally after being launched upwards by the landmine look down and use the Charged Bolt Rifle to launch yourself the rest of the way up.\n\nLook out for headbumps though..."]
-var advanced0 = [-111, 35, 437, -112, 35, 437, ["A-1: Advanced Item Recovery Training", "Level A-1", true, true, "select_ability_rocket", false, 0], "sm:enhanced_platform_fabricator", "sm:teamless_landmine","sm:enhanced_charged_bolt_rifle"] 
+var advanced0 = [-111, 35, 437, -112, 35, 437, ["A-1: Advanced Item Recovery Training", "Level A-1", true, true, "no_override", false, 0], "sm:enhanced_platform_fabricator", "sm:teamless_landmine","sm:enhanced_charged_bolt_rifle"] 
 /*
 * 0 - Platform & Landmine Combo Training
 *

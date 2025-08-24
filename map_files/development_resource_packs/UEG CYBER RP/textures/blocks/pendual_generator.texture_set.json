@@ -1,0 +1,7 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "pendual_generator",
+		"metalness_emissive_roughness": "pendual_generator_mer"
+	}
+}

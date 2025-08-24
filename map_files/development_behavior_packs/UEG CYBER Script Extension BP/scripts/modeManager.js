@@ -525,41 +525,49 @@ system.runInterval(() => {
                             RandomlySpawnEntities("sm:robot_babies", 3, 1, "Baby Storm")
                         }
                     }
-                    else if(customEventVal > -1) {
-                        let currentEvent = customEventVal
-                        
-                        SendDebugMessage(customEventVal.toString())
-
-                        if (currentEvent == 0) {
-                            RandomlySpawnEntities("minecraft:tnt", 20, 0, "TNT Rain!!!")
-                        }
-                        else if (currentEvent == 1) {
-                            RandomlyAssignPotionEffects(["night_vision", "haste", "fire_resistance", "blindness", "invisibility", "levitation", "slow_falling", "darkness"], ["Night Vision", "Haste", "Fire Resistance", "Blindness", "Invisibility", "Levitation", "Slow Falling", "Darkness"])
-                        }
-                        else if (currentEvent == 2) {
-                            RandomlySpawnEntities("sm:big_joe", 3, 0, "Big Joe Rain")
-                        }
-                        else if (currentEvent == 3) {
-                            SendEventMessage("EMP")
-                            world.getDimension("Overworld").runCommand("execute as @a[tag=ingame] run function emp_other")
-                        }
-                        else if (currentEvent == 4) {
-                            SendEventMessage("Scaler Explosion")
-                            world.getDimension("Overworld").runCommand("execute as @a[tag=ingame] run execute positioned as @s run function explosion_scaler")
-                        }
-                        else if (currentEvent == 5) {
-                            SendEventMessage("Dashes Replenished")
-                            world.getDimension("Overworld").runCommand(`execute as @a[tag=ingame] run /scoreboard players set @s dashes ${maxDashesCount}`)
-                        }
-                        else if (currentEvent == 6) {
-                            RandomlySpawnEntities("sm:robot_babies", 3, 1, "Baby Storm")
-                        }
-                        else if (currentEvent == 7) {
-                            SpawnEntityTrail("tnt", "TNT Trail")
-                        }
-                    }
+                    
                 }
 
+            }
+            else if (customEventVal > -1) {
+
+                let eventTriggerTime = customTimerVal * 20
+                modeSB.addScore("modeTimer", 1)
+                if (modeTimer >= eventTriggerTime) {
+                    modeSB.setScore("modeTimer", 0)
+
+                    let currentEvent = customEventVal
+
+                    SendDebugMessage(customEventVal.toString())
+
+                    if (currentEvent == 0) {
+                        RandomlySpawnEntities("minecraft:tnt", 20, 0, "TNT Rain!!!")
+                    }
+                    else if (currentEvent == 1) {
+                        RandomlyAssignPotionEffects(["night_vision", "haste", "fire_resistance", "blindness", "invisibility", "levitation", "slow_falling", "darkness"], ["Night Vision", "Haste", "Fire Resistance", "Blindness", "Invisibility", "Levitation", "Slow Falling", "Darkness"])
+                    }
+                    else if (currentEvent == 2) {
+                        RandomlySpawnEntities("sm:big_joe", 3, 0, "Big Joe Rain")
+                    }
+                    else if (currentEvent == 3) {
+                        SendEventMessage("EMP")
+                        world.getDimension("Overworld").runCommand("execute as @a[tag=ingame] run function emp_other")
+                    }
+                    else if (currentEvent == 4) {
+                        SendEventMessage("Scaler Explosion")
+                        world.getDimension("Overworld").runCommand("execute as @a[tag=ingame] run execute positioned as @s run function explosion_scaler")
+                    }
+                    else if (currentEvent == 5) {
+                        SendEventMessage("Dashes Replenished")
+                        world.getDimension("Overworld").runCommand(`execute as @a[tag=ingame] run /scoreboard players set @s dashes ${maxDashesCount}`)
+                    }
+                    else if (currentEvent == 6) {
+                        RandomlySpawnEntities("sm:robot_babies", 3, 1, "Baby Storm")
+                    }
+                    else if (currentEvent == 7) {
+                        SpawnEntityTrail("tnt", "TNT Trail")
+                    }
+                }
             }
             else {
                 modeSB.setScore("modeTimer", 0)
@@ -577,7 +585,7 @@ system.runInterval(() => {
 })
 
 function SendDebugMessage(string) {
-    world.sendMessage(string)
+    //world.sendMessage(string)
 }
 
 function SendEventMessage(string) {

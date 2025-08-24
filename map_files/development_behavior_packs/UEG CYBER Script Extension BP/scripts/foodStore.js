@@ -58,7 +58,7 @@ const foodStoreTitle = new Array(
 
 const foodStoreDesc = new Array(
     "Gob Dog Salesman:\nHot giggity gob diggity dog welcome to Gob Dogs how may I help you\n\n",
-    "Cheeseburger Freedom Man:\nI don't know what he's gonna say yet\n\n"
+    "Cheeseburger Freedom Man:\nYA WANT A BURGER??? I GOT BURGERS!!!\n\n"
 )
 
 
@@ -76,7 +76,10 @@ function openFoodStoreMenu(storeID, player) {
             goblinShopItemList[i],
             freedomShopItemList[i]
         )
-        form.button(`${itemNameList[foodShopList[storeID]]}\n${itemPrices[foodShopList[storeID]]}`, itemIconLocation[foodShopList[storeID]])
+        if (storeID == 1 && i == 0) {
+            form.button(`${itemNameList[foodShopList[storeID]]}\n${itemPrices[foodShopList[storeID]]}`, itemIconLocation[foodShopList[storeID]])
+        }
+        
 
     }
     for (var i = 0; i < bundleShopLength[storeID]; i++) {
@@ -121,10 +124,7 @@ function openFoodStoreMenu(storeID, player) {
         else if (storeID == 1) {
             let responseValue = r.selection
             if (responseValue == 0) {
-                system.run(() => PurchaseItem(player, 2, false, itemPrices[0], itemNameList[0], itemDescList[0], storeID))
-            }
-            else if (responseValue == 1) {
-                system.run(() => PurchaseItem(player, 2, false, itemPrices[0], itemNameList[0], itemDescList[0], storeID))
+                system.run(() => PurchaseItem(player, 2, false, itemPrices[2], itemNameList[2], itemDescList[2], storeID))
             }
             else {
                 player.runCommand("tp @s ~ ~ ~1")
@@ -201,12 +201,15 @@ function PurchaseItem(player, selectedItem, isBundle, itemCost, titleSub, desc, 
                 }
                 else {
                     player.runCommand(`scoreboard players add @s ${itemScoreboard[selectedItem]} 10`)
-                        currency.addScore(player, -itemCost)
+                    currency.addScore(player, -itemCost)
                     player.runCommand(`${itemBundleFunctionList[selectedItem]}`)
                     player.sendMessage(`§e[Bundle Purchase]§a ${itemBundleNameList[selectedItem]} purchased.\n(+ ${itemNameList[selectedItem]} x10)`)
                     player.runCommand("tp @s ~-1 ~-1 ~")
                     player.removeTag("seated")
                 }
+            }
+            else {
+                player.removeTag("seated")
             }
         }
         else if (storeID == 1) {
@@ -227,6 +230,9 @@ function PurchaseItem(player, selectedItem, isBundle, itemCost, titleSub, desc, 
                     player.runCommand("tp @s ~ ~ ~1")
                     player.removeTag("seated")
                 }
+            }
+            else {
+                player.removeTag("seated")
             }
         }
 
